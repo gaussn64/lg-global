@@ -3569,7 +3569,10 @@
                             .brand__content-inner {padding: 0 20px 120px;}
                         }
                         @media (max-width: 1279px) {
-
+                            /*공통*/
+                            .brand__header-title + .brand__header-description br {
+                                display: none;
+                            }
 
                             /*brand elements 슬라이드*/
                             .brand-elements {
@@ -3605,12 +3608,27 @@
                                 font-size: 16px;
                                 text-align: center;
                             }
-                            .brand__header-title + .brand__header-description br {
-                                display: none;
-                            }
+
                             .brand__content-inner {
                                 padding: 0 20px 34px;
                             }
+
+                            /*tab*/
+                            .tab-menu__container {
+                                margin-top: 42px;
+                            }
+                            .tab-menu__list {
+                                width: 100%;
+                                padding: 8px;
+                            }
+                            .tab-menu__btn {
+                                width: auto;
+                                flex: 1;
+                                height: 40px;
+                                font-size: 14px;
+                            }
+                            .tab-container {margin-top: 24px;}
+
 
                             /*brand elements 슬라이드*/
                             .brand-elements {
