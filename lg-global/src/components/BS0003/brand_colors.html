@@ -3228,7 +3228,8 @@
                             background-color: #A50034;
                         }
                         .brand-colors__item--warmgray {
-                            background-color: #D0CBC1;
+                            background-color: #F0ECE4;
+                            border: 1px solid #D0CBC1;
                         }
                         .brand-colors__item--white {
                             background-color: #fff;
@@ -3394,7 +3395,7 @@
                             height: 48px;
                             border-radius: 50%;
                             background: #ffffff80;
-                            border: 1.2px solid #4a49464d;
+                            border: 1px solid #4a49464d;
                             backdrop-filter: blur(10px);
                             display: inline-flex;
                             align-items: center;
@@ -3459,7 +3460,7 @@
                         .btmdot-slide__slide.btmdot-slide__slide--dark-light {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-and-light-mode-usage-d.png);}
                         .btmdot-slide__slide.btmdot-slide__slide--dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-mode-usage-only-d.png);}
 
-                        .btmdot__bottom-container {
+                        .btmdot-slide__btm-container {
                             position: absolute;
                             bottom: 58px;
                             left: 50%;
@@ -3483,7 +3484,7 @@
                             background: no-repeat center;
                             background-size: cover;
                         }
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--active::before {
+                        .btmdot-slide__pagination__btn--active::before {
                             content: '';
                             position: absolute;
                             display: block;
@@ -3495,12 +3496,12 @@
                             transform: translate(-50%, -50%);
                             border: 2px solid #fff;
                         }
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-mode-usage-only-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light-dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--dark-light {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-and-light-mode-usage-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-mode-usage-only-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--light {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-mode-usage-only-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--light-dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--dark-light {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-and-light-mode-usage-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-mode-usage-only-thumb-d.png);}
                         
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light::before {
+                        .btmdot-slide__pagination__btn--light::before {
                             border-color: #262626;
                         }
 
@@ -3698,7 +3699,7 @@
                                 font-size: 36px;
                                 line-height: 1.1;
                                 font-weight: 300;
-                                margin: 80px 0 34px;
+                                margin: 80px 0 16px;
                                 text-align: center;
                             }
                             .brand__header-title + .brand__header-description {
@@ -3708,20 +3709,97 @@
                             .brand__content-inner {
                                 padding: 0 20px 34px;
                             }
+                            
+                            /*brand-color grid*/
+                            .brand-colors__grid {
+                                grid-template-columns: repeat(1, 1fr);
+                                grid-template-rows: unset;
+                                gap: 10px;
+                            }
+                            .brand-colors__item {
+                                border-radius: 10px;
+                                padding: 16px;
+                                height: 167px;
+                            }
+                            .brand-colors__code-data {
+                                font-size: 14px;
+                            }
 
+                            /*colour-system*/
+                            .colour-system {
+                                border-radius: 10px;
+                                padding: 20px;
+                            }
+                            .colour-system__title {
+                                font-size: 14px;
+                                height: 44px;
+                            }
+                            .colour-system__index {
+                                padding-left: 4px;
+                            }
+                            .colour-system__slide-wrap {
+                                margin-top: 16px;
+                            }
+                            .colour-system__slide {
+                                display: grid;
+                                grid-template-columns: repeat(2, 1fr);
+                                gap: 16px;
+                            }   
+                            .colour-system__slide__item {
+                                height: 39.2vw;
+                                width: 100%;
+                                border-radius: 10px;
+                            }
+                            .colour-system__slide__item:nth-child(1) {
+                                grid-column: 1 / span 2;
+                                width: 100%;
+                                height: 61.86vw;
+                            }
+
+                            .color-chip {
+                                width: 100%;
+                                margin: 16px auto 0;
+                                gap: 2px;
+                            }
+                            .color-chip__item {
+                                border-radius: 4px;
+                            }
+                            
+                            .colour-system__slide-controller {
+                                justify-content: center;
+                                gap: 6px;
+                                margin-top: 16px;
+                            }
+                            .colour-system__slide-controller__btn {
+                                width: 32px;
+                                height: 32px;
+                            }
+                            .colour-system__slide-controller__btn::after {
+                                width: 5px;
+                                height: 10px;
+                            }
+                            
                             /*btmdot-slide*/
                             .btmdot-slide__slide__inner {
                                 height: 90vw;
                             }
+                            .btmdot-slide__index {
+                                height: 44px;
+                                left: 16px;
+                                top: 16px;
+                                font-size: 14px;
+                            }
+                            .btmdot-slide__index > span {
+                                padding-left: 4px;
+                            }
+
                             .btmdot-slide__slide {
                                 border-radius: 10px;
                             }
-                            .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-background-m.png);}
-                            .btmdot-slide__slide--light {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-background-m.png);}
-                            .btmdot-slide__slide--dark-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-gradient-m.png);}
-                            .btmdot-slide__slide--light-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-gradient-m.png);}
-                            .btmdot-slide__slide--dark-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-image-m.png);}
-                            .btmdot-slide__slide--light-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-image-m.png);}
+                            .btmdot-slide__slide.btmdot-slide__slide--light {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-mode-usage-only-m.png);}
+                            .btmdot-slide__slide.btmdot-slide__slide--light-dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-m.png);}
+                            .btmdot-slide__slide.btmdot-slide__slide--dark-light {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-and-light-mode-usage-m.png);}
+                            .btmdot-slide__slide.btmdot-slide__slide--dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-dark-mode-usage-only-m.png);}
                             .btmdot-slide__btm-container {
                                 bottom: 16px;
                             }
@@ -3891,7 +3969,7 @@
                                         <li class="btmdot-slide__slide btmdot-slide__slide--dark swiper-slide"></li>
                                     </ul>
                                 </div>
-                                <div class="btmdot__bottom-container">
+                                <div class="btmdot-slide__btm-container">
                                     <div class="btmdot-slide__pagination"></div>
                                     <span class="btmdot__tag">Light Mode Usage Only</span>
                                 </div>
