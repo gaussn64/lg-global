@@ -3254,7 +3254,7 @@
                             background-size: contain;
                         }
 
-                        .logo__container--clearspace {
+                        .logo__container--spacing {
                             background-color: #fff;
                             display: flex;
                             align-items: center;
@@ -3262,37 +3262,20 @@
                             position: relative;
                             padding: 0 18px;
                         }
-                        .logo__container__clearspace-image {
+                        .logo__container__spacing-img {
                             max-width: 1158px;
                             width: 100%;
                         }
+                        .logo__container__spacing-img--mo {
+                            display: none;
+                        }
 
-                        .logo__container--partnerships {
-                            background-color: #fff;
-                            box-sizing: border-box;
-                            padding: 0 18px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            flex-direction: column;
-                        }
-                        .logo__container__partnerships-image {
-                            width: 100%;
-                            max-width: 1056px;
-                        }
-                        .logo__container__partnerships-example {
-                            padding: 0;
-                            display: flex;
-                        }
-                        .logo__container__partnerships-example__item img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                        .logo__container--logoplay,
+                        .logo__container--logoplay, 
                         .logo__container--logosuite {
                             background: no-repeat center url(../../mocks/BS0002/brand-elements-logo-digital-logo-play-bg-d.png);
+                            background-size: cover;
                         }
+
                         .logo__container--logoplay {
                             display: flex;
                             align-items: center;
@@ -3512,9 +3495,7 @@
                         .brand-elements__slides {
                             padding: 0;
                         }
-                        .brand-elements__progress-container {
-                            padding-right: 120px;
-                        }
+
                         .brand-elements__progressbar {
                             margin-top: 72px;
                             width: 100%;
@@ -3525,6 +3506,8 @@
                             position: relative;
                             width: 24.74vw;
                             height: 24.74vw;
+                            min-width: 291px;
+                            min-height: 291px;
                             border-radius: 20px;
                             background: no-repeat center;
                             background-size: cover;
@@ -3552,6 +3535,7 @@
                             transform: translate(-50%, -50%) scale(0.67);
                             background: no-repeat center url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
                             transition: .5s;
+                            background-size: cover;
                         } 
                         .brand-elements__slide.brand-elements__slide--design {
                             background-image: url(../../mocks/BS0002/whats-next-colour-design-system-d.png);
@@ -3561,9 +3545,8 @@
                             position: absolute;
                             bottom: 0;
                             width: 100%;
-                            height: 88px;
                             font-size: 28px;
-                            padding: 0 32px;
+                            padding: 26px 32px 28px;
                             display: flex;
                             align-items: center;
                         }
@@ -3604,6 +3587,19 @@
                                 height: 53.23vw;
                                 min-height: 336px;
                             }
+                            .logo__bottom-cont {
+                                bottom: 16px;
+                            }
+                            .logo__bottom-cont__title {
+                                font-size: 16px;
+                            }
+                            .logo__bottom-cont__desc {
+                                font-size: 12px;
+                            }
+                            .logo__container--logoplay {
+                                box-sizing: border-box;
+                                padding: 20px;
+                            }
 
                             /*btmdot-slide*/
                             .btmdot-slide__slide__inner {
@@ -3612,10 +3608,36 @@
                             }
 
 
+                            /*logo suite*/
+                            .logosuite {
 
+                            }
+                            .logosuite__label {
+                                display: none;
+                            }
+                            .logosuite__img {
+
+                            }
+
+
+                            /*brand elements 슬라이드*/
+                            .brand-elements {
+                                padding: 70px 40px 88px;
+                            }
+                            .brand-elements__slider {
+                                margin: 70px -40px 0;
+                            }
+                            .brand-elements__controller {
+                                right: 40px;
+                            }
+
+                            .brand-elements__item-title {
+                                font-size: 16px;
+                                padding: 16px;
+                            }
                         }
 
-                        @media (max-width: 48rem) {
+                        @media (max-width: 768px) {
                             /*공통*/
                             .brand__header {
                                 margin-bottom: 34px;
@@ -3649,19 +3671,12 @@
                                 height: 90vw;
                                 border-radius: 10px;
                             }
-                            .logo__bottom-cont {
-                                bottom: 16px;
+                            
+                            .logo__container--logoplay, 
+                            .logo__container--logosuite {
+                                background-image: url(../../mocks/BS0002/brand-elements-logo-digital-logo-play-bg-m.png);
                             }
-                            .logo__bottom-cont__title {
-                                font-size: 16px;
-                            }
-                            .logo__bottom-cont__desc {
-                                font-size: 12px;
-                            }
-                            .logo__container--logoplay {
-                                box-sizing: border-box;
-                                padding: 20px;
-                            }
+
 
 
 
@@ -3708,20 +3723,14 @@
 
                             .tab-menu__list {
                                 width: 100%;
+                                padding: 8px;
                             }
 
                             .tab-menu__btn {
                                 width: auto;
                                 flex: 1;
-                                background-color: transparent;
-                                border-radius: 400px;
-                                display: inline-flex;
-                                align-items: center;
-                                justify-content: center;
-                                height: 50px;
-                                font-weight: 400;
-                                font-size: 15px;
-                                text-decoration: none;
+                                height: 40px;
+                                font-size: 14px;
                             }
 
                             .tab-menu__btn--active {
@@ -3733,6 +3742,64 @@
                             .tab-container__content {display: none;}
                             .tab-container__content--active {display: block;}
 
+                            /*logo suite*/
+
+                            
+                            /*brand elements 슬라이드*/
+                            .brand-elements {
+                                padding: 32px 20px 40px;
+                            }
+                            .brand-elements__header-title {
+                                font-size: 28px;
+                            }
+                            .brand-elements__slider {
+                                margin: 24px -20px 0;
+                            }
+                            .brand-elements__controller {
+                                display: none;
+                            }
+
+                            .brand-elements__progressbar {
+                                margin-top: 24px;
+                            }
+                            .brand-elements__slide {
+                                width: 77.6vw;
+                                height: 77.6vw;
+                            }
+                            .brand-elements__slide.brand-elements__slide--photography::before {
+                            } 
+
+                            .brand-elements__item-title {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                font-size: 28px;
+                                padding: 26px 32px 28px;
+                                display: flex;
+                                align-items: center;
+                            }
+                            
+                            .brand-elements__slide:hover.brand-elements__slide--logo {
+                                background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
+                            } 
+                            .brand-elements__slide:hover.brand-elements__slide--color {
+                                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
+                            } 
+                            .brand-elements__slide:hover.brand-elements__slide--tagline {
+                                background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
+                            } 
+                            .brand-elements__slide:hover.brand-elements__slide--photography::before {
+                                top: 50%;
+                                transform: translate(-50%, -50%) scale(1);
+                            } 
+                            .brand-elements__slide:hover.brand-elements__slide--design {
+                                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
+                            } 
+                            .brand-elements__slide:hover .brand-elements__item-title {
+                                background: rgba(38, 38, 38, 0.26);
+                                backdrop-filter: blur(17px);
+                                color: #fff;
+                            }
                         }
 
 
@@ -3804,18 +3871,15 @@
                             </div>
                             <div class="tab-container" data-tab="partnership">
                                 <div id="clearspace" class="tab-container__content tab-container__content--active">
-                                    <div class="logo__container logo__container--clearspace">
-                                        <img class="logo__container__clearspace-image" src="../../mocks/BS0002/../../mocks/BS0002/LG_Clearspace-1.svg" alt="">
+                                    <div class="logo__container logo__container--spacing">
+                                        <img class="logo__container__spacing-img logo__container__spacing-img--pc" src="../../mocks/BS0002/brand-elements-logo-spacing-clearspace-d.svg" alt="">
+                                        <img class="logo__container__spacing-img logo__container__spacing-img--mo" src="../../mocks/BS0002/brand-elements-logo-spacing-clearspace-m.svg" alt="">
                                     </div>
                                 </div>
                                 <div id="partnerships" class="tab-container__content">
-                                    <div class="logo__container logo__container--partnerships">
-                                        <img class="logo__container__partnerships-image" src="../../mocks/BS0002/brand-elements-logo-spacing-brand-partnerships-d.svg" alt="">
-                                        <ul class="logo__container__partnerships-example">
-                                            <li class="logo__container__partnerships-example__item logo__container__partnerships-example__item--magna"><img src="../../mocks/BS0002/LG_Partnerships-1.svg" alt=""></li>
-                                            <li class="logo__container__partnerships-example__item logo__container__partnerships-example__item--oorbit"><img src="../../mocks/BS0002/LG_Partnerships-2.svg" alt=""></li>
-                                            <li class="logo__container__partnerships-example__item logo__container__partnerships-example__item--honda"><img src="../../mocks/BS0002/LG_Partnerships-3.svg" alt=""></li>
-                                        </ul>
+                                    <div class="logo__container logo__container--spacing">
+                                        <img class="logo__container__spacing-img logo__container__spacing-img--pc" src="../../mocks/BS0002/brand-elements-logo-spacing-brand-partnerships-d.svg" alt="">
+                                        <img class="logo__container__spacing-img logo__container__spacing-img--mo" src="../../mocks/BS0002/brand-elements-logo-spacing-brand-partnerships-d.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -4007,8 +4071,8 @@
                             const swiper = new Swiper(brandElements, {
                                 slidesPerView: 'auto',
                                 spaceBetween: 20,
-                                slidesOffsetBefore: 120,
-                                slidesOffsetAfter: 120,
+                                slidesOffsetBefore: 20,
+                                slidesOffsetAfter: 20,
                                 navigation: {
                                     nextEl: '.brand-elements__controller .swiper-button-next',
                                     prevEl: '.brand-elements__controller .swiper-button-prev',
@@ -4016,6 +4080,17 @@
                                 scrollbar: {
                                     el: '.brand-elements__progressbar',
                                 },
+                                breakpoints: {
+                                    768: {
+                                        slidesOffsetBefore: 40,
+                                        slidesOffsetAfter: 40,
+                                    },
+                                    1279: {
+                                        slidesOffsetBefore: 120,
+                                        slidesOffsetAfter: 120,
+                                    },
+                                    
+                                }
                             });
 
                         }
