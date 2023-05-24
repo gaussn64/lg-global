@@ -3305,8 +3305,14 @@
                         /*brand elements 슬라이드*/
                         .brand-elements {
                             background-color: #E6E1D6;
-                            padding: 70px 120px 88px ;
+                            padding: 70px 20px 88px;
                             position: relative;
+                            overflow: hidden;
+                        }
+
+                        .brand-elements__inner {
+                            max-width: 1680px;
+                            margin: 0 auto;
                         }
                         .brand-elements__header-title {
                             font-size: 44px;
@@ -3320,7 +3326,6 @@
                             position: relative;
                             margin: 70px -120px 0;
                             padding: 0;
-                            overflow: hidden;
                         }
                         .brand-elements__controller {
                             position: absolute;
@@ -3594,35 +3599,37 @@
                             </ul>
                         </div>
                         <div class="brand-elements">
-                            <h2 class="brand-elements__header-title">
-                                What’s next?
-                                <span class="brand-elements__header-title__sub">Explore brand elements</span>
-                            </h2>
-                            <div class="brand-elements__controller">
-                                <button class="brand-elements__controller__btn swiper-button-prev"></button>
-                                <button class="brand-elements__controller__btn swiper-button-next"></button>
-                            </div>
-                            <div class="brand-elements__slider">
-                                <ul class="brand-elements__slides swiper-wrapper">
-                                    <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
-                                        <h3 class="brand-elements__item-title">Logo</h3>
-                                    </li>
-                                    <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
-                                        <h3 class="brand-elements__item-title">Colour & Gradients</h3>
-                                    </li>
-                                    <li class="brand-elements__slide brand-elements__slide--tagline swiper-slide">
-                                        <h3 class="brand-elements__item-title">Tagline</h3>
-                                    </li>
-                                    <li class="brand-elements__slide brand-elements__slide--photography swiper-slide">
-                                        <h3 class="brand-elements__item-title">Photography</h3>
-                                    </li>
-                                    <li class="brand-elements__slide brand-elements__slide--design swiper-slide">
-                                        <h3 class="brand-elements__item-title">Design System</h3>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="brand-elements__progress-container">
-                                <div class="brand-elements__progressbar"></div>
+                            <div class="brand-element__inner" style="max-width: 1680px; margin: 0 auto;">
+                                <h2 class="brand-elements__header-title">
+                                    What’s next?
+                                    <span class="brand-elements__header-title__sub">Explore brand elements</span>
+                                </h2>
+                                <div class="brand-elements__controller">
+                                    <button class="brand-elements__controller__btn swiper-button-prev"></button>
+                                    <button class="brand-elements__controller__btn swiper-button-next"></button>
+                                </div>
+                                <div class="brand-elements__slider">
+                                    <ul class="brand-elements__slides swiper-wrapper">
+                                        <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
+                                            <h3 class="brand-elements__item-title">Logo</h3>
+                                        </li>
+                                        <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
+                                            <h3 class="brand-elements__item-title">Colour & Gradients</h3>
+                                        </li>
+                                        <li class="brand-elements__slide brand-elements__slide--tagline swiper-slide">
+                                            <h3 class="brand-elements__item-title">Tagline</h3>
+                                        </li>
+                                        <li class="brand-elements__slide brand-elements__slide--photography swiper-slide">
+                                            <h3 class="brand-elements__item-title">Photography</h3>
+                                        </li>
+                                        <li class="brand-elements__slide brand-elements__slide--design swiper-slide">
+                                            <h3 class="brand-elements__item-title">Design System</h3>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="brand-elements__progress-container">
+                                    <div class="brand-elements__progressbar"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
