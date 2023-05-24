@@ -3201,9 +3201,11 @@
                             height: 100vh;
                             background-size: cover;
                             position: relative;
+                            background: no-repeat center;
+                            background-size: cover;
                         }
                         #visual-logo.visual__top {
-                            background: no-repeat center url(../../mocks/BS0002/LG_Electronics_Logo_visual_background.png);
+                            background-image:  url(../../mocks/BS0002/LG_Electronics_Logo_visual_background.png);
                         }
                         #visual-logo.visual__top::before {
                             content: '';
@@ -3757,7 +3759,6 @@
                             .brand-elements__controller {
                                 display: none;
                             }
-
                             .brand-elements__progressbar {
                                 margin-top: 24px;
                             }
@@ -3765,8 +3766,6 @@
                                 width: 77.6vw;
                                 height: 77.6vw;
                             }
-
-
                             .brand-elements__item-title {
                                 position: absolute;
                                 bottom: 0;
@@ -3777,27 +3776,6 @@
                                 align-items: center;
                             }
                             
-                            .brand-elements__slide:hover.brand-elements__slide--logo {
-                                background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
-                            } 
-                            .brand-elements__slide:hover.brand-elements__slide--color {
-                                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
-                            } 
-                            .brand-elements__slide:hover.brand-elements__slide--tagline {
-                                background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
-                            } 
-                            .brand-elements__slide:hover.brand-elements__slide--photography::before {
-                                top: 50%;
-                                transform: translate(-50%, -50%) scale(1);
-                            } 
-                            .brand-elements__slide:hover.brand-elements__slide--design {
-                                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
-                            } 
-                            .brand-elements__slide:hover .brand-elements__item-title {
-                                background: rgba(38, 38, 38, 0.26);
-                                backdrop-filter: blur(17px);
-                                color: #fff;
-                            }
                         }
 
 

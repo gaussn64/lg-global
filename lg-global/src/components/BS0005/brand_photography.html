@@ -3200,9 +3200,11 @@
                             height: 100vh;
                             background-size: cover;
                             position: relative;
+                            background: no-repeat center;
+                            background-size: cover;
                         }
                         #visual-photography.visual__top {
-                            background: no-repeat center url(../../mocks/BS0005/brand-elements-photography-d.png);
+                            background-image: url(../../mocks/BS0005/brand-elements-photography-d.png);
                         }
                         
                         /*photography index list*/
@@ -3437,7 +3439,59 @@
                             /*공통*/
                             .brand__content-inner {padding: 0 20px 120px;}
                         }
+                        @media (max-width: 1279px) {
 
+
+                            /*brand elements 슬라이드*/
+                            .brand-elements {
+                                padding: 70px 20px 88px;
+                            }
+                            .brand-elements__slider {
+                                margin: 70px -20px 0;
+                            }
+                            .brand-elements__controller {
+                                right: 20px;
+                            }
+
+                            .brand-elements__item-title {
+                                font-size: 16px;
+                                padding: 16px;
+                            }
+                        }
+
+
+                        @media (max-width: 768px) {
+
+                            /*brand elements 슬라이드*/
+                            .brand-elements {
+                                padding: 32px 20px 40px;
+                            }
+                            .brand-elements__header-title {
+                                font-size: 28px;
+                            }
+                            .brand-elements__slider {
+                                margin: 24px -20px 0;
+                            }
+                            .brand-elements__controller {
+                                display: none;
+                            }
+                            .brand-elements__progressbar {
+                                margin-top: 24px;
+                            }
+                            .brand-elements__slide {
+                                width: 77.6vw;
+                                height: 77.6vw;
+                            }
+                            .brand-elements__item-title {
+                                position: absolute;
+                                bottom: 0;
+                                width: 100%;
+                                font-size: 28px;
+                                padding: 26px 32px 28px;
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
 
                     </style>
                     <!-- html code -->
@@ -3605,8 +3659,8 @@
                             const swiper = new Swiper(brandElements, {
                                 slidesPerView: 'auto',
                                 spaceBetween: 20,
-                                slidesOffsetBefore: 120,
-                                slidesOffsetAfter: 120,
+                                slidesOffsetBefore: 20,
+                                slidesOffsetAfter: 20,
                                 navigation: {
                                     nextEl: '.brand-elements__controller .swiper-button-next',
                                     prevEl: '.brand-elements__controller .swiper-button-prev',
@@ -3614,10 +3668,16 @@
                                 scrollbar: {
                                     el: '.brand-elements__progressbar',
                                 },
+                                breakpoints: {
+                                    1279: {
+                                        slidesOffsetBefore: 120,
+                                        slidesOffsetAfter: 120,
+                                    },
+                                    
+                                }
                             });
 
                         }
-
 
                         window.addEventListener('DOMContentLoaded', () => {
                             tabFunc() //tab content 
