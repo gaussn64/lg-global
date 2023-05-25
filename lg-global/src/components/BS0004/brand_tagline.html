@@ -3217,17 +3217,23 @@
                             padding: 0;
                         }
                         .tagline__slide__items {
-                            height: 830px;
                             border-radius: 30px;
                             display: flex;
                             overflow: hidden;
                         }
-                        .tagline__slide__items > div {
+                        .tagline__slide__visual,
+                        .tagline__slide__product {
+                            height: 830px;
                             flex: 1;
                             background: no-repeat center;
                             background-size: cover;
+                            position: relative;
+                            background-color: #262626;
                         }
-                        .tagline__slide__items-01 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-01-d-01.png);}
+                        .tagline__slide__items-01 .tagline__slide__visual {
+                            background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-01-d-01.svg);
+                            background-size: 82.85% auto;
+                        }
                         .tagline__slide__items-01 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-01-d-02.png);}
 
                         .tagline__slide__items-02 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-02-d-01.png);}
@@ -3239,12 +3245,11 @@
                         .tagline__slide__items-04 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-04-d-01.png);}
                         .tagline__slide__items-04 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-04-d-02.png);}
                         
-                        .tagline__slide__product {position: relative;}
-
                         .tagline__controller {
                             position: absolute;
                             display: flex;
                             align-items: center;
+                            justify-content: flex-end;
                             bottom: 47px;
                             right: 43px;
                             z-index: 1;
@@ -3287,23 +3292,23 @@
                         .btmdot-slide__slider {
                             overflow: hidden;
                         }
-                        .btmdot__slide__inner {
+                        .btmdot-slide__slide__inner {
                             height: 830px;
                             width: 100%;
                             padding: 0;
                             margin: 0;
                         }
-                        .btmdot__slide {
+                        .btmdot-slide__slide {
                             background: no-repeat center;
                             background-size: cover;
                             border-radius: 30px;
                         }
-                       .btmdot__slide.btmdot__slide--dark {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-d.png);}
-                       .btmdot__slide.btmdot__slide--light {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-d.png);}
-                       .btmdot__slide.btmdot__slide--light-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-d.png);}
-                       .btmdot__slide.btmdot__slide--dark-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-d.png);}
-                       .btmdot__slide.btmdot__slide--light-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-d.png);}
-                       .btmdot__slide.btmdot__slide--dark-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-d.png);}
+                       .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-d.png);}
+                       .btmdot-slide__slide--light {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-d.png);}
+                       .btmdot-slide__slide--light-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-d.png);}
+                       .btmdot-slide__slide--dark-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-d.png);}
+                       .btmdot-slide__slide--light-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-d.png);}
+                       .btmdot-slide__slide--dark-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-d.png);}
 
                         .btmdot-slide__btm-container {
                             position: absolute;
@@ -3329,7 +3334,7 @@
                             background: no-repeat center;
                             background-size: cover;
                         }
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--active::before {
+                        .btmdot-slide__pagination__btn--active::before {
                             content: '';
                             position: absolute;
                             display: block;
@@ -3341,16 +3346,16 @@
                             transform: translate(-50%, -50%);
                             border: 2px solid #fff;
                         }
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--dark {background-color: #262626;}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light {background-color: #fff;}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--dark-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-thumb-d.png);}
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--dark-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--dark {background-color: #262626;}
+                        .btmdot-slide__pagination__btn--light {background-color: #fff;}
+                        .btmdot-slide__pagination__btn--light-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--dark-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--light-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-thumb-d.png);}
+                        .btmdot-slide__pagination__btn--dark-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-thumb-d.png);}
                         
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light::before,
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light-gra::before,
-                        .btmdot-slide__pagination__btn.btmdot-slide__pagination__btn--light-img::before {
+                        .btmdot-slide__pagination__btn--light::before,
+                        .btmdot-slide__pagination__btn--light-gra::before,
+                        .btmdot-slide__pagination__btn--light-img::before {
                             border-color: #262626;
                         }
 
@@ -3399,7 +3404,6 @@
                         .tab-menu__container {
                             text-align: center;
                         }
-
                         .tab-menu__list {
                             display: inline-flex;
                             justify-content: center;
@@ -3428,7 +3432,7 @@
 
                         .tab-container {margin-top: 72px;}
                         .tab-container__content {display: none;}
-                        .tab-container__content.tab-container__content--active {display: block;}
+                        .tab-container__content--active {display: block;}
 
 
                         /*brand elements 슬라이드*/
@@ -3511,16 +3515,16 @@
                             transition: .5s;
                             overflow: hidden;
                         }
-                        .brand-elements__slide.brand-elements__slide--logo {
+                        .brand-elements__slide--logo {
                             background-image: url(../../mocks/BS0002/whats-next-logo-d.png);
                         } 
-                        .brand-elements__slide.brand-elements__slide--color {
+                        .brand-elements__slide--color {
                             background-image: url(../../mocks/BS0002/whats-next-colour-grandients-d.png);
                         } 
-                        .brand-elements__slide.brand-elements__slide--tagline {
+                        .brand-elements__slide--tagline {
                             background-image: url(../../mocks/BS0002/whats-next-tagline-d.png);
                         } 
-                        .brand-elements__slide.brand-elements__slide--photography::before {
+                        .brand-elements__slide--photography::before {
                             content: '';
                             position: absolute;
                             top: 47%;
@@ -3533,7 +3537,7 @@
                             transition: .5s;
                             background-size: cover;
                         } 
-                        .brand-elements__slide.brand-elements__slide--design {
+                        .brand-elements__slide--design {
                             background-image: url(../../mocks/BS0002/whats-next-colour-design-system-d.png);
                         } 
 
@@ -3585,6 +3589,22 @@
                                 min-height: 336px;
                             }
 
+                            /*tagline slide*/
+
+                            .tagline__slide__visual,
+                            .tagline__slide__product {
+                                height: 53.23vw;
+                                min-height: 336px;
+                            }
+                            .tagline__controller {
+                                flex-wrap: wrap;
+                            }
+                            .taglien__controller__desc {
+                                width: 100%;
+                                text-align: right;
+                                margin: 0 0 16px;
+                            }
+
                             /*brand elements 슬라이드*/
                             .brand-elements {
                                 padding: 70px 20px 88px;
@@ -3623,6 +3643,9 @@
                             .brand__content-inner {
                                 padding: 0 20px 34px;
                             }
+                            #visual-colors.visual__top {
+                                background-image: url(../../mocks/BS0004/brand-elements-tagline-m.png);
+                            }
 
                             /*tab*/
                             .tab-menu__container {
@@ -3640,6 +3663,72 @@
                             }
                             .tab-container {margin-top: 24px;}
 
+                            /*tagline slide*/
+                            .tagline__slide__items {
+                                border-radius: 10px;
+                                flex-direction: column;
+                            }
+                            .tagline__slide__visual,
+                            .tagline__slide__product {
+                                flex: unset;
+                            }
+
+                            .tagline__slide__visual {
+                                /* max-height: 331.01px; */
+                                height: 88.27vw;
+                            }
+                            .tagline__slide__product {
+                                /* max-height: 389px; */
+                                height: 103.73vw;
+                            }
+
+                            .tagline__controller {
+                                bottom: 24px;
+                                right: unset;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                justify-content: center;
+                                width: 100%;
+                            }
+                            .taglien__controller__desc {
+                                text-align: center;
+                                font-size: 12px;
+                            }
+                            .tagline__controller__btn {
+                                background-size: 5px auto;
+                                width: 32px;
+                                height: 32px;
+                                background-position-x: calc(50% + 1px);
+                            }
+                            .tagline__controller__btn::after {
+                                display: none;
+                            }
+                            .tagline__controller__btn.tagline__controller__btn--prev {
+                                transform: rotate(-180deg);
+                                margin-right: 7px;
+                            }
+
+                            /*tagline grid*/
+                            .tagline-grid {
+                                flex-direction: column;
+                                gap: 16px;
+                            }
+                            .tagline-grid__item {
+                                border-radius: 10px;
+                                padding: 16px;
+                            }
+                            .tagline-grid__text-info {
+                                margin-bottom: 16px;
+                            }
+                            .tagline-grid__text-info b {
+                                font-size: 15px;
+                            }
+                            .tagline-grid__item img {
+                                border-radius: 8px;
+                            }
+
+
+
                             /*btmdot-slide*/
                             .btmdot-slide__slide__inner {
                                 height: 90vw;
@@ -3647,12 +3736,13 @@
                             .btmdot-slide__slide {
                                 border-radius: 10px;
                             }
-                            .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-background-m.png);}
-                            .btmdot-slide__slide--light {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-background-m.png);}
-                            .btmdot-slide__slide--dark-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-gradient-m.png);}
-                            .btmdot-slide__slide--light-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-gradient-m.png);}
-                            .btmdot-slide__slide--dark-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-image-m.png);}
-                            .btmdot-slide__slide--light-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-image-m.png);}
+                            .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-m.png);}
+                            .btmdot-slide__slide--light {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-m.png);}
+                            .btmdot-slide__slide--light-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-gradient-01-m.png);}
+                            .btmdot-slide__slide--dark-gra {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-gradient-04-m.png);}
+                            .btmdot-slide__slide--light-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-black-on-light-image-background-m.png);}
+                            .btmdot-slide__slide--dark-img {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-image-background-m.png);}
+
                             .btmdot-slide__btm-container {
                                 bottom: 16px;
                             }
@@ -3755,13 +3845,13 @@
                             </div>
                             <div class="btmdot-slide__container" data-type-set="dark">
                                 <div class="btmdot-slide__slider">
-                                    <ul class="btmdot__slide__inner swiper-wrapper">
-                                        <li class="btmdot__slide btmdot__slide--dark swiper-slide"></li>
-                                        <li class="btmdot__slide btmdot__slide--light swiper-slide"></li>
-                                        <li class="btmdot__slide btmdot__slide--light-gra swiper-slide"></li>
-                                        <li class="btmdot__slide btmdot__slide--dark-gra swiper-slide"></li>
-                                        <li class="btmdot__slide btmdot__slide--light-img swiper-slide"></li>
-                                        <li class="btmdot__slide btmdot__slide--dark-img swiper-slide"></li>
+                                    <ul class="btmdot-slide__slide__inner swiper-wrapper">
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--dark swiper-slide"></li>
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--light swiper-slide"></li>
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--light-gra swiper-slide"></li>
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--dark-gra swiper-slide"></li>
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--light-img swiper-slide"></li>
+                                        <li class="btmdot-slide__slide btmdot-slide__slide--dark-img swiper-slide"></li>
                                     </ul>
                                 </div>
                                 <div class="btmdot-slide__btm-container">

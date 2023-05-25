@@ -3263,14 +3263,14 @@
                             background: no-repeat center;
                             background-size: cover;
                         }
-                        .photography__grid__item:nth-child(1) {width: calc(19% - 6.1px);}
-                        .photography__grid__item:nth-child(2) {width: calc(39% - 6.1px);}
-                        .photography__grid__item:nth-child(3) {width: calc(20% - 6.1px);}
-                        .photography__grid__item:nth-child(4) {width: calc(19% - 6.1px);}
-                        .photography__grid__item:nth-child(5) {width: calc(12% - 6.1px);}
-                        .photography__grid__item:nth-child(6) {width: calc(34% - 6.1px);}
-                        .photography__grid__item:nth-child(7) {width: calc(26% - 6.1px);}
-                        .photography__grid__item:nth-child(8) {width: calc(25% - 6.1px);}
+                        .photography__grid__item:nth-child(1) {width: calc(20% - 15px);}
+                        .photography__grid__item:nth-child(2) {width: calc(40% - 15px);}
+                        .photography__grid__item:nth-child(3) {width: calc(20% - 15px);}
+                        .photography__grid__item:nth-child(4) {width: calc(20% - 15px);}
+                        .photography__grid__item:nth-child(5) {width: calc(12% - 15px);}
+                        .photography__grid__item:nth-child(6) {width: calc(35% - 15px);}
+                        .photography__grid__item:nth-child(7) {width: calc(27% - 15px);}
+                        .photography__grid__item:nth-child(8) {width: calc(26% - 15px);}
 
                         
                         /*photography grid -- everyday*/
@@ -3487,6 +3487,64 @@
                             .brand__content-inner {
                                 padding: 0 20px 34px;
                             }
+
+                            /*photography index list*/
+                            .photography__list {
+                                grid-template-columns: repeat(1, 1fr);
+                                gap: 16px;
+                            }
+                            .photography__item {
+                                border-radius: 10px;
+                            }
+
+                            .photography__item p {
+                                height: 60px;
+                                padding: 0 14px;
+                                font-size: 16px;
+                            }
+                            .photography__item p b {
+                                font-size: 17px;
+                            }
+
+                            /*photography grid*/
+                            .photography__grid {
+                                gap: 10px;
+                                border-radius: 10px;
+                            }
+                            .photography__grid__item{
+                                height: 44vw;
+                                background: no-repeat center;
+                                background-size: cover;
+                            }
+                            /*photography grid -- everyday*/
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(5) {width: calc(32% - 5px);}
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(6) {width: calc(68% - 5px);}
+
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(3),
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(4),
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(7),
+                            .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(8) {display: none;}
+                            /*photography grid -- energy*/
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(6) {width: calc(58% - 5px);}
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(7) {width: calc(42% - 5px);}
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(3),
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(4),
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(5),
+                            .photography__grid.photography__grid--energy .photography__grid__item:nth-child(8) {display: none;}
+                            /*photography grid -- photography*/
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(3) {width: calc(68% - 5px); order: 4;}
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(5) {width: calc(32% - 5px);}
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(4),
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(6),
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(7),
+                            .photography__grid.photography__grid--products .photography__grid__item:nth-child(8) {display: none;}
+
 
                             /*brand elements 슬라이드*/
                             .brand-elements {
