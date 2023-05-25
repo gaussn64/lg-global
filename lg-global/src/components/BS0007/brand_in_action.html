@@ -3250,20 +3250,20 @@
                             }
                         }
 
-                        .brand-in-action__pagination__btn.brand-in-action__pagination__btn--active {
+                        .brand-in-action__pagination__btn--active {
                             width: 85px;
                         }
-                        .brand-in-action__pagination__btn.brand-in-action__pagination__btn--active span {
+                        .brand-in-action__pagination__btn--active span {
                             opacity: 1;
                             animation-name: zeroTo;
                             animation-duration: 3.5s;
                         }
 
-                        .brand-in-action__pagination__btn.brand-in-action__pagination__btn--active:nth-child(1) span {
+                        .brand-in-action__pagination__btn--active:nth-child(1) span {
                             animation-duration: 95.5s;
                         }
 
-                        .brand-in-action__pagination__btn.brand-in-action__pagination__btn--paused span {
+                        .brand-in-action__pagination__btn--paused span {
                             animation-play-state: paused;
                         }
 
@@ -3368,6 +3368,8 @@
                             const videoPlayBtn = videoArea.querySelector('.btn-play')
                             const bullets = [...document.querySelectorAll('.brand-in-action__pagination__btn')]
 
+                            const bullet = bullets[0]
+
                             let progressBar = document.querySelector('.brand-in-action__pagination__btn--active > span')
 
                             let videoBtnTimer = null
@@ -3378,18 +3380,17 @@
                                     isVideoPause = true
                                     videoPlayBtn.classList.add('btn-play--active')
                                     video.pause()
+
+                                    bullet.classList.add('brand-in-action__pagination__btn--paused')
                                     
-                                    let currnetBullet = document.querySelector('.brand-in-action__pagination__btn.brand-in-action__pagination__btn--active')
-                                    // currnetBullet.classList.add('brand-in-action__pagination__btn--paused')
                                     
                                 } else {
 
                                     isVideoPause = false
                                     videoPlayBtn.classList.remove('btn-play--active')
                                     video.play()
-
-                                    let currnetBullet = document.querySelector('.brand-in-action__pagination__btn.brand-in-action__pagination__btn--active')
-                                    // currnetBullet.classList.remove('brand-in-action__pagination__btn--paused')
+                                    
+                                    bullet.classList.remove('brand-in-action__pagination__btn--paused')
                                 }
                             }
 
