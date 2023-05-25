@@ -3298,7 +3298,20 @@
 
                         @media (max-width: 1720px) {}
                         @media (max-width: 1279px) {}
-                        @media (max-width: 768px) {}
+                        @media (max-width: 768px) {
+
+                            .brand-in-action__slide-item:not(.brand-in-action__slide-item--video) {
+                                display: none;
+                            }
+
+                            .brand-in-action__pagination {
+                                display: none;
+                            }
+
+                            .brand-in-action__controller {
+                                display: none;
+                            }
+                        }
 
                     </style>
                     <!-- html code -->
@@ -3398,7 +3411,6 @@
                                 slidesPerView: 1,
                                 spaceBetween: 0,
                                 speed: 500,
-                                loop: true,
                                 autoplay: {
                                     delay: 3000,
                                     disableOnInteraction: false
@@ -3418,6 +3430,11 @@
                                         setClass(bullets[swiper.realIndex], 'brand-in-action__pagination__btn--active')
                                     },
                                 },
+                                breakpoints: {
+                                    768: {
+                                        loop: true,
+                                    }
+                                }
                             })
 
 
