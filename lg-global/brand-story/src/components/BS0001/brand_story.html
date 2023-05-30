@@ -3186,9 +3186,6 @@
                             display: none;
                         }
 
-                        #nav {
-                        }
-
                         /* brand story - 공통 */
                         .brand_container {
                             background-color: var(--parallex-bg-color);
@@ -3228,8 +3225,10 @@
                             font-size: 72px;
                             color: #fff;
                             text-align: center;
+                            box-sizing: border-box;
                             padding: 0 12px;
                             font-weight: 400;
+                            width: 100%;
                         }
                         .brand-film__next {
                             position: absolute;
@@ -3280,85 +3279,101 @@
                         /* brand story - brand mission */
                         .brand-mission {
                             position: relative;
+                            z-index: 1;
                         }
                         .brand-mission__bg {
                             position: sticky;
                             width: 100%;
                             height: 100vh;
-                            box-sizing: border-box;
-                            padding: 40px;
                             top: 0;
                             left: 0;
+                            z-index: -1;
                         }
                         .brand-mission__bg::before {
                             content: '';
+                            position: absolute;
                             width: calc(100% - 80px);
                             height: calc(100% - 80px);
-                            position: absolute;
                             top: 50%;
                             left: 50%;
                             transform: translate(-50%, -50%);
-                            background: url(../../mocks/BS0001/brand-story-mission-statement-better-life-d.jpg) no-repeat center;
+                            background: no-repeat center url(../../mocks/BS0001/brand-story-mission-statement-better-life-d.jpg);
+                            background-size: cover;
                             border-radius: 30px;
                         }
+
                         .brand-mission__list {
                             list-style: none;
                             padding: 0;
-                            position: relative;
-                            z-index: 1;
+                            margin: 200px 0 0;
                         }
-
                         .brand-mission__list-item {
-                            display: flex;
-                            justify-content: center;
-                            color: #fff;
+                            height: 60vh;
                             text-align: center;
-                            font-size: 35px;
-                            height: 60.46vh;
-                            transition: .3s;
-                        }
-                        .brand-mission__list-item:last-child {
-                            padding-bottom: 50vh;
+                            color: #fff;
+                            font-size: 32px;
+                            transition: .4s cubic-bezier(.84,0,.16,1);
                         }
                         .brand-mission__list-item--active {
                             font-size: 72px;
                         }
-                        .brand-mission__list--active::before {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                        .brand-mission__list-item--active {
-                            font-size: 72px;
-                        }
-
+                       
                         /*텍스트 아래에서 위로 모션 영역*/
                         .ascend-text__section {
                             height: 100vh;
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            position: relative;
                         }
                         .parallex__title--divied {
                             overflow: hidden;
                         }
+                        .parallex__title--divied span {
+                            display: inline-block;
+                        }
 
                         /* brand story - life's good */
                         .lifeisgood {
+                            position: relative;
                             margin-top: 40px;
+                            padding-top: 100vh;
                         }
                         .lifeisgood__texts {
                             display: flex;
                             align-items: center;
-                            justify-content: center;
-                            position: sticky;
+                            position: absolute;
                             top: 0;
-                            gap: 3.85%;
-                            z-index: 2;
+                            z-index: 4;
                             height: 100vh;
-                            transition: .5s;
+                            width: 50%;
                         }
-                        .lifeisgood__texts--active {
-                            gap: 20%;
+                        .lifeisgood__texts svg {
+                            transition: 0.5s;
+                        }
+                        .lifeisgood__text--left {
+                            justify-content: flex-start;
+                        }
+                        .lifeisgood__text--left svg {
+                            margin-left: 12.24vw;
+                        }
+                        .lifeisgood__text--right {
+                            justify-content: flex-end;
+                            right: 0;
+                            z-index: 2;
+
+                        }
+                        .lifeisgood__text--right svg {
+                            margin-right: 12.24vw;
+                        }
+                        .lifeisgood__texts--active.lifeisgood__text--left svg {
+                            margin-left: 5.52vw;
+                        }
+                        .lifeisgood__texts--active.lifeisgood__text--right svg {
+                            margin-right: 5.52vw;
+                        }
+                        .lifeisgood__texts--active svg path {
+                            fill: #fff !important;
                         }
 
                         .lifeisgood__text {
@@ -3368,6 +3383,12 @@
                         .life-bg__items {
                             list-style: none;
                             padding: 0;
+                        }
+                        .life-bg__items.life-bg__items--avatar {
+                            position: absolute;
+                            top: 100vh;
+                            width: 100%;
+                            z-index: 3;
                         }
                         .life-bg__item {
                             position: relative;
@@ -3385,7 +3406,6 @@
                             transform: translate(-50%, -50%);
                             border-radius: 30px;
                             z-index: -1;
-                            background-color: #222;
                         }
                         .life-bg__item--avatar {
                             background-color: unset;
@@ -3395,8 +3415,12 @@
                             background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
                             background-position: center top 40px;
                         }
+                        .life-bg__item--last {
+                            background-color: #222;
+                        }
                         .lifeisgood--pause .life-bg__item--last {
                             position: absolute;
+                            
                         }
                         
                         /* brand story - our values */
@@ -4055,9 +4079,9 @@
                                 <source src="../../mocks/BS0001/20230322_LG_BrandfilmMaster_48_IntroClean.mp4" type="video/mp4">
                             </video>
                             <h2 class="brand-film__text">We’re bringing a smile back to tech</h2>
-                            <a class="brand-film__next" href="#"></a>
+                            <a class="brand-film__next" href="#brand-symbol"></a>
                         </div>
-                        <div class="brand-symbol">
+                        <div class="brand-symbol" id="brand-symbol">
                             <div class="brand-symbol__bg"></div>
                             <span class="brand-symbol__logo">
                                 <img src="../../mocks/BS0001/logo_visual_face.jpeg" alt="">
@@ -4071,38 +4095,35 @@
                             </ul>
                         </div>
                         <div class="ascend-text__section">
-                            <h3 class="parallex__title parallex__title--divied">It’s how we make sure</h3>
+                            <h3 class="parallex__title parallex__title--divied">
+                                It’s how we make sure
+                            </h3>
                         </div>
                         <div class="lifeisgood">
-                            <div class="lifeisgood__texts">
-                                <svg class="lifeisgood__text lifeisgood__text--left" width="590" height="224" viewBox="0 0 590 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <div class="lifeisgood__texts lifeisgood__text--left">
+                                <svg class="lifeisgood__text " width="590" height="224" viewBox="0 0 590 224" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M532.828 223.908C568.998 223.908 590 206.857 590 173.898C590 153.303 578.227 136.114 555.254 126.74L534.73 118.359C521.371 112.968 515.922 105.857 515.922 95.3513C515.922 84.2689 524.673 79.1894 533.715 79.1894C547.075 79.1894 557.26 88.7018 574.354 110.359C576.22 112.668 578.227 111.917 578.227 108.789V79.1547C578.257 78.3099 578.043 77.4742 577.611 76.7446C577.18 76.0151 576.548 75.4217 575.789 75.0334C567.026 71.7664 551.66 69.7808 537.88 69.7808C506.728 69.7808 482.902 88.3901 482.902 116.662C482.902 135.26 492.085 152.738 513.763 161.684L535.874 170.781C550.808 176.888 556.117 183.561 556.117 194.92C556.117 206.857 547.646 214.672 535.302 214.672C520.227 214.672 507.019 202.17 487.348 176.034C485.621 173.621 483.474 174.475 483.754 177.454L486.776 214.949C486.916 216.946 487.639 218.216 489.646 218.794C498.257 221.345 511.465 223.908 532.817 223.908M457.98 80.1475C481.666 73.221 493.73 55.0042 493.73 32.5623C493.73 12.5331 481.094 0.0307104 465.727 0.0307104C458.31 0.0212406 451.189 2.91187 445.916 8.07312C440.643 13.2344 437.644 20.2481 437.573 27.5867C437.573 42.6519 449.918 55.5699 464.992 55.5699C468.572 55.5482 472.123 54.9276 475.493 53.7343C476.205 53.4457 476.788 54.0114 476.66 54.8888C474.513 63.8355 464.992 71.3624 456.568 76.4765C453.978 78.0465 455.273 81.0249 458.003 80.1706M370.997 127.502C371.429 92.8693 378.173 79.2009 388.371 79.2009C398.872 79.2009 404.705 93.8274 404.88 127.502H370.997ZM390.833 223.954C424.856 223.954 443.956 203.636 449.416 178.931C450.128 175.664 448.401 174.672 445.916 176.796C436.374 184.919 424.188 189.358 411.601 189.298C387.344 189.298 372.701 174.672 371.114 137.349H446.067C446.486 137.392 446.909 137.353 447.312 137.233C447.715 137.113 448.091 136.915 448.416 136.651C448.742 136.387 449.011 136.062 449.209 135.694C449.406 135.327 449.528 134.924 449.568 134.509C449.804 132.289 449.897 130.057 449.848 127.825C449.848 97.8102 428.321 69.8732 392.851 69.8732C353.811 69.8732 322.227 100.985 322.227 149.99C322.227 198.476 352.563 224 390.844 224M230.425 85.4348H247.227V183.03C247.227 211.578 236.306 214.28 236.306 218.54C236.306 219.959 237.169 221.091 239.468 221.091H305.658C307.992 221.091 308.809 219.936 308.809 218.54C308.809 213.991 295.753 211.613 295.753 183.03V85.4348H320.441C320.876 85.4938 321.318 85.4551 321.736 85.3216C322.153 85.1881 322.534 84.9632 322.852 84.6637C323.169 84.3641 323.414 83.9977 323.568 83.5915C323.723 83.1854 323.783 82.75 323.743 82.3178V76.0609C323.798 75.6189 323.75 75.1704 323.604 74.7493C323.457 74.3283 323.216 73.9458 322.897 73.6309C322.579 73.316 322.193 73.0771 321.767 72.932C321.341 72.787 320.888 72.7397 320.441 72.7939H302.065C295.601 72.7939 291.727 70.485 286.897 63.7086L282.731 57.9365C274.972 47.1426 271.064 37.4801 271.064 29.3876C271.064 18.5938 278.064 12.914 287.142 12.914C298.634 12.914 306.814 21.8608 323.895 40.3315C325.762 42.4557 327.629 41.6014 327.629 39.1771V6.507C327.629 4.65992 326.765 3.52857 325.295 3.23997C317.666 0.98729 309.734 -0.102651 301.773 0.00759943C264.88 0.00759943 247.227 27.8523 247.227 58.3983V70.0463L229.562 80.9787C227.228 82.3987 227.835 85.3771 230.425 85.3771M157.199 27.7137C157.185 33.2071 158.818 38.5813 161.891 43.1565C164.964 47.7317 169.339 51.3025 174.464 53.4174C179.588 55.5323 185.231 56.0963 190.679 55.038C196.127 53.9797 201.136 51.3467 205.072 47.472C209.008 43.5972 211.694 38.6547 212.79 33.2695C213.887 27.8843 213.345 22.2983 211.233 17.2178C209.122 12.1373 205.534 7.79049 200.926 4.7271C196.317 1.66371 190.893 0.0213158 185.341 0.00759943C177.904 0.0165981 170.773 2.93413 165.501 8.12413C160.229 13.3141 157.245 20.3557 157.199 27.7137ZM153.477 221.033H217.497C219.831 221.033 220.659 219.879 220.659 218.482C220.659 214.222 209.75 211.555 209.75 182.972V69.6423C209.764 69.5143 209.746 69.3848 209.698 69.2651C209.65 69.1455 209.573 69.0391 209.475 68.9551C209.376 68.8711 209.258 68.8121 209.131 68.783C209.005 68.7539 208.873 68.7556 208.747 68.788L153.617 80.7132C151.458 81.1403 150.315 82.1331 150.315 83.8417C150.315 88.2516 161.224 89.0943 161.224 111.121V182.995C161.224 211.544 150.315 214.245 150.315 218.505C150.315 219.925 151.178 221.056 153.477 221.056M3.16194 221.056H126.769C127.327 221.108 127.889 221.05 128.423 220.885C128.957 220.72 129.453 220.451 129.881 220.094C130.309 219.737 130.661 219.3 130.916 218.807C131.171 218.314 131.324 217.776 131.366 217.224L140.981 165.378C141.412 162.966 139.254 161.915 137.387 163.959L109.711 191.942C95.3484 206.43 90.3196 211.117 73.8098 211.117H63.4839V55.4198C63.4839 26.871 74.3932 24.1696 74.3932 19.9098C74.3932 18.4899 73.5298 17.3586 71.2312 17.3586H3.16194C0.828405 17.3586 0 18.513 0 19.9098C0 24.1696 10.9093 26.8364 10.9093 55.4198V182.983C10.9093 211.532 0 214.234 0 218.493C0 219.913 0.863408 221.045 3.16194 221.045" fill="#262626" style="transition: 0.5s"/>
                                 </svg>
-                                <svg class="lifeisgood__text lifeisgood__text--right"  width="735" height="224" viewBox="0 0 735 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            </div>
+                            <div class="lifeisgood__texts lifeisgood__text--right">
+                                <svg class="lifeisgood__text"  width="735" height="224" viewBox="0 0 735 224" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M706.959 224C712.513 223.986 717.938 222.343 722.55 219.278C727.162 216.213 730.755 211.863 732.874 206.777C734.993 201.691 735.543 196.097 734.456 190.702C733.37 185.306 730.694 180.351 726.766 176.46C722.839 172.57 717.837 169.919 712.39 168.842C706.944 167.765 701.297 168.311 696.163 170.41C691.029 172.509 686.638 176.068 683.544 180.637C680.45 185.206 678.791 190.58 678.777 196.082C678.78 203.486 681.75 210.585 687.035 215.82C692.319 221.055 699.485 223.997 706.959 224ZM559.449 139.252C559.449 96.2407 569.509 78.8673 583.6 78.8673C589.933 78.8673 595.541 82.1429 601.862 87.988V199.103C598.018 200.604 593.911 201.332 589.781 201.245C572.103 201.245 559.402 184.438 559.402 139.286M602.972 224L659.475 209.185C661.345 208.756 662.49 207.9 662.49 206.337C662.49 201.777 650.56 200.782 650.56 178.709V0.762604C650.568 0.640602 650.544 0.518695 650.491 0.408389C650.438 0.298083 650.357 0.20303 650.257 0.132308C650.156 0.0615856 650.039 0.0174853 649.916 0.00422811C649.793 -0.00902911 649.669 0.00901657 649.556 0.0565762L593.052 14.8603C591.183 15.2886 590.038 16.1451 590.038 17.7077C590.038 22.268 601.967 23.2634 601.967 45.336V70.9735C595.546 69.9815 589.059 69.4593 582.56 69.411C537.565 69.411 508.951 104.134 508.951 153.442C508.951 197.159 527.786 223.942 565.735 223.942C580.398 223.942 589.465 218.525 601.955 207.136V223.225C601.949 223.347 601.973 223.468 602.026 223.578C602.08 223.689 602.16 223.784 602.26 223.855C602.36 223.927 602.477 223.972 602.599 223.987C602.721 224.002 602.845 223.987 602.96 223.942M404.567 146.74C404.567 95.6156 411.028 78.8095 424.255 78.8095C438.637 78.8095 444.246 95.6156 444.246 146.74C444.246 197.865 438.591 214.74 424.208 214.74C410.982 214.74 404.521 197.784 404.521 146.798M424.208 224C466.913 224 494.802 190.816 494.802 146.798C494.802 102.78 466.913 69.4688 424.208 69.4688C382.66 69.4688 353.906 102.792 353.906 146.798C353.906 190.804 382.66 224 424.208 224ZM249.533 146.798C249.533 95.6735 256.006 78.8673 269.233 78.8673C283.604 78.8673 289.212 95.6735 289.212 146.798C289.212 197.923 283.604 214.74 269.233 214.74C256.006 214.74 249.533 197.784 249.533 146.798ZM269.233 224C311.926 224 339.827 190.816 339.827 146.798C339.827 102.78 311.926 69.4688 269.233 69.4688C227.685 69.4688 198.93 102.792 198.93 146.798C198.93 190.804 227.685 224 269.233 224ZM98.5772 224C123.452 224 150.477 217.159 176.789 202.495C176.938 202.41 177.059 202.283 177.136 202.131C177.212 201.978 177.242 201.807 177.222 201.638V157.771C177.222 129.147 185.272 126.149 185.272 122.168C185.272 120.744 184.407 119.598 182.105 119.598H118.849C116.512 119.598 115.694 120.755 115.694 122.168C115.694 126.439 126.619 129.112 126.619 157.771V206.904C120.438 211.743 113.965 214.173 103.041 214.173C72.6624 214.173 56.4568 184.971 56.4568 118.174C56.4568 53.0909 72.1249 24.0389 101.603 24.0389C118.568 24.0389 129.925 34.1434 159.824 66.0543C161.554 67.9063 163.423 67.3276 163.423 64.6307V28.5414C163.515 27.3518 163.194 26.1668 162.515 25.1819C161.835 24.1971 160.836 23.4713 159.684 23.1245C142.983 16.995 125.302 13.9051 107.492 14.0038C46.2449 14.0038 0 55.4521 0 118.116C0 185.48 33.3577 223.942 98.624 223.942" fill="#262626"  style="transition: 0.5s"/>
                                 </svg>
                             </div>
                             <ul class="life-bg__items">
-                                <li class="life-bg__item life-bg__item--neon">
-                                    <img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png" alt="">
-                                    <img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png" alt="">
-                                </li>
-                                <li class="life-bg__item life-bg__item--boy">
-                                    <img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png" alt="">
-                                    <img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png" alt="">
-                                </li>
-                                <li class="life-bg__item life-bg__item--life">
-                                    <img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png" alt="">
-                                    <img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png" alt="">
-                                </li>
-                                <li class="life-bg__item life-bg__item--fingerheart">
-                                    <img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png" alt="">
-                                </li>
-                                <li class="life-bg__item life-bg__item--dance">
-                                    <div class="life-bg__item__image life-bg__item--last"></div>
-                                    <div class="life-bg__item__image life-bg__item--avatar life-bg__item--last"></div>
-                                </li>
-                              </ul>
+                                <li class="life-bg__item life-bg__item--neon"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--boy"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--life"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--fingerheart"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--dance"><div class="life-bg__item__image life-bg__item--last"></div></li>
+                            </ul>
+                            <ul class="life-bg__items life-bg__items--avatar">
+                                <li class="life-bg__item life-bg__item--neon"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--boy"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--life"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--fingerheart"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png" alt=""></li>
+                                <li class="life-bg__item life-bg__item--dance"><div class="life-bg__item__image life-bg__item--avatar life-bg__item--last"></div></li>
+                            </ul>
                         </div>
                         <div class="ascend-text__section">
                             <h3 class="parallex__title parallex__title--divied">We always stay true to our values</h3>
@@ -4303,14 +4324,25 @@
                         const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
 
                         function brandMission() {
-                            const missionSec = document.querySelector('.brand-mission')
-                            const missionList = missionSec.querySelector('.brand-mission__list')
-                            const missionBg = missionSec.querySelector('.brand-mission__bg')
-                            const targets = missionSec.querySelectorAll('.brand-mission__list-item')
+                            const area = document.querySelector('.brand-mission')
+                            const areaBg = area.querySelector('.brand-mission__bg')
+                            const areaItems = area.querySelectorAll('.brand-mission__list-item')
 
+                            //배경 스크롤 애니메이션
+                            gsap.from(areaBg, {
+                                y: '50%',
+                                opacity: 0, 
+                                scrollTrigger: {
+                                    trigger: area,
+                                    start: '-50% top',
+                                    end: 'top top',
+                                    scrub: 0.2,
+                                },
+                            })
+
+                            //리스트 애니메이션 효과
                             let current = 2
-
-                            targets.forEach((el, i) => {
+                            areaItems.forEach((el, i) => {
                                 let textTl = gsap.timeline({
                                     scrollTrigger: {
                                         trigger: el,
@@ -4318,7 +4350,7 @@
                                         end: '70% center',
                                         onUpdate: () => {
                                             if (current !== i) {
-                                                let currentEl = targets[i]
+                                                let currentEl = areaItems[i]
                                                 let sibs = siblings(currentEl)
 
                                                 currentEl.classList.add('brand-mission__list-item--active')
@@ -4328,51 +4360,33 @@
                                         }
                                     }
                                 })
+
                             })
                         }
+
                         function lifeIsGood() {
 
                             const section = document.querySelector('.lifeisgood')
-                            const textItem = section.querySelector('.lifeisgood .lifeisgood__texts')
-                            const lastItem = section.querySelector('.life-bg__item.life-bg__item--dance')
+                            const textItems = section.querySelectorAll('.lifeisgood .lifeisgood__texts')
+                            const lastItems = section.querySelectorAll('.life-bg__item.life-bg__item--dance')
 
-                            gsap.to('.lifeisgood__texts', {
-                                ease: "none",
-                                scrollTrigger: {
-                                    start: `20% center`,
-                                    trigger: '.lifeisgood',
-                                    end: `83.33%`,
-                                    scrub: true,
-                                    // markers: true,
-                                    onEnter: function() {
-                                        setTextTransition(true)
-                                    },
-                                    onLeaveBack: () => {
-                                        setTextTransition(false)
-                                    },
-                                    onUpdate: self => {
-                                        if (self.progress === 1) {
-                                            section.classList.add('lifeisgood--pause')
-                                        } else {
-                                            section.classList.remove('lifeisgood--pause')
+                            //텍스트 pin설정
+                            textItems.forEach(el => {
+                                gsap.to(el, {
+                                    scrollTrigger: {
+                                        start: 'top top',
+                                        end: 'bottom bottom',
+                                        trigger: section,
+                                        pin: el,
+                                        scrub: 0.2,
+                                        onUpdate: (self) => {
+                                            self.progress === 1 ? section.classList.add('lifeisgood--pause') : section.classList.remove('lifeisgood--pause')
+                                            self.progress >= 0.2 ? el.classList.add('lifeisgood__texts--active') : el.classList.remove('lifeisgood__texts--active')
                                         }
                                     }
+                                })
+                            })
 
-                                }
-                            });
-
-                            function setTextTransition(isActive) {
-                                const svgPath = textItem.querySelectorAll('svg path')
-                                const transColor = hex => svgPath.forEach(path => {path.setAttribute('fill', hex)})  
-
-                                if (isActive) {
-                                    textItem.classList.add('lifeisgood__texts--active')
-                                    transColor('#fff')
-                                } else {
-                                    textItem.classList.remove('lifeisgood__texts--active')
-                                    transColor('#262626')
-                                }
-                            }
                         }
                         function logoFixed() {
                             const logoWrap = document.querySelector('.brand-symbol')
@@ -4387,6 +4401,45 @@
                                     scrub: 0.2,
                                 }
                             })
+                        }
+                        function ascendTextMotion() {
+                            const ascendArea = document.querySelectorAll('.ascend-text__section')
+                            
+                            function createStaggerItem(words, targetEl) {
+                                let spanWrappedWords = words.map(word => `<span>${word}</span>`).join(' ');
+                                targetEl.innerHTML = spanWrappedWords
+                            }
+                            
+                            ascendArea.forEach((area) => {
+
+                                const targetText = area.querySelector('.parallex__title--divied')
+
+                                const targetTextData = targetText.innerText
+                                const textArray = targetTextData.split(' ')
+    
+                                createStaggerItem(textArray, targetText)
+    
+                                const staggerItem = [...targetText.querySelectorAll('span')]
+                                gsap.set(staggerItem, {y: 100})
+    
+                                gsap.to(targetText, {
+                                    scrollTrigger: {
+                                        trigger: area,
+                                        start: 'top top',
+                                        end: '+=200% bottom',
+                                        pin: area,
+                                        onEnter: () => {
+                                            gsap.to(staggerItem, {
+                                                y: 0,
+                                                stagger: 0.1
+                                            })
+                                        },
+                                    }
+                                })
+
+                            })
+
+
                         }
                         function cardListMotion() {
                             const cardList = document.querySelector('.card-list')
@@ -4681,7 +4734,7 @@
                             brandMission()
                             lifeIsGood()
                             logoFixed()
-                            // ascendTextMotion()
+                            ascendTextMotion()
                             cardListMotion()
                             parallaxDesignSec() //디자인섹션 모션
                             parallaxIdentitySec() //아이덴티티 섹션 모션
