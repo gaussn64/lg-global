@@ -38,17 +38,60 @@
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
-            
-
+            /* Landing Visual */
+            .landing-visual {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                background: url(../../mocks/ST0001/sustainability-kv.png) no-repeat center center;
+                background-size: cover;
+            }
+            .landing-visual__tit {
+                position: absolute;
+                bottom: 214px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .landing-visual__txt__img {
+                width: 72.8646vw;
+                height: auto;
+            }
+            .landing-visual__txt {
+                position: absolute;
+                bottom: 156px;
+                left: 0px;
+                width: 100%;
+                color: white;
+                font-size: 28px;
+                line-height: 1;
+            }
+            .landing-visual__scrolldown {
+                position: absolute;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+            }
+            .landing-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: url(../../mocks/ST0001/landing-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
             <div class="landing-visual">
-                <div class="landing-visual__bg">
-
-                </div>
-                <div class="landing-visual__txt">
-                    <img src="" alt="Life's Good." class="landing-visual__txt__img" />
+                <h2 class="landing-visual__tit">
+                    <img src="../../mocks/ST0001/tagline.png" alt="Life's Good." class="landing-visual__tit__img" />
+                </h2>
+                <p class="landing-visual__txt">
+                    By taking sustainable action, we can make better life for all.
+                </p>
+                <div class="landing-visual__scrolldown">
+                    <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                 </div>
             </div>
             <div class="landing-introduce__wrap">
@@ -65,58 +108,275 @@
                     </p>
                 </div>
             </div>
-            <div class="landing-core-value__wrap">
-                <div class="landing-core-value">
-                    <p class="landing-core-value__summary">We're committed to making a better impact.</p>
+            <div class="core-value__wrap">
+                <div class="core-value">
+                    <p class="core-value__summary">We're committed to making a better impact.</p>
                 </div>
-                <div class="landing-core-value">
-                    <p class="landing-core-value__load">
-                        <img src="" alt="" class="landing-core-value__load__img" />
+                <div class="core-value">
+                    <p class="core-value__load">
+                        <img src="" alt="" class="core-value__load__img" />
                     </p>
                 </div>
-                <div class="landing-core-value">
-                    <figure class="landing-core-value__thumbnail">
-                        <div class="landing-core-value__thumbnail__photo">
-                            <img src="" alt="" class="landing-core-value__thumbnail__photo__img" />
+                <div class="core-value">
+                    <figure class="core-value__thumbnail">
+                        <div class="core-value__thumbnail__photo">
+                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
                         </div>
-                        <figcaption class="landing-core-value__thumbnail__figcaption">
-                            <strong class="landing-core-value__thumbnail__figcaption__strong">Living Sustainably</strong>
-                            <small class="landing-core-value__thumbnail__figcaption__small">For a sustainable lifestyle</small>
+                        <figcaption class="core-value__thumbnail__figcaption">
+                            <strong class="core-value__thumbnail__figcaption__strong">Living Sustainably</strong>
+                            <small class="core-value__thumbnail__figcaption__small">For a sustainable lifestyle</small>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="landing-core-value">
-                    <figure class="landing-core-value__thumbnail">
-                        <div class="landing-core-value__thumbnail__photo">
-                            <img src="" alt="" class="landing-core-value__thumbnail__photo__img" />
+                <div class="core-value">
+                    <figure class="core-value__thumbnail">
+                        <div class="core-value__thumbnail__photo">
+                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
                         </div>
-                        <figcaption class="landing-core-value__thumbnail__figcaption">
-                            <strong class="landing-core-value__thumbnail__figcaption__strong">Climate Action</strong>
-                            <small class="landing-core-value__thumbnail__figcaption__small">For a long-lasting planet</small>
+                        <figcaption class="core-value__thumbnail__figcaption">
+                            <strong class="core-value__thumbnail__figcaption__strong">Climate Action</strong>
+                            <small class="core-value__thumbnail__figcaption__small">For a long-lasting planet</small>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="landing-core-value">
-                    <figure class="landing-core-value__thumbnail">
-                        <div class="landing-core-value__thumbnail__photo">
-                            <img src="" alt="" class="landing-core-value__thumbnail__photo__img" />
+                <div class="core-value">
+                    <figure class="core-value__thumbnail">
+                        <div class="core-value__thumbnail__photo">
+                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
                         </div>
-                        <figcaption class="landing-core-value__thumbnail__figcaption">
-                            <strong class="landing-core-value__thumbnail__figcaption__strong">Circular Economy</strong>
-                            <small class="landing-core-value__thumbnail__figcaption__small">For saving resources</small>
+                        <figcaption class="core-value__thumbnail__figcaption">
+                            <strong class="core-value__thumbnail__figcaption__strong">Circular Economy</strong>
+                            <small class="core-value__thumbnail__figcaption__small">For saving resources</small>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="landing-core-value">
-                    <figure class="landing-core-value__thumbnail">
-                        <div class="landing-core-value__thumbnail__photo">
-                            <img src="" alt="" class="landing-core-value__thumbnail__photo__img" />
+                <div class="core-value">
+                    <figure class="core-value__thumbnail">
+                        <div class="core-value__thumbnail__photo">
+                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
                         </div>
-                        <figcaption class="landing-core-value__thumbnail__figcaption">
-                            <strong class="landing-core-value__thumbnail__figcaption__strong">Human Rights</strong>
-                            <small class="landing-core-value__thumbnail__figcaption__small">For a diverse, equal society</small>
+                        <figcaption class="core-value__thumbnail__figcaption">
+                            <strong class="core-value__thumbnail__figcaption__strong">Human Rights</strong>
+                            <small class="core-value__thumbnail__figcaption__small">For a diverse, equal society</small>
                         </figcaption>
                     </figure>
+                </div>
+            </div>
+            <div class="menu-introduce__wrap">
+                <div class="menu-introduce">
+                    <div class="menu-introduce__cont">
+                        <h3 class="menu-introduce__cont__tit">Living Sustainably</h3>
+                        <p class="menu-introduce__cont__summary">
+                            Sustainability <br />
+                            in everyday living
+                        </p>
+                        <p class="menu-introduce__cont__detail">
+                            Sunday dinners. Movie nights. Fresh sheets. A morning breeze. <br />
+                            A home life that restores you. Our shared sustainability <br />
+                            journey means we can cherish these precious moments for <br />
+                            generations to come. When we work together to create a <br />
+                            more sustainable way of life, we all reap the rewards.
+                        </p>
+                        <div class="menu-introduce__cont__go-to">
+                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
+                        </div>
+                    </div>
+                    <div class="menu-introduce__photos">
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-introduce">
+                    <div class="menu-introduce__cont">
+                        <h3 class="menu-introduce__cont__tit">Climate Action</h3>
+                        <p class="menu-introduce__cont__summary">
+                            Big steps. <br />
+                            Little carbon.
+                        </p>
+                        <p class="menu-introduce__cont__detail">
+                            Nature always had our attention. But its message is urgent: <br />
+                            to reduce carbon emissions. As part of the cause, we're now a <br />
+                            bigger part of the solution. LG Electronics is committed to an <br />
+                            aggressive schedule toward carbon-neutrality and using 100% <br />
+                            renewable energy. The sooner we minimize our impact, there <br />
+                            will be fewer "natural" hazards, and more nature to appreciate.
+                        </p>
+                        <div class="menu-introduce__cont__go-to">
+                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
+                        </div>
+                    </div>
+                    <div class="menu-introduce__photos">
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-introduce">
+                    <div class="menu-introduce__cont">
+                        <h3 class="menu-introduce__cont__tit">Circular Economy</h3>
+                        <p class="menu-introduce__cont__summary">
+                            Greener with <br />
+                            every step, <br />
+                            Sustainable Cycle
+                        </p>
+                        <p class="menu-introduce__cont__detail">
+                            Imagine a world with no waste. That's what <br />
+                            we strive for with our sustainable cycle. By <br />
+                            recycling all we can to turn old materials and <br />
+                            appliances into new products, we're doing <br />
+                            our part to reduce waste and create a more <br />
+                            sustainable future for our planet.
+                        </p>
+                        <div class="menu-introduce__cont__go-to">
+                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Circular Economy</a>
+                        </div>
+                    </div>
+                    <div class="menu-introduce__photos">
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-introduce">
+                    <div class="menu-introduce__cont">
+                        <h3 class="menu-introduce__cont__tit">Human Rights</h3>
+                        <p class="menu-introduce__cont__summary">
+                            Community <br />
+                            engagement for <br />
+                            diversity and <br />
+                            equality
+                        </p>
+                        <p class="menu-introduce__cont__detail">
+                            We know how important it is to respect <br />
+                            human rights and acknowledge the <br />
+                            impact of business on communities. <br />
+                            Caring for people is at the core of all we <br />
+                            do.
+                        </p>
+                        <div class="menu-introduce__cont__go-to">
+                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Human Rights</a>
+                        </div>
+                    </div>
+                    <div class="menu-introduce__photos">
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                        <div class="menu-introduce__photos__item">
+                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        </div>
+                    </div>
+                </div>
+                <div class="reports">
+                    <h3 class="reports__tit">Reports</h3>
+                    <p class="reports__summary">
+                        Sharing our sustainability <br />
+                        achievements
+                    </p>
+                    <div class="reports__go-to">
+                        <a href="#" class="reports__go-to__link">Go to Reports</a>
+                    </div>
+                </div>
+                <div class="newsroom">
+                    <h3 class="newsroom__category">Newsroom</h3>
+                    <p class="newsroom__summary">
+                        We openly share our progress, <br />
+                        to inspire others to join us in creating <br />
+                        a sustainable tomorrow.
+                    </p>
+                    <p class="newsroom__detail">
+                        We prioritize creating social value in all areas(education, voluntary work, community <br />
+                        development, etc.) to ensure a brighter future for people.
+                    </p>
+                    <div class="newsroom__photo-list__wrap">
+                        <ul class="newsroom__photo-list">
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                        <ul class="newsroom__photo-list">
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                    </div>
+                    <div class="newsroom__go-to">
+                        <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
+                    </div>
+                </div>
+                <div class="means">
+                    <div class="means__cont">
+                        <p class="means__cont__txt">
+                            Sustainability means more to us than just a slogan. <br />
+                            It's a commitment we're passionate about putting into action.
+                        </p>
+                        <p class="means__cont__txt">
+                            A sustainable world <br />
+                            comes from <br />
+                            meaningful action.
+                        </p>
+                    </div>
+                    <div class="means__photo">
+                        <img src="" alt="" class="means__photo__img">
+                    </div>
+                </div>
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo">
+                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo">
+                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo">
+                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo">
+                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__btn-prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__btn-next"></div>
+                        </div>
+                        <div class="whats-next__menu__pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
