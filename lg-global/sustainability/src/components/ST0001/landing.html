@@ -33,7 +33,7 @@
         <span class="c-header__btn-gnb__bar"></span>
     </button>
 </header>
-<div id="container" class="c-container" style="height:200vh">
+<div id="container" class="c-container">
     <main id="contents" class="c-contents">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
@@ -45,17 +45,17 @@
                 height: 100vh;
                 background: url(../../mocks/ST0001/sustainability-kv.png) no-repeat center center;
                 background-size: cover;
+                text-align: center;
             }
             .landing-visual__tit {
                 position: absolute;
                 bottom: 214px;
                 left: 0px;
                 width: 100%;
-                text-align: center;
             }
-            .landing-visual__txt__img {
-                width: 72.8646vw;
-                height: auto;
+            .landing-visual__tit__img {
+                width: 1399px;
+                height: 224px;
             }
             .landing-visual__txt {
                 position: absolute;
@@ -77,8 +77,54 @@
                 height: 96px;
                 text-indent: -9999px;
                 overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
                 background: url(../../mocks/ST0001/landing-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
+            }
+
+            /* Landing Introduce */
+            .landing-introduce__wrap {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+            }
+            .landing-introduce {
+                position: absolute;
+                z-index: 0;
+                top: 0px;
+                left: 0px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+            }
+            .landing-introduce--active {
+                z-index: 1;
+                opacity: 1;
+            }
+            .landing-introduce__desc {
+                font-size: 46px;
+                line-height: 140%;
+            }
+            .landing-introduce__goals {
+                font-size: 120px;
+                line-height: 1;
+            }
+
+            /* Core Value */
+            .core-value {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                text-align: center;
+            }
+            .core-value__summary {
+                font-size: 46px;
+                line-height: 1;
             }
         </style>
         <!-- html code -->
@@ -95,16 +141,16 @@
                 </div>
             </div>
             <div class="landing-introduce__wrap">
-                <div class="landing-introduce">
-                    <p class="landing-introduce__summary">
-                        <span class="landing-introduce__summary__txt">Our exceptional customer value and innovation bring a smile to many.</span><br />
-                        <span class="landing-introduce__summary__txt">We're committed to making the smile last by prioritizing sustainability,</span><br />
-                        <span class="landing-introduce__summary__txt">to create a better life for people, and a better future for the planet.</span>
+                <div class="landing-introduce landing-introduce--active">
+                    <p class="landing-introduce__desc">
+                        <span class="landing-introduce__desc__txt">Our exceptional customer value and innovation bring a smile to many.</span><br />
+                        <span class="landing-introduce__desc__txt">We're committed to making the smile last by prioritizing sustainability,</span><br />
+                        <span class="landing-introduce__desc__txt">to create a better life for people, and a better future for the planet.</span>
                     </p>
                 </div>
                 <div class="landing-introduce">
-                    <p class="landing-introduce__detail">
-                        <span class="landing-introduce__detail__txt">Better Life for All</span>
+                    <p class="landing-introduce__goals">
+                        <span class="landing-introduce__goals__txt">Better Life for All</span>
                     </p>
                 </div>
             </div>
@@ -114,13 +160,13 @@
                 </div>
                 <div class="core-value">
                     <p class="core-value__load">
-                        <img src="" alt="" class="core-value__load__img" />
+                        <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" />
                     </p>
                 </div>
                 <div class="core-value">
                     <figure class="core-value__thumbnail">
                         <div class="core-value__thumbnail__photo">
-                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
+                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__thumbnail__photo__video"></video>
                         </div>
                         <figcaption class="core-value__thumbnail__figcaption">
                             <strong class="core-value__thumbnail__figcaption__strong">Living Sustainably</strong>
@@ -142,7 +188,7 @@
                 <div class="core-value">
                     <figure class="core-value__thumbnail">
                         <div class="core-value__thumbnail__photo">
-                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
+                            <video src="" class="core-value__thumbnail__photo__video"></video>
                         </div>
                         <figcaption class="core-value__thumbnail__figcaption">
                             <strong class="core-value__thumbnail__figcaption__strong">Circular Economy</strong>
