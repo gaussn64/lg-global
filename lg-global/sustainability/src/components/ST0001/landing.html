@@ -7,13 +7,13 @@
     <meta name="template" content="home-page"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="canonical" href="https://www.lg.com/uk/"/>
-    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-base.lc-70267407c54bfd3d524dbb8e5bf56862-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-732643dbb995c59fad88fa1792064411-lc.min.css" type="text/css">
     <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
     <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-82f6622c2ebf5806b333c076aff87384-lc.min.css" type="text/css">
     <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
     <link rel="stylesheet" href="../../../layout.css">
-    <!--<script src="https://assets.adobedtm.com/322f63b58a72/0cfd3b7df536/launch-baef262771e5-development.min.js" async></script>
-    <script src="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>-->
+    <script src="https://assets.adobedtm.com/322f63b58a72/0cfd3b7df536/launch-baef262771e5-development.min.js" async></script>
+    <script src="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
     <script src="../../../layout.js"></script>
 </head>
 
@@ -38,6 +38,12 @@
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
+            /* Common */
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+
             /* Landing Visual */
             .landing-visual {
                 position: relative;
@@ -59,11 +65,11 @@
             }
             .landing-visual__txt {
                 position: absolute;
-                bottom: 156px;
+                bottom: 160px;
                 left: 0px;
                 width: 100%;
                 color: white;
-                font-size: 28px;
+                font-size: 20px;
                 line-height: 1;
             }
             .landing-visual__scrolldown {
@@ -126,6 +132,343 @@
                 font-size: 46px;
                 line-height: 1;
             }
+            .core-value__load__video {
+                width: 618px;
+                height: 618px;
+                object-fit: cover;
+                border-radius: 309px;
+            }
+            .core-value__thumbnail {
+                width: 618px;
+            }
+            .core-value__thumbnail--active {
+                width: 87.5%;
+            }
+            .core-value__thumbnail__photo {
+                height: 618px;
+            }
+            .core-value__thumbnail__photo__video,
+            .core-value__thumbnail__photo__img {
+                width: 100%;
+                height: 618px;
+                object-fit: cover;
+                border-radius: 309px;
+            }
+            .core-value__thumbnail__caption {
+                display: flex;
+                gap: 0px 40px;
+                align-items: center;
+                justify-content: center;
+                margin-top: 40px;
+            }
+            .core-value__thumbnail__caption__strong {
+                font-size: 56px;
+                line-height: 60px;
+                font-weight: 300;
+            }
+            .core-value__thumbnail__caption__small {
+                font-size: 28px;
+                line-height: 34px;
+            }
+
+            /* Menu Introduce */
+            .menu-introduce {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 0px 5.9896vw;
+                padding: 0px 6.25vw;
+                height: 100vh;
+            }
+            .menu-introduce__cont__tit {
+                font-size: 28px;
+                line-height: 1;
+                font-weight: 400;
+            }
+            .menu-introduce__cont__summary {
+                color: #75C66B;
+                font-weight: 400;
+                font-size: 72px;
+                line-height: 110%;
+                margin-top: 20px;
+            }
+            .menu-introduce__cont__detail {
+                margin-top: 20px;
+                font-size: 20px;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            .menu-introduce__cont__go-to {
+                margin-top: 30px;
+            }
+            .menu-introduce__cont__go-to__link {
+                display: inline-block;
+                padding: 25px 30px 27px;
+                border-radius: 100px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1;
+                background-color: white;
+            }
+            .menu-introduce__cont__go-to__link:hover,
+            .menu-introduce__cont__go-to__link:focus {
+                text-decoration: none
+            }
+            .menu-introduce__photos {
+                position: relative;
+                width: 998px;
+                height: 632px;
+            }
+            .menu-introduce__photos__item {
+                position: absolute;
+            }
+            .menu-introduce__photos__item1-1 {
+                top: 177px;
+                left: 0px;
+                width: 278px;
+                height: 278px;
+            }
+            .menu-introduce__photos__item1-2 {
+                top: 0px;
+                right: 0px;
+                width: 720px;
+                height: 632px;
+            }
+            .menu-introduce__photos__item2-1 {
+                top: 177px;
+                left: 130px;
+                width: 278px;
+                height: 278px;
+            }
+            .menu-introduce__photos__item2-2 {
+                top: 0px;
+                right: 0px;
+                width: 590px;
+                height: 632px;
+            }
+            .menu-introduce__photos__item3-1 {
+                top: 177px;
+                left: 0px;
+                width: 278px;
+                height: 278px;
+            }
+            .menu-introduce__photos__item3-2 {
+                top: 0px;
+                right: 0px;
+                width: 720px;
+                height: 632px;
+            }
+            .menu-introduce__photos__item4-1 {
+                top: 0px;
+                left: 151px;
+                width: 505px;
+                height: 558px;
+            }
+            .menu-introduce__photos__item4-2 {
+                top: 107px;
+                right: 0px;
+                width: 342px;
+                height: 342px;
+            }
+            .menu-introduce__photos__item__img,
+            .menu-introduce__photos__item__video {
+                width: 100%;
+                height: 100%;
+                mask-repeat: no-repeat;
+                mask-size: 100% 100%;
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-size: 100% 100%;
+                object-fit: cover;
+            }
+            .menu-introduce__photos__item1-1__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce1-1.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce1-1.svg);
+            }
+            .menu-introduce__photos__item1-2__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce1-2.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce1-2.svg);
+            }
+            .menu-introduce__photos__item2-1__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce2-1.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce2-1.svg);
+            }
+            .menu-introduce__photos__item2-2__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce2-2.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce2-2.svg);
+            }
+            .menu-introduce__photos__item3-1__video {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce3-1.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce3-1.svg);
+            }
+            .menu-introduce__photos__item3-2__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce3-2.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce3-2.svg);
+            }
+            .menu-introduce__photos__item4-1__img {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce4-1.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce4-1.svg);
+            }
+            .menu-introduce__photos__item4-2__video {
+                -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce4-2.svg);
+                mask-image: url(../../mocks/ST0001/mask-menu-introduce4-2.svg);
+            }
+
+            /* Reports */
+            .reports {
+                padding: 80px 6.25vw;
+                box-sizing: border-box;
+                height: 100vh;
+                background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
+                background-attachment: fixed;
+            }
+            .reports__tit {
+                color: white;
+                font-size: 28px;
+                line-height: 1;
+            }
+            .reports__summary {
+                color: white;
+                font-size: 72px;
+                line-height: 120%;
+                margin-top: 23px;
+            }
+            .reports__go-to {
+                margin-top: 30px;
+            }
+            .reports__go-to__link {
+                display: inline-block;
+                padding: 21px 30px 23px;
+                border-radius: 100px;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1;
+                background-color: white;
+            }
+            .reports__go-to__link:hover,
+            .reports__go-to__link:focus {
+                text-decoration: none
+            }
+
+            /* Newsroom */
+            .newsroom {
+                padding: 80px 0px;
+                text-align: center;
+            }
+            .newsroom__tit {
+                font-size: 28px;
+                line-height: 1;
+            }
+            .newsroom__summary {
+                color: #75C66B;
+                font-weight: 400;
+                font-size: 72px;
+                line-height: 110%;
+                margin-top: 20px;
+            }
+            .newsroom__detail {
+                margin-top: 20px;
+                font-size: 20px;
+            }
+            .newsroom__photo-list__wrap,
+            .newsroom__photo-list {
+                display: flex;
+                gap: 0px 20px;
+                justify-content: center;
+                overflow: hidden;
+            }
+            .newsroom__photo-list1__wrap {
+                margin-top: 99px;
+            }
+            .newsroom__photo-list2__wrap {
+                margin-top: 20px;
+            }
+            .newsroom__photo-list__item {
+                width: 512px;
+                height: 260px;
+            }
+            .newsroom__photo-list__item__img {
+                width: 100%;
+                height: 100%;
+                border-radius: 30px;
+                object-fit: cover;
+            }
+            .newsroom__go-to {
+                margin-top: 100px;
+            }
+            .newsroom__go-to__link {
+                display: inline-block;
+                padding: 24px 30px;
+                border-radius: 100px;
+                font-size: 20px;
+                line-height: 1;
+                font-weight: 600;
+                background-color: white;
+            }
+            .newsroom__go-to__link:hover,
+            .newsroom__go-to__link:focus {
+                text-decoration: none
+            }
+            .newsroom__go-to__link:after {
+                content: '';
+                display: inline-block;
+                width: 25px;
+                height: 24px;
+                vertical-align: middle;
+                margin-left: 10px;
+                background: url(../../mocks/ST0001/go-to-blank.svg) no-repeat left top;
+                vertical-align: text-bottom;
+            }
+
+            /* Means */
+            .means {
+                position: relative;
+                height: 200vh;
+            }
+            .means__visual {
+                position: absolute;
+                z-index: 1;
+                top: 80px;
+                left: 6.25vw;
+                right: 6.25vw;
+                height: calc(100vh - 160px);
+                border-radius: 40px;
+                box-sizing: border-box;
+                background: url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
+                background-size: cover;
+            }
+            .means__cont {
+                position: relative;
+                z-index: 2;
+                padding-top: 100vh;
+            }
+            .means__cont__txt {
+                height: 50vh;
+                padding: 160px calc(6.25vw + 80px);
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 145%;
+                transition: 0.3s ease all;
+            }
+            .means__cont__txt--active {
+                font-size: 60px;
+                font-weight: 300;
+                line-height: 120%;
+            }
+
+            /* What's Next */
+            .whats-next {
+                overflow: hidden;
+                padding: 90px 6.25vw 73px;
+                background-color: #E6E1D6;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-weight: 300;
+            }
+            .whats-next__tit__strong {
+                font-weight: 400;
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
@@ -159,51 +502,52 @@
                     <p class="core-value__summary">We're committed to making a better impact.</p>
                 </div>
                 <div class="core-value">
-                    <p class="core-value__load">
-                        <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" />
-                    </p>
+                    <div class="core-value__load">
+                        <!-- <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" /> -->
+                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__load__video" autoplay muted loop></video>
+                    </div>
                 </div>
                 <div class="core-value">
-                    <figure class="core-value__thumbnail">
+                    <figure class="core-value__thumbnail core-value__thumbnail--active">
                         <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__thumbnail__photo__video"></video>
+                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
                         </div>
-                        <figcaption class="core-value__thumbnail__figcaption">
-                            <strong class="core-value__thumbnail__figcaption__strong">Living Sustainably</strong>
-                            <small class="core-value__thumbnail__figcaption__small">For a sustainable lifestyle</small>
+                        <figcaption class="core-value__thumbnail__caption">
+                            <strong class="core-value__thumbnail__caption__strong">Living Sustainably</strong>
+                            <small class="core-value__thumbnail__caption__small">For a sustainable lifestyle</small>
                         </figcaption>
                     </figure>
                 </div>
                 <div class="core-value">
-                    <figure class="core-value__thumbnail">
+                    <figure class="core-value__thumbnail core-value__thumbnail--active">
                         <div class="core-value__thumbnail__photo">
-                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
+                            <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
                         </div>
-                        <figcaption class="core-value__thumbnail__figcaption">
-                            <strong class="core-value__thumbnail__figcaption__strong">Climate Action</strong>
-                            <small class="core-value__thumbnail__figcaption__small">For a long-lasting planet</small>
+                        <figcaption class="core-value__thumbnail__caption">
+                            <strong class="core-value__thumbnail__caption__strong">Climate Action</strong>
+                            <small class="core-value__thumbnail__caption__small">For a long-lasting planet</small>
                         </figcaption>
                     </figure>
                 </div>
                 <div class="core-value">
-                    <figure class="core-value__thumbnail">
+                    <figure class="core-value__thumbnail core-value__thumbnail--active">
                         <div class="core-value__thumbnail__photo">
-                            <video src="" class="core-value__thumbnail__photo__video"></video>
+                            <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
                         </div>
-                        <figcaption class="core-value__thumbnail__figcaption">
-                            <strong class="core-value__thumbnail__figcaption__strong">Circular Economy</strong>
-                            <small class="core-value__thumbnail__figcaption__small">For saving resources</small>
+                        <figcaption class="core-value__thumbnail__caption">
+                            <strong class="core-value__thumbnail__caption__strong">Circular Economy</strong>
+                            <small class="core-value__thumbnail__caption__small">For saving resources</small>
                         </figcaption>
                     </figure>
                 </div>
                 <div class="core-value">
-                    <figure class="core-value__thumbnail">
+                    <figure class="core-value__thumbnail core-value__thumbnail--active">
                         <div class="core-value__thumbnail__photo">
-                            <img src="" alt="" class="core-value__thumbnail__photo__img" />
+                            <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__thumbnail__photo__img" />
                         </div>
-                        <figcaption class="core-value__thumbnail__figcaption">
-                            <strong class="core-value__thumbnail__figcaption__strong">Human Rights</strong>
-                            <small class="core-value__thumbnail__figcaption__small">For a diverse, equal society</small>
+                        <figcaption class="core-value__thumbnail__caption">
+                            <strong class="core-value__thumbnail__caption__strong">Human Rights</strong>
+                            <small class="core-value__thumbnail__caption__small">For a diverse, equal society</small>
                         </figcaption>
                     </figure>
                 </div>
@@ -228,11 +572,11 @@
                         </div>
                     </div>
                     <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item1-1">
+                            <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-1__img" />
                         </div>
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item1-2">
+                            <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-2__img" />
                         </div>
                     </div>
                 </div>
@@ -256,11 +600,11 @@
                         </div>
                     </div>
                     <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item2-1">
+                            <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-1__img" />
                         </div>
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item2-2">
+                            <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-2__img" />
                         </div>
                     </div>
                 </div>
@@ -285,11 +629,11 @@
                         </div>
                     </div>
                     <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item3-1">
+                            <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item3-1__video" autoplay muted loop></video>
                         </div>
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item3-2">
+                            <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item3-2__img" />
                         </div>
                     </div>
                 </div>
@@ -314,11 +658,11 @@
                         </div>
                     </div>
                     <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item4-1">
+                            <img src="../../mocks/ST0001/photo-menu-introduce4-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos__item4-1__img" />
                         </div>
-                        <div class="menu-introduce__photos__item">
-                            <img src="" alt="" class="menu-introduce__photos__item__img" />
+                        <div class="menu-introduce__photos__item menu-introduce__photos__item4-2">
+                            <video src="../../mocks/ST0001/video-menu-introduce4-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item4-2__video" autoplay muted loop></video>
                         </div>
                     </div>
                 </div>
@@ -333,7 +677,7 @@
                     </div>
                 </div>
                 <div class="newsroom">
-                    <h3 class="newsroom__category">Newsroom</h3>
+                    <h3 class="newsroom__tit">Newsroom</h3>
                     <p class="newsroom__summary">
                         We openly share our progress, <br />
                         to inspire others to join us in creating <br />
@@ -343,18 +687,20 @@
                         We prioritize creating social value in all areas(education, voluntary work, community <br />
                         development, etc.) to ensure a brighter future for people.
                     </p>
-                    <div class="newsroom__photo-list__wrap">
-                        <ul class="newsroom__photo-list">
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                    <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
+                        <ul class="newsroom__photo-list newsroom__photo-list1">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
                         </ul>
-                        <ul class="newsroom__photo-list">
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="" alt="" class="newsroom__photo-list__item__img"></li>
+                    </div>
+                    <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
+                        <ul class="newsroom__photo-list newsroom__photo-list2">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
                         </ul>
                     </div>
                     <div class="newsroom__go-to">
@@ -362,8 +708,9 @@
                     </div>
                 </div>
                 <div class="means">
+                    <div class="means__visual"></div>
                     <div class="means__cont">
-                        <p class="means__cont__txt">
+                        <p class="means__cont__txt means__cont__txt--active">
                             Sustainability means more to us than just a slogan. <br />
                             It's a commitment we're passionate about putting into action.
                         </p>
@@ -372,9 +719,6 @@
                             comes from <br />
                             meaningful action.
                         </p>
-                    </div>
-                    <div class="means__photo">
-                        <img src="" alt="" class="means__photo__img">
                     </div>
                 </div>
                 <div class="whats-next">
