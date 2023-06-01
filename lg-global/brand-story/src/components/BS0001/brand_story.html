@@ -75,6 +75,7 @@
                 padding: 0 20px;
                 color: var(--parallex-text-primary);
                 margin: 0;
+                text-align: center;
             }
             .parallex__title__swip {
                 text-align: center;
@@ -102,7 +103,7 @@
                 color: #fff;
                 text-align: center;
                 box-sizing: border-box;
-                padding: 0 12px;
+                padding: 0 20px;
                 font-weight: 400;
                 width: 100%;
             }
@@ -189,6 +190,8 @@
                 color: #fff;
                 font-size: 32px;
                 transition: .4s cubic-bezier(.84,0,.16,1);
+                width: 80%;
+                margin: 0 auto;
             }
             .brand-mission__list-item--active {
                 font-size: 72px;
@@ -196,11 +199,16 @@
            
             /*텍스트 아래에서 위로 모션 영역*/
             .ascend-text__section {
-                height: 100vh;
+                height: 200vh;
+            }
+            .ascend-text__pinner {
+                position: sticky;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: relative;
+                top: 0; left: 0;
+                width: 100%;
+                height: 100vh;
             }
             .parallex__title--divied {
                 overflow: hidden;
@@ -972,7 +980,52 @@
 
             @media (max-width: 1720px) {}
             @media (max-width: 1279px) {}
-            @media (max-width: 768px) {}
+            @media (max-width: 768px) {
+
+                .parallex__title {
+                    font-size: 44px;
+                    
+                }
+
+                /* brand story - brand film */
+                .brand-film__text {
+                    font-size: 40px;
+                }
+                .brand-film__next {
+                    width: 63px;
+                    height: 89px;
+                }
+
+                /* brand story - brand symbol */
+                .brand-symbol__logo::before {
+                    width: 100%;
+                    height: 41.67vh;
+                    background-size: contain;
+                }
+
+                /* brand story - brand mission */
+                .brand-mission__bg::before {
+                    width: calc(100% - 40px);
+                    height: calc(100% - 40px);
+                    border-radius: 10px;
+                }
+
+                .brand-mission__list-item {
+                    font-size: 18px;
+                }
+                .brand-mission__list-item--active {
+                    font-size: 36px;
+                }
+
+                /* brand story - life's good */
+                .lifeisgood__texts {
+                    width: 100%;
+                    height: 50vh;
+                }
+                .lifeisgood__text--right {
+                    top: 50vh;
+                }
+            }
 
         </style>
         <!-- html code -->
@@ -998,9 +1051,9 @@
                 </ul>
             </div>
             <div class="ascend-text__section">
-                <h3 class="parallex__title parallex__title--divied">
-                    It’s how we make sure
-                </h3>
+                <div class="ascend-text__pinner">
+                    <h3 class="parallex__title parallex__title--divied">It’s how we make sure</h3>
+                </div>
             </div>
             <div class="lifeisgood">
                 <div class="lifeisgood__texts lifeisgood__text--left">
@@ -1029,7 +1082,9 @@
                 </ul>
             </div>
             <div class="ascend-text__section">
-                <h3 class="parallex__title parallex__title--divied">We always stay true to our values</h3>
+                <div class="ascend-text__pinner">
+                    <h3 class="parallex__title parallex__title--divied">We always stay true to our values</h3>
+                </div>
             </div>
             <ul class="card-list" data-color-set="prevent">
                 <li class="card-list__item">
@@ -1276,7 +1331,6 @@
                 const textItems = section.querySelectorAll('.lifeisgood .lifeisgood__texts')
                 const lastItems = section.querySelectorAll('.life-bg__item.life-bg__item--dance')
 
-                //텍스트 pin설정
                 textItems.forEach(el => {
                     gsap.to(el, {
                         scrollTrigger: {
@@ -1325,22 +1379,24 @@
                     createStaggerItem(textArray, targetText)
 
                     const staggerItem = [...targetText.querySelectorAll('span')]
-                    gsap.set(staggerItem, {y: 100})
+                    gsap.set(staggerItem, {y: 200})
 
                     gsap.to(targetText, {
                         scrollTrigger: {
                             trigger: area,
                             start: 'top top',
-                            end: '200% bottom',
-                            pin: area,
+                            end: 'bottom bottom',
                             onEnter: () => {
                                 gsap.to(staggerItem, {
                                     y: 0,
                                     stagger: 0.1
                                 })
                             },
-                            onEnterBack: () => {
-                                gsap.set(staggerItem, {y: 0})
+                            onLeaveBack: () => {
+                                gsap.to(staggerItem, {
+                                    y: 200,
+                                    stagger: 0.1
+                                })
                             }
                         }
                     })
@@ -1651,10 +1707,10 @@
             window.addEventListener('DOMContentLoaded', () => {
                 console.clear();
 
-                colorModeChange()
-                brandMission()
-                lifeIsGood()
-                logoFixed()
+                colorModeChange()//전체 배경색 바꾸기
+                logoFixed() 
+                brandMission() 
+                lifeIsGood() 
                 ascendTextMotion()
                 cardListMotion()
                 parallaxDesignSec() //디자인섹션 모션
