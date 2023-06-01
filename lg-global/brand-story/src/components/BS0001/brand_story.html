@@ -187,7 +187,7 @@
             .brand-mission__list-item {
                 height: 60vh;
                 text-align: center;
-                color: #fff;
+                color: #F6F3EB;
                 font-size: 32px;
                 transition: .4s cubic-bezier(.84,0,.16,1);
                 width: 80%;
@@ -231,6 +231,7 @@
                 z-index: 4;
                 height: 100vh;
                 width: 50%;
+                overflow: hidden;
             }
             .lifeisgood__texts svg {
                 transition: 0.5s;
@@ -325,7 +326,7 @@
                 overflow: hidden;
                 max-height: 800px;
                 height: 41vw;
-                border-radius: 34.14px;
+                border-radius: 30px;
             }
             .card-list__bg {
                 width: 100%;
@@ -343,13 +344,12 @@
                 position: absolute;
                 box-sizing: border-box;
                 text-align: center;
-                padding: 32px;
+                padding: 32px 0;
                 bottom: 0;
                 margin: 0;
                 transition: .3s;
                 z-index: 1;
                 overflow: hidden;
-                border-radius: 0 0 30px 30px;
                 height: 180px;
             }
             .card-list__info::before {
@@ -372,20 +372,22 @@
             }
             .card-list__info > dd {
                 color: #fff;
-                margin-top: 32px;
+                margin: 32px 0 0;
+                padding: 0 32px;
                 font-size: 24px;
                 line-height: 1.2;
                 opacity: 0;
                 transition: 0.3s;
                 transition-delay: 0.2s;
+                font-weight: 300;
             }
             .card-list__item:hover .card-list__info {
                 height: 328px;
             }
-            .card-list__item:hover .card-list__info ::before {
+            .card-list__item:hover .card-list__info::before {
                 opacity: 1;
             }
-            .card-list__item:hover .card-list__info  dd{
+            .card-list__item:hover .card-list__info dd {
                 opacity: 1;
             }
 
@@ -464,13 +466,19 @@
                 position: absolute;
                 background: no-repeat center;
                 background-size: cover;
+                overflow: hidden;
+                border-radius: 20px;
+            }
+            .parallax-pin__image--design video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .parallax-pin__image--design:nth-child(1) {
                 top: 25.8%;
                 left: 28.54%;
                 width: 24.7396vw;
                 height: 13.9948vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-01-d.png);
             }
             .parallax-pin__image--design:nth-child(2) {
@@ -478,7 +486,6 @@
                 left: -3.18%;
                 width: 22.9688vw;
                 height: 15.8333vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-02-d.png);
             }
             .parallax-pin__image--design:nth-child(3) {
@@ -486,7 +493,6 @@
                 left: 25.36%;
                 width: 9.7917vw;
                 height: 5.5729vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-03-d.png);
                 z-index: 2;
             }
@@ -495,7 +501,6 @@
                 left: 50.52%;
                 width: 15.625vw;
                 height: 15.625vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-04-d.png);
                 z-index: 2;
             }
@@ -504,7 +509,6 @@
                 left: 75.42%;
                 width: 26.1979vw;
                 height: 15.1563vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-05-d.png);
             }
             .parallax-pin__image--design:nth-child(6) {
@@ -512,7 +516,6 @@
                 left: 5.42%;
                 width: 10.5208vw;
                 height: 12.3958vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-06-d.png);
             }
             .parallax-pin__image--design:nth-child(7) {
@@ -520,19 +523,12 @@
                 left: 23.23%;
                 width: 20vw;
                 height: 11.25vw;
-                border-radius: 20px;
-            }
-            .parallax-pin__image--design:nth-child(7) video {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
             }
             .parallax-pin__image--design:nth-child(8) {
                 top: 28%;
                 left: 51.15%;
                 width: 19.5833vw;
                 height: 13.1771vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-08-d.png);
             }
             .parallax-pin__image--design:nth-child(9) {
@@ -540,7 +536,6 @@
                 left: 77.34%;
                 width: 25.3125vw;
                 height: 14.2188vw;
-                border-radius: 20px;
                 background-image: url(../../mocks/BS0001/brand-story-design-philosophy-emotionally-intelligent-design-09-d.png);
             }
 
@@ -842,6 +837,10 @@
                 height: 53.4259vh;
             }
 
+            .marquee__inner.marquee__inner--bottom .marquee__part {
+                transform: translateX(-100%);
+            }
+
 
             /*Discover our brand*/
             .discover-brand__section {
@@ -978,19 +977,58 @@
                 display: none;
             }
 
-            @media (max-width: 1720px) {}
-            @media (max-width: 1279px) {}
-            @media (max-width: 768px) {
+            @media (max-width: 1720px) {
+                /* brand story - our values */
+                .card-list__info {
+                    height: 135px;
+                }
+                .card-list__info > dt {
+                    font-size: 30px;
+                }
+                .card-list__info > dd {
+                    font-size: 16px;
+                }
 
+                .card-list__item:hover .card-list__info {
+                    height: 250px;
+                }
+
+            }
+            @media (max-width: 1279px) {
                 .parallex__title {
                     font-size: 44px;
-                    
                 }
 
                 /* brand story - brand film */
                 .brand-film__text {
                     font-size: 40px;
                 }
+
+                /* brand story - our values */
+                .card-list {
+                    flex-direction: column;
+                    padding: 20px;
+                }
+                .card-list__item {
+                    height: 119.2vw;
+                }
+
+                /* brand story - brand mission */
+                .brand-mission__list-item {
+                    font-size: 18px;
+                }
+                .brand-mission__list-item--active {
+                    font-size: 36px;
+                }
+
+                /*brand brief*/
+                .brand-brief__grid {
+                    padding: 20px;
+                    gap: 10px;
+                }
+            }
+            @media (max-width: 768px) {
+
                 .brand-film__next {
                     width: 63px;
                     height: 89px;
@@ -1010,20 +1048,175 @@
                     border-radius: 10px;
                 }
 
-                .brand-mission__list-item {
-                    font-size: 18px;
-                }
-                .brand-mission__list-item--active {
-                    font-size: 36px;
-                }
-
                 /* brand story - life's good */
                 .lifeisgood__texts {
                     width: 100%;
                     height: 50vh;
                 }
+                .lifeisgood__text--left {
+                    z-index: 2;
+                }
                 .lifeisgood__text--right {
+                    z-index: 4;
                     top: 50vh;
+                }
+                .lifeisgood__texts svg {
+                    margin: 0;
+                    height: 15vw;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+                .lifeisgood__text--left svg {
+                    top: calc(100% - 15vw);
+                }
+                .lifeisgood__text--right svg {
+                    bottom: calc(100% - 15vw);
+                }
+                .lifeisgood__texts--active.lifeisgood__text--left svg {
+                    margin: 0;
+                    top: 35px;
+                }
+                .lifeisgood__texts--active.lifeisgood__text--right svg {
+                    margin: 0;
+                    bottom: 35px;
+                }
+                .life-bg__item__image {
+                    width: calc(100% - 20px);
+                    height: calc(100% - 20px);
+                    border-radius: 10px;
+
+                }
+                .life-bg__items--avatar .life-bg__item--boy {z-index: 3;}
+                .life-bg__items--avatar .life-bg__item--dance {z-index: 3;}
+
+                /* brand story - our values */
+                .card-list__info {
+                    height: auto;
+                    padding: 20px 0;
+                }
+
+                .card-list__info::before {
+                    opacity: 1;
+                }
+                .card-list__info > dd {
+                    opacity: 1;
+                    margin-top: 11px;
+                    padding: 0 20px;
+                }
+                .card-list__item:hover .card-list__info {
+                    height: unset;
+                }
+
+                .card-list__item {
+                    border-radius: 10px;
+                }
+
+                /*parallax image default*/
+                .parallax-pin__image {
+                    border-radius: 10px;
+                }
+                 /*parallax-visual__pin--design*/
+                .parallax-pin__image--design:nth-child(1) {left: -4.8%; width: 61.1vw; height: 34.4vw;}
+                .parallax-pin__image--design:nth-child(3) {left: 9.3; width: 37.9vw; height: 21.6vw;}
+                .parallax-pin__image--design:nth-child(4) {left: 66.7%; width: 38.7vw; height: 38.7vw;}
+                .parallax-pin__image--design:nth-child(7) {left: -4.8%; width: 48.8vw; height: 27.5vw;}
+                .parallax-pin__image--design:nth-child(8) {left: 54.9%; width: 48.3vw; height: 32.5vw;}
+                .parallax-pin__image--design:nth-child(9) {left: 8,5%; width: 60.0%vw; height: 33.9vw;}
+
+                .parallax-pin__image--design:nth-child(2),
+                .parallax-pin__image--design:nth-child(5),
+                .parallax-pin__image--design:nth-child(6) {display: none;}
+                
+                /*parallax-visual__pin--identity*/
+                .parallax-pin__image--identity:nth-child(1),
+                .parallax-pin__image--identity:nth-child(2),
+                .parallax-pin__image--identity:nth-child(5),
+                .parallax-pin__image--identity:nth-child(9) {display: none;}
+                
+                .parallax-pin__image--identity:nth-child(3) {
+                    left: -18.93%; 
+                    width: 81.6vw; 
+                    height: 43.73vw;
+                }
+                .parallax-pin__image--identity:nth-child(4) {
+                    top: 25%;
+                    left: -8%; 
+                    width: 32vw; 
+                    height: 32vw;
+                }
+                .parallax-pin__image--identity:nth-child(6) {
+                    top: 18.62%;
+                    left: 29.6%; 
+                    width: 110.93vw; 
+                    height: 68.8vw;
+                }
+                .parallax-pin__image--identity:nth-child(7) {
+                    top: 22.32%;
+                    left: 30.67%; 
+                    width: 79.2vw; 
+                    height: 50.13vw;
+                }
+                .parallax-pin__image--identity:nth-child(8) {
+                    left: -3.73%; 
+                    width: 69.07vw; 
+                    height: 69.07vw;
+                }
+                .parallax-pin__image--identity:nth-child(10) {
+                    left: 5.33%; 
+                    width: 89.07vw; 
+                    height: 64vw;
+                }
+
+                /*brand brief*/
+                .brand-brief__grid {
+                    grid-template-columns: 1fr 24.3% 1fr;
+                    grid-template-rows: 1fr 1fr 1.1fr 1.1fr 0.8fr;
+                }
+                .brand-brief__inner {
+                    border-radius: 10px;
+                }
+                .brand-brief__inner:nth-child(3) {
+                    grid-row: unset;
+                    grid-column: auto / span 2;
+                }
+                .brand-brief__inner:nth-child(3) .brand-brief__item--fix {width: 50%;}
+                .brand-brief__inner:nth-child(6) {order: 1; border-radius: 140px 140px 10px 10px;}
+                .brand-brief__inner:nth-child(7) {order: 3;}
+                .brand-brief__inner:nth-child(8) {order: 2; border-radius: 10px 10px 180px 180px;}
+                .brand-brief__inner:nth-child(9) {order: 4; margin-right: unset;}
+                .brand-brief__inner:nth-child(10){order: 5; margin-left: unset;}
+
+                .brand-colors {
+                    gap: 3px;
+                }
+                .brand-colors__item {
+                    border-radius: 10px;
+                }
+                .brand-colors__item.brand-colors__item--active {
+                    border-radius: 30px;
+                }
+
+                /*brand story - marquee*/
+                /* .parallex-visual__marquee {display: none;} */
+
+                /*Discover our brand*/
+                .discover-brand__section {
+                    margin-top: 100px;
+                }
+
+                .discover-brand__item {
+                    width: 77.6vw;
+                    height: 77.6vw;
+                    border-radius: 10px;
+                }
+                .discover-brand__item:first-child {
+                    margin-left: 20px;
+                }
+                .discover-brand__item__title {
+                    font-size: 16px;
+                    left: 17px;
+                    bottom: 13px;
                 }
             }
 
@@ -1091,7 +1284,7 @@
                     <img class="card-list__bg" src="../../mocks/BS0001/brand-story-core-value-uncompromising-customer-experience-d.png" alt="">
                     <dl class="card-list__info">
                         <dt>
-                            Uncompromising Customer Experience
+                            Uncompromising <br>Customer Experience
                         </dt>
                         <dd>We consistently pursue higher quality to ensure that our products, services, communication, and everything we provide meet our uncompromising standards.</dd>
                     </dl>
@@ -1099,7 +1292,7 @@
                 <li class="card-list__item">
                     <img class="card-list__bg" src="../../mocks/BS0001/brand-story-core-value-human-centered-innovation-d.png" alt="">
                     <dl class="card-list__info">
-                        <dt>Human-centered Innovation</dt>
+                        <dt>Human-centered<br> Innovation</dt>
                         <dd>We sincerely look at diverse people and their lifestyles, creating remarkably innovative smart life solutions to lead the whole world in a better way.</dd>
                     </dl>
                 </li>
@@ -1653,9 +1846,6 @@
                 })
 
                 marqueeBottomEl.forEach((item, idx) => {
-                    let distance = item.clientWidth;
-                    gsap.set(item, {x: -distance})
-
                     marqueeMotionSet(item, 100)
                 })
 
@@ -1699,8 +1889,14 @@
                 const swiper = new Swiper('.discover-brand', {
                     freeMode: true,
                     slidesPerView: 'auto',
-                    spaceBetween: '3.8%',
-                    slidesOffsetAfter: 120,
+                    spaceBetween: 16,
+                    slidesOffsetAfter: 20,
+                    breakpoints: {
+                        1279: {
+                            slidesOffsetBefore: 120,
+                            spaceBetween: 74,
+                        },
+                    },
                 });
             }
 
