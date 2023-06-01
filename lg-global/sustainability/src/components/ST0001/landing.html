@@ -93,7 +93,7 @@
             .landing-introduce__wrap {
                 position: relative;
                 width: 100%;
-                height: 100vh;
+                height: 200vh;
             }
             .landing-introduce {
                 position: absolute;
@@ -104,7 +104,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-                height: 100%;
+                height: 100vh;
                 opacity: 0;
             }
             .landing-introduce--active {
@@ -457,6 +457,7 @@
 
             /* What's Next */
             .whats-next {
+                position: relative;
                 overflow: hidden;
                 padding: 90px 6.25vw 73px;
                 background-color: #E6E1D6;
@@ -468,6 +469,71 @@
             }
             .whats-next__tit__strong {
                 font-weight: 400;
+            }
+            .whats-next__menu {
+                margin-top: 74px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 28px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 274px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                padding: 59px 32px 0px;
+                line-height: 34px;
+                font-size: 28px;
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -122px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
             }
         </style>
         <!-- html code -->
@@ -731,7 +797,7 @@
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
                                     </div>
                                     <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
                                 </a>
@@ -739,7 +805,7 @@
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
                                     </div>
                                     <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
                                 </a>
@@ -747,7 +813,7 @@
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
                                     </div>
                                     <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
                                 </a>
@@ -755,17 +821,17 @@
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
                                     </div>
                                     <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
                                 </a>
                             </div>
                         </div>
                         <div class="whats-next__menu__btn-set">
-                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__btn-prev"></div>
-                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__btn-next"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
                         </div>
-                        <div class="whats-next__menu__pagination"></div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
                     </div>
                 </div>
             </div>
@@ -776,7 +842,88 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
         <script>
+            var landing = landing || {};
+                
+            landing = {
+                introduce: function() {
+                    const landingIntroduceWrap = document.querySelector(".landing-introduce__wrap");
+                    const liwOfsTop = landingIntroduceWrap.offsetTop;
+                    const landingIntroduce = landingIntroduceWrap.querySelectorAll(".landing-introduce");
+                    var siblings = t => [...t.parentElement.children].filter(e => e != t);
+
+                    let lastIdx = ''
+
+
+                    /* landingIntroduce.forEach((el, idx) => {
+                        tl.to(el, {
+                            onUpdate: () => {
+                                idx !== lastIdx ? setClass(el) : lastIdx = idx
+                            }
+                        })
+                        
+                    })
+
+
+                    /* function setClass(el) {
+
+                        el.classList.add("landing-introduce--active")
+
+                        for(i = 0; i <= sibs.length; i++) {
+                            sibs[i].classList.remove("landing-introduce--active")
+                            
+                        }
+                    } */
+                    
+                    
+                    gsap.to(landingIntroduceWrap, {
+                        scrollTrigger: {
+                            trigger: ".landing-introduce__wrap",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onUpdate: getCurrentSection,
+                            onEnter: function() {
+                                landingIntroduce.forEach(function(liCont, liIdx) {
+                                    liCont.style.position = "fixed"
+                                })
+                            },
+                            onLeaveBack: function() {
+                                landingIntroduce.forEach(function(liCont, liIdx) {
+                                    liCont.style.position = ""
+                                })
+                            },
+                            onLeave: function() {
+                                landingIntroduce.forEach(function(liCont, liIdx) {
+                                    liCont.style.position = ""
+                                    liCont.style.top = "auto",
+                                    liCont.style.bottom = "0px"
+                                })
+                            },
+                            onEnterBack: function() {
+                                landingIntroduce.forEach(function(liCont, liIdx) {
+                                    liCont.style.position = "fixed"
+                                    liCont.style.top = "",
+                                    liCont.style.bottom = ""
+                                })
+                            },
+                            markers: true
+                        }
+                    });
+
+                    function getCurrentSection() {
+                        landingIntroduce.forEach(function(liCont,liIdx) {
+                            if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx)) {
+                                for(var i=0; i < landingIntroduce.length; i++) {
+                                    landingIntroduce[i].classList.remove("landing-introduce--active")
+                                }
+                                liCont.classList.add("landing-introduce--active")
+                            }
+                        })
+                    }
+                }
+            }
             
+
+            landing.introduce();
         </script>
         <!-- [//code component area end] -->
     </main>
