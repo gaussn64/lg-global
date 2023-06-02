@@ -396,14 +396,16 @@
             .parallex__section {
                 position: relative;
             }
-
             .parallex__section__title-wrap {
-                position: absolute;
+                position: sticky;
                 width: 100%;
                 height: 100vh;
                 top: 0;
                 left: 0;
                 z-index: 5;
+            }
+            .parallex__section__title-wrap--sticky {
+                margin-bottom: 300px;
             }
             .parallex__title.parallex__title__swip {
                 position: absolute;
@@ -415,6 +417,8 @@
                 align-items: center;
                 justify-content: center;
             }
+
+
 
             .parallex__canvas {
                 position: relative;
@@ -541,7 +545,7 @@
 
             /*parallax-visual__pin--identity*/
             .parallax-pin__image--identity:nth-child(1) {
-                top: 10%;
+                top: 8.87%;
                 left: 69.79%;
                 width: 18.3854vw;
                 height: 13.8675vw;
@@ -550,7 +554,7 @@
                 z-index: -2;
             }
             .parallax-pin__image--identity:nth-child(2) {
-                top: 11.87%;
+                top: 10.87%;
                 left: 33.54%;
                 width: 19.4792vw;
                 height: 19.375vw;
@@ -574,7 +578,7 @@
                 background-image: url(../../mocks/BS0001/brand-story-identity-04-d.png);
             }
             .parallax-pin__image--identity:nth-child(5) {
-                top: 27.76%;
+                top: 28.76%;
                 left: 7.66%;
                 width: 25.8896vw;
                 height: 32.3438vw;
@@ -587,7 +591,7 @@
                 object-fit: cover;
             }
             .parallax-pin__image--identity:nth-child(6) {
-                top: 16.75%;
+                top: 18.75%;
                 left: 57.71%;
                 width: 48.2292vw;
                 height: 30.0938vw;
@@ -596,7 +600,7 @@
                 z-index: -2;
             }
             .parallax-pin__image--identity:nth-child(7) {
-                top: 33.78%;
+                top: 34.78%;
                 left: 56.61%;
                 width: 34.0625vw;
                 height: 21.6146vw;
@@ -613,7 +617,7 @@
                 z-index: -1;
             }
             .parallax-pin__image--identity:nth-child(9) {
-                top: 19.29%;
+                top: 21.29%;
                 left: 62.5%;
                 width: 44.8438vw;
                 height: 26.3021vw;
@@ -622,7 +626,7 @@
                 z-index: -1;
             }
             .parallax-pin__image--identity:nth-child(10) {
-                top: 21.1%;
+                top: 27.1%;
                 left: 4.22%;
                 width: 43.0208vw;
                 height: 30.8333vw;
@@ -834,17 +838,11 @@
             }
 
             .marquee__inner.marquee__inner--bottom {
-                height: 53.4259vh;
+                /* height: 53.4259vh; */
             }
-
-            .marquee__inner.marquee__inner--bottom .marquee__part {
-                transform: translateX(-100%);
-            }
-
 
             /*Discover our brand*/
             .discover-brand__section {
-                height: 100vh;
                 margin-top: 230px;
             }
 
@@ -854,6 +852,7 @@
             }
 
             .discover-brand {
+                padding-bottom: 230px;
                 overflow-x: auto;
                 -ms-overflow-style: none;
                 scrollbar-width: none;
@@ -1026,6 +1025,31 @@
                     padding: 20px;
                     gap: 10px;
                 }
+
+                /*Discover our brand*/
+                .discover-brand__section {
+                    margin-top: 100px;
+                }
+                .discover-brand {
+                    padding-bottom: 48px;
+                }
+
+                .discover-brand__item {
+                    width: 77.6vw;
+                    height: 77.6vw;
+                    border-radius: 10px;
+                }
+                .discover-brand__item:first-child {
+                    margin-left: 20px;
+                }
+                .discover-brand__item__title {
+                    font-size: 16px;
+                    left: 17px;
+                    bottom: 13px;
+                }
+                .discover-brand__item--photography::before {
+                    border-radius: 10px;
+                }
             }
             @media (max-width: 768px) {
 
@@ -1068,27 +1092,33 @@
                     transform: translate(-50%, 0);
                 }
                 .lifeisgood__text--left svg {
-                    top: calc(100% - 15vw);
+                    bottom: 0;
                 }
                 .lifeisgood__text--right svg {
-                    bottom: calc(100% - 15vw);
+                    top: 0;
                 }
                 .lifeisgood__texts--active.lifeisgood__text--left svg {
                     margin: 0;
-                    top: 35px;
+                    bottom: 30vw;
                 }
                 .lifeisgood__texts--active.lifeisgood__text--right svg {
                     margin: 0;
-                    bottom: 35px;
+                    top: 30vw;
+                }
+                .life-bg__item {
+                    /* height: 100vw; */
                 }
                 .life-bg__item__image {
                     width: calc(100% - 20px);
-                    height: calc(100% - 20px);
+                    height: calc(100vw - 20px);
                     border-radius: 10px;
 
                 }
                 .life-bg__items--avatar .life-bg__item--boy {z-index: 3;}
                 .life-bg__items--avatar .life-bg__item--dance {z-index: 3;}
+                .life-bg__item--dance .life-bg__item--avatar {
+                    background-size: 120%;
+                }
 
                 /* brand story - our values */
                 .card-list__info {
@@ -1129,6 +1159,8 @@
                 .parallax-pin__image--design:nth-child(6) {display: none;}
                 
                 /*parallax-visual__pin--identity*/
+                .parallex-visual__item--prx {height: 1000vh;}
+
                 .parallax-pin__image--identity:nth-child(1),
                 .parallax-pin__image--identity:nth-child(2),
                 .parallax-pin__image--identity:nth-child(5),
@@ -1163,9 +1195,14 @@
                     height: 69.07vw;
                 }
                 .parallax-pin__image--identity:nth-child(10) {
+                    top: 23.3%;
                     left: 5.33%; 
                     width: 89.07vw; 
                     height: 64vw;
+                }
+
+                .parallex__section__title-wrap--sticky {
+                    margin-bottom: unset;
                 }
 
                 /*brand brief*/
@@ -1198,26 +1235,9 @@
                 }
 
                 /*brand story - marquee*/
-                /* .parallex-visual__marquee {display: none;} */
+                .parallex-visual__marquee {display: none;}
 
-                /*Discover our brand*/
-                .discover-brand__section {
-                    margin-top: 100px;
-                }
-
-                .discover-brand__item {
-                    width: 77.6vw;
-                    height: 77.6vw;
-                    border-radius: 10px;
-                }
-                .discover-brand__item:first-child {
-                    margin-left: 20px;
-                }
-                .discover-brand__item__title {
-                    font-size: 16px;
-                    left: 17px;
-                    bottom: 13px;
-                }
+                
             }
 
         </style>
@@ -1399,7 +1419,7 @@
                 <div class="brief__section" data-color-set="prevent"></div>
             </div>
             <div class="parallex__section parallex__section--identity">
-                <div class="parallex__section__title-wrap">
+                <div class="parallex__section__title-wrap parallex__section__title-wrap--sticky">
                     <h3 class="parallex__title parallex__title__swip">All of this comes to life<br> through our identity</h3>
                 </div>
                 <div class="parallex-visual__item parallex-visual__item--prx">
@@ -1415,10 +1435,10 @@
                                 </video>
                             </li>
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.38"></li>
-                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.64"></li>
+                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.56"></li>
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.5"></li>
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.29"></li>
-                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.29"></li>
+                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.35"></li>
                         </ul>
                     </div>
                 </div>
@@ -1623,7 +1643,7 @@
             }
             function parallaxDesignSec() {
                 const paraWrap = document.querySelector('.parallex__section.parallex__section--design')
-                const paraSection = paraWrap.querySelectorAll('.parallex-visual__item')
+                const paraSections = paraWrap.querySelectorAll('.parallex-visual__item')
                 const paraTitle = paraWrap.querySelector('.parallex__section__title-wrap')
                 const paraTextTarget = paraTitle.querySelector('h3')
 
@@ -1635,71 +1655,38 @@
                     'Which means we’re always adapting to<br> different moods and passions'
                 ]
 
-                let totalScroll = paraWrap.getBoundingClientRect().height - (window.innerHeight / 2)
+                let winY = window.pageYOffset
+                let lastIdx = ''
 
-                gsap.to(paraTitle, {
-                    scrollTrigger: {
-                        tirgger: paraWrap,
-                        pin: paraTitle,
-                        start: 'top top',
-                        end: `${totalScroll}px center`,
-                    }
-                })
+                function setTextValue() {
+                    paraSections.forEach((section, idx) => {
+                        const rect = section.getBoundingClientRect()
+                        const offsetTop = rect.top + window.pageYOffset
 
-                paraSection.forEach((section, idx) => {
-                    ScrollTrigger.create({
-                        trigger: section,
-                        start: 'top center',
-                        end: 'bottom center',
-                        onEnter: () => {
-                            gsap.set(paraTextTarget, {innerHTML: data[idx]})
-                            if (idx === 2) {
-                                document.querySelector('[data-color-mode]').dataset.colorMode = 'prevent'
-                            }
-                        },
-                        onEnterBack: () => {
-                            gsap.set(paraTextTarget, {innerHTML: data[idx]})
-                            if (idx === 1) {
-                                document.querySelector('[data-color-mode]').dataset.colorMode = 'dark'
+                        if (offsetTop < winY && (offsetTop + rect.height) > winY ) {
+                            if (lastIdx !== idx) {
+                                paraTextTarget.innerHTML = data[idx]
+                                lastIdx = idx 
                             }
                         }
-
                     })
+                }
+
+                window.addEventListener('scroll', ()=> {
+                    winY = window.pageYOffset
+                    setTextValue()
                 })
-            
+
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
+                setTextValue()
                 parallaxImageMotion(targetWrap, '125%')
             }
             function parallaxIdentitySec() {
                 const paraWrap = document.querySelector('.parallex__section.parallex__section--identity')
                 const paraSection = paraWrap.querySelectorAll('.parallex-visual__item')
-                const paraTitle = paraWrap.querySelector('.parallex__section__title-wrap')
-                
-                const marqueeTop = document.querySelector('.marquee__inner--top')
-
-                let imgSecHeight = document.querySelector('.parallex-visual__item--prx').getBoundingClientRect().height
-                let mqTopHeight = marqueeTop.getBoundingClientRect().height
-
-                const getMarginBottom = (element) => {
-                    const styles = window.getComputedStyle(element);
-                    const marginBottom = parseInt(styles.marginBottom);
-
-                    return marginBottom / 2;
-                }
-                
-                const totalScroll = imgSecHeight + mqTopHeight + getMarginBottom(marqueeTop)
-
-                gsap.to(paraTitle, {
-                    scrollTrigger: {
-                        tirgger: paraWrap,
-                        pin: paraTitle,
-                        start: 'top top',
-                        end: `${totalScroll}px center`,
-                    }
-                })
-
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
-                parallaxImageMotion(targetWrap, '105%')
+
+                parallaxImageMotion(targetWrap, '100%')
 
             }
             function brandBreifMotion() {
@@ -1837,35 +1824,16 @@
                 const marqueeBottom = marquee.querySelector('.marquee__inner--bottom')
                 const marqueeTopEl = gsap.utils.toArray('.marquee .marquee__inner--top .marquee__part');
                 const marqueeBottomEl = gsap.utils.toArray('.marquee .marquee__inner--bottom .marquee__part');
-
-                gsap.set(marqueeTop, {opacity: 0})
-                gsap.set(marqueeBottom, {opacity: 0})
                 
                 marqueeTopEl.forEach((item, index) => {
                     marqueeMotionSet(item, -100)
                 })
 
                 marqueeBottomEl.forEach((item, idx) => {
+                    let distance = item.clientWidth;
+                    gsap.set(marqueeBottom, {x: -distance})
+                    
                     marqueeMotionSet(item, 100)
-                })
-
-                const viewTl = gsap.timeline({
-                    scrollTrigger: {
-                        trigger: marquee,
-                        start: '30% center',
-                        end: '40% center',
-                    }
-                })
-
-                viewTl.fromTo(marqueeTop, {
-                    opacity: 0,
-                }, {
-                    opacity: 1
-                })
-                viewTl.fromTo(marqueeBottom, {
-                    opacity: 0,
-                }, {
-                    opacity: 1
                 })
 
                 function marqueeMotionSet(item, xPer) {
