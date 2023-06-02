@@ -39,6 +39,9 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
             /* Common */
+            body {
+                overflow-x: hidden;
+            }
             .sustainably-container,
             .sustainably-container * {
                 color: #262626;
@@ -115,16 +118,105 @@
                 font-size: 46px;
                 line-height: 140%;
             }
+            .landing-introduce__desc__txt {
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(20px);
+                transition: 0.3s ease all;
+            }
+            .landing-introduce__desc__txt:nth-of-type(1) {
+                transition-delay: 0.2s;
+            }
+            .landing-introduce__desc__txt:nth-of-type(2) {
+                transition-delay: 0.1s;
+            }
+            .landing-introduce__desc__txt:nth-of-type(3) {
+                transition-delay: 0s;
+            }
             .landing-introduce__goals {
                 font-size: 120px;
                 line-height: 1;
+                opacity: 0;
+                transform: translateY(40px);
+                transition: 0.3s ease all;
+            }
+            .landing-introduce--active .landing-introduce__desc__txt,
+            .landing-introduce--active .landing-introduce__goals {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .landing-introduce--active .landing-introduce__desc__txt:nth-of-type(1) {
+                transition-delay: 0s;
+            }
+            .landing-introduce--active .landing-introduce__desc__txt:nth-of-type(2) {
+                transition-delay: 0.1s;
+            }
+            .landing-introduce--active .landing-introduce__desc__txt:nth-of-type(3) {
+                transition-delay: 0.2s;
             }
 
             /* Core Value */
+            .core-value__wrap {
+                position: relative;
+            }
             .core-value {
+                width: 100%;
+                height: 300vh;
+                text-align: center;
+            }
+            .core-value__start {
+                position: absolute;
+                z-index: 3;
+                top: 16.7593vh;
+                left: 50%;
+                width: 32.1875vw;
+                height: 32.1875vw;
+                border-radius: 16.0938vw;
+                transform: translateX(-50%);
+                overflow: hidden;
+                opacity: 1;
+                transition: 0.5s ease 0.5s opacity;
+            }
+            .core-value__start--active {
+                position: fixed;
+                opacity: 0;
+                transition: 0.5s ease 0s opacity;
+            }
+            .core-value__media {
+                position: absolute;
+                z-index: 2;
+                top: 16.7593vh;
+                left: 50%;
+                width: 32.1875vw;
+                height: 32.1875vw;
+                border-radius: 16.0938vw;
+                transform: translateX(-50%);
+                overflow: hidden;
+                transition: 0.5s ease 0s width;
+            }
+            .core-value__media--active {
+                width: 87.5vw;
+                transition: 0.5s ease 0.5s width;
+            }
+            .core-value__media__item {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .core-value__media__item__img,
+            .core-value__media__item__video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            /*.core-value {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                width: 100%;
                 height: 100vh;
                 text-align: center;
             }
@@ -169,9 +261,15 @@
             .core-value__thumbnail__caption__small {
                 font-size: 28px;
                 line-height: 34px;
-            }
+            }*/
 
             /* Menu Introduce */
+            .menu-introduce__inner {
+                display: flex;
+                flex-wrap: nowrap;
+                width: 400%;
+                height: 100vh;
+            }
             .menu-introduce {
                 display: flex;
                 justify-content: space-between;
@@ -564,13 +662,44 @@
                 </div>
             </div>
             <div class="core-value__wrap">
+                <div class="core-value__inner">
+                    <!--<div class="core-value"></div>-->
+                    <div class="core-value"></div>
+                    <div class="core-value"></div>
+                    <div class="core-value"></div>
+                    <div class="core-value"></div>
+                </div>
+                
+                <div class="core-value__start">
+                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                </div>
+                <ul class="core-value__media">
+                    <!--<li class="core-value__media__item">
+                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    </li>-->
+                    <li class="core-value__media__item">
+                        <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    </li>
+                    <li class="core-value__media__item">
+                        <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    </li>
+                    <li class="core-value__media__item">
+                        <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    </li>
+                    <li class="core-value__media__item last">
+                        <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__media__item__img" />
+                    </li>
+                </ul> 
+
+            </div>
+            <!--<div class="core-value__wrap">
                 <div class="core-value">
                     <p class="core-value__summary">We're committed to making a better impact.</p>
                 </div>
                 <div class="core-value">
                     <div class="core-value__load">
-                        <!-- <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" /> -->
-                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__load__video" autoplay muted loop></video>
+                        <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" /> -->
+                        <!-- <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__load__video" autoplay muted loop></video>
                     </div>
                 </div>
                 <div class="core-value">
@@ -617,230 +746,232 @@
                         </figcaption>
                     </figure>
                 </div>
-            </div>
+            </div>-->
             <div class="menu-introduce__wrap">
-                <div class="menu-introduce">
-                    <div class="menu-introduce__cont">
-                        <h3 class="menu-introduce__cont__tit">Living Sustainably</h3>
-                        <p class="menu-introduce__cont__summary">
-                            Sustainability <br />
-                            in everyday living
-                        </p>
-                        <p class="menu-introduce__cont__detail">
-                            Sunday dinners. Movie nights. Fresh sheets. A morning breeze. <br />
-                            A home life that restores you. Our shared sustainability <br />
-                            journey means we can cherish these precious moments for <br />
-                            generations to come. When we work together to create a <br />
-                            more sustainable way of life, we all reap the rewards.
-                        </p>
-                        <div class="menu-introduce__cont__go-to">
-                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
+                <div class="menu-introduce__inner">
+                    <div class="menu-introduce">
+                        <div class="menu-introduce__cont">
+                            <h3 class="menu-introduce__cont__tit">Living Sustainably</h3>
+                            <p class="menu-introduce__cont__summary">
+                                Sustainability <br />
+                                in everyday living
+                            </p>
+                            <p class="menu-introduce__cont__detail">
+                                Sunday dinners. Movie nights. Fresh sheets. A morning breeze. <br />
+                                A home life that restores you. Our shared sustainability <br />
+                                journey means we can cherish these precious moments for <br />
+                                generations to come. When we work together to create a <br />
+                                more sustainable way of life, we all reap the rewards.
+                            </p>
+                            <div class="menu-introduce__cont__go-to">
+                                <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
+                            </div>
+                        </div>
+                        <div class="menu-introduce__photos">
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item1-1">
+                                <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-1__img" />
+                            </div>
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item1-2">
+                                <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-2__img" />
+                            </div>
                         </div>
                     </div>
-                    <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item1-1">
-                            <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-1__img" />
+                    <div class="menu-introduce">
+                        <div class="menu-introduce__cont">
+                            <h3 class="menu-introduce__cont__tit">Climate Action</h3>
+                            <p class="menu-introduce__cont__summary">
+                                Big steps. <br />
+                                Little carbon.
+                            </p>
+                            <p class="menu-introduce__cont__detail">
+                                Nature always had our attention. But its message is urgent: <br />
+                                to reduce carbon emissions. As part of the cause, we're now a <br />
+                                bigger part of the solution. LG Electronics is committed to an <br />
+                                aggressive schedule toward carbon-neutrality and using 100% <br />
+                                renewable energy. The sooner we minimize our impact, there <br />
+                                will be fewer "natural" hazards, and more nature to appreciate.
+                            </p>
+                            <div class="menu-introduce__cont__go-to">
+                                <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
+                            </div>
                         </div>
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item1-2">
-                            <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item1-2__img" />
+                        <div class="menu-introduce__photos">
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item2-1">
+                                <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-1__img" />
+                            </div>
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item2-2">
+                                <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-2__img" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-introduce">
+                        <div class="menu-introduce__cont">
+                            <h3 class="menu-introduce__cont__tit">Circular Economy</h3>
+                            <p class="menu-introduce__cont__summary">
+                                Greener with <br />
+                                every step, <br />
+                                Sustainable Cycle
+                            </p>
+                            <p class="menu-introduce__cont__detail">
+                                Imagine a world with no waste. That's what <br />
+                                we strive for with our sustainable cycle. By <br />
+                                recycling all we can to turn old materials and <br />
+                                appliances into new products, we're doing <br />
+                                our part to reduce waste and create a more <br />
+                                sustainable future for our planet.
+                            </p>
+                            <div class="menu-introduce__cont__go-to">
+                                <a href="#" class="menu-introduce__cont__go-to__link">Go to Circular Economy</a>
+                            </div>
+                        </div>
+                        <div class="menu-introduce__photos">
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item3-1">
+                                <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item3-1__video" autoplay muted loop></video>
+                            </div>
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item3-2">
+                                <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item3-2__img" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-introduce">
+                        <div class="menu-introduce__cont">
+                            <h3 class="menu-introduce__cont__tit">Human Rights</h3>
+                            <p class="menu-introduce__cont__summary">
+                                Community <br />
+                                engagement for <br />
+                                diversity and <br />
+                                equality
+                            </p>
+                            <p class="menu-introduce__cont__detail">
+                                We know how important it is to respect <br />
+                                human rights and acknowledge the <br />
+                                impact of business on communities. <br />
+                                Caring for people is at the core of all we <br />
+                                do.
+                            </p>
+                            <div class="menu-introduce__cont__go-to">
+                                <a href="#" class="menu-introduce__cont__go-to__link">Go to Human Rights</a>
+                            </div>
+                        </div>
+                        <div class="menu-introduce__photos">
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item4-1">
+                                <img src="../../mocks/ST0001/photo-menu-introduce4-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos__item4-1__img" />
+                            </div>
+                            <div class="menu-introduce__photos__item menu-introduce__photos__item4-2">
+                                <video src="../../mocks/ST0001/video-menu-introduce4-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item4-2__video" autoplay muted loop></video>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="menu-introduce">
-                    <div class="menu-introduce__cont">
-                        <h3 class="menu-introduce__cont__tit">Climate Action</h3>
-                        <p class="menu-introduce__cont__summary">
-                            Big steps. <br />
-                            Little carbon.
-                        </p>
-                        <p class="menu-introduce__cont__detail">
-                            Nature always had our attention. But its message is urgent: <br />
-                            to reduce carbon emissions. As part of the cause, we're now a <br />
-                            bigger part of the solution. LG Electronics is committed to an <br />
-                            aggressive schedule toward carbon-neutrality and using 100% <br />
-                            renewable energy. The sooner we minimize our impact, there <br />
-                            will be fewer "natural" hazards, and more nature to appreciate.
-                        </p>
-                        <div class="menu-introduce__cont__go-to">
-                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
-                        </div>
-                    </div>
-                    <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item2-1">
-                            <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-1__img" />
-                        </div>
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item2-2">
-                            <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item2-2__img" />
-                        </div>
-                    </div>
+            </div>
+            <div class="reports">
+                <h3 class="reports__tit">Reports</h3>
+                <p class="reports__summary">
+                    Sharing our sustainability <br />
+                    achievements
+                </p>
+                <div class="reports__go-to">
+                    <a href="#" class="reports__go-to__link">Go to Reports</a>
                 </div>
-                <div class="menu-introduce">
-                    <div class="menu-introduce__cont">
-                        <h3 class="menu-introduce__cont__tit">Circular Economy</h3>
-                        <p class="menu-introduce__cont__summary">
-                            Greener with <br />
-                            every step, <br />
-                            Sustainable Cycle
-                        </p>
-                        <p class="menu-introduce__cont__detail">
-                            Imagine a world with no waste. That's what <br />
-                            we strive for with our sustainable cycle. By <br />
-                            recycling all we can to turn old materials and <br />
-                            appliances into new products, we're doing <br />
-                            our part to reduce waste and create a more <br />
-                            sustainable future for our planet.
-                        </p>
-                        <div class="menu-introduce__cont__go-to">
-                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Circular Economy</a>
-                        </div>
-                    </div>
-                    <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item3-1">
-                            <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item3-1__video" autoplay muted loop></video>
-                        </div>
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item3-2">
-                            <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos__item3-2__img" />
-                        </div>
-                    </div>
+            </div>
+            <div class="newsroom">
+                <h3 class="newsroom__tit">Newsroom</h3>
+                <p class="newsroom__summary">
+                    We openly share our progress, <br />
+                    to inspire others to join us in creating <br />
+                    a sustainable tomorrow.
+                </p>
+                <p class="newsroom__detail">
+                    We prioritize creating social value in all areas(education, voluntary work, community <br />
+                    development, etc.) to ensure a brighter future for people.
+                </p>
+                <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
+                    <ul class="newsroom__photo-list newsroom__photo-list1">
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                    </ul>
                 </div>
-                <div class="menu-introduce">
-                    <div class="menu-introduce__cont">
-                        <h3 class="menu-introduce__cont__tit">Human Rights</h3>
-                        <p class="menu-introduce__cont__summary">
-                            Community <br />
-                            engagement for <br />
-                            diversity and <br />
-                            equality
-                        </p>
-                        <p class="menu-introduce__cont__detail">
-                            We know how important it is to respect <br />
-                            human rights and acknowledge the <br />
-                            impact of business on communities. <br />
-                            Caring for people is at the core of all we <br />
-                            do.
-                        </p>
-                        <div class="menu-introduce__cont__go-to">
-                            <a href="#" class="menu-introduce__cont__go-to__link">Go to Human Rights</a>
-                        </div>
-                    </div>
-                    <div class="menu-introduce__photos">
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item4-1">
-                            <img src="../../mocks/ST0001/photo-menu-introduce4-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos__item4-1__img" />
-                        </div>
-                        <div class="menu-introduce__photos__item menu-introduce__photos__item4-2">
-                            <video src="../../mocks/ST0001/video-menu-introduce4-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos__item4-2__video" autoplay muted loop></video>
-                        </div>
-                    </div>
+                <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
+                    <ul class="newsroom__photo-list newsroom__photo-list2">
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                    </ul>
                 </div>
-                <div class="reports">
-                    <h3 class="reports__tit">Reports</h3>
-                    <p class="reports__summary">
-                        Sharing our sustainability <br />
-                        achievements
+                <div class="newsroom__go-to">
+                    <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
+                </div>
+            </div>
+            <div class="means">
+                <div class="means__visual"></div>
+                <div class="means__cont">
+                    <p class="means__cont__txt means__cont__txt--active">
+                        Sustainability means more to us than just a slogan. <br />
+                        It's a commitment we're passionate about putting into action.
                     </p>
-                    <div class="reports__go-to">
-                        <a href="#" class="reports__go-to__link">Go to Reports</a>
-                    </div>
-                </div>
-                <div class="newsroom">
-                    <h3 class="newsroom__tit">Newsroom</h3>
-                    <p class="newsroom__summary">
-                        We openly share our progress, <br />
-                        to inspire others to join us in creating <br />
-                        a sustainable tomorrow.
+                    <p class="means__cont__txt">
+                        A sustainable world <br />
+                        comes from <br />
+                        meaningful action.
                     </p>
-                    <p class="newsroom__detail">
-                        We prioritize creating social value in all areas(education, voluntary work, community <br />
-                        development, etc.) to ensure a brighter future for people.
-                    </p>
-                    <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
-                        <ul class="newsroom__photo-list newsroom__photo-list1">
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        </ul>
-                    </div>
-                    <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
-                        <ul class="newsroom__photo-list newsroom__photo-list2">
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        </ul>
-                    </div>
-                    <div class="newsroom__go-to">
-                        <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
-                    </div>
                 </div>
-                <div class="means">
-                    <div class="means__visual"></div>
-                    <div class="means__cont">
-                        <p class="means__cont__txt means__cont__txt--active">
-                            Sustainability means more to us than just a slogan. <br />
-                            It's a commitment we're passionate about putting into action.
-                        </p>
-                        <p class="means__cont__txt">
-                            A sustainable world <br />
-                            comes from <br />
-                            meaningful action.
-                        </p>
-                    </div>
-                </div>
-                <div class="whats-next">
-                    <h3 class="whats-next__tit">
-                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
-                    </h3>
-                    <div class="swiper whats-next__menu">
-                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
-                            <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor">
-                                    <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
-                                    </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor">
-                                    <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
-                                    </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor">
-                                    <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
-                                    </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
-                                </a>
-                            </div>
-                            <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor">
-                                    <div class="whats-next__menu__slide__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
-                                    </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
-                                </a>
-                            </div>
+            </div>
+            <div class="whats-next">
+                <h3 class="whats-next__tit">
+                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                    Explore Sustainability
+                </h3>
+                <div class="swiper whats-next__menu">
+                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                            </a>
                         </div>
-                        <div class="whats-next__menu__btn-set">
-                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
-                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                            </a>
                         </div>
-                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                            </a>
+                        </div>
                     </div>
+                    <div class="whats-next__menu__btn-set">
+                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                    </div>
+                    <div class="swiper-pagination whats-next__menu__pagination"></div>
                 </div>
             </div>
         </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollToPlugin.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
         <script>
             var landing = landing || {};
                 
@@ -850,29 +981,6 @@
                     const liwOfsTop = landingIntroduceWrap.offsetTop;
                     const landingIntroduce = landingIntroduceWrap.querySelectorAll(".landing-introduce");
                     var siblings = t => [...t.parentElement.children].filter(e => e != t);
-
-                    let lastIdx = ''
-
-
-                    /* landingIntroduce.forEach((el, idx) => {
-                        tl.to(el, {
-                            onUpdate: () => {
-                                idx !== lastIdx ? setClass(el) : lastIdx = idx
-                            }
-                        })
-                        
-                    })
-
-
-                    /* function setClass(el) {
-
-                        el.classList.add("landing-introduce--active")
-
-                        for(i = 0; i <= sibs.length; i++) {
-                            sibs[i].classList.remove("landing-introduce--active")
-                            
-                        }
-                    } */
                     
                     
                     gsap.to(landingIntroduceWrap, {
@@ -904,8 +1012,7 @@
                                     liCont.style.top = "",
                                     liCont.style.bottom = ""
                                 })
-                            },
-                            markers: true
+                            }
                         }
                     });
 
@@ -919,11 +1026,97 @@
                             }
                         })
                     }
+                },
+                coreValue: function() {
+                    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+                    gsap.set(".core-value__media__item", { zIndex: (i, target, targets) => targets.length - i });
+
+                    let coreValueWrap = document.querySelector(".core-value__wrap");
+                    let cvwOfsTop = coreValueWrap.offsetTop;
+                    let cvwViewIs = false;
+                    let coreValueInner = coreValueWrap.querySelector(".core-value__inner");
+                    let coreValue = coreValueInner.querySelector(".core-value");
+                    var coreValueStart = coreValueWrap.querySelector(".core-value__start");
+                    let coreValueMedia  = coreValueWrap.querySelector(".core-value__media");
+                    let cvmHeight = coreValueMedia.offsetHeight;
+                    let coreValueMediaItem = coreValueMedia.querySelector(".core-value__media__item");
+
+                    const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
+
+                    gsap.to(coreValueInner, {
+                        scrollTrigger: {
+                            trigger: ".core-value__inner",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                coreValueStart.classList.add("core-value__start--active")
+                                coreValueMedia.classList.add("core-value__media--active")
+                                coreValueMedia.style.position = "fixed"
+                            },
+                            onLeaveBack: function() {
+                                coreValueStart.classList.remove("core-value__start--active")
+                                coreValueMedia.classList.remove("core-value__media--active")
+                                coreValueMedia.style.position = ""
+                            },
+                            onLeave: function() {
+                                coreValueMedia.style.position = ""
+                                coreValueMedia.style.top = "auto",
+                                coreValueMedia.style.bottom = "16.7593vh"
+                            },
+                            onEnterBack: function() {
+                                coreValueMedia.style.position = "fixed"
+                                coreValueMedia.style.top = "",
+                                coreValueMedia.style.bottom = ""
+                            }
+                        }
+                    });
+
+                    panels.forEach(function(valueBox,i) {
+                        let tl = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: coreValueInner,
+                                start: () => 15*(i+1)+"% -" + (window.innerHeight*(i)),
+                                end: () => "+=" + window.innerHeight,
+                                scrub: true,
+                                anticipatePin: 1
+                            }
+                        })
+                        tl.to(valueBox, {top: -cvmHeight})
+
+                    })
+                },
+                menuIntroduce: function() {
+                    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+                    let triggerWrap = document.querySelector(".menu-introduce__wrap");
+                    let triggerList = document.querySelector(".menu-introduce__inner");
+                    let tween;
+
+                    const panels = gsap.utils.toArray(".menu-introduce__inner .menu-introduce");
+                    //console.log(panels.length)
+                    tween = gsap.to(panels, {
+                        xPercent: -100 * ( panels.length - 1 ),
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: ".menu-introduce__inner",
+                            pin: true,
+                            start: "top top",
+                            scrub: 1,
+                            snap: {
+                                snapTo: 1 / (panels.length - 1),
+                                inertia: false,
+                                duration: {min: 0.3, max: 0.3}
+                            },
+                            end: () =>  "+=" + (triggerList.offsetWidth - innerWidth),
+                        }
+                    });
                 }
             }
             
 
             landing.introduce();
+            landing.coreValue();
+            landing.menuIntroduce();
         </script>
         <!-- [//code component area end] -->
     </main>
