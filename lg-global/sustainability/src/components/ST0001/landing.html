@@ -456,6 +456,7 @@
             .newsroom__photo-list__wrap,
             .newsroom__photo-list {
                 display: flex;
+                flex-wrap: nowrap;
                 gap: 0px 20px;
                 justify-content: center;
                 overflow: hidden;
@@ -469,6 +470,7 @@
             .newsroom__photo-list__item {
                 width: 512px;
                 height: 260px;
+                flex-shrink: 0;
             }
             .newsroom__photo-list__item__img {
                 width: 100%;
@@ -1094,7 +1096,6 @@
                     txtTL4.to(coreValueTxtItem[3], {opacity:1})
 
                 },
-
                 menuIntroduce: function() {
                     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
@@ -1120,6 +1121,18 @@
                             end: () =>  "+=" + (triggerList.offsetWidth - innerWidth),
                         }
                     });
+                },
+                newsroom: function() {
+                    let newsroom = document.querySelector(".newsroom")
+                    let newsPhotoListWrap = newsroom.querySelectorAll(".newsroom__photo-list__wrap")
+                    
+                    newsPhotoListWrap.forEach(function(nplw) {
+                        nplwList = nplw.querySelector(".newsroom__photo-list")
+                        leftCloneNplList = nplwList.cloneNode(true)
+                        rightCloneNplList = nplwList.cloneNode(true)
+                        nplw.insertBefore(leftCloneNplList, nplw.firstChild)
+                        nplw.appendChild(rightCloneNplList)
+                    })
                 }
             }
             
@@ -1127,6 +1140,7 @@
             landing.introduce();
             landing.coreValue();
             landing.menuIntroduce();
+            landing.newsroom();
         </script>
         <!-- [//code component area end] -->
     </main>
