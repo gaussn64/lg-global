@@ -169,13 +169,18 @@
                 z-index: 3;
                 top: 16.7593vh;
                 left: 50%;
-                width: 32.1875vw;
-                height: 32.1875vw;
-                border-radius: 16.0938vw;
+                width: 57.2222vh;
+                height: 57.2222vh;
+                border-radius: 28.6111vh;
                 transform: translateX(-50%);
                 overflow: hidden;
                 opacity: 1;
                 transition: 0.5s ease 0.5s opacity;
+            }
+            .core-value__start__video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .core-value__start--active {
                 position: fixed;
@@ -187,9 +192,9 @@
                 z-index: 2;
                 top: 16.7593vh;
                 left: 50%;
-                width: 32.1875vw;
-                height: 32.1875vw;
-                border-radius: 16.0938vw;
+                width: 57.2222vh;
+                height: 57.2222vh;
+                border-radius: 28.6111vh;
                 transform: translateX(-50%);
                 overflow: hidden;
                 transition: 0.5s ease 0s width;
@@ -205,63 +210,45 @@
                 right: 0px;
                 width: 100%;
                 height: 100%;
+                overflow: hidden;
             }
-            .core-value__media__item__img,
-            .core-value__media__item__video {
+            .core-value__media__item__video,
+            .core-value__media__item__img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            /*.core-value {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100vh;
-                text-align: center;
+            .core-value__txt {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 78.2407vh;
+                height: 60px;
+                /* bottom: 16.7593vh; */
             }
-            .core-value__summary {
-                font-size: 46px;
-                line-height: 1;
-            }
-            .core-value__load__video {
-                width: 618px;
-                height: 618px;
-                object-fit: cover;
-                border-radius: 309px;
-            }
-            .core-value__thumbnail {
-                width: 618px;
-            }
-            .core-value__thumbnail--active {
-                width: 87.5%;
-            }
-            .core-value__thumbnail__photo {
-                height: 618px;
-            }
-            .core-value__thumbnail__photo__video,
-            .core-value__thumbnail__photo__img {
-                width: 100%;
-                height: 618px;
-                object-fit: cover;
-                border-radius: 309px;
-            }
-            .core-value__thumbnail__caption {
+            .core-value__txt__item {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                opacity: 0;
                 display: flex;
                 gap: 0px 40px;
                 align-items: center;
                 justify-content: center;
-                margin-top: 40px;
             }
-            .core-value__thumbnail__caption__strong {
+            .core-value__txt__item--active {
+                opacity: 1;
+            }
+            .core-value__txt__item__strong {
                 font-size: 56px;
                 line-height: 60px;
                 font-weight: 300;
             }
-            .core-value__thumbnail__caption__small {
+            .core-value__txt__item__small {
                 font-size: 28px;
                 line-height: 34px;
-            }*/
+            }
 
             /* Menu Introduce */
             .menu-introduce__inner {
@@ -663,7 +650,6 @@
             </div>
             <div class="core-value__wrap">
                 <div class="core-value__inner">
-                    <!--<div class="core-value"></div>-->
                     <div class="core-value"></div>
                     <div class="core-value"></div>
                     <div class="core-value"></div>
@@ -671,12 +657,9 @@
                 </div>
                 
                 <div class="core-value__start">
-                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
                 </div>
                 <ul class="core-value__media">
-                    <!--<li class="core-value__media__item">
-                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>-->
                     <li class="core-value__media__item">
                         <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
                     </li>
@@ -690,63 +673,25 @@
                         <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__media__item__img" />
                     </li>
                 </ul> 
-
+                <ul class="core-value__txt">
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Living Sustainably</strong>
+                        <small class="core-value__txt__item__small">For a sustainable lifestyle</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Climate Action</strong>
+                        <small class="core-value__txt__item__small">For a long-lasting planet</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Circular Economy</strong>
+                        <small class="core-value__txt__item__small">For saving resources</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Human Rights</strong>
+                        <small class="core-value__txt__item__small">For a diverse, equal society</small>
+                    </li>
+                </ul>
             </div>
-            <!--<div class="core-value__wrap">
-                <div class="core-value">
-                    <p class="core-value__summary">We're committed to making a better impact.</p>
-                </div>
-                <div class="core-value">
-                    <div class="core-value__load">
-                        <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" /> -->
-                        <!-- <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__load__video" autoplay muted loop></video>
-                    </div>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Living Sustainably</strong>
-                            <small class="core-value__thumbnail__caption__small">For a sustainable lifestyle</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Climate Action</strong>
-                            <small class="core-value__thumbnail__caption__small">For a long-lasting planet</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Circular Economy</strong>
-                            <small class="core-value__thumbnail__caption__small">For saving resources</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__thumbnail__photo__img" />
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Human Rights</strong>
-                            <small class="core-value__thumbnail__caption__small">For a diverse, equal society</small>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>-->
             <div class="menu-introduce__wrap">
                 <div class="menu-introduce__inner">
                     <div class="menu-introduce">
@@ -1019,10 +964,12 @@
                     function getCurrentSection() {
                         landingIntroduce.forEach(function(liCont,liIdx) {
                             if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx)) {
-                                for(var i=0; i < landingIntroduce.length; i++) {
-                                    landingIntroduce[i].classList.remove("landing-introduce--active")
+                                if(liCont.className.indexOf("landing-introduce--active") < 0) {
+                                    for(var i=0; i < landingIntroduce.length; i++) {
+                                        landingIntroduce[i].classList.remove("landing-introduce--active")
+                                    }
+                                    liCont.classList.add("landing-introduce--active")
                                 }
-                                liCont.classList.add("landing-introduce--active")
                             }
                         })
                     }
@@ -1035,11 +982,13 @@
                     let cvwOfsTop = coreValueWrap.offsetTop;
                     let cvwViewIs = false;
                     let coreValueInner = coreValueWrap.querySelector(".core-value__inner");
-                    let coreValue = coreValueInner.querySelector(".core-value");
+                    let coreValue = coreValueInner.querySelectorAll(".core-value");
                     var coreValueStart = coreValueWrap.querySelector(".core-value__start");
                     let coreValueMedia  = coreValueWrap.querySelector(".core-value__media");
                     let cvmHeight = coreValueMedia.offsetHeight;
-                    let coreValueMediaItem = coreValueMedia.querySelector(".core-value__media__item");
+                    let coreValueMediaItem = coreValueMedia.querySelectorAll(".core-value__media__item");
+                    let coreValueTxt = coreValueWrap.querySelector(".core-value__txt");
+                    let coreValueTxtItem = coreValueWrap.querySelectorAll(".core-value__txt__item");
 
                     const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
 
@@ -1052,21 +1001,29 @@
                                 coreValueStart.classList.add("core-value__start--active")
                                 coreValueMedia.classList.add("core-value__media--active")
                                 coreValueMedia.style.position = "fixed"
+                                coreValueTxt.style.position = "fixed"
                             },
                             onLeaveBack: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.classList.remove("core-value__media--active")
                                 coreValueMedia.style.position = ""
+                                coreValueTxt.style.position = ""
                             },
                             onLeave: function() {
                                 coreValueMedia.style.position = ""
                                 coreValueMedia.style.top = "auto",
-                                coreValueMedia.style.bottom = "16.7593vh"
+                                coreValueMedia.style.bottom = "26.0185vh"
+                                coreValueTxt.style.position = ""
+                                coreValueTxt.style.top = "auto"
+                                coreValueTxt.style.bottom = "16.7593vh"
                             },
                             onEnterBack: function() {
                                 coreValueMedia.style.position = "fixed"
                                 coreValueMedia.style.top = "",
                                 coreValueMedia.style.bottom = ""
+                                coreValueTxt.style.position = "fixed"
+                                coreValueTxt.style.top = ""
+                                coreValueTxt.style.bottom = ""
                             }
                         }
                     });
@@ -1075,16 +1032,69 @@
                         let tl = gsap.timeline({
                             scrollTrigger: {
                                 trigger: coreValueInner,
-                                start: () => 15*(i+1)+"% -" + (window.innerHeight*(i)),
+                                start: () => "+=" + window.innerHeight*3*(i+1),
                                 end: () => "+=" + window.innerHeight,
                                 scrub: true,
                                 anticipatePin: 1
                             }
                         })
                         tl.to(valueBox, {top: -cvmHeight})
-
                     })
+
+                    txtTL1 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[0],
+                            start: () => cvwOfsTop + (window.innerHeight+(cvmHeight/2)),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL1.to(coreValueTxtItem[0], {opacity:1})
+                    txtTL1.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL1.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL1.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL2 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[1],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*2),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL2.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL2.to(coreValueTxtItem[1], {opacity:1})
+                    txtTL2.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL2.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL3 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[2],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*3),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL3.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL3.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL3.to(coreValueTxtItem[2], {opacity:1})
+                    txtTL3.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL4 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[3],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*4),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL4.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[3], {opacity:1})
+
                 },
+
                 menuIntroduce: function() {
                     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
