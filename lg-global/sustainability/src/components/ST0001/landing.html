@@ -453,19 +453,32 @@
                 margin-top: 20px;
                 font-size: 20px;
             }
-            .newsroom__photo-list__wrap,
-            .newsroom__photo-list {
-                display: flex;
-                flex-wrap: nowrap;
-                gap: 0px 20px;
-                justify-content: center;
-                overflow: hidden;
+            .newsroom__photo-list__wrap {
+                position: relative;
+                height: 260px;
             }
             .newsroom__photo-list1__wrap {
                 margin-top: 99px;
             }
             .newsroom__photo-list2__wrap {
                 margin-top: 20px;
+            }
+            .newsroom__photo-list__inner,
+            .newsroom__photo-list {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 0px 20px;
+                justify-content: center;
+            }
+            .newsroom__photo-list__inner {
+                position: absolute;
+                top: 0px;
+            }
+            .newsroom__photo-list1__inner {
+                left: 0px;
+            }
+            .newsroom__photo-list2__inner {
+                right: 0px;
             }
             .newsroom__photo-list__item {
                 width: 512px;
@@ -508,7 +521,7 @@
             /* Means */
             .means {
                 position: relative;
-                height: 200vh;
+                height: 300vh;
             }
             .means__visual {
                 position: absolute;
@@ -522,14 +535,47 @@
                 background: url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
                 background-size: cover;
             }
+            .means__visual--fixed {
+                position: fixed;
+                bottom: auto;
+            }
+            .means__visual--bottom-end {
+                top: auto;
+                bottom: 80px;
+            }
             .means__cont {
                 position: relative;
                 z-index: 2;
                 padding-top: 100vh;
             }
+            .means__cont:before,
+            .means__cont:after {
+                position: absolute;
+                z-index: 2;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 80px;
+                background-color: #f0ece4;
+            }
+            .means__cont:before {
+                top: 0px;
+            }
+            .means__cont:after {
+                bottom: 0px;
+            }
+            .means__cont--fixed:before,
+            .means__cont--fixed:after {
+                position: fixed;
+            }
             .means__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 80px calc(6.25vw + 80px);
                 height: 50vh;
-                padding: 160px calc(6.25vw + 80px);
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -833,20 +879,24 @@
                     development, etc.) to ensure a brighter future for people.
                 </p>
                 <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
-                    <ul class="newsroom__photo-list newsroom__photo-list1">
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                    </ul>
+                    <div class="newsroom__photo-list__inner newsroom__photo-list1__inner">
+                        <ul class="newsroom__photo-list newsroom__photo-list1">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
-                    <ul class="newsroom__photo-list newsroom__photo-list2">
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                    </ul>
+                    <div class="newsroom__photo-list__inner newsroom__photo-list2__inner">
+                        <ul class="newsroom__photo-list newsroom__photo-list2">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="newsroom__go-to">
                     <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
@@ -855,7 +905,7 @@
             <div class="means">
                 <div class="means__visual"></div>
                 <div class="means__cont">
-                    <p class="means__cont__txt means__cont__txt--active">
+                    <p class="means__cont__txt">
                         Sustainability means more to us than just a slogan. <br />
                         It's a commitment we're passionate about putting into action.
                     </p>
@@ -1124,15 +1174,99 @@
                 },
                 newsroom: function() {
                     let newsroom = document.querySelector(".newsroom")
-                    let newsPhotoListWrap = newsroom.querySelectorAll(".newsroom__photo-list__wrap")
+                    let newsPhotoListInner = newsroom.querySelectorAll(".newsroom__photo-list__inner")
+                    let nplList1Wrap = newsroom.querySelector(".newsroom__photo-list1__wrap")
+                    let nplList2Wrap = newsroom.querySelector(".newsroom__photo-list2__wrap")
+                    let nplList1Inner = nplList1Wrap.querySelector(".newsroom__photo-list1__inner")
+                    let nplList2Inner = nplList2Wrap.querySelector(".newsroom__photo-list2__inner")
                     
-                    newsPhotoListWrap.forEach(function(nplw) {
+                    
+                    newsPhotoListInner.forEach(function(nplw) {
                         nplwList = nplw.querySelector(".newsroom__photo-list")
                         leftCloneNplList = nplwList.cloneNode(true)
                         rightCloneNplList = nplwList.cloneNode(true)
                         nplw.insertBefore(leftCloneNplList, nplw.firstChild)
                         nplw.appendChild(rightCloneNplList)
                     })
+
+                    setInterval(function() {
+                        let nplList1First = nplList1Inner.querySelector(".newsroom__photo-list1").cloneNode(true)
+                        
+                        let nplList2Last = nplList2Inner.querySelector(".newsroom__photo-list2").cloneNode(true)
+
+                        nplList1Inner.appendChild(nplList1First)
+                        nplList2Inner.insertBefore(nplList2Last, nplList2Inner.firstChild)
+                    },50000)
+
+                    setInterval(function() {
+                        gsap.to(nplList1Inner, 100, {
+                            "left":"-="+window.innerWidth
+                        });
+                        gsap.to(nplList2Inner, 100, {
+                            "right":"-="+window.innerWidth
+                        });
+                    },5000)
+                },
+                means: function() {
+                    let means = document.querySelector(".means");
+                    let msOfsTop = means.offsetTop;
+                    let meansVisual = means.querySelector(".means__visual");
+                    let msvOfsTop = meansVisual.offsetTop;
+                    let meansCont = means.querySelector(".means__cont");
+                    let measContTxt = meansCont.querySelectorAll(".means__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".means",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                meansVisual.classList.add("means__visual--fixed")
+                                meansVisual.classList.remove("means__visual--bottom-end")
+                                meansCont.classList.add("means__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                meansVisual.classList.remove("means__visual--fixed")
+                                meansCont.classList.remove("means__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                meansVisual.classList.remove("means__visual--fixed")
+                                meansVisual.classList.add("means__visual--bottom-end")
+                                meansCont.classList.remove("means__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                meansVisual.classList.add("means__visual--fixed")
+                                meansVisual.classList.remove("means__visual--bottom-end")
+                                meansCont.classList.add("means__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+means.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("means__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("means__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+
+                    }
                 }
             }
             
@@ -1141,6 +1275,7 @@
             landing.coreValue();
             landing.menuIntroduce();
             landing.newsroom();
+            landing.means();
         </script>
         <!-- [//code component area end] -->
     </main>
