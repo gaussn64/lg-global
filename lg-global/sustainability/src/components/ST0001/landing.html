@@ -58,32 +58,32 @@
             }
             .landing-visual__tit {
                 position: absolute;
-                bottom: 214px;
+                bottom: 19.8148vh;
                 left: 0px;
                 width: 100%;
             }
             .landing-visual__tit__img {
-                width: 1399px;
-                height: 224px;
+                width: 72.8646vw;
+                height: 11.6667vw;
             }
             .landing-visual__txt {
                 position: absolute;
-                bottom: 160px;
+                bottom: 14.8148vh;
                 left: 0px;
                 width: 100%;
                 color: white;
-                font-size: 20px;
+                font-size: 1.0417vw;
                 line-height: 1;
             }
             .landing-visual__scrolldown {
                 position: absolute;
-                bottom: 40px;
+                bottom: 3.7037vh;
                 left: 0px;
                 width: 100%;
             }
             .landing-visual__scrolldown__btn {
-                width: 68px;
-                height: 96px;
+                width: 3.5417vw;
+                height: 5vw;
                 text-indent: -9999px;
                 overflow: hidden;
                 border-width: 0px;
@@ -115,7 +115,7 @@
                 opacity: 1;
             }
             .landing-introduce__desc {
-                font-size: 46px;
+                font-size: 2.3958vw;
                 line-height: 140%;
             }
             .landing-introduce__desc__txt {
@@ -134,7 +134,7 @@
                 transition-delay: 0s;
             }
             .landing-introduce__goals {
-                font-size: 120px;
+                font-size: 6.25vw;
                 line-height: 1;
                 opacity: 0;
                 transform: translateY(40px);
@@ -169,13 +169,18 @@
                 z-index: 3;
                 top: 16.7593vh;
                 left: 50%;
-                width: 32.1875vw;
-                height: 32.1875vw;
-                border-radius: 16.0938vw;
+                width: 57.2222vh;
+                height: 57.2222vh;
+                border-radius: 28.6111vh;
                 transform: translateX(-50%);
                 overflow: hidden;
                 opacity: 1;
                 transition: 0.5s ease 0.5s opacity;
+            }
+            .core-value__start__video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .core-value__start--active {
                 position: fixed;
@@ -187,9 +192,9 @@
                 z-index: 2;
                 top: 16.7593vh;
                 left: 50%;
-                width: 32.1875vw;
-                height: 32.1875vw;
-                border-radius: 16.0938vw;
+                width: 57.2222vh;
+                height: 57.2222vh;
+                border-radius: 28.6111vh;
                 transform: translateX(-50%);
                 overflow: hidden;
                 transition: 0.5s ease 0s width;
@@ -205,63 +210,45 @@
                 right: 0px;
                 width: 100%;
                 height: 100%;
+                overflow: hidden;
             }
-            .core-value__media__item__img,
-            .core-value__media__item__video {
+            .core-value__media__item__video,
+            .core-value__media__item__img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            /*.core-value {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                height: 100vh;
-                text-align: center;
+            .core-value__txt {
+                position: absolute;
+                left: 0px;
+                right: 0px;
+                top: 78.2407vh;
+                height: 60px;
+                /* bottom: 16.7593vh; */
             }
-            .core-value__summary {
-                font-size: 46px;
-                line-height: 1;
-            }
-            .core-value__load__video {
-                width: 618px;
-                height: 618px;
-                object-fit: cover;
-                border-radius: 309px;
-            }
-            .core-value__thumbnail {
-                width: 618px;
-            }
-            .core-value__thumbnail--active {
-                width: 87.5%;
-            }
-            .core-value__thumbnail__photo {
-                height: 618px;
-            }
-            .core-value__thumbnail__photo__video,
-            .core-value__thumbnail__photo__img {
-                width: 100%;
-                height: 618px;
-                object-fit: cover;
-                border-radius: 309px;
-            }
-            .core-value__thumbnail__caption {
+            .core-value__txt__item {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                opacity: 0;
                 display: flex;
                 gap: 0px 40px;
                 align-items: center;
                 justify-content: center;
-                margin-top: 40px;
             }
-            .core-value__thumbnail__caption__strong {
-                font-size: 56px;
-                line-height: 60px;
+            .core-value__txt__item--active {
+                opacity: 1;
+            }
+            .core-value__txt__item__strong {
+                font-size: 2.9167vw;
+                line-height: 3.1250vw;
                 font-weight: 300;
             }
-            .core-value__thumbnail__caption__small {
-                font-size: 28px;
-                line-height: 34px;
-            }*/
+            .core-value__txt__item__small {
+                font-size: 1.4583vw;
+                line-height: 1.7708vw;
+            }
 
             /* Menu Introduce */
             .menu-introduce__inner {
@@ -274,35 +261,40 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                width: 100%;
+                box-sizing: border-box;
                 gap: 0px 5.9896vw;
                 padding: 0px 6.25vw;
                 height: 100vh;
             }
+            .menu-introduce__cont {
+                width: 29.4792vw;
+            }
             .menu-introduce__cont__tit {
-                font-size: 28px;
+                font-size: 1.4583vw;
                 line-height: 1;
                 font-weight: 400;
             }
             .menu-introduce__cont__summary {
                 color: #75C66B;
                 font-weight: 400;
-                font-size: 72px;
+                font-size: 3.75vw;
                 line-height: 110%;
-                margin-top: 20px;
+                margin-top: 1.0417vw;
             }
             .menu-introduce__cont__detail {
-                margin-top: 20px;
-                font-size: 20px;
+                margin-top: 1.0417vw;
+                font-size: 1.0417vw;
                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
             }
             .menu-introduce__cont__go-to {
-                margin-top: 30px;
+                margin-top: 1.5625vw;
             }
             .menu-introduce__cont__go-to__link {
                 display: inline-block;
-                padding: 25px 30px 27px;
-                border-radius: 100px;
-                font-size: 20px;
+                padding: 1.3021vw 1.5625vw 1.4063vw;
+                border-radius: 5.2083vw;
+                font-size: 1.0417vw;
                 font-weight: 600;
                 line-height: 1;
                 background-color: white;
@@ -313,59 +305,59 @@
             }
             .menu-introduce__photos {
                 position: relative;
-                width: 998px;
-                height: 632px;
+                width: 51.9792vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item {
                 position: absolute;
             }
             .menu-introduce__photos__item1-1 {
-                top: 177px;
-                left: 0px;
-                width: 278px;
-                height: 278px;
+                top: 9.2188vw;
+                right: 37.5vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item1-2 {
                 top: 0px;
                 right: 0px;
-                width: 720px;
-                height: 632px;
+                width: 37.5vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item2-1 {
-                top: 177px;
-                left: 130px;
-                width: 278px;
-                height: 278px;
+                top: 9.2188vw;
+                right: 30.7292vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item2-2 {
                 top: 0px;
                 right: 0px;
-                width: 590px;
-                height: 632px;
+                width: 30.7292vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item3-1 {
-                top: 177px;
-                left: 0px;
-                width: 278px;
-                height: 278px;
+                top: 9.2188vw;
+                right: 37.5vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item3-2 {
                 top: 0px;
                 right: 0px;
-                width: 720px;
-                height: 632px;
+                width: 37.5vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item4-1 {
                 top: 0px;
-                left: 151px;
-                width: 505px;
-                height: 558px;
+                right: 17.8125vw;
+                width: 26.3021vw;
+                height: 29.0625vw;
             }
             .menu-introduce__photos__item4-2 {
-                top: 107px;
+                top: 5.5729vw;
                 right: 0px;
-                width: 342px;
-                height: 342px;
+                width: 17.8125vw;
+                height: 17.8125vw;
             }
             .menu-introduce__photos__item__img,
             .menu-introduce__photos__item__video {
@@ -412,7 +404,7 @@
 
             /* Reports */
             .reports {
-                padding: 80px 6.25vw;
+                padding: 7.4074vh 6.25vw;
                 box-sizing: border-box;
                 height: 100vh;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
@@ -420,23 +412,23 @@
             }
             .reports__tit {
                 color: white;
-                font-size: 28px;
+                font-size: 1.4583vw;
                 line-height: 1;
             }
             .reports__summary {
                 color: white;
-                font-size: 72px;
+                font-size: 3.75vw;
                 line-height: 120%;
-                margin-top: 23px;
+                margin-top: 1.1979vw;
             }
             .reports__go-to {
-                margin-top: 30px;
+                margin-top: 1.5625vw;
             }
             .reports__go-to__link {
                 display: inline-block;
-                padding: 21px 30px 23px;
-                border-radius: 100px;
-                font-size: 20px;
+                padding: 1.0938vw 1.5625vw 1.1979vw;
+                border-radius: 5.2083vw;
+                font-size: 1.0417vw;
                 font-weight: 600;
                 line-height: 1;
                 background-color: white;
@@ -448,55 +440,70 @@
 
             /* Newsroom */
             .newsroom {
-                padding: 80px 0px;
+                padding: 7.4074vh 0px;
                 text-align: center;
             }
             .newsroom__tit {
-                font-size: 28px;
+                font-size: 1.4583vw;
                 line-height: 1;
             }
             .newsroom__summary {
                 color: #75C66B;
                 font-weight: 400;
-                font-size: 72px;
+                font-size: 3.75vw;
                 line-height: 110%;
-                margin-top: 20px;
+                margin-top: 1.0417vw;
             }
             .newsroom__detail {
-                margin-top: 20px;
-                font-size: 20px;
+                margin-top: 1.0417vw;
+                font-size: 1.0417vw;
             }
-            .newsroom__photo-list__wrap,
-            .newsroom__photo-list {
-                display: flex;
-                gap: 0px 20px;
-                justify-content: center;
-                overflow: hidden;
+            .newsroom__photo-list__wrap {
+                position: relative;
+                height: 24.0741vh;
             }
             .newsroom__photo-list1__wrap {
-                margin-top: 99px;
+                margin-top: 5.1563vw;
             }
             .newsroom__photo-list2__wrap {
-                margin-top: 20px;
+                margin-top: 1.0417vw;
+            }
+            .newsroom__photo-list__inner,
+            .newsroom__photo-list {
+                display: flex;
+                flex-wrap: nowrap;
+                gap: 0px 1.0417vw;
+                justify-content: center;
+            }
+            .newsroom__photo-list__inner {
+                position: absolute;
+                top: 0px;
+            }
+            .newsroom__photo-list1__inner {
+                left: 0px;
+            }
+            .newsroom__photo-list2__inner {
+                right: 0px;
             }
             .newsroom__photo-list__item {
-                width: 512px;
-                height: 260px;
+                width: 26.6667vw;
+                height: 24.0741vh;
+                flex-shrink: 0;
             }
             .newsroom__photo-list__item__img {
                 width: 100%;
                 height: 100%;
-                border-radius: 30px;
+                border-radius: 1.5625vw;
                 object-fit: cover;
             }
             .newsroom__go-to {
-                margin-top: 100px;
+                margin-top: 5.2083vh;
             }
             .newsroom__go-to__link {
                 display: inline-block;
-                padding: 24px 30px;
-                border-radius: 100px;
-                font-size: 20px;
+                padding: 1.25vw 1.5625vw;
+                border-radius: 5.2083vw;
+                font-size: 1.0417vw;
                 line-height: 1;
                 font-weight: 600;
                 background-color: white;
@@ -508,47 +515,81 @@
             .newsroom__go-to__link:after {
                 content: '';
                 display: inline-block;
-                width: 25px;
-                height: 24px;
+                width: 1.3021vw;
+                height: 1.25vw;
                 vertical-align: middle;
-                margin-left: 10px;
+                margin-left: 0.5208vw;
                 background: url(../../mocks/ST0001/go-to-blank.svg) no-repeat left top;
+                background-size: cover;
                 vertical-align: text-bottom;
             }
 
             /* Means */
             .means {
                 position: relative;
-                height: 200vh;
+                height: 300vh;
             }
             .means__visual {
                 position: absolute;
                 z-index: 1;
-                top: 80px;
+                top: 7.4074vh;
                 left: 6.25vw;
                 right: 6.25vw;
-                height: calc(100vh - 160px);
-                border-radius: 40px;
+                height: calc(100vh - 14.8148vh);
+                border-radius: 2.0833vw;
                 box-sizing: border-box;
                 background: url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
                 background-size: cover;
+            }
+            .means__visual--fixed {
+                position: fixed;
+                bottom: auto;
+            }
+            .means__visual--bottom-end {
+                top: auto;
+                bottom: 7.4074vh;
             }
             .means__cont {
                 position: relative;
                 z-index: 2;
                 padding-top: 100vh;
             }
+            .means__cont:before,
+            .means__cont:after {
+                position: absolute;
+                z-index: 2;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 7.4074vh;
+                background-color: #f0ece4;
+            }
+            .means__cont:before {
+                top: 0px;
+            }
+            .means__cont:after {
+                bottom: 0px;
+            }
+            .means__cont--fixed:before,
+            .means__cont--fixed:after {
+                position: fixed;
+            }
             .means__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 7.4074vh calc(6.25vw + 80px);
                 height: 50vh;
-                padding: 160px calc(6.25vw + 80px);
                 box-sizing: border-box;
                 color: white;
-                font-size: 20px;
+                font-size: 1.0417vw;
                 line-height: 145%;
                 transition: 0.3s ease all;
             }
             .means__cont__txt--active {
-                font-size: 60px;
+                font-size: 3.1250vw;
                 font-weight: 300;
                 line-height: 120%;
             }
@@ -557,39 +598,39 @@
             .whats-next {
                 position: relative;
                 overflow: hidden;
-                padding: 90px 6.25vw 73px;
+                padding: 4.6875vw 6.25vw 3.8021vw;
                 background-color: #E6E1D6;
             }
             .whats-next__tit {
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 font-weight: 300;
             }
             .whats-next__tit__strong {
                 font-weight: 400;
             }
             .whats-next__menu {
-                margin-top: 74px;
+                margin-top: 3.6458vw;
                 overflow: visible;
             }
             .whats-next__menu__slide {
-                width: 475px;
-                margin-right: 20px;
+                width: 24.7396vw;
+                margin-right: 1.0417vw;
             }
             .whats-next__menu__slide__anchor {
                 display: block;
                 width: 100%;
-                height: 475px;
-                padding: 80px 0px 28px;
+                height: 43.9815vh;
+                padding: 7.4074vh 0px 2.5926vh;
                 box-sizing: border-box;
                 background: #F0ECE4;
-                border-radius: 20px;
+                border-radius: 1.0417vw;
             }
             .whats-next__menu__slide__anchor__photo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 274px;
+                height: 24.0741vh;
             }
             .whats-next__menu__slide__anchor__photo__img {
                 max-width: 100%;
@@ -598,24 +639,25 @@
                 height: auto;
             }
             .whats-next__menu__slide__anchor__txt {
-                padding: 59px 32px 0px;
-                line-height: 34px;
-                font-size: 28px;
+                padding: 5.4630vh 1.6667vh 0px;
+                line-height: 1.7708vw;
+                font-size: 1.4583vw;
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -122px;
+                top: -5.8333vw;
                 right: 0px;
                 display: flex;
-                gap: 0px 8px;
+                gap: 0px 0.4167vw;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: 100% 100%;
+                cursor: pointer;
             }
             .whats-next__menu__btn-set__btn__prev {
                 background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
@@ -626,7 +668,7 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 64px;
+                margin-top: 3.3333vw;
                 height: 2px;
                 background-color: rgba(0,0,0,0.2);
             }
@@ -663,7 +705,6 @@
             </div>
             <div class="core-value__wrap">
                 <div class="core-value__inner">
-                    <!--<div class="core-value"></div>-->
                     <div class="core-value"></div>
                     <div class="core-value"></div>
                     <div class="core-value"></div>
@@ -671,12 +712,9 @@
                 </div>
                 
                 <div class="core-value__start">
-                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
                 </div>
                 <ul class="core-value__media">
-                    <!--<li class="core-value__media__item">
-                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>-->
                     <li class="core-value__media__item">
                         <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
                     </li>
@@ -690,63 +728,25 @@
                         <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__media__item__img" />
                     </li>
                 </ul> 
-
+                <ul class="core-value__txt">
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Living Sustainably</strong>
+                        <small class="core-value__txt__item__small">For a sustainable lifestyle</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Climate Action</strong>
+                        <small class="core-value__txt__item__small">For a long-lasting planet</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Circular Economy</strong>
+                        <small class="core-value__txt__item__small">For saving resources</small>
+                    </li>
+                    <li class="core-value__txt__item">
+                        <strong class="core-value__txt__item__strong">Human Rights</strong>
+                        <small class="core-value__txt__item__small">For a diverse, equal society</small>
+                    </li>
+                </ul>
             </div>
-            <!--<div class="core-value__wrap">
-                <div class="core-value">
-                    <p class="core-value__summary">We're committed to making a better impact.</p>
-                </div>
-                <div class="core-value">
-                    <div class="core-value__load">
-                        <img src="../../mocks/ST0001/load-core-value.png" alt="" class="core-value__load__img" /> -->
-                        <!-- <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__load__video" autoplay muted loop></video>
-                    </div>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Living Sustainably</strong>
-                            <small class="core-value__thumbnail__caption__small">For a sustainable lifestyle</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Climate Action</strong>
-                            <small class="core-value__thumbnail__caption__small">For a long-lasting planet</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__thumbnail__photo__video" autoplay muted loop></video>
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Circular Economy</strong>
-                            <small class="core-value__thumbnail__caption__small">For saving resources</small>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="core-value">
-                    <figure class="core-value__thumbnail core-value__thumbnail--active">
-                        <div class="core-value__thumbnail__photo">
-                            <img src="../../mocks/ST0001/photo-core-value4.png" alt="" class="core-value__thumbnail__photo__img" />
-                        </div>
-                        <figcaption class="core-value__thumbnail__caption">
-                            <strong class="core-value__thumbnail__caption__strong">Human Rights</strong>
-                            <small class="core-value__thumbnail__caption__small">For a diverse, equal society</small>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>-->
             <div class="menu-introduce__wrap">
                 <div class="menu-introduce__inner">
                     <div class="menu-introduce">
@@ -886,20 +886,24 @@
                     development, etc.) to ensure a brighter future for people.
                 </p>
                 <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
-                    <ul class="newsroom__photo-list newsroom__photo-list1">
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                    </ul>
+                    <div class="newsroom__photo-list__inner newsroom__photo-list1__inner">
+                        <ul class="newsroom__photo-list newsroom__photo-list1">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
-                    <ul class="newsroom__photo-list newsroom__photo-list2">
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                        <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                    </ul>
+                    <div class="newsroom__photo-list__inner newsroom__photo-list2__inner">
+                        <ul class="newsroom__photo-list newsroom__photo-list2">
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="newsroom__go-to">
                     <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
@@ -908,7 +912,7 @@
             <div class="means">
                 <div class="means__visual"></div>
                 <div class="means__cont">
-                    <p class="means__cont__txt means__cont__txt--active">
+                    <p class="means__cont__txt">
                         Sustainability means more to us than just a slogan. <br />
                         It's a commitment we're passionate about putting into action.
                     </p>
@@ -1019,10 +1023,12 @@
                     function getCurrentSection() {
                         landingIntroduce.forEach(function(liCont,liIdx) {
                             if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx)) {
-                                for(var i=0; i < landingIntroduce.length; i++) {
-                                    landingIntroduce[i].classList.remove("landing-introduce--active")
+                                if(liCont.className.indexOf("landing-introduce--active") < 0) {
+                                    for(var i=0; i < landingIntroduce.length; i++) {
+                                        landingIntroduce[i].classList.remove("landing-introduce--active")
+                                    }
+                                    liCont.classList.add("landing-introduce--active")
                                 }
-                                liCont.classList.add("landing-introduce--active")
                             }
                         })
                     }
@@ -1035,11 +1041,13 @@
                     let cvwOfsTop = coreValueWrap.offsetTop;
                     let cvwViewIs = false;
                     let coreValueInner = coreValueWrap.querySelector(".core-value__inner");
-                    let coreValue = coreValueInner.querySelector(".core-value");
+                    let coreValue = coreValueInner.querySelectorAll(".core-value");
                     var coreValueStart = coreValueWrap.querySelector(".core-value__start");
                     let coreValueMedia  = coreValueWrap.querySelector(".core-value__media");
                     let cvmHeight = coreValueMedia.offsetHeight;
-                    let coreValueMediaItem = coreValueMedia.querySelector(".core-value__media__item");
+                    let coreValueMediaItem = coreValueMedia.querySelectorAll(".core-value__media__item");
+                    let coreValueTxt = coreValueWrap.querySelector(".core-value__txt");
+                    let coreValueTxtItem = coreValueWrap.querySelectorAll(".core-value__txt__item");
 
                     const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
 
@@ -1052,21 +1060,31 @@
                                 coreValueStart.classList.add("core-value__start--active")
                                 coreValueMedia.classList.add("core-value__media--active")
                                 coreValueMedia.style.position = "fixed"
+                                coreValueTxt.style.position = "fixed"
                             },
                             onLeaveBack: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.classList.remove("core-value__media--active")
                                 coreValueMedia.style.position = ""
+                                coreValueTxt.style.position = ""
                             },
                             onLeave: function() {
+                                coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.style.position = ""
                                 coreValueMedia.style.top = "auto",
-                                coreValueMedia.style.bottom = "16.7593vh"
+                                coreValueMedia.style.bottom = "26.0185vh"
+                                coreValueTxt.style.position = ""
+                                coreValueTxt.style.top = "auto"
+                                coreValueTxt.style.bottom = "16.7593vh"
                             },
                             onEnterBack: function() {
+                                coreValueStart.classList.add("core-value__start--active")
                                 coreValueMedia.style.position = "fixed"
                                 coreValueMedia.style.top = "",
                                 coreValueMedia.style.bottom = ""
+                                coreValueTxt.style.position = "fixed"
+                                coreValueTxt.style.top = ""
+                                coreValueTxt.style.bottom = ""
                             }
                         }
                     });
@@ -1075,15 +1093,67 @@
                         let tl = gsap.timeline({
                             scrollTrigger: {
                                 trigger: coreValueInner,
-                                start: () => 15*(i+1)+"% -" + (window.innerHeight*(i)),
+                                start: () => "+=" + window.innerHeight*3*(i+1),
                                 end: () => "+=" + window.innerHeight,
                                 scrub: true,
                                 anticipatePin: 1
                             }
                         })
                         tl.to(valueBox, {top: -cvmHeight})
-
                     })
+
+                    txtTL1 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[0],
+                            start: () => cvwOfsTop + (window.innerHeight+(cvmHeight/2)),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL1.to(coreValueTxtItem[0], {opacity:1})
+                    txtTL1.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL1.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL1.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL2 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[1],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*2),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL2.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL2.to(coreValueTxtItem[1], {opacity:1})
+                    txtTL2.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL2.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL3 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[2],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*3),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL3.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL3.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL3.to(coreValueTxtItem[2], {opacity:1})
+                    txtTL3.to(coreValueTxtItem[3], {opacity:0})
+
+                    txtTL4 = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: coreValue[3],
+                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*4),
+                            end: () => "bottom bottom",
+                            scrub: true
+                        }
+                    })
+                    txtTL4.to(coreValueTxtItem[0], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[1], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[2], {opacity:0})
+                    txtTL4.to(coreValueTxtItem[3], {opacity:1})
+
                 },
                 menuIntroduce: function() {
                     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
@@ -1110,6 +1180,114 @@
                             end: () =>  "+=" + (triggerList.offsetWidth - innerWidth),
                         }
                     });
+                },
+                newsroom: function() {
+                    let newsroom = document.querySelector(".newsroom")
+                    let newsPhotoListInner = newsroom.querySelectorAll(".newsroom__photo-list__inner")
+                    let nplList1Wrap = newsroom.querySelector(".newsroom__photo-list1__wrap")
+                    let nplList2Wrap = newsroom.querySelector(".newsroom__photo-list2__wrap")
+                    let nplList1Inner = nplList1Wrap.querySelector(".newsroom__photo-list1__inner")
+                    let nplList2Inner = nplList2Wrap.querySelector(".newsroom__photo-list2__inner")
+                    
+                    
+                    newsPhotoListInner.forEach(function(nplw) {
+                        nplwList = nplw.querySelector(".newsroom__photo-list")
+                        leftCloneNplList = nplwList.cloneNode(true)
+                        rightCloneNplList = nplwList.cloneNode(true)
+                        nplw.insertBefore(leftCloneNplList, nplw.firstChild)
+                        nplw.appendChild(rightCloneNplList)
+                    })
+
+                    setInterval(function() {
+                        let nplList1First = nplList1Inner.querySelector(".newsroom__photo-list1").cloneNode(true)
+                        
+                        let nplList2Last = nplList2Inner.querySelector(".newsroom__photo-list2").cloneNode(true)
+
+                        nplList1Inner.appendChild(nplList1First)
+                        nplList2Inner.insertBefore(nplList2Last, nplList2Inner.firstChild)
+                    },50000)
+
+                    setInterval(function() {
+                        gsap.to(nplList1Inner, 100, {
+                            "left":"-="+window.innerWidth
+                        });
+                        gsap.to(nplList2Inner, 100, {
+                            "right":"-="+window.innerWidth
+                        });
+                    },5000)
+                },
+                means: function() {
+                    let means = document.querySelector(".means");
+                    let msOfsTop = means.offsetTop;
+                    let meansVisual = means.querySelector(".means__visual");
+                    let msvOfsTop = meansVisual.offsetTop;
+                    let meansCont = means.querySelector(".means__cont");
+                    let measContTxt = meansCont.querySelectorAll(".means__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".means",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                meansVisual.classList.add("means__visual--fixed")
+                                meansVisual.classList.remove("means__visual--bottom-end")
+                                meansCont.classList.add("means__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                meansVisual.classList.remove("means__visual--fixed")
+                                meansCont.classList.remove("means__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                meansVisual.classList.remove("means__visual--fixed")
+                                meansVisual.classList.add("means__visual--bottom-end")
+                                meansCont.classList.remove("means__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                meansVisual.classList.add("means__visual--fixed")
+                                meansVisual.classList.remove("means__visual--bottom-end")
+                                meansCont.classList.add("means__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+means.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("means__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("means__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+
+                    }
+                },whatsNext: function() {
+                    var swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: "auto",
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
                 }
             }
             
@@ -1117,6 +1295,9 @@
             landing.introduce();
             landing.coreValue();
             landing.menuIntroduce();
+            landing.newsroom();
+            landing.means();
+            landing.whatsNext();
         </script>
         <!-- [//code component area end] -->
     </main>
