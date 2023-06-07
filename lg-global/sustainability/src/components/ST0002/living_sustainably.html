@@ -439,7 +439,7 @@
                 height: auto;
             }
             .whats-next__menu__slide__anchor__txt {
-                padding: 5.4630vh 1.6667vh 0px;
+                padding: 2.9167vw 1.6667vw 0px;
                 line-height: 1.7708vw;
                 font-size: 1.4583vw;
             }
@@ -483,7 +483,7 @@
                     <span class="living-st-visual__tit__txt">Sustainability</span><br />
                     <span class="living-st-visual__tit__txt">in everyday living</span>
                 </h2>
-                <video src="../../mocks/ST0002/visual-living-st-visual.mp4" class="living-st-visual__video" autoplay loop muted></video>
+                <video src="../../mocks/ST0002/video-living-st-visual.mp4" class="living-st-visual__video" autoplay loop muted></video>
             </div>
             <div class="living-st-about">
                 <h3 class="living-st-about__tit">
@@ -708,6 +708,15 @@
             var livingSt = livingSt || {};
                 
             livingSt = {
+                ecoConsciousMaterial: function() {
+                    var swiper = new Swiper(".eco-conscious-material__product", {
+                        slidesPerView: "auto",
+                        navigation: {
+                            nextEl: ".eco-conscious-material__product__btn-set__btn__next",
+                            prevEl: ".eco-conscious-material__product__btn-set__btn__prev",
+                        },
+                    });
+                },
                 summary: function() {
                     let summary = document.querySelector(".summary");
                     let msOfsTop = summary.offsetTop;
@@ -768,15 +777,6 @@
                         })
     
                     }
-                },
-                ecoConsciousMaterial: function() {
-                    var swiper = new Swiper(".eco-conscious-material__product", {
-                        slidesPerView: "auto",
-                        navigation: {
-                            nextEl: ".eco-conscious-material__product__btn-set__btn__next",
-                            prevEl: ".eco-conscious-material__product__btn-set__btn__prev",
-                        },
-                    });
                 },
                 whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {

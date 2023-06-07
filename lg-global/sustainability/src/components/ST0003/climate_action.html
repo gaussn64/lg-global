@@ -1,0 +1,659 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-732643dbb995c59fad88fa1792064411-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-82f6622c2ebf5806b333c076aff87384-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="https://assets.adobedtm.com/322f63b58a72/0cfd3b7df536/launch-baef262771e5-development.min.js" async></script>
+    <script src="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<header id="header" class="c-header">
+    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <nav class="c-header__gnb">
+        <ul class="c-header__gnb__list">
+            <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Climate Action</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0004/circular_economy.html" class="c-header__gnb__list__item__anchor">Circular Economy</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
+        </ul>
+    </nav>
+    <button type="button" class="c-header__btn-gnb">
+        <span class="c-header__btn-gnb__bar"></span>
+        <span class="c-header__btn-gnb__bar"></span>
+    </button>
+</header>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+
+            /* Climate Action Visual */
+            .climate-action-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .climate-action-visual:after {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 2;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .climate-action-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                font-weight: 300;
+                font-size: 80px;
+                line-height: 110%;
+                transform: translate(0,-50%);
+            }
+            .climate-action-visual__tit__txt {
+                color: white;
+            }
+            .climate-action-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+
+            /* Climate Action About */
+            .climate-action-about {
+                padding: 0px 120px;
+                text-align: center;
+            }
+            .climate-action-about__tit {
+                padding: 140px 0px;
+                font-weight: 300;
+                font-size: 46px;
+                line-height: 60px;
+                color: #4A4946;
+            }
+
+            /* Climate Action Summary */
+            .summary {
+                position: relative;
+                height: 300vh;
+            }
+            .summary__visual {
+                position: absolute;
+                z-index: 1;
+                top: 7.4074vh;
+                left: 6.25vw;
+                right: 6.25vw;
+                height: calc(100vh - 14.8148vh);
+                border-radius: 2.0833vw;
+                box-sizing: border-box;
+                background: url(../../mocks/ST0003/photo-summary-visual.png) no-repeat center center;
+                background-size: cover;
+            }
+            .summary__visual--fixed {
+                position: fixed;
+                bottom: auto;
+            }
+            .summary__visual--bottom-end {
+                top: auto;
+                bottom: 7.4074vh;
+            }
+            .summary__cont {
+                position: relative;
+                z-index: 2;
+                padding-top: 100vh;
+            }
+            .summary__cont:before,
+            .summary__cont:after {
+                position: absolute;
+                z-index: 2;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 7.4074vh;
+                background-color: #f0ece4;
+            }
+            .summary__cont:before {
+                top: 0px;
+            }
+            .summary__cont:after {
+                bottom: 0px;
+            }
+            .summary__cont--fixed:before,
+            .summary__cont--fixed:after {
+                position: fixed;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 7.4074vh calc(6.25vw + 80px);
+                height: 50vh;
+                box-sizing: border-box;
+                color: white;
+                font-size: 1.0417vw;
+                line-height: 145%;
+                transform: scale(1);
+                transition: 0.3s ease all;
+            }
+            .summary__cont__txt--active {
+                font-size: 3.1250vw;
+                font-weight: 300;
+                line-height: 120%;
+                letter-spacing: -1px;
+            }
+
+            /* What's Next */
+            .whats-next {
+                position: relative;
+                overflow: hidden;
+                padding: 4.6875vw 6.25vw 3.8021vw;
+                background-color: #E6E1D6;
+            }
+            .whats-next__tit {
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
+                font-weight: 300;
+            }
+            .whats-next__tit__strong {
+                font-weight: 400;
+            }
+            .whats-next__menu {
+                margin-top: 3.6458vw;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 24.7396vw;
+                margin-right: 1.0417vw;
+            }
+            .whats-next__menu__slide__anchor {
+                display: block;
+                width: 100%;
+                height: 43.9815vh;
+                padding: 7.4074vh 0px 2.5926vh;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 1.0417vw;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 24.0741vh;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                padding: 2.9167vw 1.6667vw 0px;
+                line-height: 1.7708vw;
+                font-size: 1.4583vw;
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -5.8333vw;
+                right: 0px;
+                display: flex;
+                gap: 0px 0.4167vw;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 2.5vw;
+                height: 2.5vw;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 3.3333vw;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="climate-action-visual">
+                <h2 class="climate-action-visual__tit">
+                    <span class="climate-action-visual__tit__txt">Big steps. Little carbon.</span>
+                </h2>
+                <video src="../../mocks/ST0003/video-climate-action-visual.mp4" class="climate-action-visual__video" autoplay loop muted></video>
+            </div>
+            <div class="climate-action-about">
+                <p class="climate-action-about__cont">
+                    <span class="climate-action-about__cont__txt">Nature always had our attention. But its message is </span><br />
+                    <span class="climate-action-about__cont__txt">to reduce carbon emissions. As part of the cause, </span><br />
+                    <span class="climate-action-about__cont__txt">we're now a bigger part of the solution.</span><br />
+                    <span class="climate-action-about__cont__txt">LG Electronics is committed to an aggressive </span><br />
+                    <span class="climate-action-about__cont__txt">schedule toward carbon-neutrality and using 100% </span><br />
+                    <span class="climate-action-about__cont__txt">renewable energy. The sooner we minimize our</span><br />
+                    <span class="climate-action-about__cont__txt">hazards, and more nature to appreciate.</span>
+                </p>
+            </div>
+            <div class="milestone">
+                <h3 class="milestone__tit">Milestone</h3>
+                <div class="milestone__intro">
+                    <p class="milestone__intro__txt">
+                        Our carbon neutrality <br />
+                        imperative
+                    </p>
+                    <p class="milestone__intro__txt">
+                        Our ambitious 2030 carbon neutrality goal means taking immediate action. Through continuous process <br />
+                        improvement with energy-saving technologies, we're reducing more greenhouse gas emissions starting from the <br />
+                        biggest culprit, the production stage.
+                    </p>
+                </div>
+                <nav class="milestone__goals-navi">
+                    <ul class="milestone__goals-navi__list">
+                        <li class="milestone__goals-navi__list__item">
+                            <a href="" class="milestone__goals-navi__list__item__a milestone__goals-navi__list__item__a--active">Plan 2030</a>
+                        </li>
+                        <li class="milestone__goals-navi__list__item">
+                            <a href="" class="milestone__goals-navi__list__item__a">2023</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="milestone__goals-cont">
+                    <ul class="milestone__goals-cont__years">
+                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2006">
+                            <b class="milestone__goals-cont__years__item__txt">2006</b>
+                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2006__ico"></i>
+                        </li>
+                        <li class="milestone__goals-cont__years__item">
+                            <b class="milestone__goals-cont__years__item__txt">2017</b>
+                            <i class="milestone__goals-cont__years__item__ico"></i>
+                        </li>
+                        <li class="milestone__goals-cont__years__item">
+                            <b class="milestone__goals-cont__years__item__txt">2020</b>
+                            <i class="milestone__goals-cont__years__item__ico"></i>
+                        </li>
+                        <li class="milestone__goals-cont__years__item">
+                            <b class="milestone__goals-cont__years__item__txt">2021</b>
+                            <i class="milestone__goals-cont__years__item__ico"></i>
+                        </li>
+                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2023">
+                            <b class="milestone__goals-cont__years__item__txt">2023</b>
+                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2023__ico"></i>
+                        </li>
+                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2030">
+                            <b class="milestone__goals-cont__years__item__txt">2030</b>
+                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2030__ico"></i>
+                        </li>
+                    </ul>
+                    <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2030 milestone__goals-cont__summary--active">
+                        50% reduction in emissions in the production phase <br />
+                        + 50% of external offset by 2030
+                    </p>
+                    <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2023">
+                        40% carbon emission reduction compared to base year (2017)
+                    </p>
+                    <ul class="milestone__goals__detail milestone__goals-cont__summary__2030 milestone__goals-cont__summary--active">
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">100%</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Complete transition to Renewable Energy by 2050
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">20%</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Reduce Carbon Emissions During use of 7 Major Product Categories*
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">Carbon Zero</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Achieve Carbon Neutrality**
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <ul class="milestone__goals__detail milestone__goals-cont__summary__2023">
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">40%</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Carbon Neutrality <br />
+                                    <small class="milestone__goals__detail__item__cont__small">40% compared to base year(2017)</small>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">100%</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Renewable energy conversion <br />
+                                    <small class="milestone__goals__detail__item__cont__small">100% renewable energy used by subsidiaries in North America</small>
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="milestone__goals__detail__item">
+                            <dl class="milestone__goals__detail__item__tit">
+                                <dt class="milestone__goals__detail__item__tit">6.6%</dt>
+                                <dd class="milestone__goals__detail__item__ico">
+                                    <img src="" alt="" class="milestone__goals__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals__detail__item__cont">
+                                    Reduce carbon emissions during use of 7 major products* <br />
+                                    <small class="milestone__goals__detail__item__cont__small"></small>(compared to 2020)</small>
+                                </dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2030 milestone__goals-cont__home-appliances--active">
+                        * TV, Monitors, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner (RAC), System Air Conditioner(SAC) <br />
+                        ** 50% reduction in emissions in the production phase + 50% of external offset
+                    </p>
+                    <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2023">
+                        * TV, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner(RAC), System Air Conditioner(SAC), Monitors
+                    </p>
+                </div>
+            </div>
+            <div class="carbon-emission-reduction">
+                <h3 class="carbon-emission-reduction__tit">Carbon emission reduction</h3>
+                <p class="carbon-emission-reduction__intro1">
+                    Our innovation cuts carbon
+                </p>
+                <p class="carbon-emission-reduction__intro2">
+                    We're firmly committed to a greener future, discovering and creating ways to reduce carbon <br />
+                    emissions and minimize environmental impact through sustainable practices.
+                </p>
+                <ul class="carbon-emission-reduction__plan">
+                    <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step1">
+                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step1__btn">
+                            Reduce greenhouse gas <br />
+                            emissions in production <br />
+                            stage (~2030)
+                        </a>
+                    </li>
+                    <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step2">
+                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step2__btn">
+                            Switching to 100% <br />
+                            renewable energy <br />
+                            (~2050)
+                        </a>
+                    </li>
+                    <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step3">
+                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step3__btn">
+                            Securing certified <br />
+                            emissions reductions
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="home-appliances-manufacturing-factory">
+                <h3 class="home-appliances-manufacturing-factory__tit">Carbon emission reduction</h3>
+                <p class="carbon-emission-reduction__intro1">
+                    Introducing Lighthouse Factory
+                </p>
+                <p class="carbon-emission-reduction__intro2">
+                    The lighthouse factory uses advanced technology to lead the way in global manufacturing, just like a <br />
+                    lighthouse lights up the night sky and guides the way.
+                </p>
+                <nav class="home-appliances-manufacturing-factory__photos-navi">
+                    <ul class="home-appliances-manufacturing-factory__photos-navi__list">
+                        <li class="home-appliances-manufacturing-factory__photos-navi__list__item">
+                            <a href="" class="home-appliances-manufacturing-factory__photos-navi__list__item__a home-appliances-manufacturing-factory__photos-navi__list__item__a--active">Tennessee</a>
+                        </li>
+                        <li class="home-appliances-manufacturing-factory__photos-navi__list__item">
+                            <a href="" class="home-appliances-manufacturing-factory__photos-navi__list__item__a">Changwon</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="home-appliances-manufacturing-factory__photos-cont home-appliances-manufacturing-factory__photos-cont--tennessee home-appliances-manufacturing-factory__photos-cont--active">
+                    <figure class="home-appliances-manufacturing-factory__photos-cont--figure">
+                        <img src="" alt="" class="home-appliances-manufacturing-factory__photos-cont--figure--img">
+                        <figcaption class="home-appliances-manufacturing-factory__photos-cont--figure--figcaption">LG Tennessee factory (Tennessee, USA)</figcaption>
+                    </figure>
+                    <button type="button" class="home-appliances-manufacturing-factory__photos-cont__discover-more">Discover more</button>
+                </div>
+                <div class="home-appliances-manufacturing-factory__photos-cont home-appliances-manufacturing-factory__photos-cont--tennessee home-appliances-manufacturing-factory__photos-cont--active">
+                    <figure class="home-appliances-manufacturing-factory__photos-cont--figure">
+                        <img src="" alt="" class="home-appliances-manufacturing-factory__photos-cont--figure--img">
+                        <figcaption class="home-appliances-manufacturing-factory__photos-cont--figure--figcaption">LG Smart Park (Changwon, Korea)</figcaption>
+                    </figure>
+                    <button type="button" class="home-appliances-manufacturing-factory__photos-cont__discover-more">Discover more</button>
+                </div>
+            </div>
+            <div class="b2b-activity">
+                <h3 class="b2b-activity__tit">B2B activity</h3>
+                <div class="b2b-activity__cont">
+                    <p class="b2b-activity__cont__txt">
+                        Collective action. Greater impact. <br />
+                        ‘Net Zero House’
+                    </p>
+                    <p class="b2b-activity__cont__txt">
+                        Net Zero House, created by LG, is a space that promotes a sustainable future for our planet. It shows <br />
+                        customers how their everyday appliance usage can have a positive impact on the environment.
+                    </p>
+                </div>
+                <button type="button" class="home-appliances-manufacturing-factory__photos-cont__discover-more">Discover net zero house</button>
+            </div>
+            <div class="summary">
+                <div class="summary__visual"></div>
+                <div class="summary__cont">
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        The climate crisis is a serious challenge that <br />
+                        requires all of us to work together. We're <br />
+                        always striving to find solutions, and you're <br />
+                        welcome to join us. Together, we can build a <br />
+                        brighter future!
+                    </p>
+                    <p class="summary__cont__txt">
+                        Collective action. <br />
+                        Greater impact.
+                    </p>
+                </div>
+            </div>
+            <div class="whats-next">
+                <h3 class="whats-next__tit">
+                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                    Explore Sustainability
+                </h3>
+                <div class="swiper whats-next__menu">
+                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide whats-next__menu__slide">
+                            <a href="#" class="whats-next__menu__slide__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                                </div>
+                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="whats-next__menu__btn-set">
+                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                    </div>
+                    <div class="swiper-pagination whats-next__menu__pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var climateAction = climateAction || {};
+                
+            climateAction = {
+                summary: function() {
+                    let summary = document.querySelector(".summary");
+                    let msOfsTop = summary.offsetTop;
+                    let summaryVisual = summary.querySelector(".summary__visual");
+                    let msvOfsTop = summaryVisual.offsetTop;
+                    let summaryCont = summary.querySelector(".summary__cont");
+                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+    
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+    
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".summary",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryVisual.classList.add("summary__visual--bottom-end")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+    
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("summary__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("summary__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+    
+                    }
+                },
+                whatsNext: function() {
+                    var swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: "auto",
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+                }
+            }
+            climateAction.summary();
+            climateAction.whatsNext();
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>
