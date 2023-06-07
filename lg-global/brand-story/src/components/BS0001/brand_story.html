@@ -64,9 +64,9 @@
 
             
             /* brand story - 공통 */
-            .brand-container a {text-decoration: none;}
+            #brand-container a {text-decoration: none;}
             
-            .brand-container {
+            #brand-container {
                 background-color: var(--parallex-bg-color);
                 transition: .5s;
             }
@@ -598,7 +598,7 @@
                 object-fit: cover;
             }
             .parallax-pin__image--identity:nth-child(6) {
-                top: 18.75%;
+                top: 17.55%;
                 left: 57.71%;
                 width: 48.2292vw;
                 height: 30.0938vw;
@@ -624,7 +624,7 @@
                 z-index: -1;
             }
             .parallax-pin__image--identity:nth-child(9) {
-                top: 21.29%;
+                top: 22.36%;
                 left: 62.5%;
                 width: 44.8438vw;
                 height: 26.3021vw;
@@ -1153,6 +1153,9 @@
                 }
 
                 /*parallax image default*/
+                .parallex__title.parallex__title__swip br {
+                    display: none;
+                }
                 .parallax-pin__image {
                     border-radius: 10px;
                 }
@@ -1252,7 +1255,7 @@
 
         </style>
         <!-- html code -->
-        <div class="brand-container" data-color-mode="prevent">
+        <div id="brand-container" data-color-mode="prevent">
             <div class="brand-film">
                 <video class="brand-film__video" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="../../mocks/BS0001/20230322_LG_BrandfilmMaster_48_IntroClean.mp4" type="video/mp4">
@@ -1444,7 +1447,7 @@
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.56"></li>
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.5"></li>
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.29"></li>
-                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.35"></li>
+                            <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.34"></li>
                         </ul>
                     </div>
                 </div>
