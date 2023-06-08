@@ -280,9 +280,9 @@
                         isVideoPause = false
                         videoPlayBtn.classList.remove('btn-play--active')
                         video.play()
-                        
                         bullet.classList.remove('brand-in-action__pagination__btn--paused')
                     }
+
                 }
 
                 const swiper = new Swiper(slide, {
@@ -304,6 +304,7 @@
                     on: {
                         activeIndexChange: (swiper) => {
                             swiper.realIndex === 0 ? videoPlaySet(false) : videoPlaySet(true)
+                            swiper.realIndex === 0 ? '' : video.currentTime = 0
                             
                             setClass(bullets[swiper.realIndex], 'brand-in-action__pagination__btn--active')
                         },
