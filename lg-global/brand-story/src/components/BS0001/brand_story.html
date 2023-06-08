@@ -1101,12 +1101,12 @@
                 .lifeisgood__text--left .lifeisgood__text {
                     bottom: 3px;
                     background-position: center;
-                    background-size: 38vw auto;
+                    background-size: auto 100%;
                 }
                 .lifeisgood__text--right .lifeisgood__text {
                     top: 3px;
                     background-position: center;
-                    background-size: 49vw auto;
+                    background-size: auto 100%;
                 }
                 .lifeisgood__texts--active.lifeisgood__text--left .lifeisgood__text {
                     margin: 0;
@@ -1134,6 +1134,7 @@
                 /* brand story - our values */
                 .card-list {
                     flex-direction: column;
+                    gap: 20px;
                 }
                 .card-list__info {
                     height: auto;
@@ -1154,6 +1155,7 @@
                 .card-list__item {
                     border-radius: 10px;
                     height: 119.2vw;
+                    max-height: unset;
                 }
 
                 /*parallax image default*/
@@ -1176,7 +1178,7 @@
                 .parallax-pin__image--design:nth-child(6) {display: none;}
                 
                 /*parallax-visual__pin--identity*/
-                .parallex-visual__item--prx {height: 1000vh;}
+                .parallex-visual__item--prx {height: 850vh;}
 
                 .parallax-pin__image--identity:nth-child(1),
                 .parallax-pin__image--identity:nth-child(2),
@@ -1213,7 +1215,7 @@
                     height: 69.07vw;
                 }
                 .parallax-pin__image--identity:nth-child(10) {
-                    top: 24.3%;
+                    top: 30.3%;
                     left: 5.33%; 
                     width: 89.07vw; 
                     height: 64vw;
