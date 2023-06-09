@@ -1431,7 +1431,7 @@
                     </li>
                     <li class="brand-brief__inner">
                         <!-- <img class="brand-brief__item--bg brand-brief__item--bg--prevent" src="../../mocks/BS0001/brand-story-adapting-colour-white-05-d.png"> -->
-                        <video class="brand-brief__item--bg brand-brief__item--bg--prevent" muted="muted" loop="loop">
+                        <video class="brand-brief__item--bg brand-brief__item--bg--prevent" muted="muted" loop="loop" autoplay>
                             <source src="../../mocks/BS0001/brand-story-adapting-colour-white-05-d.mp4" type="video/mp4">
                         </video>
                         <img class="brand-brief__item--bg brand-brief__item--bg--black" src="../../mocks/BS0001/brand-story-adapting-colour-black-05-d.png">
@@ -1454,7 +1454,7 @@
                         <img class="brand-brief__item--bg brand-brief__item--bg--red" src="../../mocks/BS0001/brand-story-adapting-colour-red-08-d.png">
                     </li>
                     <li class="brand-brief__inner">
-                        <video class="brand-brief__item--bg brand-brief__item--bg--prevent" muted="muted" loop="loop">
+                        <video class="brand-brief__item--bg brand-brief__item--bg--prevent" muted="muted" loop="loop" autoplay>
                             <source src="../../mocks/BS0001/brand-story-adapting-colour-white-09-d.mp4" type="video/mp4">
                         </video>
                         <video class="brand-brief__item--bg brand-brief__item--bg--black" muted="muted" loop="loop">
@@ -1906,7 +1906,7 @@
 
                         if (briefIsActive) {
                             setBriefColors(val)
-                            // setBriefVideos(val)
+                            setBriefVideos(val)
                         }
                         lastColorValue = val
                     }
@@ -1923,13 +1923,16 @@
                 }
 
                 function setBriefVideos(val) {
-                    // let targetVideo = briefSection.querySelector(`video.brand-brief__item--bg--${val}`)
-                    // let sibs = siblings(targetVideo)
+                    let pauseVideo = briefSection.querySelectorAll(`video`)
+                    let targetVideo = briefSection.querySelectorAll(`video.brand-brief__item--bg--${val}`)
 
-                    // targetVideo.play()
-                    // for (let i = 0; i < sibs.length; i++) {
-                    //     sibs[i].pause()
-                    // }
+                    for (let i = 0; i < pauseVideo.length; i++) {
+                        pauseVideo[i].pause()
+                    }
+
+                    for (let i = 0; i < targetVideo.length; i++) {
+                        targetVideo[i].play()
+                    }
                 }
             }
             function parallaxImageMotion(targetWrap, percent) {
