@@ -871,9 +871,10 @@
 
             .marquee__inner--bottom li > .marquee__part__item:nth-child(1) {background-image: url(../../mocks/BS0001/brand-story-identity-15-d.png); width: 42.71vw;}
             .marquee__inner--bottom li > .marquee__part__item:nth-child(2) {background-image: url(../../mocks/BS0001/brand-story-identity-16-d.png); width: 21.80vw;}
-            .marquee__inner--bottom li > .marquee__part__item:nth-child(3) {background-image: url(../../mocks/BS0001/brand-story-identity-17-d.png); width: 20.27vw;;}
+            .marquee__inner--bottom li > .marquee__part__item:nth-child(3) {width: 20.27vw; height: 28.23vw; border-radius: 9.9vw; overflow: hidden; }
             .marquee__inner--bottom li > .marquee__part__item:nth-child(4) {background-image: url(../../mocks/BS0001/brand-story-identity-18-d.png); width: 33.04vw;}
 
+            .marquee__part__item video {width: 100%; height: 100%; object-fit: cover;}
 
             /*Discover our brand*/
             .discover-brand__section {
@@ -1429,7 +1430,10 @@
                         <img class="brand-brief__item--bg brand-brief__item--bg--red" src="../../mocks/BS0001/brand-story-adapting-colour-red-04-d.png">
                     </li>
                     <li class="brand-brief__inner">
-                        <img class="brand-brief__item--bg brand-brief__item--bg--prevent" src="../../mocks/BS0001/brand-story-adapting-colour-white-05-d.png">
+                        <!-- <img class="brand-brief__item--bg brand-brief__item--bg--prevent" src="../../mocks/BS0001/brand-story-adapting-colour-white-05-d.png"> -->
+                        <video class="brand-brief__item--bg brand-brief__item--bg--prevent" muted="muted" loop="loop">
+                            <source src="../../mocks/BS0001/brand-story-adapting-colour-white-05-d.mp4" type="video/mp4">
+                        </video>
                         <img class="brand-brief__item--bg brand-brief__item--bg--black" src="../../mocks/BS0001/brand-story-adapting-colour-black-05-d.png">
                         <img class="brand-brief__item--bg brand-brief__item--bg--red" src="../../mocks/BS0001/brand-story-adapting-colour-red-05-d.png">
                     </li>
@@ -1462,7 +1466,10 @@
                     </li>
                     <li class="brand-brief__inner">
                         <img class="brand-brief__item--bg brand-brief__item--bg--prevent" src="../../mocks/BS0001/brand-story-adapting-colour-white-10-d.png">
-                        <img class="brand-brief__item--bg brand-brief__item--bg--black" src="../../mocks/BS0001/brand-story-adapting-colour-black-10-d.png">
+                        <!-- <img class="brand-brief__item--bg brand-brief__item--bg--black" src="../../mocks/BS0001/brand-story-adapting-colour-black-10-d.png"> -->
+                        <video class="brand-brief__item--bg brand-brief__item--bg--black" muted="muted" loop="loop">
+                            <source src="../../mocks/BS0001/brand-story-adapting-colour-black-10-d.mp4" type="video/mp4">
+                        </video>
                         <img class="brand-brief__item--bg brand-brief__item--bg--red" src="../../mocks/BS0001/brand-story-adapting-colour-red-10-d.png">
                     </li>
                 </ul>
@@ -1521,19 +1528,31 @@
                         <li class="marquee__part">
                             <span class="marquee__part__item"></span>
                             <span class="marquee__part__item"></span>
-                            <span class="marquee__part__item marquee__part__item--right"></span>
-                            <span class="marquee__part__item marquee__part__item--right"></span>
-                        </li>
-                        <li class="marquee__part">
-                            <span class="marquee__part__item"></span>
-                            <span class="marquee__part__item"></span>
-                            <span class="marquee__part__item marquee__part__item--right"></span>
+                            <span class="marquee__part__item marquee__part__item--right">
+                                <video muted="muted" loop="loop" autoplay>
+                                    <source src="../../mocks/BS0001/brand-story-identity-17-d.mp4" type="video/mp4">
+                                </video>
+                            </span>
                             <span class="marquee__part__item marquee__part__item--right"></span>
                         </li>
                         <li class="marquee__part">
                             <span class="marquee__part__item"></span>
                             <span class="marquee__part__item"></span>
+                            <span class="marquee__part__item marquee__part__item--right">
+                                <video muted="muted" loop="loop" autoplay>
+                                    <source src="../../mocks/BS0001/brand-story-identity-17-d.mp4" type="video/mp4">
+                                </video>
+                            </span>
                             <span class="marquee__part__item marquee__part__item--right"></span>
+                        </li>
+                        <li class="marquee__part">
+                            <span class="marquee__part__item"></span>
+                            <span class="marquee__part__item"></span>
+                            <span class="marquee__part__item marquee__part__item--right">
+                                <video muted="muted" loop="loop" autoplay>
+                                    <source src="../../mocks/BS0001/brand-story-identity-17-d.mp4" type="video/mp4">
+                                </video>
+                            </span>
                             <span class="marquee__part__item marquee__part__item--right"></span>
                         </li>
                     </ul>
@@ -1887,7 +1906,7 @@
 
                         if (briefIsActive) {
                             setBriefColors(val)
-                            setBriefVideos(val)
+                            // setBriefVideos(val)
                         }
                         lastColorValue = val
                     }
@@ -1904,13 +1923,13 @@
                 }
 
                 function setBriefVideos(val) {
-                    let targetVideo = briefSection.querySelector(`video.brand-brief__item--bg--${val}`)
-                    let sibs = siblings(targetVideo)
+                    // let targetVideo = briefSection.querySelector(`video.brand-brief__item--bg--${val}`)
+                    // let sibs = siblings(targetVideo)
 
-                    targetVideo.play()
-                    for (let i = 0; i < sibs.length; i++) {
-                        sibs[i].pause()
-                    }
+                    // targetVideo.play()
+                    // for (let i = 0; i < sibs.length; i++) {
+                    //     sibs[i].pause()
+                    // }
                 }
             }
             function parallaxImageMotion(targetWrap, percent) {
