@@ -479,6 +479,10 @@
                 margin-bottom: 12.83vw;
             }
 
+            .parallex__section--identity .parallex__section__title-wrap--sticky .parallex__title {
+                transition: .5s ease;
+                opacity: 0;
+            }
 
             .parallax-visual__pin {
                 position: absolute;
@@ -1945,6 +1949,7 @@
                 const targetParent = targetWrap.parentElement
 
                 let totalScroll = targetWrap.getBoundingClientRect().height
+                let tarText = ''
 
                 gsap.to(targetItems, {
                     y: (i, target) => -totalScroll * target.dataset.speed,
@@ -1956,10 +1961,17 @@
                         pin: true,
                         scrub: 0.2,
                         onUpdate: self => {
+                            let secTarget = targetParent.classList.contains('parallax-visual__pin--identity')
+                            if (secTarget) tarText = targetParent.parentElement.querySelector('h3')
+
                             if (self.progress > 0.1 && self.progress < 0.85) {
                                 targetParent.style.opacity = 1
+
+                                if (secTarget) tarText.style.opacity = 1
+
                             } else {
                                 targetParent.style.opacity = 0
+                                if (secTarget) tarText.style.opacity = 0
                             }
                         }
                     },
