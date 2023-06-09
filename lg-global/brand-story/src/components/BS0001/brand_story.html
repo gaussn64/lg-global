@@ -496,6 +496,7 @@
             .parallax-visual__pin--identity {
                 height: 100%;
                 overflow: hidden;
+                opacity: 0;
             } 
             .parallax-pin__images {
                 position: absolute;
@@ -1218,6 +1219,9 @@
                 
                 /*parallax-visual__pin--identity*/
                 .parallex-visual__item--prx {height: 850vh;}
+                .parallex__section--identity .parallex__section__title-wrap--sticky .parallex__title {
+                    opacity: 1;
+                }
 
                 .parallax-pin__image--identity:nth-child(1),
                 .parallax-pin__image--identity:nth-child(2),
@@ -1950,6 +1954,7 @@
 
                 let totalScroll = targetWrap.getBoundingClientRect().height
                 let tarText = ''
+                let pcDevice = window.innerWidth >= 769
 
                 gsap.to(targetItems, {
                     y: (i, target) => -totalScroll * target.dataset.speed,
@@ -1971,7 +1976,7 @@
 
                             } else {
                                 targetParent.style.opacity = 0
-                                if (secTarget) tarText.style.opacity = 0
+                                if (secTarget && pcDevice) tarText.style.opacity = 0
                             }
                         }
                     },
