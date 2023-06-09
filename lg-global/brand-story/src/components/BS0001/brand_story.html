@@ -242,6 +242,7 @@
             }
             .lifeisgood__letter.lifeisgood__letter--good {
                 right: 0;
+                z-index: 1;
             }
             .lifeisgood__text {
                 display: block;
@@ -257,7 +258,6 @@
                 margin-right: 1.93vw;
                 background-image: url(../../mocks/BS0001/life_is_good_text_left.svg);
                 background-position: center right;
-            
             }
             .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
                 margin-left: 1.93vw;
@@ -289,58 +289,62 @@
                 height: 150vh;
             }
 
-            .life-image__wrap.life-image__wrap--active .life-image__item::before,
-            .life-image__wrap.life-image__wrap--active .life-image__item::after {
+            .life-item__fix {
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100vh;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+            .life-image__wrap.life-image__wrap--active .life-item__fix {
                 position: fixed;
             }
-            .life-image__wrap.life-image__wrap--end .life-image__item::before,
-            .life-image__wrap.life-image__wrap--end .life-image__item::after {
+            .life-image__wrap.life-image__wrap--end .life-item__fix {
                 position: absolute;
                 bottom: 0;
                 top: unset;
             }
-
-            .life-image__item::before,
-            .life-image__item::after {
+            .life-image__item--active .life-item__fix::before {
+                opacity: 1;
+            }
+            .life-item__fix::before {
                 content: '';
-                display: block;
                 border-radius: 30px;
                 width: calc(100% - 4.17vw);
                 height: calc(100vh - 4.17vw);
                 position: absolute;
                 left: 50%;
-                top: 0;
-                margin: 2.085vw 0;
-                transform: translateX(-50%);
+                top: 50%;
+                transform: translate(-50%, -50%);
                 background: no-repeat center;
                 background-size: cover;
                 transition: .5s;
                 opacity: 0;
             }
-            .life-image__item::after {
+
+            .life-item__fix--avatar {
                 z-index: 2;
             }
-            .life-image__item--neon::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png);}
-            .life-image__item--boy::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png);}
-            .life-image__item--life::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png);}
-            .life-image__item--fingerheart::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png);}
-            .life-image__item--dance::before {background-color: #262626;}
+
+            .life-image__item--neon .life-item__fix--bg::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png);}
+            .life-image__item--boy .life-item__fix--bg::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png);}
+            .life-image__item--life .life-item__fix--bg::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png);}
+            .life-image__item--fingerheart .life-item__fix--bg::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png);}
+            .life-image__item--dance .life-item__fix--bg::before {background-color: #262626;}
     
-            .life-image__item--neon::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png);}
-            .life-image__item--boy::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png);}
-            .life-image__item--life::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png);}
-            .life-image__item--fingerheart::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png);}
-            .life-image__item--dance::after {
+            .life-image__item--neon .life-item__fix--avatar::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png);}
+            .life-image__item--boy .life-item__fix--avatar::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png);}
+            .life-image__item--life .life-item__fix--avatar::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png);}
+            .life-image__item--fingerheart .life-item__fix--avatar::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png);}
+            .life-image__item--dance .life-item__fix--avatar::before {
                 background-size: 65vw;
                 background-position: center 5%;
                 background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
                 z-index: 5;
             }
             
-            .life-image__item.life-image__item--active::before,
-            .life-image__item.life-image__item--active::after {
-                opacity: 1;
-            }
 
             
 
@@ -1125,11 +1129,13 @@
                 }
                 .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
                     margin-right: unset;
+                    background-size: auto 100%;
                     background-position: center;
                     bottom: 0;
                 }
                 .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
                     margin-left: unset;
+                    background-size: auto 100%;
                     background-position: center;
                     top: 0;
                 }
@@ -1150,33 +1156,14 @@
                     height: 150vh;
                 }
 
-                .life-image__item::before,
-                .life-image__item::after {
+                .life-item__fix::before {
                     border-radius: 6px;
                     width: calc(100% - 20px);
-                    height: calc(95.73vw - 20px);
-                    left: 50%;
-                    top: 50%;
-                    margin: unset;
-                    transform: translate(-50%, -50%);
+                    height: calc(100vw - 20px);
                 }
-                .life-image__item::after {
-                    z-index: 2;
-                }
-                .life-image__item--neon::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png);}
-                .life-image__item--boy::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png);}
-                .life-image__item--life::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png);}
-                .life-image__item--fingerheart::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png);}
-                .life-image__item--dance::after {
-                    background-size: 65vw;
-                    background-position: center 5%;
-                    background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
-                    z-index: 5;
-                }
-                
-                .life-image__item.life-image__item--active::before,
-                .life-image__item.life-image__item--active::after {
-                    opacity: 1;
+
+                .life-image__item--dance .life-item__fix--avatar::before {
+                    background-size: 150%;
                 }
 
                 /* brand story - our values */
@@ -1340,12 +1327,30 @@
                 <div class="lifeisgood__letter lifeisgood__letter--lifeis"><span class="lifeisgood__text"></span></div>
                 <div class="lifeisgood__letter lifeisgood__letter--good"><span class="lifeisgood__text"></span></div>
                 <ul class="life-image__wrap">
-                    <li class="life-image__item life-image__item--text"></li>
-                    <li class="life-image__item life-image__item--neon"></li>
-                    <li class="life-image__item life-image__item--boy"></li>
-                    <li class="life-image__item life-image__item--life"></li>
-                    <li class="life-image__item life-image__item--fingerheart"></li>
-                    <li class="life-image__item life-image__item--dance"></li>
+                    <li class="life-image__item life-image__item--text">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
+                    <li class="life-image__item life-image__item--neon">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
+                    <li class="life-image__item life-image__item--boy">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
+                    <li class="life-image__item life-image__item--life">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
+                    <li class="life-image__item life-image__item--fingerheart">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
+                    <li class="life-image__item life-image__item--dance">
+                        <span class="life-item__fix life-item__fix--bg"></span>
+                        <span class="life-item__fix life-item__fix--avatar"></span>
+                    </li>
                 </ul>
             </div>
             <div class="ascend-text__section">
