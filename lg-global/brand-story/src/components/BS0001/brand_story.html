@@ -225,101 +225,125 @@
             /* brand story - life's good */
             .lifeisgood {
                 position: relative;
-                margin-top: 4.17vw;
-                padding-top: 100vh;
             }
-            .lifeisgood__texts {
-                display: flex;
-                align-items: center;
+            .lifeisgood__letter {
                 position: absolute;
                 top: 0;
-                z-index: 4;
+                display: flex;
+                align-items: center;
                 height: 100vh;
                 width: 50%;
-                overflow: hidden;
+                z-index: 1;
             }
-
-            .lifeisgood__text--left {
+            .lifeisgood__letter.lifeisgood__letter--lifeis {
+                left: 0;
                 justify-content: flex-end;
+                z-index: 3;
             }
-            .lifeisgood__text--right {
-                justify-content: flex-start;
+            .lifeisgood__letter.lifeisgood__letter--good {
                 right: 0;
-                z-index: 2;
             }
             .lifeisgood__text {
                 display: block;
-                transition: .5s ease;
+                background: no-repeat center;
+                background-size: contain;
                 max-height: 11.67vw;
                 height: 9.67vw;
                 width: 100%;
-                background-repeat: no-repeat;
-                background-size: contain;
+                transition: .5s;
             }
-            .lifeisgood__text--left .lifeisgood__text {
+
+            .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
+                margin-right: 1.93vw;
                 background-image: url(../../mocks/BS0001/life_is_good_text_left.svg);
                 background-position: center right;
-                margin-right: 1.93vw;
+            
             }
-            .lifeisgood__text--right .lifeisgood__text {
-                background-image: url(../../mocks/BS0001/life_is_good_text_right.svg);
+            .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
                 margin-left: 1.93vw;
+                background-image: url(../../mocks/BS0001/life_is_good_text_right.svg);
+                background-position: center left;
             }
-            .lifeisgood__texts--active.lifeisgood__text--left .lifeisgood__text {
+            
+            .lifeisgood__letter--active.lifeisgood__letter--lifeis .lifeisgood__text {
                 margin-right: 9.625vw;
                 background-image: url(../../mocks/BS0001/life_is_good_text_left_wt.svg);
             }
-            .lifeisgood__texts--active.lifeisgood__text--right .lifeisgood__text {
-                background-image: url(../../mocks/BS0001/life_is_good_text_right_wt.svg);
+            .lifeisgood__letter--active.lifeisgood__letter--good .lifeisgood__text {
                 margin-left: 9.625vw;
-            }
-            .life-bg__items {
-                list-style: none;
-                padding: 0;
-            }
-            .life-bg__items--avatar {
-                position: absolute;
-                top: 100vh;
-                width: 100%;
-            }
-            .life-bg__items--avatar .life-bg__item--neon {z-index: 3;}
-            .life-bg__items--avatar .life-bg__item--life {z-index: 3;}
-            .life-bg__items--avatar .life-bg__item--fingerheart {z-index: 3;}
-            .life-bg__items--avatar .life-bg__item--dance {z-index: 5;}
-            .life-bg__item {
-                position: relative;
-                height: 100vh;
-                z-index: 1;
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-            }
-            .life-bg__item__image {
-                position: fixed;
-                object-fit: cover;
-                width: calc(100% - 4.17vw);
-                height: calc(100% - 4.17vw);
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: 30px;
-                z-index: -1;
-            }
-            .life-bg__item--avatar {
-                background-color: unset;
-            }
-            .life-bg__item--dance .life-bg__item--avatar  { /*이미지 교체 예정 (교체시 css 수정필요)*/
-                background: no-repeat;
-                background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
-                background-position: center top 2.08vw;
-                background-size: auto 125%;
-            }
-            .life-bg__item--last {
-                background-color: #222;
-            }
-            .lifeisgood--pause .life-bg__item--last {
-                position: absolute;
-                
+                background-image: url(../../mocks/BS0001/life_is_good_text_right_wt.svg);
             }
             
+
+            .life-image__wrap {
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
+            .life-image__item {
+                top: 0;
+                width: 100%;
+                height: 100vh;
+            }
+            .life-image__item--dance {
+                height: 150vh;
+            }
+
+            .life-image__wrap.life-image__wrap--active .life-image__item::before,
+            .life-image__wrap.life-image__wrap--active .life-image__item::after {
+                position: fixed;
+            }
+            .life-image__wrap.life-image__wrap--end .life-image__item::before,
+            .life-image__wrap.life-image__wrap--end .life-image__item::after {
+                position: absolute;
+                bottom: 0;
+                top: unset;
+            }
+
+            .life-image__item::before,
+            .life-image__item::after {
+                content: '';
+                display: block;
+                border-radius: 30px;
+                width: calc(100% - 4.17vw);
+                height: calc(100vh - 4.17vw);
+                position: absolute;
+                left: 50%;
+                top: 0;
+                margin: 2.085vw 0;
+                transform: translateX(-50%);
+                background: no-repeat center;
+                background-size: cover;
+                transition: .5s;
+                opacity: 0;
+            }
+            .life-image__item::after {
+                z-index: 2;
+            }
+            .life-image__item--neon::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png);}
+            .life-image__item--boy::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png);}
+            .life-image__item--life::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png);}
+            .life-image__item--fingerheart::before {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png);}
+            .life-image__item--dance::before {background-color: #262626;}
+    
+            .life-image__item--neon::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png);}
+            .life-image__item--boy::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png);}
+            .life-image__item--life::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png);}
+            .life-image__item--fingerheart::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png);}
+            .life-image__item--dance::after {
+                background-size: 65vw;
+                background-position: center 5%;
+                background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
+                z-index: 5;
+            }
+            
+            .life-image__item.life-image__item--active::before,
+            .life-image__item.life-image__item--active::after {
+                opacity: 1;
+            }
+
+            
+
             /* brand story - our values */
             .card-list {
                 display: flex;
@@ -1080,55 +1104,78 @@
                 }
 
                 /* brand story - life's good */
-                .lifeisgood__texts {
-                    width: 100%;
+                .lifeisgood__letter {
                     height: 50vh;
+                    width: 100%;
                 }
-                .lifeisgood__text--left {
-                    z-index: 2;
+                .lifeisgood__letter.lifeisgood__letter--lifeis {
+                    z-index: 1;
                 }
-                .lifeisgood__text--right {
-                    z-index: 4;
+                .lifeisgood__letter.lifeisgood__letter--good {
                     top: 50vh;
+                    z-index: 3;
                 }
-                .lifeisgood__texts .lifeisgood__text {
-                    margin: 0;
-                    height: 15vw;
+                .lifeisgood__text {
                     position: absolute;
                     left: 50%;
-                    transform: translate(-50%, 0);
+                    transform: translateX(-50%);
+                    height: 15vw;
+                    max-height: unset;
                 }
-                .lifeisgood__text--left .lifeisgood__text {
-                    bottom: 3px;
+                .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
+                    margin-right: unset;
                     background-position: center;
-                    background-size: auto 100%;
+                    bottom: 0;
                 }
-                .lifeisgood__text--right .lifeisgood__text {
-                    top: 3px;
+                .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
+                    margin-left: unset;
                     background-position: center;
-                    background-size: auto 100%;
+                    top: 0;
                 }
-                .lifeisgood__texts--active.lifeisgood__text--left .lifeisgood__text {
-                    margin: 0;
-                    bottom: 30vw;
+                
+                .lifeisgood__letter--active.lifeisgood__letter--lifeis .lifeisgood__text {
+                    margin-right: unset;
+                    bottom: 24.14vw;
                 }
-                .lifeisgood__texts--active.lifeisgood__text--right .lifeisgood__text {
-                    margin: 0;
-                    top: 30vw;
+                .lifeisgood__letter--active.lifeisgood__letter--good .lifeisgood__text {
+                    margin-right: unset;
+                    top: 24.14vw;
                 }
-                .life-bg__item {
-                    /* height: 100vw; */
+                
+                .life-image__item {
+                    height: 100vh;
                 }
-                .life-bg__item__image {
-                    width: calc(100% - 20px);
-                    height: calc(100vw - 20px);
-                    border-radius: 10px;
+                .life-image__item--dance {
+                    height: 150vh;
+                }
 
+                .life-image__item::before,
+                .life-image__item::after {
+                    border-radius: 6px;
+                    width: calc(100% - 20px);
+                    height: calc(95.73vw - 20px);
+                    left: 50%;
+                    top: 50%;
+                    margin: unset;
+                    transform: translate(-50%, -50%);
                 }
-                .life-bg__items--avatar .life-bg__item--boy {z-index: 3;}
-                .life-bg__items--avatar .life-bg__item--dance {z-index: 3;}
-                .life-bg__item--dance .life-bg__item--avatar {
-                    background-size: 120%;
+                .life-image__item::after {
+                    z-index: 2;
+                }
+                .life-image__item--neon::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png);}
+                .life-image__item--boy::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png);}
+                .life-image__item--life::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png);}
+                .life-image__item--fingerheart::after {background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png);}
+                .life-image__item--dance::after {
+                    background-size: 65vw;
+                    background-position: center 5%;
+                    background-image: url(../../mocks/BS0001/brand-story-brand-slogan-life-is-good-05-d.gif);
+                    z-index: 5;
+                }
+                
+                .life-image__item.life-image__item--active::before,
+                .life-image__item.life-image__item--active::after {
+                    opacity: 1;
                 }
 
                 /* brand story - our values */
@@ -1289,25 +1336,15 @@
                 </div>
             </div>
             <div class="lifeisgood">
-                <div class="lifeisgood__texts lifeisgood__text--left">
-                    <span class="lifeisgood__text">
-                </div>
-                <div class="lifeisgood__texts lifeisgood__text--right">
-                    <span class="lifeisgood__text">
-                </div>
-                <ul class="life-bg__items">
-                    <li class="life-bg__item life-bg__item--neon"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--boy"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--life"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--fingerheart"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--dance"><div class="life-bg__item__image life-bg__item--last"></div></li>
-                </ul>
-                <ul class="life-bg__items life-bg__items--avatar">
-                    <li class="life-bg__item life-bg__item--neon"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-01-1-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--boy"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-02-1-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--life"><img class="life-bg__item__image life-bg__item--avatar" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-03-1-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--fingerheart"><img class="life-bg__item__image" src="../../mocks/BS0001/brand-story-brand-slogan-life-is-good-04-1-d.png" alt=""></li>
-                    <li class="life-bg__item life-bg__item--dance"><div class="life-bg__item__image life-bg__item--avatar life-bg__item--last"></div></li>
+                <div class="lifeisgood__letter lifeisgood__letter--lifeis"><span class="lifeisgood__text"></span></div>
+                <div class="lifeisgood__letter lifeisgood__letter--good"><span class="lifeisgood__text"></span></div>
+                <ul class="life-image__wrap">
+                    <li class="life-image__item life-image__item--text"></li>
+                    <li class="life-image__item life-image__item--neon"></li>
+                    <li class="life-image__item life-image__item--boy"></li>
+                    <li class="life-image__item life-image__item--life"></li>
+                    <li class="life-image__item life-image__item--fingerheart"></li>
+                    <li class="life-image__item life-image__item--dance"></li>
                 </ul>
             </div>
             <div class="ascend-text__section">
@@ -1523,6 +1560,16 @@
         <script>
             gsap.registerPlugin(ScrollTrigger);
             const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
+            // const getRemainingElements = (array, element) => {return array.filter(item => item !== element)}
+            const setClass = (el, className) => {
+                const sibs = siblings(el)
+
+                for (let i = 0; i < sibs.length; i++) {
+                    sibs[i].classList.remove(className)
+                }
+
+                el.classList.add(className)
+            }
 
             function brandMission() {
                 const area = document.querySelector('.brand-mission')
@@ -1566,26 +1613,64 @@
             }
 
             function lifeIsGood() {
-
                 const section = document.querySelector('.lifeisgood')
-                const textItems = section.querySelectorAll('.lifeisgood .lifeisgood__texts')
-                const lastItems = section.querySelectorAll('.life-bg__item.life-bg__item--dance')
+                const titles = gsap.utils.toArray('.lifeisgood__letter')
 
-                textItems.forEach(el => {
-                    gsap.to(el, {
+                const backImageWrap = section.querySelector('.life-image__wrap')
+                const backImages = backImageWrap.querySelectorAll('.life-image__item')
+
+                backImages.forEach((item, idx) => {
+                    const tl = gsap.timeline({
                         scrollTrigger: {
+                            trigger: item,
                             start: 'top top',
                             end: 'bottom bottom',
-                            trigger: section,
-                            pin: el,
-                            scrub: 0.2,
                             onUpdate: (self) => {
-                                self.progress === 1 ? section.classList.add('lifeisgood--pause') : section.classList.remove('lifeisgood--pause')
-                                self.progress >= 0.1 ? el.classList.add('lifeisgood__texts--active') : el.classList.remove('lifeisgood__texts--active')
-                            }
+                                idx >= 1 ? setTextClass(true) : setTextClass(false)
+                                setClass(backImages[idx], 'life-image__item--active')
+                            },
+                        },
+                    })
+                })
+
+                function setTextClass(isActive) {
+                    if (isActive) {
+                        for (let i = 0; i < titles.length; i++) {
+                            titles[i].classList.add('lifeisgood__letter--active')
+                        }
+                    } else {
+                        for (let i = 0; i < titles.length; i++) {
+                            titles[i].classList.remove('lifeisgood__letter--active')
+                        }
+                    }
+                }
+
+                titles.forEach(text => {
+                    gsap.to(text, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            pin: text,
+                            scrub: 0.2,
+                            onEnter: () => {
+                                backImageWrap.classList.add('life-image__wrap--active')
+                            },
+                            onEnterBack: () => {
+                                backImageWrap.classList.remove('life-image__wrap--end')
+                                backImageWrap.classList.add('life-image__wrap--active')
+                            },
+                            onLeave: () => {
+                                backImageWrap.classList.add('life-image__wrap--end')
+                                backImageWrap.classList.remove('life-image__wrap--active')
+                            },
+                            onLeaveBack: () => {
+                                backImageWrap.classList.remove('life-image__wrap--active')
+                            },
                         }
                     })
                 })
+
             }
             function logoFixed() {
                 const logoWrap = document.querySelector('.brand-symbol')
