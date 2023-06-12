@@ -56,6 +56,12 @@
                 --parallex-text-primary: #fff;
                 --parallex-bg-color: #FD312E;
             }
+            
+            @keyframes fadeInUp {
+                0%{transform:translate(0px, 100px); opacity: 0;}
+                100%{transform:translate(0px, 0); opacity: 1;}
+            }
+            .fadeInUp {animation:fadeInUp 1s ease backwards;}
 
             /* 임시 */
             #container-cd622da11f {
@@ -78,9 +84,6 @@
                 padding: 0 20px;
                 color: var(--parallex-text-primary);
                 margin: 0;
-                text-align: center;
-            }
-            .parallex__title__swip {
                 text-align: center;
             }
 
@@ -236,8 +239,8 @@
                 z-index: 1;
             }
             .lifeisgood__letter.lifeisgood__letter--lifeis {
-                left: 0;
                 justify-content: flex-end;
+                left: 0;
                 z-index: 3;
             }
             .lifeisgood__letter.lifeisgood__letter--good {
@@ -245,35 +248,43 @@
                 z-index: 1;
             }
             .lifeisgood__text {
-                display: block;
+                display: inline-block;
                 background: no-repeat center;
-                background-size: contain;
                 max-height: 11.67vw;
                 height: 9.67vw;
-                width: 100%;
                 transition: .5s;
             }
 
-            .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
-                margin-right: 1.93vw;
-                background-image: url(../../mocks/BS0001/life_is_good_text_left.svg);
-                background-position: center right;
+            .lifeisgood__letter--lifeis .lifeisgood__text {
+                transform: translateX(-2.76vw);
             }
-            .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
-                margin-left: 1.93vw;
-                background-image: url(../../mocks/BS0001/life_is_good_text_right.svg);
-                background-position: center left;
+            .lifeisgood__letter--good .lifeisgood__text {
+                /* transform: translateX(-1.09vw); */
             }
-            
             .lifeisgood__letter--active.lifeisgood__letter--lifeis .lifeisgood__text {
-                margin-right: 9.625vw;
-                background-image: url(../../mocks/BS0001/life_is_good_text_left_wt.svg);
+                transform: translateX(-13.75vw);
             }
             .lifeisgood__letter--active.lifeisgood__letter--good .lifeisgood__text {
-                margin-left: 9.625vw;
-                background-image: url(../../mocks/BS0001/life_is_good_text_right_wt.svg);
+                transform: translateX(7.76vw);
             }
-            
+
+            .lifeisgood__text path {
+                transition: .5s;
+                fill: #262626;
+            }
+            .lifeisgood__letter--active .lifeisgood__text path {
+                fill: #fff;
+            }
+
+
+            .lifeisgood__letter--active.lifeisgood__letter--lifeis .lifeisgood__text {
+
+            }
+            .lifeisgood__letter--active.lifeisgood__letter--good .lifeisgood__text {
+                
+            }
+
+
 
             .life-image__wrap {
                 position: relative;
@@ -399,6 +410,7 @@
                 height: 100%;
                 transition: .3s;
                 backdrop-filter: blur(25px);
+                -webkit-backdrop-filter:blur(25px);
                 z-index: -1;
                 opacity: 0;
             }
@@ -442,9 +454,7 @@
                 left: 0;
                 z-index: 5;
             }
-            .parallex__section__title-wrap--sticky {
-                /* margin-bottom: 15.63vw; */
-            }
+
             .parallex__title.parallex__title__swip {
                 position: absolute;
                 top: 0;
@@ -454,8 +464,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-align: center;
+                opacity: 0;
+                transition: .6s ease; 
+                transform: translateY(100px);
             }
 
+            .parallex__title.parallex__title--visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
             .parallex__canvas {
                 position: relative;
             }
@@ -463,6 +481,7 @@
             .parallex__section--design .parallex__section__title-wrap {
                 height: 100vh;
             }
+
             .parallex__canvas .parallex-visual__item:nth-child(1) {
                 height: 270vh;
             }
@@ -475,13 +494,7 @@
 
             .parallex-visual__item--prx {
                 position: relative;
-                height: 1100vh;
-                margin-bottom: 12.83vw;
-            }
-
-            .parallex__section--identity .parallex__section__title-wrap--sticky .parallex__title {
-                transition: .5s ease;
-                opacity: 0;
+                height: 900vh;
             }
 
             .parallax-visual__pin {
@@ -587,7 +600,7 @@
 
             /*parallax-visual__pin--identity*/
             .parallax-pin__image--identity:nth-child(1) {
-                top: 8.87%;
+                top: 8.57%;
                 left: 69.79%;
                 width: 18.3854vw;
                 height: 13.8675vw;
@@ -596,7 +609,7 @@
                 z-index: -2;
             }
             .parallax-pin__image--identity:nth-child(2) {
-                top: 10.87%;
+                top: 9.27%;
                 left: 33.54%;
                 width: 19.4792vw;
                 height: 19.375vw;
@@ -612,7 +625,7 @@
                 background-image: url(../../mocks/BS0001/brand-story-identity-03-d.png);
             }
             .parallax-pin__image--identity:nth-child(4) {
-                top: 19.03%;
+                top: 23.13%;
                 left: 79.37%;
                 width: 15.7292vw;
                 height: 15.7292vw;
@@ -620,7 +633,7 @@
                 background-image: url(../../mocks/BS0001/brand-story-identity-04-d.png);
             }
             .parallax-pin__image--identity:nth-child(5) {
-                top: 28.76%;
+                top: 30.26%;
                 left: 7.66%;
                 width: 25.8896vw;
                 height: 32.3438vw;
@@ -633,7 +646,7 @@
                 object-fit: cover;
             }
             .parallax-pin__image--identity:nth-child(6) {
-                top: 17.55%;
+                top: 19.55%;
                 left: 57.71%;
                 width: 48.2292vw;
                 height: 30.0938vw;
@@ -642,7 +655,7 @@
                 z-index: -2;
             }
             .parallax-pin__image--identity:nth-child(7) {
-                top: 33.58%;
+                top: 36.58%;
                 left: 56.61%;
                 width: 34.0625vw;
                 height: 21.6146vw;
@@ -659,7 +672,7 @@
                 z-index: -1;
             }
             .parallax-pin__image--identity:nth-child(9) {
-                top: 24.36%;
+                top: 28.36%;
                 left: 62.5%;
                 width: 44.8438vw;
                 height: 26.3021vw;
@@ -668,7 +681,7 @@
                 z-index: -1;
             }
             .parallax-pin__image--identity:nth-child(10) {
-                top: 30.62%;
+                top: 33.62%;
                 left: 4.22%;
                 width: 43.0208vw;
                 height: 30.8333vw;
@@ -833,8 +846,12 @@
             }
 
             .brief__section {
-                height: 100vh;
+                height: 110vh;
             }
+            .brand-brief--last {
+                height: 5vh;
+            }
+
 
             /*brand story - marquee*/
             .ani-show {opacity: 0; transition: 0.5s;}
@@ -844,6 +861,7 @@
                 margin-top: 5.99vw; 
             }
             .parallex-visual__marquee {
+                margin-top: 20vw;
                 overflow-x: hidden;
             }
 
@@ -880,10 +898,10 @@
 
             .marquee__inner--bottom li > .marquee__part__item:nth-child(1) {background-image: url(../../mocks/BS0001/brand-story-identity-15-d.png); width: 42.71vw;}
             .marquee__inner--bottom li > .marquee__part__item:nth-child(2) {background-image: url(../../mocks/BS0001/brand-story-identity-16-d.png); width: 21.80vw;}
-            .marquee__inner--bottom li > .marquee__part__item:nth-child(3) {width: 20.27vw; height: 28.23vw; border-radius: 9.9vw; overflow: hidden; }
+            .marquee__inner--bottom li > .marquee__part__item:nth-child(3) {width: 20.27vw; height: 28.23vw; overflow: hidden; }
             .marquee__inner--bottom li > .marquee__part__item:nth-child(4) {background-image: url(../../mocks/BS0001/brand-story-identity-18-d.png); width: 33.04vw;}
 
-            .marquee__part__item video {width: 100%; height: 100%; object-fit: cover;}
+            .marquee__part__item video {width: 100%; height: 100%; object-fit: cover; border-radius: 9.9vw;}
 
             /*Discover our brand*/
             .discover-brand__section {
@@ -1019,6 +1037,7 @@
             .discover-brand__section .swiper-notification {
                 display: none;
             }
+
 
             @media (max-width: 1720px) {
                 /* brand story - our values */
@@ -1332,8 +1351,16 @@
                 </div>
             </div>
             <div class="lifeisgood">
-                <div class="lifeisgood__letter lifeisgood__letter--lifeis"><span class="lifeisgood__text"></span></div>
-                <div class="lifeisgood__letter lifeisgood__letter--good"><span class="lifeisgood__text"></span></div>
+                <div class="lifeisgood__letter lifeisgood__letter--lifeis">
+                    <svg class="lifeisgood__text" viewBox="0 0 590 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M532.828 223.908C568.998 223.908 590 206.857 590 173.898C590 153.303 578.227 136.114 555.254 126.74L534.73 118.359C521.371 112.968 515.922 105.857 515.922 95.3513C515.922 84.2689 524.673 79.1894 533.715 79.1894C547.075 79.1894 557.26 88.7018 574.354 110.359C576.22 112.668 578.227 111.917 578.227 108.789V79.1547C578.257 78.3099 578.043 77.4741 577.611 76.7446C577.18 76.0151 576.548 75.4217 575.789 75.0334C567.026 71.7664 551.66 69.7808 537.88 69.7808C506.728 69.7808 482.902 88.3901 482.902 116.662C482.902 135.26 492.085 152.738 513.763 161.684L535.874 170.781C550.808 176.888 556.117 183.561 556.117 194.92C556.117 206.857 547.646 214.672 535.302 214.672C520.227 214.672 507.019 202.17 487.348 176.034C485.621 173.621 483.474 174.475 483.754 177.454L486.776 214.949C486.916 216.946 487.639 218.216 489.646 218.794C498.257 221.345 511.465 223.908 532.817 223.908M457.98 80.1475C481.666 73.221 493.73 55.0043 493.73 32.5623C493.73 12.5331 481.094 0.0307104 465.727 0.0307104C458.31 0.0212406 451.189 2.91187 445.916 8.07312C440.643 13.2344 437.644 20.2481 437.573 27.5867C437.573 42.6519 449.918 55.5699 464.992 55.5699C468.572 55.5482 472.123 54.9276 475.493 53.7343C476.205 53.4457 476.788 54.0114 476.66 54.8888C474.513 63.8355 464.992 71.3624 456.568 76.4765C453.978 78.0465 455.273 81.0249 458.003 80.1706M370.997 127.502C371.429 92.8693 378.173 79.2009 388.371 79.2009C398.872 79.2009 404.705 93.8274 404.88 127.502H370.997ZM390.833 223.954C424.856 223.954 443.956 203.636 449.416 178.931C450.128 175.664 448.401 174.672 445.916 176.796C436.374 184.919 424.188 189.358 411.601 189.298C387.344 189.298 372.701 174.672 371.114 137.349H446.067C446.486 137.392 446.909 137.353 447.312 137.233C447.715 137.113 448.091 136.915 448.416 136.651C448.742 136.387 449.011 136.062 449.209 135.694C449.406 135.327 449.528 134.924 449.568 134.509C449.804 132.289 449.897 130.057 449.848 127.825C449.848 97.8101 428.321 69.8732 392.851 69.8732C353.811 69.8732 322.227 100.985 322.227 149.99C322.227 198.476 352.563 224 390.844 224M230.425 85.4348H247.227V183.03C247.227 211.578 236.306 214.28 236.306 218.54C236.306 219.959 237.169 221.091 239.468 221.091H305.658C307.992 221.091 308.809 219.936 308.809 218.54C308.809 213.991 295.753 211.613 295.753 183.03V85.4348H320.441C320.876 85.4938 321.318 85.4551 321.736 85.3216C322.153 85.1881 322.534 84.9632 322.852 84.6637C323.169 84.3641 323.414 83.9977 323.568 83.5915C323.723 83.1854 323.783 82.75 323.743 82.3178V76.0609C323.798 75.6189 323.75 75.1704 323.604 74.7493C323.457 74.3283 323.216 73.9458 322.897 73.6309C322.579 73.316 322.193 73.0771 321.767 72.932C321.341 72.787 320.888 72.7397 320.441 72.7939H302.065C295.601 72.7939 291.727 70.485 286.897 63.7086L282.731 57.9365C274.972 47.1426 271.064 37.4801 271.064 29.3876C271.064 18.5938 278.064 12.914 287.142 12.914C298.634 12.914 306.814 21.8608 323.895 40.3315C325.762 42.4557 327.629 41.6014 327.629 39.1771V6.507C327.629 4.65992 326.765 3.52857 325.295 3.23997C317.666 0.98729 309.734 -0.102651 301.773 0.00759943C264.88 0.00759943 247.227 27.8523 247.227 58.3983V70.0463L229.562 80.9787C227.228 82.3987 227.835 85.3771 230.425 85.3771M157.199 27.7137C157.185 33.2071 158.818 38.5813 161.891 43.1565C164.964 47.7317 169.339 51.3025 174.464 53.4174C179.588 55.5323 185.231 56.0963 190.679 55.038C196.127 53.9797 201.136 51.3467 205.072 47.472C209.008 43.5972 211.694 38.6547 212.79 33.2695C213.887 27.8843 213.345 22.2983 211.233 17.2178C209.122 12.1373 205.534 7.79049 200.926 4.7271C196.317 1.66371 190.893 0.0213158 185.341 0.00759943C177.904 0.0165981 170.773 2.93413 165.501 8.12413C160.229 13.3141 157.245 20.3557 157.199 27.7137ZM153.477 221.033H217.497C219.831 221.033 220.659 219.879 220.659 218.482C220.659 214.222 209.75 211.555 209.75 182.972V69.6423C209.764 69.5143 209.746 69.3848 209.698 69.2651C209.65 69.1455 209.573 69.0391 209.475 68.9551C209.376 68.8711 209.258 68.8121 209.131 68.783C209.005 68.7539 208.873 68.7556 208.747 68.788L153.617 80.7132C151.458 81.1403 150.315 82.1331 150.315 83.8417C150.315 88.2516 161.224 89.0943 161.224 111.121V182.995C161.224 211.544 150.315 214.245 150.315 218.505C150.315 219.925 151.178 221.056 153.477 221.056M3.16194 221.056H126.769C127.327 221.108 127.889 221.05 128.423 220.885C128.957 220.72 129.453 220.451 129.881 220.094C130.309 219.737 130.661 219.3 130.916 218.807C131.171 218.314 131.324 217.776 131.366 217.224L140.981 165.378C141.412 162.966 139.254 161.915 137.387 163.959L109.711 191.942C95.3484 206.43 90.3196 211.117 73.8098 211.117H63.4839V55.4198C63.4839 26.871 74.3932 24.1696 74.3932 19.9098C74.3932 18.4899 73.5298 17.3586 71.2312 17.3586H3.16194C0.828405 17.3586 0 18.513 0 19.9098C0 24.1696 10.9093 26.8364 10.9093 55.4198V182.983C10.9093 211.532 0 214.234 0 218.493C0 219.913 0.863408 221.045 3.16194 221.045"/>
+                    </svg>
+                </div>
+                <div class="lifeisgood__letter lifeisgood__letter--good">
+                    <svg class="lifeisgood__text" viewBox="0 0 735 224" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M706.959 224C712.513 223.986 717.938 222.343 722.55 219.278C727.162 216.213 730.755 211.863 732.874 206.777C734.993 201.691 735.543 196.097 734.456 190.702C733.37 185.306 730.694 180.351 726.766 176.46C722.839 172.57 717.837 169.919 712.39 168.842C706.944 167.765 701.297 168.311 696.163 170.41C691.029 172.509 686.638 176.068 683.544 180.637C680.45 185.206 678.791 190.58 678.777 196.082C678.78 203.486 681.75 210.585 687.035 215.82C692.319 221.055 699.485 223.997 706.959 224ZM559.449 139.252C559.449 96.2407 569.509 78.8673 583.6 78.8673C589.933 78.8673 595.541 82.1429 601.862 87.988V199.103C598.018 200.604 593.911 201.332 589.781 201.245C572.103 201.245 559.402 184.438 559.402 139.286M602.972 224L659.475 209.185C661.345 208.756 662.49 207.9 662.49 206.337C662.49 201.777 650.56 200.782 650.56 178.709V0.762604C650.568 0.640602 650.544 0.518695 650.491 0.408389C650.438 0.298083 650.357 0.20303 650.257 0.132308C650.156 0.0615856 650.039 0.0174853 649.916 0.00422811C649.793 -0.00902911 649.669 0.00901657 649.556 0.0565762L593.052 14.8603C591.183 15.2886 590.038 16.1451 590.038 17.7077C590.038 22.268 601.967 23.2634 601.967 45.336V70.9735C595.546 69.9815 589.059 69.4593 582.56 69.411C537.565 69.411 508.951 104.134 508.951 153.442C508.951 197.159 527.786 223.942 565.735 223.942C580.398 223.942 589.465 218.525 601.955 207.136V223.225C601.949 223.347 601.973 223.468 602.026 223.578C602.08 223.689 602.16 223.784 602.26 223.855C602.36 223.927 602.477 223.972 602.599 223.987C602.721 224.002 602.845 223.987 602.96 223.942M404.567 146.74C404.567 95.6156 411.028 78.8095 424.255 78.8095C438.637 78.8095 444.246 95.6156 444.246 146.74C444.246 197.865 438.591 214.74 424.208 214.74C410.982 214.74 404.521 197.784 404.521 146.798M424.208 224C466.913 224 494.802 190.816 494.802 146.798C494.802 102.78 466.913 69.4688 424.208 69.4688C382.66 69.4688 353.906 102.792 353.906 146.798C353.906 190.804 382.66 224 424.208 224ZM249.533 146.798C249.533 95.6735 256.006 78.8673 269.233 78.8673C283.604 78.8673 289.212 95.6735 289.212 146.798C289.212 197.923 283.604 214.74 269.233 214.74C256.006 214.74 249.533 197.784 249.533 146.798ZM269.233 224C311.926 224 339.827 190.816 339.827 146.798C339.827 102.78 311.926 69.4688 269.233 69.4688C227.685 69.4688 198.93 102.792 198.93 146.798C198.93 190.804 227.685 224 269.233 224ZM98.5772 224C123.452 224 150.477 217.159 176.789 202.495C176.938 202.41 177.059 202.283 177.136 202.131C177.212 201.978 177.242 201.807 177.222 201.638V157.771C177.222 129.147 185.272 126.149 185.272 122.168C185.272 120.744 184.407 119.598 182.105 119.598H118.849C116.512 119.598 115.694 120.755 115.694 122.168C115.694 126.439 126.619 129.112 126.619 157.771V206.904C120.438 211.743 113.965 214.173 103.041 214.173C72.6624 214.173 56.4568 184.971 56.4568 118.174C56.4568 53.0909 72.1249 24.0389 101.603 24.0389C118.568 24.0389 129.925 34.1434 159.824 66.0543C161.554 67.9063 163.423 67.3276 163.423 64.6307V28.5414C163.515 27.3518 163.194 26.1668 162.515 25.1819C161.835 24.1971 160.836 23.4713 159.684 23.1245C142.983 16.995 125.302 13.9051 107.492 14.0038C46.2449 14.0038 0 55.4521 0 118.116C0 185.48 33.3577 223.942 98.624 223.942"/>
+                    </svg>
+                </div>
                 <ul class="life-image__wrap">
                     <li class="life-image__item life-image__item--text">
                         <span class="life-item__fix life-item__fix--bg"></span>
@@ -1393,7 +1420,9 @@
             </ul>
             <div class="parallex__section parallex__section--design">
                 <div class="parallex__section__title-wrap">
-                    <h3 class="parallex__title parallex__title__swip">Everything we create is guided<br> by our Design Philosophy…</h3>
+                    <h3 class="parallex__title parallex__title__swip parallex__title--visible">Everything we create is guided<br> by our Design Philosophy…</h3>
+                    <h3 class="parallex__title parallex__title__swip">Emotionally Intelligent Design</h3>
+                    <h3 class="parallex__title parallex__title__swip">Which means we’re always adapting to<br> different moods and passions</h3>
                 </div>
                 <div class="parallex__canvas" data-color-set="dark">
                     <div class="parallex-visual__item"></div>
@@ -1489,11 +1518,11 @@
                 <div class="brief__section" data-color-set="prevent"></div>
                 <div class="brief__section" data-color-set="black"></div>
                 <div class="brief__section" data-color-set="red"></div>
-                <div class="brief__section" data-color-set="prevent"></div>
+                <div class="brief__section brief__section--last" data-color-set="prevent"></div>
             </div>
-            <div class="parallex__section parallex__section--identity">
+            <div class="parallex__section parallex__section--identity" >
                 <div class="parallex-visual__item parallex-visual__item--prx">
-                    <div class="parallex__section__title-wrap parallex__section__title-wrap--sticky">
+                    <div class="parallex__section__title-wrap">
                         <h3 class="parallex__title parallex__title__swip">All of this comes to life<br> through our identity</h3>
                     </div>
                     <div class="parallax-visual__pin parallax-visual__pin--identity">
@@ -1787,39 +1816,48 @@
             }
             function parallaxDesignSec() {
                 const paraWrap = document.querySelector('.parallex__section.parallex__section--design')
+                const paraCanvas = paraWrap.querySelector('.parallex__canvas')
                 const paraSections = paraWrap.querySelectorAll('.parallex-visual__item')
                 const paraTitle = paraWrap.querySelector('.parallex__section__title-wrap')
-                const paraTextTarget = paraTitle.querySelector('h3')
+                const paraTextTargets = paraTitle.querySelectorAll('h3')
 
                 const fullScroll = paraWrap.getBoundingClientRect().height
 
-                const data = [
-                    'Everything we create is guided<br> by our Design Philosophy…',
-                    'Emotionally Intelligent Design',
-                    'Which means we’re always adapting to<br> different moods and passions'
-                ]
 
                 let winY = window.pageYOffset
                 let lastIdx = ''
+                const canvasRect = paraCanvas.getBoundingClientRect()
+                const isCanvasVisible = canvasRect.top + window.pageYOffset
+                const isCanvasOver = isCanvasVisible + canvasRect.height
 
                 function setTextValue() {
+
                     paraSections.forEach((section, idx) => {
                         const rect = section.getBoundingClientRect()
                         const offsetTop = rect.top + window.pageYOffset
 
-                        if (offsetTop < winY && (offsetTop + rect.height) > winY ) {
-                            if (lastIdx !== idx) {
-                                paraTextTarget.innerHTML = data[idx]
-                                lastIdx = idx 
+                        if (offsetTop < winY && (offsetTop + rect.height - (window.innerHeight * 0.6)) > winY ) {
+
+                            if (idx !== lastIdx) {
+                                paraTextTargets[idx].classList.add('parallex__title--visible')
+                                lastIdx = idx
                             }
-                        }
+                            
+                        } else if (isCanvasVisible > winY) {
+                            paraTextTargets[0].classList.add('parallex__title--visible')
+                        } else if (isCanvasOver < winY) {
+                            lastIdx = ''
+                        } else {
+                            paraTextTargets[idx].classList.remove('parallex__title--visible')
+                        } 
                     })
                 }
-
                 window.addEventListener('scroll', ()=> {
                     winY = window.pageYOffset
                     setTextValue()
+                    
                 })
+                // window.scrollY > isCanvasOver - window.innerHeight ? paraTextTargets[0].classList.remove('parallex__title--visible') : ''
 
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
                 setTextValue()
@@ -1838,37 +1876,40 @@
                 const motionPin = section.querySelector('.brand-brief__grid')
                 const motionTargets = motionPin.querySelectorAll('.brand-brief__inner')
 
+                motionTargets.forEach((el, i) => {
+                    gsap.set(el, {opacity: 0, y: i * 50})
+                })
+
                 let gridTl = gsap.to(motionPin,{
                     scrollTrigger: {
                         trigger: section,
                         start: 'top top',
-                        end: `bottom bottom`,
+                        end: `110% bottom`,
                         pin: motionPin,
+                        onUpdate: self => {
+                            self.progress >= 0 && self.progress < 1 ?textView() : reverse()
+                        },
+                        // onEnter: textView,
+                        // onLeave: reverse,
+                        // onEnterBack: textView,
+                        // onLeaveBack: reverse,
                     }
                 })
 
-                motionTargets.forEach((el, i) => {
-                    gsap.set(el, {opacity: 1, y: i * 50})
-                })
-
-                let itemsTl = gsap.timeline({
-                    ease: 'none',
-                    scrollTrigger: {
-                        trigger: section,
-                        start: `top top`,
-                        end: 'top',
-                        scrub: 0.2,
-                    }
-                })
-                motionTargets.forEach((el, i) => {
-                    itemsTl.fromTo(el,  {
-                        opacity: 0,
-                        y: i * 50
-                    }, {
-                        opacity: 1,
-                        y: 0
+                function textView() {
+                    motionTargets.forEach((el, i) => {
+                        gsap.set(el, {opacity: 1, y: 0})
                     })
-                })
+                    
+                }
+
+                function reverse() {
+                    motionTargets.forEach((el, i) => {
+                        gsap.set(el, {opacity: 0, y: i * 50})
+                    })
+                }
+
+
             }
             function colorModeChange () {
                 const sets = document.querySelectorAll('[data-color-set]')
@@ -1954,7 +1995,6 @@
 
                 let totalScroll = targetWrap.getBoundingClientRect().height
                 let tarText = ''
-                let pcDevice = window.innerWidth >= 769
 
                 gsap.to(targetItems, {
                     y: (i, target) => -totalScroll * target.dataset.speed,
@@ -1969,14 +2009,10 @@
                             let secTarget = targetParent.classList.contains('parallax-visual__pin--identity')
                             if (secTarget) tarText = targetParent.parentElement.querySelector('h3')
 
-                            if (self.progress > 0.1 && self.progress < 0.85) {
-                                targetParent.style.opacity = 1
+                            self.progress > 0.1 && self.progress <= 0.95 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
 
-                                if (secTarget) tarText.style.opacity = 1
-
-                            } else {
-                                targetParent.style.opacity = 0
-                                if (secTarget && pcDevice) tarText.style.opacity = 0
+                            if(secTarget) {
+                                self.progress > 0.2 && self.progress < 0.83 ? tarText.classList.add('parallex__title--visible') : tarText.classList.remove('parallex__title--visible')
                             }
                         }
                     },
