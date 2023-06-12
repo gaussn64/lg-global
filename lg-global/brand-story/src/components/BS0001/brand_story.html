@@ -194,7 +194,7 @@
                 text-align: center;
                 color: #F6F3EB;
                 font-size: 1.67vw;
-                transition: .4s cubic-bezier(.84,0,.16,1);
+                transition: .3s ease;
                 width: 80%;
                 margin: 0 auto;
             }
@@ -2031,7 +2031,7 @@
                                 showEl.classList.add('ani-show--active')
                                 isActive = true
                             }
-                        } else if (winY < offsetTop){
+                        } else if (winY < offsetTop - window.innerHeight){
                             showEl.classList.remove('ani-show--active')
                             isActive = false
                         }
