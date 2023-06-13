@@ -38,6 +38,19 @@
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+
             /* Human Rights Visual */
             .human-rights-visual {
                 position: relative;
@@ -191,6 +204,59 @@
             }
             .goals-efforts__tab-cont__item * {
                 color: #F0ECE4;
+                letter-spacing: -0.005em;
+            }
+            .goals-efforts__tab-cont__item__goals {
+                display: flex;
+            }
+            .goals-efforts__tab-cont__item__goals__info {
+                position: relative;
+                margin-bottom: 47px;
+                text-align: left;
+            }
+            .goals-efforts__tab-cont__item__goals__info:first-child {
+                opacity: 0.5;
+            }
+            .goals-efforts__tab-cont__item__goals__info:last-child {
+                padding-left: 70px;
+            }
+            .goals-efforts__tab-cont__item__goals__info:last-child:after {
+                position: absolute;
+                top: 22px;
+                left: 22px;
+                content: '';
+                display: block;
+                width: 24px;
+                height: 45px;
+                background: url(../../mocks/ST0005/bullet-goals-info.svg) no-repeat left top;
+                background-size: cover;
+            }
+            .goals-efforts__tab-cont__item__goals__info__percentage {
+                font-weight: 300;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .goals-efforts__tab-cont__item__goals__info__percentage__small {
+                display: inline-block;
+                margin-left: 8px;
+                font-size: 20px;
+                line-height: 18px;
+            }
+            .goals-efforts__tab-cont__item__goals__info__plan {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .goals-efforts__tab-cont__item__goals__info__criteria {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 4px 0px 0px;
+                white-space: nowrap;
+            }
+            .goals-efforts__tab-cont__item__desc {
+                text-align: left;
+                font-size: 28px;
+                line-height: 34px;
+                color: #F6F3EB;
             }
 
 
@@ -478,13 +544,13 @@
                     <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">87%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">87%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">100%*</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">100%*</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">
@@ -496,13 +562,13 @@
                         </div>
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">66%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">66%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">100%**</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">100%**</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">
@@ -514,18 +580,18 @@
                         </div>
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">1.0%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">1.0%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">0.5%<small>or <br />lower</small></dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">0.5%<small class="goals-efforts__tab-cont__item__goals__info__percentage__small">or <br />lower</small></dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">
-                                Keep the proportion of high risk at <br />
-                                0.5% or lower for suppliers' <br />
+                                Keep the proportion of high risk <br />
+                                at 0.5% or lower for suppliers' <br />
                                 self assessment factors
                             </p>
                         </div>
@@ -589,26 +655,26 @@
                     <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">2.3%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">2.3%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">3.5%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">3.5%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">Ratio of disabled persons in employment (Korea)</p>
                         </div>
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">13.4%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">13.4%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">20%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">20%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">
@@ -673,32 +739,36 @@
                     <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__plan">
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__plan">
                                         Planning for <br />
                                         some products
                                     </dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">3.5%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">3.5%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
-                            <p class="goals-efforts__tab-cont__item__desc"></p>
+                            <p class="goals-efforts__tab-cont__item__desc">
+                                Incorporate accessibility <br />
+                                features and universal design into <br />
+                                all product lines
+                            </p>
                         </div>
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__plan">
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__plan">
                                         Some H&amp;A<br />
                                         products
                                     </dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2021 Achievement</dd>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2021 Achievement</dd>
                                 </dl>
-                                <dl class="goals-efforts__tab-cont__item__goals__current">
-                                    <dt class="goals-efforts__tab-cont__item__goals__current__percentage">100%</dt>
-                                    <dd class="goals-efforts__tab-cont__item__goals__current__criteria">2030 Target</dd>
+                                <dl class="goals-efforts__tab-cont__item__goals__info">
+                                    <dt class="goals-efforts__tab-cont__item__goals__info__percentage">100%</dt>
+                                    <dd class="goals-efforts__tab-cont__item__goals__info__criteria">2030 Target</dd>
                                 </dl>
                             </div>
                             <p class="goals-efforts__tab-cont__item__desc">
