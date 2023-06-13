@@ -67,11 +67,9 @@
                 text-align: center;
             }
             .brand__content-inner {
-                /* padding: 0 120px 120px; */
-                max-width: 1680px;
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 0 120px;
+                padding: 0 120px 120px;
             }
 
             .visual__top {
@@ -113,9 +111,10 @@
             .design-system__imagebox.design-system__imagebox--intelligent {background-image: url(../../mocks/BS0006/brand-elements-design-system-the-lens-intelligent-d.png);}
             .design-system__imagebox.design-system__imagebox--respectful {background-image: url(../../mocks/BS0006/brand-elements-design-system-the-lens-respectful-d.png);}
 
-                /*tab*/
-                .tab-menu__container {
+            /*tab*/
+            .tab-menu__container {
                 text-align: center;
+                margin-top: -68px;
             }
             .tab-menu__list {
                 display: inline-flex;
@@ -141,7 +140,7 @@
                 background-color: #fff;
                 font-weight: 600;
             }
-            .tab-container {margin-top: 72px;}
+            .tab-container {margin-top: 97px;}
             .tab-container__content {display: none;}
             .tab-container__content.tab-container__content--active {display: block;}
 
@@ -185,7 +184,10 @@
             .brand-elements__controller__btn {
                 margin: 0;
                 display: block;
-                position: unset;
+                position: relative;
+                top: unset;
+                left: unset;
+                right: unset;
                 width: 48px;
                 height: 48px;
                 background: rgba(255, 255, 255, 0.5);
@@ -290,13 +292,20 @@
 
             @media (max-width: 1720px) {
                 /*공통*/
-                .brand__content-inner {padding: 0 20px 120px;}
             }
 
             @media (max-width: 1279px) {
+
+                .brand__header-title {
+                    font-size: 64px;
+                }
+
                 /*공통*/
                 .brand__header-title + .brand__header-description br {
                     display: none;
+                }
+                .brand__content-inner {
+                    padding: 0 20px 34px;
                 }
 
 
@@ -341,9 +350,7 @@
                     font-size: 16px;
                     text-align: center;
                 }
-                .brand__content-inner {
-                    padding: 0 20px 34px;
-                }
+
                 .visual__top {
                     height: 117.33vw;
                 }
@@ -603,6 +610,7 @@
                     },
                     scrollbar: {
                         el: '.brand-elements__progressbar',
+                        draggable: true
                     },
                     breakpoints: {
                         1279: {
