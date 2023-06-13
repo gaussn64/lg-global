@@ -166,10 +166,9 @@
                 background-color: white;
             }
             .goals-efforts__tab-cont__wrap {
-                display: flex;
-                align-items: flex-end;
+                position: relative;
                 height: 100vh;
-                padding: 8.7037vh 6.25vw;
+                padding: 8.1818vh 6.25vw;
                 margin-top: 3.7037vh;
                 background-color: black;
                 background-repeat:  no-repeat;
@@ -186,21 +185,47 @@
                 background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0005/bg-design.jpg);
             }
             .goals-efforts__tab-cont {
-                display: none;
+                position: absolute;
+                z-index: 1;
+                bottom: 8.1818vh;
+                left: 6.25vw;
+                visibility: hidden;
+                display: flex;
                 gap: 0px 1.0417vw;
                 align-items: flex-end;
             }
             .goals-efforts__tab-cont--active {
-                display: flex;
+                visibility: visible;
+                z-index: 2;
             }
             .goals-efforts__tab-cont__item {
+                position: relative;
                 width: 26.0417vw;
-                height: 44.4444vh;
-                padding: 4.4444vh 2.5vw;
+                height: 43.6364vh;
+                padding: 4.3636vh 2.5vw;
                 box-sizing: border-box;
                 backdrop-filter: blur(50px);
-                border-radius: 30px;
+                border-radius: 2.7273vh;
                 background-color: rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transform: translateY(2.7273vh);
+                transition: 0.5s ease opacity,0.3s ease transform;
+            }
+            .goals-efforts__tab-cont__item--col3 {
+                width: 18.75vw;
+            }
+            .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item:nth-child(1) {
+                transition-delay: 0s;
+            }
+            .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item:nth-child(2) {
+                transition-delay: 0.1s;
+            }
+            .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item:nth-child(3) {
+                transition-delay: 0.2s;
             }
             .goals-efforts__tab-cont__item * {
                 color: #F0ECE4;
@@ -211,54 +236,109 @@
             }
             .goals-efforts__tab-cont__item__goals__info {
                 position: relative;
-                margin-bottom: 47px;
+                margin-bottom: 4.3636vh;
                 text-align: left;
             }
             .goals-efforts__tab-cont__item__goals__info:first-child {
                 opacity: 0.5;
             }
             .goals-efforts__tab-cont__item__goals__info:last-child {
-                padding-left: 70px;
+                padding-left: 3.6458vw;
             }
             .goals-efforts__tab-cont__item__goals__info:last-child:after {
                 position: absolute;
-                top: 22px;
-                left: 22px;
+                top: 2.1818vh;
+                left: 1.1458vw;
                 content: '';
                 display: block;
-                width: 24px;
-                height: 45px;
+                width: 2.1818vh;
+                height: 4.0909vh;
                 background: url(../../mocks/ST0005/bullet-goals-info.svg) no-repeat left top;
                 background-size: cover;
             }
             .goals-efforts__tab-cont__item__goals__info__percentage {
                 font-weight: 300;
-                font-size: 56px;
-                line-height: 60px;
+                font-size: 5.0909vh;
+                line-height: 5.4545vh;
             }
             .goals-efforts__tab-cont__item__goals__info__percentage__small {
                 display: inline-block;
-                margin-left: 8px;
-                font-size: 20px;
-                line-height: 18px;
+                margin-left: 0.4167vw;
+                font-size: 1.8182vh;
+                line-height: 1.6364vh;
             }
             .goals-efforts__tab-cont__item__goals__info__plan {
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 2.5455vh;
+                line-height: 3.0909vh;
             }
             .goals-efforts__tab-cont__item__goals__info__criteria {
-                font-size: 20px;
-                line-height: 28px;
-                margin: 4px 0px 0px;
+                font-size: 2.5455vh;
+                line-height: 3.0909vh;
+                margin: 0.3636vh 0px 0px;
                 white-space: nowrap;
             }
             .goals-efforts__tab-cont__item__desc {
                 text-align: left;
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 2.5455vh;
+                line-height: 3.0909vh;
                 color: #F6F3EB;
             }
-
+            .goals-efforts__tab-cont__item__efforts-ico-txt {
+                text-align: left;
+            }
+            .goals-efforts__tab-cont__item__efforts-ico-txt__ico__img {
+                width: 4.3636vh;
+                height: 4.3636vh;
+                object-fit: cover;
+            }
+            .goals-efforts__tab-cont__item__efforts-ico-txt__subject {
+                font-size: 3.2727vh;
+                line-height: 3.8182vh;
+                margin-top: 2.1818vh;
+            }
+            .goals-efforts__tab-cont__item__efforts-ico-txt__more {
+                position: absolute;
+                bottom: 4.4444vh;
+                left: 2.5vw;
+            }
+            .goals-efforts__tab-cont__item__efforts-ico-txt__more__btn {
+                width: 4.8182vh;
+                height: 4.9091vh;
+                border-width: 0px;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: transparent url(../../mocks/ST0005/btn-efforts-more.svg) no-repeat left top;
+                background-size: cover;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail {
+                margin-top: -0.7273vh;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail__photo__img {
+                width: 20.7273vh;
+                height: 23.5455vh;
+                border-radius: 10.8182vh;
+                object-fit: cover;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail__subject {
+                margin-top: 1.3636vh;
+                font-size: 2.5455vh;
+                line-height: 3.0909vh;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail__more {
+                position: absolute;
+                bottom: 2.8182vh;
+                left: 0px;
+                right: 0px;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail__more__btn {
+                width: 4.3636vh;
+                height: 4.3636vh;
+                border-width: 0px;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: transparent url(../../mocks/ST0005/btn-efforts-more.svg) no-repeat left top;
+                background-size: cover;
+            }
 
             /* Social Impact */
             .social-impact {
@@ -598,30 +678,30 @@
                     </div>
                     <div class="goals-efforts__tab-cont">
                         <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__ico">
-                                    <img src="../../mocks/ST0005/ico-workplace-safety-efforts1.svg" class="goals-efforts__tab-cont__item__efforts__ico__img" />
+                            <div class="goals-efforts__tab-cont__item__efforts-ico-txt">
+                                <div class="goals-efforts__tab-cont__item__efforts-ico-txt__ico">
+                                    <img src="../../mocks/ST0005/ico-workplace-safety-efforts1.svg" class="goals-efforts__tab-cont__item__efforts-ico-txt__ico__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-ico-txt__subject">
                                     Stronger <br />
                                     Risk Management
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-ico-txt__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
                         <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__ico">
-                                    <img src="../../mocks/ST0005/ico-workplace-safety-efforts2.svg" class="goals-efforts__tab-cont__item__efforts__ico__img" />
+                            <div class="goals-efforts__tab-cont__item__efforts-ico-txt">
+                                <div class="goals-efforts__tab-cont__item__efforts-ico-txt__ico">
+                                    <img src="../../mocks/ST0005/ico-workplace-safety-efforts2.svg" class="goals-efforts__tab-cont__item__efforts-ico-txt__ico__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-ico-txt__subject">
                                     Reducing carbon in the <br />
                                     supply chain
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-ico-txt__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
@@ -684,28 +764,28 @@
                     </div>
                     <div class="goals-efforts__tab-cont">
                         <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__photo">
-                                    <img src="../../mocks/ST0005/photo-equity-efforts1.jpg" class="goals-efforts__tab-cont__item__efforts__photo__img" />
+                            <div class="goals-efforts__tab-cont__item__efforts-thumbnail">
+                                <div class="goals-efforts__tab-cont__item__efforts-thumbnail__photo">
+                                    <img src="../../mocks/ST0005/photo-equity-efforts1.jpg" class="goals-efforts__tab-cont__item__efforts-thumbnail__photo__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__subject">
                                     Diversity and inclusion
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
                         <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__photo">
-                                    <img src="../../mocks/ST0005/photo-equity-efforts2.jpg" class="goals-efforts__tab-cont__item__efforts__photo__img" />
+                            <div class="goals-efforts__tab-cont__item__efforts-thumbnail">
+                                <div class="goals-efforts__tab-cont__item__efforts-thumbnail__photo">
+                                    <img src="../../mocks/ST0005/photo-equity-efforts2.jpg" class="goals-efforts__tab-cont__item__efforts-thumbnail__photo__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__subject">
                                     A great workplace <br />for all
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
@@ -779,44 +859,44 @@
                         </div>
                     </div>
                     <div class="goals-efforts__tab-cont">
-                        <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__photo">
-                                    <img src="../../mocks/ST0005/photo-design-efforts1.png" class="goals-efforts__tab-cont__item__efforts__photo__img" />
+                        <div class="goals-efforts__tab-cont__item goals-efforts__tab-cont__item--col3">
+                            <div class="goals-efforts__tab-cont__item__efforts-thumbnail">
+                                <div class="goals-efforts__tab-cont__item__efforts-thumbnail__photo">
+                                    <img src="../../mocks/ST0005/photo-design-efforts1.png" class="goals-efforts__tab-cont__item__efforts-thumbnail__photo__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__subject">
                                     Products for all
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
-                        <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__photo">
-                                    <img src="../../mocks/ST0005/photo-design-efforts2.png" class="goals-efforts__tab-cont__item__efforts__photo__img" />
+                        <div class="goals-efforts__tab-cont__item goals-efforts__tab-cont__item--col3">
+                            <div class="goals-efforts__tab-cont__item__efforts-thumbnail">
+                                <div class="goals-efforts__tab-cont__item__efforts-thumbnail__photo">
+                                    <img src="../../mocks/ST0005/photo-design-efforts2.png" class="goals-efforts__tab-cont__item__efforts-thumbnail__photo__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__subject">
                                     Disability advisory <br />
                                     group
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
-                        <div class="goals-efforts__tab-cont__item">
-                            <div class="goals-efforts__tab-cont__item__efforts">
-                                <div class="goals-efforts__tab-cont__item__efforts__photo">
-                                    <img src="../../mocks/ST0005/photo-design-efforts3.png" class="goals-efforts__tab-cont__item__efforts__photo__img" />
+                        <div class="goals-efforts__tab-cont__item goals-efforts__tab-cont__item--col3">
+                            <div class="goals-efforts__tab-cont__item__efforts-thumbnail">
+                                <div class="goals-efforts__tab-cont__item__efforts-thumbnail__photo">
+                                    <img src="../../mocks/ST0005/photo-design-efforts3.png" class="goals-efforts__tab-cont__item__efforts-thumbnail__photo__img" />
                                 </div>
-                                <p class="goals-efforts__tab-cont__item__efforts__subject">
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__subject">
                                     Service environment <br />
                                     improvement
                                 </p>
-                                <p class="goals-efforts__tab-cont__item__efforts__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts__more__btn">More</button>
+                                <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
                                 </p>
                             </div>
                         </div>
@@ -963,6 +1043,57 @@
                         });
                     },5000)
                 },
+                goalsEfforts: function() {
+                    let goalsEfforts = document.querySelectorAll(".goals-efforts");
+
+                    goalsEfforts.forEach(function(ge,i) {
+                        initGoalsEffortsTabNavi(i)
+                    })
+
+                    function initGoalsEffortsTabNavi(idx) {
+                        geTabNavi = goalsEfforts[idx].querySelector(".goals-efforts__tab-navi");
+                        geTabNaviList = geTabNavi.querySelector(".goals-efforts__tab-navi__list");
+                        gnItem = geTabNaviList.querySelectorAll(".goals-efforts__tab-navi__list__item");
+                        gnTabContWrap = document.querySelectorAll(".goals-efforts__tab-cont__wrap")
+
+                        gnItem.forEach(function(gi,a) {
+                            gi.querySelector("a").onclick = function() {
+                                if(gi.className.indexOf("--active") < 0) {
+                                    //console.log(gi.parentNode.children)
+                                    for(var b=0; b < gi.parentNode.children.length; b++) {
+                                        gi.parentNode.children[b].querySelector("a").classList.remove("goals-efforts__tab-navi__list__item__a--active")
+                                        
+                                    }
+                                    /*for(var c=0; c < gi.parentNode.nextSibling.children.length; c++) {
+                                        gi.parentNode.nextSibling.children[c].classList.remove("goals-efforts__tab-cont--active")
+                                    }*/
+
+                                    /* gi.parentNode.children.forEach(function(rest,b) {
+                                        rest.querySelector("a").classList.remove("goals-efforts__tab-navi__list__item__a--active")
+                                    }) */
+                                    gi.querySelector("a").classList.add("goals-efforts__tab-navi__list__item__a--active")
+                                    //gi.parentNode.nextSibling.children[a].classList.add("goals-efforts__tab-cont--active")
+                                    initGoalsEffortsTabView(gnTabContWrap[idx],a)
+                                }
+                            }
+                        })
+                    }
+
+                    function initGoalsEffortsTabView(cWrap,idx) {
+                        if(cWrap.querySelectorAll(".goals-efforts__tab-cont")[idx].className.indexOf("--active") < 0) {
+                            for(var c=0; c < cWrap.children.length; c++) {
+                                cWrap.children[c].classList.remove("goals-efforts__tab-cont--active")
+                            }
+
+                            /*cWrap.children.forEach(function(getc) {
+                                getc.classList.remove("goals-efforts__tab-cont--active")
+                            })*/
+                            cWrap.children[idx].classList.add("goals-efforts__tab-cont--active")
+                        }
+
+                        
+                    }
+                },
                 summary: function() {
                     let summary = document.querySelector(".summary");
                     let msOfsTop = summary.offsetTop;
@@ -1039,6 +1170,7 @@
                 }
             }
             humanRights.socialImpact();
+            humanRights.goalsEfforts();
             humanRights.summary();
             humanRights.whatsNext();
         </script>
