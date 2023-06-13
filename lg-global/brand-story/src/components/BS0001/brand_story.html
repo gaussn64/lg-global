@@ -943,7 +943,13 @@
                 z-index: 1;
             }
             .discover-brand__item:first-child {
-                margin-left: 6.25vw;
+                margin-left: 120px;
+            }
+
+            .discover-brand__item a {
+                width: 100%;
+                height: 100%;
+                display: block;
             }
 
             .discover-brand__item object {
@@ -960,9 +966,10 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                transition: .5s;
+                transition: .5s ease opacity;
                 background: no-repeat center;
                 background-size: cover;
+                pointer-events: none;
             }
             .discover-brand__item::before {
                 opacity: 0;
@@ -1017,6 +1024,7 @@
                 opacity: 1;
                 transform: translate(-50%, -50%) scale(0.6);
                 border-radius: 1.56vw;
+                transition: .5s all cubic-bezier(0.56, 0, 0.28, 1);
             }
             .discover-brand__item--photography:hover:before {
                 transform: translate(-50%, -50%) scale(1);
@@ -1084,31 +1092,6 @@
                 .brand-brief__grid {
                     padding: 20px;
                     gap: 10px;
-                }
-
-                /*Discover our brand*/
-                .discover-brand__section {
-                    margin-top: 100px;
-                }
-                .discover-brand {
-                    padding-bottom: 48px;
-                }
-
-                .discover-brand__item {
-                    width: 77.6vw;
-                    height: 77.6vw;
-                    border-radius: 10px;
-                }
-                .discover-brand__item:first-child {
-                    margin-left: 20px;
-                }
-                .discover-brand__item__title {
-                    font-size: 16px;
-                    left: 17px;
-                    bottom: 13px;
-                }
-                .discover-brand__item--photography::before {
-                    border-radius: 10px;
                 }
             }
             @media (max-width: 768px) {
@@ -1319,7 +1302,31 @@
                 /*brand story - marquee*/
                 .parallex-visual__marquee {display: none;}
 
+                /*Discover our brand*/
+                .discover-brand__section {
+                    margin-top: 100px;
+                }
+                .discover-brand {
+                    padding-bottom: 48px;
+                }
+
+                .discover-brand__item {
+                    width: 77.6vw;
+                    height: 77.6vw;
+                    border-radius: 10px;
+                }
                 
+                .discover-brand__item:first-child {
+                    margin-left: 20px;
+                }
+                .discover-brand__item__title {
+                    font-size: 16px;
+                    left: 17px;
+                    bottom: 13px;
+                }
+                .discover-brand__item--photography::before {
+                    border-radius: 10px;
+                }
             }
 
         </style>
@@ -1604,11 +1611,31 @@
                 <h3 class="parallex__title parallex__title--discover">Discover our brand</h3>
                 <div class="discover-brand">
                     <ul class="discover-brand__list swiper-wrapper">
-                        <li class="swiper-slide discover-brand__item discover-brand__item--logo"><span class="discover-brand__item__title">Logo</span></li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--colours"><span class="discover-brand__item__title">Colours & Gradients</span></li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--tagline"><span class="discover-brand__item__title">Tagline</span></li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--design"><span class="discover-brand__item__title">Design System</span></li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--photography"><span class="discover-brand__item__title">Photography</span></li>
+                        <li class="swiper-slide discover-brand__item discover-brand__item--logo">
+                            <a href="../BS0002/brand_logo.html">
+                                <span class="discover-brand__item__title">Logo</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide discover-brand__item discover-brand__item--colours">
+                            <a href="../BS0003/brand_colors.html">
+                                <span class="discover-brand__item__title">Colours & Gradients</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide discover-brand__item discover-brand__item--tagline">
+                            <a href="../BS0003/brand_colors.html">
+                                <span class="discover-brand__item__title">Tagline</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide discover-brand__item discover-brand__item--design">
+                            <a href="../BS0004/brand_tagline.html">
+                                <span class="discover-brand__item__title">Design System</span>
+                            </a>
+                        </li>
+                        <li class="swiper-slide discover-brand__item discover-brand__item--photography">
+                            <a href="../BS0005/brand_photography.html">
+                                <span class="discover-brand__item__title">Photography</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -1884,7 +1911,7 @@
                     scrollTrigger: {
                         trigger: section,
                         start: 'top top',
-                        end: `110% bottom`,
+                        end: `120% bottom`,
                         pin: motionPin,
                         onUpdate: self => {
                             self.progress >= 0 && self.progress < 1 ?textView() : reverse()
@@ -2012,7 +2039,7 @@
                             self.progress > 0.1 && self.progress <= 0.95 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
 
                             if(secTarget) {
-                                self.progress > 0.2 && self.progress < 0.83 ? tarText.classList.add('parallex__title--visible') : tarText.classList.remove('parallex__title--visible')
+                                self.progress > 0.2 && self.progress < 0.80 ? tarText.classList.add('parallex__title--visible') : tarText.classList.remove('parallex__title--visible')
                             }
                         }
                     },
@@ -2088,8 +2115,10 @@
                     spaceBetween: 16,
                     slidesOffsetAfter: 20,
                     breakpoints: {
+                        729 : {
+                            slidesOffsetAfter: 120,
+                        },
                         1279: {
-                            slidesOffsetBefore: 120,
                             spaceBetween: 74,
                         },
                     },
