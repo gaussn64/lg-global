@@ -868,8 +868,8 @@
             }
 
 
-            /*brand story - marquee*/
-            .ani-show {opacity: 0; transition: 0.5s;}
+             /*brand story - marquee*/
+             .ani-show {opacity: 0; transition: 0.5s;}
             .ani-show--active {opacity: 1;}
             .parallex__title.parallex__title--marquee {
                 margin-bottom: 6.61vw;
@@ -887,13 +887,9 @@
                 flex-direction: row;
                 align-items: center;
                 margin: 0;
-                opacity: 1 !important;
             }
-            .marquee__inner.marquee__inner--top {height: 19.05vw;}
-            .marquee__inner.marquee__inner--bottom {
-                height: 31.42vw;
-                margin-bottom: 382px
-            }
+            .marquee__inner.marquee__inner--top {height: 19.05vw; }
+            .marquee__inner.marquee__inner--bottom {height: 31.42vw; }
             .marquee__part {
                 height: 100%;
                 display: inline-flex;
@@ -921,7 +917,6 @@
             .marquee__inner--bottom li > .marquee__part__item:nth-child(4) {background-image: url(../../mocks/BS0001/brand-story-identity-18-d.png); width: 33.04vw;}
 
             .marquee__part__item video {width: 100%; height: 100%; object-fit: cover; border-radius: 9.9vw;}
-
 
             /*Discover our brand*/
             .discover-brand__section {
@@ -1564,10 +1559,10 @@
                 <div class="brief__section brief__section--last" data-color-set="prevent"></div>
             </div>
             <div class="parallex__section parallex__section--identity" >
-                <div class="parallex__section__title-wrap">
-                    <h3 class="parallex__title parallex__title__swip">All of this comes to life<br> through our identity</h3>
-                </div>
                 <div class="parallex-visual__item parallex-visual__item--prx">
+                    <div class="parallex__section__title-wrap">
+                        <h3 class="parallex__title parallex__title__swip">All of this comes to life<br> through our identity</h3>
+                    </div>
                     <div class="parallax-visual__pin parallax-visual__pin--identity">
                         <ul class="parallax-pin__images">
                             <li class="parallax-pin__image parallax-pin__image--identity" data-speed="0.26"></li>
@@ -1608,6 +1603,7 @@
                             <span class="marquee__part__item marquee__part__item--right"></span>
                         </li>
                     </ul>
+                    <h3 class="parallex__title parallex__title--marquee ani-show">All of this comes to life<br> through our identity</h3>
                     <ul class="marquee__inner marquee__inner--bottom ani-show">
                         <li class="marquee__part">
                             <span class="marquee__part__item"></span>
@@ -1919,6 +1915,7 @@
                     setTextValue()
                     
                 })
+                // window.scrollY > isCanvasOver - window.innerHeight ? paraTextTargets[0].classList.remove('parallex__title--visible') : ''
 
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
                 setTextValue()
@@ -2083,32 +2080,23 @@
                 const marqueeBottom = marquee.querySelector('.marquee__inner--bottom')
                 const marqueeTopEl = gsap.utils.toArray('.marquee__inner--top .marquee__part');
                 const marqueeBottomEl = gsap.utils.toArray('.marquee__inner--bottom .marquee__part');
-                const marqueeRect = marquee.getBoundingClientRect()
-
-                const offsetTop = marqueeRect.top + window.pageYOffset
-
-                let tlTop = []
-                let tlBottom = []
-                let isAnimationStart = false
-                let checker = false
 
                 marqueeTopEl.forEach((item, index) => {
-                    let tl = marqueeMotionSet(item, -100)
-                    tlTop.push(tl)
+                    marqueeMotionSet(item, -100)
                 })
 
                 marqueeBottomEl.forEach((item, idx) => {
                     let distance = item.clientWidth;
                     gsap.set(marqueeBottom, {x: -distance})
                     
-                    let tl = marqueeMotionSet(item, 100)
-                    tlBottom.push(tl)
+                    marqueeMotionSet(item, 100)
                 })
-                
+
                 function marqueeMotionSet(item, xPer) {
                     let distance = item.clientWidth;
 
                     const tl = new gsap.timeline({ });
+
                     tl.to(item, 30, {
                         ease: "none",
                         xPercent: xPer,
@@ -2119,37 +2107,36 @@
                     });
                 }
 
-                function animationRun(bool) {
-                    if (isAnimated) {
-                        tlTop.forEach(tt => {tt.restart()})
-                        tlBottom.forEach(tb => tb.restart())
-                    } else {
-                        tlTop.forEach(tt => {tt.pause()})
-                        tlBottom.forEach(tb => tb.pause())
-                    }
-                }
-
                 let winY = window.pageYOffset
 
+                function showerElement() {
+                    const showers = [marqueeTop, title, marqueeBottom]
+                    showers.forEach(showEl => {
+                        const rect = showEl.getBoundingClientRect()
+                        const offsetTop = rect.top + window.pageYOffset
+                        let isActive = false
+
+                        if (winY + (window.innerHeight / 2) > offsetTop) {
+
+                            if (!isActive) {
+                                showEl.classList.add('ani-show--active')
+                                isActive = true
+                            }
+                        } else if (winY < offsetTop - window.innerHeight){
+                            showEl.classList.remove('ani-show--active')
+                            isActive = false
+                        }
+                    })
+                }
+                
                 window.addEventListener('scroll', ()=> {
                     winY = window.pageYOffset
-
-                    if (offsetTop < winY) {
-                        isAnimationStart = true
-                    } else {
-                        isAnimationStart = false
-                    }
-
-                    //1. 현재 화면이 top을 넘었을 때
-                    //1-1. 등장모션: opacity: 1, transtitionX: 0
-                    //1-2. animation start
-                    
-                    //2. 현재 화면이 top보다 작을 때,
-                    //2-1. pause
-                    //2-2. 그 다음 opacity : 0, transitionX: 윈도우 바깥으로
+                    showerElement()
                 })
 
+                showerElement()
             }
+
             function discoverSlide() {
                 const swiper = new Swiper('.discover-brand', {
                     freeMode: true,
