@@ -25,7 +25,7 @@
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0004/circular_economy.html" class="c-header__gnb__list__item__anchor">Circular Economy</a></li>
-            <li class="c-header__gnb__list__item c-header__gnb__list__item__anchor--active"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Human Rights</a></li>
         </ul>
     </nav>
     <button type="button" class="c-header__btn-gnb">
@@ -208,8 +208,8 @@
                 border-radius: 2.7273vh;
                 background-color: rgba(0, 0, 0, 0.3);
                 opacity: 0;
-                transform: translateY(2.7273vh);
-                transition: 0.5s ease opacity,0.3s ease transform;
+                transform: translateY(5.5556vh);
+                transition: 0.5s ease opacity,0.5s ease transform;
             }
             .goals-efforts__tab-cont__item--col3 {
                 width: 18.75vw;
@@ -222,10 +222,10 @@
                 transition-delay: 0s;
             }
             .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item:nth-child(2) {
-                transition-delay: 0.1s;
+                transition-delay: 0.15s;
             }
             .goals-efforts__tab-cont--active > .goals-efforts__tab-cont__item:nth-child(3) {
-                transition-delay: 0.2s;
+                transition-delay: 0.3s;
             }
             .goals-efforts__tab-cont__item * {
                 color: #F0ECE4;
@@ -621,7 +621,7 @@
                     </ul>
                 </nav>
                 <div class="goals-efforts__tab-cont__wrap goals-efforts__tab-cont__workplace-safety">
-                    <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
+                    <div class="goals-efforts__tab-cont">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
                                 <dl class="goals-efforts__tab-cont__item__goals__info">
@@ -732,7 +732,7 @@
                     </ul>
                 </nav>
                 <div class="goals-efforts__tab-cont__wrap goals-efforts__tab-cont__equity">
-                    <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
+                    <div class="goals-efforts__tab-cont">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
                                 <dl class="goals-efforts__tab-cont__item__goals__info">
@@ -816,7 +816,7 @@
                     </ul>
                 </nav>
                 <div class="goals-efforts__tab-cont__wrap goals-efforts__tab-cont__design">
-                    <div class="goals-efforts__tab-cont goals-efforts__tab-cont--active">
+                    <div class="goals-efforts__tab-cont">
                         <div class="goals-efforts__tab-cont__item">
                             <div class="goals-efforts__tab-cont__item__goals">
                                 <dl class="goals-efforts__tab-cont__item__goals__info">
@@ -1054,7 +1054,9 @@
                         geTabNavi = goalsEfforts[idx].querySelector(".goals-efforts__tab-navi");
                         geTabNaviList = geTabNavi.querySelector(".goals-efforts__tab-navi__list");
                         gnItem = geTabNaviList.querySelectorAll(".goals-efforts__tab-navi__list__item");
-                        gnTabContWrap = document.querySelectorAll(".goals-efforts__tab-cont__wrap")
+                        gnTabContWrap = document.querySelectorAll(".goals-efforts__tab-cont__wrap");
+                        gtcwOfsTop = new Array();
+                        gtcwIsView = new Array();
 
                         gnItem.forEach(function(gi,a) {
                             gi.querySelector("a").onclick = function() {
@@ -1064,19 +1066,27 @@
                                         gi.parentNode.children[b].querySelector("a").classList.remove("goals-efforts__tab-navi__list__item__a--active")
                                         
                                     }
-                                    /*for(var c=0; c < gi.parentNode.nextSibling.children.length; c++) {
-                                        gi.parentNode.nextSibling.children[c].classList.remove("goals-efforts__tab-cont--active")
-                                    }*/
-
-                                    /* gi.parentNode.children.forEach(function(rest,b) {
-                                        rest.querySelector("a").classList.remove("goals-efforts__tab-navi__list__item__a--active")
-                                    }) */
                                     gi.querySelector("a").classList.add("goals-efforts__tab-navi__list__item__a--active")
-                                    //gi.parentNode.nextSibling.children[a].classList.add("goals-efforts__tab-cont--active")
                                     initGoalsEffortsTabView(gnTabContWrap[idx],a)
                                 }
                             }
                         })
+
+                        window.onload = window.onresize = window.onorientationchange = function() {
+                            gnTabContWrap.forEach(function(gtcw,c) {
+                                gtcwOfsTop[c] = document.querySelectorAll(".goals-efforts__intro")[c].offsetTop;
+                                gtcwIsView[c] = false
+                            })
+                        }
+
+                        window.addEventListener("scroll", (event) => {
+                            gnTabContWrap.forEach(function(gtcw,d) {
+                                if(document.documentElement.scrollTop >= gtcwOfsTop[d] && gtcwIsView[d] == false) {
+                                    gnTabContWrap[d].querySelector(".goals-efforts__tab-cont").classList.add("goals-efforts__tab-cont--active")
+                                    gtcwIsView[d] = true
+                                }
+                            })
+                        });
                     }
 
                     function initGoalsEffortsTabView(cWrap,idx) {
@@ -1084,10 +1094,6 @@
                             for(var c=0; c < cWrap.children.length; c++) {
                                 cWrap.children[c].classList.remove("goals-efforts__tab-cont--active")
                             }
-
-                            /*cWrap.children.forEach(function(getc) {
-                                getc.classList.remove("goals-efforts__tab-cont--active")
-                            })*/
                             cWrap.children[idx].classList.add("goals-efforts__tab-cont--active")
                         }
 
