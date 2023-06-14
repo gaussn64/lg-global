@@ -7,31 +7,46 @@
     <meta name="template" content="home-page"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="canonical" href="https://www.lg.com/uk/"/>
-    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-732643dbb995c59fad88fa1792064411-lc.min.css" type="text/css">
-    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.css" type="text/css">
-    <link rel="stylesheet" href="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-site.lc-82f6622c2ebf5806b333c076aff87384-lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
     <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
     <link rel="stylesheet" href="../../../layout.css">
-    <script src="https://assets.adobedtm.com/322f63b58a72/0cfd3b7df536/launch-baef262771e5-development.min.js" async></script>
-    <script src="https://publish-p86205-e863024.adobeaemcloud.com/etc.clientlibs/lge/clientlibs/clientlib-dependencies.lc-d41d8cd98f00b204e9800998ecf8427e-lc.min.js"></script>
+    <script src="../../../launch-development.min.js"></script>
     <script src="../../../layout.js"></script>
 </head>
 
 <body>
-<header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
-    <nav class="c-header__gnb">
-        <ul class="c-header__gnb__list">
-            <li class="c-header__gnb__list__item"><a href="#" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Story</a></li>
-            <li class="c-header__gnb__list__item"><a href="#" class="c-header__gnb__list__item__anchor">Brand in Action</a></li>
-            <li class="c-header__gnb__list__item"><a href="#" class="c-header__gnb__list__item__anchor">Brand Elements</a></li>
-        </ul>
-    </nav>
-    <button type="button" class="c-header__btn-gnb">
-        <span class="c-header__btn-gnb__bar"></span>
-        <span class="c-header__btn-gnb__bar"></span>
-    </button>
-</header>
+    <header id="header" class="c-header">
+        <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+        <nav class="c-header__gnb">
+            <ul class="c-header__gnb__list">
+                <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor ">Brand Story</a></li>
+                <li class="c-header__gnb__list__item"><a href="https://www.naver.com" onclick="initGnbDeps2(this); return false" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Elements</a>
+                    <div class="c-header__gnb__list__item__deps2">
+                        <ul class="c-header__gnb__list__item__deps2__menu">
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Logo</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0003/brand_colors.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Colour &amp; Gradients</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0004/brand_tagline.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Tagline</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Photography</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0006/brand_design_system.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Design System</a></li>
+                        </ul>
+                        <ul class="c-header__gnb__list__item__deps2__visual">
+                            <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-logo.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                            <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-gradients.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                            <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-tagline.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                            <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-photography.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                            <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-design-system.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="c-header__gnb__list__item"><a href="../BS0007/brand_in_action.html" class="c-header__gnb__list__item__anchor">Brand in Action</a></li>
+            </ul>
+        </nav>
+        <p class="c-header__location">Logo</p>
+        <button type="button" class="c-header__btn-gnb">
+            <span class="c-header__btn-gnb__bar"></span>
+            <span class="c-header__btn-gnb__bar"></span>
+        </button>
+    </header>
 <div id="container" class="c-container">
     <main id="contents" class="c-contents">
         <!-- [code component area start] -->
@@ -53,17 +68,19 @@
             }
 
             .brand__header {
-                margin-bottom: 124px;
+                margin-bottom: 68px;
             }
             .brand__header-title {
                 font-size: 72px;
-                line-height: 1.1;
+                line-height: 76px;
                 font-weight: 300;
                 margin: 120px 0 48px;
                 text-align: center;
             }
+
             .brand__header-title + .brand__header-description {
                 font-size: 20px;
+                line-height: 28px;
                 text-align: center;
             }
             .brand__content-inner {
@@ -95,10 +112,51 @@
                 transform: translate(-50%, -50%);
             }
 
+            /*download assets*/
+            .download_assets {
+                position: absolute;
+                bottom: 66px;
+                left: 40px;
+                background: rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                padding: 12px 136px 12px 12px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+            }
+            .download_assets__thumb {
+                display: block;
+                width: 80px;
+                height: 80px;
+            }
+            .download_assets__title {
+                color: #fff;
+                font-size: 16px;
+                margin-left: 20px;
+            }
+            .download_assets__title b {
+                display: block;
+                font-weight: 600;
+            }
+            .download_assets__btn {
+                position: absolute;
+                display: block;
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                border: 1px solid #cbc8c24d;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: no-repeat center url(../../mocks/BS0002/icon_download_btn.svg);
+                background-size: 22px 22px;
+            }
+
             .logo__container {
                 position: relative;
-                /* height: 43.23vw; */
-                height: 830px;
+                height: 43.23vw;
+                /* height: 830px; */
                 width: 100%;
                 border-radius: 30px;
             }
@@ -108,14 +166,18 @@
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
+                width: 100%;
             }
             .logo__bottom-cont__title {
                 color: #fff;
                 font-size: 28px;
+                line-height: 34px;
+                margin-bottom: 9px;
             }
             .logo__bottom-cont__desc {
                 color: #fff;
                 font-size: 15px;
+                line-height: 21px;
             }
 
             .logo__container--primary {
@@ -138,7 +200,6 @@
                 align-items: center;
                 justify-content: center;
                 position: relative;
-                padding: 0 18px;
                 overflow: hidden;
             }
             .logo__container__spacing-img {
@@ -159,8 +220,9 @@
 
             .logo__container--logoplay {
                 display: flex;
-                align-items: center;
                 justify-content: center;
+                box-sizing: border-box;
+                padding: 5.42vw 0 8.39vw;
             }
             .logo__container__logoplay-image {
                 max-width: 617px;
@@ -183,7 +245,8 @@
                 overflow: hidden;
             }
             .btmdot-slide__slide__inner {
-                height: 830px;
+                /* height: 830px; */
+                height: 43.23vw;
                 width: 100%;
                 padding: 0;
                 margin: 0;
@@ -219,6 +282,7 @@
                 display: block;
                 width: 32px;
                 height: 32px;
+                padding: 0;
                 border-radius: 50%;
                 cursor: pointer;
                 background: no-repeat center;
@@ -266,40 +330,59 @@
             /*tab*/
             .tab-menu__container {
                 text-align: center;
-                margin-top: -68px;
+                margin-top: -3px;
             }
 
             .tab-menu__list {
+                position: relative;
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
+                height: 50px;
+            }
+            .tab-menu__list::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: calc(100% + 18px);
+                height: calc(100% + 18px);
                 background-color: #F0ECE4;
-                border-radius: 53px;
-                padding: 9px;
+                border-radius: 400px;
             }
 
             .tab-menu__btn {
+                z-index: 2;
                 width: 200px;
+                height: 100%;
                 background-color: transparent;
-                border-radius: 400px;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
                 font-weight: 400;
                 font-size: 15px;
                 text-decoration: none;
             }
 
             .tab-menu__btn--active {
-                background-color: #fff;
                 font-weight: 600;
             }
-
-
-            .tab-container {margin-top: 97px;}
+            .tab-menu__bg {
+                z-index: 1;
+                display: block;
+                position: absolute;
+                width: 200px;
+                height: 100%;
+                border-radius: 400px;
+                left: 0;
+                background-color: #fff;
+                transition: left .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .tab-container {margin-top: 72px;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
+
 
             /*logo suite*/
             .logosuite {
@@ -340,7 +423,7 @@
             .brand-elements__header-title {
                 margin: 0 auto;
                 font-size: 44px;
-                line-height: 1.2;
+                line-height: 52px;
             }
             .brand-elements__header-title__sub {
                 display: block;
@@ -348,7 +431,7 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 70px -120px 0;
+                margin: 76px -120px 0;
                 padding: 0;
             }
             .brand-elements__controller {
@@ -370,6 +453,7 @@
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
                 border-radius: 50%;
                 opacity: 1;
             }
@@ -406,7 +490,8 @@
                 background: no-repeat center;
                 background-size: cover;
                 background-color: #F0ECE4;
-                transition: .5s;
+                overflow: hidden;
+                box-sizing: border-box;
                 overflow: hidden;
             }
             .brand-elements__slide.brand-elements__slide--logo {
@@ -418,19 +503,7 @@
             .brand-elements__slide.brand-elements__slide--tagline {
                 background-image: url(../../mocks/BS0002/whats-next-tagline-d.png);
             } 
-            .brand-elements__slide.brand-elements__slide--photography::before {
-                content: '';
-                position: absolute;
-                top: 47%;
-                left: 50%;
-                width: 100%;
-                height: 100%;
-                border-radius: 14px;
-                transform: translate(-50%, -50%) scale(0.67);
-                background: no-repeat center url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
-                transition: .5s;
-                background-size: cover;
-            } 
+
             .brand-elements__slide.brand-elements__slide--design {
                 background-image: url(../../mocks/BS0002/whats-next-colour-design-system-d.png);
             } 
@@ -443,27 +516,55 @@
                 padding: 26px 32px 28px;
                 display: flex;
                 align-items: center;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             
-            .brand-elements__slide:hover.brand-elements__slide--logo {
+            .brand-elements__slide::before {
+                content: '';
+                position: absolute;
+                top: 50%; left: 50%;
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
+                transform: translate(-50%, -50%);
+                background: no-repeat center;
+                background-size: contain;
+                opacity: 0;
+                border-radius: 14px;
+                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .brand-elements__slide.brand-elements__slide--photography::before {
+                top: 47%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.67);
+                background-image: url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
+                transition: all .5s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 1;
+            } 
+
+            .brand-elements__slide:hover:before {
+                opacity: 1;
+            }
+            
+            .brand-elements__slide.brand-elements__slide--logo::before {
                 background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
             } 
-            .brand-elements__slide:hover.brand-elements__slide--color {
+            .brand-elements__slide.brand-elements__slide--color::before {
                 background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
             } 
-            .brand-elements__slide:hover.brand-elements__slide--tagline {
+            .brand-elements__slide.brand-elements__slide--tagline::before {
                 background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
             } 
             .brand-elements__slide:hover.brand-elements__slide--photography::before {
                 top: 50%;
                 transform: translate(-50%, -50%) scale(1);
             } 
-            .brand-elements__slide:hover.brand-elements__slide--design {
+            .brand-elements__slide.brand-elements__slide--design::before {
                 background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
             } 
             .brand-elements__slide:hover .brand-elements__item-title {
                 background: rgba(38, 38, 38, 0.26);
                 backdrop-filter: blur(17px);
+                -webkit-backdrop-filter: blur(17px);
                 color: #fff;
             }
 
@@ -476,6 +577,7 @@
 
                 .brand__header-title {
                     font-size: 64px;
+                    line-height: 68px;
                 }
 
                 .brand__header-title + .brand__header-description br {
@@ -486,35 +588,19 @@
                     padding: 0 20px 34px;
                 }
 
-
-                /*logo-container*/
-                .logo__container {
-                    height: 53.23vw;
-                    min-height: 336px;
-                }
-                .logo__bottom-cont {
-                    bottom: 16px;
-                }
-                .logo__bottom-cont__title {
-                    font-size: 16px;
-                }
-                .logo__bottom-cont__desc {
-                    font-size: 12px;
-                }
-                .logo__container--logoplay {
-                    box-sizing: border-box;
-                    padding: 20px;
-                }
-
-
                 /*btmdot-slide*/
                 .btmdot-slide__slide__inner {
                     height: 53.23vw;
                     min-height: 336px;
                 }
-
-
-                /*logo suite*/
+                .logo__container--spacing {
+                    height: 53.23vw;
+                    min-height: 336px;
+                }
+                .logo__container {
+                    height: 53.23vw;
+                    min-height: 336px;
+                }
 
 
 
@@ -529,26 +615,23 @@
                     right: 20px;
                 }
 
-                .brand-elements__item-title {
-                    font-size: 16px;
-                    padding: 16px;
-                }
             }
 
             @media (max-width: 768px) {
                 /*공통*/
                 .brand__header {
-                    margin-bottom: 34px;
+                    margin-bottom: 40px;
                 }
                 .brand__header-title {
                     font-size: 36px;
-                    line-height: 1.1;
+                    line-height: 44px;
                     font-weight: 300;
-                    margin: 80px 0 16px;
+                    margin: 64px 0 16px;
                     text-align: center;
                 }
                 .brand__header-title + .brand__header-description {
                     font-size: 16px;
+                    line-height: 24px;
                     text-align: center;
                 }
 
@@ -557,8 +640,12 @@
                     height: 117.33vw;
                 }
                 #visual-logo.visual__top::before {
-                    min-width: 275px;
-                    min-height: 150px;
+                    width: 73.33vw;
+                    height: 40vw;
+                }
+                /*download assets*/
+                .download_assets {
+                    display: none;
                 }
 
                 /*logo-container*/
@@ -566,6 +653,23 @@
                     height: 90vw;
                     border-radius: 10px;
                 }
+                .logo__bottom-cont {
+                    bottom: 16px;
+                }
+                .logo__bottom-cont__title {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-bottom: 4px;
+                }
+                .logo__bottom-cont__desc {
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .logo__container--primary::before {
+                    width: 69.62vw;
+                    height: 35.27vw;
+                }
+
                 
                 .logo__container--logoplay, 
                 .logo__container--logosuite {
@@ -617,29 +721,46 @@
                 }
                 .tab-menu__list {
                     width: 100%;
-                    padding: 8px;
+                    height: 40px;
                 }
                 .tab-menu__btn {
-                    width: auto;
                     flex: 1;
-                    height: 40px;
                     font-size: 14px;
                 }
                 .tab-container {margin-top: 24px;}
 
                 /*logo suite*/
-
-                .logosuite {
-                    grid-template-columns: repeat(3, 1fr);
+                .logo__container--logoplay {
+                    align-items: unset;
+                    padding-top: 20px;
+                } 
+                .logo__container__logoplay-image {
+                    max-width: 72.27vw;
+                    max-height: 72.27vw;
                 }
-                .logosuite__item:nth-child(n + 7) {
+                .logo__container--logosuite {
+                    padding:20px;
+                }
+                .logosuite {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 0;
+                    width: 100%; 
+                    height: 100%;
+                }
+                .logosuite__item {
+                    justify-content: center;
+                }
+                .logosuite__item:nth-child(n + 5) {
                     display: none;
                 }
                 .logosuite__label {
-
+                    display: none;
                 }
                 .logosuite__img {
-                    
+                    width: 100%;
+                    height: 100%;
+                    min-width: 37.07vw;
+                    min-height: 37.07vw;
 
                 }
 
@@ -651,6 +772,7 @@
                 }
                 .brand-elements__header-title {
                     font-size: 28px;
+                    line-height: 36px;
                 }
                 .brand-elements__slider {
                     margin: 24px -20px 0;
@@ -669,8 +791,8 @@
                     position: absolute;
                     bottom: 0;
                     width: 100%;
-                    font-size: 28px;
-                    padding: 26px 32px 28px;
+                    font-size: 17px;
+                    padding: 16px 19px;
                     display: flex;
                     align-items: center;
                 }
@@ -683,7 +805,14 @@
         <!-- html code -->
         <div id="brand-container">
             <div id="visual-logo" class="visual__top">
-                
+                <div class="download_assets">
+                    <img src="../../mocks/BS0002/download_assets_logo.png" alt class="download_assets__thumb"></img>
+                    <p class="download_assets__title">
+                        <b>LG Logo</b>
+                        Download Assets
+                    </p>
+                    <a class="download_assets__btn" href="#" download></a>
+                </div>
             </div>
             <div class="brand__content-inner">
                 <div class="brand__header">
@@ -740,6 +869,7 @@
                 </div>
                 <div class="tab-menu__container">
                     <div class="tab-menu__list" data-tab="partnership">
+                        <span class="tab-menu__bg"></span>
                         <a href="#clearspace" class="tab-menu__btn tab-menu__btn--active">Clearspace</a>
                         <a href="#partnerships" class="tab-menu__btn">Brand partnerships</a>
                     </div>
@@ -767,6 +897,7 @@
                 </div>
                 <div class="tab-menu__container">
                     <div class="tab-menu__list" data-tab="logoPlay">
+                        <span class="tab-menu__bg"></span>
                         <a href="#logoplay" class="tab-menu__btn tab-menu__btn--active">Logo</a>
                         <a href="#logosuite" class="tab-menu__btn">Logo Suite</a>
                     </div>
@@ -899,6 +1030,8 @@
                 const swiper = new Swiper(slideWrap, {
                     slidesPerView: 1,
                     spaceBetween: 30,
+                    speed: 500,
+                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
                     pagination: {
                         el: ".btmdot-slide__pagination",
                         clickable: true,
@@ -921,21 +1054,64 @@
             }
 
             function tabFunc() {
-                const tabBtn = document.querySelectorAll('.tab-menu__btn')
+                const tabIndexAll = document.querySelectorAll('.tab-menu__list')
+                const bgAll = document.querySelectorAll('span.tab-menu__bg')
 
-                tabBtn.forEach((btn, idx) => {
-                    btn.addEventListener('click', function(e) {
-                        e.preventDefault()
+                tabIndexAll.forEach((tab) => {
+                    const buttons = tab.querySelectorAll('.tab-menu__btn')
 
-                        let targetTag = this.parentElement.parentElement.dataset.tab
-                        let tabContainer = document.querySelector(`.tab-container[data-tab="${targetTag}"]`)
+                    buttons.forEach((btn, idx) => {
+                        btn.addEventListener('click', function(e) {
+                            e.preventDefault()
 
-                        let tabId = this.getAttribute('href')
-                        let tabTarget = document.querySelector(tabId)
-                        
-                        setClass(tabTarget, 'tab-container__content--active') 
-                        setClass(this, 'tab-menu__btn--active')
+                            let targetTag = this.parentElement.dataset.tab
+                            let tabContainer = document.querySelector(`.tab-container[data-tab="${targetTag}"]`)
 
+
+                            let tabId = this.getAttribute('href')
+                            let tabTarget = document.querySelector(tabId)
+                            let tabBg = this.parentElement.querySelector('span.tab-menu__bg')
+                            
+                            setClass(tabTarget, 'tab-container__content--active') 
+                            setClass(this, 'tab-menu__btn--active')
+
+                            setBgPosX(this, tabBg)
+                        })
+                    })
+                })
+
+                function setBgPosX(btn, target) {
+                    let btns = Array.from(btn.parentElement.querySelectorAll('.tab-menu__btn'));
+                    let idx = btns.indexOf(btn);
+
+                    let previousButtons = btns.slice(0, idx);
+
+                    let totalWidth = previousButtons.reduce((total, currentButton) => {
+                        return total + currentButton.offsetWidth;
+                    }, 0);
+
+                    target.style.left = `${totalWidth}px`
+                }
+
+                function setBgWidth() {
+                    tabIndexAll.forEach(tab => {
+                        const tarWidth = tab.querySelector('.tab-menu__btn--active').offsetWidth
+                        const bg = tab.querySelector('.tab-menu__bg')
+
+                        bg.style.width = `${tarWidth}px`
+                    })
+                }
+
+                setBgWidth()
+
+                window.addEventListener('resize', ()=> {
+                    if(window.innerWidth < 769 ) {setBgWidth()}
+                    else {bgAll.forEach(bgs => bgs.style.width = '')}
+
+                    tabIndexAll.forEach((tab) => {
+                        const tabBg = tab.querySelector('span.tab-menu__bg')
+                        const btn = tab.querySelector('.tab-menu__btn--active')
+                        setBgPosX(btn, tabBg)
                     })
                 })
             }
@@ -948,6 +1124,7 @@
                     spaceBetween: 20,
                     slidesOffsetBefore: 20,
                     slidesOffsetAfter: 20,
+                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
                     navigation: {
                         nextEl: '.brand-elements__controller .swiper-button-next',
                         prevEl: '.brand-elements__controller .swiper-button-prev',

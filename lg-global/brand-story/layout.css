@@ -18,6 +18,7 @@ ul,ol {
     border-radius: 400px;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 .c-header__tit {
     width: 63px;
