@@ -167,6 +167,7 @@ ul,ol {
     white-space: nowrap;
     background-color: rgba(0, 0, 0, 0.7);
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 
@@ -197,6 +198,7 @@ ul,ol {
         border-radius: 0px;
         background-color: transparent;
         backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
     }
     .c-header__tit {
         width: 160px;
@@ -207,6 +209,7 @@ ul,ol {
         border-radius: 400px;
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
         line-height: 0;
     }
     .c-header__tit__logo {
@@ -224,6 +227,7 @@ ul,ol {
         border-radius: 20px;
         background-color: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(27px);
+        -webkit-backdrop-filter: blur(27px);
         transform: translateY(100vh);
         transition: 0.3s ease transform;
     }
