@@ -2096,61 +2096,61 @@
                 let isAnimationStart = false
                 let checker = false
 
-                marqueeTopEl.forEach((item, index) => {
-                    let tl = marqueeMotionSet(item, -100)
-                    tlTop.push(tl)
-                })
-
-                marqueeBottomEl.forEach((item, idx) => {
-                    let distance = item.clientWidth;
-                    gsap.set(marqueeBottom, {x: -distance})
-                    
-                    let tl = marqueeMotionSet(item, 100)
-                    tlBottom.push(tl)
-                })
-                
+                                
                 function marqueeMotionSet(item, xPer) {
                     let distance = item.clientWidth;
-
-                    const tl = new gsap.timeline({ });
+                    const tl = gsap.timeline({});
                     tl.to(item, 30, {
                         ease: "none",
                         xPercent: xPer,
                         modifiers: {
-                            x: gsap.utils.unitize(x => parseFloat(x) % distance) //force x value to be between 0 and 500 using modulus
+                            x: gsap.utils.unitize(x => parseFloat(x) % distance)
                         },
                         repeat: -1
                     });
+
+                    return tl; // Return the timeline
                 }
 
-                function animationRun(bool) {
-                    if (isAnimated) {
-                        tlTop.forEach(tt => {tt.restart()})
-                        tlBottom.forEach(tb => tb.restart())
-                    } else {
-                        tlTop.forEach(tt => {tt.pause()})
-                        tlBottom.forEach(tb => tb.pause())
-                    }
-                }
+               marqueeTopEl.forEach((item, index) => {
+                    let tl = marqueeMotionSet(item, -100);
+                    tlTop.push(tl);
+                });
+
+                marqueeBottomEl.forEach((item, idx) => {
+                    // let distance = item.clientWidth;
+                    // gsap.set(marqueeBottom, {x: -distance});
+
+                    let tl = marqueeMotionSet(item, 100);
+                    tlBottom.push(tl);
+                });
+
+                tlTop.forEach(tl => tl.pause());
+                tlBottom.forEach(tl => tl.pause());
 
                 let winY = window.pageYOffset
+
+                function setXpos() {
+                    let fullWidth = ''
+                    const li = marqueeBottom.querySelectorAll('li')
+                    marqueeTop.style.transform = `translateX(${marquee.getBoundingClientRect().width}px)`
+
+                    li.forEach(el, idx => {
+                        fullWidth += el.getBoundingClientRect().width 
+                    })
+                    marqueeBottom.style.transform = `translateX(-${fullWidth}px)`
+                }
+
+                setXpos()
 
                 window.addEventListener('scroll', ()=> {
                     winY = window.pageYOffset
 
-                    if (offsetTop < winY) {
-                        isAnimationStart = true
-                    } else {
-                        isAnimationStart = false
+                    if (offsetTop - (window.innerHeight / 2) < winY) {
+                        console.log('지금!')
+
                     }
 
-                    //1. 현재 화면이 top을 넘었을 때
-                    //1-1. 등장모션: opacity: 1, transtitionX: 0
-                    //1-2. animation start
-                    
-                    //2. 현재 화면이 top보다 작을 때,
-                    //2-1. pause
-                    //2-2. 그 다음 opacity : 0, transitionX: 윈도우 바깥으로
                 })
 
             }

@@ -39,7 +39,15 @@
                 height: 100vh;
                 overflow: hidden;
             }
-            .landing__video {
+            .landing__visual {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+            }
+            .landing__bg-items {
                 position: absolute;
                 left: 50%;
                 top: 50%;
@@ -47,6 +55,10 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                display: none;
+            }
+            .landing__bg-items--active {
+                display: block;
             }
 
             .landing__bottom {
@@ -120,9 +132,13 @@
         <!-- html code -->
 
         <div class="landing__container">
-            <video class="landing__video" muted="muted" loop="loop" autoplay>
-                <source src="../../mocks/BS0008/lifes-good-lg-video.mp4" type="video/mp4">
-            </video>
+
+            <div class="landing__visual">
+                <img class="landing__bg-items landing__bg-items--active" src="../../mocks/BS0008/lifes-good-lg-video-d.png" alt="">
+                <video class="landing__bg-items " muted="muted" loop="loop">
+                    <source src="../../mocks/BS0008/lifes-good-lg-video.mp4" type="video/mp4">
+                </video>
+            </div>
             <div class="landing__bottom">
                 <p class="landing__text">
                     <b class="landing__bold">Welcome to our brand site</b><br>

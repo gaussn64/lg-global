@@ -1133,7 +1133,13 @@
                 }
             }
             @media (max-width: 768px) {
-
+                .landing-visual__scrolldown {
+                    bottom: 20px;
+                }
+                .landing-visual__scrolldown__btn {
+                    width: 63px;
+                    height: 89px;
+                }
 
                 /* brand story - brand symbol */
                 .brand-symbol__logo::before {
@@ -1701,7 +1707,6 @@
         <script>
             gsap.registerPlugin(ScrollTrigger);
             const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
-            // const getRemainingElements = (array, element) => {return array.filter(item => item !== element)}
             const setClass = (el, className) => {
                 const sibs = siblings(el)
 
@@ -1991,11 +1996,14 @@
                     }
                 })
 
+                window.addEventListener("resize", function() {
+                    ScrollTrigger.refresh();
+                });
+
                 function textView() {
                     motionTargets.forEach((el, i) => {
                         gsap.set(el, {opacity: 1, y: 0})
                     })
-                    
                 }
 
                 function reverse() {
@@ -2113,6 +2121,13 @@
                         }
                     },
                 })
+
+
+                window.addEventListener("resize", function() {
+                    ScrollTrigger.refresh();
+                });
+
+                
             }
             function marquee() {
                 const marquee = document.querySelector('.parallex-visual__marquee')
