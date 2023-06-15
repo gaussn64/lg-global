@@ -72,13 +72,15 @@ function initGnbDeps2(tAnchor) {
     var tDeps2MenuItemOrgIndex = getElementIndex(document.querySelector(".c-header__gnb__list__item__deps2__menu__item__anchor--active").parentNode);
     var tDeps2Visual = tDeps2.querySelector(".c-header__gnb__list__item__deps2__visual");
     var tDeps2VisualItem = tDeps2Visual.querySelectorAll(".c-header__gnb__list__item__deps2__visual__item");
-        tDeps2VisualItem[tDeps2MenuItemOrgIndex].classList.add("c-header__gnb__list__item__deps2__visual__item--active")
+        tDeps2VisualItem[tDeps2MenuItemOrgIndex].classList.add("c-header__gnb__list__item__deps2__visual__item--active");
+    var gnbDeps2Bg = document.querySelector(".gnb__deps2__bg");
 
     if(tAnchor.className.indexOf("--active") < 0) {
         tList.querySelectorAll(".c-header__gnb__list__item").forEach(function(restItem) {
             restItem.querySelector("a").classList.remove("c-header__gnb__list__item__anchor--active")
         })
         tAnchor.classList.add("c-header__gnb__list__item__anchor--active")
+        gnbDeps2Bg.style.display = "block"
     }
 
     if(tAnchor.className.indexOf("--on") < 0) {
@@ -112,6 +114,7 @@ function initGnbDeps2(tAnchor) {
     tDeps2.onmouseleave = function() {
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
         tList.querySelectorAll(".c-header__gnb__list__item")[tDeps2MenuItemOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
+        gnbDeps2Bg.style.display = "none"
 
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
     }

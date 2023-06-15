@@ -177,7 +177,7 @@
             }
             .core-value {
                 width: 100%;
-                height: 300vh;
+                height: 150vh;
                 text-align: center;
             }
             .core-value__start {
@@ -266,8 +266,30 @@
                 line-height: 1.7708vw;
                 font-weight: 400;
             }
+            .core-value__progress {
+                position: absolute;
+                z-index: 10;
+                top: 92.5926vh;
+                left: calc(50% - 5.8333vw);
+                width: 11.6667vw;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .core-value__progress--fixed {
+                position: fixed;
+                top: auto;
+                bottom: 7.4074vh;
+            }
+            .core-value__progress__bar {
+                width: 0%;
+                height: 2px;
+                background-color: black;
+            }
 
             /* Menu Introduce */
+            .menu-introduce__wrap {
+                position: relative;
+            }
             .menu-introduce__inner {
                 display: flex;
                 flex-wrap: nowrap;
@@ -416,6 +438,25 @@
             .menu-introduce__photos__item4-2__video {
                 -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce4-2.svg);
                 mask-image: url(../../mocks/ST0001/mask-menu-introduce4-2.svg);
+            }
+            .menu-introduce__progress {
+                position: absolute;
+                z-index: 10;
+                top: 92.5926vh;
+                left: calc(50% - 5.8333vw);
+                width: 11.6667vw;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .menu-introduce__progress--fixed {
+                position: fixed;
+                top: auto;
+                bottom: 7.4074vh;
+            }
+            .menu-introduce__progress__bar {
+                width: 0%;
+                height: 2px;
+                background-color: black;
             }
 
             /* Reports */
@@ -764,6 +805,9 @@
                         <small class="core-value__txt__item__small">For a diverse, equal society</small>
                     </li>
                 </ul>
+                <div class="core-value__progress">
+                    <div class="core-value__progress__bar"></div>
+                </div>
             </div>
             <div class="menu-introduce__wrap">
                 <div class="menu-introduce__inner">
@@ -880,6 +924,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="menu-introduce__progress">
+                    <div class="menu-introduce__progress__bar"></div>
                 </div>
             </div>
             <div class="reports">
@@ -1095,10 +1142,10 @@
                     let coreValueMediaItem = coreValueMedia.querySelectorAll(".core-value__media__item");
                     let coreValueTxt = coreValueWrap.querySelector(".core-value__txt");
                     let coreValueTxtItem = coreValueWrap.querySelectorAll(".core-value__txt__item");
+                    let coreValueProgress = coreValueWrap.querySelector(".core-value__progress");
+                    let coreValueProgressBar = coreValueProgress.querySelector(".core-value__progress__bar");
 
-                    const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
-
-                    gsap.to(coreValueInner, {
+                    let tl = gsap.timeline({
                         scrollTrigger: {
                             trigger: ".core-value__inner",
                             start: "top top",
@@ -1109,6 +1156,7 @@
                                 coreValueMedia.style.position = "fixed"
                                 coreValueTxt.style.position = "fixed"
                                 coreValueMedia.style.zIndex = ""
+                                coreValueProgress.classList.add("core-value__progress--fixed")
                             },
                             onLeaveBack: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
@@ -1116,16 +1164,18 @@
                                 coreValueMedia.style.position = ""
                                 coreValueTxt.style.position = ""
                                 coreValueMedia.style.zIndex = ""
+                                coreValueProgress.classList.remove("core-value__progress--fixed")
                             },
                             onLeave: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.style.position = ""
                                 coreValueMedia.style.top = "auto",
-                                coreValueMedia.style.bottom = "26.0185vh",
+                                coreValueMedia.style.bottom = "26.0185vh"
                                 coreValueMedia.style.zIndex = "9"
                                 coreValueTxt.style.position = ""
                                 coreValueTxt.style.top = "auto"
-                                coreValueTxt.style.bottom = "16.7593vh"
+                                coreValueTxt.style.bottom = "calc(21.7593vh - 60px)"
+                                coreValueProgress.style.position = "absolute"
                             },
                             onEnterBack: function() {
                                 coreValueStart.classList.add("core-value__start--active")
@@ -1135,15 +1185,20 @@
                                 coreValueTxt.style.position = "fixed"
                                 coreValueTxt.style.top = ""
                                 coreValueTxt.style.bottom = ""
+                                coreValueProgress.style.position = ""
+                            },
+                            onUpdate: function(self) {
+                                coreValueProgressBar.style.width = (self.progress)*100 + "%"
                             }
                         }
                     });
 
+                    const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
                     panels.forEach(function(valueBox,i) {
                         let tl = gsap.timeline({
                             scrollTrigger: {
                                 trigger: coreValueInner,
-                                start: () => "+=" + window.innerHeight*3*(i+1),
+                                start: () => "+=" + window.innerHeight*(i+1),
                                 end: () => "+=" + window.innerHeight,
                                 scrub: true,
                                 anticipatePin: 1
@@ -1155,8 +1210,8 @@
                     txtTL1 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[0],
-                            start: () => cvwOfsTop + (window.innerHeight+cvmHeight),
-                            end: () => "bottom bottom",
+                            start: () => cvwOfsTop,
+                            end: () => "+=" + (window.innerHeight/2),
                             scrub: true
                         }
                     })
@@ -1168,8 +1223,8 @@
                     txtTL2 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[1],
-                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*2),
-                            end: () => "bottom bottom",
+                            start: () => cvwOfsTop + window.innerHeight,
+                            end: () => "+=" + (window.innerHeight/2),
                             scrub: true
                         }
                     })
@@ -1181,8 +1236,8 @@
                     txtTL3 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[2],
-                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*3),
-                            end: () => "bottom bottom",
+                            start: () => cvwOfsTop + window.innerHeight*2,
+                            end: () => "+=" + (window.innerHeight/2),
                             scrub: true
                         }
                     })
@@ -1194,8 +1249,8 @@
                     txtTL4 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[3],
-                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*4),
-                            end: () => "bottom bottom",
+                            start: () => cvwOfsTop + window.innerHeight*3,
+                            end: () => "+=" + (window.innerHeight/2),
                             scrub: true
                         }
                     })
@@ -1210,7 +1265,11 @@
 
                     let triggerWrap = document.querySelector(".menu-introduce__wrap");
                     let triggerList = document.querySelector(".menu-introduce__inner");
+                    let triggetItem = document.querySelector(".menu-introduce");
+                    let tweenWrap;
                     let tween;
+                    let menuIntroduceProgress = triggerWrap.querySelector(".menu-introduce__progress");
+                    let menuIntroduceProgressBar = triggerWrap.querySelector(".menu-introduce__progress__bar");
 
                     const panels = gsap.utils.toArray(".menu-introduce__inner .menu-introduce");
                     //console.log(panels.length)
@@ -1228,6 +1287,22 @@
                                 duration: {min: 0.3, max: 0.3}
                             },
                             end: () =>  "+=" + (triggerList.offsetWidth - innerWidth),
+                            onEnter: function() {
+                                console.log("enter")
+                                menuIntroduceProgress.classList.add("menu-introduce__progress--fixed")
+                            },
+                            onLeaveBack: function() {
+                                menuIntroduceProgress.classList.remove("menu-introduce__progress--fixed")
+                            },
+                            onLeave: function() {
+                                menuIntroduceProgress.style.position = "absolute"
+                            },
+                            onEnterBack: function() {
+                                menuIntroduceProgress.style.position = ""
+                            },
+                            onUpdate: function(self) {
+                                menuIntroduceProgressBar.style.width = (self.progress)*100 + "%"
+                            }
                         }
                     });
                 },
