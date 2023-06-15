@@ -127,16 +127,39 @@
                 font-weight: 400;
                 width: 100%;
             }
-            .brand-film__next {
+
+            .landing-visual__scrolldown {
                 position: absolute;
-                left: 50%;
-                bottom: 3.26vw;
-                transform: translateX(-50%);
-                display: block;
-                width: 3.70vw;
-                height: 5.22vw;
-                background: url(../../mocks/BS0001/main_visual_scroll_down.svg) no-repeat center;
-                background-size: contain;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                z-index: 2;
+                text-align: center;
+            }
+            .landing-visual__scrolldown__btn {
+                width: 3.5417vw;
+                height: 5vw;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/BS0001/main_visual_scroll_down.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+            }
+            .landing-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
             }
 
             /* brand story - brand symbol */
@@ -1111,10 +1134,6 @@
             }
             @media (max-width: 768px) {
 
-                .brand-film__next {
-                    width: 63px;
-                    height: 89px;
-                }
 
                 /* brand story - brand symbol */
                 .brand-symbol__logo::before {
@@ -1369,7 +1388,9 @@
                     <source src="../../mocks/BS0001/20230322_LG_BrandfilmMaster_48_IntroClean.mp4" type="video/mp4">
                 </video>
                 <h2 class="brand-film__text">We’re bringing a smile back to tech</h2>
-                <a class="brand-film__next" href="#brand-symbol"></a>
+                <div class="landing-visual__scrolldown">
+                    <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="brand-symbol" id="brand-symbol">
                 <div class="brand-symbol__bg"></div>
@@ -1673,8 +1694,10 @@
         </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/ScrollTrigger.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+
         <script>
             gsap.registerPlugin(ScrollTrigger);
             const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
@@ -1687,6 +1710,22 @@
                 }
 
                 el.classList.add(className)
+            }
+
+            function visualScrollDown() {
+                let visual = document.querySelector(".brand-film");
+                let vScrolldownWrap = visual.querySelector(".landing-visual__scrolldown");
+                let btnScrolldown = vScrolldownWrap.querySelector(".landing-visual__scrolldown__btn");
+
+                btnScrolldown.onclick = function() {
+                    TweenMax.to(window, 0.3, {
+                        "scrollTo": window.innerHeight
+                    },{
+                        ease: Power1.easeOut,
+                        autoKill: true,
+                        overwrite: 5
+                    })
+                }
             }
 
             function brandMission() {
@@ -2157,8 +2196,7 @@
             }
 
             window.addEventListener('DOMContentLoaded', () => {
-                console.clear();
-
+                visualScrollDown()
                 colorModeChange()//전체 배경색 바꾸기
                 logoFixed() 
                 brandMission() 

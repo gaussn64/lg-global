@@ -85,6 +85,7 @@ ul,ol {
     background: rgba(0, 0, 0, 0.7);
     border-radius: 40px;
 }
+
 .c-header__gnb__list__item__anchor--on + .c-header__gnb__list__item__deps2 {
     display: grid;
 }
