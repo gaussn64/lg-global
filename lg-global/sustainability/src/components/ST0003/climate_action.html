@@ -16,7 +16,7 @@
 
 <body>
 <header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
@@ -89,6 +89,40 @@
                 height: 100vh;
                 object-fit: cover;
             }
+            .climate-action-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .climate-action-visual__scrolldown__btn {
+                width: 3.5417vw;
+                height: 5vw;
+                text-align: left;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0003/climate-action-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+            }
+            .climate-action-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+              }
 
             /* Climate Action About */
             .climate-action-about {
@@ -779,6 +813,9 @@
                     <span class="climate-action-visual__tit__txt">Big steps. Little carbon.</span>
                 </h2>
                 <video src="../../mocks/ST0003/video-climate-action-visual.mp4" class="climate-action-visual__video" autoplay loop muted></video>
+                <div class="climate-action-visual__scrolldown">
+                    <button type="button" class="climate-action-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="climate-action-about">
                 <p class="climate-action-about__cont">
@@ -1094,6 +1131,21 @@
             var climateAction = climateAction || {};
                 
             climateAction = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".climate-action-visual");
+                    let vScrolldownWrap = visual.querySelector(".climate-action-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".climate-action-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
                 milestone: function() {
                     let milestone = document.querySelector(".milestone");
                     let milestoneGoalsNavi = milestone.querySelector(".milestone__goals-navi")
@@ -1262,6 +1314,7 @@
                     });
                 }
             }
+            climateAction.visualScrollDown()
             climateAction.milestone()
             climateAction.carbonEmissionReduction()
             climateAction.homeAppliancesManufacturingFactory()

@@ -16,7 +16,7 @@
 
 <body>
 <header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
@@ -91,7 +91,22 @@
                 cursor: pointer;
                 background: url(../../mocks/ST0001/landing-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
+                transform: translateY(0vh);
             }
+            .landing-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+              }
 
             /* Landing Introduce */
             .landing-introduce__wrap {
@@ -244,11 +259,12 @@
             .core-value__txt__item__strong {
                 font-size: 2.9167vw;
                 line-height: 3.1250vw;
-                font-weight: 300;
+                font-weight: 400;
             }
             .core-value__txt__item__small {
                 font-size: 1.4583vw;
                 line-height: 1.7708vw;
+                font-weight: 400;
             }
 
             /* Menu Introduce */
@@ -277,8 +293,7 @@
                 font-weight: 400;
             }
             .menu-introduce__cont__summary {
-                color: #75C66B;
-                font-weight: 400;
+                font-weight: 100;
                 font-size: 3.75vw;
                 line-height: 110%;
                 margin-top: 1.0417vw;
@@ -418,6 +433,7 @@
             }
             .reports__summary {
                 color: white;
+                font-weight: 100;
                 font-size: 3.75vw;
                 line-height: 120%;
                 margin-top: 1.1979vw;
@@ -449,8 +465,7 @@
                 line-height: 1;
             }
             .newsroom__summary {
-                color: #75C66B;
-                font-weight: 400;
+                font-weight: 100;
                 font-size: 3.75vw;
                 line-height: 110%;
                 margin-top: 1.0417vw;
@@ -983,12 +998,32 @@
             var landing = landing || {};
                 
             landing = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".landing-visual");
+                    let vScrolldownWrap = visual.querySelector(".landing-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".landing-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
                 introduce: function() {
                     const landingIntroduceWrap = document.querySelector(".landing-introduce__wrap");
                     const liwOfsTop = landingIntroduceWrap.offsetTop;
                     const landingIntroduce = landingIntroduceWrap.querySelectorAll(".landing-introduce");
                     var siblings = t => [...t.parentElement.children].filter(e => e != t);
+                    var liVIewIs = new Array();
                     
+
+                    landingIntroduce.forEach(function(liCont,liIdx) {
+                        liVIewIs[liIdx] = false
+                    })
                     
                     gsap.to(landingIntroduceWrap, {
                         scrollTrigger: {
@@ -1025,13 +1060,22 @@
 
                     function getCurrentSection() {
                         landingIntroduce.forEach(function(liCont,liIdx) {
-                            if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx)) {
+                            if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx) && scrollY <= liwOfsTop + ((window.innerHeight/2)*(liIdx+1)) && liVIewIs[liIdx] == false) {
                                 if(liCont.className.indexOf("landing-introduce--active") < 0) {
                                     for(var i=0; i < landingIntroduce.length; i++) {
                                         landingIntroduce[i].classList.remove("landing-introduce--active")
                                     }
                                     liCont.classList.add("landing-introduce--active")
                                 }
+                                liVIewIs[liIdx] = true
+                            } else if(scrollY < liwOfsTop + ((window.innerHeight/2)*liIdx) && liVIewIs[liIdx] == true || scrollY > liwOfsTop + ((window.innerHeight/2)*(liIdx+1)) && liVIewIs[liIdx] == true) {
+                                if(liCont.className.indexOf("landing-introduce--active") < 0) {
+                                    for(var i=0; i < landingIntroduce.length; i++) {
+                                        landingIntroduce[i].classList.add("landing-introduce--active")
+                                    }
+                                    liCont.classList.remove("landing-introduce--active")
+                                }
+                                liVIewIs[liIdx] = false
                             }
                         })
                     }
@@ -1064,18 +1108,21 @@
                                 coreValueMedia.classList.add("core-value__media--active")
                                 coreValueMedia.style.position = "fixed"
                                 coreValueTxt.style.position = "fixed"
+                                coreValueMedia.style.zIndex = ""
                             },
                             onLeaveBack: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.classList.remove("core-value__media--active")
                                 coreValueMedia.style.position = ""
                                 coreValueTxt.style.position = ""
+                                coreValueMedia.style.zIndex = ""
                             },
                             onLeave: function() {
                                 coreValueStart.classList.remove("core-value__start--active")
                                 coreValueMedia.style.position = ""
                                 coreValueMedia.style.top = "auto",
-                                coreValueMedia.style.bottom = "26.0185vh"
+                                coreValueMedia.style.bottom = "26.0185vh",
+                                coreValueMedia.style.zIndex = "9"
                                 coreValueTxt.style.position = ""
                                 coreValueTxt.style.top = "auto"
                                 coreValueTxt.style.bottom = "16.7593vh"
@@ -1084,7 +1131,7 @@
                                 coreValueStart.classList.add("core-value__start--active")
                                 coreValueMedia.style.position = "fixed"
                                 coreValueMedia.style.top = "",
-                                coreValueMedia.style.bottom = ""
+                                coreValueMedia.style.zIndex = "9"
                                 coreValueTxt.style.position = "fixed"
                                 coreValueTxt.style.top = ""
                                 coreValueTxt.style.bottom = ""
@@ -1108,7 +1155,7 @@
                     txtTL1 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[0],
-                            start: () => cvwOfsTop + (window.innerHeight+(cvmHeight/2)),
+                            start: () => cvwOfsTop + (window.innerHeight+cvmHeight),
                             end: () => "bottom bottom",
                             scrub: true
                         }
@@ -1121,7 +1168,7 @@
                     txtTL2 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[1],
-                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*2),
+                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*2),
                             end: () => "bottom bottom",
                             scrub: true
                         }
@@ -1134,7 +1181,7 @@
                     txtTL3 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[2],
-                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*3),
+                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*3),
                             end: () => "bottom bottom",
                             scrub: true
                         }
@@ -1147,7 +1194,7 @@
                     txtTL4 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[3],
-                            start: () => cvwOfsTop + ((window.innerHeight+(cvmHeight/2))*4),
+                            start: () => cvwOfsTop + ((window.innerHeight+cvmHeight)*4),
                             end: () => "bottom bottom",
                             scrub: true
                         }
@@ -1294,7 +1341,7 @@
                 }
             }
             
-
+            landing.visualScrollDown();
             landing.introduce();
             landing.coreValue();
             landing.menuIntroduce();

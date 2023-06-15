@@ -16,7 +16,7 @@
 
 <body>
 <header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
@@ -89,6 +89,40 @@
                 height: 100vh;
                 object-fit: cover;
             }
+            .human-rights-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .human-rights-visual__scrolldown__btn {
+                width: 3.5417vw;
+                height: 5vw;
+                text-align: left;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0005/human-rights-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+            }
+            .human-rights-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+              }
 
             /* Human Rights About */
             .human-rights-about {
@@ -586,6 +620,9 @@
                     </span>
                 </h2>
                 <video src="../../mocks/ST0004/video-circular-economy-visual.mp4" class="human-rights-visual__video" autoplay loop muted></video>
+                <div class="human-rights-visual__scrolldown">
+                    <button type="button" class="human-rights-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="human-rights-about">
                 <p class="human-rights-about__cont">
@@ -1006,6 +1043,21 @@
             var humanRights = humanRights || {};
                 
             humanRights = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".human-rights-visual");
+                    let vScrolldownWrap = visual.querySelector(".human-rights-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".human-rights-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
                 socialImpact: function() {
                     let socialImpact = document.querySelector(".social-impact")
                     let siPhotoListInner = socialImpact.querySelectorAll(".social-impact__photo-list__inner")
@@ -1172,6 +1224,7 @@
                     });
                 }
             }
+            humanRights.visualScrollDown();
             humanRights.socialImpact();
             humanRights.goalsEfforts();
             humanRights.summary();

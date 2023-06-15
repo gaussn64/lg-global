@@ -16,7 +16,7 @@
 
 <body>
 <header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Living Sustainably</a></li>
@@ -78,6 +78,40 @@
                 height: 100vh;
                 object-fit: cover;
             }
+            .living-st-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .living-st-visual__scrolldown__btn {
+                width: 3.5417vw;
+                height: 5vw;
+                text-align: left;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0002/living-st-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+            }
+            .living-st-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+              }
 
             /* Living Sustainably About */
             .living-st-about {
@@ -486,6 +520,9 @@
                     <span class="living-st-visual__tit__txt">in everyday living</span>
                 </h2>
                 <video src="../../mocks/ST0002/video-living-st-visual.mp4" class="living-st-visual__video" autoplay loop muted></video>
+                <div class="living-st-visual__scrolldown">
+                    <button type="button" class="living-st-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="living-st-about">
                 <h3 class="living-st-about__tit">
@@ -710,6 +747,21 @@
             var livingSt = livingSt || {};
                 
             livingSt = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".living-st-visual");
+                    let vScrolldownWrap = visual.querySelector(".living-st-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".living-st-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
                 ecoConsciousMaterial: function() {
                     var swiper = new Swiper(".eco-conscious-material__product", {
                         slidesPerView: "auto",
@@ -794,6 +846,7 @@
                     });
                 }
             }
+            livingSt.visualScrollDown()
             livingSt.ecoConsciousMaterial()
             livingSt.summary();
             livingSt.whatsNext();

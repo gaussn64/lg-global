@@ -16,7 +16,7 @@
 
 <body>
 <header id="header" class="c-header">
-    <h1 class="c-header__tit"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></h1>
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
@@ -89,6 +89,40 @@
                 height: 100vh;
                 object-fit: cover;
             }
+            .circular-economy-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .circular-economy-visual__scrolldown__btn {
+                width: 3.5417vw;
+                height: 5vw;
+                text-align: left;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0004/circular-economy-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+            }
+            .circular-economy-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+              }
 
             /* Climate Action About */
             .climate-action-about {
@@ -594,6 +628,9 @@
                     <span class="circular-economy-visual__tit__txt">Greener with every step</span>
                 </h2>
                 <video src="../../mocks/ST0004/video-circular-economy-visual.mp4" class="circular-economy-visual__video" autoplay loop muted></video>
+                <div class="circular-economy-visual__scrolldown">
+                    <button type="button" class="circular-economy-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="climate-action-about">
                 <p class="climate-action-about__cont">
@@ -830,6 +867,21 @@
             var circularEconomy = circularEconomy || {};
                 
             circularEconomy = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".circular-economy-visual");
+                    let vScrolldownWrap = visual.querySelector(".circular-economy-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".circular-economy-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
                 stCycle: function() {
                     var stCycleInner = document.querySelector(".st-cycle__inner");
                     var sciCont = stCycleInner.querySelector(".st-cycle__inner__cont");
@@ -958,6 +1010,7 @@
                     });
                 }
             }
+            circularEconomy.visualScrollDown()
             circularEconomy.stCycle();
             circularEconomy.summary();
             circularEconomy.whatsNext();
