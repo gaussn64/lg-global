@@ -74,6 +74,25 @@ function initGnbDeps2(tAnchor) {
     var tDeps2VisualItem = tDeps2Visual.querySelectorAll(".c-header__gnb__list__item__deps2__visual__item");
         tDeps2VisualItem[tDeps2MenuItemOrgIndex].classList.add("c-header__gnb__list__item__deps2__visual__item--active");
     var gnbDeps2Bg = document.querySelector(".gnb__deps2__bg");
+    var deviceMode = function() {
+        if(window.innerWidth > 768) {
+            return "pc"
+        } else if(window.innerWidth <= 768) {
+            return "mo"
+        }
+    }
+
+    function resizeDeps2Menu() {
+        if(deviceMode() == "pc") {
+            tDeps2.style.width = document.querySelector("body").offsetWidth - 60 + "px"
+        } else if(deviceMode() == "mo") {
+            
+        }
+    }
+    resizeDeps2Menu()
+    window.onload = window.onresize = window.onorientationchange = function() {
+        resizeDeps2Menu()
+    }
 
     if(tAnchor.className.indexOf("--active") < 0) {
         tList.querySelectorAll(".c-header__gnb__list__item").forEach(function(restItem) {
@@ -111,13 +130,13 @@ function initGnbDeps2(tAnchor) {
 
     }
 
-    tDeps2.onmouseleave = function() {
+    /*tDeps2.onmouseleave = function() {
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
         tList.querySelectorAll(".c-header__gnb__list__item")[tDeps2MenuItemOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
         gnbDeps2Bg.style.display = "none"
 
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
-    }
+    }*/
 }
 
 
