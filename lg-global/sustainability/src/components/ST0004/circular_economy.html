@@ -56,26 +56,15 @@
                 width: 100%;
                 height: 100vh;
             }
-            .circular-economy-visual:after {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                z-index: 2;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.2);
-            }
             .circular-economy-visual__tit {
                 position: absolute;
-                z-index: 3;
+                z-index: 2;
                 top: 50%;
                 left: 0px;
                 width: 100%;
                 text-align: center;
                 font-weight: 300;
-                font-size: 4.1667vw;
+                font-size: 80px;
                 line-height: 110%;
                 transform: translate(0,-50%);
             }
@@ -92,22 +81,21 @@
             .circular-economy-visual__scrolldown {
                 position: absolute;
                 z-index: 4;
-                bottom: 3.7037vh;
+                bottom: 40px;
                 left: 0px;
                 width: 100%;
                 text-align: center;
             }
             .circular-economy-visual__scrolldown__btn {
-                width: 3.5417vw;
-                height: 5vw;
-                text-align: left;
+                width: 68px;
+                height: 96px;
                 text-indent: -9999px;
                 overflow: hidden;
                 border-width: 0px;
                 cursor: pointer;
                 background: url(../../mocks/ST0004/circular-economy-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
-                transform: translateY(0vh);
+                transform: translateY(0px);
             }
             .circular-economy-visual__scrolldown__btn:hover {
                 animation-duration: 1s;
@@ -117,31 +105,31 @@
             }
             @keyframes sd-dounce {
                 from {
-                    transform: translateY(-0.5vh);
+                    transform: translateY(-6px);
                 }
                 to {
-                    transform: translateY(1.5vh);
+                    transform: translateY(16px);
                 }
-              }
+            }
 
-            /* Climate Action About */
-            .climate-action-about {
-                padding: 0px 6.25vw;
+            /* Circular Economy About */
+            .circular-economy-about {
+                padding: 0px 120px;
                 text-align: center;
                 background-color: #F2F2F3;
             }
-            .climate-action-about__cont {
-                padding: 7.2917vw 0px;
+            .circular-economy-about__cont {
+                padding: 140px 0px;
                 font-weight: 300;
-                font-size: 2.3958vw;
-                line-height: 3.1250vw;
+                font-size: 46px;
+                line-height: 60px;
                 color: #4A4946;
             }
             
             /* Sustainability Cycle */
             .st-cycle {
-                padding-top: 4.1667vw;
-                height: 89.5833vw;
+                padding-top: 80px;
+                height: 1720px;
                 box-sizing: border-box;
                 text-align: center;
                 background: #F2F2F3 url(../../mocks/ST0004/bg-st-cycle.png);
@@ -151,46 +139,46 @@
                 color: #4A4946;
             }
             .st-cycle__tit {
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
+                font-size: 28px;
+                line-height: 34px;
             }
             .st-cycle__intro__txt {
-                margin-top: 1.0417vw;
+                margin-top: 20px;
             }
             .st-cycle__intro__txt:first-child {
-                font-size: 3.75vw;
-                line-height: 4.1667vw;
+                font-size: 72px;
+                line-height: 80px;
                 font-weight: 300;
             }
             .st-cycle__intro__txt:last-child {
-                font-size: 1.0417vw;
-                line-height: 1.4583vw;
+                font-size: 20px;
+                line-height: 28px;
             }
             .st-cycle__inner {
                 position: relative;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 7.9167vw auto 0px;
-                width: 47.4479vw;
-                height: 51.4583vw;
+                margin: 152px auto 0px;
+                width: 911px;
+                height: 988px;
                 text-align: center;
                 background: url(../../mocks/ST0004/line-st-cycle.svg) no-repeat center center;
                 background-size: cover;
             }
             .st-cycle__inner__cont {
-                width: 30.2083vw;
-                height: 13.0208vw;
-                transform: translateY(4.9479vw);
+                width: 580px;
+                height: 250px;
+                transform: translateY(95px);
                 transition: 0.3s ease transform;
             }
             .st-cycle__inner__cont--active {
                 transform: translateY(0px);
             }
             .st-cycle__inner__cont__tit {
-                font-size: 3.3333vw;
+                font-size: 64px;
                 font-weight: 300;
-                line-height: 3.125vw;
+                line-height: 60px;
                 letter-spacing: -0.005em;
                 color: #75C66B;
             }
@@ -204,8 +192,8 @@
             }
             .st-cycle__inner__cont__list--active {
                 visibility: visible;
-                height: 7.8125vw;
-                margin-top: 2.0833vw;
+                height: 150px;
+                margin-top: 40px;
             }
             .st-cycle__inner__cont__list__item {
                 position: absolute;
@@ -216,20 +204,20 @@
             .st-cycle__inner__cont__list__item__tit,
             .st-cycle__inner__cont__list__item__txt {
                 letter-spacing: -0.005em;
-                transform: translateY(1.0417vw);
+                transform: translateY(20px);
                 opacity: 0;
                 transition: 0.3s ease all;
             }
             .st-cycle__inner__cont__list__item__tit {
                 font-weight: 700;
-                font-size: 1.875vw;
-                line-height: 2.1875vw;
+                font-size: 36px;
+                line-height: 42px;
                 transition-delay: 0s;
             }
             .st-cycle__inner__cont__list__item__txt {
-                margin-top: 2.0833vw;
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
+                margin-top: 40px;
+                font-size: 28px;
+                line-height: 34px;
                 text-align: center;
                 transition-delay: 0.1s;
             }
@@ -240,8 +228,8 @@
             }
             .st-cycle__inner__menu__item {
                 position: absolute;
-                width: 6.7708vw;
-                height: 6.7708vw;
+                width: 130px;
+                height: 130px;
                 opacity: 1;
                 transition: 0.3s ease opacity;
                 cursor: pointer;
@@ -255,28 +243,28 @@
                 object-fit: cover;
             }
             .st-cycle__inner__menu__item:nth-child(1) {
-                top: 4.7917vw;
-                right: 10.2083vw;
+                top: 92px;
+                right: 196px;
             }
             .st-cycle__inner__menu__item:nth-child(2) {
-                top: 22.4479vw;
+                top: 431px;
                 right: 0px;
             }
             .st-cycle__inner__menu__item:nth-child(3) {
-                bottom: 4.5313vw;
-                right: 10.2083vw;
+                bottom: 87px;
+                right: 196px;
             }
             .st-cycle__inner__menu__item:nth-child(4) {
-                bottom: 4.5313vw;
-                left: 11.0417vw;
+                bottom: 87px;
+                left: 212px;
             }
             .st-cycle__inner__menu__item:nth-child(5) {
                 bottom: 22.2917vw;
                 left: 0px;
             }
             .st-cycle__inner__menu__item:nth-child(6) {
-                top: 4.7917vw;
-                left: 11.0417vw;
+                top: 92px;
+                left: 212px;
             }
             .st-cycle__inner__standard {
                 visibility: hidden;
@@ -286,11 +274,11 @@
             }
             .st-cycle__inner__standard__item {
                 position: absolute;
-                top: 59.375vw;
+                top: 1140px;
                 left: 0px;
                 width: 100%;
-                font-size: 0.7813vw;
-                line-height: 1.0938vw;
+                font-size: 15px;
+                line-height: 21px;
                 text-align: center;
                 visibility: hidden;
                 opacity: 0;
@@ -303,28 +291,28 @@
 
             /* Recreation of product */
             .recreation-of-product {
-                padding: 4.1667vw 0px 3.6458vw;
+                padding: 80px 0px 3.6458vw;
                 box-sizing: border-box;
                 text-align: center;
             }
             .recreation-of-product__tit {
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
+                font-size: 28px;
+                line-height: 34px;
             }
             .recreation-of-product__intro__txt {
-                margin-top: 1.0417vw;
+                margin-top: 20px;
             }
             .recreation-of-product__intro__txt:first-child {
-                font-size: 3.75vw;
-                line-height: 4.1667vw;
+                font-size: 72px;
+                line-height: 80px;
                 font-weight: 300;
             }
             .recreation-of-product__intro__txt:last-child {
-                font-size: 1.0417vw;
-                line-height: 1.4583vw;
+                font-size: 20px;
+                line-height: 28px;
             }
             .recreation-of-product__photos {
-                margin-top: 3.125vw;
+                margin-top: 60px;
             }
             .recreation-of-product__photos__img {
                 width: 100%;
@@ -332,21 +320,21 @@
             }
             .recreation-of-product__discover-more {
                 text-align: right;
-                margin: 1.0417vw 6.25vw 0px;
+                margin: 20px 120px 0px;
             }
             .recreation-of-product__discover-more__btn {
                 display: inline-block;
                 color: #4A4946;
-                font-size: 1.0417vw;
+                font-size: 20px;
                 border-color: transparent;
                 background-color: transparent;
             }
             .recreation-of-product__discover-more__btn:after {
                 content: '';
                 display: inline-block;
-                width: 3.3333vw;
-                height: 3.3333vw;
-                margin-left: 1.0417vw;
+                width: 64px;
+                height: 64px;
+                margin-left: 20px;
                 background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
                 background-size: 100% 100%;
                 vertical-align: middle;
@@ -354,15 +342,15 @@
             .recreation-of-product__type {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
-                gap: 0px 1.0417vw;
-                margin: 3.125vw 6.25vw 0px;
+                gap: 0px 20px;
+                margin: 60px 120px 0px;
             }
             .recreation-of-product__type__item {
                 position: relative;
-                height: 42.1875vw;
-                padding: 4.1667vw 3.125vw;
+                height: 810px;
+                padding: 80px 60px;
                 box-sizing: border-box;
-                border-radius: 1.5625vw;
+                border-radius: 30px;
                 background-color: white;
             }
             .recreation-of-product__type__item__tit,
@@ -370,23 +358,23 @@
                 text-align: left;
             }
             .recreation-of-product__type__item__tit {
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
+                font-size: 28px;
+                line-height: 34px;
                 letter-spacing: -0.005em;
             }
             .recreation-of-product__type__item__intro {
-                margin-top: 1.0417vw;
+                margin-top: 20px;
                 font-weight: 250;
-                font-size: 2.9167vw;
-                line-height: 3.125vw;
+                font-size: 56px;
+                line-height: 60px;
                 letter-spacing: -0.005em;
             }
             .recreation-of-product__type__item__photo {
                 position: absolute;
-                bottom: 7.8646vw;
-                left: 3.125vw;
-                right: 3.125vw;
-                height: 17.6042vw;
+                bottom: 151px;
+                left: 60px;
+                right: 60px;
+                height: 338px;
                 text-align: center;
             }
             .recreation-of-product__type__item__photo__img {
@@ -396,10 +384,10 @@
             }
             .recreation-of-product__type__item__more {
                 position: absolute;
-                bottom: 3.125vw;
-                right: 3.125vw;
-                width: 3.3333vw;
-                height: 3.3333vw;
+                bottom: 60px;
+                right: 60px;
+                width: 64px;
+                height: 64px;
                 border-width: 0px;
                 background-color: transparent;
                 transform: rotate(0deg);
@@ -420,46 +408,46 @@
                 align-items: center;
                 flex-wrap: wrap;
                 height: 100vh;
-                padding: 0px 6.25vw;
-                min-height: 52.0833vw;
+                padding: 0px 120px;
+                min-height: 540px;
                 background: url(../../mocks/ST0004/bg-st-recycling-solutions.png) no-repeat center top;
                 background-size: cover;
             }
             .st-recycling-solutions__cont {
-                padding-bottom: 0.7813vw;
+                padding-bottom: 15px;
             }
             .st-recycling-solutions__cont__tit {
-                font-size: 1.4583vw;
-                line-height: 1.7708vw;
+                font-size: 28px;
+                line-height: 34px;
             }
             .st-recycling-solutions__cont__intro__txt {
-                margin-top: 1.0417vw;
+                margin-top: 20px;
             }
             .st-recycling-solutions__cont__intro__txt:first-child {
-                font-size: 3.75vw;
-                line-height: 4.1667vw;
+                font-size: 72px;
+                line-height: 80px;
                 font-weight: 300;
             }
             .st-recycling-solutions__cont__intro__txt:last-child {
-                font-size: 1.0417vw;
-                line-height: 1.4583vw;
+                font-size: 20px;
+                line-height: 28px;
             }
             .st-recycling-solutions__discover-more {
                 position: absolute;
-                bottom: 2.6042vw;
-                right: 6.25vw;
+                bottom: 50px;
+                right: 120px;
                 display: inline-block;
                 color: #4A4946;
-                font-size: 1.0417vw;
+                font-size: 20px;
                 border-color: transparent;
                 background-color: transparent;
             }
             .st-recycling-solutions__discover-more:after {
                 content: '';
                 display: inline-block;
-                width: 3.3333vw;
-                height: 3.3333vw;
-                margin-left: 1.0417vw;
+                width: 64px;
+                height: 64px;
+                margin-left: 20px;
                 background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
                 background-size: 100% 100%;
                 vertical-align: middle;
@@ -474,10 +462,10 @@
                 position: absolute;
                 z-index: 1;
                 top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
+                left: 120px;
+                right: 120px;
                 height: calc(100vh - 14.8148vh);
-                border-radius: 2.0833vw;
+                border-radius: 40px;
                 box-sizing: border-box;
                 background: url(../../mocks/ST0004/photo-summary-visual.png) no-repeat center center;
                 background-size: cover;
@@ -520,20 +508,18 @@
                 position: relative;
                 z-index: 1;
                 display: flex;
-                justify-content: flex-end;
                 align-items: center;
-                padding: 7.4074vh calc(6.25vw + 9.2708vw) 7.4074vh calc(6.25vw + 4.1667vw);
-                min-width: 24.8438vw;
+                padding: 7.4074vh calc(120px + 80px);
                 height: 50vh;
                 box-sizing: border-box;
                 color: white;
-                font-size: 1.0417vw;
+                font-size: 20px;
                 line-height: 145%;
                 transform: scale(1);
                 transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                font-size: 3.1250vw;
+                font-size: 60px;
                 font-weight: 300;
                 line-height: 120%;
                 letter-spacing: -1px;
@@ -543,39 +529,39 @@
             .whats-next {
                 position: relative;
                 overflow: hidden;
-                padding: 4.6875vw 6.25vw 3.8021vw;
+                padding: 90px 120px 73px;
                 background-color: #E6E1D6;
             }
             .whats-next__tit {
-                font-size: 2.2917vw;
-                line-height: 2.7083vw;
+                font-size: 44px;
+                line-height: 52px;
                 font-weight: 300;
             }
             .whats-next__tit__strong {
                 font-weight: 400;
             }
             .whats-next__menu {
-                margin-top: 3.6458vw;
+                margin-top: 70px;
                 overflow: visible;
             }
             .whats-next__menu__slide {
-                width: 24.7396vw;
-                margin-right: 1.0417vw;
+                width: 475px;
+                margin-right: 20px;
             }
             .whats-next__menu__slide__anchor {
                 display: block;
                 width: 100%;
-                height: 24.7396vw;
-                padding: 4.1667vw 0px 3.0729vw;
+                height: 475px;
+                padding: 80px 0px 59px;
                 box-sizing: border-box;
                 background: #F0ECE4;
-                border-radius: 1.0417vw;
+                border-radius: 20px;
             }
             .whats-next__menu__slide__anchor__photo {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 14.2708vw;
+                height: 274px;
             }
             .whats-next__menu__slide__anchor__photo__img {
                 max-width: 100%;
@@ -584,21 +570,21 @@
                 height: auto;
             }
             .whats-next__menu__slide__anchor__txt {
-                padding: 2.9167vw 1.6667vw 0px;
-                line-height: 1.7708vw;
-                font-size: 1.4583vw;
+                padding: 56px 32px 0px;
+                line-height: 34px;
+                font-size: 28px;
             }
             .whats-next__menu__btn-set {
                 position: absolute;
-                top: -5.8333vw;
+                top: -112px;
                 right: 0px;
                 display: flex;
-                gap: 0px 0.4167vw;
+                gap: 0px 8px;
                 line-height: 1;
             }
             .whats-next__menu__btn-set__btn {
-                width: 2.5vw;
-                height: 2.5vw;
+                width: 48px;
+                height: 48px;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: 100% 100%;
@@ -613,7 +599,7 @@
             .whats-next__menu__pagination {
                 position: relative;
                 width: 100%;
-                margin-top: 3.3333vw;
+                margin-top: 64px;
                 height: 2px;
                 background-color: rgba(0,0,0,0.2);
             }
@@ -632,14 +618,14 @@
                     <button type="button" class="circular-economy-visual__scrolldown__btn">Scroll Down</button>
                 </div>
             </div>
-            <div class="climate-action-about">
-                <p class="climate-action-about__cont">
-                    <span class="climate-action-about__cont__txt">Imagine a world with no waste. </span><br />
-                    <span class="climate-action-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
-                    <span class="climate-action-about__cont__txt">By recycling all we can to turn old materials and </span><br />
-                    <span class="climate-action-about__cont__txt">ppliances into new products,</span><br />
-                    <span class="climate-action-about__cont__txt">we're doing our part to reduce waste and </span><br />
-                    <span class="climate-action-about__cont__txt">create a more sustainable future.</span>
+            <div class="circular-economy-about">
+                <p class="circular-economy-about__cont">
+                    <span class="circular-economy-about__cont__txt">Imagine a world with no waste. </span><br />
+                    <span class="circular-economy-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
+                    <span class="circular-economy-about__cont__txt">By recycling all we can to turn old materials and </span><br />
+                    <span class="circular-economy-about__cont__txt">ppliances into new products,</span><br />
+                    <span class="circular-economy-about__cont__txt">we're doing our part to reduce waste and </span><br />
+                    <span class="circular-economy-about__cont__txt">create a more sustainable future.</span>
                 </p>
             </div>
             <div class="st-cycle">

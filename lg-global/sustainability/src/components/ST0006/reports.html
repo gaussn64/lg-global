@@ -48,6 +48,70 @@
                 padding: 0px
             }
 
+            /* Reports */
+            .reports {
+                padding: 240px 0px 188px;
+                text-align: center;
+            }
+            .reports__tit {
+                font-weight: 100;
+                font-size: 72px;
+                line-height: 80px;
+            }
+            .reports__intro1 {
+                font-weight: 300;
+                font-size: 46px;
+                line-height: 60px;
+                margin-top: 43px;
+            }
+            .reports__visual {
+                margin-top: 46px;
+                height: 750px;
+                background: url(../../mocks/ST0006/bg-reports-visual.jpg) no-repeat center center;
+                background-attachment: fixed;
+            }
+            .reports__intro2 {
+                font-weight: 300;
+                font-size: 36px;
+                line-height: 50px;
+                margin-top: 50px;
+            }
+            .reports__data {
+                width: 1000px;
+                margin: 154px auto 0px;
+            }
+            .reports__data__tit {
+                margin-top: 143px;
+                font-weight: 100;
+                font-size: 72px;
+                line-height: 80px;
+            }
+            .reports__data__tit:first-child {
+                margin-top: 0px;
+            }
+            .reports__data__txt {
+                margin-top: 30px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .reports__data__stit {
+                margin-top: 78px;
+                font-weight: 400;
+                font-size: 36px;
+                line-height: 42px;
+                text-align: left;
+            }
+            .reports__data__list__wrap {
+                margin-top: 112px;
+            }
+            .reports__data__stit + .reports__data__list__wrap {
+                margin-top: 32px;
+            }
+            .reports__data__list {
+                width: 100%;
+                border-bottom: 1px solid #D9D9D9;
+            }
 
             /* What's Next */
             .whats-next {
@@ -135,12 +199,12 @@
         <div class="sustainably-container">
             <div class="reports">
                 <h2 class="reports__tit">Reports</h2>
-                <p class="reports__cont1">
+                <p class="reports__intro1">
                     We accurately measure performance and share it <br />
                     transparently as a must for sustainability.
                 </p>
                 <div class="reports__visual"></div>
-                <p class="reports__cont2">
+                <p class="reports__intro2">
                     Visit our homepage for our sustainability management report, <br />
                     which includes our ESG strategy and performance, and our ESG <br />
                     policies and commitment statement.
@@ -154,40 +218,385 @@
                     <div class="reports__data__list__wrap">
                         <table class="reports__data__list">
                             <tbody>
-                                <tr>
-                                    <th scope="row" class="reports__data__list__subject">
-                                        <dl class="reports__data__list__subject__desc">
-                                            <dt class="reports__data__subject__item__desc__tit">2021-2022 ESG Story Book</dt>
-                                            <dd class="reports__data__subject__item__desc__cont">We share our ESG goals and performance as a sincere story.</dd>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        <dl class="reports__data__list__item__subject__desc">
+                                            <dt class="reports__data__subject__list__item__desc__tit">2021-2022 ESG Story Book</dt>
+                                            <dd class="reports__data__subject__list__item__desc__cont">We share our ESG goals and performance as a sincere story.</dd>
                                         </dl>
                                     </th>
-                                    <td>
-                                        <div class="reports__data__list__download-type">
-                                            <label class="reports__data__list__download-type__label"></label>
-                                            <select name="" id="" class="reports__data__list__download-type__select">
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
                                         </div>
-                                        <a href="#" target="_blank" title="open new window" class="reports__data__btn-download">file download</a>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th scope="row" class="reports__data__list__subject">
-                                        <dl class="reports__data__list__subject__desc">
-                                            <dt class="reports__data__subject__item__desc__tit">2021-2022 ESaG Fact Book</dt>
-                                            <dd class="reports__data__subject__item__desc__cont">We wrote about our performance and our activities.</dd>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        <dl class="reports__data__list__item__subject__desc">
+                                            <dt class="reports__data__subject__list__item__desc__tit">2021-2022 ESaG Fact Book</dt>
+                                            <dd class="reports__data__subject__list__item__desc__cont">We wrote about our performance and our activities.</dd>
                                         </dl>
                                     </th>
-                                    <td>
-                                        <div class="reports__data__list__download-type">
-                                            <label class="reports__data__list__download-type__label"></label>
-                                            <select name="" id="" class="reports__data__list__download-type__select">
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
                                         </div>
-                                        <a href="#" target="_blank" title="open new window" class="reports__data__btn-download">file download</a>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4 class="reports__data__stit">Archive</h4>
+                    <div class="reports__data__list__wrap">
+                        <table class="reports__data__list">
+                            <thead>
+                                <tr class="reports__data__list__head">
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Year</th>
+                                    <th scope="col">Language</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Sustainability Report
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">2020-2021</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">2020-2021</option>
+                                                <option value="">2019-2020 </option>
+                                                <option value="">2018-2019</option>
+                                                <option value="">2017-2018</option>
+                                                <option value="">2016-2017</option>
+                                                <option value="">2015-2016</option>
+                                                <option value="">2014-2015</option>
+                                                <option value="">2013-2014</option>
+                                                <option value="">2012-2013</option>
+                                                <option value="">2011-2012</option>
+                                                <option value="">2010</option>
+                                                <option value="">2009</option>
+                                                <option value="">2008</option>
+                                                <option value="">2006-2007</option>
+                                                <option value="">2005</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Environmental Report
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">2012</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">2012</option>
+                                                <option value="">2011</option>
+                                                <option value="">2010</option>
+                                                <option value="">2009</option>
+                                                <option value="">2008</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 class="reports__data__tit">ESG Policies</h3>
+                    <p class="reports__data__txt">
+                        We carry out our ESG policies sincerely, to make sure we grow sustainably.
+                    </p>
+                    <h4 class="reports__data__stit">Archive</h4>
+                    <div class="reports__data__list__wrap">
+                        <table class="reports__data__list">
+                            <thead>
+                                <tr class="reports__data__list__head">
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Language</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Environmental Product Policy
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Environmental product policy
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Battery Instruction
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Global take-back guidance
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        WEEE Instruction
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Global take-back guidance
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        LGE SHEE Policy
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        SHEE Policy
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h4 class="reports__data__stit">Social Policy</h4>
+                    <div class="reports__data__list__wrap">
+                        <table class="reports__data__list">
+                            <thead>
+                                <tr class="reports__data__list__head">
+                                    <th scope="col">Title</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Language</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        LG Code of Ethics
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Code of ethics
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Diversity&Inclusion Policy
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Diversity&Inclusion Policy
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        LGE Supplier Code of Conduct
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        LGE supplier code of conduct
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        LGE Supplier Code of Conduct Guideline
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        LGE supplier code of conduct
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Global Labor Policy
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Global Labor Policy
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Global Labor Policy Guidelines
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Global labor Policy
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        LGE Code of Conduct
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Code of Conduct
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Conflict Minerals Due Diligence Report
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Conflict Minerals Due Diligence Report
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
+                                    </td>
+                                </tr>
+                                <tr class="reports__data__list__item">
+                                    <th scope="row" class="reports__data__list__item__subject">
+                                        Guidelines for Harzardous substance management in products
+                                    </th>
+                                    <td class="reports__data__list__item__cont">
+                                        Guidelines for hazardous
+                                    </td>
+                                    <td class="reports__data__list__item__cont">
+                                        <div class="reports__data__list__item__cont__download-type">
+                                            <label class="reports__data__list__item__cont__download-type__label">English</label>
+                                            <select name="" id="" class="reports__data__list__item__cont__download-type__select">
+                                                <option value="">English</option>
+                                                <option value="">Korean</option>
+                                            </select>
+                                        </div>
+                                        <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -250,176 +659,9 @@
         <script src="../../../ScrollTrigger.min.js"></script>
         <script src="../../../ScrollToPlugin.min.js"></script>
         <script>
-            var humanRights = humanRights || {};
+            var reports = reports || {};
                 
-            humanRights = {
-                visualScrollDown: function() {
-                    let visual = document.querySelector(".human-rights-visual");
-                    let vScrolldownWrap = visual.querySelector(".human-rights-visual__scrolldown");
-                    let btnScrolldown = vScrolldownWrap.querySelector(".human-rights-visual__scrolldown__btn");
-
-                    btnScrolldown.onclick = function() {
-                        TweenMax.to(window, 0.3, {
-                            "scrollTo": window.innerHeight
-                        },{
-                            ease: Power1.easeOut,
-                            autoKill: true,
-                            overwrite: 5
-                        })
-                    }
-                },
-                socialImpact: function() {
-                    let socialImpact = document.querySelector(".social-impact")
-                    let siPhotoListInner = socialImpact.querySelectorAll(".social-impact__photo-list__inner")
-                    let sipl1Wrap = socialImpact.querySelector(".social-impact__photo-list1__wrap")
-                    let sipl2Wrap = socialImpact.querySelector(".social-impact__photo-list2__wrap")
-                    let sipl1Inner = sipl1Wrap.querySelector(".social-impact__photo-list1__inner")
-                    let sipl2Inner = sipl2Wrap.querySelector(".social-impact__photo-list2__inner")
-                    
-                    siPhotoListInner.forEach(function(splw) {
-                        splwList = splw.querySelector(".social-impact__photo-list")
-                        leftCloneNplList = splwList.cloneNode(true)
-                        rightCloneNplList = splwList.cloneNode(true)
-                        splw.insertBefore(leftCloneNplList, splw.firstChild)
-                        splw.appendChild(rightCloneNplList)
-                    })
-
-                    setInterval(function() {
-                        let spl1First = sipl1Inner.querySelector(".social-impact__photo-list1").cloneNode(true)
-                        
-                        let spl2Last = sipl2Inner.querySelector(".social-impact__photo-list2").cloneNode(true)
-
-                        sipl1Inner.appendChild(spl1First)
-                        sipl2Inner.insertBefore(spl2Last, sipl2Inner.firstChild)
-                    },50000)
-
-                    setInterval(function() {
-                        gsap.to(sipl1Inner, 100, {
-                            "left":"-="+window.innerWidth
-                        });
-                        gsap.to(sipl2Inner, 100, {
-                            "right":"-="+window.innerWidth
-                        });
-                    },5000)
-                },
-                goalsEfforts: function() {
-                    let goalsEfforts = document.querySelectorAll(".goals-efforts");
-
-                    goalsEfforts.forEach(function(ge,i) {
-                        initGoalsEffortsTabNavi(i)
-                    })
-
-                    function initGoalsEffortsTabNavi(idx) {
-                        geTabNavi = goalsEfforts[idx].querySelector(".goals-efforts__tab-navi");
-                        geTabNaviList = geTabNavi.querySelector(".goals-efforts__tab-navi__list");
-                        gnItem = geTabNaviList.querySelectorAll(".goals-efforts__tab-navi__list__item");
-                        gnTabContWrap = document.querySelectorAll(".goals-efforts__tab-cont__wrap");
-                        gtcwOfsTop = new Array();
-                        gtcwIsView = new Array();
-
-                        gnItem.forEach(function(gi,a) {
-                            gi.querySelector("a").onclick = function() {
-                                if(gi.className.indexOf("--active") < 0) {
-                                    //console.log(gi.parentNode.children)
-                                    for(var b=0; b < gi.parentNode.children.length; b++) {
-                                        gi.parentNode.children[b].querySelector("a").classList.remove("goals-efforts__tab-navi__list__item__a--active")
-                                        
-                                    }
-                                    gi.querySelector("a").classList.add("goals-efforts__tab-navi__list__item__a--active")
-                                    initGoalsEffortsTabView(gnTabContWrap[idx],a)
-                                }
-                            }
-                        })
-
-                        window.onload = window.onresize = window.onorientationchange = function() {
-                            gnTabContWrap.forEach(function(gtcw,c) {
-                                gtcwOfsTop[c] = document.querySelectorAll(".goals-efforts__intro")[c].offsetTop;
-                                gtcwIsView[c] = false
-                            })
-                        }
-
-                        window.addEventListener("scroll", (event) => {
-                            gnTabContWrap.forEach(function(gtcw,d) {
-                                if(document.documentElement.scrollTop >= gtcwOfsTop[d] && gtcwIsView[d] == false) {
-                                    gnTabContWrap[d].querySelector(".goals-efforts__tab-cont").classList.add("goals-efforts__tab-cont--active")
-                                    gtcwIsView[d] = true
-                                }
-                            })
-                        });
-                    }
-
-                    function initGoalsEffortsTabView(cWrap,idx) {
-                        if(cWrap.querySelectorAll(".goals-efforts__tab-cont")[idx].className.indexOf("--active") < 0) {
-                            for(var c=0; c < cWrap.children.length; c++) {
-                                cWrap.children[c].classList.remove("goals-efforts__tab-cont--active")
-                            }
-                            cWrap.children[idx].classList.add("goals-efforts__tab-cont--active")
-                        }
-
-                        
-                    }
-                },
-                summary: function() {
-                    let summary = document.querySelector(".summary");
-                    let msOfsTop = summary.offsetTop;
-                    let summaryVisual = summary.querySelector(".summary__visual");
-                    let msvOfsTop = summaryVisual.offsetTop;
-                    let summaryCont = summary.querySelector(".summary__cont");
-                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
-                    let mctOfs = new Array();
-                    let mctViewIs = new Array();
-    
-                    measContTxt.forEach(function(mct,a) {
-                        mctOfs[a] = mct.offsetTop;
-                        mctViewIs[a] = false;
-                    })
-    
-                    gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".summary",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                //console.log("enter")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onLeaveBack: function() {
-                                //console.log("leaveBack")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onLeave: function() {
-                                //console.log("leave")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryVisual.classList.add("summary__visual--bottom-end")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onEnterBack: function() {
-                                //console.log("enterBack")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onUpdate: initMeanContTxt
-                        }
-                    })
-    
-                    function initMeanContTxt() {
-                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
-                        measContTxt.forEach(function(mct,b) {
-                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
-                                mct.classList.add("summary__cont__txt--active")
-                                mctViewIs[b] = true
-                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
-                                mct.classList.remove("summary__cont__txt--active")
-                                mctViewIs[b] = false
-                            }
-                        })
-    
-                    }
-                },
+            reports = {
                 whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: "auto",
@@ -434,11 +676,7 @@
                     });
                 }
             }
-            humanRights.visualScrollDown();
-            humanRights.socialImpact();
-            humanRights.goalsEfforts();
-            humanRights.summary();
-            humanRights.whatsNext();
+            reports.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
         </script>
