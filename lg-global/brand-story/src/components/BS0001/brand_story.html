@@ -79,14 +79,12 @@
             }
             .fadeInUp {animation:fadeInUp 1s ease backwards;}
 
-            /* 임시 */
-            #container-cd622da11f {
-                display: none;
-            }
-
             
             /* brand story - 공통 */
             #brand-container a {text-decoration: none;}
+            .only_mo {display: none;}
+            .only_pc {}
+            
             
             #brand-container {
                 background-color: var(--parallex-bg-color);
@@ -427,7 +425,7 @@
                 width: 100%;
                 height: 100%;
                 background: 
-                linear-gradient(180deg, #00000000 0%, #00000066 100%), linear-gradient(180deg, #00000000 0%, #00000066 100%);
+                linear-gradient(180deg, #00000000 60%, #00000066 100%), linear-gradient(180deg, #00000000 60%, #00000066 100%);
             }
             .card-list__info {
                 position: absolute;
@@ -1137,6 +1135,9 @@
                 }
             }
             @media (max-width: 768px) {
+                .only_mo {display: block;}
+                .only_pc {display: none;}
+
                 .landing-visual__scrolldown {
                     bottom: 20px;
                 }
@@ -1157,7 +1158,17 @@
                     width: calc(100% - 40px);
                     height: calc(100% - 40px);
                     border-radius: 10px;
+                    background-image: url(../../mocks/BS0001/brand-story-mission-statement-better-life-m.png);
+                    
                 }
+                .brand-mission__list-item {
+                    width: calc(100% - 40px);
+                }
+                .mo-size__half {
+                    width: 280px;
+                }
+
+           
 
                 /* brand story - life's good */
                 .lifeisgood__letter {
@@ -1174,17 +1185,22 @@
                 .lifeisgood__text {
                     position: absolute;
                     left: 50%;
+                    max-height: 20.45vw;
+                    height: 100%;
+                }
+                .lifeisgood__letter--active .lifeisgood__text {
                     height: 15vw;
+                    max-height: 11.67vw;
                 }
                 .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
-                    margin: unset;
+                    margin: 0 0 2px;
                     background-size: auto 100%;
                     background-position: center;
                     bottom: 0;
                     transform: translateX(-50%);
                 }
                 .lifeisgood__letter.lifeisgood__letter--good .lifeisgood__text {
-                    margin: unset;
+                    margin: 2px 0 0;
                     background-size: auto 100%;
                     background-position: center;
                     top: 0;
@@ -1409,13 +1425,13 @@
             <div class="brand-mission">
                 <div class="brand-mission__bg"></div>
                 <ul class="brand-mission__list">
-                    <li class="brand-mission__list-item brand-mission__list-item--active">Our mission inspires everything we do</li>
-                    <li class="brand-mission__list-item">Innovation for a better life</li>
+                    <li class="brand-mission__list-item brand-mission__list-item--active">Our mission inspires<br class="only_mo"> everything we do</li>
+                    <li class="brand-mission__list-item">Innovation for<br class="only_mo"> a better life</li>
                 </ul>
             </div>
             <div class="ascend-text__section">
                 <div class="ascend-text__pinner">
-                    <h3 class="parallex__title parallex__title--divied">It’s how we make sure</h3>
+                    <h3 class="parallex__title parallex__title--divied mo-size__half">It’s how we make sure</h3>
                 </div>
             </div>
             <div class="lifeisgood">
@@ -1591,7 +1607,10 @@
             <div class="parallex__section parallex__section--identity" >
                 <div class="parallex-visual__item parallex-visual__item--prx">
                     <div class="parallex__section__title-wrap">
-                        <h3 class="parallex__title parallex__title__swip">All of this comes to life<br> through our identity</h3>
+                        <h3 class="parallex__title parallex__title__swip">
+                            <span class="only_pc">All of this comes to life<br> through our identity</span>
+                            <span class="only_mo">All this comes to<br> life in our identity</span>
+                        </h3>
                     </div>
                     <div class="parallax-visual__pin parallax-visual__pin--identity">
                         <ul class="parallax-pin__images">
@@ -1726,14 +1745,15 @@
                 let vScrolldownWrap = visual.querySelector(".landing-visual__scrolldown");
                 let btnScrolldown = vScrolldownWrap.querySelector(".landing-visual__scrolldown__btn");
 
-                btnScrolldown.onclick = function() {
-                    TweenMax.to(window, 0.3, {
-                        "scrollTo": window.innerHeight
-                    },{
-                        ease: Power1.easeOut,
-                        autoKill: true,
-                        overwrite: 5
-                    })
+                btnScrolldown.onclick = function(e) {
+                    e.preventDefault()
+                    // TweenMax.to(window, 0.3, {
+                    //     "scrollTo": window.innerHeight
+                    // },{
+                    //     ease: Power1.easeOut,
+                    //     autoKill: true,
+                    //     overwrite: 5
+                    // })
                 }
             }
 
@@ -1996,7 +2016,7 @@
                     scrollTrigger: {
                         trigger: section,
                         start: 'top top',
-                        end: `120% bottom`,
+                        end: `130% bottom`,
                         pin: motionPin,
                         onUpdate: self => {
                             self.progress >= 0.01 && self.progress < 1 ? textView() : reverse()

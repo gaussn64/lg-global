@@ -381,7 +381,7 @@
                 background-color: #fff;
                 transition: left .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .tab-container {margin-top: 72px;}
+            .tab-container {margin-top: 81px;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
 
@@ -725,11 +725,16 @@
                     width: 100%;
                     height: 40px;
                 }
+                .tab-menu__list::before {
+                    width: calc(100% + 16px);
+                    height: calc(100% + 16px);
+                }
                 .tab-menu__btn {
                     flex: 1;
                     font-size: 14px;
                 }
-                .tab-container {margin-top: 24px;}
+                .tab-container {margin-top: 32px;}
+
 
                 /*logo suite*/
                 .logo__container--logoplay {

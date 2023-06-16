@@ -892,7 +892,6 @@
                 flex-direction: row;
                 align-items: center;
                 margin: 0;
-                opacity: 1 !important;
             }
             .marquee__inner.marquee__inner--top {height: 19.05vw;}
             .marquee__inner.marquee__inner--bottom {
@@ -2097,37 +2096,36 @@
                 let isAnimationStart = false
                 let checker = false
                 let lastState = false
-
                                 
                 function marqueeMotionSet(item, xPer) {
-                    let distance = item.clientWidth;
-                    const tl = gsap.timeline({});
+                    let distance = item.clientWidth
+                    const tl = gsap.timeline({})
                     tl.to(item, 30, {
                         ease: "none",
                         xPercent: xPer,
                         modifiers: {
                             x: gsap.utils.unitize(x => parseFloat(x) % distance)
                         },
-                        repeat: -1
+                        repeat: -1,
                     });
 
-                    return tl; // Return the timeline
+                    return tl // Return the timeline
                 }
 
                marqueeTopEl.forEach((item, index) => {
-                    let tl = marqueeMotionSet(item, -100);
-                    tlTop.push(tl);
-                });
+                    let tl = marqueeMotionSet(item, -100)
+                    tlTop.push(tl)
+                })
 
                 marqueeBottomEl.forEach((item, idx) => {
-                    let tl = marqueeMotionSet(item, 100);
-                    tlBottom.push(tl);
-                });
+                    let tl = marqueeMotionSet(item, 100)
+                    tlBottom.push(tl)
+                })
 
                 let winY = window.pageYOffset
 
-                tlTop.forEach(tl => tl.pause());
-                tlBottom.forEach(tl => tl.pause());
+                tlTop.forEach(tl => tl.pause())
+                tlBottom.forEach(tl => tl.pause())
 
                 let getWidth = () => {
                     const li = marqueeBottom.querySelectorAll('li')
@@ -2139,14 +2137,22 @@
                     if (isActive != lastState) {
                         if (isActive) {
                             marqueeTop.style.transform = `translateX(${0}px)`
+                            marqueeTop.style.opacity = '1'
                             marqueeBottom.style.transform = `translateX(-${getWidth() - window.innerWidth}px)`
-                            tlTop.forEach(tl => tl.restart());
-                            tlBottom.forEach(tl => tl.restart());
+                            marqueeBottom.style.opacity = '1'
+                            tlTop.forEach(tl => tl.restart())
+                            tlBottom.forEach(tl => tl.restart())
                         } else {
                             marqueeTop.style.transform = `translateX(${marquee.getBoundingClientRect().width}px)`
+                            marqueeTop.style.opacity = '0'
                             marqueeBottom.style.transform = `translateX(-${getWidth()}px)`
-                            tlTop.forEach(tl => tl.pause());
-                            tlBottom.forEach(tl => tl.pause());
+                            marqueeBottom.style.opacity = '0'
+
+                            tlTop.forEach(tl => tl.pause())
+                            tlBottom.forEach(tl => tl.pause())
+
+                            marqueeTopEl.forEach(el => el.style = '')
+                            marqueeBottomEl.forEach(el => el.style = '')
                         }
                         lastState = isActive
                     }
@@ -2157,7 +2163,7 @@
                 window.addEventListener('scroll', ()=> {
                     winY = window.pageYOffset
 
-                    if (offsetTop - (window.innerHeight / 2) < winY) {
+                    if (offsetTop + (window.innerHeight * 0.2) < winY) {
                         marqueeAnimation (true)
                     } else {
                         marqueeAnimation (false)
