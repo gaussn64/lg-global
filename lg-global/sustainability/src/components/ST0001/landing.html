@@ -74,7 +74,6 @@
                 width: 100%;
                 color: white;
                 line-height: 28px;
-                line-height: 1;
             }
             .landing-visual__scrolldown {
                 position: absolute;
@@ -177,7 +176,7 @@
             }
             .core-value {
                 width: 100%;
-                height: 150vh;
+                height: 200vh;
                 text-align: center;
             }
             .core-value__start {
@@ -217,6 +216,7 @@
             }
             .core-value__media--active {
                 width: 155.5556vh;
+                max-width: 87.5vw;
                 transition: 0.5s ease 0.5s width;
             }
             .core-value__media__item {
@@ -330,72 +330,77 @@
             }
             .menu-introduce__cont__go-to__link {
                 display: inline-block;
-                padding: 25px 30px 27px;
+                padding: 20px 27px 21px;
                 border-radius: 100px;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 600;
                 line-height: 1;
+                border: 1px solid #4A4946;
                 background-color: white;
+                transition: 0.3s ease all
             }
             .menu-introduce__cont__go-to__link:hover,
             .menu-introduce__cont__go-to__link:focus {
-                text-decoration: none
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
             .menu-introduce__photos {
                 position: relative;
-                width: 998px;
-                height: 632px;
+                width: 51.9792vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item {
                 position: absolute;
             }
             .menu-introduce__photos__item1-1 {
                 top: 9.2188vw;
-                right: 720px;
-                width: 278px;
-                height: 278px;
+                right: 37.5vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item1-2 {
                 top: 0px;
                 right: 0px;
-                width: 720px;
-                height: 632px;
+                width: 37.5vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item2-1 {
                 top: 9.2188vw;
-                right: 177px;
-                width: 278px;
-                height: 278px;
+                right: 30.7292vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item2-2 {
                 top: 0px;
                 right: 0px;
-                width: 177px;
-                height: 632px;
+                width: 30.7292vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item3-1 {
                 top: 9.2188vw;
-                right: 720px;
-                width: 278px;
-                height: 278px;
+                right: 37.5vw;
+                width: 14.4792vw;
+                height: 14.4792vw;
             }
             .menu-introduce__photos__item3-2 {
                 top: 0px;
                 right: 0px;
-                width: 720px;
-                height: 632px;
+                width: 37.5vw;
+                height: 32.9167vw;
             }
             .menu-introduce__photos__item4-1 {
                 top: 0px;
-                right: 342px;
-                width: 505px;
-                height: 558px;
+                right: 17.8125vw;
+                width: 26.3021vw;
+                height: 29.0625vw;
             }
             .menu-introduce__photos__item4-2 {
-                top: 107px;
+                top: 5.5729vw;
                 right: 0px;
-                width: 342px;
-                height: 342px;
+                width: 17.8125vw;
+                height: 17.8125vw;
             }
             .menu-introduce__photos__item__img,
             .menu-introduce__photos__item__video {
@@ -465,6 +470,7 @@
                 box-sizing: border-box;
                 height: 100vh;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
+                background-size: cover;
                 background-attachment: fixed;
             }
             .reports__tit {
@@ -484,16 +490,21 @@
             }
             .reports__go-to__link {
                 display: inline-block;
-                padding: 21px 30px 23px;
+                padding: 20px 27px 21px;
                 border-radius: 100px;
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 600;
                 line-height: 1;
+                border: 1px solid #4A4946;
                 background-color: white;
+                transition: 0.3s ease all
             }
             .reports__go-to__link:hover,
             .reports__go-to__link:focus {
-                text-decoration: none
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
 
             /* Newsroom */
@@ -558,27 +569,47 @@
             }
             .newsroom__go-to__link {
                 display: inline-block;
-                padding: 24px 30px;
+                padding: 20px 27px 22px;
                 border-radius: 100px;
-                font-size: 20px;
-                line-height: 1;
+                font-size: 16px;
                 font-weight: 600;
+                line-height: 1;
+                border: 1px solid #4A4946;
                 background-color: white;
+                transition: 0.3s ease all
             }
             .newsroom__go-to__link:hover,
             .newsroom__go-to__link:focus {
-                text-decoration: none
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
             .newsroom__go-to__link:after {
                 content: '';
                 display: inline-block;
-                width: 25px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
                 vertical-align: middle;
                 margin-left: 10px;
                 background: url(../../mocks/ST0001/go-to-blank.svg) no-repeat left top;
                 background-size: cover;
                 vertical-align: text-bottom;
+            }
+            .newsroom__go-to__link:hover:after,
+            .newsroom__go-to__link:focus:after {
+                background-image: url(../../mocks/ST0001/go-to-blank_on.svg);
+                animation-duration: 0.3s;
+                animation-name: fadeIn;
+                animation-direction: alternate;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
             }
 
             /* Means */
@@ -677,6 +708,7 @@
                 margin-right: 20px;
             }
             .whats-next__menu__slide__anchor {
+                position: relative;
                 display: block;
                 width: 100%;
                 height: 475px;
@@ -684,23 +716,89 @@
                 box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide3__anchor {
+                transition: 0.3s ease background-color;
+            }
+            .whats-next__menu__slide3__anchor:hover {
+                background: #262626;
             }
             .whats-next__menu__slide__anchor__photo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 274px;
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 87px;
+                left: 107px;
+                right: 108px;
+                bottom: 128px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 62px;
+                left: 82px;
+                right: 83px;
+                bottom: 103px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 135px;
+                left: -57px;
+                bottom: 158px;
+                width: 1233px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                left: -677px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide__anchor__photo__img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .whats-next__menu__slide__anchor__txt {
-                padding: 56px 32px 0px;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 28px;
                 line-height: 34px;
                 font-size: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
             }
             .whats-next__menu__btn-set {
                 position: absolute;
@@ -908,11 +1006,9 @@
                                 equality
                             </p>
                             <p class="menu-introduce__cont__detail">
-                                We know how important it is to respect <br />
-                                human rights and acknowledge the <br />
-                                impact of business on communities. <br />
-                                Caring for people is at the core of all we <br />
-                                do.
+                                We know how important it is to respect human rights and <br />
+                                acknowledge the impact of business on communities. <br />
+                                Caring for people is at the core of all we do.
                             </p>
                             <div class="menu-introduce__cont__go-to">
                                 <a href="#" class="menu-introduce__cont__go-to__link">Go to Human Rights</a>
@@ -999,33 +1095,33 @@
                 <div class="swiper whats-next__menu">
                     <div class="swiper-wrapper whats-next__menu__slide-wrap">
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
                             </a>
@@ -1201,8 +1297,8 @@
                         let tl = gsap.timeline({
                             scrollTrigger: {
                                 trigger: coreValueInner,
-                                start: () => "+=" + window.innerHeight*(i+1),
-                                end: () => "+=" + window.innerHeight,
+                                start: () => "+=" + (window.innerHeight*1.5)*(i+1),
+                                end: () => "+=" + window.innerHeight*1.5,
                                 scrub: true,
                                 anticipatePin: 1
                             }
@@ -1214,7 +1310,7 @@
                         scrollTrigger: {
                             trigger: coreValue[0],
                             start: () => cvwOfsTop,
-                            end: () => "+=" + (window.innerHeight/2),
+                            end: () => "+=" + (window.innerHeight/1.5),
                             scrub: true
                         }
                     })
@@ -1226,8 +1322,8 @@
                     txtTL2 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[1],
-                            start: () => cvwOfsTop + window.innerHeight,
-                            end: () => "+=" + (window.innerHeight/2),
+                            start: () => cvwOfsTop + window.innerHeight*1.5,
+                            end: () => "+=" + (window.innerHeight*1.5),
                             scrub: true
                         }
                     })
@@ -1239,8 +1335,8 @@
                     txtTL3 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[2],
-                            start: () => cvwOfsTop + window.innerHeight*2,
-                            end: () => "+=" + (window.innerHeight/2),
+                            start: () => cvwOfsTop + window.innerHeight*3,
+                            end: () => "+=" + (window.innerHeight*1.5),
                             scrub: true
                         }
                     })
@@ -1252,8 +1348,8 @@
                     txtTL4 = gsap.timeline({
                         scrollTrigger: {
                             trigger: coreValue[3],
-                            start: () => cvwOfsTop + window.innerHeight*3,
-                            end: () => "+=" + (window.innerHeight/2),
+                            start: () => cvwOfsTop + window.innerHeight*4.5,
+                            end: () => "+=" + (window.innerHeight*1.5),
                             scrub: true
                         }
                     })
