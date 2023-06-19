@@ -25,6 +25,7 @@
             <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
         </ul>
     </nav>
+    <p class="c-header__location">Climate Action</p>
     <button type="button" class="c-header__btn-gnb">
         <span class="c-header__btn-gnb__bar"></span>
         <span class="c-header__btn-gnb__bar"></span>
@@ -188,8 +189,9 @@
                 position: relative;
                 box-sizing: border-box;
                 height: 100vh;
-                padding: 7.4074vh 120px;
+                padding: 5.4422vh 120px;
                 background: url(../../mocks/ST0003/bg-milestone-goals-cont.png) no-repeat center center;
+                background-size: cover;
                 background-attachment: fixed;
             }
             .milestone__goals-cont__years {
@@ -203,10 +205,10 @@
                 display: block;
                 position: absolute;
                 z-index: 1;
-                bottom: 1.5104vw;
+                bottom: 29px;
                 left: 0px;
                 right: 0px;
-                height: 0.1042vw;
+                height: 2px;
                 background-color: white;
             }
             .milestone__goals-cont__years__item {
@@ -219,25 +221,22 @@
             }
             .milestone__goals-cont__years__item__txt {
                 font-weight: 400;
-                font-size: 2.5926vh;
-                line-height: 3.1481vh;
+                font-size: 28px;
+                line-height: 34px;
                 color: white;
                 opacity: 0.3;
                 font-weight: 300;
-                margin-bottom: 12px;
+                margin-bottom: 3px;
             }
             .milestone__goals-cont__years__item__txt--active {
                 opacity: 1;
             }
             .milestone__goals-cont__years__item__ico {
                 display: block;
-                width: 5.5556vh;
-                height: 5.5556vh;
+                width: 60px;
+                height: 60px;
                 border-radius: 50%;
                 background-color: white;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: cover;
                 transform: scale(0.33);
             }
             .milestone__goals-cont__years__item__2006__ico,
@@ -245,28 +244,64 @@
             .milestone__goals-cont__years__item__2030__ico {
                 transform: scale(1);
             }
-            .milestone__goals-cont__years__item__2006__ico {
+            .milestone__goals-cont__years__item__2006__ico:before,
+            .milestone__goals-cont__years__item__2023__ico:before,
+            .milestone__goals-cont__years__item__2030__ico:before {
+                position: relative;
+                z-index: 2;
+                content: '';
+                display: block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .milestone__goals-cont__years__item__2006__ico:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2006.svg);
             }
-            .milestone__goals-cont__years__item__2023__ico {
+            .milestone__goals-cont__years__item__2023__ico:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2023.svg);
             }
-            .milestone__goals-cont__years__item__2023__ico.milestone__goals-cont__years__item__ico--active {
+            .milestone__goals-cont__years__item__2023__ico.milestone__goals-cont__years__item__ico--active:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2023_active.svg);
             }
-            .milestone__goals-cont__years__item__2030__ico {
+            .milestone__goals-cont__years__item__2030__ico:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2030.svg);
             }
-            .milestone__goals-cont__years__item__2030__ico.milestone__goals-cont__years__item__ico--active {
+            .milestone__goals-cont__years__item__2030__ico.milestone__goals-cont__years__item__ico--active:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2030_active.svg);
+            }
+            .milestone__goals-cont__years__item__ico:after {
+                position: absolute;
+                z-index: 1;
+                bottom: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: white;
+                opacity: 0;
+                transform: scale(1);
+                transition: 0.3s ease all;
+            }
+            .milestone__goals-cont__years__item__ico--active:after {
+                background-color: #75C66B;
+                opacity: 0.5;
+                transform: scale(1.25);
             }
             .milestone__goals-cont__summary {
                 visibility: hidden;
                 position: absolute;
-                top: 21.6667vh;
+                top: 15.9184vh;
                 left: 0px;
                 width: 100%;
                 color: white;
+                font-size: 28px;
+                line-height: 34px;
                 opacity: 0;
                 transition: 0.3s ease all;
             }
@@ -277,7 +312,7 @@
             .milestone__goals-cont__detail {
                 position: absolute;
                 left: 120px;
-                bottom: 19vh;
+                bottom: 22.1088vh;
                 visibility: hidden;
                 display: flex;
                 gap: 0px 20px;
@@ -286,16 +321,17 @@
                 visibility: visible;
             }
             .milestone__goals-cont__detail__item {
-                width: 328px;
-                height: 48.1481vh;
+                width: 318px;
+                height: 35.3741vh;
+                min-height: 450px;
                 text-align: left;
                 box-sizing: border-box;
-                padding: 5.5556vh 46px;
-                border-radius: 30px;
+                padding: 4.0816vh 41px;
+                border-radius: 2.0408vh;
                 background-color: rgba(0, 0, 0, 0.3);
                 backdrop-filter: blur(100px);
                 opacity: 0;
-                transform: translateY(3.7037vh);
+                transform: translateY(2.0408vh);
                 transition: 0.5s ease opacity,0.5s ease transform;
             }
             .milestone__goals-cont__detail__item:nth-child(1) {
@@ -314,19 +350,18 @@
             .milestone__goals-cont__detail__item__tit {
                 display: flex;
                 font-weight: 300;
-                font-size: 6.6667vh;
-                line-height: 1;
-                height: 6.6667vh;
+                font-size: 72px;
+                line-height: 76px;
                 align-items: center;
                 letter-spacing: -0.005em;
                 color: #F0ECE4;
             }
             .milestone__goals-cont__detail__item__tit__txt {
-                font-size: 4.0741vh;
+                font-size: 44px;
             }
             .milestone__goals-cont__detail__item__ico {
-                margin-top: 2.2222vh;
-                height: 4.537vh
+                margin-top: 24px;
+                height: 48px;
             }
             .milestone__goals-cont__detail__item__ico__img {
                 width: auto;
@@ -334,24 +369,24 @@
             }
             .milestone__goals-cont__detail__item__cont {
                 color: #F0ECE4;
-                font-size: 2.5926vh;
+                font-size: 28px;
+                line-height: 34px;
                 font-weight: 300;
-                line-height: 130%;
                 letter-spacing: -0.005em;
-                margin-top: 2.5926vh;
+                margin-top: 24px;
             }
             .milestone__goals-cont__detail__item__cont__small {
                 display: block;
-                font-size: 1.4815vh;
-                line-height: 145%;
+                font-size: 16px;
+                line-height: 22px;
                 color: #F0ECE4;
-                margin-top: 1.1111vh;
+                margin-top: 8px;
             }
             .milestone__goals-cont__home-appliances {
                 display: none;
                 opacity: 0;
                 position: absolute;
-                bottom: 7.4074vh;
+                bottom: 5.4422vh;
                 left: 120px;
                 text-align: left;
                 color: white;
@@ -429,10 +464,10 @@
                 background-image: url(../../mocks/ST0003/photo-carbon-emission-reduction-plan1.png);
             }
             .carbon-emission-reduction__plan__item__step2__btn {
-                background-image: url(../../mocks/ST0003/photo-carbon-emission-reduction-plan2.png);
+                background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../mocks/ST0003/photo-carbon-emission-reduction-plan2.png);
             }
             .carbon-emission-reduction__plan__item__step3__btn {
-                background-image: url(../../mocks/ST0003/photo-carbon-emission-reduction-plan3.png);
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 79.17%, rgba(0, 0, 0, 0.5) 100%), url(../../mocks/ST0003/photo-carbon-emission-reduction-plan3.jpg);
             }
             .carbon-emission-reduction__plan__item__btn:after {
                 position: absolute;
@@ -547,8 +582,7 @@
                 position: absolute;
                 top: 0px;
                 left: 0px;
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.26) 0%, rgba(0, 0, 0, 0) 100%);
-                transform: rotate(-180deg);
+                background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 38.36%);
             }
             .home-appliances-manufacturing-factory__photos-cont__figure__img {
                 width: 100%;
@@ -736,6 +770,7 @@
                 margin-right: 20px;
             }
             .whats-next__menu__slide__anchor {
+                position: relative;
                 display: block;
                 width: 100%;
                 height: 475px;
@@ -743,23 +778,89 @@
                 box-sizing: border-box;
                 background: #F0ECE4;
                 border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide3__anchor {
+                transition: 0.3s ease background-color;
+            }
+            .whats-next__menu__slide3__anchor:hover {
+                background: #262626;
             }
             .whats-next__menu__slide__anchor__photo {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 274px;
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 87px;
+                left: 107px;
+                right: 108px;
+                bottom: 128px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 62px;
+                left: 82px;
+                right: 83px;
+                bottom: 103px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 135px;
+                left: -57px;
+                bottom: 158px;
+                width: 1233px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                left: -677px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide__anchor__photo__img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: auto;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .whats-next__menu__slide__anchor__txt {
-                padding: 56px 32px 0px;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 28px;
                 line-height: 34px;
                 font-size: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
             }
             .whats-next__menu__btn-set {
                 position: absolute;
@@ -876,9 +977,21 @@
                     <ul class="milestone__goals-cont__detail milestone__goals-cont__detail__2030 milestone__goals-cont__detail--active">
                         <li class="milestone__goals-cont__detail__item">
                             <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
+                                <dt class="milestone__goals-cont__detail__item__tit milestone__goals-cont__detail__item__tit__txt">Carbon Zero</dt>
                                 <dd class="milestone__goals-cont__detail__item__ico">
                                     <img src="../../mocks/ST0003/ico-milestone-goals1.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                </dd>
+                                <dd class="milestone__goals-cont__detail__item__cont">
+                                    Achieve Carbon <br />
+                                    Neutrality**
+                                </dd>
+                            </dl>
+                        </li>
+                        <li class="milestone__goals-cont__detail__item">
+                            <dl class="milestone__goals-cont__detail__item__inner">
+                                <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
+                                <dd class="milestone__goals-cont__detail__item__ico">
+                                    <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
                                 </dd>
                                 <dd class="milestone__goals-cont__detail__item__cont">
                                     Complete transition <br />
@@ -891,7 +1004,7 @@
                             <dl class="milestone__goals-cont__detail__item__inner">
                                 <dt class="milestone__goals-cont__detail__item__tit">20%</dt>
                                 <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
                                 </dd>
                                 <dd class="milestone__goals-cont__detail__item__cont">
                                     Reduce Carbon <br />
@@ -899,18 +1012,6 @@
                                     use of 7 Major <br />
                                     Product <br />
                                     Categories*
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit milestone__goals-cont__detail__item__tit__txt">Carbon Zero</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Achieve Carbon <br />
-                                    Neutrality**
                                 </dd>
                             </dl>
                         </li>
@@ -947,7 +1048,10 @@
                                     <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
                                 </dd>
                                 <dd class="milestone__goals-cont__detail__item__cont">
-                                    Reduce carbon emissions during use of 7 major products* <br />
+                                    Reduce carbon <br />
+                                    emissions during <br />
+                                    use of 7 major <br />
+                                    products* <br />
                                     <small class="milestone__goals-cont__detail__item__cont__small">(compared to 2020)</small>
                                 </dd>
                             </dl>
@@ -1019,7 +1123,7 @@
                 </nav>
                 <div class="home-appliances-manufacturing-factory__photos-cont home-appliances-manufacturing-factory__photos-cont--tennessee home-appliances-manufacturing-factory__photos-cont--active">
                     <figure class="home-appliances-manufacturing-factory__photos-cont__figure">
-                        <img src="../../mocks/ST0003/photo-home-appliances-manufacturing-factory1.jpg" alt="" class="home-appliances-manufacturing-factory__photos-cont__figure__img">
+                        <img src="../../mocks/ST0003/photo-home-appliances-manufacturing-factory1.png" alt="" class="home-appliances-manufacturing-factory__photos-cont__figure__img">
                         <figcaption class="home-appliances-manufacturing-factory__photos-cont__figure__figcaption">LG Tennessee factory (Tennessee, USA)</figcaption>
                         <button type="button" class="home-appliances-manufacturing-factory__photos-cont__figure__discover-more">Discover more</button>
                     </figure>
@@ -1070,33 +1174,33 @@
                 <div class="swiper whats-next__menu">
                     <div class="swiper-wrapper whats-next__menu__slide-wrap">
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
                             </a>
                         </div>
                         <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img">
+                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                 </div>
                                 <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
                             </a>
