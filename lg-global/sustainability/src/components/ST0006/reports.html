@@ -47,6 +47,9 @@
                 cursor: pointer;
                 padding: 0px
             }
+            dl,dt,dd {
+                margin: 0px;
+            }
 
             /* Reports */
             .reports {
@@ -111,6 +114,56 @@
             .reports__data__list {
                 width: 100%;
                 border-bottom: 1px solid #D9D9D9;
+            }
+            .reports__data__list__head__category {
+                text-align: left;
+                line-height: 1;
+                padding: 20px 0px;
+            }
+            .reports__data__list__item__subject,
+            .reports__data__list__item__cont {
+                text-align: left;
+                padding: 18px 0px;
+                border-top: 1px solid #D9D9D9;
+            }
+            .reports__data__list__item__subject__desc {
+                padding: 22px 0px;
+            }
+            .reports__data__list__item__cont__download-type {
+                position: relative;
+                width: 168px;
+                border-radius: 22px;
+            }
+            .reports__data__list__item__cont__download-type__label {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                align-items: center;
+                height: 44px;
+                padding: 0px 23px;
+                font-size: 15px;
+                line-height: 24px;
+                box-sizing: border-box;
+                border: 1px solid rgba(0, 0, 0, 0.15);
+                border-radius: 60px;
+                background-color: white;
+            }
+            .reports__data__list__item__cont__download-type__select {
+                position: absolute;
+                z-index: 3;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .reports__data__list__item__cont__btn-download {
+                display: inline-block;
+                vertical-align: middle;
+                width: 44px;
+                height: 44px;
+                text-indent: -9999px;
+                border-radius: 22px;
+                background: #262626 url(../../mocks/ST0006/btn_download.svg) no-repeat center center;
             }
 
             /* What's Next */
@@ -293,13 +346,13 @@
                                         </dl>
                                     </th>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -311,13 +364,13 @@
                                         </dl>
                                     </th>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -329,9 +382,9 @@
                         <table class="reports__data__list">
                             <thead>
                                 <tr class="reports__data__list__head">
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Year</th>
-                                    <th scope="col">Language</th>
+                                    <th scope="col" class="reports__data__list__head__category">Title</th>
+                                    <th scope="col" class="reports__data__list__head__category">Year</th>
+                                    <th scope="col" class="reports__data__list__head__category">Language</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -340,7 +393,7 @@
                                         Sustainability Report
                                     </th>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">2020-2021</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">2020-2021</option>
@@ -359,16 +412,16 @@
                                                 <option value="">2006-2007</option>
                                                 <option value="">2005</option>
                                             </select>
-                                        </div>
+                                        </span>
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -377,7 +430,7 @@
                                         Environmental Report
                                     </th>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">2012</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">2012</option>
@@ -386,16 +439,16 @@
                                                 <option value="">2009</option>
                                                 <option value="">2008</option>
                                             </select>
-                                        </div>
+                                        </span>
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -412,9 +465,9 @@
                         <table class="reports__data__list">
                             <thead>
                                 <tr class="reports__data__list__head">
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Language</th>
+                                    <th scope="col" class="reports__data__list__head__category">Title</th>
+                                    <th scope="col" class="reports__data__list__head__category">Category</th>
+                                    <th scope="col" class="reports__data__list__head__category">Language</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -426,13 +479,13 @@
                                         Environmental product policy
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -444,13 +497,13 @@
                                         Global take-back guidance
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -462,13 +515,13 @@
                                         Global take-back guidance
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -480,13 +533,13 @@
                                         SHEE Policy
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -498,9 +551,9 @@
                         <table class="reports__data__list">
                             <thead>
                                 <tr class="reports__data__list__head">
-                                    <th scope="col">Title</th>
-                                    <th scope="col">Category</th>
-                                    <th scope="col">Language</th>
+                                    <th scope="col" class="reports__data__list__head__category">Title</th>
+                                    <th scope="col" class="reports__data__list__head__category">Category</th>
+                                    <th scope="col" class="reports__data__list__head__category">Language</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -512,13 +565,13 @@
                                         Code of ethics
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -530,13 +583,13 @@
                                         Diversity&Inclusion Policy
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -548,13 +601,13 @@
                                         LGE supplier code of conduct
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -566,13 +619,13 @@
                                         LGE supplier code of conduct
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -584,13 +637,13 @@
                                         Global Labor Policy
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -602,13 +655,13 @@
                                         Global labor Policy
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -620,13 +673,13 @@
                                         Code of Conduct
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -638,13 +691,13 @@
                                         Conflict Minerals Due Diligence Report
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>
@@ -656,13 +709,13 @@
                                         Guidelines for hazardous
                                     </td>
                                     <td class="reports__data__list__item__cont">
-                                        <div class="reports__data__list__item__cont__download-type">
+                                        <span class="reports__data__list__item__cont__download-type">
                                             <label class="reports__data__list__item__cont__download-type__label">English</label>
                                             <select name="" id="" class="reports__data__list__item__cont__download-type__select">
                                                 <option value="">English</option>
                                                 <option value="">Korean</option>
                                             </select>
-                                        </div>
+                                        </span>
                                         <a href="#" target="_blank" title="open new window" class="reports__data__list__item__cont__btn-download">file download</a>
                                     </td>
                                 </tr>

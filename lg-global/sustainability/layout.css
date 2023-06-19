@@ -113,10 +113,11 @@ ul,ol {
     /* Common Header */
     .c-header {
         display: block;
-        top: 20px;
+        top: 24px;
         left: 20px;
         right: 20px;
         padding: 0px;
+        min-height: 66px;
         box-sizing: border-box;
         border-radius: 0px;
         background-color: transparent;
@@ -124,6 +125,8 @@ ul,ol {
         -webkit-backdrop-filter: blur(0px);
     }
     .c-header__tit {
+        top: 0px;
+        left: calc(50% - 80px);
         width: 160px;
         height: auto;
         padding: 23px 32px;
@@ -143,7 +146,6 @@ ul,ol {
     /* Common Header - Gnb */
     .c-header__gnb {
         display: none;
-        margin-top: 24px;
         height: calc(100vh - 142px);
         padding: 24px 20px;
         box-sizing: border-box;
