@@ -356,7 +356,6 @@
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
 
-
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
@@ -442,6 +441,11 @@
                 box-sizing: border-box;
                 overflow: hidden;
             }
+            .brand-elements__slide a {
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
             .brand-elements__slide.brand-elements__slide--logo {
                 background-image: url(../../mocks/BS0002/whats-next-logo-d.png);
             } 
@@ -479,6 +483,7 @@
                 opacity: 0;
                 border-radius: 14px;
                 transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
+                pointer-events: none;
             }
             .brand-elements__slide.brand-elements__slide--photography::before {
                 top: 47%;
@@ -871,19 +876,19 @@
                     <div class="brand-elements__slider">
                         <ul class="brand-elements__slides swiper-wrapper">
                             <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
-                                <h3 class="brand-elements__item-title">Logo</h3>
+                                <a href="../BS0002/brand_logo.html"><h3 class="brand-elements__item-title">Logo</h3></a>
                             </li>
                             <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
-                                <h3 class="brand-elements__item-title">Colour & Gradients</h3>
+                                <a href="../BS0003/brand_colors.html"><h3 class="brand-elements__item-title">Colour & Gradients</h3></a>
                             </li>
                             <li class="brand-elements__slide brand-elements__slide--tagline swiper-slide">
-                                <h3 class="brand-elements__item-title">Tagline</h3>
+                                <a href="../BS0004/brand_tagline.html"><h3 class="brand-elements__item-title">Tagline</h3></a>
                             </li>
                             <li class="brand-elements__slide brand-elements__slide--photography swiper-slide">
-                                <h3 class="brand-elements__item-title">Photography</h3>
+                                <a href="../BS0005/brand_photography.html"><h3 class="brand-elements__item-title">Photography</h3></a>
                             </li>
                             <li class="brand-elements__slide brand-elements__slide--design swiper-slide">
-                                <h3 class="brand-elements__item-title">Design System</h3>
+                                <a href="../BS0006/brand_design_system.html"><h3 class="brand-elements__item-title">Design System</h3></a>
                             </li>
                         </ul>
                     </div>
