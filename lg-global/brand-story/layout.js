@@ -99,7 +99,6 @@ function initGnbDeps2(tAnchor) {
             restItem.querySelector("a").classList.remove("c-header__gnb__list__item__anchor--active")
         })
         tAnchor.classList.add("c-header__gnb__list__item__anchor--active")
-        gnbDeps2Bg.style.display = "block"
     }
 
     if(tAnchor.className.indexOf("--on") < 0) {
@@ -107,6 +106,7 @@ function initGnbDeps2(tAnchor) {
             restItem.querySelector("a").classList.remove("c-header__gnb__list__item__anchor--on")
         })
         tAnchor.classList.add("c-header__gnb__list__item__anchor--on")
+        gnbDeps2Bg.style.display = "block"
     }
 
     tDeps2MenuItem.forEach(function(t2mi,i) {
@@ -130,13 +130,13 @@ function initGnbDeps2(tAnchor) {
 
     }
 
-    /*tDeps2.onmouseleave = function() {
+    tDeps2.onmouseleave = function() {
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
         tList.querySelectorAll(".c-header__gnb__list__item")[tDeps2MenuItemOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
         gnbDeps2Bg.style.display = "none"
 
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
-    }*/
+    }
 }
 
 
