@@ -612,33 +612,28 @@
                 }
             }
 
-            /* Means */
+            /* Summary */
             .summary {
                 position: relative;
                 height: 100vh;
             }
-            .summary__visual,
             .summary__cont {
                 position: absolute;
-                z-index: 1;
                 top: 7.4074vh;
-                left: 120px;
-                right: 120px;
+                left: 6.25vw;
+                right: 6.25vw;
                 height: calc(100vh - 14.8148vh);
                 border-radius: 40px;
                 box-sizing: border-box;
-                background: url(../../mocks/ST0001/../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg.png) no-repeat center center;
+                background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
                 background-size: cover;
-            }
-            .summary__cont {
-                z-index: 2;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh 80px;
+                padding: 7.4074vh 4.1667vw;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -647,10 +642,11 @@
                 transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                font-size: 60px;
+                padding: 9.6296vh 4.1667vw;
+                font-size: 52px;
                 font-weight: 300;
-                line-height: 120%;
-                letter-spacing: -1px;
+                line-height: 60px;
+                letter-spacing: -0.005em;
             }
 
             /* What's Next */
@@ -1043,7 +1039,6 @@
                 </div>
             </div>
             <div class="summary">
-                <div class="summary__visual"></div>
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         Sustainability means more to us than just a slogan. <br />
