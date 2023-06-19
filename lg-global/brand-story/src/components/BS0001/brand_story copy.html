@@ -897,10 +897,10 @@
             }
             .marquee__inner.marquee__inner--top {
                 height: 19.05vw;
-                margin-bottom: 20.04vw;
             }
             .marquee__inner.marquee__inner--bottom {
                 height: 31.42vw;
+                margin-top: 20.04vw;
             }
             .marquee__part {
                 height: 100%;
@@ -1912,10 +1912,7 @@
                 })
 
                 function setTextValue(idx) {
-                    // let sibs = siblings(paraTextTargets[idx])
                     setClass(paraTextTargets[idx], 'parallex__title--visible')
-
-                    
                 }
 
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
@@ -1926,19 +1923,39 @@
                 const paraSection = paraWrap.querySelectorAll('.parallex-visual__item')
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
                 const identTitle = paraWrap.querySelector('.parallex__section__title-wrap--identity')
+                const mqBtm = paraWrap.querySelector('.marquee__inner--bottom')
 
+                let sizes = {
+                    titleHeight: 0,
+                    fullScroll: 0,
+                    bottomHeight: 0,
+                    halfmargin: 0,
+                    totalScroll: 0,
+                }
+                function updateSizes() {
+                    sizes.titleHeight = identTitle.getBoundingClientRect().height
+                    sizes.fullScroll = paraWrap.getBoundingClientRect().height
+                    sizes.bottomHeight = mqBtm.getBoundingClientRect().height
+                    sizes.halfmargin = parseFloat(window.getComputedStyle(mqBtm).getPropertyValue('margin-top'))
+                    sizes.totalScroll = (sizes.fullScroll - sizes.bottomHeight) + (sizes.titleHeight / 2) - (sizes.halfmargin / 2)
+                }
+                updateSizes()
                 parallaxImageMotion(targetWrap, '100%')
 
                 gsap.to(identTitle, {
                     scrollTrigger: {
                         trigger: paraWrap,
                         start: 'top top',
-                        end: 'bottom bottom',
+                        end: `${sizes.totalScroll}px bottom`,
                         pin: identTitle,
-                        markers: true,
-
+                        // markers: true,
                     }
                 })
+
+                window.addEventListener("resize", function() {
+                    updateSizes()
+                    ScrollTrigger.refresh();
+                });
 
             }
             function brandBreifMotion() {

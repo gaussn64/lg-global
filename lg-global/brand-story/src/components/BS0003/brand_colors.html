@@ -77,11 +77,13 @@
                 font-weight: 300;
                 margin: 120px 0 48px;
                 text-align: center;
+                color: #262626;
             }
             .brand__header-title + .brand__header-description {
                 font-size: 20px;
                 line-height: 28px;
                 text-align: center;
+                color: #4A4946;
             }
             .brand__content-inner {
                 box-sizing: border-box;
@@ -566,6 +568,7 @@
                 display: flex;
                 align-items: center;
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+                color: #262626;
             }
             
             .brand-elements__slide::before {
@@ -945,19 +948,19 @@
                         and feel, which can be selected depending on the context or tone.
                     </p>
                 </div>
-                <div class="btmdot-slide__container" data-type-set="dark">
+                <div class="btmdot-slide__container" data-type-set="light">
                     <p class="btmdot-slide__index">Gradient<span>01</span></p>
                     <div class="btmdot-slide__slider">
                         <ul class="btmdot-slide__slide__inner swiper-wrapper">
-                            <li class="btmdot-slide__slide btmdot-slide__slide--dark swiper-slide"></li>
                             <li class="btmdot-slide__slide btmdot-slide__slide--light swiper-slide"></li>
                             <li class="btmdot-slide__slide btmdot-slide__slide--light-dark swiper-slide"></li>
                             <li class="btmdot-slide__slide btmdot-slide__slide--dark-light swiper-slide"></li>
+                            <li class="btmdot-slide__slide btmdot-slide__slide--dark swiper-slide"></li>
                         </ul>
                     </div>
                     <div class="btmdot-slide__btm-container">
                         <div class="btmdot-slide__pagination"></div>
-                        <span class="btmdot__tag">Dark Mode Usage Only</span>
+                        <span class="btmdot__tag">Light Mode Usage Only</span>
                     </div>
                 </div>
             </div>
@@ -1032,10 +1035,10 @@
                 const slideIndex = slideContainer.querySelector('.btmdot-slide__index span')
 
                 const settings = new Map([
-                    ['dark', 'Dark Mode Usage Only'],
                     ['light', 'Light Mode Usage Only'],
                     ['light-dark', 'Light & Dark Mode Usage'],
                     ['dark-light', 'Dark & Light Mode Usage'],
+                    ['dark', 'Dark Mode Usage Only'],
                 ]);
 
                 const swiper = new Swiper(slideWrap, {
