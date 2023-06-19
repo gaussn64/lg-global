@@ -427,27 +427,47 @@
             }
             .social-impact__go-to__link {
                 display: inline-block;
-                padding: 24px 30px;
+                padding: 20px 27px 22px;
                 border-radius: 100px;
-                font-size: 20px;
-                line-height: 1;
+                font-size: 16px;
                 font-weight: 600;
+                line-height: 1;
+                border: 1px solid #4A4946;
                 background-color: white;
+                transition: 0.3s ease all
             }
             .social-impact__go-to__link:hover,
             .social-impact__go-to__link:focus {
-                text-decoration: none
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
             .social-impact__go-to__link:after {
                 content: '';
                 display: inline-block;
-                width: 25px;
-                height: 24px;
+                width: 20px;
+                height: 20px;
                 vertical-align: middle;
                 margin-left: 10px;
                 background: url(../../mocks/ST0001/go-to-blank.svg) no-repeat left top;
                 background-size: cover;
                 vertical-align: text-bottom;
+            }
+            .social-impact__go-to__link:hover:after,
+            .social-impact__go-to__link:focus:after {
+                background-image: url(../../mocks/ST0001/go-to-blank_on.svg);
+                animation-duration: 0.3s;
+                animation-name: fadeIn;
+                animation-direction: alternate;
+            }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                }
             }
 
             /* Summary */
