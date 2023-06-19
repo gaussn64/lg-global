@@ -1403,67 +1403,6 @@
                             "right":"-="+window.innerWidth
                         });
                     },5000)
-                },
-                means: function() {
-                    let means = document.querySelector(".means");
-                    let msOfsTop = means.offsetTop;
-                    let meansVisual = means.querySelector(".means__visual");
-                    let msvOfsTop = meansVisual.offsetTop;
-                    let meansCont = means.querySelector(".means__cont");
-                    let measContTxt = meansCont.querySelectorAll(".means__cont__txt");
-                    let mctOfs = new Array();
-                    let mctViewIs = new Array();
-
-                    measContTxt.forEach(function(mct,a) {
-                        mctOfs[a] = mct.offsetTop;
-                        mctViewIs[a] = false;
-                    })
-
-                    gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".means",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                //console.log("enter")
-                                meansVisual.classList.add("means__visual--fixed")
-                                meansVisual.classList.remove("means__visual--bottom-end")
-                                meansCont.classList.add("means__cont--fixed")
-                            },
-                            onLeaveBack: function() {
-                                //console.log("leaveBack")
-                                meansVisual.classList.remove("means__visual--fixed")
-                                meansCont.classList.remove("means__cont--fixed")
-                            },
-                            onLeave: function() {
-                                //console.log("leave")
-                                meansVisual.classList.remove("means__visual--fixed")
-                                meansVisual.classList.add("means__visual--bottom-end")
-                                meansCont.classList.remove("means__cont--fixed")
-                            },
-                            onEnterBack: function() {
-                                //console.log("enterBack")
-                                meansVisual.classList.add("means__visual--fixed")
-                                meansVisual.classList.remove("means__visual--bottom-end")
-                                meansCont.classList.add("means__cont--fixed")
-                            },
-                            onUpdate: initMeanContTxt
-                        }
-                    })
-
-                    function initMeanContTxt() {
-                        //console.log(scrollY+" / "+means.offsetTop+" / "+mctOfs)
-                        measContTxt.forEach(function(mct,b) {
-                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
-                                mct.classList.add("means__cont__txt--active")
-                                mctViewIs[b] = true
-                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
-                                mct.classList.remove("means__cont__txt--active")
-                                mctViewIs[b] = false
-                            }
-                        })
-
-                    }
                 },whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: "auto",
@@ -1484,7 +1423,6 @@
             landing.coreValue();
             landing.menuIntroduce();
             landing.newsroom();
-            landing.means();
             landing.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
