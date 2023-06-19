@@ -360,9 +360,10 @@
             /* Living Sustainably Summary */
             .summary {
                 position: relative;
-                height: 300vh;
+                height: 100vh;
             }
-            .summary__visual {
+            .summary__visual,
+            .summary__cont {
                 position: absolute;
                 z-index: 1;
                 top: 7.4074vh;
@@ -374,47 +375,15 @@
                 background: url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
                 background-size: cover;
             }
-            .summary__visual--fixed {
-                position: fixed;
-                bottom: auto;
-            }
-            .summary__visual--bottom-end {
-                top: auto;
-                bottom: 7.4074vh;
-            }
             .summary__cont {
-                position: relative;
                 z-index: 2;
-                padding-top: 100vh;
-            }
-            .summary__cont:before,
-            .summary__cont:after {
-                position: absolute;
-                z-index: 2;
-                left: 0px;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 7.4074vh;
-                background-color: #f0ece4;
-            }
-            .summary__cont:before {
-                top: 0px;
-            }
-            .summary__cont:after {
-                bottom: 0px;
-            }
-            .summary__cont--fixed:before,
-            .summary__cont--fixed:after {
-                position: fixed;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh calc(120px + 80px);
-                height: 50vh;
+                padding: 7.4074vh 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -683,7 +652,7 @@
                         We're committed to both promoting sustainable living <br />
                         and empowering you along the way.
                     </p>
-                    <p class="summary__cont__txt">
+                    <p class="summary__cont__txt summary__cont__txt--active">
                         Use smart. <br />
                         Live sustainable.
                     </p>
@@ -770,67 +739,6 @@
                         },
                     });
                 },
-                summary: function() {
-                    let summary = document.querySelector(".summary");
-                    let msOfsTop = summary.offsetTop;
-                    let summaryVisual = summary.querySelector(".summary__visual");
-                    let msvOfsTop = summaryVisual.offsetTop;
-                    let summaryCont = summary.querySelector(".summary__cont");
-                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
-                    let mctOfs = new Array();
-                    let mctViewIs = new Array();
-    
-                    measContTxt.forEach(function(mct,a) {
-                        mctOfs[a] = mct.offsetTop;
-                        mctViewIs[a] = false;
-                    })
-    
-                    gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".summary",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                //console.log("enter")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onLeaveBack: function() {
-                                //console.log("leaveBack")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onLeave: function() {
-                                //console.log("leave")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryVisual.classList.add("summary__visual--bottom-end")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onEnterBack: function() {
-                                //console.log("enterBack")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onUpdate: initMeanContTxt
-                        }
-                    })
-    
-                    function initMeanContTxt() {
-                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
-                        measContTxt.forEach(function(mct,b) {
-                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
-                                mct.classList.add("summary__cont__txt--active")
-                                mctViewIs[b] = true
-                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
-                                mct.classList.remove("summary__cont__txt--active")
-                                mctViewIs[b] = false
-                            }
-                        })
-    
-                    }
-                },
                 whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: "auto",
@@ -847,7 +755,6 @@
             }
             livingSt.visualScrollDown()
             livingSt.ecoConsciousMaterial()
-            livingSt.summary();
             livingSt.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);

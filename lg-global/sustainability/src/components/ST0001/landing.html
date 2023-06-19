@@ -582,11 +582,12 @@
             }
 
             /* Means */
-            .means {
+            .summary {
                 position: relative;
-                height: 300vh;
+                height: 100vh;
             }
-            .means__visual {
+            .summary__visual,
+            .summary__cont {
                 position: absolute;
                 z-index: 1;
                 top: 7.4074vh;
@@ -595,50 +596,18 @@
                 height: calc(100vh - 14.8148vh);
                 border-radius: 40px;
                 box-sizing: border-box;
-                background: url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
+                background: url(../../mocks/ST0001/../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg.png) no-repeat center center;
                 background-size: cover;
             }
-            .means__visual--fixed {
-                position: fixed;
-                bottom: auto;
-            }
-            .means__visual--bottom-end {
-                top: auto;
-                bottom: 7.4074vh;
-            }
-            .means__cont {
-                position: relative;
+            .summary__cont {
                 z-index: 2;
-                padding-top: 100vh;
             }
-            .means__cont:before,
-            .means__cont:after {
-                position: absolute;
-                z-index: 2;
-                left: 0px;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 7.4074vh;
-                background-color: #f0ece4;
-            }
-            .means__cont:before {
-                top: 0px;
-            }
-            .means__cont:after {
-                bottom: 0px;
-            }
-            .means__cont--fixed:before,
-            .means__cont--fixed:after {
-                position: fixed;
-            }
-            .means__cont__txt {
+            .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh calc(120px + 80px);
-                height: 50vh;
+                padding: 7.4074vh 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -646,7 +615,7 @@
                 transform: scale(1);
                 transition: 0.3s ease all;
             }
-            .means__cont__txt--active {
+            .summary__cont__txt--active {
                 font-size: 60px;
                 font-weight: 300;
                 line-height: 120%;
@@ -977,14 +946,14 @@
                     <a href="#" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
                 </div>
             </div>
-            <div class="means">
-                <div class="means__visual"></div>
-                <div class="means__cont">
-                    <p class="means__cont__txt">
+            <div class="summary">
+                <div class="summary__visual"></div>
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
                         Sustainability means more to us than just a slogan. <br />
                         It's a commitment we're passionate about putting into action.
                     </p>
-                    <p class="means__cont__txt">
+                    <p class="summary__cont__txt summary__cont__txt--active">
                         A sustainable world <br />
                         comes from <br />
                         meaningful action.
