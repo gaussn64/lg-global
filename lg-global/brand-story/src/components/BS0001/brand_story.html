@@ -1189,8 +1189,8 @@
                     height: 100%;
                 }
                 .lifeisgood__letter--active .lifeisgood__text {
-                    height: 15vw;
-                    max-height: 11.67vw;
+                    height: 18.4vw;
+                    max-height: 18.4vw;
                 }
                 .lifeisgood__letter.lifeisgood__letter--lifeis .lifeisgood__text {
                     margin: 0 0 2px;
@@ -1209,12 +1209,12 @@
                 
                 .lifeisgood__letter--active.lifeisgood__letter--lifeis .lifeisgood__text {
                     margin: unset;
-                    bottom: 32.14vw;
+                    bottom: 24.74vw;
                     transform: translateX(-50%);
                 }
                 .lifeisgood__letter--active.lifeisgood__letter--good .lifeisgood__text {
                     margin: unset;
-                    top: 32.14vw;
+                    top: 24.74vw;
                     transform: translateX(-50%);
                 }
                 
@@ -1961,38 +1961,24 @@
                 const isCanvasVisible = canvasRect.top + window.pageYOffset
                 const isCanvasOver = isCanvasVisible + canvasRect.height
 
-                function setTextValue() {
 
-                    paraSections.forEach((section, idx) => {
-                        const rect = section.getBoundingClientRect()
-                        const offsetTop = rect.top + window.pageYOffset
-
-                        if (offsetTop < winY && (offsetTop + rect.height - (window.innerHeight * 0.6)) > winY ) {
-
-                            if (idx !== lastIdx) {
-                                paraTextTargets[idx].classList.add('parallex__title--visible')
-                                lastIdx = idx
+                paraSections.forEach((section, idx) => {
+                    gsap.to(section, {
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top top',
+                            end: 'bottom bottom',
+                            onEnter: () => {
+                                setClass(paraTextTargets[idx], 'parallex__title--visible')
+                            },
+                            onEnterBack: () => {
+                                setClass(paraTextTargets[idx], 'parallex__title--visible')
                             }
-                            
-                        } else if (isCanvasVisible > winY) {
-                            paraTextTargets[0].classList.add('parallex__title--visible')
-                        } else if (isCanvasOver < winY) {
-                            //
-                            lastIdx = ''
-                        } else {
-                            paraTextTargets[idx].classList.remove('parallex__title--visible')
-                        } 
+                        }
                     })
-                }
-                window.addEventListener('scroll', ()=> {
-                    winY = window.pageYOffset
-                    setTextValue()
-                    
                 })
-                // window.scrollY > isCanvasOver - window.innerHeight ? paraTextTargets[0].classList.remove('parallex__title--visible') : ''
 
                 const targetWrap = paraWrap.querySelector('.parallax-pin__images')
-                setTextValue()
                 parallaxImageMotion(targetWrap, '125%')
             }
             function parallaxIdentitySec() {
