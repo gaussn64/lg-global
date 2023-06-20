@@ -1468,10 +1468,9 @@
                 var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
                 var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
                 var condition = 0;
-                var dist = 0;
+                var dist = window.innerWidth;
                 var wheelIng = true;
-                var startPercentGauge = (1/pdmSection.length)*100
-                pdmProgressBar.style.width = (startPercentGauge*2) + "%"
+                var startPercentGauge;
 
                 document.querySelector("body").style.overflow = "hidden"
                 pdmPopup.style.display = "block"
@@ -1482,29 +1481,52 @@
                         pdmSectionWidth+=pdmSection[a].offsetWidth;
                     }
                     pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
                     wheelIng = false
                 } ,500)
 
+                window.onresize = window.onorientationchange = function() {
+                    condition = 0;
+                    pdmSectionWidth = 0
+                    for(var b=0; b < pdmSection.length; b++) {
+                        pdmSectionWidth+=pdmSection[b].offsetWidth;
+                    }
+                    dist = window.innerWidth
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                }
+
                 document.addEventListener("wheel", function (e) {
-                    if(e.deltaY > 0 && condition < pdmSection.length-2 && wheelIng == false) {
+                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
                         wheelIng = true
-                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        dist+=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Down: "+ parseInt(dist))
                         condition++;
                         setTimeout(function() {
                             wheelIng = false
                         },500)
-                    } else if(e.deltaY < 0 && condition >= 1 && wheelIng == false) {
+                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
                         wheelIng = true
-                        dist+=parseInt(pdmSection[condition-1].offsetWidth);
                         condition--;
+                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Up: "+ parseInt(dist))
                         setTimeout(function() {
                             wheelIng = false
                         },500)
                     }
-                    pdmProgressBar.style.width = startPercentGauge + ((condition+1)/pdmSection.length)*100 + "%"
-                    pdmContainer.style.marginLeft = dist+"px"
-                })
 
+                    if(dist/pdmSectionWidth < 1) {
+                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
+                        startPercentGauge = (dist/pdmSectionWidth)*100
+                        pdmProgressBar.style.width = (startPercentGauge) + "%"
+                    } else if(dist/pdmSectionWidth >= 1) {
+                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
+                        pdmProgressBar.style.width = "100%"
+                    }
+                })
 
                 btnClose.onclick = function() {
                     pdmProgressBar.style.width = ""
@@ -1513,7 +1535,6 @@
                     document.querySelector("body").style.overflow = ""
                 }
             }
-
         </script>
         <!-- [//code component area end] -->
     </main>
