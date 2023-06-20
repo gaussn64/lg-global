@@ -795,7 +795,6 @@
             .popup-discover-more--section--cont-wrap__inline {
                 display: inline-flex;
                 gap: 0px 70px;
-                padding-bottom: 22px;
             }
             .popup-discover-more--section--tit,
             .popup-discover-more--section--cont1,
@@ -804,17 +803,17 @@
                 box-sizing: border-box;
             }
             .popup-discover-more--section--tit {
-                font-size: 28px;
-                line-height: 34px;
-            }
-            .popup-discover-more--section--cont1 {
-                margin-top: 20px;
                 font-size: 36px;
                 line-height: 42px;
                 font-weight: 100;
             }
+            .popup-discover-more--section--cont1 {
+                margin-top: 20px;
+                font-size: 28px;
+                line-height: 34px;
+            }
             .popup-discover-more--section--cont2 {
-                margin-top: 30px;
+                margin-top: 20px;
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 28px;
@@ -829,7 +828,7 @@
                 padding-left: 35px;
             }
             .popup-discover-more--section--photo {
-                margin: 40px auto;
+                margin: 60px auto;
             }
             .popup-discover-more--section--photo:first-child {
                 margin-top: 0px;
@@ -856,6 +855,22 @@
             .popup-discover-more--section--recreation-of-product4--photo {
                 width: 722px;
                 height: 490px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center2--photo {
+                width: 680px;
+                height: 495px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center3--photo {
+                width: 490px;
+                height: 350px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center4--photo {
+                width: 610px;
+                height: 404px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center5--photo {
+                width: 350px;
+                height: 476px;
             }
             .popup-discover-more--section--photo--img {
                 width: 100%;
@@ -995,33 +1010,6 @@
                 <div class="recreation-of-product__discover-more">
                     <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
                 </div>
-                <ul class="recreation-of-product__type">
-                    <li class="recreation-of-product__type__item">
-                        <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
-                        <p class="recreation-of-product__type__item__intro">
-                            Repurpose plastic. <br />
-                            Repeat.
-                        </p>
-                        <div class="recreation-of-product__type__item__photo">
-                            <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
-                        </div>
-                        <button type="button" class="recreation-of-product__type__item__more">
-                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                        </button>
-                    </li>
-                    <li class="recreation-of-product__type__item">
-                        <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
-                        <p class="recreation-of-product__type__item__intro">
-                            Wrap it right
-                        </p>
-                        <div class="recreation-of-product__type__item__photo">
-                            <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
-                        </div>
-                        <button type="button" class="recreation-of-product__type__item__more">
-                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                        </button>
-                    </li>
-                </ul>
                 <div class="popup-discover-more" id="recreation-of-product">
                     <div class="popup-discover-more--container">
                         <section class="popup-discover-more--header">
@@ -1122,6 +1110,33 @@
                         </section>
                     </div>
                 </div>
+                <ul class="recreation-of-product__type">
+                    <li class="recreation-of-product__type__item">
+                        <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
+                        <p class="recreation-of-product__type__item__intro">
+                            Repurpose plastic. <br />
+                            Repeat.
+                        </p>
+                        <div class="recreation-of-product__type__item__photo">
+                            <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
+                        </div>
+                        <button type="button" class="recreation-of-product__type__item__more">
+                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                        </button>
+                    </li>
+                    <li class="recreation-of-product__type__item">
+                        <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
+                        <p class="recreation-of-product__type__item__intro">
+                            Wrap it right
+                        </p>
+                        <div class="recreation-of-product__type__item__photo">
+                            <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
+                        </div>
+                        <button type="button" class="recreation-of-product__type__item__more">
+                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                        </button>
+                    </li>
+                </ul>
             </div>
             <div class="st-recycling-solutions">
                 <div class="st-recycling-solutions__cont">
@@ -1135,7 +1150,131 @@
                         </p>
                     </div>
                 </div>
-                <button type="button" class="st-recycling-solutions__discover-more">Discover more</button>
+                <button type="button" class="st-recycling-solutions__discover-more" onclick="popupDiscoverMore('#chilseo-recycling-center')">Discover more</button>
+                <div class="popup-discover-more" id="chilseo-recycling-center">
+                    <div class="popup-discover-more--container">
+                        <section class="popup-discover-more--header">
+                            <h4 class="popup-discover-more--header--tit">Sustainable Recycling Solutions</h4>
+                            <p class="popup-discover-more--header--cont">
+                                Sustainable <br />
+                                Recycling Solutions <br />
+                                Chilseo Recycling Center
+                            </p>
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--header--visual">
+                                <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center.png" alt="" class="popup-discover-more--header--visual--img">
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        The Chilseo recycling center processes a large <br />
+                                        number of waste appliances from the western part of <br />
+                                        South Gyeongsang Province. It can handle 75 <br />
+                                        refrigerators, 50 washing machines, and 50 small <br />
+                                        appliances and air conditioners per hour. The LGE <br />
+                                        Environment Team supervises the center, and all the <br />
+                                        resources recycled belong to LGE. In 2021, 85% <br />
+                                        of the waste was recycled, and 15% was either burned <br />
+                                        or buried in landfills. The legal minimum standard for <br />
+                                        refrigerator recycling is 70%, but the center has <br />
+                                        achieved a recycling rate of almost 80%.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center2--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                    <h5 class="popup-discover-more--section--tit">Process of Recycling</h5>
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont1">
+                                            Step One<br />
+                                            : Disassemble, Crush, Sort
+                                        </p>
+                                        <p class="popup-discover-more--section--cont2">
+                                            The Chilseo Recycling Center removes <br />
+                                            mechanical and plastic parts from appliances. <br />
+                                            Materials are then sorted for recycling. A <br />
+                                            patented system automates the process, <br />
+                                            increasing efficiency and safety.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont1">
+                                        Step Two<br />
+                                        : Broken Plastic to Neat Pellets
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        Plastic components are crushed, sorted, and <br />
+                                        turned into pellets for use in manufacturing. <br />
+                                        This reduces waste and energy required to <br />
+                                        create new products.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center3--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center3.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center4--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont1">
+                                            Step Three<br />
+                                            : Transformation Into New Components
+                                        </p>
+                                        <p class="popup-discover-more--section--cont2">
+                                            The pellets are transferred to another site where <br />
+                                            they are melted, poured into molds, and transformed <br />
+                                            into plastic components for new LG refrigerator <br />
+                                            models.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont1">
+                                            Step Four<br />
+                                            : Rebirth
+                                        </p>
+                                        <p class="popup-discover-more--section--cont2">
+                                            LG repurposes plastic components from <br />
+                                            disassembled products at its Changwon plant, <br />
+                                            30 kilometers away, for use in LG refrigerators, <br />
+                                            meeting the company's strict quality standards.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center5--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center5.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div class="summary">
                 <div class="summary__visual"></div>
