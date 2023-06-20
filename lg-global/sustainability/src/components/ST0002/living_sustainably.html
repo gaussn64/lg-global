@@ -589,18 +589,26 @@
                 overflow-x: hidden;
                 background-color: white;
             }
-            .popup-discover-more * {
-                text-align: left;
+            .popup-discover-more--container {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                transition: 0.3s ease margin-left;
             }
             .popup-discover-more--header {
-                position: fixed;
-                z-index: 2;
-                top: 0px;
-                left: 0px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
                 width: 800px;
-                height: 100%;
+                height: 100vh;
                 padding: 80px 100px;
                 box-sizing: border-box;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .popup-discover-more--header__none-visual {
+                width: auto;
             }
             .popup-discover-more--header--tit,
             .popup-discover-more--header--cont {
@@ -608,8 +616,8 @@
                 z-index: 2;
                 color: white;
             }
-            .popup-discover-more--header__e-waste-program .popup-discover-more--header--tit,
-            .popup-discover-more--header__e-waste-program .popup-discover-more--header--cont {
+            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
                 color: #262626;
             }
             .popup-discover-more--header--tit {
@@ -623,7 +631,7 @@
                 line-height: 60px;
                 margin-top: 20px;
             }
-            .popup-discover-more--header__e-waste-program .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
                 font-size: 20px;
                 line-height: 28px;
                 color: #4A4946;
@@ -632,7 +640,7 @@
                 display: flex;
                 align-items: center;
                 gap: 0px 17px;
-                position: absolute;
+                position: fixed;
                 z-index: 2;
                 bottom: 50px;
                 left: 100px;   
@@ -676,28 +684,42 @@
                 height: 100%;
                 object-fit: cover;
             }
-            .popup-discover-more--container {
+            .popup-discover-more--visual {
                 display: flex;
-                position: relative;
-                z-index: 1;
-                padding-left: 800px;
-                transition: 0.3s ease margin-left;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+            }
+            .popup-discover-more--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
             .popup-discover-more--section {
                 display: flex;
-                flex-wrap: wrap;
+                align-items: flex-start;
                 height: 100vh;
                 padding: 80px 90px;
                 box-sizing: border-box;
                 white-space: nowrap;
+                text-align: center;
             }
-            .popup-discover-more--section--water-saving1 {
+            .popup-discover-more--section__vertical-middle {
                 align-items: center;
+            }
+            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
+                padding-left: 60px;
+            }
+            .popup-discover-more--section--cont-wrap {
+                display: inline-block;
+                text-align: left;
             }
             .popup-discover-more--section--tit,
             .popup-discover-more--section--cont1,
             .popup-discover-more--section--cont2 {
                 width: 100%;
+                box-sizing: border-box;
             }
             .popup-discover-more--section--tit {
                 font-size: 28px;
@@ -707,6 +729,7 @@
                 margin-top: 20px;
                 font-size: 36px;
                 line-height: 42px;
+                font-weight: 100;
             }
             .popup-discover-more--section--cont2 {
                 margin-top: 30px;
@@ -718,8 +741,13 @@
             .popup-discover-more--section--cont2:first-child {
                 margin-top: 0px;
             }
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
+                padding-left: 35px;
+            }
             .popup-discover-more--section--photo {
-                margin: 40px 0px;
+                margin: 40px auto;
             }
             .popup-discover-more--section--photo:first-child {
                 margin-top: 0px;
@@ -747,26 +775,39 @@
                 width: 476px;
                 height: 266px;
             }
-            .popup-discover-more--section1--energy-saving2--photo {
+            .popup-discover-more--section--energy-saving2--photo {
                 width: 444px;
                 height: 280px;
             }
-            .popup-discover-more--section1--energy-saving3--photo {
+            .popup-discover-more--section--energy-saving3--photo {
                 width: 515px;
                 height: 259px;
             }
-            .popup-discover-more--section1--energy-saving4--photo {
+            .popup-discover-more--section--energy-saving4--photo {
                 width: 506px;
                 height: 360px;
             }
-            .popup-discover-more--section1--energy-saving5--photo {
+            .popup-discover-more--section--energy-saving5--photo {
                 width: 500px;
                 height: 380px;
             }
-            .popup-discover-more--section1--energy-saving6--photo {
+            .popup-discover-more--section--energy-saving6--photo {
                 width: 490px;
                 height: 340px;
             }
+            .popup-discover-more--section--e-waste-program2--photo {
+                width: 564px;
+                height: 564px;
+            }
+            .popup-discover-more--section--e-waste-program3--photo {
+                width: 600px;
+                height: 430px;
+            }
+            .popup-discover-more--section--e-waste-program4--photo {
+                width: 300px;
+                height: 420px;
+            }
+
             .popup-discover-more--section--photo--img {
                 width: 100%;
                 height: 100%;
@@ -837,214 +878,262 @@
                     </li>
                 </ul>
                 <div class="popup-discover-more" id="discover-more-water-saving">
-                    <header class="popup-discover-more--header popup-discover-more--header__water-saving">
-                        <h4 class="popup-discover-more--header--tit">Water saving</h4>
-                        <p class="popup-discover-more--header--cont">
-                            Smart tech for clean <br />
-                            water and less waste
-                        </p>
-                        <div class="popup-discover-more--header--edit">
-                            <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                            <div class="popup-discover-more--header--edit--progress">
-                                <div class="popup-discover-more--header--edit--progress--bar"></div>
-                            </div>
-                        </div>
-                        <div class="popup-discover-more--header--visual">
-                            <img src="../../mocks/ST0002/visual-pdm-water-saving.png" alt="" class="popup-discover-more--header--visual--img">
-                        </div>
-                    </header>
                     <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving1">
-                            <p class="popup-discover-more--section--cont2">
-                                LG washing machines and dishwashers with <br />
-                                water-saving technology reduce water usage without <br />
-                                sacrificing performance.
+                        <section class="popup-discover-more--header">
+                            <h4 class="popup-discover-more--header--tit">Water saving</h4>
+                            <p class="popup-discover-more--header--cont">
+                                Smart tech for clean <br />
+                                water and less waste
                             </p>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving2">
-                            <h5 class="popup-discover-more--section--tit">Turbo wash</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                Worried your washing <br />
-                                machine uses too much <br />
-                                water?
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                LG washing machines with Artificial Intelligence <br />
-                                Direct Drive (AI DD) and TurboWash 360 technology <br />
-                                detect the weight and fabric softness of clothes. <br />
-                                They suggest the optimal wash cycle for each load, <br />
-                                using less water with shorter cycle times.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving2--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-water-saving-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--header--visual">
+                                <img src="../../mocks/ST0002/visual-pdm-water-saving.png" alt="" class="popup-discover-more--header--visual--img">
                             </div>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving3">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving3--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-water-saving-section3.png" alt="" class="popup-discover-more--section--photo--img">
-                            </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Our ENERGY STAR-certified washing machines use <br />
-                                25% less energy and 33% less water than <br />
-                                conventional models. ezDispense automatically <br />
-                                dispenses the optimal amount of detergent to <br />
-                                reduce the number of rinses per cycle.
-                            </p>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving4">
-                            <h5 class="popup-discover-more--section--tit">Quad wash</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                Worried your dishwasher <br />
-                                uses more water than <br />
-                                washing by hand?
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                Our ultra-efficient dishwashers with ENERGY STAR <br />
-                                certification save an average of <br />
-                                3,870 gallons of water over their lifecycle through precise control of <br />
-                                water circulation and spray intensity, and only cost <br />
-                                $35 a year to run.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving4--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-water-saving-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        LG washing machines and dishwashers with <br />
+                                        water-saving technology reduce water usage without <br />
+                                        sacrificing performance.
+                                    </p>
+                                </div>
                             </div>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving5">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving5--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-water-saving-section5.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Turbo wash</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        Worried your washing <br />
+                                        machine uses too much <br />
+                                        water?
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        LG washing machines with Artificial Intelligence <br />
+                                        Direct Drive (AI DD) and TurboWash 360 technology <br />
+                                        detect the weight and fabric softness of clothes. <br />
+                                        They suggest the optimal wash cycle for each load, <br />
+                                        using less water with shorter cycle times.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving2--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-water-saving-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
                             </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Our dishwashers use QuadWash™ technology with <br />
-                                Multi-Motion spray arms that rotate to separate <br />
-                                food and oil, while TrueSteam™ helps to reduce <br />
-                                water spots, leaving dishware spotless.
-                            </p>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--water-saving6">
-                            <h5 class="popup-discover-more--section--tit">Waterless washing</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                Waterless washing <br />
-                                technology
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                We recently introduced a revolutionary waterless <br />
-                                washing machine that aims to reduce water <br />
-                                consumption and transform the laundry industry. The <br />
-                                new machine utilizes our exclusive Air Wash <br />
-                                technology, using air instead of water to clean <br />
-                                clothes.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving6--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-water-saving-section6.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving3--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-water-saving-section3.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our ENERGY STAR-certified washing machines use <br />
+                                        25% less energy and 33% less water than <br />
+                                        conventional models. ezDispense automatically <br />
+                                        dispenses the optimal amount of detergent to <br />
+                                        reduce the number of rinses per cycle.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Quad wash</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        Worried your dishwasher <br />
+                                        uses more water than <br />
+                                        washing by hand?
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our ultra-efficient dishwashers with ENERGY STAR <br />
+                                        certification save an average of 3,870 gallons of <br />
+                                        water over their lifecycle through precise control of <br />
+                                        water circulation and spray intensity, and only cost <br />
+                                        $35 a year to run.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving4--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-water-saving-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving5--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-water-saving-section5.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our dishwashers use QuadWash™ technology with <br />
+                                        Multi-Motion spray arms that rotate to separate <br />
+                                        food and oil, while TrueSteam™ helps to reduce <br />
+                                        water spots, leaving dishware spotless.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Waterless washing</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        Waterless washing <br />
+                                        technology
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We recently introduced a revolutionary waterless <br />
+                                        washing machine that aims to reduce water <br />
+                                        consumption and transform the laundry industry. The <br />
+                                        new machine utilizes our exclusive Air Wash <br />
+                                        technology, using air instead of water to clean <br />
+                                        clothes.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--water-saving6--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-water-saving-section6.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
                             </div>
                         </section>
                     </div>
                 </div>
                 <div class="popup-discover-more" id="discover-more-energy-saving">
-                    <header class="popup-discover-more--header popup-discover-more--header__energy-saving">
-                        <h4 class="popup-discover-more--header--tit">Energy saving</h4>
-                        <p class="popup-discover-more--header--cont">
-                            Higher energy <br />
-                            efficiency, <br /> 
-                            lower carbon impact
-                        </p>
-                        <div class="popup-discover-more--header--edit">
-                            <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                            <div class="popup-discover-more--header--edit--progress">
-                                <div class="popup-discover-more--header--edit--progress--bar"></div>
-                            </div>
-                        </div>
-                        <div class="popup-discover-more--header--visual">
-                            <img src="../../mocks/ST0002/visual-pdm-energy-saving.png" alt="" class="popup-discover-more--header--visual--img">
-                        </div>
-                    </header>
                     <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving1">
-                            <p class="popup-discover-more--section--cont2">
-                                Our individual efforts combine to make a huge, <br />
-                                positive impact. By choosing energy-efficient <br />
-                                products and reducing our overall energy usage, we <br />
-                                can create a more sustainable future.
+                        <section class="popup-discover-more--header">
+                            <h4 class="popup-discover-more--header--tit">Energy saving</h4>
+                            <p class="popup-discover-more--header--cont">
+                                Higher energy <br />
+                                efficiency, <br /> 
+                                lower carbon impact
                             </p>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving2">
-                            <h5 class="popup-discover-more--section--tit">DD motor</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                What makes the DD <br />
-                                (Direct Drive) motor so <br />
-                                energy efficient?
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                We've perfected Inverter DD motor technology over <br />
-                                four generations, securing global technology <br />
-                                leadership with more than 240 patents on Inverter <br />
-                                DD motors through continuous research and <br />
-                                development. Our innovative motor technology is <br />
-                                already in various appliances, including AC and <br />
-                                refrigerator compressors, reducing power loss by <br />
-                                about 20%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving2--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--header--visual">
+                                <img src="../../mocks/ST0002/visual-pdm-energy-saving.png" alt="" class="popup-discover-more--header--visual--img">
                             </div>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving3">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving3--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section3.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our individual efforts combine to make a huge, <br />
+                                        positive impact. By choosing energy-efficient <br />
+                                        products and reducing our overall energy usage, we <br />
+                                        can create a more sustainable future.
+                                    </p>
+                                </div>
                             </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Our fourth-generation DD motor maximizes energy <br />
-                                efficiency by applying an electric steel plate material. <br />
-                                We've also had a complete production system since <br />
-                                2017, to produce everything from raw materials to <br />
-                                finished products on one seamless production line. <br />
-                                Plus, we've incorporated AI into our Inverter DD <br />
-                                motors for ultimate efficiency.
-                            </p>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving4">
-                            <h5 class="popup-discover-more--section--tit">Knock-on</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                What's energy efficient <br />
-                                about knocking twice to <br />
-                                see inside the <br />
-                                refrigerator?
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                Check what's in your refrigerator without opening <br />
-                                the door. Just knock to see inside with Door-in-Door, <br />
-                                cutting cold air loss by 41%, and reducing energy <br />
-                                consumption by 32%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving4--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">DD motor</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        What makes the DD <br />
+                                        (Direct Drive) motor so <br />
+                                        energy efficient?
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We've perfected Inverter DD motor technology over <br />
+                                        four generations, securing global technology <br />
+                                        leadership with more than 240 patents on Inverter <br />
+                                        DD motors through continuous research and <br />
+                                        development. Our innovative motor technology is <br />
+                                        already in various appliances, including AC and <br />
+                                        refrigerator compressors, reducing power loss by <br />
+                                        about 20%.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving2--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-energy-saving-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving3--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-energy-saving-section3.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our fourth-generation DD motor maximizes energy <br />
+                                        efficiency by applying an electric steel plate material. <br />
+                                        We've also had a complete production system since <br />
+                                        2017, to produce everything from raw materials to <br />
+                                        finished products on one seamless production line. <br />
+                                        Plus, we've incorporated AI into our Inverter DD <br />
+                                        motors for ultimate efficiency.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Knock-on</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        What's energy efficient <br />
+                                        about knocking twice to <br />
+                                        see inside the <br />
+                                        refrigerator?
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        Check what's in your refrigerator without opening <br />
+                                        the door. Just knock to see inside with Door-in-Door, <br />
+                                        cutting cold air loss by 41%, and reducing energy <br />
+                                        consumption by 32%.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving4--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-energy-saving-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
                             </div>
                         </section>
                         <section class="popup-discover-more--section popup-discover-more--section--energy-saving5">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving5--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section5.png" alt="" class="popup-discover-more--section--photo--img">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving5--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-energy-saving-section5.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Door-in-Door technology was developed after a <br />
+                                        survey showed that 50% of the time, we open the <br />
+                                        refrigerator just to check its contents.
+                                    </p>
+                                </div>
                             </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Door-in-Door technology was developed after a <br />
-                                survey showed that 50% of the time, we open the <br />
-                                refrigerator just to check its contents.
-                            </p>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section6--energy-saving">
-                            <h5 class="popup-discover-more--section--tit">Energy-saving mode</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                A quieter, more patient <br />
-                                energy-saving mode.
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                Our upgraded features, including silent energy-saving <br />
-                                modes, provide an exceptional customer experience. <br />
-                                ThinQ app data helped us identify common customer <br />
-                                issues, leading us to develop advanced features, like <br />
-                                energy-saving mode, to reduce power usage by 20%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section6--energy-saving--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section6.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Energy-saving mode</h5>
+                                    <p class="popup-discover-more--section--cont1">
+                                        A quieter, more patient <br />
+                                        energy-saving mode.
+                                    </p>
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our upgraded features, including silent energy-saving <br />
+                                        modes, provide an exceptional customer experience. <br />
+                                        ThinQ app data helped us identify common customer <br />
+                                        issues, leading us to develop advanced features, like <br />
+                                        energy-saving mode, to reduce power usage by 20%.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving6--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-energy-saving-section6.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -1168,114 +1257,86 @@
                     <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href)" class="e-waste-program__more__btn">Discover E-waste program</a>
                 </div>
                 <div class="popup-discover-more" id="discover-more-e-waste-program">
-                    <header class="popup-discover-more--header popup-discover-more--header__e-waste-program">
-                        <h4 class="popup-discover-more--header--tit">E-waste program</h4>
-                        <p class="popup-discover-more--header--cont">
-                            E-waste program for <br />
-                            a sustainable future
-                        </p>
-                        <p class="popup-discover-more--header--cont">
-                            LG is committed to collecting e-waste and <br />
-                            batteries to promote circularity. Through our easy, <br />
-                            convenient e-waste program, you can help us make <br />
-                            a positive impact on the environment, inspire <br />
-                            others, and create a better future for all.
-                        </p>
-                        <div class="popup-discover-more--header--edit">
-                            <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                            <div class="popup-discover-more--header--edit--progress">
-                                <div class="popup-discover-more--header--edit--progress--bar"></div>
-                            </div>
-                        </div>
-                        <div class="popup-discover-more--header--visual"></div>
-                    </header>
                     <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving1">
-                            <p class="popup-discover-more--section--cont2">
-                                Our individual efforts combine to make a huge, <br />
-                                positive impact. By choosing energy-efficient <br />
-                                products and reducing our overall energy usage, we <br />
-                                can create a more sustainable future.
+                        <section class="popup-discover-more--header popup-discover-more--header__none-visual">
+                            <h4 class="popup-discover-more--header--tit">E-waste program</h4>
+                            <p class="popup-discover-more--header--cont">
+                                E-waste program for <br />
+                                a sustainable future
                             </p>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving2">
-                            <h5 class="popup-discover-more--section--tit">DD motor</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                What makes the DD <br />
-                                (Direct Drive) motor so <br />
-                                energy efficient?
+                            <p class="popup-discover-more--header--cont">
+                                LG is committed to collecting e-waste and <br />
+                                batteries to promote circularity. Through our easy, <br />
+                                convenient e-waste program, you can help us make <br />
+                                a positive impact on the environment, inspire <br />
+                                others, and create a better future for all.
                             </p>
-                            <p class="popup-discover-more--section--cont2">
-                                We've perfected Inverter DD motor technology over <br />
-                                four generations, securing global technology <br />
-                                leadership with more than 240 patents on Inverter <br />
-                                DD motors through continuous research and <br />
-                                development. Our innovative motor technology is <br />
-                                already in various appliances, including AC and <br />
-                                refrigerator compressors, reducing power loss by <br />
-                                about 20%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving2--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
                             </div>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving3">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving3--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section3.png" alt="" class="popup-discover-more--section--photo--img">
-                            </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Our fourth-generation DD motor maximizes energy <br />
-                                efficiency by applying an electric steel plate material. <br />
-                                We've also had a complete production system since <br />
-                                2017, to produce everything from raw materials to <br />
-                                finished products on one seamless production line. <br />
-                                Plus, we've incorporated AI into our Inverter DD <br />
-                                motors for ultimate efficiency.
-                            </p>
+                        <section class="popup-discover-more--visual">
+                            <img src="../../mocks/ST0002/visual-pdm-e-waste-program.png" alt="" class="popup-discover-more--visual--img">
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving4">
-                            <h5 class="popup-discover-more--section--tit">Knock-on</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                What's energy efficient <br />
-                                about knocking twice to <br />
-                                see inside the <br />
-                                refrigerator?
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                Check what's in your refrigerator without opening <br />
-                                the door. Just knock to see inside with Door-in-Door, <br />
-                                cutting cold air loss by 41%, and reducing energy <br />
-                                consumption by 32%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving4--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">E-waste program- Grobal</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        LG provides collection and processing services for WEEE <br />
+                                        (Waste Electrical and Electronic Equipment) according to <br />
+                                        regulations and requirements in each country. <br />
+                                        We also offer free collections for large WEEE in Korea, <br />
+                                        and we've expanded our service to 78 regions in 47 countries. <br />
+                                        We make sure all the WEEE we collect is managed in an <br />
+                                        environmentally friendly way.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program2--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-e-waste-program-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
                             </div>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section--energy-saving5">
-                            <div class="popup-discover-more--section--photo popup-discover-more--section--energy-saving5--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section5.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle popup-discover-more--section--e-waste-program3">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Small e-waste program- Korea</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We're making it easier than ever to recycle small-sized <br />
+                                        electronic waste, which has a relatively low recovery rate <br />
+                                        compared to large appliances. We're striving to reduce <br />
+                                        greenhouse gas and carbon emissions by collecting small <br />
+                                        e-waste through nearby LG Best Shops and Resource <br />
+                                        Circulation Centers.
+                                    </p>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program3--photo">
+                                        <img src="../../mocks/ST0002/photo-pdm-e-waste-program-section3.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
                             </div>
-                            <p class="popup-discover-more--section--cont2">
-                                Door-in-Door technology was developed after a <br />
-                                survey showed that 50% of the time, we open the <br />
-                                refrigerator just to check its contents.
-                            </p>
                         </section>
-                        <section class="popup-discover-more--section popup-discover-more--section6--energy-saving">
-                            <h5 class="popup-discover-more--section--tit">Energy-saving mode</h5>
-                            <p class="popup-discover-more--section--cont1">
-                                A quieter, more patient <br />
-                                energy-saving mode.
-                            </p>
-                            <p class="popup-discover-more--section--cont2">
-                                Our upgraded features, including silent energy-saving <br />
-                                modes, provide an exceptional customer experience. <br />
-                                ThinQ app data helped us identify common customer <br />
-                                issues, leading us to develop advanced features, like <br />
-                                energy-saving mode, to reduce power usage by 20%.
-                            </p>
-                            <div class="popup-discover-more--section--photo popup-discover-more--section6--energy-saving--photo">
-                                <img src="../../mocks/ST0002/photo-pdm-energy-saving-section6.png" alt="" class="popup-discover-more--section--photo--img">
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle popup-discover-more--section--e-waste-program4">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program4--photo">
+                                    <img src="../../mocks/ST0002/photo-pdm-e-waste-program-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Battery recycling program - Korea</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We launched a "Battery Return" campaign, encouraging <br />
+                                        customers to participate in resource recycling by returning <br />
+                                        discarded batteries used in premium LG wireless vacuum <br />
+                                        cleaners. We also offer a discount of KRW 10,000 ($8.57) <br />
+                                        on new batteries. We've even set up collection boxes for <br />
+                                        discarded batteries at Best Shops and other appliance <br />
+                                        stores.
+                                    </p>
+                                </div>
                             </div>
                         </section>
                     </div>
@@ -1399,10 +1460,10 @@
         <script>
             function popupDiscoverMore(popupID) {
                 var pdmPopup = document.getElementById(popupID.split("#")[1]);
-                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
                 var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
-                var pdmSection = pdmContainer.getElementsByClassName("popup-discover-more--section");
+                var pdmSection = pdmContainer.getElementsByTagName("section");
                 var pdmSectionWidth = 0;
+                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
                 var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
                 var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
                 var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
@@ -1410,7 +1471,7 @@
                 var dist = 0;
                 var wheelIng = true;
                 var startPercentGauge = (1/pdmSection.length)*100
-                pdmProgressBar.style.width = startPercentGauge + "%"
+                pdmProgressBar.style.width = (startPercentGauge*2) + "%"
 
                 document.querySelector("body").style.overflow = "hidden"
                 pdmPopup.style.display = "block"
@@ -1425,7 +1486,7 @@
                 } ,500)
 
                 document.addEventListener("wheel", function (e) {
-                    if(e.deltaY > 0 && condition < pdmSection.length-1 && wheelIng == false) {
+                    if(e.deltaY > 0 && condition < pdmSection.length-2 && wheelIng == false) {
                         wheelIng = true
                         dist-=parseInt(pdmSection[condition].offsetWidth);
                         condition++;
@@ -1440,7 +1501,7 @@
                             wheelIng = false
                         },500)
                     }
-                    pdmProgressBar.style.width = startPercentGauge + (condition/pdmSection.length)*100 + "%"
+                    pdmProgressBar.style.width = startPercentGauge + ((condition+1)/pdmSection.length)*100 + "%"
                     pdmContainer.style.marginLeft = dist+"px"
                 })
 
