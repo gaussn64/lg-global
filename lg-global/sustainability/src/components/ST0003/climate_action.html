@@ -57,20 +57,9 @@
                 width: 100%;
                 height: 100vh;
             }
-            .climate-action-visual:after {
-                position: absolute;
-                z-index: 2;
-                top: 0px;
-                left: 0px;
-                content: '';
-                display: block;
-                width: 100%;
-                height: 100%;
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-            }
             .climate-action-visual__tit {
                 position: absolute;
-                z-index: 3;
+                z-index: 2;
                 top: 50%;
                 left: 0px;
                 width: 100%;
@@ -297,7 +286,7 @@
                 background-color: white;
                 opacity: 0;
                 transform: scale(1);
-                transition: 0.3s ease-in all;
+                transition: 0.3s ease all;
             }
             .milestone__goals-cont__years__item__ico--active:after {
                 background-color: #75C66B;
@@ -688,25 +677,61 @@
             /* Summary */
             .summary {
                 position: relative;
-                height: 100vh;
+                height: 300vh;
             }
-            .summary__cont {
+            .summary__visual {
                 position: absolute;
+                z-index: 1;
                 top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
+                left: 120px;
+                right: 120px;
                 height: calc(100vh - 14.8148vh);
                 border-radius: 40px;
                 box-sizing: border-box;
-                background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0003/photo-summary-visual.jpg) no-repeat center center;
+                background: url(../../mocks/ST0003/photo-summary-visual.png) no-repeat center center;
                 background-size: cover;
+            }
+            .summary__visual--fixed {
+                position: fixed;
+                bottom: auto;
+            }
+            .summary__visual--bottom-end {
+                top: auto;
+                bottom: 7.4074vh;
+            }
+            .summary__cont {
+                position: relative;
+                z-index: 2;
+                padding-top: 100vh;
+            }
+            .summary__cont:before,
+            .summary__cont:after {
+                position: absolute;
+                z-index: 2;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 7.4074vh;
+                background-color: #f0ece4;
+            }
+            .summary__cont:before {
+                top: 0px;
+            }
+            .summary__cont:after {
+                bottom: 0px;
+            }
+            .summary__cont--fixed:before,
+            .summary__cont--fixed:after {
+                position: fixed;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh 4.1667vw;
+                padding: 7.4074vh calc(120px + 80px);
+                height: 50vh;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -715,11 +740,10 @@
                 transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                padding: 9.6296vh 4.1667vw;
-                font-size: 52px;
+                font-size: 60px;
                 font-weight: 300;
-                line-height: 60px;
-                letter-spacing: -0.005em;
+                line-height: 120%;
+                letter-spacing: -1px;
             }
 
             /* What's Next */
@@ -869,212 +893,6 @@
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
-            }
-
-            /* Popup Discover More */
-            .popup-discover-more {
-                position: fixed;
-                z-index: 99;
-                top: 0px;
-                left: 0px;
-                display: none;
-                width: 100%;
-                height: 100%;
-                overflow-y: auto;
-                overflow-x: hidden;
-                background-color: white;
-            }
-            .popup-discover-more--container {
-                display: flex;
-                position: relative;
-                z-index: 1;
-                transition: 0.3s ease margin-left;
-            }
-            .popup-discover-more--header {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                flex-shrink: 0;
-                width: 800px;
-                height: 100vh;
-                padding: 80px 100px;
-                box-sizing: border-box;
-                white-space: nowrap;
-                text-align: left;
-            }
-            .popup-discover-more--header__none-visual {
-                width: auto;
-            }
-            .popup-discover-more--header--tit,
-            .popup-discover-more--header--cont {
-                position: relative;
-                z-index: 2;
-                color: white;
-            }
-            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
-            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
-                color: #262626;
-            }
-            .popup-discover-more--header--tit {
-                font-weight: 400;
-                font-size: 28px;
-                line-height: 34px;
-            }
-            .popup-discover-more--header--cont {
-                font-weight: 250;
-                font-size: 52px;
-                line-height: 60px;
-                margin-top: 20px;
-            }
-            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
-                font-size: 20px;
-                line-height: 28px;
-                color: #F6F3EB;
-            }
-            .popup-discover-more--header__none-visual .popup-discover-more--header--cont + .popup-discover-more--header--cont {
-                color: #4A4946;
-            }
-            .popup-discover-more--header--edit {
-                display: flex;
-                align-items: center;
-                gap: 0px 17px;
-                position: fixed;
-                z-index: 2;
-                bottom: 50px;
-                left: 100px;   
-            }
-            .popup-discover-more--header--edit--btn-close {
-                width: 48px;
-                height: 48px;
-                text-indent: -9999px;
-                overflow: hidden;
-                border-width: 0px;
-                border-radius: 50%;
-                background: #D9D9D9 url(../../mocks/ST0002/btn-pdm-close.svg) no-repeat center center;
-                backdrop-filter: blur(9.23077px);
-                opacity: 0.4;
-                transition: 0.3s ease transform;
-            }
-            .popup-discover-more--header--edit--btn-close:hover {
-                transform: rotate(180deg);
-            }
-            .popup-discover-more--header--edit--progress {
-                width: 300px;
-                height: 2px;
-                background-color: rgba(246, 243, 235, 0.2)
-            }
-            .popup-discover-more--header--edit--progress--bar {
-                height: 2px;
-                background-color: #7E7C77;
-                transition: 0.3s ease width;
-            }
-            .popup-discover-more--header--visual {
-                position: absolute;
-                z-index: 1;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                background-color: white;
-            }
-            .popup-discover-more--header--visual--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .popup-discover-more--visual {
-                display: flex;
-                flex-direction: column;
-                flex-shrink: 0;
-                width: 800px;
-                height: 100vh;
-            }
-            .popup-discover-more--visual--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .popup-discover-more--section {
-                display: flex;
-                align-items: flex-start;
-                height: 100vh;
-                padding: 80px 90px;
-                box-sizing: border-box;
-                white-space: nowrap;
-                text-align: center;
-            }
-            .popup-discover-more--section__vertical-middle {
-                align-items: center;
-            }
-            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
-                padding-left: 60px;
-            }
-            .popup-discover-more--section--cont-wrap {
-                display: inline-block;
-                text-align: left;
-            }
-            .popup-discover-more--section--tit,
-            .popup-discover-more--section--cont1,
-            .popup-discover-more--section--cont2 {
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .popup-discover-more--section--tit {
-                font-size: 28px;
-                line-height: 34px;
-            }
-            .popup-discover-more--section--cont1 {
-                margin-top: 20px;
-                font-size: 36px;
-                line-height: 42px;
-                font-weight: 100;
-            }
-            .popup-discover-more--section--cont2 {
-                margin-top: 30px;
-                font-weight: 400;
-                font-size: 20px;
-                line-height: 28px;
-            }
-            .popup-discover-more--section--cont1:first-child,
-            .popup-discover-more--section--cont2:first-child {
-                margin-top: 0px;
-            }
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
-                padding-left: 35px;
-            }
-            .popup-discover-more--section--photo {
-                margin: 40px auto;
-            }
-            .popup-discover-more--section--photo:first-child {
-                margin-top: 0px;
-            }
-            .popup-discover-more--section--photo:last-child {
-                margin-bottom: 0px;
-            }
-            .popup-discover-more--section--carbon-emission-reduction-tennessee2--photo {
-                width: 808px;
-                height: 400px;
-            }
-            .popup-discover-more--section--carbon-emission-reduction-changwon2--photo {
-                width: 567px;
-                height: 400px;
-            }
-            .popup-discover-more--section--net-zero-house2--photo,
-            .popup-discover-more--section--net-zero-house4--photo,
-            .popup-discover-more--section--net-zero-house7--photo {
-                width: 490px;
-                height: 350px;
-            }
-            .popup-discover-more--section--net-zero-house5--photo {
-                width: 350px;
-                height: 481px;
-            }
-            .popup-discover-more--section--photo--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
             }
         </style>
         <!-- html code -->
@@ -1307,128 +1125,15 @@
                     <figure class="home-appliances-manufacturing-factory__photos-cont__figure">
                         <img src="../../mocks/ST0003/photo-home-appliances-manufacturing-factory1.png" alt="" class="home-appliances-manufacturing-factory__photos-cont__figure__img">
                         <figcaption class="home-appliances-manufacturing-factory__photos-cont__figure__figcaption">LG Tennessee factory (Tennessee, USA)</figcaption>
-                        <button type="button" class="home-appliances-manufacturing-factory__photos-cont__figure__discover-more" onclick="popupDiscoverMore('#carbon-emission-reduction-tennessee')">Discover more</button>
+                        <button type="button" class="home-appliances-manufacturing-factory__photos-cont__figure__discover-more">Discover more</button>
                     </figure>
                 </div>
                 <div class="home-appliances-manufacturing-factory__photos-cont home-appliances-manufacturing-factory__photos-cont--changwon">
                     <figure class="home-appliances-manufacturing-factory__photos-cont__figure">
                         <img src="../../mocks/ST0003/photo-home-appliances-manufacturing-factory2.jpg" alt="" class="home-appliances-manufacturing-factory__photos-cont__figure__img">
                         <figcaption class="home-appliances-manufacturing-factory__photos-cont__figure__figcaption">LG Smart Park (Changwon, Korea)</figcaption>
-                        <button type="button" class="home-appliances-manufacturing-factory__photos-cont__figure__discover-more" onclick="popupDiscoverMore('#carbon-emission-reduction-changwon')">Discover more</button>
+                        <button type="button" class="home-appliances-manufacturing-factory__photos-cont__figure__discover-more">Discover more</button>
                     </figure>
-                </div>
-                <div class="popup-discover-more" id="carbon-emission-reduction-tennessee">
-                    <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--header">
-                            <h4 class="popup-discover-more--header--tit">Carbon emission reduction</h4>
-                            <p class="popup-discover-more--header--cont">
-                                First US <br />
-                                Lighthouse Factory <br />
-                                LG Tennessee Plant
-                            </p>
-                            <div class="popup-discover-more--header--edit">
-                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                <div class="popup-discover-more--header--edit--progress">
-                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                </div>
-                            </div>
-                            <div class="popup-discover-more--header--visual">
-                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-tennessee.png" alt="" class="popup-discover-more--header--visual--img">
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        LG Electronics' factory in Tennessee, USA was <br />
-                                        chosen by the World Economic Forum as a <br />
-                                        "lighthouse factory" for its advanced technology and <br />
-                                        automation. This factory produces home appliances <br />
-                                        like washing machines and dryers, and is the first US-<br />
-                                        based consumer electronics factory to earn this <br />
-                                        prestigious designation.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--carbon-emission-reduction-tennessee2--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-carbon-emission-reduction-tennessee-section2.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        The factory incorporates cutting-edge digital technologies such as AI, <br />
-                                        big data, IoT, and robots. With a capacity to produce 1.2 million <br />
-                                        washers and 600,000 dryers annually, it efficiently meets the evolving <br />
-                                        market demand through local production. The facility takes pride in its <br />
-                                        fully automated logistics system, which features 166 automated <br />
-                                        guided vehicles (AGVs) and utilizes robots for complex tasks like <br />
-                                        assembling and handling heavy components. The factory's <br />
-                                        sustainability commitment is evident through its complete transition <br />
-                                        to renewable energy and the use of a high-efficiency utility <br />
-                                        infrastructure.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <div class="popup-discover-more" id="carbon-emission-reduction-changwon">
-                    <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--header">
-                            <h4 class="popup-discover-more--header--tit">Carbon emission reduction</h4>
-                            <p class="popup-discover-more--header--cont">
-                                First Home Appliances <br />
-                                Lighthouse Factory <br />
-                                LG Smart Park  
-                            </p>
-                            <p class="popup-discover-more--header--cont">
-                                Changwon, Korea
-                            </p>
-                            <div class="popup-discover-more--header--edit">
-                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                <div class="popup-discover-more--header--edit--progress">
-                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                </div>
-                            </div>
-                            <div class="popup-discover-more--header--visual">
-                                <img src="../../mocks/ST0003/visual-pdm-carbon-emission-reduction-changwon.png" alt="" class="popup-discover-more--header--visual--img">
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        In March 2022, Changwon LG Smart Park was named <br />
-                                        the first 'lighthouse factory' in the Korean home <br />
-                                        appliance industry. It's been acknowledged worldwide <br />
-                                        for its innovative, energy-efficient production line.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--carbon-emission-reduction-changwon2--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-carbon-emission-reduction-changwon-section2.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        LG Smart Park is all about eco-conscious manufacturing. We cut <br />
-                                        greenhouse gases, use eco-conscious production technology and <br />
-                                        advanced energy facilities, recycle waste heat, and use BECON, the <br />
-                                        latest energy management solution, to reduce energy consumption by <br />
-                                        30%. Plus, we build solar facilities to boost renewable energy <br />
-                                        production. This will eliminate more than 10% of our electricity use, <br />
-                                        reducing as much greenhouse gas emissions as planting 20,000 trees <br />
-                                        annually. It means we're doing our part in creating a sustainable <br />
-                                        future.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
                 </div>
             </div>
             <div class="b2b-activity">
@@ -1443,169 +1148,7 @@
                         customers how their everyday appliance usage can have a positive impact on the environment.
                     </p>
                 </div>
-                <button type="button" class="b2b-activity__discover-more" onclick="popupDiscoverMore('#net-zero-house')">Discover net zero house</button>
-                <div class="popup-discover-more" id="net-zero-house">
-                    <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--header">
-                            <h4 class="popup-discover-more--header--tit">B2B activity</h4>
-                            <p class="popup-discover-more--header--cont">
-                                What is <br />
-                                Net Zero House?
-                            </p>
-                            <p class="popup-discover-more--header--cont">
-                                Net Zero houses are built with sustainability <br />
-                                in mind, producing and storing renewable <br />
-                                energy, using energy-efficient appliances and <br />
-                                ACs, and limiting environmental impact with <br />
-                                eco-conscious materials. You can also monitor <br />
-                                your energy use and lead a sustainable lifestyle <br />
-                                through ThinQ technology.
-                            </p>
-                            <div class="popup-discover-more--header--edit">
-                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                <div class="popup-discover-more--header--edit--progress">
-                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                </div>
-                            </div>
-                            <div class="popup-discover-more--header--visual">
-                                <img src="../../mocks/ST0003/visual-pdm-net-zero-house.png" alt="" class="popup-discover-more--header--visual--img">
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <h5 class="popup-discover-more--section--tit">
-                                        Energy package by space <br />
-                                        : Garage
-                                    </h5>
-                                    <p class="popup-discover-more--section--cont2">
-                                        The energy package for the garage is a <br />
-                                        sustainable energy system that generates <br />
-                                        energy with solar panels, stores energy in an <br />
-                                        Energy Storage System (ESS), and then <br />
-                                        supplies it to power household appliances.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont1">
-                                        Energy storage system (ESS)
-                                    </p>
-                                    <p class="popup-discover-more--section--cont2">
-                                        An Energy Storage System (ESS) stores <br />
-                                        electricity generated from renewable <br />
-                                        energy sources and efficiently dispenses <br />
-                                        it at optimum times to help reduce <br />
-                                        electricity costs.
-                                    </p>
-                                </div>
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--net-zero-house2--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house-section2.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <h5 class="popup-discover-more--section--tit">
-                                        Energy package by space <br />
-                                        : Bath &amp; Room
-                                    </h5>
-                                    <p class="popup-discover-more--section--cont2">
-                                        The energy package for bath and room features <br />
-                                        high-efficiency system boilers that use air heat <br />
-                                        instead of gas for home and water heating, as <br />
-                                        well as premium ventilation that recovers <br />
-                                        energy by reducing heat loss, while preserving <br />
-                                        high air quality.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont1">
-                                        Eco system boiler
-                                    </p>
-                                    <p class="popup-discover-more--section--cont2">
-                                        Absorbs heat in the air to produce hot <br />
-                                        water that can also be used for home <br />
-                                        heating. Reduced energy consumption <br />
-                                        lowers carbon emissions.
-                                    </p>
-                                </div>
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--net-zero-house4--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house-section4.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--net-zero-house5--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house-section5.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont1">
-                                        Premium ventilation system
-                                    </p>
-                                    <p class="popup-discover-more--section--cont2">
-                                        Premium window ventilation lets out <br />
-                                        polluted air, while also generating <br />
-                                        heating or cooling energy. By expelling <br />
-                                        only polluted air 60% of cooling energy <br />
-                                        and 74% of heating energy is recovered, <br />
-                                        resulting in significant energy savings.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <h5 class="popup-discover-more--section--tit">
-                                        Energy package by space <br />
-                                        : City / Commercial Facility
-                                    </h5>
-                                    <p class="popup-discover-more--section--cont2">
-                                        Explore LG's vision for a smart city in this <br />
-                                        space. Energy-efficient AC systems can <br />
-                                        efficiently store and utilize power as needed <br />
-                                        for large-scale facilities, battery materials, <br />
-                                        products, and other related services.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--net-zero-house7--photo">
-                                    <img src="../../mocks/ST0003/photo-pdm-net-zero-house-section7.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont1">
-                                        AI temperature system
-                                    </p>
-                                    <p class="popup-discover-more--section--cont2">
-                                        The AI temperature system optimizes <br />
-                                        air conditioning and saves energy by <br />
-                                        learning about the usage environment. <br />
-                                        It predicts power consumption before <br />
-                                        use for energy-saving customized <br />
-                                        control, and adjusts to the most <br />
-                                        efficient setting based on automatic <br />
-                                        external weather updates.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
+                <button type="button" class="b2b-activity__discover-more">Discover net zero house</button>
             </div>
             <div class="summary">
                 <div class="summary__visual"></div>
@@ -1617,10 +1160,9 @@
                         welcome to join us. Together, we can build a <br />
                         brighter future!
                     </p>
-                    <p class="summary__cont__txt summary__cont__txt--active">
-                        Tackling the climate <br />
-                        crisis together, <br />
-                        we'll solve it.
+                    <p class="summary__cont__txt">
+                        Collective action. <br />
+                        Greater impact.
                     </p>
                 </div>
             </div>
@@ -1789,6 +1331,67 @@
                         }
                     })
                 },
+                summary: function() {
+                    let summary = document.querySelector(".summary");
+                    let msOfsTop = summary.offsetTop;
+                    let summaryVisual = summary.querySelector(".summary__visual");
+                    let msvOfsTop = summaryVisual.offsetTop;
+                    let summaryCont = summary.querySelector(".summary__cont");
+                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+    
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+    
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".summary",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryVisual.classList.add("summary__visual--bottom-end")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+    
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("summary__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("summary__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+    
+                    }
+                },
                 whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: "auto",
@@ -1807,88 +1410,10 @@
             climateAction.milestone()
             climateAction.carbonEmissionReduction()
             climateAction.homeAppliancesManufacturingFactory()
+            climateAction.summary();
             climateAction.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
-        </script>
-        <script>
-            function popupDiscoverMore(popupID) {
-                var pdmPopup = document.getElementById(popupID.split("#")[1]);
-                var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
-                var pdmSection = pdmContainer.getElementsByTagName("section");
-                var pdmSectionWidth = 0;
-                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
-                var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
-                var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
-                var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
-                var condition = 0;
-                var dist = window.innerWidth;
-                var wheelIng = true;
-                var startPercentGauge;
-
-                document.querySelector("body").style.overflow = "hidden"
-                pdmPopup.style.display = "block"
-
-                setTimeout(function(){
-                    for(var a=0; a < pdmSection.length; a++) {
-                        //console.log(pdmSection[a].offsetWidth)
-                        pdmSectionWidth+=pdmSection[a].offsetWidth;
-                    }
-                    pdmContainer.style.width = pdmSectionWidth + "px"
-                    startPercentGauge = (dist/pdmSectionWidth)*100
-                    pdmProgressBar.style.width = startPercentGauge + "%"
-                    wheelIng = false
-                } ,500)
-
-                window.onresize = window.onorientationchange = function() {
-                    condition = 0;
-                    pdmSectionWidth = 0
-                    for(var b=0; b < pdmSection.length; b++) {
-                        pdmSectionWidth+=pdmSection[b].offsetWidth;
-                    }
-                    dist = window.innerWidth
-                    pdmContainer.style.width = pdmSectionWidth + "px"
-                    startPercentGauge = (dist/pdmSectionWidth)*100
-                    pdmProgressBar.style.width = startPercentGauge + "%"
-                    wheelIng = false
-                }
-
-                document.addEventListener("wheel", function (e) {
-                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
-                        wheelIng = true
-                        dist+=parseInt(pdmSection[condition].offsetWidth);
-                        console.log("Down: "+ parseInt(dist))
-                        condition++;
-                        setTimeout(function() {
-                            wheelIng = false
-                        },500)
-                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
-                        wheelIng = true
-                        condition--;
-                        dist-=parseInt(pdmSection[condition].offsetWidth);
-                        console.log("Up: "+ parseInt(dist))
-                        setTimeout(function() {
-                            wheelIng = false
-                        },500)
-                    }
-
-                    if(dist/pdmSectionWidth < 1) {
-                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
-                        startPercentGauge = (dist/pdmSectionWidth)*100
-                        pdmProgressBar.style.width = (startPercentGauge) + "%"
-                    } else if(dist/pdmSectionWidth >= 1) {
-                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
-                        pdmProgressBar.style.width = "100%"
-                    }
-                })
-
-                btnClose.onclick = function() {
-                    pdmProgressBar.style.width = ""
-                    pdmContainer.style.marginLeft = ""
-                    pdmPopup.style.display = ""
-                    document.querySelector("body").style.overflow = ""
-                }
-            }
         </script>
         <!-- [//code component area end] -->
     </main>

@@ -649,6 +649,219 @@
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
             }
+
+            /* Popup Discover More */
+            .popup-discover-more {
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                display: none;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background-color: white;
+            }
+            .popup-discover-more--container {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                transition: 0.3s ease margin-left;
+            }
+            .popup-discover-more--header {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+                padding: 80px 100px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .popup-discover-more--header__none-visual {
+                width: auto;
+            }
+            .popup-discover-more--header--tit,
+            .popup-discover-more--header--cont {
+                position: relative;
+                z-index: 2;
+                color: white;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
+                color: #262626;
+            }
+            .popup-discover-more--header--tit {
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--header--cont {
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+                margin-top: 20px;
+            }
+            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                font-size: 20px;
+                line-height: 28px;
+                color: #F6F3EB;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                color: #4A4946;
+            }
+            .popup-discover-more--header--edit {
+                display: flex;
+                align-items: center;
+                gap: 0px 17px;
+                position: fixed;
+                z-index: 2;
+                bottom: 50px;
+                left: 100px;   
+            }
+            .popup-discover-more--header--edit--btn-close {
+                width: 48px;
+                height: 48px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                border-radius: 50%;
+                background: #D9D9D9 url(../../mocks/ST0002/btn-pdm-close.svg) no-repeat center center;
+                backdrop-filter: blur(9.23077px);
+                opacity: 0.4;
+                transition: 0.3s ease transform;
+            }
+            .popup-discover-more--header--edit--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discover-more--header--edit--progress {
+                width: 300px;
+                height: 2px;
+                background-color: rgba(246, 243, 235, 0.2)
+            }
+            .popup-discover-more--header--edit--progress--bar {
+                height: 2px;
+                background-color: #7E7C77;
+                transition: 0.3s ease width;
+            }
+            .popup-discover-more--header--visual {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+            .popup-discover-more--header--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--visual {
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+            }
+            .popup-discover-more--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--section {
+                display: flex;
+                align-items: flex-start;
+                height: 100vh;
+                padding: 80px 90px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .popup-discover-more--section__vertical-middle {
+                align-items: center;
+            }
+            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
+                padding-left: 60px;
+            }
+            .popup-discover-more--section--cont-wrap {
+                display: inline-block;
+                text-align: left;
+            }
+            .popup-discover-more--section--cont-wrap__inline {
+                display: inline-flex;
+                gap: 0px 70px;
+                padding-bottom: 22px;
+            }
+            .popup-discover-more--section--tit,
+            .popup-discover-more--section--cont1,
+            .popup-discover-more--section--cont2 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .popup-discover-more--section--tit {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--section--cont1 {
+                margin-top: 20px;
+                font-size: 36px;
+                line-height: 42px;
+                font-weight: 100;
+            }
+            .popup-discover-more--section--cont2 {
+                margin-top: 30px;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .popup-discover-more--section--cont1:first-child,
+            .popup-discover-more--section--cont2:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
+                padding-left: 35px;
+            }
+            .popup-discover-more--section--photo {
+                margin: 40px auto;
+            }
+            .popup-discover-more--section--photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--photo:last-child {
+                margin-bottom: 0px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-tennessee2--photo {
+                width: 808px;
+                height: 400px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-changwon2--photo {
+                width: 567px;
+                height: 400px;
+            }
+            .popup-discover-more--section--recreation-of-product2--photo {
+                width: 776px;
+                height: 430px;
+            }
+            .popup-discover-more--section--recreation-of-product3--photo {
+                width: 727px;
+                height: 526px;
+            }
+            .popup-discover-more--section--recreation-of-product4--photo {
+                width: 722px;
+                height: 490px;
+            }
+            .popup-discover-more--section--photo--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
@@ -780,7 +993,7 @@
                     <img src="../../mocks/ST0004/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
                 </div>
                 <div class="recreation-of-product__discover-more">
-                    <button type="button" class="recreation-of-product__discover-more__btn">Discover more</button>
+                    <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
                 </div>
                 <ul class="recreation-of-product__type">
                     <li class="recreation-of-product__type__item">
@@ -809,6 +1022,106 @@
                         </button>
                     </li>
                 </ul>
+                <div class="popup-discover-more" id="recreation-of-product">
+                    <div class="popup-discover-more--container">
+                        <section class="popup-discover-more--header">
+                            <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
+                            <p class="popup-discover-more--header--cont">
+                                New cycle-crafted products
+                            </p>
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--header--visual">
+                                <img src="../../mocks/ST0004/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        We've made our products more eco-conscious than <br />
+                                        ever, by using recycled plastic, recycled PET bottles <br />
+                                        for fabric covering, and molded pulp made with <br />
+                                        recycled paper and cardboard for packaging. Our <br />
+                                        effort helps us reduce plastic waste, and lower our <br />
+                                        carbon footprint and CO2 emissions.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                    <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont2">
+                                            Our 2022 LG sound bar lineup is both SGS <br />
+                                            Eco-Product and ENERGY STAR-certified, with <br />
+                                            parts made from recycled plastic resin and <br />
+                                            polyester jersey fabric, meeting the Global <br />
+                                            Recycled Standard.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                    <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont2">
+                                            tiiun mini is made from UP (Upcycled Plastic), <br />
+                                            replacing the conventional plastic used in the <br />
+                                            previous model (L011W1) with PCR (Post-Consumer <br />
+                                            Recycled) plastic.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                    <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
+                                    <div class="popup-discover-more--section--cont-inner">
+                                        <p class="popup-discover-more--section--cont2">
+                                            LG Aero Furniture is made by blending PCR (Post <br />
+                                            Consumer Recycled) plastics, recycled from consumer-<br />
+                                            used plastic waste, with mineral particles to form a <br />
+                                            distinctive 'TerraZo texture.'
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <p class="popup-discover-more--section--cont2">
+                                        Our commitment to sustainability was recognized with <br />
+                                        the Product Champion Award by the US Environmental <br />
+                                        Protection Agency, acknowledging our dedication to <br />
+                                        delivering sustainable innovations.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
             <div class="st-recycling-solutions">
                 <div class="st-recycling-solutions__cont">
@@ -822,7 +1135,7 @@
                         </p>
                     </div>
                 </div>
-                    <button type="button" class="st-recycling-solutions__discover-more">Discover more</button>
+                <button type="button" class="st-recycling-solutions__discover-more">Discover more</button>
             </div>
             <div class="summary">
                 <div class="summary__visual"></div>
@@ -1044,6 +1357,85 @@
             circularEconomy.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscoverMore(popupID) {
+                var pdmPopup = document.getElementById(popupID.split("#")[1]);
+                var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
+                var pdmSection = pdmContainer.getElementsByTagName("section");
+                var pdmSectionWidth = 0;
+                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
+                var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
+                var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
+                var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
+                var condition = 0;
+                var dist = window.innerWidth;
+                var wheelIng = true;
+                var startPercentGauge;
+
+                document.querySelector("body").style.overflow = "hidden"
+                pdmPopup.style.display = "block"
+
+                setTimeout(function(){
+                    for(var a=0; a < pdmSection.length; a++) {
+                        //console.log(pdmSection[a].offsetWidth)
+                        pdmSectionWidth+=pdmSection[a].offsetWidth;
+                    }
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                } ,500)
+
+                window.onresize = window.onorientationchange = function() {
+                    condition = 0;
+                    pdmSectionWidth = 0
+                    for(var b=0; b < pdmSection.length; b++) {
+                        pdmSectionWidth+=pdmSection[b].offsetWidth;
+                    }
+                    dist = window.innerWidth
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                }
+
+                document.addEventListener("wheel", function (e) {
+                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
+                        wheelIng = true
+                        dist+=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Down: "+ parseInt(dist))
+                        condition++;
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
+                        wheelIng = true
+                        condition--;
+                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Up: "+ parseInt(dist))
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    }
+
+                    if(dist/pdmSectionWidth < 1) {
+                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
+                        startPercentGauge = (dist/pdmSectionWidth)*100
+                        pdmProgressBar.style.width = (startPercentGauge) + "%"
+                    } else if(dist/pdmSectionWidth >= 1) {
+                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
+                        pdmProgressBar.style.width = "100%"
+                    }
+                })
+
+                btnClose.onclick = function() {
+                    pdmProgressBar.style.width = ""
+                    pdmContainer.style.marginLeft = ""
+                    pdmPopup.style.display = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
         </script>
         <!-- [//code component area end] -->
     </main>
