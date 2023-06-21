@@ -48,6 +48,13 @@
                 cursor: pointer;
                 padding: 0px
             }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
 
             /* Living Sustainably Visual */
             .living-st-visual {
@@ -621,7 +628,7 @@
                 color: #262626;
             }
             .popup-discover-more--header--tit {
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 28px;
                 line-height: 34px;
             }
@@ -736,7 +743,6 @@
             }
             .popup-discover-more--section--cont2 {
                 margin-top: 30px;
-                font-weight: 400;
                 font-size: 20px;
                 line-height: 28px;
             }
@@ -1256,7 +1262,7 @@
                     <img src="../../mocks/ST0002/photo-e-waste-program.png" alt="" class="e-waste-program__photo__img">
                 </div>
                 <div class="e-waste-program__more">
-                    <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href)" class="e-waste-program__more__btn">Discover E-waste program</a>
+                    <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
                 </div>
                 <div class="popup-discover-more" id="discover-more-e-waste-program">
                     <div class="popup-discover-more--container">

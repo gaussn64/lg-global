@@ -48,6 +48,13 @@
                 cursor: pointer;
                 padding: 0px
             }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
 
             /* Climate Action Visual */
             .climate-action-visual {
@@ -431,8 +438,8 @@
             .carbon-emission-reduction__plan {
                 display: flex;
                 gap: 0px 90px;
-                margin-top: 159px;
-                padding: 186px 0px;
+                margin-top: 100px;
+                padding: 186px 0px 266px;
                 justify-content: space-between;
             }
             .carbon-emission-reduction__plan__item {
@@ -916,7 +923,7 @@
                 color: #262626;
             }
             .popup-discover-more--header--tit {
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 28px;
                 line-height: 34px;
             }
@@ -1031,7 +1038,6 @@
             }
             .popup-discover-more--section--cont2 {
                 margin-top: 30px;
-                font-weight: 400;
                 font-size: 20px;
                 line-height: 28px;
             }
@@ -1075,6 +1081,82 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription--wrap {
+                position: relative;
+                width: 780px;
+                margin: 90px auto;
+                padding: 130px 120px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription--tit {
+                color: black;
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .popup-discription--cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 60px;
+            }
+            .popup-discription--cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 60px;
+            }
+            .popup-discription--btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription--btn-close:before,
+            .popup-discription--btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription--btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription--btn-close:after {
+                transform: rotate(-45deg);
             }
         </style>
         <!-- html code -->
@@ -1261,26 +1343,54 @@
                 </div>
                 <ul class="carbon-emission-reduction__plan">
                     <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step1">
-                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step1__btn">
+                        <a href="#greenhouse-reduction" onclick="popupDiscription(this.href); return false" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step1__btn">
                             Reduce greenhouse gas <br />
                             emissions in production <br />
                             stage (~2030)
                         </a>
                     </li>
                     <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step2">
-                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step2__btn">
+                        <a href="#renewable-energy" onclick="popupDiscription(this.href); return false" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step2__btn">
                             Switching to 100% <br />
                             renewable energy <br />
                             (~2050)
                         </a>
                     </li>
                     <li class="carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step3">
-                        <a href="" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step3__btn">
+                        <a href="#emissions-reductions" onclick="popupDiscription(this.href); return false" class="carbon-emission-reduction__plan__item__btn carbon-emission-reduction__plan__item carbon-emission-reduction__plan__item__step3__btn">
                             Securing certified <br />
                             emissions reductions
                         </a>
                     </li>
                 </ul>
+                <div class="popup-discription" id="greenhouse-reduction">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">Reduction of greenhouse gas emissions during the production stage (~2030)</dt>
+                            <dd class="popup-discription--cont1">Our goal is to decrease greenhouse gas emissions during production by 50% compared to 2017 using advanced equipment and devices. Additionally, we'll actively engage in Clean Development Mechanism (CDM*) projects to acquire carbon credits and support developing nations in reducing their emissions. We'll also implement our own solutions, like upgraded refrigerators and Energy Management Systems (EMS), which promote the use of renewable energy.</dd>
+                            <dd class="popup-discription--cont2">*CDM: Clean Development Mechanism</dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="renewable-energy">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">Switching to 100% renewable energy (~2050)</dt>
+                            <dd class="popup-discription--cont1">We established a long-term plan to achieve 100% renewable energy use and expand the transition to renewable energy, taking into account the current laws and status of business sites in Korea and other countries where we operate. Readily available options include green tariffs for purchasing renewable energy, Renewable Energy Credits (REC) purchases, and third-party Power Purchase Agreements (PPA).</dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="emissions-reductions">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">Securing Certified Emissions Reductions</dt>
+                            <dd class="popup-discription--cont1">LG aims to reduce carbon emissions and stay carbon neutral by developing high-efficiency products and investing in greenhouse gas reduction projects. We received a carbon emissions allowance for providing India with high-efficiency fridges equipped with linear inverter compressors that improve energy efficiency and performance. Profits from this initiative are re-invested in greenhouse gas reduction projects in Korea, creating a virtuous cycle of eco-conscious action.</dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
             </div>
             <div class="home-appliances-manufacturing-factory">
                 <h3 class="home-appliances-manufacturing-factory__tit">Home Appliances Manufacturing Factory</h3>
@@ -1826,6 +1936,7 @@
                 var wheelIng = true;
                 var startPercentGauge;
 
+                document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
                 pdmPopup.style.display = "block"
 
@@ -1886,6 +1997,24 @@
                     pdmProgressBar.style.width = ""
                     pdmContainer.style.marginLeft = ""
                     pdmPopup.style.display = ""
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
                 }
             }

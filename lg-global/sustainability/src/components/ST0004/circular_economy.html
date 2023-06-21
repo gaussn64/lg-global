@@ -48,6 +48,13 @@
                 cursor: pointer;
                 padding: 0px
             }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
 
             /* Circular Economy Visual */
             .circular-economy-visual {
@@ -695,7 +702,7 @@
                 color: #262626;
             }
             .popup-discover-more--header--tit {
-                font-weight: 400;
+                font-weight: 300;
                 font-size: 28px;
                 line-height: 34px;
             }
@@ -814,7 +821,6 @@
             }
             .popup-discover-more--section--cont2 {
                 margin-top: 20px;
-                font-weight: 400;
                 font-size: 20px;
                 line-height: 28px;
             }
@@ -876,6 +882,108 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription--wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription--tit {
+                text-align: center;
+                color: black;
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .popup-discription--photo {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--photo--figure {
+                margin: 0px;
+            }
+            .popup-discription--photo--figure--img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription--photo--figure--figcaption {
+                text-align: center;
+                color: #7E7C77;
+                margin-top: 20px;
+                font-weight: 300;
+            }
+            .popup-discription--photo--figure--figcaption--strong {
+                font-weight: 600;
+                color: #7E7C77;
+            }
+            .popup-discription--cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--cont--grid2 {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 40px;
+            }
+            .popup-discription--btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription--btn-close:before,
+            .popup-discription--btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription--btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription--btn-close:after {
+                transform: rotate(-45deg);
             }
         </style>
         <!-- html code -->
@@ -1120,7 +1228,7 @@
                         <div class="recreation-of-product__type__item__photo">
                             <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
                         </div>
-                        <button type="button" class="recreation-of-product__type__item__more">
+                        <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
                             <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
                         </button>
                     </li>
@@ -1132,11 +1240,46 @@
                         <div class="recreation-of-product__type__item__photo">
                             <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
                         </div>
-                        <button type="button" class="recreation-of-product__type__item__more">
+                        <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
                             <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
                         </button>
                     </li>
                 </ul>
+                <div class="popup-discription" id="available-resources">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0004/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
+                                <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="packaging-materials">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
+                                <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
+                            </dd>
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0004/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
+                                    <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
+                                </figure>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
             </div>
             <div class="st-recycling-solutions">
                 <div class="st-recycling-solutions__cont">
@@ -1572,6 +1715,23 @@
                     pdmProgressBar.style.width = ""
                     pdmContainer.style.marginLeft = ""
                     pdmPopup.style.display = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
                 }
             }

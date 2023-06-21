@@ -1,42 +1,39 @@
 @font-face {
-	font-family: 'LG_Smart_UI';
+	font-family: 'LG_EI_Headline';
 	font-weight: 700;
 	font-display: swap;
-	src: local('LG_Smart_UI Bold'),
-        url('./src/fonts/LG_Smart_UI-Bold.ttf') format('woff2'),
-        url('./src/fonts/LG_Smart_UI-Bold.ttf') format('woff');
+	src: url('./src/fonts/LG_EI_Headline-Bold.otf') format('opentype'),
 }
 @font-face {
-	font-family: 'LG_Smart_UI';
+	font-family: 'LG_EI_Headline';
 	font-weight: 600;
 	font-display: swap;
-	src: local('LG_Smart_UI SemiBold'),
-        url('./src/fonts/LG_Smart_UI-SemiBold.ttf') format('woff2'),
-        url('./src/fonts/LG_Smart_UI-SemiBold.ttf') format('woff');
+	src: url('./src/fonts/LG_EI_Headline-Semibold.otf') format('opentype'),
 }
 @font-face {
-	font-family: 'LG_Smart_UI';
+	font-family: 'LG_EI_Headline';
 	font-weight: 400;
 	font-display: swap;
-	src: local('LG_Smart_UI Regular'),
-        url('./src/fonts/LG_Smart_UI-Regular.ttf') format('woff2'),
-        url('./src/fonts/LG_Smart_UI-Regular.ttf') format('woff');
+	src: url('./src/fonts/LG_EI_Headline-Regular.otf') format('opentype'),
 }
 @font-face {
-	font-family: 'LG_Smart_UI';
+	font-family: 'LG_EI_Headline';
 	font-weight: 300;
 	font-display: swap;
-	src: local('LG_Smart_UI Light'),
-        url('./src/fonts/LG_Smart_UI-Light.ttf') format('woff2'),
-        url('./src/fonts/LG_Smart_UI-Light.ttf') format('woff');
+	src: url('./src/fonts/LG_EI_Headline-Light.otf') format('opentype'),
+}
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 100;
+	font-display: swap;
+	src: url('./src/fonts/LG_EI_Headline-Thin.otf') format('opentype'),
 }
 
 * {
-    font-family: 'LG_Smart_UI';
+    font-family: 'LG_EI_Headline';
 }
 
 body {
-    font-weight: 400;
-    font-family: 'LG_Smart_UI';
-
+    font-weight: 300;
+    font-family: 'LG_EI_Headline';
 }

@@ -48,6 +48,13 @@
                 cursor: pointer;
                 padding: 0px
             }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
 
             /* Human Rights Visual */
             .human-rights-visual {
@@ -334,6 +341,10 @@
                 overflow: hidden;
                 background: transparent url(../../mocks/ST0005/btn-efforts-more.svg) no-repeat left top;
                 background-size: cover;
+                transition: 0.3s ease transform;
+            }
+            .goals-efforts__tab-cont__item__efforts-ico-txt__more__btn:hover {
+                transform: rotate(180deg);
             }
             .goals-efforts__tab-cont__item__efforts-thumbnail {
                 margin-top: -0.4167vw;
@@ -363,6 +374,10 @@
                 overflow: hidden;
                 background: transparent url(../../mocks/ST0005/btn-efforts-more.svg) no-repeat left top;
                 background-size: cover;
+                transition: 0.3s ease transform;
+            }
+            .goals-efforts__tab-cont__item__efforts-thumbnail__more__btn:hover {
+                transform: rotate(180deg);
             }
 
             /* Social Impact */
@@ -655,6 +670,211 @@
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
             }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription--wrap {
+                position: relative;
+                width: 780px;
+                margin: 90px auto;
+                padding: 130px 120px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription--wrap__photo-wrap {
+                width: 980px;
+                padding: 120px 90px;
+            }
+            .popup-discription--tit {
+                color: black;
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+                margin-top: 60px;
+            }
+            .popup-discription--tit:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription--tit__align-center {
+                text-align: center;
+            }
+            .popup-discription--cont--strong {
+                font-weight: 600;
+            }
+            .popup-discription--cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 60px;
+            }
+            .popup-discription--cont1:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription--cont1 + .popup-discription--cont1 {
+                margin-top: 20px;
+            }
+            .popup-discription--cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin-top: 20px;
+            }
+            .popup-discription--partner-companies {
+                margin-top: 60px;
+                padding-top: 60px;
+                border-top: 1px solid #D0CBC1;
+            }
+            .popup-discription--partner-companies--count {
+                font-weight: 100;
+                font-size: 72px;
+                line-height: 80px;
+                color: #75C66B; 
+            }
+            .popup-discription--partner-companies--detail {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 28px;
+                color: #4A4946;
+                margin-top: 20px;
+            }
+            .popup-discription--cont--grid2 {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 40px;
+            }
+            .popup-discription--cont1--grid2--subject {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discription--cont1--grid2--cont {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .popup-discription--btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription--btn-close:before,
+            .popup-discription--btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription--btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription--btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* Popup Discription - Products for all */
+            .products-for-all {
+                width: 980px;
+                padding: 120px 90px;
+                background-color: black;
+            }
+            .products-for-all * {
+                color: white;
+            }
+            .products-for-all--head {
+                text-align: center;
+            }
+            .products-for-all--head--tit {
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .products-for-all--head--intro {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+            .products-for-all--visual {
+                margin: 0px -90px;
+            }
+            .products-for-all--visual--img {
+                width: 100%;
+                height: auto;
+            }
+            .products-for-all--feature {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                gap: 0px 90px;
+            }
+            .products-for-all--feature + .products-for-all--feature {
+                margin-top: 72px;
+            }
+            .products-for-all--feature:nth-child(2n-1) {
+                flex-direction: row-reverse
+            }
+            .products-for-all--feature1--photo {
+                width: 360px;
+                height: 252px;
+            }
+            .products-for-all--feature2--photo {
+                width: 430px;
+                height: 287px;
+            }
+            .products-for-all--feature3--photo {
+                width: 326px;
+                height: 326px;
+            }
+            .products-for-all--feature--cont--tit {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .products-for-all--feature--cont--txt1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+            .products-for-all--feature--cont--txt2 {
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 21px;
+                color: #7E7C77;
+                margin-top: 20px;
+                font-weight: 400;
+            }
+            .products-for-all--btn-close {
+                border-color: rgba(0,0,0,0.1);
+                background-color: rgba(255,255,255,0.3);
+            }
+            .products-for-all--btn-close:before,
+            .products-for-all--btn-close:after {
+                background-color: white;
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
@@ -776,7 +996,7 @@
                                     Risk Management
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-ico-txt__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn" onclick="popupDiscription('#stronger-risk-management')">More</button>
                                 </p>
                             </div>
                         </div>
@@ -790,10 +1010,64 @@
                                     supply chain
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-ico-txt__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-ico-txt__more__btn" onclick="popupDiscription('#reducing-carbon')">More</button>
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="stronger-risk-management">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">
+                                Stronger <br />
+                                Risk Management
+                            </dt>
+                            <dd class="popup-discription--cont1">
+                                <strong class="popup-discription--cont--strong">
+                                    We make sure everyone can work safely and sustainably <br />
+                                    at the workplace.
+                                </strong> 
+                            </dd>
+                            <dd class="popup-discription--cont1">
+                                To create a safe and sustainable workplace, we strengthen on-site inspections of production sites, and make sure everyone follows safety standards even higher than the required international rules. To minimize risk to partner companies, we increase the number of people who must self-inspect annually, and we also conduct online training for partners.
+                            </dd>
+                            <dd class="popup-discription--partner-companies">
+                                <p class="popup-discription--partner-companies--count">+1,200</p>
+                                <p class="popup-discription--partner-companies--detail">
+                                    Yearly self-inspection, <br />
+                                    and monitoring ESG risks of <br />
+                                    1,200 partner companies
+                                </p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="reducing-carbon">
+                    <div class="popup-discription--wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription--tit">
+                                Reducing <br />
+                                carbon in the supply <br />
+                                chain
+                            </dt>
+                            <dd class="popup-discription--cont1">
+                                <strong class="popup-discription--cont--strong">
+                                    We are striving to reduce carbon emissions, <br />
+                                    even in the supply chain.
+                                </strong> 
+                            </dd>
+                            <dd class="popup-discription--cont1">
+                                We're building a supply chain greenhouse gas inventory. <br />
+                                We investigate our partner companies' greenhouse gas <br />
+                                emissions, and set up solutions for selected partner companies <br />
+                                that need help. We share our carbon reduction technology <br />
+                                and know-how to educate our partner companies, creating <br />
+                                positive synergy.
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
                     </div>
                 </div>
             </div>
@@ -862,7 +1136,7 @@
                                     Diversity and inclusion
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn" onclick="popupDiscription('#diversity-inclusion')">More</button>
                                 </p>
                             </div>
                         </div>
@@ -875,10 +1149,55 @@
                                     A great workplace <br />for all
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn" onclick="popupDiscription('#great-workplace')">More</button>
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="diversity-inclusion">
+                    <div class="popup-discription--wrap popup-discription--wrap__photo-wrap">
+                        <dl class="popup-discription--inner">
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0005/photo-diversity-inclusion.png" alt="" class="popup-discription--photo--figure--img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--tit popup-discription--tit__align-center">Diversity and inclusion</dt>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <div class="popup-discription--cont1--grid2--subject">Understanding the diversity and inclusion</div>
+                                <div class="popup-discription--cont1--grid2--detail">
+                                    <p class="popup-discription--cont1">
+                                        Everyone deserves respect as an individual without discrimination. That's why we made our diversity and inclusion policy in 2022. We keep sharing DEI(Diversity, Equity, Inclusion) values with our team and updating policies to improve our personnel system.
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="great-workplace">
+                    <div class="popup-discription--wrap popup-discription--wrap__photo-wrap">
+                        <dl class="popup-discription--inner">
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0005/photo-great-workplace.png" alt="" class="popup-discription--photo--figure--img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--tit popup-discription--tit__align-center">A great workplace for all</dt>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <div class="popup-discription--cont1--grid2--subject">Fair Opportunities, <br />Fair Rewards</div>
+                                <div class="popup-discription--cont1--grid2--detail">
+                                    <p class="popup-discription--cont1">
+                                        We offer fair opportunities and rewards without discrimination against gender, disability, race, or nationality. Our offices in US and Canada won four gold medals, including the 2022 Best Places to Work in New York. We are continuing to create more transparency and accountability in our workplaces globally.
+                                    </p>
+                                    <p class="popup-discription--cont2">
+                                        *Best Places to Work in New York 2022, Best Engineering Team 2022, Best Company Compensation, Best Company Perks &amp; Benefits (Comparably)
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
                     </div>
                 </div>
             </div>
@@ -964,7 +1283,7 @@
                                     Products for all
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn"  onclick="popupDiscription('#products-for-all')">More</button>
                                 </p>
                             </div>
                         </div>
@@ -978,7 +1297,7 @@
                                     group
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn"  onclick="popupDiscription('#disability-advisory-group')">More</button>
                                 </p>
                             </div>
                         </div>
@@ -992,10 +1311,108 @@
                                     improvement
                                 </p>
                                 <p class="goals-efforts__tab-cont__item__efforts-thumbnail__more">
-                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn">More</button>
+                                    <button type="button" class="goals-efforts__tab-cont__item__efforts-thumbnail__more__btn"  onclick="popupDiscription('#service-environment')">More</button>
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="products-for-all">
+                    <div class="popup-discription--wrap products-for-all">
+                        <div class="products-for-all--head">
+                            <h4 class="products-for-all--head--tit">Products for all</h4>
+                            <p class="products-for-all--head--intro">
+                                We design our products that work for everyone in all <br />
+                                scenarios and with every contingency.
+                            </p>
+                        </div>
+                        <div class="products-for-all--visual">
+                            <img src="../../mocks/ST0005/visual-products-for-all.png" alt=""  class="products-for-all--visual--img">
+                        </div>
+                        <div class="products-for-all--feature-wrap">
+                            <div class="products-for-all--feature">
+                                <div class="products-for-all--feature--photo products-for-all--feature1--photo">
+                                    <img src="../../mocks/ST0005/photo-products-for-all1.png" alt="" class="products-for-all--feature--photo--img">
+                                </div>
+                                <dl class="products-for-all--feature--cont">
+                                    <dt class="products-for-all--feature--cont--tit">Voice Guidance</dt>
+                                    <dd class="products-for-all--feature--cont--txt1">Voice Guidance audibly lets the user know which button or option you tapped. It also explains functions and current situations. So the user can utilize the product through voice guidance without visual information. The user can use products safely with voice guidance like, "Be careful, hot water is coming out.“ </dd>
+                                    <dd class="products-for-all--feature--cont--txt2">*Only some products. Plan to expand the product line Ex) Water Purifier</dd>
+                                </dl>
+                            </div>
+                            <div class="products-for-all--feature">
+                                <div class="products-for-all--feature--photo products-for-all--feature2--photo">
+                                    <img src="../../mocks/ST0005/photo-products-for-all2.png" alt="" class="products-for-all--feature--photo--img">
+                                </div>
+                                <dl class="products-for-all--feature--cont">
+                                    <dt class="products-for-all--feature--cont--tit">Voice Recognition</dt>
+                                    <dd class="products-for-all--feature--cont--txt1">The product knows each user's voice and starts operating when the user say a command without touching the product.</dd>
+                                    <dd class="products-for-all--feature--cont--txt2">
+                                        *Applicable to some products, plan on <br />
+                                        expanding product line.<br />
+                                        &nbsp;<br />
+                                        Ex) Robot Vacuum Cleaner
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="products-for-all--feature">
+                                <div class="products-for-all--feature--photo products-for-all--feature3--photo">
+                                    <img src="../../mocks/ST0005/photo-products-for-all3.png" alt="" class="products-for-all--feature--photo--img">
+                                </div>
+                                <dl class="products-for-all--feature--cont">
+                                    <dt class="products-for-all--feature--cont--tit">Braille Stickers</dt>
+                                    <dd class="products-for-all--feature--cont--txt1">We created braille stickers to make the control buttons on the home appliances recognizable by touching their surfaces.</dd>
+                                    <dd class="products-for-all--feature--cont--txt2">
+                                        * Applicable to some countries, planning on <br />
+                                        expanding applicable countries
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <button type="button" class="popup-discription--btn-close products-for-all--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="disability-advisory-group">
+                    <div class="popup-discription--wrap popup-discription--wrap__photo-wrap">
+                        <dl class="popup-discription--inner">
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0005/photo-disability-advisory-group.png" alt="" class="popup-discription--photo--figure--img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--tit popup-discription--tit__align-center">Disability advisory group</dt>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <div class="popup-discription--cont1--grid2--subject">Our products reflect diverse opinions to provide a better experience for everyone.</div>
+                                <div class="popup-discription--cont1--grid2--detail">
+                                    <p class="popup-discription--cont1">
+                                        We collaborate closely with a disability advisory group to design our products with everyone in mind. They try out our products and give feedback, so we can make products that benefit everyone. For example, the PuriCare Objet Collection water purifier was created with voice recognition after the group suggested moving the button to the front for easier access. We currently have disability advisory groups in Korea and the US and plan to expand to even more countries soon.
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="service-environment">
+                    <div class="popup-discription--wrap popup-discription--wrap__photo-wrap">
+                        <dl class="popup-discription--inner">
+                            <dd class="popup-discription--photo">
+                                <figure class="popup-discription--photo--figure">
+                                    <img src="../../mocks/ST0005/photo-service-environment.png" alt="" class="popup-discription--photo--figure--img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--tit popup-discription--tit__align-center">Service environment <br />improvement</dt>
+                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                <div class="popup-discription--cont1--grid2--subject">We provide convenient <br />services to everyone.</div>
+                                <div class="popup-discription--cont1--grid2--detail">
+                                    <p class="popup-discription--cont1">
+                                        LG offers video and audio about product manuals. The video manual uses subtitles and sign language to explain the product's functions and how to use it. We keep expanding our specialized manuals (Video/Audio/Easy Manuals) so everyone can access our products.<br />
+                                        LG has offered customer services through sign language consultation and interpreting since 2021. Customers can use sign language to ask for an engineer or how to use products. We continue to increase our support to offer excellent customer service to everyone equally.
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription--btn-close">Close</button>
                     </div>
                 </div>
             </div>
@@ -1292,6 +1709,23 @@
             humanRights.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
         </script>
         <!-- [//code component area end] -->
     </main>
