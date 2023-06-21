@@ -2,31 +2,31 @@
 	font-family: 'LG_EI_Headline';
 	font-weight: 700;
 	font-display: swap;
-	src: url('./src/fonts/LG_EI_Headline-Bold.otf') format('opentype'),
+	src: url('./src/fonts/LG_EI_Headline-Bold.otf') format('opentype');
 }
 @font-face {
 	font-family: 'LG_EI_Headline';
 	font-weight: 600;
 	font-display: swap;
-	src: url('./src/fonts/LG_EI_Headline-Semibold.otf') format('opentype'),
+	src: url('./src/fonts/LG_EI_Headline-Semibold.otf') format('opentype');
 }
 @font-face {
 	font-family: 'LG_EI_Headline';
 	font-weight: 400;
 	font-display: swap;
-	src: url('./src/fonts/LG_EI_Headline-Regular.otf') format('opentype'),
+	src: url('./src/fonts/LG_EI_Headline-Regular.otf') format('opentype');
 }
 @font-face {
 	font-family: 'LG_EI_Headline';
 	font-weight: 300;
 	font-display: swap;
-	src: url('./src/fonts/LG_EI_Headline-Light.otf') format('opentype'),
+	src: url('./src/fonts/LG_EI_Headline-Light.otf') format('opentype');
 }
 @font-face {
 	font-family: 'LG_EI_Headline';
 	font-weight: 100;
 	font-display: swap;
-	src: url('./src/fonts/LG_EI_Headline-Thin.otf') format('opentype'),
+	src: url('./src/fonts/LG_EI_Headline-Thin.otf') format('opentype');
 }
 
 * {
