@@ -202,14 +202,17 @@
                 color: #262626;
                 background-color: white;
             }
-            .milestone__goals-cont {
+            .milestone__goals-cont__wrap {
                 position: relative;
                 box-sizing: border-box;
-                height: 100vh;
-                padding: 5.4422vh 120px;
-                background: url(../../mocks/ST0003/bg-milestone-goals-cont.png) no-repeat center center;
+                background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../../mocks/ST0003/bg-milestone-goals-cont.jpg) no-repeat left 26%;
                 background-size: cover;
-                background-attachment: fixed;
+            }
+            .milestone__goals-cont {
+                width: 1680px;
+                height: 1470px;
+                padding: 80px 0px;
+                margin: 0px auto;
             }
             .milestone__goals-cont__years {
                 position: relative;
@@ -242,7 +245,7 @@
                 color: white;
                 opacity: 0.3;
                 font-weight: 300;
-                margin-bottom: 3px;
+                margin-bottom: 12px;
             }
             .milestone__goals-cont__years__item__txt--active {
                 opacity: 1;
@@ -313,7 +316,7 @@
             .milestone__goals-cont__summary {
                 visibility: hidden;
                 position: absolute;
-                top: 15.9184vh;
+                top: 234px;
                 left: 0px;
                 width: 100%;
                 color: white;
@@ -329,7 +332,7 @@
             .milestone__goals-cont__detail {
                 position: absolute;
                 left: 120px;
-                bottom: 22.1088vh;
+                bottom: 325px;
                 visibility: hidden;
                 display: flex;
                 gap: 0px 20px;
@@ -339,16 +342,15 @@
             }
             .milestone__goals-cont__detail__item {
                 width: 318px;
-                height: 35.3741vh;
-                min-height: 450px;
+                height: 520px;
                 text-align: left;
                 box-sizing: border-box;
-                padding: 4.0816vh 41px;
-                border-radius: 2.0408vh;
+                padding: 60px 41px;
+                border-radius: 30px;
                 background-color: rgba(0, 0, 0, 0.3);
                 backdrop-filter: blur(100px);
                 opacity: 0;
-                transform: translateY(2.0408vh);
+                transform: translateY(30px);
                 transition: 0.5s ease opacity,0.5s ease transform;
             }
             .milestone__goals-cont__detail__item:nth-child(1) {
@@ -403,8 +405,10 @@
                 display: none;
                 opacity: 0;
                 position: absolute;
-                bottom: 5.4422vh;
+                bottom: 80px;
                 left: 120px;
+                font-size: 15px;
+                line-height: 21px;
                 text-align: left;
                 color: white;
             }
@@ -415,7 +419,9 @@
 
             /* Carbon Emission Reduction */
             .carbon-emission-reduction {
-                padding: 80px 180px 0px;
+                width: 1560px;
+                padding-top: 80px;
+                margin: 0px auto;
                 text-align: center;
             }
             .carbon-emission-reduction__tit {
@@ -444,9 +450,9 @@
                 justify-content: space-between;
             }
             .carbon-emission-reduction__plan__item {
-                width: 23.9583vw;
-                height: 39.0625vw;
-                border-radius: 11.9792vw;
+                width: 460px;
+                height: 750px;
+                border-radius: 230px;
                 opacity: 0;
                 transform: translateY(0px);
                 transition: 0.5s ease transform,0.5s ease opacity;
@@ -471,9 +477,11 @@
                 padding: 148px 0px;
                 color: white;
                 font-size: 28px;
-                line-height: 140%;
+                line-height: 34px;
+                letter-spacing: -0.14px;
                 background-color: black;
                 background-repeat: no-repeat;
+                background-position: 22% center;
                 background-size: cover;
             }
             .carbon-emission-reduction__plan__item__btn:hover {
@@ -508,7 +516,7 @@
             /* Home Appliances Manufacturing Factory */
             .home-appliances-manufacturing-factory {
                 position: relative;
-                padding: 80px 0px 100vh;
+                padding: 80px 0px 900px;
                 text-align: center;
             }
             .home-appliances-manufacturing-factory__tit {
@@ -571,7 +579,8 @@
                 bottom: 0px;
                 left: 0px;
                 width: 100%;
-                height: 100vh;
+                height: 900px;
+                padding: 60px 0px 80px;
                 opacity: 0;
                 transition: 0.3s ease opacity;
             }
@@ -581,13 +590,12 @@
                 opacity: 1;
             }
             .home-appliances-manufacturing-factory__photos-cont__figure {
-                position: absolute;
+                position: relative;
                 z-index: 1;
-                top: 5.5556vh;
-                left: 120px;
-                right: 120px;
-                height: calc(100vh - 12.963vh);
-                margin-bottom: 0px;
+                width: 87.5vw;
+                max-width: 1680px;
+                height: 760px;
+                margin: 0px auto;
                 box-sizing: border-box;
                 border-radius: 40px;
                 overflow: hidden;
@@ -643,10 +651,10 @@
             /* B2B activity */
             .b2b-activity {
                 position: relative;
-                height: 100vh;
-                padding: 7.4074vh 120px;
+                height: 116.6667vh;
+                padding: 7.4074vh 6.25vw;
                 box-sizing: border-box;
-                background: url(../../mocks/ST0003/bg-b2b-activity.png) no-repeat center 18%;
+                background: url(../../mocks/ST0003/bg-b2b-activity.png) no-repeat center 42%;
                 background-size: cover;
                 background-attachment: fixed;
             }
@@ -676,8 +684,8 @@
             .b2b-activity__discover-more {
                 position: absolute;
                 z-index: 4;
-                bottom: 40px;
-                right: 120px;
+                bottom: 3.7037vh;
+                right: 6.2500vw;
                 display: flex;
                 align-items: center;
                 font-size: 20px;
@@ -696,16 +704,14 @@
 
             /* Summary */
             .summary {
-                position: relative;
-                height: 100vh;
+                padding: 80px 0px 140px;
             }
             .summary__cont {
-                position: absolute;
-                top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
-                height: calc(100vh - 14.8148vh);
+                max-width: 1680px;
+                width: 87.5vw;
+                height: 820px;
                 border-radius: 40px;
+                margin: 0px auto;
                 box-sizing: border-box;
                 background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0003/photo-summary-visual.jpg) no-repeat center center;
                 background-size: cover;
@@ -715,28 +721,32 @@
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh 4.1667vw;
+                padding: 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
-                transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                padding: 9.6296vh 4.1667vw;
+                padding: 104px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 300;
+                font-weight: 250;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
 
             /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 90px 0px 73px;
+                background-color: #E6E1D6;
+            }
             .whats-next {
                 position: relative;
-                overflow: hidden;
-                padding: 90px 120px 73px;
-                background-color: #E6E1D6;
+                max-width: 1680px;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .whats-next__tit {
                 font-size: 44px;
@@ -1211,130 +1221,132 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="milestone__goals-cont">
-                    <ul class="milestone__goals-cont__years">
-                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2006">
-                            <b class="milestone__goals-cont__years__item__txt">2006</b>
-                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2006__ico"></i>
-                        </li>
-                        <li class="milestone__goals-cont__years__item">
-                            <b class="milestone__goals-cont__years__item__txt">2017</b>
-                            <i class="milestone__goals-cont__years__item__ico"></i>
-                        </li>
-                        <li class="milestone__goals-cont__years__item">
-                            <b class="milestone__goals-cont__years__item__txt">2020</b>
-                            <i class="milestone__goals-cont__years__item__ico"></i>
-                        </li>
-                        <li class="milestone__goals-cont__years__item">
-                            <b class="milestone__goals-cont__years__item__txt">2021</b>
-                            <i class="milestone__goals-cont__years__item__ico"></i>
-                        </li>
-                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2023">
-                            <b class="milestone__goals-cont__years__item__txt">2023</b>
-                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2023__ico"></i>
-                        </li>
-                        <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2030">
-                            <b class="milestone__goals-cont__years__item__txt milestone__goals-cont__years__item__txt--active">2030</b>
-                            <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2030__ico milestone__goals-cont__years__item__ico--active"></i>
-                        </li>
-                    </ul>
-                    <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2030 milestone__goals-cont__summary--active">
-                        50% reduction in emissions in the production phase <br />
-                        + 50% of external offset by 2030
-                    </p>
-                    <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2023">
-                        40% carbon emission reduction compared to base year (2017)
-                    </p>
-                    <ul class="milestone__goals-cont__detail milestone__goals-cont__detail__2030 milestone__goals-cont__detail--active">
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit milestone__goals-cont__detail__item__tit__txt">Carbon Zero</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals1.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Achieve Carbon <br />
-                                    Neutrality**
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Complete transition <br />
-                                    to Renewable <br />
-                                    Energy by 2050
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">20%</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Reduce Carbon <br />
-                                    Emissions During <br />
-                                    use of 7 Major <br />
-                                    Product <br />
-                                    Categories*
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
-                    <ul class="milestone__goals-cont__detail milestone__goals-cont__detail__2023">
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">40%</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals1.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Carbon Neutrality <br />
-                                    <small class="milestone__goals-cont__detail__item__cont__small">40% compared to base year(2017)</small>
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Renewable energy conversion <br />
-                                    <small class="milestone__goals-cont__detail__item__cont__small">100% renewable energy used by subsidiaries in North America</small>
-                                </dd>
-                            </dl>
-                        </li>
-                        <li class="milestone__goals-cont__detail__item">
-                            <dl class="milestone__goals-cont__detail__item__inner">
-                                <dt class="milestone__goals-cont__detail__item__tit">6.6%</dt>
-                                <dd class="milestone__goals-cont__detail__item__ico">
-                                    <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
-                                </dd>
-                                <dd class="milestone__goals-cont__detail__item__cont">
-                                    Reduce carbon <br />
-                                    emissions during <br />
-                                    use of 7 major <br />
-                                    products* <br />
-                                    <small class="milestone__goals-cont__detail__item__cont__small">(compared to 2020)</small>
-                                </dd>
-                            </dl>
-                        </li>
-                    </ul>
-                    <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2030 milestone__goals-cont__home-appliances--active">
-                        * TV, Monitors, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner (RAC), System Air Conditioner(SAC) <br />
-                        ** 50% reduction in emissions in the production phase + 50% of external offset
-                    </p>
-                    <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2023">
-                        * TV, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner(RAC), System Air Conditioner(SAC), Monitors
-                    </p>
+                <div class="milestone__goals-cont__wrap">
+                    <div class="milestone__goals-cont">
+                        <ul class="milestone__goals-cont__years">
+                            <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2006">
+                                <b class="milestone__goals-cont__years__item__txt">2006</b>
+                                <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2006__ico"></i>
+                            </li>
+                            <li class="milestone__goals-cont__years__item">
+                                <b class="milestone__goals-cont__years__item__txt">2017</b>
+                                <i class="milestone__goals-cont__years__item__ico"></i>
+                            </li>
+                            <li class="milestone__goals-cont__years__item">
+                                <b class="milestone__goals-cont__years__item__txt">2020</b>
+                                <i class="milestone__goals-cont__years__item__ico"></i>
+                            </li>
+                            <li class="milestone__goals-cont__years__item">
+                                <b class="milestone__goals-cont__years__item__txt">2021</b>
+                                <i class="milestone__goals-cont__years__item__ico"></i>
+                            </li>
+                            <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2023">
+                                <b class="milestone__goals-cont__years__item__txt">2023</b>
+                                <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2023__ico"></i>
+                            </li>
+                            <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item__2030">
+                                <b class="milestone__goals-cont__years__item__txt milestone__goals-cont__years__item__txt--active">2030</b>
+                                <i class="milestone__goals-cont__years__item__ico milestone__goals-cont__years__item__2030__ico milestone__goals-cont__years__item__ico--active"></i>
+                            </li>
+                        </ul>
+                        <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2030 milestone__goals-cont__summary--active">
+                            50% reduction in emissions in the production phase <br />
+                            + 50% of external offset by 2030
+                        </p>
+                        <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2023">
+                            40% carbon emission reduction compared to base year (2017)
+                        </p>
+                        <ul class="milestone__goals-cont__detail milestone__goals-cont__detail__2030 milestone__goals-cont__detail--active">
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit milestone__goals-cont__detail__item__tit__txt">Carbon Zero</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals1.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Achieve Carbon <br />
+                                        Neutrality**
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Complete transition <br />
+                                        to Renewable <br />
+                                        Energy by 2050
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit">20%</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Reduce Carbon <br />
+                                        Emissions During <br />
+                                        use of 7 Major <br />
+                                        Product <br />
+                                        Categories*
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="milestone__goals-cont__detail milestone__goals-cont__detail__2023">
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit">40%</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals1.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Carbon Neutrality <br />
+                                        <small class="milestone__goals-cont__detail__item__cont__small">40% compared to base year(2017)</small>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit">100%</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals2.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Renewable energy conversion <br />
+                                        <small class="milestone__goals-cont__detail__item__cont__small">100% renewable energy used by subsidiaries in North America</small>
+                                    </dd>
+                                </dl>
+                            </li>
+                            <li class="milestone__goals-cont__detail__item">
+                                <dl class="milestone__goals-cont__detail__item__inner">
+                                    <dt class="milestone__goals-cont__detail__item__tit">6.6%</dt>
+                                    <dd class="milestone__goals-cont__detail__item__ico">
+                                        <img src="../../mocks/ST0003/ico-milestone-goals3.svg" alt="" class="milestone__goals-cont__detail__item__ico__img">
+                                    </dd>
+                                    <dd class="milestone__goals-cont__detail__item__cont">
+                                        Reduce carbon <br />
+                                        emissions during <br />
+                                        use of 7 major <br />
+                                        products* <br />
+                                        <small class="milestone__goals-cont__detail__item__cont__small">(compared to 2020)</small>
+                                    </dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2030 milestone__goals-cont__home-appliances--active">
+                            * TV, Monitors, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner (RAC), System Air Conditioner(SAC) <br />
+                            ** 50% reduction in emissions in the production phase + 50% of external offset
+                        </p>
+                        <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2023">
+                            * TV, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner(RAC), System Air Conditioner(SAC), Monitors
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="carbon-emission-reduction">
@@ -1741,51 +1753,53 @@
                     </p>
                 </div>
             </div>
-            <div class="whats-next">
-                <h3 class="whats-next__tit">
-                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                    Explore Sustainability
-                </h3>
-                <div class="swiper whats-next__menu">
-                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
-                            </a>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
-                            </a>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
-                            </a>
-                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
                     </div>
-                    <div class="whats-next__menu__btn-set">
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
-                    </div>
-                    <div class="swiper-pagination whats-next__menu__pagination"></div>
                 </div>
             </div>
         </div>

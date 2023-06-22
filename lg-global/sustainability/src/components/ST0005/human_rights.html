@@ -495,16 +495,14 @@
 
             /* Summary */
             .summary {
-                position: relative;
-                height: 100vh;
+                padding: 80px 0px 140px;
             }
             .summary__cont {
-                position: absolute;
-                top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
-                height: calc(100vh - 14.8148vh);
+                max-width: 1680px;
+                width: 87.5vw;
+                height: 820px;
                 border-radius: 40px;
+                margin: 0px auto;
                 box-sizing: border-box;
                 background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0005/photo-summary-visual.jpg) no-repeat center center;
                 background-size: cover;
@@ -514,28 +512,32 @@
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh 4.1667vw;
+                padding: 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
-                transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                padding: 9.6296vh 4.1667vw;
+                padding: 104px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 300;
+                font-weight: 250;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
 
             /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 90px 0px 73px;
+                background-color: #E6E1D6;
+            }
             .whats-next {
                 position: relative;
-                overflow: hidden;
-                padding: 90px 120px 73px;
-                background-color: #E6E1D6;
+                max-width: 1680px;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .whats-next__tit {
                 font-size: 44px;
@@ -1474,51 +1476,53 @@
                     </p>
                 </div>
             </div>
-            <div class="whats-next">
-                <h3 class="whats-next__tit">
-                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                    Explore Sustainability
-                </h3>
-                <div class="swiper whats-next__menu">
-                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
-                            </a>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
-                            </a>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
-                            </a>
-                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
                     </div>
-                    <div class="whats-next__menu__btn-set">
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
-                    </div>
-                    <div class="swiper-pagination whats-next__menu__pagination"></div>
                 </div>
             </div>
         </div>

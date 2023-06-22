@@ -311,9 +311,12 @@
             }
 
             /* Recreation of product */
+            .recreation-of-product__wrap {
+                padding: 80px 0px;
+            }
             .recreation-of-product {
-                padding: 80px 0px 3.6458vw;
-                box-sizing: border-box;
+                width: 1680px;
+                margin: 0px auto;
                 text-align: center;
             }
             .recreation-of-product__tit {
@@ -334,15 +337,17 @@
                 line-height: 28px;
             }
             .recreation-of-product__photos {
+                display: flex;
+                justify-content: center;
                 margin-top: 60px;
             }
             .recreation-of-product__photos__img {
-                width: 100%;
-                height: auto;
+                width: auto;
+                height: 606px;
             }
             .recreation-of-product__discover-more {
                 text-align: right;
-                margin: 20px 120px 0px;
+                margin-top: 20px;
             }
             .recreation-of-product__discover-more__btn {
                 display: inline-block;
@@ -365,7 +370,7 @@
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 gap: 0px 20px;
-                margin: 60px 120px 0px;
+                margin-top: 20px;
             }
             .recreation-of-product__type__item {
                 position: relative;
@@ -478,47 +483,49 @@
 
             /* Summary */
             .summary {
-                position: relative;
-                height: 100vh;
+                padding: 80px 0px 140px;
             }
             .summary__cont {
-                position: absolute;
-                top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
-                height: calc(100vh - 14.8148vh);
+                max-width: 1680px;
+                width: 87.5vw;
+                height: 820px;
                 border-radius: 40px;
+                margin: 0px auto;
                 box-sizing: border-box;
-                background: linear-gradient(238.16deg, rgba(0, 0, 0, 0.4) 5.45%, rgba(0, 0, 0, 0) 69.88%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat center center;
+                background: linear-gradient(238.16deg, rgba(0, 0, 0, 0.4) 5.45%, rgba(0, 0, 0, 0) 69.88%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat right center;
                 background-size: cover;
             }
             .summary__cont__txt {
                 position: relative;
                 z-index: 1;
-                justify-content: flex-end;
+                display: flex;
                 align-items: center;
-                padding: 7.4074vh 4.1667vw 7.4074vh 58.4896vw;
+                padding: 80px 80px 80px calc(50% + 283px);
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
-                transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                padding: 9.6296vh 4.1667vw 9.6296vh 58.4896vw;
+                padding: 104px 80px 104px calc(50% + 283px);
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 300;
+                font-weight: 250;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
 
             /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 90px 0px 73px;
+                background-color: #E6E1D6;
+            }
             .whats-next {
                 position: relative;
-                overflow: hidden;
-                padding: 90px 120px 73px;
-                background-color: #E6E1D6;
+                max-width: 1680px;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .whats-next__tit {
                 font-size: 44px;
@@ -1112,181 +1119,183 @@
                     </ul>
                 </div>
             </div>
-            <div class="recreation-of-product">
-                <h3 class="recreation-of-product__tit">Recreation of product</h3>
-                <div class="recreation-of-product__intro">
-                    <p class="recreation-of-product__intro__txt">New life from old materials​</p>
-                    <p class="recreation-of-product__intro__txt">
-                        Discover our latest product, manufactured through an eco-conscious recycling process to <br />
-                        promote sustainability and reduce waste.
-                    </p>
-                </div>
-                <div class="recreation-of-product__photos">
-                    <img src="../../mocks/ST0004/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
-                </div>
-                <div class="recreation-of-product__discover-more">
-                    <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
-                </div>
-                <div class="popup-discover-more" id="recreation-of-product">
-                    <div class="popup-discover-more--container">
-                        <section class="popup-discover-more--header">
-                            <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
-                            <p class="popup-discover-more--header--cont">
-                                New cycle-crafted products
+            <div class="recreation-of-product__wrap">
+                <div class="recreation-of-product">
+                    <h3 class="recreation-of-product__tit">Recreation of product</h3>
+                    <div class="recreation-of-product__intro">
+                        <p class="recreation-of-product__intro__txt">New life from old materials​</p>
+                        <p class="recreation-of-product__intro__txt">
+                            Discover our latest product, manufactured through an eco-conscious recycling process to <br />
+                            promote sustainability and reduce waste.
+                        </p>
+                    </div>
+                    <div class="recreation-of-product__photos">
+                        <img src="../../mocks/ST0004/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
+                    </div>
+                    <div class="recreation-of-product__discover-more">
+                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
+                    </div>
+                    <div class="popup-discover-more" id="recreation-of-product">
+                        <div class="popup-discover-more--container">
+                            <section class="popup-discover-more--header">
+                                <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
+                                <p class="popup-discover-more--header--cont">
+                                    New cycle-crafted products
+                                </p>
+                                <div class="popup-discover-more--header--edit">
+                                    <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                    <div class="popup-discover-more--header--edit--progress">
+                                        <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--header--visual">
+                                    <img src="../../mocks/ST0004/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont2">
+                                            We've made our products more eco-conscious than <br />
+                                            ever, by using recycled plastic, recycled PET bottles <br />
+                                            for fabric covering, and molded pulp made with <br />
+                                            recycled paper and cardboard for packaging. Our <br />
+                                            effort helps us reduce plastic waste, and lower our <br />
+                                            carbon footprint and CO2 emissions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                Our 2022 LG sound bar lineup is both SGS <br />
+                                                Eco-Product and ENERGY STAR-certified, with <br />
+                                                parts made from recycled plastic resin and <br />
+                                                polyester jersey fabric, meeting the Global <br />
+                                                Recycled Standard.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                tiiun mini is made from UP (Upcycled Plastic), <br />
+                                                replacing the conventional plastic used in the <br />
+                                                previous model (L011W1) with PCR (Post-Consumer <br />
+                                                Recycled) plastic.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                LG Aero Furniture is made by blending PCR (Post <br />
+                                                Consumer Recycled) plastics, recycled from consumer-<br />
+                                                used plastic waste, with mineral particles to form a <br />
+                                                distinctive 'TerraZo texture.'
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont2">
+                                            Our commitment to sustainability was recognized with <br />
+                                            the Product Champion Award by the US Environmental <br />
+                                            Protection Agency, acknowledging our dedication to <br />
+                                            delivering sustainable innovations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <ul class="recreation-of-product__type">
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Repurpose plastic. <br />
+                                Repeat.
                             </p>
-                            <div class="popup-discover-more--header--edit">
-                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                <div class="popup-discover-more--header--edit--progress">
-                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                </div>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
                             </div>
-                            <div class="popup-discover-more--header--visual">
-                                <img src="../../mocks/ST0004/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
+                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Wrap it right
+                            </p>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
                             </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        We've made our products more eco-conscious than <br />
-                                        ever, by using recycled plastic, recycled PET bottles <br />
-                                        for fabric covering, and molded pulp made with <br />
-                                        recycled paper and cardboard for packaging. Our <br />
-                                        effort helps us reduce plastic waste, and lower our <br />
-                                        carbon footprint and CO2 emissions.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                    <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
-                                    <div class="popup-discover-more--section--cont-inner">
-                                        <p class="popup-discover-more--section--cont2">
-                                            Our 2022 LG sound bar lineup is both SGS <br />
-                                            Eco-Product and ENERGY STAR-certified, with <br />
-                                            parts made from recycled plastic resin and <br />
-                                            polyester jersey fabric, meeting the Global <br />
-                                            Recycled Standard.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
-                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                    <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
-                                    <div class="popup-discover-more--section--cont-inner">
-                                        <p class="popup-discover-more--section--cont2">
-                                            tiiun mini is made from UP (Upcycled Plastic), <br />
-                                            replacing the conventional plastic used in the <br />
-                                            previous model (L011W1) with PCR (Post-Consumer <br />
-                                            Recycled) plastic.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
-                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                    <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
-                                    <div class="popup-discover-more--section--cont-inner">
-                                        <p class="popup-discover-more--section--cont2">
-                                            LG Aero Furniture is made by blending PCR (Post <br />
-                                            Consumer Recycled) plastics, recycled from consumer-<br />
-                                            used plastic waste, with mineral particles to form a <br />
-                                            distinctive 'TerraZo texture.'
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
-                                    <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
-                                </div>
-                            </div>
-                        </section>
-                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                            <div class="popup-discover-more--section--inner">
-                                <div class="popup-discover-more--section--cont-wrap">
-                                    <p class="popup-discover-more--section--cont2">
-                                        Our commitment to sustainability was recognized with <br />
-                                        the Product Champion Award by the US Environmental <br />
-                                        Protection Agency, acknowledging our dedication to <br />
-                                        delivering sustainable innovations.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-                <ul class="recreation-of-product__type">
-                    <li class="recreation-of-product__type__item">
-                        <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
-                        <p class="recreation-of-product__type__item__intro">
-                            Repurpose plastic. <br />
-                            Repeat.
-                        </p>
-                        <div class="recreation-of-product__type__item__photo">
-                            <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
+                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="popup-discription" id="available-resources">
+                        <div class="popup-discription--wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
+                                <dd class="popup-discription--photo">
+                                    <figure class="popup-discription--photo--figure">
+                                        <img src="../../mocks/ST0004/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                    <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
+                                    <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription--btn-close">Close</button>
                         </div>
-                        <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
-                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                        </button>
-                    </li>
-                    <li class="recreation-of-product__type__item">
-                        <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
-                        <p class="recreation-of-product__type__item__intro">
-                            Wrap it right
-                        </p>
-                        <div class="recreation-of-product__type__item__photo">
-                            <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
-                        </div>
-                        <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
-                            <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                        </button>
-                    </li>
-                </ul>
-                <div class="popup-discription" id="available-resources">
-                    <div class="popup-discription--wrap">
-                        <dl class="popup-discription--inner">
-                            <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
-                            <dd class="popup-discription--photo">
-                                <figure class="popup-discription--photo--figure">
-                                    <img src="../../mocks/ST0004/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
-                                </figure>
-                            </dd>
-                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
-                                <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
-                            </dd>
-                        </dl>
-                        <button type="button" class="popup-discription--btn-close">Close</button>
                     </div>
-                </div>
-                <div class="popup-discription" id="packaging-materials">
-                    <div class="popup-discription--wrap">
-                        <dl class="popup-discription--inner">
-                            <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
-                            <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
-                                <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
-                            </dd>
-                            <dd class="popup-discription--photo">
-                                <figure class="popup-discription--photo--figure">
-                                    <img src="../../mocks/ST0004/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
-                                    <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
-                                </figure>
-                            </dd>
-                        </dl>
-                        <button type="button" class="popup-discription--btn-close">Close</button>
+                    <div class="popup-discription" id="packaging-materials">
+                        <div class="popup-discription--wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
+                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                    <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
+                                    <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
+                                </dd>
+                                <dd class="popup-discription--photo">
+                                    <figure class="popup-discription--photo--figure">
+                                        <img src="../../mocks/ST0004/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
+                                        <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
+                                    </figure>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription--btn-close">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1443,51 +1452,53 @@
                     </p>
                 </div>
             </div>
-            <div class="whats-next">
-                <h3 class="whats-next__tit">
-                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                    Explore Sustainability
-                </h3>
-                <div class="swiper whats-next__menu">
-                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
-                            </a>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
-                            </a>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
-                            </a>
-                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
                     </div>
-                    <div class="whats-next__menu__btn-set">
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
-                    </div>
-                    <div class="swiper-pagination whats-next__menu__pagination"></div>
                 </div>
             </div>
         </div>

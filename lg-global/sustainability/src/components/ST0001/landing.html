@@ -193,6 +193,20 @@
                 height: 200vh;
                 text-align: center;
             }
+            .core-value__cont-inner {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .core-value__cont-inner--fixed {
+                position: fixed;
+            }
+            .core-value__cont-inner--end {
+                top: auto;
+                bottom: 0px;
+            }
             .core-value__start {
                 position: absolute;
                 z-index: 3;
@@ -206,15 +220,15 @@
                 opacity: 1;
                 transition: 0.5s ease 0.5s opacity;
             }
+            .core-value__cont-inner--fixed .core-value__start,
+            .core-value__cont-inner--end .core-value__start {
+                transition-delay: 0s;
+                opacity: 0;
+            }
             .core-value__start__video {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-            }
-            .core-value__start--active {
-                position: fixed;
-                opacity: 0;
-                transition: 0.5s ease 0s opacity;
             }
             .core-value__media {
                 position: absolute;
@@ -228,10 +242,10 @@
                 overflow: hidden;
                 transition: 0.5s ease 0s width;
             }
-            .core-value__media--active {
-                width: 155.5556vh;
-                max-width: 87.5vw;
-                transition: 0.5s ease 0.5s width;
+            .core-value__cont-inner--fixed .core-value__media,
+            .core-value__cont-inner--end .core-value__media {
+                transition-delay: 0.5s;
+                width: 87.5vw;
             }
             .core-value__media__item {
                 position: absolute;
@@ -252,9 +266,8 @@
                 position: absolute;
                 left: 0px;
                 right: 0px;
-                top: 78.2407vh;
+                top: calc(73.9815vh + 40px);
                 height: 60px;
-                /* bottom: 16.7593vh; */
             }
             .core-value__txt__item {
                 position: absolute;
@@ -283,16 +296,17 @@
             .core-value__progress {
                 position: absolute;
                 z-index: 10;
-                top: 92.5926vh;
+                top: calc(73.9815vh + 160px);
                 left: calc(50% - 112px);
                 width: 224px;
                 height: 2px;
                 background-color: rgba(0,0,0,0.2);
+                opacity: 0;
+                transition: 0.5s ease 0s opacity;
             }
-            .core-value__progress--fixed {
-                position: fixed;
-                top: auto;
-                bottom: 7.4074vh;
+            .core-value__cont-inner--fixed .core-value__progress,
+            .core-value__cont-inner--end .core-value__progress {
+                opacity: 1;
             }
             .core-value__progress__bar {
                 width: 0%;
@@ -321,7 +335,7 @@
                 height: 100vh;
             }
             .menu-introduce__cont {
-                width: 566px;
+                width: 29.5313vw;
             }
             .menu-introduce__cont__tit {
                 font-size: 28px;
@@ -480,9 +494,9 @@
 
             /* Reports */
             .reports {
-                padding: 7.4074vh 120px;
+                padding: 7.4074vh 6.25vw;
                 box-sizing: border-box;
-                height: 100vh;
+                height: 800px;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
                 background-size: cover;
                 background-attachment: fixed;
@@ -498,10 +512,10 @@
                 font-weight: 100;
                 font-size: 72px;
                 line-height: 80px;
-                margin-top: 23px;
+                margin-top: 20px;
             }
             .reports__go-to {
-                margin-top: 30px;
+                margin-top: 2.7778vh;
             }
             .reports__go-to__link {
                 display: inline-block;
@@ -631,16 +645,14 @@
 
             /* Summary */
             .summary {
-                position: relative;
-                height: 100vh;
+                padding: 80px 0px 140px;
             }
             .summary__cont {
-                position: absolute;
-                top: 7.4074vh;
-                left: 6.25vw;
-                right: 6.25vw;
-                height: calc(100vh - 14.8148vh);
+                max-width: 1680px;
+                width: 87.5vw;
+                height: 820px;
                 border-radius: 40px;
+                margin: 0px auto;
                 box-sizing: border-box;
                 background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0001/e5af3de0748898babdef7508bc2fa769.jpg) no-repeat center center;
                 background-size: cover;
@@ -650,28 +662,32 @@
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 7.4074vh 4.1667vw;
+                padding: 80px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
-                transition: 0.3s ease all;
             }
             .summary__cont__txt--active {
-                padding: 9.6296vh 4.1667vw;
+                padding: 104px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 300;
+                font-weight: 250;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
 
             /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 90px 0px 73px;
+                background-color: #E6E1D6;
+            }
             .whats-next {
                 position: relative;
-                overflow: hidden;
-                padding: 90px 120px 73px;
-                background-color: #E6E1D6;
+                max-width: 1680px;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .whats-next__tit {
                 font-size: 44px;
@@ -848,50 +864,52 @@
                 </div>
             </div>
             <div class="core-value__wrap">
-                <div class="core-value__inner">
+                <div class="core-value__box-inner">
                     <div class="core-value"></div>
                     <div class="core-value"></div>
                     <div class="core-value"></div>
                     <div class="core-value"></div>
                 </div>
                 
-                <div class="core-value__start">
-                    <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
-                </div>
-                <ul class="core-value__media">
-                    <li class="core-value__media__item">
-                        <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>
-                    <li class="core-value__media__item">
-                        <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>
-                    <li class="core-value__media__item">
-                        <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>
-                    <li class="core-value__media__item last">
-                        <video src="../../mocks/ST0001/video-core-value4.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                    </li>
-                </ul> 
-                <ul class="core-value__txt">
-                    <li class="core-value__txt__item">
-                        <strong class="core-value__txt__item__strong">Living Sustainably</strong>
-                        <small class="core-value__txt__item__small">For a sustainable lifestyle</small>
-                    </li>
-                    <li class="core-value__txt__item">
-                        <strong class="core-value__txt__item__strong">Climate Action</strong>
-                        <small class="core-value__txt__item__small">For a long-lasting planet</small>
-                    </li>
-                    <li class="core-value__txt__item">
-                        <strong class="core-value__txt__item__strong">Circular Economy</strong>
-                        <small class="core-value__txt__item__small">For saving resources</small>
-                    </li>
-                    <li class="core-value__txt__item">
-                        <strong class="core-value__txt__item__strong">Human Rights</strong>
-                        <small class="core-value__txt__item__small">For a diverse, equal society</small>
-                    </li>
-                </ul>
-                <div class="core-value__progress">
-                    <div class="core-value__progress__bar"></div>
+                <div class="core-value__cont-inner">
+                    <div class="core-value__start">
+                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
+                    </div>
+                    <ul class="core-value__media">
+                        <li class="core-value__media__item">
+                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                        </li>
+                        <li class="core-value__media__item">
+                            <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                        </li>
+                        <li class="core-value__media__item">
+                            <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                        </li>
+                        <li class="core-value__media__item last">
+                            <video src="../../mocks/ST0001/video-core-value4.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                        </li>
+                    </ul> 
+                    <ul class="core-value__txt">
+                        <li class="core-value__txt__item">
+                            <strong class="core-value__txt__item__strong">Living Sustainably</strong>
+                            <small class="core-value__txt__item__small">For a sustainable lifestyle</small>
+                        </li>
+                        <li class="core-value__txt__item">
+                            <strong class="core-value__txt__item__strong">Climate Action</strong>
+                            <small class="core-value__txt__item__small">For a long-lasting planet</small>
+                        </li>
+                        <li class="core-value__txt__item">
+                            <strong class="core-value__txt__item__strong">Circular Economy</strong>
+                            <small class="core-value__txt__item__small">For saving resources</small>
+                        </li>
+                        <li class="core-value__txt__item">
+                            <strong class="core-value__txt__item__strong">Human Rights</strong>
+                            <small class="core-value__txt__item__small">For a diverse, equal society</small>
+                        </li>
+                    </ul>
+                    <div class="core-value__progress">
+                        <div class="core-value__progress__bar"></div>
+                    </div>
                 </div>
             </div>
             <div class="menu-introduce__wrap">
@@ -904,11 +922,7 @@
                                 in everyday living
                             </p>
                             <p class="menu-introduce__cont__detail">
-                                Sunday dinners. Movie nights. Fresh sheets. A morning breeze. <br />
-                                A home life that restores you. Our shared sustainability <br />
-                                journey means we can cherish these precious moments for <br />
-                                generations to come. When we work together to create a <br />
-                                more sustainable way of life, we all reap the rewards.
+                                Sunday dinners. Movie nights. Fresh sheets. A morning breeze. A home life that restores you. Our shared sustainability journey means we can cherish these precious moments for generations to come. When we work together to create a more sustainable way of life, we all reap the rewards.
                             </p>
                             <div class="menu-introduce__cont__go-to">
                                 <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
@@ -932,11 +946,7 @@
                             </p>
                             <p class="menu-introduce__cont__detail">
                                 Nature always had our attention. But its message is urgent: <br />
-                                to reduce carbon emissions. As part of the cause, we're now a <br />
-                                bigger part of the solution. LG Electronics is committed to an <br />
-                                aggressive schedule toward carbon-neutrality and using 100% <br />
-                                renewable energy. The sooner we minimize our impact, there <br />
-                                will be fewer "natural" hazards, and more nature to appreciate.
+                                to reduce carbon emissions. As part of the cause, we're now a bigger part of the solution. LG Electronics is committed to an aggressive schedule toward carbon-neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
                             </p>
                             <div class="menu-introduce__cont__go-to">
                                 <a href="#" class="menu-introduce__cont__go-to__link">Go to Living Sustainably</a>
@@ -960,12 +970,7 @@
                                 Sustainable Cycle
                             </p>
                             <p class="menu-introduce__cont__detail">
-                                Imagine a world with no waste. That's what <br />
-                                we strive for with our sustainable cycle. By <br />
-                                recycling all we can to turn old materials and <br />
-                                appliances into new products, we're doing <br />
-                                our part to reduce waste and create a more <br />
-                                sustainable future for our planet.
+                                Imagine a world with no waste. That's what we strive for with our sustainable cycle. By recycling all we can to turn old materials and appliances into new products, we're doing our part to reduce waste and create a more sustainable future for our planet.
                             </p>
                             <div class="menu-introduce__cont__go-to">
                                 <a href="#" class="menu-introduce__cont__go-to__link">Go to Circular Economy</a>
@@ -990,8 +995,7 @@
                                 equality
                             </p>
                             <p class="menu-introduce__cont__detail">
-                                We know how important it is to respect human rights and <br />
-                                acknowledge the impact of business on communities. <br />
+                                We know how important it is to respect human rights and acknowledge the impact of business on communities. <br />
                                 Caring for people is at the core of all we do.
                             </p>
                             <div class="menu-introduce__cont__go-to">
@@ -1070,51 +1074,53 @@
                     </p>
                 </div>
             </div>
-            <div class="whats-next">
-                <h3 class="whats-next__tit">
-                    <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                    Explore Sustainability
-                </h3>
-                <div class="swiper whats-next__menu">
-                    <div class="swiper-wrapper whats-next__menu__slide-wrap">
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
-                            </a>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
-                            </a>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
                         </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide whats-next__menu__slide">
-                            <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
-                                <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                    <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
-                                </div>
-                                <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
-                            </a>
-                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
                     </div>
-                    <div class="whats-next__menu__btn-set">
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
-                        <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
-                    </div>
-                    <div class="swiper-pagination whats-next__menu__pagination"></div>
                 </div>
             </div>
         </div>
@@ -1216,58 +1222,36 @@
                     let coreValueWrap = document.querySelector(".core-value__wrap");
                     let cvwOfsTop = coreValueWrap.offsetTop;
                     let cvwViewIs = false;
-                    let coreValueInner = coreValueWrap.querySelector(".core-value__inner");
-                    let coreValue = coreValueInner.querySelectorAll(".core-value");
-                    var coreValueStart = coreValueWrap.querySelector(".core-value__start");
-                    let coreValueMedia  = coreValueWrap.querySelector(".core-value__media");
+                    let coreValueBoxInner = coreValueWrap.querySelector(".core-value__box-inner");
+                    let coreValue = coreValueBoxInner.querySelectorAll(".core-value");
+                    let coreValueContInner = coreValueWrap.querySelector(".core-value__cont-inner");
+                    let coreValueStart = coreValueContInner.querySelector(".core-value__start");
+                    let coreValueMedia  = coreValueContInner.querySelector(".core-value__media");
                     let cvmHeight = coreValueMedia.offsetHeight;
                     let coreValueMediaItem = coreValueMedia.querySelectorAll(".core-value__media__item");
-                    let coreValueTxt = coreValueWrap.querySelector(".core-value__txt");
-                    let coreValueTxtItem = coreValueWrap.querySelectorAll(".core-value__txt__item");
-                    let coreValueProgress = coreValueWrap.querySelector(".core-value__progress");
+                    let coreValueTxt = coreValueContInner.querySelector(".core-value__txt");
+                    let coreValueTxtItem = coreValueContInner.querySelectorAll(".core-value__txt__item");
+                    let coreValueProgress = coreValueContInner.querySelector(".core-value__progress");
                     let coreValueProgressBar = coreValueProgress.querySelector(".core-value__progress__bar");
 
                     let tl = gsap.timeline({
                         scrollTrigger: {
-                            trigger: ".core-value__inner",
+                            trigger: ".core-value__box-inner",
                             start: "top top",
                             end: "bottom bottom",
                             onEnter: function() {
-                                coreValueStart.classList.add("core-value__start--active")
-                                coreValueMedia.classList.add("core-value__media--active")
-                                coreValueMedia.style.position = "fixed"
-                                coreValueTxt.style.position = "fixed"
-                                coreValueMedia.style.zIndex = ""
-                                coreValueProgress.classList.add("core-value__progress--fixed")
+                                coreValueContInner.classList.add("core-value__cont-inner--fixed")
                             },
                             onLeaveBack: function() {
-                                coreValueStart.classList.remove("core-value__start--active")
-                                coreValueMedia.classList.remove("core-value__media--active")
-                                coreValueMedia.style.position = ""
-                                coreValueTxt.style.position = ""
-                                coreValueMedia.style.zIndex = ""
-                                coreValueProgress.classList.remove("core-value__progress--fixed")
+                                coreValueContInner.classList.remove("core-value__cont-inner--fixed")
                             },
                             onLeave: function() {
-                                coreValueStart.classList.remove("core-value__start--active")
-                                coreValueMedia.style.position = ""
-                                coreValueMedia.style.top = "auto",
-                                coreValueMedia.style.bottom = "26.0185vh"
-                                coreValueMedia.style.zIndex = "9"
-                                coreValueTxt.style.position = ""
-                                coreValueTxt.style.top = "auto"
-                                coreValueTxt.style.bottom = "calc(21.7593vh - 60px)"
-                                coreValueProgress.style.position = "absolute"
+                                coreValueContInner.classList.remove("core-value__cont-inner--fixed")
+                                coreValueContInner.classList.add("core-value__cont-inner--end")
                             },
                             onEnterBack: function() {
-                                coreValueStart.classList.add("core-value__start--active")
-                                coreValueMedia.style.position = "fixed"
-                                coreValueMedia.style.top = "",
-                                coreValueMedia.style.zIndex = "9"
-                                coreValueTxt.style.position = "fixed"
-                                coreValueTxt.style.top = ""
-                                coreValueTxt.style.bottom = ""
-                                coreValueProgress.style.position = ""
+                                coreValueContInner.classList.add("core-value__cont-inner--fixed")
+                                coreValueContInner.classList.remove("core-value__cont-inner--end")
                             },
                             onUpdate: function(self) {
                                 coreValueProgressBar.style.width = (self.progress)*100 + "%"
@@ -1279,7 +1263,7 @@
                     panels.forEach(function(valueBox,i) {
                         let tl = gsap.timeline({
                             scrollTrigger: {
-                                trigger: coreValueInner,
+                                trigger: coreValueBoxInner,
                                 start: () => "+=" + (window.innerHeight*1.5)*(i+1),
                                 end: () => "+=" + window.innerHeight*1.5,
                                 scrub: true,
