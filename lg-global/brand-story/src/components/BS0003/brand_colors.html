@@ -84,6 +84,7 @@
                 line-height: 28px;
                 text-align: center;
                 color: #4A4946;
+                
             }
             .brand__content-inner {
                 box-sizing: border-box;
@@ -124,6 +125,7 @@
                 color: #fff;
                 font-size: 16px;
                 margin-left: 20px;
+                
             }
             .download_assets__title b {
                 display: block;
@@ -204,6 +206,11 @@
             .brand-colors__item:hover .btn-copy-hexcode {
                 top: 50%;
                 opacity: 1;
+            }
+            .btn-copy-hexcode--dark {
+                background-color: #00000014;
+                border-color: #CBC8C280;
+                color: #262626;
             }
 
             /*colour-system*/
@@ -470,6 +477,7 @@
                 margin: 0 auto;
                 font-size: 44px;
                 line-height: 52px;
+                
             }
             .brand-elements__header-title__sub {
                 display: block;
@@ -569,6 +577,7 @@
                 align-items: center;
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
                 color: #262626;
+                
             }
             
             .brand-elements__slide::before {
@@ -878,14 +887,14 @@
                             <li class="brand-colors__code-data">Warm Grey</li>
                             <li class="brand-colors__code-data">#F0ECE4</li>
                         </ul>
-                        <a class="btn-copy-hexcode" href="#FD312E">Copy hex code</a>
+                        <a class="btn-copy-hexcode btn-copy-hexcode--dark" href="#FD312E">Copy hex code</a>
                     </div>
                     <div class="brand-colors__item brand-colors__item--white">
                         <ul class="brand-colors__code-list brand-colors__code-list--blk">
                             <li class="brand-colors__code-data">White</li>
                             <li class="brand-colors__code-data">#FFFFFF</li>
                         </ul>
-                        <a class="btn-copy-hexcode" href="#FD312E">Copy hex code</a>
+                        <a class="btn-copy-hexcode btn-copy-hexcode--dark" href="#FD312E">Copy hex code</a>
                     </div>
                     <div class="brand-colors__item brand-colors__item--black">
                         <ul class="brand-colors__code-list">
@@ -1045,6 +1054,7 @@
                     slidesPerView: 1,
                     spaceBetween: 30,
                     easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+                    effect : 'fade',
                     speed: 500,
                     pagination: {
                         el: ".btmdot-slide__pagination",
