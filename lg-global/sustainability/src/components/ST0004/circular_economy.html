@@ -434,14 +434,13 @@
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-                height: 100vh;
+                height: 1000px;
                 padding: 0px 120px;
-                min-height: 540px;
-                background: url(../../mocks/ST0004/bg-st-recycling-solutions.png) no-repeat center top;
-                background-size: cover;
+                background: url(../../mocks/ST0004/bg-st-recycling-solutions.png) no-repeat right top;
+                background-size: auto 100%;
             }
             .st-recycling-solutions__cont {
-                padding-bottom: 15px;
+                padding-bottom: 25px;
             }
             .st-recycling-solutions__cont__tit {
                 font-size: 28px;
@@ -1000,6 +999,15 @@
             }
             .popup-discription--btn-close:after {
                 transform: rotate(-45deg);
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                }
             }
         </style>
         <!-- html code -->

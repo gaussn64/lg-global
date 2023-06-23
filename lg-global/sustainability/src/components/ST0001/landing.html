@@ -331,7 +331,7 @@
                 width: 100%;
                 box-sizing: border-box;
                 gap: 0px 115px;
-                padding: 0px 120px;
+                padding: 0px 6.25vw;
                 height: 100vh;
             }
             .menu-introduce__cont {
@@ -832,6 +832,100 @@
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
             }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Core Value */
+                .core-value__start,
+                .core-value__media {
+                    top: calc(50% - 462px);
+                    width: 824px;
+                    height: 824px;
+                    border-radius: 412px;
+                }
+                .core-value__cont-inner--fixed .core-value__media,
+                .core-value__cont-inner--end .core-value__media {
+                    width: 2240px;
+                }
+                .core-value__txt {
+                    top: calc(50% + 402px);
+                }
+                .core-value__progress {
+                    top: calc(50% + 522px);
+                }
+
+                /* Menu Introduce */
+                .menu-introduce {
+                    justify-content: center;
+                    gap: 0px 155px;
+                }
+                .menu-introduce__cont {
+                    width: 754px;
+                }
+                .menu-introduce__photos {
+                    position: relative;
+                    width: 1331px;
+                    height: 843px;
+                }
+                .menu-introduce__photos__item1-1 {
+                    top: 236px;
+                    right: 960px;
+                    width: 371px;
+                    height: 371px;
+                }
+                .menu-introduce__photos__item1-2 {
+                    top: 0px;
+                    right: 0px;
+                    width: 960px;
+                    height: 843px;
+                }
+                .menu-introduce__photos__item2-1 {
+                    top: 236px;
+                    right: 787px;
+                    width: 371px;
+                    height: 371px;
+                }
+                .menu-introduce__photos__item2-2 {
+                    top: 0px;
+                    right: 0px;
+                    width: 787px;
+                    height: 843px;
+                }
+                .menu-introduce__photos__item3-1 {
+                    top: 236px;
+                    right: 960px;
+                    width: 371px;
+                    height: 371px;
+                }
+                .menu-introduce__photos__item3-2 {
+                    top: 0px;
+                    right: 0px;
+                    width: 960px;
+                    height: 843px;
+                }
+                .menu-introduce__photos__item4-1 {
+                    top: 0px;
+                    right: 456px;
+                    width: 673px;
+                    height: 744px;
+                }
+                .menu-introduce__photos__item4-2 {
+                    top: 143px;
+                    right: 0px;
+                    width: 456px;
+                    height: 456px;
+                }
+
+                /* Reports */
+                .reports {
+                    max-width: 2560px;
+                    padding: 108px 160px;
+                    margin: 0px auto;
+                }
+                .reports__go-to {
+                    margin-top: 40px;
+                }
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
@@ -849,12 +943,12 @@
             <div class="landing-introduce__wrap">
                 <div class="landing-introduce landing-introduce--active">
                     <p class="landing-introduce__desc">
-                        <span class="landing-introduce__desc__txt"></span>We believe everyone’s life can be better.</span><br />
-                        <span class="landing-introduce__desc__txt"></span>We strive to make a better future for ourselves, our neighbors,</span><br />
-                        <span class="landing-introduce__desc__txt"></span>our communities, and our planet through</span><br />
-                        <span class="landing-introduce__desc__txt"></span>Life’s Good moments with our products and services.</span><br />
-                        <span class="landing-introduce__desc__txt"></span>So, we are committed to practicing sustainability at all times.</span><br />
-                        <span class="landing-introduce__desc__txt"></span>We create Life’s Good for all.</span>
+                        <span class="landing-introduce__desc__txt">We believe everyone’s life can be better.</span><br />
+                        <span class="landing-introduce__desc__txt">We strive to make a better future for ourselves, our neighbors,</span><br />
+                        <span class="landing-introduce__desc__txt">our communities, and our planet through</span><br />
+                        <span class="landing-introduce__desc__txt">Life’s Good moments with our products and services.</span><br />
+                        <span class="landing-introduce__desc__txt">So, we are committed to practicing sustainability at all times.</span><br />
+                        <span class="landing-introduce__desc__txt">We create Life’s Good for all.</span>
                     </p>
                 </div>
                 <div class="landing-introduce">
@@ -1396,7 +1490,7 @@
 
                         nplList1Inner.appendChild(nplList1First)
                         nplList2Inner.insertBefore(nplList2Last, nplList2Inner.firstChild)
-                    },50000)
+                    },20000)
 
                     setInterval(function() {
                         gsap.to(nplList1Inner, 100, {
