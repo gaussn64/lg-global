@@ -23,7 +23,7 @@
             <li class="c-header__gnb__list__item"><a href="https://www.naver.com" onclick="initGnbDeps2(this); return false" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Elements</a>
                 <div class="c-header__gnb__list__item__deps2">
                     <ul class="c-header__gnb__list__item__deps2__menu">
-                        <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Logo</a></li>
+                        <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0006/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Logo</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0003/brand_colors.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Colour &amp; Gradients</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0004/brand_tagline.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Tagline</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Photography</a></li>
@@ -104,7 +104,7 @@
             }
 
             .design-system__imagebox {
-                /* height: 830px; */
+                max-height: 830px;
                 height: 43.23vw;
                 border-radius: 30px;
                 background: no-repeat center;
@@ -194,21 +194,23 @@
             .all-comes-together__img--mo {display: none;}
 
 
+            
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
-                padding: 70px 120px 88px;
-                position: relative;
+                padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
 
-            .brand-elements__inner {
-
+            .brand-element__inner {
+                position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 
             }
             .brand-elements__header-title__sub {
@@ -217,13 +219,13 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 76px -120px 0;
+                margin: 3.9583vw 0 0;
                 padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
-                right: 120px;
-                top: 140px;
+                right: 0;
+                top: 2.7083vw;
                 display: flex;
                 gap: 7px;
             }
@@ -234,8 +236,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -249,9 +251,9 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 8px;
-                height: 15px;
-                background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
+                width: 0.4167vw;
+                height: 0.7813vw;
+                background: no-repeat center url(../../mocks/BS0006/swiper-button-arrow.svg);
                 background-position: center;
                 background-size: contain;
             }
@@ -263,7 +265,7 @@
             }
 
             .brand-elements__progressbar {
-                margin-top: 72px;
+                margin-top: 3.75vw;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -286,17 +288,17 @@
                 display: block;
             }
             .brand-elements__slide.brand-elements__slide--logo {
-                background-image: url(../../mocks/BS0002/whats-next-logo-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-logo-d.png);
             } 
             .brand-elements__slide.brand-elements__slide--color {
-                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-colour-grandients-d.png);
             } 
             .brand-elements__slide.brand-elements__slide--tagline {
-                background-image: url(../../mocks/BS0002/whats-next-tagline-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-tagline-d.png);
             } 
 
             .brand-elements__slide.brand-elements__slide--design {
-                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-colour-design-system-d.png);
             } 
 
             .brand-elements__item-title {
@@ -330,7 +332,7 @@
                 top: 47%;
                 left: 50%;
                 transform: translate(-50%, -50%) scale(0.67);
-                background-image: url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-colour-photography-hover-state-d.png);
                 transition: all .5s cubic-bezier(0.56, 0, 0.28, 1);
                 opacity: 1;
             } 
@@ -340,20 +342,20 @@
             }
             
             .brand-elements__slide.brand-elements__slide--logo::before {
-                background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-logo-hover-state-d.png);
             } 
             .brand-elements__slide.brand-elements__slide--color::before {
-                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-colour-grandients-hover-state-d.png);
             } 
             .brand-elements__slide.brand-elements__slide--tagline::before {
-                background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-tagline-hover-state-d.png);
             } 
             .brand-elements__slide:hover.brand-elements__slide--photography::before {
                 top: 50%;
                 transform: translate(-50%, -50%) scale(1);
             } 
             .brand-elements__slide.brand-elements__slide--design::before {
-                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
+                background-image: url(../../mocks/BS0006/whats-next-colour-design-system-hover-state-d.png);
             } 
             .brand-elements__slide:hover .brand-elements__item-title {
                 background: rgba(38, 38, 38, 0.26);
@@ -493,7 +495,16 @@
 
                 
             }
-
+            /* 4K */
+            @media (min-width: 2560px) {
+                
+                .brand__content-inner {
+                    max-width: 1680px;
+                    margin: 0px auto;
+                    padding: 0 0 120px;
+                    
+                }
+            }
 
         </style>
         <!-- html code -->
@@ -605,7 +616,7 @@
                     <div class="brand-elements__slider">
                         <ul class="brand-elements__slides swiper-wrapper">
                             <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
-                                <a href="../BS0002/brand_logo.html"><h3 class="brand-elements__item-title">Logo</h3></a>
+                                <a href="../BS0006/brand_logo.html"><h3 class="brand-elements__item-title">Logo</h3></a>
                             </li>
                             <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
                                 <a href="../BS0003/brand_colors.html"><h3 class="brand-elements__item-title">Colour & Gradients</h3></a>
@@ -738,8 +749,8 @@
                     },
                     breakpoints: {
                         1279: {
-                            slidesOffsetBefore: 120,
-                            slidesOffsetAfter: 120,
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
                         },
                         
                     }

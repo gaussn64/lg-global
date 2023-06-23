@@ -60,30 +60,24 @@
             }
 
             /*공통*/
-            #brand-container a {text-decoration: none;}
-
-            button {border: 0; background-color: transparent;}
-            ul {margin: 0; list-style: none; padding: 0;}
-
             #brand-container {
                 background-color: #F6F3EB;
             }
-
             .brand__header {
-                margin-bottom: 68px;
+                margin-bottom: 3.5417vw;
             }
             .brand__header-title {
-                font-size: 72px;
-                line-height: 76px;
+                font-size: 3.75vw;
+                line-height: 3.9583vw;
+                margin: 6.25vw 0 2.5vw;
                 font-weight: 300;
-                margin: 120px 0 48px;
                 text-align: center;
                 color: #262626;
             }
 
             .brand__header-title + .brand__header-description {
-                font-size: 20px;
-                line-height: 28px;
+                font-size: 1.0417vw;
+                line-height: 1.4583vw;
                 text-align: center;
                 color: #4A4946;
                 
@@ -91,7 +85,7 @@
             .brand__content-inner {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 120px 120px;
+                padding: 0 6.25vw 6.25vw;
             }
 
             /*top visual*/
@@ -120,25 +114,25 @@
             /*download assets*/
             .download_assets {
                 position: absolute;
-                bottom: 66px;
-                left: 40px;
+                bottom: 3.4375vw;
+                left: 2.0833vw;
                 background: rgba(0, 0, 0, 0.7);
                 backdrop-filter: blur(25px);
                 -webkit-backdrop-filter: blur(25px);
-                padding: 12px 136px 12px 12px;
-                border-radius: 20px;
+                padding: 0.625vw 7.0833vw 0.625vw 0.625vw;
+                border-radius: 1.0417vw;
                 display: flex;
                 align-items: center;
             }
             .download_assets__thumb {
                 display: block;
-                width: 80px;
-                height: 80px;
+                width: 4.1667vw;
+                height: 4.1667vw;
             }
             .download_assets__title {
                 color: #fff;
-                font-size: 16px;
-                margin-left: 20px;
+                font-size: 0.8333vw;
+                margin-left: 1.0417vw;
                 
             }
             .download_assets__title b {
@@ -148,27 +142,27 @@
             .download_assets__btn {
                 position: absolute;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 border-radius: 50%;
                 border: 1px solid #cbc8c24d;
-                right: 12px;
+                right: 0.625vw;
                 top: 50%;
                 transform: translateY(-50%);
                 background: no-repeat center url(../../mocks/BS0002/icon_download_btn.svg);
-                background-size: 22px 22px;
+                background-size: 1.1458vw 1.1458vw;
             }
 
             .logo__container {
                 position: relative;
                 height: 43.23vw;
-                /* height: 830px; */
+                max-height: 830px;
                 width: 100%;
-                border-radius: 30px;
+                border-radius: 1.5625vw;
             }
             .logo__bottom-cont {
                 position: absolute;
-                bottom: 55px;
+                bottom: 2.8646vw;
                 left: 50%;
                 transform: translateX(-50%);
                 text-align: center;
@@ -176,14 +170,14 @@
             }
             .logo__bottom-cont__title {
                 color: #fff;
-                font-size: 28px;
-                line-height: 34px;
-                margin-bottom: 9px;
+                font-size: 1.4583vw;
+                line-height: 1.7708vw;
+                margin-bottom: 0.4688vw;
             }
             .logo__bottom-cont__desc {
                 color: #fff;
-                font-size: 15px;
-                line-height: 21px;
+                font-size: 0.7813vw;
+                line-height: 1.0938vw;
             }
 
             .logo__container--primary {
@@ -196,6 +190,7 @@
                 transform: translate(-50%, -50%);
                 width: 43.59vw;
                 height: 22.08vw;
+                max-width: 60%;
                 background: no-repeat center url(../../mocks/BS0002/brand-elements-logo-primary-d.png);
                 background-size: contain;
             }
@@ -209,7 +204,7 @@
                 overflow: hidden;
             }
             .logo__container__spacing-img {
-                max-width: 1158px;
+                max-width: 60.3125vw;
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
@@ -231,7 +226,7 @@
                 padding: 5.42vw 0 8.39vw;
             }
             .logo__container__logoplay-image {
-                max-width: 617px;
+                max-width: 32.1354vw;
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
@@ -251,7 +246,7 @@
                 overflow: hidden;
             }
             .btmdot-slide__slide__inner {
-                /* height: 830px; */
+                max-height: 830px;
                 height: 43.23vw;
                 width: 100%;
                 padding: 0;
@@ -260,7 +255,7 @@
             .btmdot-slide__slide {
                 background: no-repeat center;
                 background-size: cover;
-                border-radius: 30px;
+                border-radius: 1.5625vw;
             }
             .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-background-d.png);}
             .btmdot-slide__slide--light {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-background-d.png);}
@@ -271,7 +266,7 @@
 
             .btmdot-slide__btm-container {
                 position: absolute;
-                bottom: 58px;
+                bottom: 40px;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1;
@@ -295,13 +290,6 @@
                 background-size: cover;
             }
 
-            .btmdot-slide__pagination__btn--dark {background-color: #4A4946;}
-            .btmdot-slide__pagination__btn--light {background-color: #fff; border: 1px solid #000;}
-            .btmdot-slide__pagination__btn--dark-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-gradient-thumb-d.png);}
-            .btmdot-slide__pagination__btn--light-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-gradient-thumb-d.png);}
-            .btmdot-slide__pagination__btn--dark-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-image-thumb-d.png);}
-            .btmdot-slide__pagination__btn--light-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-image-thumb-d.png);}
-
             .btmdot-slide__pagination__btn--active::before {
                 content: '';
                 position: absolute;
@@ -314,12 +302,19 @@
                 transform: translate(-50%, -50%);
                 border: 2px solid #fff;
             }
+            .btmdot-slide__pagination__btn--dark {background-color: #4A4946;}
+            .btmdot-slide__pagination__btn--light {background-color: #fff; border: 1px solid #000;}
+            .btmdot-slide__pagination__btn--dark-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-gradient-thumb-d.png);}
+            .btmdot-slide__pagination__btn--light-gra {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-gradient-thumb-d.png);}
+            .btmdot-slide__pagination__btn--dark-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-dark-image-thumb-d.png);}
+            .btmdot-slide__pagination__btn--light-img {background-image: url(../../mocks/BS0002/brand-elements-logo-colour-light-image-thumb-d.png);}
+
+
             .btmdot-slide__pagination__btn--light::before,
             .btmdot-slide__pagination__btn--light-gra::before,
             .btmdot-slide__pagination__btn--light-img::before {
                 border-color: #262626;
             }
-
             .btmdot__tag {
                 margin-top: 20px;
                 font-size: 16px;
@@ -344,7 +339,7 @@
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                height: 50px;
+                height: 2.6042vw;
             }
             .tab-menu__list::before {
                 content: '';
@@ -352,22 +347,22 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: calc(100% + 18px);
-                height: calc(100% + 18px);
+                width: calc(100% + 0.9375vw);
+                height: calc(100% + 0.9375vw);
                 background-color: #F0ECE4;
-                border-radius: 400px;
+                border-radius: 20.8333vw;
             }
 
             .tab-menu__btn {
                 z-index: 2;
-                width: 200px;
+                width: 10.4167vw;
                 height: 100%;
                 background-color: transparent;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 
-                font-size: 15px;
+                font-size: 0.7813vw;
                 text-decoration: none;
                 color: #262626;
             }
@@ -379,14 +374,14 @@
                 z-index: 1;
                 display: block;
                 position: absolute;
-                width: 200px;
+                width: 10.4167vw;
                 height: 100%;
-                border-radius: 400px;
+                border-radius: 20.8333vw;
                 left: 0;
                 background-color: #fff;
                 transition: left .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .tab-container {margin-top: 81px;}
+            .tab-container {margin-top: 4.2188vw;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
 
@@ -395,9 +390,9 @@
             .logosuite {
                 display: grid;
                 grid-template-columns: repeat(4, 1fr);
-                gap: 6.43vw 8.21vw;
+                gap: 108px 138px;
                 padding: 0;
-                max-width: 1174px;
+                max-width: 61.1458vw;
             }
             .logosuite__item {
                 display: flex;
@@ -406,12 +401,12 @@
             }
             .logosuite__label {
                 text-align: center;
-                font-size: 16px;
+                font-size: 0.8333vw;
                 color: #fff;
             }
             .logosuite__img {
-                max-width: 190px;
-                max-height: 190px;
+                max-width: 9.8958vw;
+                max-height: 9.8958vw;
                 width: 11.3vw;
                 height: 11.3vw;
             }
@@ -419,18 +414,19 @@
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
-                padding: 70px 120px 88px;
-                position: relative;
+                padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
 
-            .brand-elements__inner {
-
+            .brand-element__inner {
+                position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 
             }
             .brand-elements__header-title__sub {
@@ -439,13 +435,13 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 76px -120px 0;
+                margin: 3.9583vw 0 0;
                 padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
-                right: 120px;
-                top: 140px;
+                right: 0;
+                top: 2.7083vw;
                 display: flex;
                 gap: 7px;
             }
@@ -456,8 +452,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -471,8 +467,8 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 8px;
-                height: 15px;
+                width: 0.4167vw;
+                height: 0.7813vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
                 background-size: contain;
@@ -485,7 +481,7 @@
             }
 
             .brand-elements__progressbar {
-                margin-top: 72px;
+                margin-top: 3.75vw;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -820,7 +816,16 @@
                 
             }
 
-
+            /* 4K */
+            @media (min-width: 2560px) {
+                
+                .brand__content-inner {
+                    max-width: 1680px;
+                    margin: 0px auto;
+                    padding: 0 0 120px;
+                    
+                }
+            }
 
         </style>
         <!-- html code -->
@@ -1159,8 +1164,8 @@
                     },
                     breakpoints: {
                         1279: {
-                            slidesOffsetBefore: 120,
-                            slidesOffsetAfter: 120,
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
                         },
                         
                     }

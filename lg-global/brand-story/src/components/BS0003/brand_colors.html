@@ -59,29 +59,24 @@
             }
 
             /*공통*/
-            #brand-container a {text-decoration: none;}
-
-            button {border: 0; background-color: transparent;}
-            ul {margin: 0; list-style: none; padding: 0;}
-
             #brand-container {
                 background-color: #F6F3EB;
             }
-
             .brand__header {
-                margin-bottom: 68px;
+                margin-bottom: 3.5417vw;
             }
             .brand__header-title {
-                font-size: 72px;
-                line-height: 76px;
+                font-size: 3.75vw;
+                line-height: 3.9583vw;
+                margin: 6.25vw 0 2.5vw;
                 font-weight: 300;
-                margin: 120px 0 48px;
                 text-align: center;
                 color: #262626;
             }
+
             .brand__header-title + .brand__header-description {
-                font-size: 20px;
-                line-height: 28px;
+                font-size: 1.0417vw;
+                line-height: 1.4583vw;
                 text-align: center;
                 color: #4A4946;
                 
@@ -89,9 +84,10 @@
             .brand__content-inner {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 120px 120px;
+                padding: 0 6.25vw 6.25vw;
             }
 
+            /*top visual*/
             .visual__top {
                 height: 100vh;
                 background-size: cover;
@@ -106,25 +102,25 @@
             /*download assets*/
             .download_assets {
                 position: absolute;
-                bottom: 66px;
-                left: 40px;
+                bottom: 3.4375vw;
+                left: 2.0833vw;
                 background: rgba(0, 0, 0, 0.7);
                 backdrop-filter: blur(25px);
                 -webkit-backdrop-filter: blur(25px);
-                padding: 12px 136px 12px 12px;
-                border-radius: 20px;
+                padding: 0.625vw 7.0833vw 0.625vw 0.625vw;
+                border-radius: 1.0417vw;
                 display: flex;
                 align-items: center;
             }
             .download_assets__thumb {
                 display: block;
-                width: 80px;
-                height: 80px;
+                width: 4.1667vw;
+                height: 4.1667vw;
             }
             .download_assets__title {
                 color: #fff;
-                font-size: 16px;
-                margin-left: 20px;
+                font-size: 0.8333vw;
+                margin-left: 1.0417vw;
                 
             }
             .download_assets__title b {
@@ -134,28 +130,28 @@
             .download_assets__btn {
                 position: absolute;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 border-radius: 50%;
                 border: 1px solid #cbc8c24d;
-                right: 12px;
+                right: 0.625vw;
                 top: 50%;
                 transform: translateY(-50%);
                 background: no-repeat center url(../../mocks/BS0002/icon_download_btn.svg);
-                background-size: 22px 22px;
+                background-size: 1.1458vw 1.1458vw;
             }
 
             /*brand-color grid*/
             .brand-colors__grid {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: repeat(3, 405px);
+                grid-template-rows: repeat(3, 21.0938vw);
                 gap: 20px;
             }
             .brand-colors__item {
-                border-radius: 20px;
+                border-radius: 1.0417vw;
                 box-sizing: border-box;
-                padding: 32px;
+                padding: 1.6667vw;
                 position: relative;
             }
             .brand-colors__item--active-red {
@@ -184,7 +180,7 @@
                 color: #262626;
             }
             .brand-colors__code-data {
-                font-size: 20px;
+                font-size: 1.0417vw;
             }
             .btn-copy-hexcode {
                 display: inline-flex;
@@ -195,11 +191,11 @@
                 border: 1px solid #cbc8c280;
                 top: 55%; left: 50%;
                 transform: translate(-50%, -50%);
-                border-radius: 50px;
-                height: 58px;
-                padding: 0 32px;
+                border-radius: 2.6042vw;
+                height: 3.0208vw;
+                padding: 0 1.6667vw;
                 color: #fff;
-                font-size: 15px;
+                font-size: 0.7813vw;
                 opacity: 0;
                 transition: .5s;
             }
@@ -216,26 +212,26 @@
             /*colour-system*/
             .colour-system {
                 background-color: #fff;
-                border-radius: 30px;
-                padding: 40px 40px 48px;
+                border-radius: 1.5625vw;
+                padding: 2.0833vw 2.0833vw 2.5vw;
             }
             .colour-system__title {
                 background-color: #F0ECE4;
-                border-radius: 70px;
-                font-size: 18px;
+                border-radius: 3.6458vw;
+                font-size: 0.9375vw;
                 color: #262626;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
-                padding: 0 26px;
+                height: 2.6042vw;
+                padding: 0 1.3542vw;
             }
             .colour-system__index {
-                padding-left: 6px;
+                padding-left: 0.3125vw;
             }
             .colour-system__slide-wrap {
                 overflow: hidden;
-                margin-top: 32px;
+                margin-top: 1.6667vw;
             }
             .colour-system__slider {
                 padding: 0;
@@ -247,9 +243,10 @@
             .colour-system__slide__item {
                 background: no-repeat center;
                 background-size: cover;
-                height: 482px;
+                height: 25.1042vw;
+                max-height: 482px;
                 width: 27.08vw;
-                border-radius: 10px;
+                border-radius: 0.5208vw;
             }
             .colour-system__slide__item:nth-child(1) {
                 width: 36.31%;
@@ -274,13 +271,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 546px;
-                margin: 64px auto 0;
+                width: 28.4375vw;
+                margin: 3.3333vw auto 0;
                 gap: 3px;
             }
             .color-chip__item {
-                height: 55px;
-                border-radius: 5px;
+                height: 2.8646vw;
+                border-radius: 0.2604vw;
                 box-sizing: border-box;
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
@@ -329,13 +326,13 @@
                 justify-content: flex-end;
                 align-items: center;
                 gap: 7px;
-                margin-top: 11px;
+                margin-top: 0.5729vw;
             }
             .colour-system__slide-controller__btn {
                 position: unset;
                 margin: 0;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 border-radius: 50%;
                 background: #ffffff80;
                 border: 1px solid #4a49464d;
@@ -348,8 +345,8 @@
             }
             .colour-system__slide-controller__btn::after {
                 content: '';
-                width: 7px;
-                height: 15px;
+                width: 0.3646vw;
+                height: 1.0417vw;
                 display: block;
                 background: no-repeat center url(../../mocks/BS0003/swiper-button-arrow.svg);
                 background-size: contain;
@@ -390,7 +387,7 @@
                 overflow: hidden;
             }
             .btmdot-slide__slide__inner {
-                /* height: 830px; */
+                max-height: 830px;
                 height: 43.23vw;
                 width: 100%;
                 padding: 0;
@@ -399,7 +396,7 @@
             .btmdot-slide__slide {
                 background: no-repeat center;
                 background-size: cover;
-                border-radius: 30px;
+                border-radius: 1.5625vw;
             }
             .btmdot-slide__slide.btmdot-slide__slide--light {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-mode-usage-only-d.png);}
             .btmdot-slide__slide.btmdot-slide__slide--light-dark {background-image: url(../../mocks/BS0003/brand-elements-gradients-light-and-dark-mode-usage-d.png);}
@@ -408,7 +405,7 @@
 
             .btmdot-slide__btm-container {
                 position: absolute;
-                bottom: 58px;
+                bottom: 40px;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1;
@@ -431,6 +428,7 @@
                 background: no-repeat center;
                 background-size: cover;
             }
+
             .btmdot-slide__pagination__btn--active::before {
                 content: '';
                 position: absolute;
@@ -451,7 +449,7 @@
             .btmdot-slide__pagination__btn--light::before {
                 border-color: #262626;
             }
-
+            
             .btmdot__tag {
                 margin-top: 20px;
                 font-size: 16px;
@@ -465,18 +463,19 @@
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
-                padding: 70px 120px 88px;
-                position: relative;
+                padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
 
-            .brand-elements__inner {
-
+            .brand-element__inner {
+                position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 
             }
             .brand-elements__header-title__sub {
@@ -485,13 +484,13 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 76px -120px 0;
+                margin: 3.9583vw 0 0;
                 padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
-                right: 120px;
-                top: 140px;
+                right: 0;
+                top: 2.7083vw;
                 display: flex;
                 gap: 7px;
             }
@@ -502,8 +501,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -517,8 +516,8 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 8px;
-                height: 15px;
+                width: 0.4167vw;
+                height: 0.7813vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
                 background-size: contain;
@@ -531,7 +530,7 @@
             }
 
             .brand-elements__progressbar {
-                margin-top: 72px;
+                margin-top: 3.75vw;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -836,6 +835,18 @@
                     padding: 16px 19px;
                     display: flex;
                     align-items: center;
+                }
+            }
+
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                
+                .brand__content-inner {
+                    max-width: 1680px;
+                    margin: 0px auto;
+                    padding: 0 0 120px;
+                    
                 }
             }
 
@@ -1150,8 +1161,8 @@
                     },
                     breakpoints: {
                         1279: {
-                            slidesOffsetBefore: 120,
-                            slidesOffsetAfter: 120,
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
                         },
                         
                     }

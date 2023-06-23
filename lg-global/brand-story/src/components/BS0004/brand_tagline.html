@@ -60,29 +60,26 @@
             }
 
             /*공통*/
-            #brand-container a {text-decoration: none;}
 
-            button {border: 0; background-color: transparent;}
-            ul {margin: 0; list-style: none; padding: 0;}
-
+            /*공통*/
             #brand-container {
                 background-color: #F6F3EB;
             }
-
             .brand__header {
-                margin-bottom: 68px;
+                margin-bottom: 3.5417vw;
             }
             .brand__header-title {
-                font-size: 72px;
-                line-height: 76px;
+                font-size: 3.75vw;
+                line-height: 3.9583vw;
+                margin: 6.25vw 0 2.5vw;
                 font-weight: 300;
-                margin: 120px 0 48px;
                 text-align: center;
                 color: #262626;
             }
+
             .brand__header-title + .brand__header-description {
-                font-size: 20px;
-                line-height: 28px;
+                font-size: 1.0417vw;
+                line-height: 1.4583vw;
                 text-align: center;
                 color: #4A4946;
                 
@@ -90,9 +87,10 @@
             .brand__content-inner {
                 box-sizing: border-box;
                 margin: 0 auto;
-                padding: 0 120px 120px;
+                padding: 0 6.25vw 6.25vw;
             }
 
+            /*top visual*/
             .visual__top {
                 height: 100vh;
                 background-size: cover;
@@ -115,14 +113,14 @@
                 padding: 0;
             }
             .tagline__slide__items {
-                border-radius: 30px;
+                border-radius: 1.5625vw;
                 display: flex;
                 overflow: hidden;
             }
             .tagline__slide__visual,
             .tagline__slide__product {
-                /* height: 830px; */
                 height: 43.23vw;
+                max-height: 830px;
                 flex: 1;
                 background: no-repeat center;
                 background-size: cover;
@@ -181,7 +179,7 @@
             }
             .tagline__controller__btn.tagline__controller__btn--prev {
                 transform: rotate(-180deg);
-                margin-right: 7px;
+                margin-right: 0.3646vw;
             }
 
 
@@ -193,7 +191,7 @@
                 overflow: hidden;
             }
             .btmdot-slide__slide__inner {
-                /* height: 830px; */
+                max-height: 830px;
                 height: 43.23vw;
                 width: 100%;
                 padding: 0;
@@ -202,7 +200,7 @@
             .btmdot-slide__slide {
                 background: no-repeat center;
                 background-size: cover;
-                border-radius: 30px;
+                border-radius: 1.5625vw;
             }
             .btmdot-slide__slide--dark {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-white-on-dark-background-d.png);}
             .btmdot-slide__slide--light {background-image: url(../../mocks/BS0004/brand-elements-tagline-colourways-active-red-on-light-background-d.png);}
@@ -213,7 +211,7 @@
 
             .btmdot-slide__btm-container {
                 position: absolute;
-                bottom: 58px;
+                bottom: 40px;
                 left: 50%;
                 transform: translateX(-50%);
                 z-index: 1;
@@ -236,6 +234,7 @@
                 background: no-repeat center;
                 background-size: cover;
             }
+
             .btmdot-slide__pagination__btn--active::before {
                 content: '';
                 position: absolute;
@@ -273,6 +272,7 @@
                 color: #262626;
             }
 
+
             /*tagline grid*/
             .tagline-grid {
                 display: flex;
@@ -283,7 +283,6 @@
                 border-radius: 20px;
                 box-sizing: border-box;
                 padding: 40px;
-                font-weight: 15px;
                 flex: 1;
             }
             .tagline-grid__text-info {
@@ -296,7 +295,7 @@
             }
             .tagline-grid__text-info b {
                 font-size: 36px;
-                
+                font-weight: 400;
             }
             .tagline-grid__item img {
                 width: 100%;
@@ -315,7 +314,7 @@
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                height: 50px;
+                height: 2.6042vw;
             }
             .tab-menu__list::before {
                 content: '';
@@ -323,22 +322,22 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: calc(100% + 18px);
-                height: calc(100% + 18px);
+                width: calc(100% + 0.9375vw);
+                height: calc(100% + 0.9375vw);
                 background-color: #F0ECE4;
-                border-radius: 400px;
+                border-radius: 20.8333vw;
             }
 
             .tab-menu__btn {
                 z-index: 2;
-                width: 200px;
+                width: 10.4167vw;
                 height: 100%;
                 background-color: transparent;
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 
-                font-size: 15px;
+                font-size: 0.7813vw;
                 text-decoration: none;
                 color: #262626;
             }
@@ -350,32 +349,34 @@
                 z-index: 1;
                 display: block;
                 position: absolute;
-                width: 200px;
+                width: 10.4167vw;
                 height: 100%;
-                border-radius: 400px;
+                border-radius: 20.8333vw;
                 left: 0;
                 background-color: #fff;
                 transition: left .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .tab-container {margin-top: 81px;}
+            .tab-container {margin-top: 4.2188vw;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
+
 
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
-                padding: 70px 120px 88px;
-                position: relative;
+                padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
 
-            .brand-elements__inner {
-
+            .brand-element__inner {
+                position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 
             }
             .brand-elements__header-title__sub {
@@ -384,13 +385,13 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 76px -120px 0;
+                margin: 3.9583vw 0 0;
                 padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
-                right: 120px;
-                top: 140px;
+                right: 0;
+                top: 2.7083vw;
                 display: flex;
                 gap: 7px;
             }
@@ -401,8 +402,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -416,8 +417,8 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 8px;
-                height: 15px;
+                width: 0.4167vw;
+                height: 0.7813vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
                 background-size: contain;
@@ -430,7 +431,7 @@
             }
 
             .brand-elements__progressbar {
-                margin-top: 72px;
+                margin-top: 3.75vw;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -762,6 +763,17 @@
                 }
             }
 
+            /* 4K */
+            @media (min-width: 2560px) {
+                
+                .brand__content-inner {
+                    max-width: 1680px;
+                    margin: 0px auto;
+                    padding: 0 0 120px;
+                    
+                }
+            }
+
         </style>
         <!-- html code -->
         <div id="brand-container">
@@ -1073,8 +1085,8 @@
                     },
                     breakpoints: {
                         1279: {
-                            slidesOffsetBefore: 120,
-                            slidesOffsetAfter: 120,
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
                         },
                         
                     }
