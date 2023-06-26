@@ -355,7 +355,7 @@
             }
 
             /* E-waste program */
-            .e-waste-program {
+            .e-waste-program__cont {
                 width: 87.5vw;
                 max-width: 1680px;
                 padding: 60px 0px;
@@ -378,20 +378,43 @@
                 line-height: 28px;
                 margin-top: 20px;
             }
-            .e-waste-program__photo {
+            /* .e-waste-program__visual {
                 margin-top: 70px;
-                height: 61.1111vh;
-                max-height: 660px;
+                background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+            } */
+            .e-waste-program__visual__wrap {
+                position: relative;
+                height: 200vh;
             }
-            .e-waste-program__photo__img {
+            .e-waste-program__visual {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .e-waste-program__visual__inner {
+                position: absolute;
+                left: 50%;
+                bottom: 0px;
                 width: 100%;
                 height: 100%;
-                border-radius: 30.5556vh;
-                object-fit: cover;
+                border-radius: 0px;
+                /* 
+                bottom: 1.8518%;
+                width: 87.5%;
+                height: 61.1111%;
+                border-radius: 330px;
+                 */
+                transform: translateX(-50%);
+                background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
             }
             .e-waste-program__more {
                 text-align: right;
-                margin-top: 20px;
             }
             .e-waste-program__more__btn {
                 display: inline-block;
@@ -1274,18 +1297,22 @@
                 </div>
             </div>
             <div class="e-waste-program">
-                <h2 class="e-waste-program__tit">E-waste program</h2>
-                <p class="e-waste-program__intro1">
-                    Sustainable waste management: <br />
-                    e-waste program
-                </p>
-                <p class="e-waste-program__intro2">
-                    Help reduce the amount of e-waste that ends up in landfills and minimize <br />
-                    your impact on the environment, by recycling your old electronics <br />
-                    responsibly through our e-waste program.
-                </p>
-                <div class="e-waste-program__photo">
-                    <img src="../../mocks/ST0002/photo-e-waste-program.png" alt="" class="e-waste-program__photo__img">
+                <div class="e-waste-program__cont">
+                    <h2 class="e-waste-program__tit">E-waste program</h2>
+                    <p class="e-waste-program__intro1">
+                        Sustainable waste management: <br />
+                        e-waste program
+                    </p>
+                    <p class="e-waste-program__intro2">
+                        Help reduce the amount of e-waste that ends up in landfills and minimize <br />
+                        your impact on the environment, by recycling your old electronics <br />
+                        responsibly through our e-waste program.
+                    </p>
+                </div>
+                <div class="e-waste-program__visual__wrap">
+                    <div class="e-waste-program__visual">
+                        <div class="e-waste-program__visual__inner"></div>
+                    </div>
                 </div>
                 <div class="e-waste-program__more">
                     <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
@@ -1473,6 +1500,44 @@
                         },
                     });
                 },
+                eWasteProgram: function() {
+                    let eWasteProgramVisualWrap = document.querySelector(".e-waste-program__visual__wrap");
+                    let eWasteProgramVisual = eWasteProgramVisualWrap.querySelector(".e-waste-program__visual");
+                    let eWasteProgramVisualInner = eWasteProgramVisual.querySelector(".e-waste-program__visual__inner");
+
+                    const anim = gsap.to(".e-waste-program__visual__inner", { 
+                        bottom: "20px",
+                        width: "1680px",
+                        height: "660px",
+                        borderRadius: "330px",
+                        paused: true
+                    }); // can be left out
+
+
+                    const ST = ScrollTrigger.create({
+                        trigger: ".e-waste-program__visual__wrap",
+                        start: "top top",
+                        end: "bottom bottom",
+                        animation: anim,
+                        onEnter: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                        },
+                        onLeaveBack: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                        },
+                        onLeave: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                            eWasteProgramVisual.style.top = "auto"
+                            eWasteProgramVisual.style.bottom = "0px"
+                        },
+                        onEnterBack: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                            eWasteProgramVisual.style.top = ""
+                            eWasteProgramVisual.style.bottom = ""
+                        },
+                        scrub: true
+                    })
+                },
                 whatsNext: function() {
                     var swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: "auto",
@@ -1489,6 +1554,7 @@
             }
             livingSt.visualScrollDown()
             livingSt.ecoConsciousMaterial()
+            livingSt.eWasteProgram()
             livingSt.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
