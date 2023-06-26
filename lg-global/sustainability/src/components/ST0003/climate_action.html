@@ -205,7 +205,9 @@
             .milestone__goals-cont__wrap {
                 position: relative;
                 box-sizing: border-box;
-                background: linear-gradient(0deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%), url(../../mocks/ST0003/bg-milestone-goals-cont.jpg) no-repeat left 26%;
+                background-image: url(../../mocks/ST0003/bg-milestone-goals-cont.jpg);
+                background-repeat: no-repeat;
+                background-position: left 0%;
                 background-size: cover;
                 background-attachment: fixed;
             }
@@ -249,7 +251,7 @@
                 font-weight: 300;
                 margin-bottom: 12px;
             }
-            .milestone__goals-cont__years__item__txt--active {
+            .milestone__goals-cont__years__item__txt--on {
                 opacity: 1;
                 font-weight: 600;
             }
@@ -260,10 +262,9 @@
                 border-radius: 50%;
                 background-color: white;
                 transform: scale(0.33);
+                transition: 0.3s ease background-color;
             }
-            .milestone__goals-cont__years__item__2006__ico,
-            .milestone__goals-cont__years__item__2023__ico,
-            .milestone__goals-cont__years__item__2030__ico {
+            .milestone__goals-cont__years__item--active .milestone__goals-cont__years__item__ico {
                 transform: scale(1);
             }
             .milestone__goals-cont__years__item__2006__ico:before,
@@ -295,25 +296,48 @@
             .milestone__goals-cont__years__item__2030__ico.milestone__goals-cont__years__item__ico--active:before {
                 background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2030_active.svg);
             }
-            .milestone__goals-cont__years__item__ico:after {
-                position: absolute;
-                z-index: 1;
-                bottom: 0px;
-                left: 0px;
-                content: '';
-                display: block;
-                width: 60px;
-                height: 60px;
-                border-radius: 50%;
-                background-color: white;
-                opacity: 0;
-                transform: scale(1);
-                transition: 0.3s ease-in all;
-            }
-            .milestone__goals-cont__years__item__ico--active:after {
+            .milestone__goals-cont__years__item__ico--on {
                 background-color: #75C66B;
-                opacity: 0.5;
-                transform: scale(1.25);
+            }
+            .milestone__goals-cont__years__item__ico--on:before,
+            .milestone__goals-cont__years__item__ico--on:after {
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                opacity: 0;
+                content: "";
+                display: block;
+                width: 120px;
+                height: 120px;
+                border-radius: 100%;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                background-color: #75C66B;
+            }
+            .milestone__goals-cont__years__item__ico--on:before {
+                animation: glowAnimation 1.8s 0s ease-out infinite; 
+            }
+            .milestone__goals-cont__years__item__ico--on:after {
+                animation: glowAnimation 1.8s  0.33333s ease-out infinite;
+            }
+            @keyframes glowAnimation {
+                0% {
+                    opacity: 0;
+                    -webkit-transform: scale(0);
+                    transform: scale(0);
+                }
+                5% {
+                    opacity: 1;
+                }
+                100% {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    opacity: 0;
+                }
+            }
+            .milestone__goals-cont__years__item__ico__img {
+                position: relative;
+                z-index: 5;
             }
             .milestone__goals-cont__summary {
                 visibility: hidden;
@@ -1863,18 +1887,40 @@
                     let mgcSummary2030 = milestone.querySelector(".milestone__goals-cont__summary__2030")
                     let mgcDetail2023 = milestone.querySelector(".milestone__goals-cont__detail__2023")
                     let mgcDetail2030 = milestone.querySelector(".milestone__goals-cont__detail__2030")
-                    let milestoneGoalsCont = milestone.querySelector(".milestone__goals-cont")
+                    let milestoneGoalsContWrap = milestone.querySelector(".milestone__goals-cont__wrap")
+                    let mgcwBgCurrent = 0.1
+                    const mgcwBgTotal = 100
+                    let mgcwBgGuide = "up"
+                    let milestoneGoalsCont = milestoneGoalsContWrap.querySelector(".milestone__goals-cont")
                     let milestoneGoalsContYears = milestoneGoalsCont.querySelector(".milestone__goals-cont__years");
                     let mgcyItem = milestoneGoalsContYears.querySelectorAll(".milestone__goals-cont__years__item");
-                    
 
+                    let mgcwBgMoition = function() {
+                        setInterval(function (){
+                            if(mgcwBgCurrent <= mgcwBgTotal && mgcwBgGuide == "up") {
+                                mgcwBgCurrent = mgcwBgCurrent + 0.05
+                            } else if(mgcwBgCurrent > mgcwBgTotal) {
+                                mgcwBgGuide = "down"
+                            } 
+                            
+                            if(mgcwBgCurrent >= 0.1 && mgcwBgGuide == "down") {
+                                mgcwBgCurrent = mgcwBgCurrent - 0.05
+                            } else if(mgcwBgCurrent < 0.1) {
+                                mgcwBgGuide = "up"
+                            }
+
+                            console.log(mgcwBgCurrent)
+                            milestoneGoalsContWrap.style.backgroundPosition = "left "+ (mgcwBgCurrent)+"%"
+                        },10)
+                    }
+                    mgcwBgMoition();
+                    
                     mgnItem.forEach(function(mgi,a) {
                         mgi.querySelector("a").onclick = function() {
                             mgnItem.forEach(function(rest,b) {
                                 rest.querySelector("a").classList.remove("milestone__goals-navi__list__item__a--active")
                                 mgi.querySelector("a").classList.add("milestone__goals-navi__list__item__a--active")
                             })
-                            console.log(a)
                             if(a == 1) {
                                 mgcSummary2023.classList.add("milestone__goals-cont__summary--active")
                                 mgcSummary2030.classList.remove("milestone__goals-cont__summary--active")
@@ -1882,11 +1928,17 @@
                                 mgcDetail2023.classList.add("milestone__goals-cont__detail--active")
                                 mgcDetail2030.classList.remove("milestone__goals-cont__detail--active")
 
-                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__txt").classList.remove("milestone__goals-cont__years__item__txt--active")
-                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__txt").classList.add("milestone__goals-cont__years__item__txt--active")
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__txt").classList.remove("milestone__goals-cont__years__item__txt--on")
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__txt").classList.add("milestone__goals-cont__years__item__txt--on")
                                 
-                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico").classList.remove("milestone__goals-cont__years__item__ico--active")
-                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico").classList.add("milestone__goals-cont__years__item__ico--active")
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico").classList.remove("milestone__goals-cont__years__item__ico--on")
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico__img").setAttribute("src",
+                                    mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico__img").src.replace("_on.svg","_off.svg")
+                                )
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico").classList.add("milestone__goals-cont__years__item__ico--on")
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico__img").setAttribute("src",
+                                    mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico__img").src.replace("_off.svg","_on.svg")
+                                )
 
                             } else if(a == 0) {
                                 mgcSummary2023.classList.remove("milestone__goals-cont__summary--active")
@@ -1895,12 +1947,17 @@
                                 mgcDetail2023.classList.remove("milestone__goals-cont__detail--active")
                                 mgcDetail2030.classList.add("milestone__goals-cont__detail--active")
 
-                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__txt").classList.remove("milestone__goals-cont__years__item__txt--active")
-                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__txt").classList.add("milestone__goals-cont__years__item__txt--active")
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__txt").classList.remove("milestone__goals-cont__years__item__txt--on")
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__txt").classList.add("milestone__goals-cont__years__item__txt--on")
 
-                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico").classList.remove("milestone__goals-cont__years__item__ico--active")
-                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico").classList.add("milestone__goals-cont__years__item__ico--active")
-                                
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico").classList.remove("milestone__goals-cont__years__item__ico--on")
+                                mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico__img").setAttribute("src",
+                                    mgcyItem[4].querySelector(".milestone__goals-cont__years__item__ico__img").src.replace("_on.svg","_off.svg")
+                                )
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico").classList.add("milestone__goals-cont__years__item__ico--on")
+                                mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico__img").setAttribute("src",
+                                    mgcyItem[5].querySelector(".milestone__goals-cont__years__item__ico__img").src.replace("_off.svg","_on.svg")
+                                )
                             }
                         }
                     })
