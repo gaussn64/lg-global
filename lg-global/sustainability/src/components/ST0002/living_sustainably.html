@@ -398,7 +398,7 @@
             .e-waste-program__visual__inner {
                 position: absolute;
                 left: 50%;
-                bottom: 0px;
+                top: 50%;
                 width: 100%;
                 height: 100%;
                 border-radius: 0px;
@@ -408,10 +408,10 @@
                 height: 61.1111%;
                 border-radius: 330px;
                  */
-                transform: translateX(-50%);
                 background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
                 background-size: cover;
                 background-attachment: fixed;
+                transform: translate(-50%,-50%);
             }
             .e-waste-program__more {
                 text-align: right;
@@ -1506,7 +1506,6 @@
                     let eWasteProgramVisualInner = eWasteProgramVisual.querySelector(".e-waste-program__visual__inner");
 
                     const anim = gsap.to(".e-waste-program__visual__inner", { 
-                        bottom: "20px",
                         width: "1680px",
                         height: "660px",
                         borderRadius: "330px",
