@@ -201,18 +201,19 @@
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
-                padding: 70px 120px 88px;
-                position: relative;
+                padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
 
-            .brand-elements__inner {
-
+            .brand-element__inner {
+                position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
-                font-size: 44px;
-                line-height: 52px;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
                 
             }
             .brand-elements__header-title__sub {
@@ -221,13 +222,13 @@
             }
             .brand-elements__slider {
                 position: relative;
-                margin: 76px -120px 0;
+                margin: 3.9583vw 0 0;
                 padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
-                right: 120px;
-                top: 140px;
+                right: 0;
+                top: 2.7083vw;
                 display: flex;
                 gap: 7px;
             }
@@ -238,8 +239,8 @@
                 right: unset;
                 margin: 0;
                 display: block;
-                width: 48px;
-                height: 48px;
+                width: 2.5vw;
+                height: 2.5vw;
                 background: rgba(255, 255, 255, 0.5);
                 border: 1.2px solid rgba(74, 73, 70, 0.3);
                 backdrop-filter: blur(10px);
@@ -253,8 +254,8 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 8px;
-                height: 15px;
+                width: 0.4167vw;
+                height: 0.7813vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
                 background-size: contain;
@@ -267,7 +268,7 @@
             }
 
             .brand-elements__progressbar {
-                margin-top: 72px;
+                margin-top: 3.75vw;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
@@ -741,8 +742,8 @@
                     },
                     breakpoints: {
                         1279: {
-                            slidesOffsetBefore: 120,
-                            slidesOffsetAfter: 120,
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
                         },
                         
                     }
