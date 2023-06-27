@@ -397,6 +397,7 @@
             }
             .e-waste-program__visual__inner {
                 position: absolute;
+                z-index: 2;
                 left: 50%;
                 top: 50%;
                 width: 100%;
@@ -414,6 +415,12 @@
                 transform: translate(-50%,-50%);
             }
             .e-waste-program__more {
+                position: absolute;
+                z-index: 1;
+                top: calc(50% + 350px);
+                left: 50%;
+                width: 1680px;
+                margin-left: -840px;
                 text-align: right;
             }
             .e-waste-program__more__btn {
@@ -1311,11 +1318,11 @@
                 </div>
                 <div class="e-waste-program__visual__wrap">
                     <div class="e-waste-program__visual">
-                        <div class="e-waste-program__visual__inner"></div>
+                        <div class="e-waste-program__visual__inner"></div>        
+                        <div class="e-waste-program__more">
+                            <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
+                        </div>
                     </div>
-                </div>
-                <div class="e-waste-program__more">
-                    <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
                 </div>
                 <div class="popup-discover-more" id="discover-more-e-waste-program">
                     <div class="popup-discover-more--container">
