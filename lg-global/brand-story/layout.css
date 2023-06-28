@@ -123,6 +123,9 @@ ul,ol {
 .c-header__gnb__list__item__deps2__menu__item__anchor--active:after {
     opacity: 1;
 }
+.c-header__gnb__list__item__deps2__btn-back {
+    display: none;
+}
 .c-header__gnb__list__item__deps2__visual {
     position: relative;
     width: 100%;
@@ -271,6 +274,92 @@ ul,ol {
     }
     .c-header__living-sustainably {
         display: none;
+    }
+    .c-header__gnb__list__item__deps2 {
+        position: static;
+        display: none;
+        width: auto;
+        overflow: visible;
+        height: auto;
+        background: transparent;
+        border-radius: 0px;
+    }
+    .c-header__gnb__list__item__anchor--on + .c-header__gnb__list__item__deps2 {
+        display: block;
+    }
+    .c-header__gnb__list__item__deps2__menu {
+        margin: 0px;
+    }
+    .c-header__gnb__list__item__deps2__menu__item + .c-header__gnb__list__item__deps2__menu__item {
+        margin-top: 16px;
+    }
+    .c-header__gnb__list__item__deps2__menu__item__anchor {
+        position: relative;
+        padding: 0px 40px 7px 0px;
+        font-size: 20px;
+        line-height: 24px;
+        color: #E6E1D6;
+    }
+    .c-header__gnb__list__item__deps2__menu__item__anchor:hover,
+    .c-header__gnb__list__item__deps2__menu__item__anchor:focus {
+        text-decoration: none;
+    }
+    .c-header__gnb__list__item__deps2__menu__item__anchor--active {
+        font-weight: 600;
+        color: white;
+    }
+    .c-header__gnb__list__item__deps2__menu__item__anchor:after {
+        display: block;
+        position: absolute;
+        left: auto;
+        bottom: auto;
+        right: 0px;
+        top: 5px;
+        width: 7px;
+        height: 14px;
+        background: transparent url(src/mocks/layout/bullet_gnb_m.svg) no-repeat right center;
+        opacity: 1;
+    }
+    .c-header__gnb__list__item__deps2__visual {
+        display: none;
+    }
+    .c-header__gnb__list__item__deps2__visual__item {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 670px;
+        z-index: 1;
+        visibility: hidden;
+        overflow: hidden;
+        border-radius: 0px 40px 40px 0px;
+        opacity: 0;
+        transition: 0.3s ease opacity;
+    }
+    .c-header__gnb__list__item__deps2__visual__item--active {
+        z-index: 2;
+        visibility: visible;
+        opacity: 1;
+    }
+    .c-header__gnb__list__item__deps2__visual__item__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .c-header__gnb__list__item__deps2__btn-back {
+        display: block;
+        position: absolute;
+        top: -90px;
+        left: 0px;
+        width: 66px;
+        height: 66px;
+        text-indent: -9999px;
+        overflow: hidden;
+        border-radius: 50%;
+        border-width: 0px;
+        background: rgba(0, 0, 0, 0.7) url(src/mocks/layout/btn-gnb-deps2-back.svg) no-repeat center center;
+        opacity: 0;
+        transition: 0.1s ease opacity;
     }
     .c-header__btn-gnb {
         display: block;
