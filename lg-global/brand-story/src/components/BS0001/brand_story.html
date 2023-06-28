@@ -21,10 +21,10 @@
     <nav class="c-header__gnb">
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Story</a></li>
-            <li class="c-header__gnb__list__item"><a href="../BS0002/brand_logo.html" onclick="initGnbDeps2(this); return false" class="c-header__gnb__list__item__anchor">Brand Elements</a>
+            <li class="c-header__gnb__list__item"><a href="../BS0001/brand_logo.html" onclick="initGnbDeps2(this); return false" class="c-header__gnb__list__item__anchor">Brand Elements</a>
                 <div class="c-header__gnb__list__item__deps2">
                     <ul class="c-header__gnb__list__item__deps2__menu">
-                        <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Logo</a></li>
+                        <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0001/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Logo</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0003/brand_colors.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Colour &amp; Gradients</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0004/brand_tagline.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Tagline</a></li>
                         <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Photography</a></li>
@@ -140,8 +140,10 @@
                 text-align: center;
             }
             .landing-visual__scrolldown__btn {
-                width: 3.5417vw;
-                height: 5vw;
+                /* width: 3.5417vw; */
+                /* height: 5vw; */
+                width: 68px;
+                height: 96px;
                 text-indent: -9999px;
                 overflow: hidden;
                 border-width: 0px;
@@ -896,15 +898,17 @@
             }
 
 
-             /*brand story - marquee*/
-             .ani-show {opacity: 0; transition: 0.5s;}
+            /*brand story - marquee*/
+            .ani-show {opacity: 0; transition: 0.5s;}
             .ani-show--active {opacity: 1;}
+
             .parallex__title.parallex__title--marquee {
                 margin-bottom: 6.61vw;
                 margin-top: 5.99vw; 
             }
             .parallex-visual__marquee {
                 margin-top: 20vw;
+                margin-bottom: 230px;
                 overflow-x: hidden;
             }
 
@@ -946,152 +950,175 @@
 
             .marquee__part__item video {width: 100%; height: 100%; object-fit: cover; border-radius: 9.9vw;}
 
-            /*Discover our brand*/
-            .discover-brand__section {
-                margin-top: 11.98vw;
+
+            /*brand elements 슬라이드*/
+            .brand-elements {
+                background-color: #E6E1D6;
+                padding: 3.6458vw 6.25vw 4.5833vw;
+                overflow: hidden;
             }
 
-            .parallex__title.parallex__title--discover {
-                text-align: center;
-                margin-bottom: 5.16vw;
-            }
-
-            .discover-brand {
-                padding-bottom: 11.98vw;
-                overflow-x: auto;
-                -ms-overflow-style: none;
-                scrollbar-width: none;
-            }
-            .discover-brand::-webkit-scrollbar {
-                display: none;
-            }
-
-            .discover-brand__list {
-                list-style: none;
-                display: flex;
-                flex-wrap: nowrap;
-                padding: 0;
-                margin: 0;
-            }
-
-            .discover-brand__item {
-                background: no-repeat center;
+            .brand-element__inner {
                 position: relative;
+                width: 87.5vw;
+                margin: 0px auto;
+            }
+            .brand-elements__header-title {
+                margin: 0 auto;
+                font-size: 2.2917vw;
+                line-height: 2.7083vw;
+                
+            }
+            .brand-elements__header-title__sub {
+                display: block;
+                font-weight: 300;
+            }
+            .brand-elements__slider {
+                position: relative;
+                margin: 3.9583vw 0 0;
+                padding: 0;
+            }
+            .brand-elements__controller {
+                position: absolute;
+                right: 0;
+                top: 2.7083vw;
+                display: flex;
+                gap: 7px;
+            }
+            .brand-elements__controller__btn {
+                position: relative;
+                top: unset;
+                left: unset;
+                right: unset;
+                margin: 0;
+                display: block;
+                width: 2.5vw;
+                height: 2.5vw;
+                background: rgba(255, 255, 255, 0.5);
+                border: 1.2px solid rgba(74, 73, 70, 0.3);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-radius: 50%;
+                opacity: 1;
+            }
+            .brand-elements__controller__btn.swiper-button-prev::after,
+            .brand-elements__controller__btn.swiper-button-next::after {
+                content: '';
+                position: absolute;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                width: 0.4167vw;
+                height: 0.7813vw;
+                background: no-repeat center url(../../mocks/BS0001/swiper-button-arrow.svg);
+                background-position: center;
+                background-size: contain;
+            }
+            .brand-elements__controller__btn.swiper-button-prev::after {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+            .brand-elements__slides {
+                padding: 0;
+            }
+
+            .brand-elements__progressbar {
+                margin-top: 3.75vw;
+                width: 100%;
+                height: 2px;
+                background-color: #00000033;
+            }
+            .brand-elements__slide {
+                position: relative;
+                width: 475px;
+                height: 475px;
+                border-radius: 20px;
+                background: no-repeat center;
+                background-size: cover;
                 background-color: #F0ECE4;
                 overflow: hidden;
-                flex: 0 0 auto;
-                width: 37.5vw;
-                height: 37.5vw;
-                max-width: 729px;
-                max-height: 729px;
-                border-radius: 1.77vw;
-                z-index: 1;
+                box-sizing: border-box;
+                overflow: hidden;
             }
-            .discover-brand__item:first-child {
-                margin-left: 120px;
-            }
-
-            .discover-brand__item a {
+            .brand-elements__slide a {
                 width: 100%;
                 height: 100%;
                 display: block;
             }
+            .brand-elements__slide.brand-elements__slide--logo {
+                background-image: url(../../mocks/BS0001/whats-next-logo-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--color {
+                background-image: url(../../mocks/BS0001/whats-next-colour-grandients-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--tagline {
+                background-image: url(../../mocks/BS0001/whats-next-tagline-d.png);
+            } 
 
-            .discover-brand__item object {
+            .brand-elements__slide.brand-elements__slide--design {
+                background-image: url(../../mocks/BS0001/whats-next-colour-design-system-d.png);
+            } 
+
+            .brand-elements__item-title {
+                position: absolute;
+                bottom: 0;
                 width: 100%;
-                height: 100%;
-                object-fit: contain;
+                font-size: 28px;
+                padding: 26px 32px 28px;
+                display: flex;
+                align-items: center;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+                color: #262626;
+                
             }
-            .discover-brand__item::before,
-            .discover-brand__item::after {
+            
+            .brand-elements__slide::before {
                 content: '';
                 position: absolute;
-                width: 100%;
-                height: 100%;
-                top: 50%;
-                left: 50%;
+                top: 50%; left: 50%;
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
                 transform: translate(-50%, -50%);
-                transition: .5s ease opacity;
                 background: no-repeat center;
-                background-size: cover;
+                background-size: contain;
+                opacity: 0;
+                border-radius: 14px;
+                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
                 pointer-events: none;
             }
-            .discover-brand__item::before {
-                opacity: 0;
-                z-index: -1;
-            }
-            .discover-brand__item:hover::before {
+            .brand-elements__slide.brand-elements__slide--photography::before {
+                top: 47%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.67);
+                background-image: url(../../mocks/BS0001/whats-next-colour-photography-hover-state-d.png);
+                transition: all .5s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 1;
+            } 
+
+            .brand-elements__slide:hover:before {
                 opacity: 1;
             }
-
-            .discover-brand__item--logo::before {
-                background-image: url(../../mocks/BS0001/brand-story-discover-logo-hover-state-bg.png);
-            }
-            .discover-brand__item--logo::after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-logo-d.svg);
-            }
-            .discover-brand__item--logo:hover:after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-logo-hover-state.svg);
-            }
-            .discover-brand__item--colours::before {
-                background-image: url(../../mocks/BS0001/brand-story-discover-colours-gradients-hover-state-bg.png);
-            }
-            .discover-brand__item--colours::after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-colours-gradients-d.svg);
-            }
-            .discover-brand__item--colours:hover:after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-colours-gradients-hover-state-d.svg);
-            }
-
-            .discover-brand__item--tagline::before {
-                background-image: url(../../mocks/BS0001/brand-story-discover-tagline-hover-state-bg.png);
-            }
-            .discover-brand__item--tagline::after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-tagline-d.svg);
-            }
-            .discover-brand__item--tagline:hover:after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-tagline-hover-state-d.svg);
-            }
-            .discover-brand__item--design::before {
-                background-color: #272727;
-            }
-            .discover-brand__item--design::after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-design-system-d.svg);
-            }
-            .discover-brand__item--design:hover:after {
-                background-image: url(../../mocks/BS0001/brand-story-discover-design-system-d.svg);
-            }
-            .discover-brand__item--design:hover::before {
-                background-image: url(../../mocks/BS0001/brand-story-discover-design-system-hover-state-d.svg);
-            }
-            .discover-brand__item--photography::before {
-                background-image: url(../../mocks/BS0001/brand-story-discover-photography-d.png);
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(0.6);
-                border-radius: 1.56vw;
-                transition: .5s all cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .discover-brand__item--photography:hover:before {
+            
+            .brand-elements__slide.brand-elements__slide--logo::before {
+                background-image: url(../../mocks/BS0001/whats-next-logo-hover-state-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--color::before {
+                background-image: url(../../mocks/BS0001/whats-next-colour-grandients-hover-state-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--tagline::before {
+                background-image: url(../../mocks/BS0001/whats-next-tagline-hover-state-d.png);
+            } 
+            .brand-elements__slide:hover.brand-elements__slide--photography::before {
+                top: 50%;
                 transform: translate(-50%, -50%) scale(1);
-            }
-
-            .discover-brand__item__title {
-                position: absolute;
-                z-index: 1;
-                bottom: 2.08vw;
-                left: 2.08vw;
-                color: #4A4946;
-                font-size: 1.77vw;
-                transition: .5s;
-                font-weight: 400;
-            }
-            .discover-brand__item:hover .discover-brand__item__title {
+            } 
+            .brand-elements__slide.brand-elements__slide--design::before {
+                background-image: url(../../mocks/BS0001/whats-next-colour-design-system-hover-state-d.png);
+            } 
+            .brand-elements__slide:hover .brand-elements__item-title {
+                background: rgba(38, 38, 38, 0.26);
+                backdrop-filter: blur(17px);
+                -webkit-backdrop-filter: blur(17px);
                 color: #fff;
             }
-            .discover-brand__section .swiper-notification {
-                display: none;
-            }
-
 
             @media (max-width: 1720px) {
                 /* brand story - our values */
@@ -1138,6 +1165,17 @@
                 .brand-brief__grid {
                     padding: 20px;
                     gap: 10px;
+                }
+
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 70px 20px 88px;
+                }
+                .brand-elements__slider {
+                    margin: 70px -20px 0;
+                }
+                .brand-elements__controller {
+                    right: 20px;
                 }
             }
             @media (max-width: 768px) {
@@ -1385,30 +1423,35 @@
                 /*brand story - marquee*/
                 .parallex-visual__marquee {display: none;}
 
-                /*Discover our brand*/
-                .discover-brand__section {
-                    margin-top: 100px;
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 32px 20px 40px;
                 }
-                .discover-brand {
-                    padding-bottom: 48px;
+                .brand-elements__header-title {
+                    font-size: 28px;
+                    line-height: 36px;
                 }
-
-                .discover-brand__item {
+                .brand-elements__slider {
+                    margin: 24px -20px 0;
+                }
+                .brand-elements__controller {
+                    display: none;
+                }
+                .brand-elements__progressbar {
+                    margin-top: 24px;
+                }
+                .brand-elements__slide {
                     width: 77.6vw;
                     height: 77.6vw;
-                    border-radius: 10px;
                 }
-                
-                .discover-brand__item:first-child {
-                    margin-left: 20px;
-                }
-                .discover-brand__item__title {
-                    font-size: 16px;
-                    left: 17px;
-                    bottom: 13px;
-                }
-                .discover-brand__item--photography::before {
-                    border-radius: 10px;
+                .brand-elements__item-title {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    font-size: 17px;
+                    padding: 16px 19px;
+                    display: flex;
+                    align-items: center;
                 }
             }
 
@@ -1693,36 +1736,38 @@
                     </ul>
                 </div>
             </div>
-            <div class="discover-brand__section" data-color-set="prevent">
-                <h3 class="parallex__title parallex__title--discover">Discover our brand</h3>
-                <div class="discover-brand">
-                    <ul class="discover-brand__list swiper-wrapper">
-                        <li class="swiper-slide discover-brand__item discover-brand__item--logo">
-                            <a href="../BS0002/brand_logo.html">
-                                <span class="discover-brand__item__title">Logo</span>
-                            </a>
-                        </li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--colours">
-                            <a href="../BS0003/brand_colors.html">
-                                <span class="discover-brand__item__title">Colours & Gradients</span>
-                            </a>
-                        </li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--tagline">
-                            <a href="../BS0003/brand_colors.html">
-                                <span class="discover-brand__item__title">Tagline</span>
-                            </a>
-                        </li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--design">
-                            <a href="../BS0004/brand_tagline.html">
-                                <span class="discover-brand__item__title">Design System</span>
-                            </a>
-                        </li>
-                        <li class="swiper-slide discover-brand__item discover-brand__item--photography">
-                            <a href="../BS0005/brand_photography.html">
-                                <span class="discover-brand__item__title">Photography</span>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="brand-elements">
+                <div class="brand-element__inner" style="max-width: 1680px; margin: 0 auto;">
+                    <h2 class="brand-elements__header-title">
+                        What’s next?
+                        <span class="brand-elements__header-title__sub">Explore brand elements</span>
+                    </h2>
+                    <div class="brand-elements__controller">
+                        <button class="brand-elements__controller__btn swiper-button-prev"></button>
+                        <button class="brand-elements__controller__btn swiper-button-next"></button>
+                    </div>
+                    <div class="brand-elements__slider">
+                        <ul class="brand-elements__slides swiper-wrapper">
+                            <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
+                                <a href="../BS0001/brand_logo.html"><h3 class="brand-elements__item-title">Logo</h3></a>
+                            </li>
+                            <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
+                                <a href="../BS0003/brand_colors.html"><h3 class="brand-elements__item-title">Colour & Gradients</h3></a>
+                            </li>
+                            <li class="brand-elements__slide brand-elements__slide--tagline swiper-slide">
+                                <a href="../BS0004/brand_tagline.html"><h3 class="brand-elements__item-title">Tagline</h3></a>
+                            </li>
+                            <li class="brand-elements__slide brand-elements__slide--photography swiper-slide">
+                                <a href="../BS0005/brand_photography.html"><h3 class="brand-elements__item-title">Photography</h3></a>
+                            </li>
+                            <li class="brand-elements__slide brand-elements__slide--design swiper-slide">
+                                <a href="../BS0006/brand_design_system.html"><h3 class="brand-elements__item-title">Design System</h3></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="brand-elements__progress-container">
+                        <div class="brand-elements__progressbar"></div>
+                    </div>
                 </div>
             </div>
 
@@ -2213,22 +2258,34 @@
                 showerElement()
             }
 
-            function discoverSlide() {
-                const swiper = new Swiper('.discover-brand', {
-                    freeMode: true,
+            function brandElememtsSlider() {
+                const brandElements = document.querySelector('.brand-elements__slider')
+
+                const swiper = new Swiper(brandElements, {
                     slidesPerView: 'auto',
-                    spaceBetween: 16,
+                    spaceBetween: 20,
+                    slidesOffsetBefore: 20,
                     slidesOffsetAfter: 20,
-                    breakpoints: {
-                        729 : {
-                            slidesOffsetAfter: 120,
-                        },
-                        1279: {
-                            spaceBetween: 74,
-                        },
+                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+                    navigation: {
+                        nextEl: '.brand-elements__controller .swiper-button-next',
+                        prevEl: '.brand-elements__controller .swiper-button-prev',
                     },
+                    scrollbar: {
+                        el: '.brand-elements__progressbar',
+                        draggable: true
+                    },
+                    breakpoints: {
+                        1279: {
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
+                        },
+                        
+                    }
                 });
+
             }
+
 
             window.addEventListener('DOMContentLoaded', () => {
                 visualScrollDown()
@@ -2242,7 +2299,7 @@
                 parallaxIdentitySec() //아이덴티티 섹션 모션
                 brandBreifMotion()
                 marquee()
-                discoverSlide()
+                brandElememtsSlider()
             })
         </script>
         <!-- [//code component area end] -->
