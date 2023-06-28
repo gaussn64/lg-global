@@ -152,7 +152,7 @@
                 z-index: 1;
             }
             .taglien__controller__desc {
-                font-size: 16px;
+                font-size: 0.8333vw;
                 color: #fff;
                 margin-right: 8.69vw;
             }
@@ -282,27 +282,28 @@
             }
             .tagline-grid__item {
                 background-color: #fff;
-                border-radius: 20px;
+                border-radius: 1.0417vw;
                 box-sizing: border-box;
-                padding: 40px;
+                padding: 2.0833vw;
                 flex: 1;
             }
             .tagline-grid__text-info {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                margin-bottom: 32px;
+                margin-bottom: 1.6667vw;
                 line-height: 1;
                 color: #262626;
+                font-size: 0.8333vw;
             }
             .tagline-grid__text-info b {
-                font-size: 36px;
+                font-size: 1.8750vw;
                 font-weight: 400;
             }
             .tagline-grid__item img {
                 width: 100%;
                 height: auto;
-                border-radius: 10px;
+                border-radius: 0.5208vw;
             }
 
             /*tab*/
@@ -362,7 +363,6 @@
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
 
-
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
@@ -419,11 +419,11 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 0.4167vw;
-                height: 0.7813vw;
+                width: 1.1458vw;
+                height: 1.1458vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
-                background-size: contain;
+                background-size: 100% auto;
             }
             .brand-elements__controller__btn.swiper-button-prev::after {
                 transform: translate(-50%, -50%) rotate(180deg);
@@ -767,14 +767,92 @@
 
             /* 4K */
             @media (min-width: 2560px) {
-                .brand__header-title + .brand__header-description br {display: none;}
+                /*공통*/
+                .brand__header {
+                    margin-bottom: 68px;
+                }
+                .brand__header-title {
+                    font-size: 72px;
+                    line-height: 76px;
+                    margin: 120px 0 48px;
 
-                
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 20px;
+                    line-height: 28px;
+
+                }
                 .brand__content-inner {
                     max-width: 1680px;
                     margin: 0px auto;
                     padding: 0 0 120px;
                     
+                }
+
+                /*tagline slide*/
+                .taglien__controller__desc {
+                    font-size: 16px;
+                }
+                .tagline__controller__btn.tagline__controller__btn--prev {
+                    margin-right: 7px;
+                }
+
+                /*tab*/
+                .tab-menu__list {
+                    height: 48px;
+
+                }
+                .tab-menu__list::before {
+                    width: calc(100% + 9px);
+                    height: calc(100% + 9px);
+                    border-radius: 400px;
+                }
+                .tab-menu__btn {
+                    width: 200px;
+                    font-size: 15px;
+                }
+                .tab-container {
+                    margin-top: 80px;
+                }
+
+                /*tagline grid*/
+                .tagline-grid__item {
+                    padding: 40px;
+                }
+                .tagline-grid__text-info {
+                    margin-bottom: 32px;
+                    font-size: 16px;
+                }
+                .tagline-grid__text-info b {
+                    font-size: 36px;
+                }
+                .tagline-grid__item img {
+                    border-radius: 10px;
+                }
+
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 70px 120px 88px;
+                }
+                .brand-elements__header-title {
+                    font-size: 44px;
+                    line-height: 52px;
+                }
+                .brand-elements__slider {
+                    margin: 76px 0 0;
+                }
+                .brand-elements__controller {
+                    top: 52px;
+                }
+                .brand-elements__controller__btn {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .brand-elements__controller__btn.swiper-button-prev::after,
+                .brand-elements__controller__btn.swiper-button-next::after {
+                    width: 22px;
+                    height: 22px;
                 }
             }
 
@@ -1059,7 +1137,7 @@
                 setBgWidth()
 
                 window.addEventListener('resize', ()=> {
-                    if(window.innerWidth < 769 ) {setBgWidth()}
+                    if(window.innerWidth < 769 || window.innerWidth > 2559) {setBgWidth()}
                     else {bgAll.forEach(bgs => bgs.style.width = '')}
 
                     tabIndexAll.forEach((tab) => {

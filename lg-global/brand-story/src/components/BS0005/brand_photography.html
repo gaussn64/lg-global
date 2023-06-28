@@ -131,7 +131,7 @@
                 bottom: 0;
                 height: 96px;
                 padding: 0 24px;
-                font-size: 20px;
+                font-size: 1.0417vw;
                 background: #0000001a;
                 backdrop-filter: blur(67px);
                 -webkit-backdrop-filter: blur(67px);
@@ -139,7 +139,7 @@
                 border-radius: 0 0 20px 20px;
             }
             .photography__item p b {
-                font-size: 28px;
+                font-size: 1.4583vw;
                 
             }
 
@@ -197,7 +197,6 @@
             .photography__grid.photography__grid--products .photography__grid__item:nth-child(7) {background-image: url(../../mocks/BS0005/brand-elements-photography-products-abstract-isolated-close-ups-d-06.png);}
             .photography__grid.photography__grid--products .photography__grid__item:nth-child(8) {background-image: url(../../mocks/BS0005/brand-elements-photography-products-abstract-isolated-close-ups-d-07.png);}
 
-            
             /*brand elements 슬라이드*/
             .brand-elements {
                 background-color: #E6E1D6;
@@ -254,11 +253,11 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 0.4167vw;
-                height: 0.7813vw;
+                width: 1.1458vw;
+                height: 1.1458vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
-                background-size: contain;
+                background-size: 100% auto;
             }
             .brand-elements__controller__btn.swiper-button-prev::after {
                 transform: translate(-50%, -50%) rotate(180deg);
@@ -514,14 +513,62 @@
             }
             /* 4K */
             @media (min-width: 2560px) {
-                .brand__header-title + .brand__header-description br {display: none;}
-                
+                /*공통*/
+                .brand__header {
+                    margin-bottom: 68px;
+                }
+                .brand__header-title {
+                    font-size: 72px;
+                    line-height: 76px;
+                    margin: 120px 0 48px;
+
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 20px;
+                    line-height: 28px;
+
+                }
                 .brand__content-inner {
                     max-width: 1680px;
                     margin: 0px auto;
                     padding: 0 0 120px;
                     
                 }
+
+                /*photography index list*/
+                .photography__item p {
+                    font-size: 20px;
+                }
+                .photography__item p b {
+                    font-size: 28px;
+                }
+
+
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 70px 120px 88px;
+                }
+                .brand-elements__header-title {
+                    font-size: 44px;
+                    line-height: 52px;
+                }
+                .brand-elements__slider {
+                    margin: 76px 0 0;
+                }
+                .brand-elements__controller {
+                    top: 52px;
+                }
+                .brand-elements__controller__btn {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .brand-elements__controller__btn.swiper-button-prev::after,
+                .brand-elements__controller__btn.swiper-button-next::after {
+                    width: 22px;
+                    height: 22px;
+                }
+
             }
             
 
@@ -720,7 +767,7 @@
                 setBgWidth()
 
                 window.addEventListener('resize', ()=> {
-                    if(window.innerWidth < 769 ) {setBgWidth()}
+                    if(window.innerWidth < 769 || window.innerWidth > 2559) {setBgWidth()}
                     else {bgAll.forEach(bgs => bgs.style = '')}
                 })
             }

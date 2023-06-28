@@ -247,11 +247,11 @@
                 background-size: cover;
                 height: 25.1042vw;
                 max-height: 482px;
-                width: 27.08vw;
+                width: 30%;
                 border-radius: 0.5208vw;
             }
             .colour-system__slide__item:nth-child(1) {
-                width: 36.31%;
+                flex: 1;
             }
             .colour-system__slide__item--system01 {background-image: url(../../mocks/BS0003/brand-element-adaptable-colour-system-01-d-01.png); }
             .colour-system__slide__item--system02 {background-image: url(../../mocks/BS0003/brand-element-adaptable-colour-system-01-d-02.png); }
@@ -347,8 +347,8 @@
             }
             .colour-system__slide-controller__btn::after {
                 content: '';
-                width: 0.3646vw;
-                height: 1.0417vw;
+                width: 1.1458vw;
+                height: 1.1458vw;
                 display: block;
                 background: no-repeat center url(../../mocks/BS0003/swiper-button-arrow.svg);
                 background-size: contain;
@@ -520,11 +520,11 @@
                 position: absolute;
                 top: 50%; left: 50%;
                 transform: translate(-50%, -50%);
-                width: 0.4167vw;
-                height: 0.7813vw;
+                width: 1.1458vw;
+                height: 1.1458vw;
                 background: no-repeat center url(../../mocks/BS0002/swiper-button-arrow.svg);
                 background-position: center;
-                background-size: contain;
+                background-size: 100% auto;
             }
             .brand-elements__controller__btn.swiper-button-prev::after {
                 transform: translate(-50%, -50%) rotate(180deg);
@@ -581,6 +581,56 @@
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
                 color: #262626;
                 
+            }
+            
+            .brand-elements__slide::before {
+                content: '';
+                position: absolute;
+                top: 50%; left: 50%;
+                width: calc(100% + 2px);
+                height: calc(100% + 2px);
+                transform: translate(-50%, -50%);
+                background: no-repeat center;
+                background-size: contain;
+                opacity: 0;
+                border-radius: 14px;
+                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
+                pointer-events: none;
+            }
+            .brand-elements__slide.brand-elements__slide--photography::before {
+                top: 47%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(0.67);
+                background-image: url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
+                transition: all .5s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 1;
+            } 
+
+            .brand-elements__slide:hover:before {
+                opacity: 1;
+            }
+            
+            .brand-elements__slide.brand-elements__slide--logo::before {
+                background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--color::before {
+                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
+            } 
+            .brand-elements__slide.brand-elements__slide--tagline::before {
+                background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
+            } 
+            .brand-elements__slide:hover.brand-elements__slide--photography::before {
+                top: 50%;
+                transform: translate(-50%, -50%) scale(1);
+            } 
+            .brand-elements__slide.brand-elements__slide--design::before {
+                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
+            } 
+            .brand-elements__slide:hover .brand-elements__item-title {
+                background: rgba(38, 38, 38, 0.26);
+                backdrop-filter: blur(17px);
+                -webkit-backdrop-filter: blur(17px);
+                color: #fff;
             }
             
             .brand-elements__slide::before {
@@ -845,21 +895,106 @@
 
             /* 4K */
             @media (min-width: 2560px) {
+                /*공통*/
+                .brand__header {
+                    margin-bottom: 68px;
+                }
+                .brand__header-title {
+                    font-size: 72px;
+                    line-height: 76px;
+                    margin: 120px 0 48px;
 
-                .brand__header-title + .brand__header-description br {display: none;}
-                
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 20px;
+                    line-height: 28px;
+
+                }
                 .brand__content-inner {
                     max-width: 1680px;
                     margin: 0px auto;
                     padding: 0 0 120px;
                     
                 }
-
                 .brand-colors__grid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-template-rows: repeat(3, 530px);
                     gap: 20px;
+                }
+
+                /*brand-color grid*/
+                .brand-colors__grid {
+                    grid-template-rows: repeat(3, 405px);
+                }
+                .brand-colors__item {
+                    border-radius: 20px;
+                    padding: 32px;
+                }
+                .brand-colors__code-data {
+                    font-size: 20px;
+                }
+                .btn-copy-hexcode {
+                    height: 58px;
+                    padding: 0 32px;
+                    font-size: 15px;
+                }
+
+                /*colour-system*/
+                .colour-system {
+                    padding: 40px 40px 48px;
+                }
+                .colour-system__title {
+                    border-radius: 70px;
+                    font-size: 18px;
+                    padding: 0 26px;
+                    height: 50px;
+                }
+                .colour-system__slide-wrap {
+                    margin-top: 32px;
+                }
+                .color-chip {
+                    margin-top: 64px;
+                }
+                .colour-system__slide-controller {
+                    margin-top: 11px;
+                }
+                .colour-system__slide__item {
+                    height: 482px;
+                }
+                .colour-system__slide-controller__btn {
+                    width: 48px;
+                    height: 48px;
+                }
+                .colour-system__slide-controller__btn::after {
+                    width: 22px;
+                    height: 22px;
+                }
+
+
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 70px 120px 88px;
+                }
+                .brand-elements__header-title {
+                    font-size: 44px;
+                    line-height: 52px;
+                }
+                .brand-elements__slider {
+                    margin: 76px 0 0;
+                }
+                .brand-elements__controller {
+                    top: 52px;
+                }
+                .brand-elements__controller__btn {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .brand-elements__controller__btn.swiper-button-prev::after,
+                .brand-elements__controller__btn.swiper-button-next::after {
+                    width: 22px;
+                    height: 22px;
                 }
             }
 
