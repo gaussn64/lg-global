@@ -1,16 +1,18 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.5" filter="url(#filter0_b_1787_56)">
-<circle cx="32" cy="32" r="32" fill="white" fill-opacity="0.5"/>
-<circle cx="32" cy="32" r="31.625" stroke="#CBC8C2" stroke-width="0.75"/>
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Popup-btn" filter="url(#filter0_b_3080_81138)">
+<rect y="52" width="52" height="52" rx="26" transform="rotate(-90 0 52)" fill="white" fill-opacity="0.2"/>
+<g id="plus">
+<path id="Line 24" d="M14 26L38 26" stroke="white" stroke-linecap="round"/>
+<path id="Line 25" d="M26 14L26 38" stroke="white" stroke-linecap="round"/>
 </g>
-<path d="M20 32L44 32" stroke="white" stroke-width="2" stroke-linecap="round"/>
-<path d="M32 20L32 44" stroke="white" stroke-width="2" stroke-linecap="round"/>
+<rect x="0.5" y="51.5" width="51" height="51" rx="25.5" transform="rotate(-90 0.5 51.5)" stroke="#CBC8C2" stroke-opacity="0.5"/>
+</g>
 <defs>
-<filter id="filter0_b_1787_56" x="-15" y="-15" width="94" height="94" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_b_3080_81138" x="-30" y="-30" width="112" height="112" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feGaussianBlur in="BackgroundImageFix" stdDeviation="7.5"/>
-<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1787_56"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1787_56" result="shape"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="15"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_3080_81138"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_3080_81138" result="shape"/>
 </filter>
 </defs>
 </svg>
