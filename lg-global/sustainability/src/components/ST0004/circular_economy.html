@@ -148,27 +148,27 @@
             
             /* Sustainability Cycle */
             .st-cycle {
-                padding-top: 80px;
-                height: 1720px;
+                padding-top: 60px;
+                height: 1184px;
                 box-sizing: border-box;
                 text-align: center;
-                background: #F2F2F3 url(../../mocks/ST0004/bg-st-cycle.png) no-repeat center top;
+                background: #4A4946 url(../../mocks/ST0004/bg-st-cycle.png) no-repeat center top;
             }
             .st-cycle * {
-                color: #4A4946;
+                color: white;
             }
             .st-cycle__tit {
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 24px;
+                line-height: 28px;
             }
             .st-cycle__intro__txt {
-                margin-top: 20px;
+                margin-top: 16px;
             }
             .st-cycle__intro__txt:first-child {
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
-                font-size: 72px;
-                line-height: 80px;
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
             }
             .st-cycle__intro__txt:last-child {
                 font-size: 20px;
@@ -179,16 +179,16 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 152px auto 0px;
-                width: 911px;
-                height: 988px;
+                margin: 173px auto 0px;
+                width: 1076px;
+                height: 513px;
                 text-align: center;
                 background: url(../../mocks/ST0004/line-st-cycle.svg) no-repeat center center;
                 background-size: cover;
             }
             .st-cycle__inner__cont {
                 width: 580px;
-                height: 250px;
+                height: 220px;
                 transform: translateY(95px);
                 transition: 0.3s ease transform;
             }
@@ -197,11 +197,10 @@
             }
             .st-cycle__inner__cont__tit {
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
-                font-size: 64px;
-                line-height: 60px;
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 58px;
                 letter-spacing: -0.005em;
-                color: #7E7C77;
             }
             .st-cycle__inner__cont__list {
                 position: relative;
@@ -213,8 +212,8 @@
             }
             .st-cycle__inner__cont__list--active {
                 visibility: visible;
-                height: 150px;
-                margin-top: 40px;
+                height: 130px;
+                margin-top: 20px;
             }
             .st-cycle__inner__cont__list__item {
                 position: absolute;
@@ -230,15 +229,16 @@
                 transition: 0.3s ease all;
             }
             .st-cycle__inner__cont__list__item__tit {
-                font-weight: 700;
+                font-weight: 550;
                 font-size: 36px;
-                line-height: 42px;
+                font-family: 'LG_EI_Headline';
+                line-height: 40px;
                 transition-delay: 0s;
             }
             .st-cycle__inner__cont__list__item__txt {
-                margin-top: 40px;
-                font-size: 28px;
-                line-height: 34px;
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 28px;
                 text-align: center;
                 transition-delay: 0.1s;
             }
@@ -249,8 +249,8 @@
             }
             .st-cycle__inner__menu__item {
                 position: absolute;
-                width: 130px;
-                height: 130px;
+                width: 112px;
+                height: 146px;
                 opacity: 1;
                 transition: 0.3s ease opacity;
                 cursor: pointer;
@@ -264,28 +264,28 @@
                 object-fit: cover;
             }
             .st-cycle__inner__menu__item:nth-child(1) {
-                top: 89px;
-                right: 204px;
+                top: -73px;
+                left: 207px;
             }
             .st-cycle__inner__menu__item:nth-child(2) {
-                top: 431px;
-                right: 0px;
+                top: -73px;
+                right: 481px;
             }
             .st-cycle__inner__menu__item:nth-child(3) {
-                bottom: 87px;
-                right: 182px;
+                top: -73px;
+                right: 206px;
             }
             .st-cycle__inner__menu__item:nth-child(4) {
-                bottom: 87px;
-                left: 183px;
+                bottom: -73px;
+                right: 206px;
             }
             .st-cycle__inner__menu__item:nth-child(5) {
-                bottom: 430px;
-                left: 0px;
+                bottom: -73px;
+                right: 481px;
             }
             .st-cycle__inner__menu__item:nth-child(6) {
-                top: 90px;
-                left: 201px;
+                bottom: -73px;
+                left: 207px;
             }
             .st-cycle__inner__standard {
                 visibility: hidden;
@@ -295,11 +295,12 @@
             }
             .st-cycle__inner__standard__item {
                 position: absolute;
-                top: 1140px;
+                top: 683px;
                 left: 0px;
                 width: 100%;
-                font-size: 15px;
-                line-height: 21px;
+                font-size: 12px;
+                color: #F6F3EB;
+                line-height: 16px;
                 text-align: center;
                 visibility: hidden;
                 opacity: 0;
@@ -1050,6 +1051,13 @@
                     <div class="st-cycle__inner__cont">
                         <h4 class="st-cycle__inner__cont__tit">Sustainable Cycle</h4>
                         <ul class="st-cycle__inner__cont__list">
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Collection</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Expand collection amount <br />
+                                    of E-waste*
+                                </p>
+                            </li>
                             <li class="st-cycle__inner__cont__list__item"> 
                                 <h5 class="st-cycle__inner__cont__list__item__tit">Recycling</h5>
                                 <p class="st-cycle__inner__cont__list__item__txt">
@@ -1085,16 +1093,12 @@
                                     product categories**
                                 </p>
                             </li>
-                            <li class="st-cycle__inner__cont__list__item">
-                                <h5 class="st-cycle__inner__cont__list__item__tit">Collection</h5>
-                                <p class="st-cycle__inner__cont__list__item__txt">
-                                    Expand collection amount <br />
-                                    of E-waste*
-                                </p>
-                            </li>
                         </ul>
                     </div>
                     <ul class="st-cycle__inner__menu">
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico">
+                        </li>
                         <li class="st-cycle__inner__menu__item">
                             <img src="../../mocks/ST0004/ico-st-cycle-recycling.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico">
                         </li>
@@ -1110,11 +1114,12 @@
                         <li class="st-cycle__inner__menu__item">
                             <img src="../../mocks/ST0004/ico-st-cycle-use.svg" alt="Use" class="st-cycle__inner__menu__item__ico">
                         </li>
-                        <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico">
-                        </li>
                     </ul>
                     <ul class="st-cycle__inner__standard">
+                        <li class="st-cycle__inner__standard__item">
+                            *8 Million tons by 2030, on a cumulative basis from 2006 to <br />
+                            2030 (3.5 million tons from 2006 to 2021)
+                        </li>
                         <li class="st-cycle__inner__standard__item">
                             *600,000 tons by 2030, on a cumulative basis from 2021 <br /> to 2030(27,000 tons in 2021)
                         </li>
@@ -1126,10 +1131,6 @@
                         </li>
                         <li class="st-cycle__inner__standard__item"></li>
                         <li class="st-cycle__inner__standard__item"></li>
-                        <li class="st-cycle__inner__standard__item">
-                            *8 Million tons by 2030, on a cumulative basis from 2006 to <br />
-                            2030 (3.5 million tons from 2006 to 2021)
-                        </li>
                     </ul>
                 </div>
             </div>

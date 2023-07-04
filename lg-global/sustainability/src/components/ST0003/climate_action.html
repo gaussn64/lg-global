@@ -678,17 +678,15 @@
             /* B2B activity */
             .b2b-activity {
                 position: relative;
-                height: 100vh;
                 box-sizing: border-box;
-                background: url(../../mocks/ST0003/bg-b2b-activity.png) no-repeat center 42%;
+                background: url(../../mocks/ST0003/bg-b2b-activity.png) no-repeat center 59%;
                 background-size: cover;
                 background-attachment: fixed;
             }
             .b2b-activity__inner {
                 position: relative;
                 width: 1440px;
-                height: 100vh;
-                max-height: 945px;
+                height: 945px;
                 padding: 60px 0px 30px;
                 margin: 0px auto;
             }
@@ -1914,7 +1912,7 @@
                                 mgcwBgGuide = "up"
                             }
 
-                            console.log(mgcwBgCurrent)
+                            //console.log(mgcwBgCurrent)
                             milestoneGoalsContWrap.style.backgroundPosition = "left "+ (mgcwBgCurrent)+"%"
                         },10)
                     }
@@ -2079,7 +2077,7 @@
                     if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
                         wheelIng = true
                         dist+=parseInt(pdmSection[condition].offsetWidth);
-                        console.log("Down: "+ parseInt(dist))
+                        //console.log("Down: "+ parseInt(dist))
                         condition++;
                         setTimeout(function() {
                             wheelIng = false
@@ -2088,7 +2086,7 @@
                         wheelIng = true
                         condition--;
                         dist-=parseInt(pdmSection[condition].offsetWidth);
-                        console.log("Up: "+ parseInt(dist))
+                        //console.log("Up: "+ parseInt(dist))
                         setTimeout(function() {
                             wheelIng = false
                         },500)
