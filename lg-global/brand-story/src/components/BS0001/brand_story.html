@@ -238,10 +238,25 @@
                 max-height: 773px;
                 border-radius: 296px;
                 background: no-repeat center;
-                background-size: contain;
+                background-size: cover;
                 position: relative;
                 transition: transform .5s ease;
             }
+            .value__list__item::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+                backdrop-filter: blur(50px);
+                z-index: 1;
+                opacity: 0;
+                transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                pointer-events: none;
+            }
+
             .value__list__item--experience {background-image: url(../../mocks/BS0001/our_value_innovation.png);}
             .value__list__item--innovation {background-image: url(../../mocks/BS0001/our_value_customer.png);}
             .value__list__item--power-smile {background-image: url(../../mocks/BS0001/our_value_power_a_smile.png);}
@@ -254,12 +269,13 @@
             }
 
             .our-value__info-wrap {
+                position: relative;
+                z-index: 3;
                 text-align: center;
-                width: 70%;
                 height: 100%;
                 margin: 0 auto;
                 box-sizing: border-box;
-                padding-bottom: 155px;
+                padding: 0 25px 155px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
@@ -276,9 +292,10 @@
                 font-size: 22px;
                 font-weight: 400;
                 line-height: 30px;
-                height: 0;
                 overflow: hidden;
                 margin: 0;
+                opacity: 0;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .our-value__desc p {
                 margin-top: 32px;
@@ -297,11 +314,27 @@
                 background-size: 30px auto;
                 background-color: #00000099;
                 cursor: pointer;
+                z-index: 4;
+                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
+
+            .our-value__more-btn:hover {
+                transform: translateX(-50%) rotate(180deg);
+            }
+
+            .value__list__item--active .our-value__desc {
+                height: auto;
+                opacity: 1;
+            }
+            .value__list__item--active::before {
+                opacity: 1;
+            }
+
+
 
             /*Emotionally Intelligent Design*/
             .parallex__visual {
-                
+
             }
             .parallex__pin-text {
                 height: 100vh;
@@ -311,58 +344,93 @@
                 justify-content: center;
                 position: sticky;
                 top: 0;
+                z-index: 3;
             }
-            .parallex__image-items {
-                height: 200vh;
+            .parallex__bgs {
                 width: 100%;
-                position: relative;
+                height: 350vh;
                 overflow: hidden;
-
             }
-            .parallex__pin-wrap > li {
+
+            .parallex__bgs__wrap {
+                position: relative;
+                max-width: 1680px;
+                margin: 0 auto;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            .parallex__pin {
+                height: 100%;
+                position: absolute;
+                top: 0;
+                width: 100%;
+            }
+
+            .parallex__pin > li {
                 position: absolute;
                 border-radius: 20px;
+                background: no-repeat center;
+                background-size: cover;
             }
-            .parallex__pin-wrap > li:nth-child(1) {
-                top: 50%;
+            .parallex__pin > li > img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .parallex__pin > li:nth-child(1) {
+                top: 12.28%;
                 left: 9.11%;
                 width: 26.30vw;
                 height: 14.79vw;
+                max-width: 505px;
+                max-height: 284px;
                 background-image: url(../../mocks/BS0001/01_LG_BrandFilm_EI_Bow.png);
             }
-            .parallex__pin-wrap > li:nth-child(2) {
-                top: 50%;
+            .parallex__pin > li:nth-child(2) {
+                top: 18.36%;
                 left: 40.83%;
                 width: 19.64vw;
                 height: 11.04vw;
+                max-width: 377px;
+                max-height: 212px;
                 background-image: url(../../mocks/BS0001/02_LG_BrandFilm_EI_Gradient.png);
             }
-            .parallex__pin-wrap > li:nth-child(3) {
-                top: 50%;
+            .parallex__pin > li:nth-child(3) {
+                top: 14.45%;
                 left: 72.71%;
                 width: 29.17vw;
                 height: 16.88vw;
+                max-width: 560px;
+                max-height: 324px;
                 background-image: url(../../mocks/BS0001/03_LG_BrandFilm_EI_Product.png);
             }
-            .parallex__pin-wrap > li:nth-child(4) {
-                top: 50%;
+            .parallex__pin > li:nth-child(4) {
+                top: 30.92%;
                 left: 3.28%;
                 width: 23.54vw;
                 height: 13.23vw;
+                max-width: 452px;
+                max-height: 253px;
                 background-image: url(../../mocks/BS0001/04_LG_BrandFilm_EI_Photo.png);
             }
-            .parallex__pin-wrap > li:nth-child(5) {
-                top: 50%;
+            .parallex__pin > li:nth-child(5) {
+                top: 49.58%;
                 left: 33.65%;
                 width: 14.32vw;
                 height: 14.32vw;
+                max-width: 275px;
+                max-height: 275px;
                 background-image: url(../../mocks/BS0001/05_LG_BrandFilm_EI_Controller.png);
             }
-            .parallex__pin-wrap > li:nth-child(6) {
-                top: 50%;
+            .parallex__pin > li:nth-child(6) {
+                top: 52.25%;
                 left: 57.97%;
                 width: 37.93vw;
                 height: 26.41vw;
+                max-width: 727px;
+                max-height: 467px;
                 background-image: url(../../mocks/BS0001/06_LG_BrandFilm_EI_Fill.png);
             }
 
@@ -573,7 +641,10 @@
                 margin-top: 64px;
                 width: 100%;
                 height: 2px;
-                background-color: #00000033;
+                background-color: #7E7C77;
+            }
+            .our-identity__progressbar .swiper-scrollbar-drag {
+                background: #F6F3EB;
             }
 
             .our-identity__move-btn {
@@ -589,6 +660,12 @@
                 background-color: #00000099;
                 background-size: 30px auto;
                 border: 1px solid #CBC8C24D;
+            }
+
+            .our-identity__move-btn.our-identity__move-btn--wt {
+                background-color: #FFFFFFB2;
+                border-color: #CBC8C24D;
+                background-image: url(../../mocks/BS0001/btn_move_to_arrow_wt.svg);
             }
 
             @media (max-width: 768px) {
@@ -667,9 +744,6 @@
                     max-width: 1680px;
                     margin: 162px auto 248px;
                 }
-
-
-
                 .our-mood__grid {
                     max-width: 1680px;
                     margin: 0 auto;
@@ -692,7 +766,7 @@
                     margin-left: -202px;
                 }
 
-                /*Our values----------*/
+                /*Our identity----------*/
                 .our-identity {
                     padding: 173px 120px 205px;
                 }
@@ -703,6 +777,8 @@
                     font-size: 36px;
                     line-height: 42px;
                 }
+
+                /*Emotionally Intelligent Design*/
             }
 
 
@@ -805,15 +881,17 @@
                         <h3 class="brand__content__title">Guided by our design philosophy</h3>
                         <p class="brand__content__intro__title">Emotionally Intelligent Design</p>
                     </div>
-                    <div class="parallex__image-items">
-                        <ul class="parallex__pin-wrap">
-                            <li data-speed="0.5"></li>
-                            <li data-speed="0.5"></li>
-                            <li data-speed="0.5"></li>
-                            <li data-speed="0.5"></li>
-                            <li data-speed="0.5"></li>
-                            <li data-speed="0.5"></li>
-                        </ul>
+                    <div class="parallex__bgs">
+                        <div class="parallex__bgs__wrap">                            
+                            <ul class="parallex__pin">
+                                <li data-speed="0.35"></li>
+                                <li data-speed="0.23"></li>
+                                <li data-speed="0.42"></li>
+                                <li data-speed="0.37"></li>
+                                <li data-speed="0.46"></li>
+                                <li data-speed="0.62"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="our-moods">
@@ -892,7 +970,7 @@
                             <ul class="our-identity__slides swiper-wrapper">
                                 <li class="our-identity__slide our-identity__slide--logo swiper-slide">
                                     <h3 class="our-identity__item-title our-identity__item-title--blk">Logo</h3>
-                                    <a class="our-identity__move-btn" href="../BS0002/brand_logo.html"></a>
+                                    <a class="our-identity__move-btn our-identity__move-btn--wt" href="../BS0002/brand_logo.html"></a>
                                 </li>
                                 <li class="our-identity__slide our-identity__slide--color swiper-slide">
                                     <h3 class="our-identity__item-title">Colour & Gradients</h3>
@@ -970,13 +1048,18 @@
                 }
             }
 
-            function parallaxImageMotion(targetWrap, percent) {
+            function parallaxImageMotion(targetWrap) {
                 const targetItems = targetWrap.querySelectorAll('li')
                 const targetParent = targetWrap.parentElement
                 const targetGrand = targetParent.parentElement
 
+                
                 let totalScroll = targetWrap.getBoundingClientRect().height
-                let tarText = ''
+                let endPoint = totalScroll - window.innerHeight
+                let endPercent = Math.floor((endPoint / totalScroll) * 100)
+
+
+                console.log(endPercent)
 
                 gsap.to(targetItems, {
                     y: (i, target) => -totalScroll * target.dataset.speed,
@@ -984,12 +1067,11 @@
                     scrollTrigger: {
                         trigger: targetWrap,
                         start: `top top`,
-                        end: `${percent} top`,
+                        end: `${endPercent}% top`,
                         pin: true,
                         scrub: 0.2,
-                        markers: true,
                         onUpdate: self => {
-                            self.progress > 0.1 && self.progress <= 0.95 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
+                            self.progress > 0.1 && self.progress <= 0.8 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
                         }
                     },
                 })
@@ -1038,12 +1120,40 @@
                 })
             }
 
+            function ourValueView() {
+                const btns = document.querySelectorAll('.our-value__more-btn')
+                const desc = document.querySelectorAll('.our-value__desc')
+                
+                let descHeight = []
+
+                desc.forEach(el => {
+                    descHeight.push(el.getBoundingClientRect().height)
+                    el.style.height = '0px'
+                })
+
+                btns.forEach((btn, idx) => {
+                    const parent = btn.parentElement
+                    const currentDesc = parent.querySelector('.our-value__desc')
+
+                    btn.addEventListener('click', function() {
+
+                        if(parent.classList.contains('value__list__item--active')) {
+                            currentDesc.style.height = '0px'
+                            parent.classList.remove('value__list__item--active')
+                        }else {
+                            currentDesc.style.height = `${descHeight[idx]}px`
+                            parent.classList.add('value__list__item--active')
+                        }
+                    })
+                })
+            }
+
             function ourIdentitySlider() {
-                const swiperTarget = document.querySelector('.parallex__image-items')
+                const swiperTarget = document.querySelector('.our-identity__slider')
 
                 const swiper = new Swiper( swiperTarget, {
                     slidesPerView: 'auto',
-                    spaceBetween: 20,
+                    spaceBetween: 30,
                     speed: 500,
                     easing: 'cubic-bezier(0.56, 0, 0.28, 1)', 
                     scrollbar: {
@@ -1054,13 +1164,14 @@
             }
 
             window.addEventListener('DOMContentLoaded', () => {
-                const parallexImages = document.querySelector('.parallex__pin-wrap')
+                const parallexImages = document.querySelector('.parallex__pin')
 
                 colorModeChange()
                 marquee()
                 listShowUp()
+                ourValueView()
+                parallaxImageMotion(parallexImages)
                 ourIdentitySlider()
-                // parallaxImageMotion(parallexImages, '100%')
             })
 
         </script>
