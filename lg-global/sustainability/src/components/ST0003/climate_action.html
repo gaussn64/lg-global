@@ -91,6 +91,9 @@
                 font-weight: 400;
                 color: white;
             }
+            .climate-action-visual__tit__txt__br {
+                display: none;
+            }
             .climate-action-visual__video {
                 position: relative;
                 z-index: 1;
@@ -209,7 +212,7 @@
                 box-sizing: border-box;
                 background-image: url(../../mocks/ST0003/bg-milestone-goals-cont.jpg);
                 background-repeat: no-repeat;
-                background-position: left 0%;
+                background-position: center 0%;
                 background-size: cover;
                 background-attachment: fixed;
             }
@@ -283,21 +286,6 @@
                 background-position: center center;
                 background-size: cover;
             }
-            .milestone__goals-cont__years__item__2006__ico:before {
-                background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2006.svg);
-            }
-            .milestone__goals-cont__years__item__2023__ico:before {
-                background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2023.svg);
-            }
-            .milestone__goals-cont__years__item__2023__ico.milestone__goals-cont__years__item__ico--active:before {
-                background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2023_active.svg);
-            }
-            .milestone__goals-cont__years__item__2030__ico:before {
-                background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2030.svg);
-            }
-            .milestone__goals-cont__years__item__2030__ico.milestone__goals-cont__years__item__ico--active:before {
-                background-image: url(../../mocks/ST0003/ico-milestone-goals-cont-years-item-2030_active.svg);
-            }
             .milestone__goals-cont__years__item__ico--on {
                 background-color: #75C66B;
             }
@@ -340,6 +328,8 @@
             .milestone__goals-cont__years__item__ico__img {
                 position: relative;
                 z-index: 5;
+                width: 100%;
+                height: 100%;
             }
             .milestone__goals-cont__summary {
                 visibility: hidden;
@@ -552,6 +542,9 @@
                 font-weight: 600;
                 line-height: 28px;
             }
+            .home-appliances-manufacturing-factory__tit__br {
+                display: none;
+            }
             .home-appliances-manufacturing-factory__intro__txt {
                 margin-top: 16px;
             }
@@ -662,6 +655,7 @@
                 align-items: center;
                 font-size: 20px;
                 color: white;
+                border-width: 0px;
                 border-color: transparent;
                 background-color: transparent;
             }
@@ -730,6 +724,7 @@
                 height: 64px;
                 margin-left: 20px;
                 background: url(../../mocks/ST0003/bullet-discover-more.svg) no-repeat center center;
+                background-size: cover;
             }
 
             /* Summary */
@@ -1222,12 +1217,593 @@
                     right: 160px;
                 }
             }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Climate Action Visual */
+                .climate-action-visual__tit {
+                    line-height: 48px;
+                    font-size: 44px;
+                    letter-spacing: -0.44px;
+                }
+                .climate-action-visual__tit__txt {
+                    font-weight: 550;
+                }
+                .climate-action-visual__tit__txt__br {
+                    display: inline-block;
+                }
+                .climate-action-visual__scrolldown {
+                    bottom: 16px;
+                }
+                .climate-action-visual__scrolldown__btn {
+                    width: 51px;
+                    height: 72px;
+                }
+
+                /* Climate Action About */
+                .climate-action-about {
+                    text-align: center;
+                }
+                .climate-action-about__cont {
+                    width: 328px;
+                    padding: 96px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+
+                /* Milestone */
+                .milestone {
+                    padding-top: 60px;
+                }
+                .milestone__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .milestone__intro__txt:first-child {
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .milestone__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .milestone__goals-navi {
+                    margin: 37px 0px 30px;
+                }
+                .milestone__goals-navi__list {
+                    width: 328px;
+                }
+                .milestone__goals-navi__list__item {
+                    width: calc(50% - 5px);
+                }
+                .milestone__goals-navi__list__item__a {
+                    padding: 8px 0px 9px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    border-radius: 48px;
+                }
+                .milestone__goals-navi__list__item__a:hover,
+                .milestone__goals-navi__list__item__a:focus {
+                    text-decoration: none;
+                }
+                .milestone__goals-navi__list__item__a--active {
+                    font-weight: 600;
+                    text-align: center;
+                    color: #262626;
+                    background-color: white;
+                }
+                .milestone__goals-cont__wrap {
+                    overflow: hidden;
+                    background-attachment: scroll;
+                }
+                .milestone__goals-cont {
+                    position: relative;
+                    width: 328px;
+                    height: 883px;
+                    padding: 40px 0px;
+                    margin: 0px auto;
+                }
+                .milestone__goals-cont__years {
+                    padding: 0px;
+                }
+                .milestone__goals-cont__years:after {
+                    bottom: 19px;
+                    background-color: #75C66B;
+                }
+                .milestone__goals-cont__years__item {
+                    display: none;
+                }
+                .milestone__goals-cont__years__item--active {
+                    display: block;
+                }
+                .milestone__goals-cont__years__item__txt {
+                    font-size: 16px;
+                    line-height: 24px;
+                    font-weight: 400;
+                    margin-bottom: 3px;
+                }
+                .milestone__goals-cont__years__item__txt--on {
+                    font-weight: 400;
+                }
+                .milestone__goals-cont__years__item__ico {
+                    width: 40px;
+                    height: 40px;
+                }
+                .milestone__goals-cont__years__item__2006__ico:before,
+                .milestone__goals-cont__years__item__2023__ico:before,
+                .milestone__goals-cont__years__item__2030__ico:before {
+                    width: 40px;
+                    height: 40px;
+                }
+                .milestone__goals-cont__years__item__ico--on:before,
+                .milestone__goals-cont__years__item__ico--on:after {
+                    top: -20px;
+                    left: -20px;
+                    width: 80px;
+                    height: 80px;
+                }
+                .milestone__goals-cont__summary {
+                    top: 143px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .milestone__goals-cont__summary__br {
+                    display: none;
+                }
+                .milestone__goals-cont__detail {
+                    left: 0px;
+                    bottom: 192px;
+                    gap: 0px 16px;
+                }
+                .milestone__goals-cont__detail--active {
+                    visibility: visible;
+                }
+                .milestone__goals-cont__detail__item {
+                    width: 300px;
+                    height: 374px;
+                    padding: 50px 28px;
+                    border-radius: 20px;
+                }
+                .milestone__goals-cont__detail__item__tit {
+                    font-size: 44px;
+                    line-height: 56px;
+                }
+                .milestone__goals-cont__detail__item__tit__txt {
+                    font-size: 33px;
+                }
+                .milestone__goals-cont__detail__item__ico {
+                    margin-top: 20px;
+                    height: 46px;
+                }
+                .milestone__goals-cont__detail__item__cont {
+                    color: #F0ECE4;
+                    font-size: 20px;
+                    line-height: 28px;
+                    font-weight: 400;
+                    letter-spacing: -0.1px;
+                    margin-top: 20px;
+                }
+                .milestone__goals-cont__detail__item__cont__small {
+                    display: block;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #F0ECE4;
+                    margin-top: 8px;
+                }
+                .milestone__goals-cont__home-appliances {
+                    bottom: 37px;
+                    left: 0px;
+                    font-size: 11px;
+                    line-height: 16px;
+                }
+
+                /* Carbon Emission Reduction */
+                .carbon-emission-reduction {
+                    width: 328px;
+                }
+                .carbon-emission-reduction__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .carbon-emission-reduction__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 550;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .carbon-emission-reduction__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .carbon-emission-reduction__plan {
+                    display: block;
+                    width: 300px;
+                    margin: 56px auto 0px;
+                    padding: 0px;
+                }
+                .carbon-emission-reduction__plan__item {
+                    width: 300px;
+                    height: 503px;
+                    opacity: 1;
+                }
+                .carbon-emission-reduction__plan__item + .carbon-emission-reduction__plan__item {
+                    margin-top: 38px;
+                }
+                .carbon-emission-reduction--active .carbon-emission-reduction__plan__item__step1,
+                .carbon-emission-reduction--active .carbon-emission-reduction__plan__item__step2,
+                .carbon-emission-reduction--active .carbon-emission-reduction__plan__item__step3 {
+                    transform: translateY(0px);
+                }
+                .carbon-emission-reduction__plan__item__btn {
+                    padding: 96px 0px;
+                    color: white;
+                    font-size: 20px;
+                    letter-spacing: -0.1px;
+                    background-position: 22% center;
+                }
+                .carbon-emission-reduction__plan__item__btn:after {
+                    bottom: 30px;
+                    left: calc(50% - 21px);
+                    width: 42px;
+                    height: 42px;
+                }
+
+                /* Home Appliances Manufacturing Factory */
+                .home-appliances-manufacturing-factory {
+                    width: 328px;
+                    margin: 0px auto;
+                    padding: 40px 0px 418px;
+                    text-align: center;
+                }
+                .home-appliances-manufacturing-factory__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .home-appliances-manufacturing-factory__tit__br {
+                    display: inline-block;
+                }
+                .home-appliances-manufacturing-factory__intro__txt:first-child {
+                    font-size: 36px;
+                    line-height: 40px;
+                    margin-top: 10px;
+                }
+                .home-appliances-manufacturing-factory__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .home-appliances-manufacturing-factory__intro__txt__br {
+                    display: none;
+                }
+                .home-appliances-manufacturing-factory__photos-navi {
+                    margin-top: 38px;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list {
+                    width: 100%;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item {
+                    width: calc(50% - 5px);
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a {
+                    padding: 8px 0px 9px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    border-radius: 48px;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a:hover,
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a:focus {
+                    text-decoration: none;
+                }
+                .home-appliances-manufacturing-factory__photos-navi__list__item__a--active {
+                    font-weight: 600;
+                    text-align: center;
+                    color: #262626;
+                    background-color: white;
+                }
+                .home-appliances-manufacturing-factory__photos-cont {
+                    width: 100%;
+                    height: 418px;
+                    padding: 30px 0px 60px;
+                }
+                .home-appliances-manufacturing-factory__photos-cont--active {
+                    visibility: visible;
+                    z-index: 2;
+                    opacity: 1;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure {
+                    width: 100%;
+                    height: 328px;
+                    border-radius: 10px;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure:after {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    background: linear-gradient(360deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 38.36%);
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__figcaption {
+                    bottom: 20px;
+                    left: 16px;
+                    font-size: 15px;
+                    line-height: 21px;
+                    font-weight: 400;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__discover-more {
+                    z-index: 4;
+                    bottom: 18px;
+                    right: 16px;
+                    width: 26px;
+                    height: 26px;
+                    text-indent: -9999px;
+                    overflow: hidden;
+                }
+                .home-appliances-manufacturing-factory__photos-cont__figure__discover-more:after {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    margin-left: 0px;
+                }
+
+                /* B2B activity */
+                .b2b-activity {
+                    position: relative;
+                    box-sizing: border-box;
+                    background-position: 60% 120%;
+                    background-attachment: scroll;
+                }
+                .b2b-activity__inner {
+                    width: 328px;
+                    height: 691px;
+                    padding: 60px 0px 40px;
+                    margin: 0px auto;
+                    text-align: center;
+                }
+                .b2b-activity__tit {
+                    color: white;
+                    letter-spacing: -0.005em;
+                    font-size: 24px;
+                    font-weight: 600;
+                    line-height: 28px;
+                }
+                .b2b-activity__cont__txt {
+                    color: white;
+                    margin-top: 14px;
+                }
+                .b2b-activity__cont__txt:first-child {
+                    font-size: 36px;
+                    font-family: 'LG_EI_Headline';
+                    font-weight: 550;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .b2b-activity__cont__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .b2b-activity__cont__txt__br {
+                    display: none;
+                }
+                .b2b-activity__discover-more {
+                    bottom: 40px;
+                    right: 0px;
+                    font-size: 16px;
+                }
+                .b2b-activity__discover-more:after {
+                    width: 35px;
+                    height: 35px;
+                    margin-left: 19px;
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 0px 105px;
+                }
+                .summary__cont {
+                    width: 328px;
+                    height: auto;
+                    border-radius: 0px;
+                    padding: 60px 0px;
+                    margin: 0px auto;
+                    box-sizing: border-box;
+                    background: none;
+                }
+                .summary__cont__txt {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    padding: 0px;
+                    color: #262626;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .summary__cont__txt--active {
+                    padding: 0px;
+                    font-size: 48px;
+                    font-family: 'LG_EI_Headline';
+                    line-height: 53px;
+                    letter-spacing: -0.005em;
+                }
+
+                /* What's Next */
+                .whats-next__wrap {
+                    overflow: hidden;
+                    padding: 80px 0px;
+                    background-color: #E6E1D6;
+                }
+                .whats-next {
+                    position: relative;
+                    width: 1440px;
+                    margin: 0px auto;
+                }
+                .whats-next__tit {
+                    font-size: 44px;
+                    line-height: 52px;
+                    font-family: 'LG_EI_Headline';
+                    font-weight: 100;
+                }
+                .whats-next__tit__strong {
+                    font-family: 'LG_EI_Headline';
+                    font-weight: 550;
+                }
+                .whats-next__menu {
+                    margin-top: 64px;
+                    overflow: visible;
+                }
+                .whats-next__menu__slide {
+                    width: 475px;
+                    margin-right: 20px;
+                }
+                .whats-next__menu__slide__anchor {
+                    position: relative;
+                    display: block;
+                    width: 100%;
+                    height: 475px;
+                    padding: 80px 0px 59px;
+                    box-sizing: border-box;
+                    background: #F0ECE4;
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+                .whats-next__menu__slide3__anchor {
+                    transition: 0.3s ease background-color;
+                }
+                .whats-next__menu__slide3__anchor:hover {
+                    background: #262626;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    overflow: hidden;
+                    transition: 0.3s ease all;
+                }
+                .whats-next__menu__slide1__anchor__photo {
+                    top: 80px;
+                    left: 100px;
+                    right: 100px;
+                    bottom: 121px;
+                    border-radius: 30px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 87px;
+                    left: 107px;
+                    right: 108px;
+                    bottom: 128px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 62px;
+                    left: 82px;
+                    right: 83px;
+                    bottom: 103px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 135px;
+                    left: -57px;
+                    bottom: 158px;
+                    width: 1233px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    left: -677px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 120px;
+                    left: 49px;
+                    right: 49px;
+                    bottom: 147px;
+                    border-radius: 200px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0px;
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 26px 32px 28px;
+                    line-height: 34px;
+                    font-size: 28px;
+                    background: rgba(38, 38, 38, 0);
+                    backdrop-filter: blur(17px);
+                    transition: 0.3s ease all;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    position: absolute;
+                    top: -112px;
+                    right: 0px;
+                    display: flex;
+                    gap: 0px 8px;
+                    line-height: 1;
+                }
+                .whats-next__menu__btn-set__btn {
+                    width: 48px;
+                    height: 48px;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 100% 100%;
+                    cursor: pointer;
+                }
+                .whats-next__menu__btn-set__btn__prev {
+                    background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+                }
+                .whats-next__menu__btn-set__btn__next {
+                    background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+                }
+                .whats-next__menu__pagination {
+                    position: relative;
+                    width: 100%;
+                    margin-top: 64px;
+                    height: 2px;
+                    background-color: rgba(0,0,0,0.2);
+                }
+                .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                    background-color: rgba(0,0,0,1);
+                }
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
             <div class="climate-action-visual">
                 <h2 class="climate-action-visual__tit">
-                    <span class="climate-action-visual__tit__txt">Big steps. Little carbon.</span>
+                    <span class="climate-action-visual__tit__txt">Big steps. <br class="climate-action-visual__tit__txt__br" />Little carbon.</span>
                 </h2>
                 <video src="../../mocks/ST0003/video-climate-action-visual.mp4" class="climate-action-visual__video" autoplay loop muted></video>
                 <div class="climate-action-visual__scrolldown">
@@ -1302,7 +1878,7 @@
                             </li>
                         </ul>
                         <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2030 milestone__goals-cont__summary--active">
-                            50% reduction in emissions in the production phase <br />
+                            50% reduction in emissions in the production phase <br class="milestone__goals-cont__summary__br" />
                             + 50% of external offset by 2030
                         </p>
                         <p class="milestone__goals-cont__summary milestone__goals-cont__summary__2023">
@@ -1465,13 +2041,13 @@
                 </div>
             </div>
             <div class="home-appliances-manufacturing-factory">
-                <h3 class="home-appliances-manufacturing-factory__tit">Home Appliances Manufacturing Factory</h3>
+                <h3 class="home-appliances-manufacturing-factory__tit">Home Appliances <br class="home-appliances-manufacturing-factory__tit__br" />Manufacturing Factory</h3>
                 <div class="home-appliances-manufacturing-factory__intro">
                     <p class="home-appliances-manufacturing-factory__intro__txt">
                         Introducing Lighthouse Factory
                     </p>
                     <p class="home-appliances-manufacturing-factory__intro__txt">
-                        The lighthouse factory uses advanced technology to lead the way in global manufacturing, just like a <br />
+                        The lighthouse factory uses advanced technology to lead the way in global manufacturing, just like a <br class="home-appliances-manufacturing-factory__intro__txt__br" />
                         lighthouse lights up the night sky and guides the way.
                     </p>
                 </div>
@@ -1618,12 +2194,12 @@
                     <h3 class="b2b-activity__tit">B2B activity</h3>
                     <div class="b2b-activity__cont">
                         <p class="b2b-activity__cont__txt">
-                            Collective action. Greater <br />
-                            impact. ‘Net Zero House’
+                            Collective action. Greater impact. <br />
+                            ‘Net Zero House’
                         </p>
                         <p class="b2b-activity__cont__txt">
-                            Net Zero House, created by LG, is a space that promotes a sustainable future <br />
-                            for our planet. It shows customers how their everyday appliance usage can <br />
+                            Net Zero House, created by LG, is a space that promotes a sustainable future <br class="b2b-activity__cont__txt__br" />
+                            for our planet. It shows customers how their everyday appliance usage can <br class="b2b-activity__cont__txt__br" />
                             have a positive impact on the environment.
                         </p>
                     </div>
@@ -1793,7 +2369,6 @@
                 </div>
             </div>
             <div class="summary">
-                <div class="summary__visual"></div>
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         The climate crisis is a serious challenge that <br />
@@ -1807,6 +2382,7 @@
                         we'll solve it.
                     </p>
                 </div>
+                <div class="summary__visual"></div>
             </div>
             <div class="whats-next__wrap">
                 <div class="whats-next">
@@ -1913,7 +2489,7 @@
                             }
 
                             //console.log(mgcwBgCurrent)
-                            milestoneGoalsContWrap.style.backgroundPosition = "left "+ (mgcwBgCurrent)+"%"
+                            milestoneGoalsContWrap.style.backgroundPosition = "center "+ (mgcwBgCurrent)+"%"
                         },10)
                     }
                     mgcwBgMoition();
