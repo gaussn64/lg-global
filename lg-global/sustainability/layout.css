@@ -147,6 +147,7 @@ ul,ol {
     .c-header__gnb {
         display: none;
         height: calc(100vh - 142px);
+        margin-top: 90px;
         padding: 24px 20px;
         box-sizing: border-box;
         border-radius: 20px;
@@ -184,6 +185,7 @@ ul,ol {
     .c-header__btn-gnb {
         display: block;
         position: absolute;
+        z-index: 3;
         top: 24px;
         right: calc(50% - 48px);
         width: 18px;

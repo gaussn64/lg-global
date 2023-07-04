@@ -60,11 +60,11 @@ function initCommonHeader() {
 }
 
 function initGnbDeps2(tAnchor) {
-
     var tAnchor = tAnchor;
     var tItem = tAnchor.parentNode;
     var tList = tItem.parentNode;
     var gdItem = tList.getElementsByTagName("li");
+    var gOrgIndex = getElementIndex(document.querySelector(".c-header__gnb__list__item__anchor--active").parentNode);
     var tDeps2 = tItem.querySelector(".c-header__gnb__list__item__deps2");
     var tDeps2Menu = tDeps2.querySelector(".c-header__gnb__list__item__deps2__menu");
     var tDeps2MenuItem = tDeps2Menu.querySelectorAll(".c-header__gnb__list__item__deps2__menu__item");
@@ -175,7 +175,7 @@ function initGnbDeps2(tAnchor) {
 
     tDeps2.onmouseleave = function() {
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--active")
-        tList.querySelectorAll(".c-header__gnb__list__item")[tDeps2MenuItemOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
+        tList.querySelectorAll(".c-header__gnb__list__item")[gOrgIndex].querySelector("a").classList.add("c-header__gnb__list__item__anchor--active")
         gnbDeps2Bg.style.display = "none"
 
         tAnchor.classList.remove("c-header__gnb__list__item__anchor--on")
