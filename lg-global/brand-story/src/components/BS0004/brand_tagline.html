@@ -107,6 +107,48 @@
                 background-image: url(../../mocks/BS0004/brand-elements-tagline-d.png);
             }
             
+            /*download assets*/
+            .download_assets {
+                position: absolute;
+                bottom: 3.4375vw;
+                left: 2.0833vw;
+                background: rgba(0, 0, 0, 0.7);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                padding: 0.625vw 7.0833vw 0.625vw 0.625vw;
+                border-radius: 1.0417vw;
+                display: flex;
+                align-items: center;
+            }
+            .download_assets__thumb {
+                display: block;
+                width: 4.1667vw;
+                height: 4.1667vw;
+                border-radius: 12px;
+            }
+            .download_assets__title {
+                color: #fff;
+                font-size: 0.8333vw;
+                margin-left: 1.0417vw;
+                
+            }
+            .download_assets__title b {
+                display: block;
+                font-weight: 600;
+            }
+            .download_assets__btn {
+                position: absolute;
+                display: block;
+                width: 2.5vw;
+                height: 2.5vw;
+                border-radius: 50%;
+                border: 1px solid #cbc8c24d;
+                right: 0.625vw;
+                top: 50%;
+                transform: translateY(-50%);
+                background: no-repeat center url(../../mocks/BS0002/icon_download_btn.svg);
+                background-size: 1.1458vw 1.1458vw;
+            }
 
             /*tagline slide*/
             .taglien__content {position: relative;}
@@ -540,7 +582,7 @@
             @media (max-width: 1440px) {
                 /*공통*/
                 .brand__header {
-                    margin-bottom: 80px;
+                    margin-bottom: 64px;
                 }
                 .brand__header-title {
                     font-size: 60px;
@@ -656,6 +698,11 @@
                 }
                 #visual-colors.visual__top {
                     background-image: url(../../mocks/BS0004/brand-elements-tagline-m.png);
+                }
+
+                /*download assets*/
+                .download_assets {
+                    display: none;
                 }
 
                 /*tab*/
@@ -904,7 +951,14 @@
         <!-- html code -->
         <div id="brand-container">
             <div id="visual-colors" class="visual__top">
-                
+                <div class="download_assets">
+                    <img src="../../mocks/BS0004/download_assets_slogan.png" alt class="download_assets__thumb"></img>
+                    <p class="download_assets__title">
+                        <b>LG Solgan</b>
+                        Download Assets
+                    </p>
+                    <a class="download_assets__btn" href="#" download></a>
+                </div>
             </div>
             <div class="brand__content-inner">
                 <div class="brand__header">
