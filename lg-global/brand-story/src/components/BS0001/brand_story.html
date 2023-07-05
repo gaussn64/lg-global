@@ -257,7 +257,7 @@
                 backdrop-filter: blur(50px);
                 z-index: 1;
                 opacity: 0;
-                transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
                 pointer-events: none;
             }
 
@@ -319,9 +319,8 @@
                 background-color: #00000099;
                 cursor: pointer;
                 z-index: 4;
-                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-
             .our-value__more-btn:hover {
                 transform: translateX(-50%) rotate(180deg);
             }
@@ -333,6 +332,10 @@
             .value__list__item--active::before {
                 opacity: 1;
             }
+            .value__list__item--active .our-value__more-btn {
+                transform:translateX(-50%) rotate(45deg);
+            }
+
 
 
 
@@ -1109,11 +1112,13 @@
                 let triggerWrap = document.querySelector(".our-values__container")
                 let showupList = document.querySelector(".our-value__list")
 
+                let targetPoint = triggerWrap.offsetTop - (window.innerHeight * 0.4)
+
                 gsap.timeline({
                     scrollTrigger: {
                         trigger: triggerWrap,
-                        start: triggerWrap.offsetTop - (window.innerHeight * 0.1),
-                        end: "bottom bottom",
+                        start: targetPoint,
+                        end: targetPoint,
                         onEnter: function() {
                             showupList.classList.add("our-value__list--active")
                         },
