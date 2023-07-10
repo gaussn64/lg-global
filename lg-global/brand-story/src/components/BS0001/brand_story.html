@@ -80,8 +80,10 @@
                 width: 100%;
                 overflow: hidden;
                 position: relative;
+                background: no-repeat center url(../../mocks/BS0001/brand_visual_image.png);
+                background-size: cover;
             }
-            .brand-visual-film__bg {
+            /* .brand-visual-film__bg {
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -123,7 +125,7 @@
                 height: 0.7813vw;
                 background: no-repeat center url(../../mocks/BS0001/btn_play_film.svg);
                 background-size: contain;
-            }
+            } */
 
             /*랜딩비주얼 스크롤다운 버튼*/
             .landing-visual__scrolldown {
@@ -355,13 +357,12 @@
             }
             .parallex__bgs {
                 width: 100%;
-                height: 350vh;
+                height: 600vh;
                 overflow: hidden;
             }
 
             .parallex__bgs__wrap {
                 position: relative;
-                max-width: 1680px;
                 margin: 0 auto;
                 height: 100%;
                 opacity: 0;
@@ -387,208 +388,85 @@
                 object-fit: cover;
             }
             .parallex__pin > li:nth-child(1) {
-                top: 12.28%;
+                top: 4%;
                 left: 9.11%;
                 width: 26.30vw;
                 height: 14.79vw;
-                max-width: 505px;
-                max-height: 284px;
                 background-image: url(../../mocks/BS0001/01_LG_BrandFilm_EI_Bow.png);
             }
             .parallex__pin > li:nth-child(2) {
-                top: 18.36%;
+                top: 7.1%;
                 left: 40.83%;
                 width: 19.64vw;
                 height: 11.04vw;
-                max-width: 377px;
-                max-height: 212px;
                 background-image: url(../../mocks/BS0001/02_LG_BrandFilm_EI_Gradient.png);
             }
             .parallex__pin > li:nth-child(3) {
-                top: 14.45%;
+                top: 6.1%;
                 left: 72.71%;
                 width: 29.17vw;
                 height: 16.88vw;
-                max-width: 560px;
-                max-height: 324px;
                 background-image: url(../../mocks/BS0001/03_LG_BrandFilm_EI_Product.png);
             }
             .parallex__pin > li:nth-child(4) {
-                top: 30.92%;
+                top: 16.5%;
                 left: 3.28%;
                 width: 23.54vw;
                 height: 13.23vw;
-                max-width: 452px;
-                max-height: 253px;
                 background-image: url(../../mocks/BS0001/04_LG_BrandFilm_EI_Photo.png);
             }
             .parallex__pin > li:nth-child(5) {
-                top: 49.58%;
+                top: 20.1%;
                 left: 33.65%;
                 width: 14.32vw;
                 height: 14.32vw;
-                max-width: 275px;
-                max-height: 275px;
                 background-image: url(../../mocks/BS0001/05_LG_BrandFilm_EI_Controller.png);
             }
             .parallex__pin > li:nth-child(6) {
-                top: 52.25%;
+                top: 16.3%;
                 left: 57.97%;
                 width: 37.93vw;
                 height: 26.41vw;
-                max-width: 727px;
-                max-height: 467px;
                 background-image: url(../../mocks/BS0001/06_LG_BrandFilm_EI_Fill.png);
             }
-
-
-            /*Adapting to different moods and passions*/
-            .our-moods {}
-
-            .our-mood__select {
-                display: flex;
-                justify-content: center;
-                margin: 57px 0 98px;
-            }
-            .our-mood__select__tab {
-                position: relative;
-                display: flex;
-                margin: 9px;
-                z-index: 1;
-                height: 49px;
-            }
-            .our-mood__select__tab::before {
-                content: '';
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                width: calc(100% + 18px);
-                height: calc(100% + 18px);
-                border-radius: 66px;
-                background-color: #4a4946;
-                z-index: -2;
-            }
-            .our-mood__select__tab-btn {
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
-                width: 190px;
-                height: 100%;
-                color: #fff;
-                font-size: 15px;
-            }
-            .select__tab-btn--active {
-                font-weight: 600;
-            }
-            .tab-menu__bg {
-                position: absolute;
-                left: 0;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 190px;
-                height: 100%;
-                background-color: #000;
-                border-radius: 49px;
-                z-index: -1;
-            }
-            .our-mood__content {
-                margin: 80px 120px 0;
-
+            .parallex__pin > li:nth-child(7) {
+                top: 26.5%;
+                left: 11.20vw;
+                width: 29.79vw;
+                height: 18.23vw;
+                /* background-image: ; */
+                background-color: red;
+                border-radius: 50px;
             }
 
-            .our-mood__grid {
-                background-color: #1a1a1a;
-                border-radius: 40px;
-                display: grid;
-                grid-template-columns: 1.75fr 1fr 1.15fr 1fr;
-                grid-template-rows: 13.8vw 14.89vw 13.8vw;
-                gap: 28px;
-                box-sizing: border-box;
-                padding: 37px;
+            .parallex__pin > li:nth-child(8) {
+                top: 27.6%;
+                left: 48.33vw;
+                width: 14.38vw;
+                height: 19.31vw;
+                /* background-image: ; */
+                background-color: red;
+                border-radius: 10.42vw;
             }
 
-            .our-mood__grid > li {
-                position: relative;
-                border-radius: 18px;
-                overflow: hidden;
-            }
-            .our-mood__grid > li:nth-child(1) {
-
-            }
-            .our-mood__grid > li:nth-child(2) {
-
-            }
-            .our-mood__grid > li:nth-child(3) {
-                grid-row: auto / span 2;
-                border-radius: 12.7604vw;              
-            }
-            .our-mood__grid > li:nth-child(4) {
-
-            }
-            .our-mood__grid > li:nth-child(5) {
-                margin-right: 13.57vw;
-                grid-row: auto / span 2;
-            }
-            .our-mood__grid > li:nth-child(6) {
-                margin-left: -13.57vw;
-                border-radius: 9.5833vw;
-            }
-            .our-mood__grid > li:nth-child(7) {
-                grid-row: auto / span 2;
-                border-radius: 8.229vw 8.229vw 17px 17px;
-            }
-            .our-mood__grid > li:nth-child(8) {
-                margin-left: -13.57vw;
-                margin-right: 10.5vw;
-            }
-            .our-mood__grid > li:nth-child(9) {
-                margin-left: -10.5vw;
+            .parallex__pin > li:nth-child(9) {
+                top: 30.9%;
+                left: -15.47vw;
+                width: 41.15vw;
+                height: 26.72vw;
+                /* background-image: ; */
+                background-color: red;
+                border-radius: 50px;
             }
 
-            .mood-item__image {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            .brand-colors {
-                display: flex;
-                height: 100%;
-                width: 100%;
-                gap: 0.36vw;
-            }
-            .brand-colors__item {
-                box-shadow: 6px 6px 20px #0000001a;
-                min-width: 30px;
-                height: 100%;
-                border-radius: 20px;
-                transition: .5s;
-            }
-            .brand-colors__item.brand-colors__item--active {
-                border-radius: 3.65vw;
-                flex: 1;
-            }
-            .brand-colors__item:nth-child(1) {
-                background-color: #FD312E;
-                width: 14.92%;
-            }
-            .brand-colors__item:nth-child(2) {
-                background-color: #fff;
-                width: 12.2%;
-            }
-            .brand-colors__item:nth-child(3) {
-                background-color: #000;
-                width: 12.2%;
-            }
-            .brand-colors__item:nth-child(4) {
-                background-color: #F0ECE4;
-                width: 6.46%;
-            }
-            .brand-colors__item:nth-child(5) {
-                background-color: #A50034;
-                width: 6.46%;
+            .parallex__pin > li:nth-child(10) {
+                top: 32.3%;
+                left: 70.73vw;
+                width: 36.09vw;
+                height: 22.49vw;
+                /* background-image: ; */
+                background-color: red;
+                border-radius: 15.10vw;
             }
 
             /*Our values----------*/
@@ -737,14 +615,7 @@
                     margin-top: 120px;
                 }
 
-                 /*life-is-good*/
-                .life-is-good {
-                    max-width: 1680px;
-                    margin: 168px auto 0;
-                }
-                .life-is-good__visual {
-                    height: 945px;
-                }
+
 
                 /*our value*/
                 .our-value__list {
@@ -793,13 +664,13 @@
         <!-- html code -->
         <div id="brand-container" data-color-mode="prevent">
             <div class="brand-visual-film">
-                <video class="brand-visual-film__bg" autoplay="autoplay" muted="muted" loop="loop">
+                <!-- <video class="brand-visual-film__bg" autoplay="autoplay" muted="muted" loop="loop">
                     <source src="../../mocks/BS0001/brand_film_master_visual.mp4" type="video/mp4">
-                </video>
-                <div class="brand-visual-film__abs">
+                </video> -->
+                <!-- <div class="brand-visual-film__abs">
                     <h2 class="brand-visual-film__title">We’re bringing a smile<br> back to tech</h2>
                     <a class="brand-visual-film__play-btn" href="#">Play film</a>
-                </div>
+                </div> -->
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                 </div>
@@ -819,13 +690,6 @@
                         <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
                         <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
                         <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
-                    </ul>
-                </div>
-                <div class="life-is-good">
-                    <ul class="life-is-good__visual">
-                        <li>
-                            <img src="../../mocks/BS0001/we_are_the_brand.png" alt="">
-                        </li>
                     </ul>
                 </div>
                 <div class="our-values__container">
@@ -891,80 +755,18 @@
                     <div class="parallex__bgs">
                         <div class="parallex__bgs__wrap">                            
                             <ul class="parallex__pin">
-                                <li data-speed="0.35"></li>
-                                <li data-speed="0.23"></li>
-                                <li data-speed="0.42"></li>
+                                <li data-speed="0.26"></li>
+                                <li data-speed="0.21"></li>
+                                <li data-speed="0.38"></li>
+                                <li data-speed="0.32"></li>
+                                <li data-speed="0.17"></li>
+                                <li data-speed="0.34"></li>
                                 <li data-speed="0.37"></li>
-                                <li data-speed="0.46"></li>
-                                <li data-speed="0.62"></li>
+                                <li data-speed="0.48"></li>
+                                <li data-speed="0.27"></li>
+                                <li data-speed="0.32"></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="our-moods">
-                    <div class="brand__content__intro">
-                        <h3 class="brand__content__intro__title">Adapting to different moods <br>and passions</h3>
-                    </div>
-                    <div class="our-mood__select">
-                        <div class="our-mood__select__tab">
-                            <span class="tab-menu__bg"></span>
-                            <a href="#darkMood" class="our-mood__select__tab-btn">dark</a>
-                            <a href="#redMood" class="our-mood__select__tab-btn select__tab-btn--active">red</a>
-                            <a href="#lightMood" class="our-mood__select__tab-btn">right</a>
-                        </div>
-                    </div>
-                    <div class="our-mood__content">
-                        <ul class="our-mood__grid">
-                            <li>
-                                <ul class="brand-colors">
-                                    <li class="brand-colors__item" data-brand-color="red"></li>
-                                    <li class="brand-colors__item" data-brand-color="prevent"></li>
-                                    <li class="brand-colors__item brand-colors__item--active" data-brand-color="black"></li>
-                                    <li class="brand-colors__item"></li>
-                                    <li class="brand-colors__item"></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-01--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-01--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-01--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-02--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-02--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-02--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-03--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-03--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-03--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-04--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-04--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-04--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-05--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-05--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-05--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-06--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-06--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-06--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-07--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-07--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-07--dark.png" class="mood-item__image mood-item__image--dark" />
-                            </li>
-                            <li>
-                                <img src="../../mocks/BS0001/mood-item-image-08--dark.png" class="mood-item__image mood-item__image--dark" />
-                                <img src="../../mocks/BS0001/mood-item-image-08--dark.png" class="mood-item__image mood-item__image--red" />
-                                <img src="../../mocks/BS0001/mood-item-image-08--dark.png" class="mood-item__image mood-item__image--light" />
-                            </li>
-                        </ul>
                     </div>
                 </div>
                 <div class="brand__content__intro">
@@ -997,7 +799,7 @@
                                 </li>
                                 <li class="our-identity__slide our-identity__slide--typo swiper-slide">
                                     <h3 class="our-identity__item-title">Typography</h3>
-                                    <a class="our-identity__move-btn" href="../BS0009/brand_typography.html"></a>
+                                    <a class="our-identity__move-btn" href="../BS0007/brand_typography.html"></a>
                                 </li>
                             </ul>
                         </div>
