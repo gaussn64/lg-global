@@ -371,6 +371,20 @@
                     padding: 0 120px 80px;
                 }
 
+                /*photography grid*/
+                .photography__grid {
+                    gap: 10px;
+                    border-radius: 10px;
+                }
+                .photography__grid__item:nth-child(1) {width: calc(20% - 8px);}
+                .photography__grid__item:nth-child(2) {width: calc(40% - 8px);}
+                .photography__grid__item:nth-child(3) {width: calc(20% - 8px);}
+                .photography__grid__item:nth-child(4) {width: calc(20% - 6px);}
+                .photography__grid__item:nth-child(5) {width: calc(12% - 8px);}
+                .photography__grid__item:nth-child(6) {width: calc(35% - 8px);}
+                .photography__grid__item:nth-child(7) {width: calc(27% - 8px);}
+                .photography__grid__item:nth-child(8) {width: calc(26% - 6px);}
+
                 /*brand elements 슬라이드*/
                 .brand-elements {
                     padding: 60px 120px 64px;
@@ -408,7 +422,7 @@
                     display: none;
                 }
                 .brand__content-inner {
-                    padding: 0 20px 34px;
+                    padding: 0 20px 64px;
                 }
 
                 /*brand elements 슬라이드*/
@@ -468,42 +482,20 @@
 
                 /*photography grid*/
                 .photography__grid {
-                    gap: 10px;
+                    gap: 6px;
                     border-radius: 10px;
                 }
-                .photography__grid__item{
+                .photography__grid__item {
                     height: 44vw;
-                    background: no-repeat center;
-                    background-size: cover;
                 }
-                /*photography grid -- everyday*/
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(5) {width: calc(32% - 5px);}
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(6) {width: calc(68% - 5px);}
-
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(3),
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(4),
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(7),
-                .photography__grid.photography__grid--everyday .photography__grid__item:nth-child(8) {display: none;}
-                /*photography grid -- energy*/
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(6) {width: calc(58% - 5px);}
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(7) {width: calc(42% - 5px);}
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(3),
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(4),
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(5),
-                .photography__grid.photography__grid--energy .photography__grid__item:nth-child(8) {display: none;}
-                /*photography grid -- photography*/
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(1) {width: calc(45% - 5px);}
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(2) {width: calc(55% - 5px);}
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(3) {width: calc(68% - 5px); order: 4;}
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(5) {width: calc(32% - 5px);}
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(4),
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(6),
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(7),
-                .photography__grid.photography__grid--products .photography__grid__item:nth-child(8) {display: none;}
+                .photography__grid__item:nth-child(1) {width: calc(45% - 3px); order: 1;}
+                .photography__grid__item:nth-child(2) {width: calc(55% - 3px); order: 2;}
+                .photography__grid__item:nth-child(3) {width: calc(30% - 3px); order: 3;}
+                .photography__grid__item:nth-child(6) {width: calc(70% - 3px); order: 4;}
+                .photography__grid__item:nth-child(4) {width: calc(45% - 3px); order: 5;}
+                .photography__grid__item:nth-child(7) {width: calc(55% - 3px); order: 6;}
+                .photography__grid__item:nth-child(5),
+                .photography__grid__item:nth-child(8) {display: none;}
 
 
                 /*brand elements 슬라이드*/
@@ -627,8 +619,9 @@
                 <div class="brand__header">
                     <h2 class="brand__header-title">Uniquely LG.</h2>
                     <p class="brand__header-description">
-                        Our imagery should feel warm, positive and relatable. Always <br>
-                        balancing warmth and innovation in a way that feels uniquely LG. 
+                        We capture and celebrate the energy and attitude of people and their passions <br>
+                        - whether that be gaming, fitness, fashion or food. Our imagery should feel bold, <br>
+                        positive, vibrant and in motion.
                     </p>
                 </div>
                 <ul class="photography__grid photography__grid--everyday">

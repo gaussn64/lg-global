@@ -210,7 +210,7 @@
 
             /*contents ------*/
             .our-new-font {
-                border-radius: 30px;
+                border-radius: 1.5625vw;
                 overflow: hidden;
                 height: 43.23vw;
             }
@@ -218,7 +218,7 @@
 
             /*LG EI*/
             .text-element {
-                border-radius: 30px;
+                border-radius: 1.5625vw;
                 height: 43.23vw;
                 overflow: hidden;
             }
@@ -264,11 +264,10 @@
 
             .bring-it-to-life__slide {
                 overflow: hidden;
-                border-radius: 30px;
-
+                border-radius: 1.5625vw;
             }
             .bring-it-to-life__slide li {
-                border-radius: 30px;
+                border-radius: 1.5625vw;
                 overflow: hidden;
                 height: 43.23vw;
             }
@@ -483,12 +482,33 @@
                     margin: 80px 0 38px;
                 }
 
+                /*contents ------*/
+
                 .brand__header-title + .brand__header-description {
                     font-size: 20px;
                     line-height: 28px;
                 }
                 .brand__content-inner {
                     padding: 0 120px 80px;
+                }
+
+                .index-text {
+                    left: 30px;
+                    top: 30px;
+                    font-size: 13px;
+                    height: 37px;
+                    padding: 0 19px;
+                }
+
+                .bring-it-to-life__slide__controller {
+                    bottom: 30px;
+                    right: 30px;
+                    gap: 4px;
+                }
+                .bring-it-to-life__slide__controller > button {
+                    width: 37px;
+                    height: 37px;
+                    background-size: 17px;
                 }
 
                 /*brand elements 슬라이드*/
@@ -527,7 +547,7 @@
                     display: none;
                 }
                 .brand__content-inner {
-                    padding: 0 20px 34px;
+                    padding: 0 20px 64px;
                 }
 
                 /*brand elements 슬라이드*/
@@ -547,7 +567,7 @@
             @media (max-width: 768px) {
                 /*공통*/
                 #visual-design-system.visual__top {
-                    background-image: url(../../mocks/BS0006/brand-elements-design-system-m.png);
+                    background-image: url(../../mocks/BS0007/brand-elements-typography-m.png);
                 }
 
                 /*download assets*/
@@ -596,6 +616,37 @@
                 }
                 .tab-container {margin-top: 32px;}
 
+
+                /*contents ------*/
+                .our-new-font {
+                    border-radius: 10px;
+                    height: 90vw;
+                }
+                /*LG EI*/
+                .text-element {
+                    border-radius: 10px;
+                    height: 90vw;
+                }
+
+                /*Bringing it to life*/
+                .bring-it-to-life__slide {
+                    border-radius: 10px;
+                }
+                .bring-it-to-life__slide li {
+                    border-radius: 10px;
+                    height: 90vw;
+                }
+                .bring-it-to-life__slide__controller {
+                    display: none;
+                }                
+
+                .index-text {
+                    left: 16px;
+                    top: 16px;
+                    font-size: 12px;
+                    height: 20px;
+                    padding: 0 10px;
+                }
 
 
                 /*brand elements 슬라이드*/
@@ -737,7 +788,11 @@
                     </p>
                 </div>
                 <div class="our-new-font">
-                    <img src="../../mocks/BS0007/typography_our_new_font.png" alt="">
+                    <picture>
+                        <source media="(min-width: 789px)" srcset="../../mocks/BS0007/typography_our_new_font.png">
+                        <source media="(max-width: 768px)" srcset="../../mocks/BS0007/typography_our_new_font-m.png">
+                        <img src="../../mocks/BS0007/typography_our_new_font.png" alt="">
+                    </picture>
                 </div>
 
                 <div class="brand__header">
@@ -756,7 +811,12 @@
                 <div class="tab-container" data-tab="textElement">
                     <div id="headline" class="tab-container__content tab-container__content--active">
                         <div class="text-element text-element--headline">
-                            <img src="../../mocks/BS0007/text-element--headline.svg" alt="">
+                            <picture>
+                                <source media="(min-width: 1441px)" srcset="../../mocks/BS0007/text-element--headline.svg">
+                                <source media="(min-width: 769px) and (max-width: 1440px)" srcset="../../mocks/BS0007/text-element--headline-t.svg">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0007/text-element--headline-m.svg">
+                                <img src="../../mocks/BS0007/text-element--headline.svg" alt="">
+                            </picture>
                         </div>
                     </div>
                     <div id="body" class="tab-container__content">
@@ -777,9 +837,19 @@
                     <span class="index-text">Out of home</span>
                     <div class="bring-it-to-life__slide">
                         <ul class="swiper-wrapper">
-                            <li class="swiper-slide"><img src="../../mocks/BS0007/bringing_it_to_life_slide_01.png" alt=""></li>
-                            <li class="swiper-slide"><img src="../../mocks/BS0007/bringing_it_to_life_slide_02.png" alt=""></li>
-                            <li class="swiper-slide"><img src="../../mocks/BS0007/bringing_it_to_life_slide_03.png" alt=""></li>
+                            <li class="swiper-slide">
+                                <picture>
+                                    <source media="(min-width: 789px)" srcset="../../mocks/BS0007/bringing_it_to_life_slide_01.png">
+                                    <source media="(max-width: 768px)" srcset="../../mocks/BS0007/bringing_it_to_life_slide_01-m.png">
+                                    <img src="../../mocks/BS0007/bringing_it_to_life_slide_01.png" alt="">
+                                </picture>
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="../../mocks/BS0007/bringing_it_to_life_slide_02.png" alt="">
+                            </li>
+                            <li class="swiper-slide">
+                                <img src="../../mocks/BS0007/bringing_it_to_life_slide_03.png" alt="">
+                            </li>
                         </ul>
                     </div>
                     <div class="bring-it-to-life__slide__controller">
@@ -916,6 +986,8 @@
 
             function outOfHomeSlider() {
                 const slider = document.querySelector('.bring-it-to-life__slide')
+                const slideTag = document.querySelector('.bring-it-to-life .index-text')
+                const tag = ['Out of home', 'Mobile experience', 'Social']
 
                 const swiper = new Swiper(slider, {
                     slidesPerView: 1,
@@ -925,6 +997,13 @@
                         prevEl: '.bring-it-to-life__slide__controller .prev-btn',
                         nextEl: '.bring-it-to-life__slide__controller .next-btn',
                     },
+                })
+
+                swiper.on('activeIndexChange', ()=> {
+                    let idx = swiper.activeIndex
+                    let idxTag = tag[idx]
+
+                    slideTag.textContent = idxTag
                 })
             } 
 
