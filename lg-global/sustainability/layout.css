@@ -217,4 +217,9 @@ ul,ol {
         transform: rotate(45deg);
         top: calc(50% - 1px);
     }
+
+    /* Common Header - Location */
+    .c-header__location {
+        display: none;
+    }
 }
