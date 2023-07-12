@@ -106,13 +106,7 @@
                 background-color: #00000066;
                 background-size: 1.0417vw auto;
                 cursor: pointer;
-                opacity: 0;
-                visibility: hidden;
                 transition: .5s;
-            }
-            .btn-play.btn-play--active {
-                opacity: 1;
-                visibility: visible;
             }
 
             .brand-in-action__pagination {
@@ -159,10 +153,6 @@
                 animation-duration: 3.5s;
             }
 
-            .brand-in-action__pagination__btn--active:nth-child(1) span {
-                animation-duration: 95.5s;
-            }
-
             .brand-in-action__pagination__btn--paused span {
                 animation-play-state: paused;
             }
@@ -197,6 +187,80 @@
                 transform: rotate(-180deg);
             }
 
+            .brand-in-action__slide-item--video {
+                background-image: url(../../mocks/BS0008/brand-in-action-video-popup-cover.png);
+            }
+
+            /*팝업*/
+            .popup-in-action {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                display: none;
+            }
+            .pop-inner {
+                width: 100%;
+                height: 100%;
+                background-color: #222;
+            }
+            #video-item {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .video-controller {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                padding: 54px;
+            }
+
+            .btn-circle {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                border: 1px solid #f0ece44d;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                background: no-repeat center;
+                background-size: 30px auto;
+                background-color: #000000b3;
+                cursor: pointer;
+                z-index: 3;
+            }
+            .btn-circle--close {
+                position: absolute;
+                right: 40px;
+                top: 40px;
+                background-image: url(../../mocks/BS0008/ico-btn-close.svg);
+            }
+            .btn-circle--play-pause {background-image: url(../../mocks/BS0008/ico-btn-pause.svg);}
+            .btn-circle--sound-on-off {background-image: url(../../mocks/BS0008/ico-btn-sound-on.svg);}
+
+            .progress-wrap {
+                flex: 1;
+                height: 6px;
+                background-color: #F6F3EB4D;
+                margin-left: 30px;
+            }
+
+            span.progress {
+                width: 30%;
+                height: inherit;
+                display: block;
+                background-color: #FD312E;
+            }
+
+
             @media (max-width: 1720px) {}
             @media (max-width: 1279px) {}
             @media (max-width: 768px) {
@@ -221,9 +285,6 @@
                 <div class="brand-in-action__slider">
                     <div class="brand-in-action__slider-inner swiper-wrapper">
                         <div class="brand-in-action__slide-item brand-in-action__slide-item--video swiper-slide" data-swiper-autoplay="2000">
-                            <video class="brand-film__video" autoplay="autoplay" muted="muted" loop="loop"><!---->
-                                <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
-                            </video>
                             <button class="btn-play"></button>
                         </div>
                         <div class="brand-in-action__slide-item swiper-slide"><img src="../../mocks/BS0008/brand-in-action-01-d.png" alt=""></div>
@@ -246,10 +307,27 @@
                     <button class="brand-in-action__controller__btn brand-in-action__controller__btn--next"></button>
                 </div>
             </div>
+
+            <div class="popup-in-action">
+                <button class="btn-circle btn-circle--close"></button>
+                <div class="pop-inner">
+                    <video id="video-item">
+                        <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-controller">
+                        <button class="btn-circle btn-circle--play-pause"></button>
+                        <button class="btn-circle btn-circle--sound-on-off"></button>
+                        <div class="progress-wrap">
+                            <span class="progress"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
+
             function getSiblingsByClass(element, className) {
                 const siblings = Array.from(element.parentElement.getElementsByClassName(className));
                 const index = siblings.indexOf(element);
@@ -271,41 +349,11 @@
                 })
             }
 
-            const clearStyle = (el) => {el.style = ''}
 
-
-            function slider(videoTimer) {
+            function slider() {
                 const slide = document.querySelector('.brand-in-action__slider')
+                const bullets = document.querySelectorAll('.brand-in-action__pagination__btn')
                 
-                const videoArea = document.querySelector('.brand-in-action__slide-item--video')
-                const video = videoArea.querySelector('video.brand-film__video')
-                const videoPlayBtn = videoArea.querySelector('.btn-play')
-                const bullets = [...document.querySelectorAll('.brand-in-action__pagination__btn')]
-
-                const bullet = bullets[0]
-
-                let progressBar = document.querySelector('.brand-in-action__pagination__btn--active > span')
-
-                let videoBtnTimer = null
-                let isVideoPause = false
-
-                const videoPlaySet = (videoProp) => {
-                    if (videoProp) {
-                        isVideoPause = true
-                        videoPlayBtn.classList.add('btn-play--active')
-                        video.pause()
-
-                        bullet.classList.add('brand-in-action__pagination__btn--paused')
-                    } else {
-
-                        isVideoPause = false
-                        videoPlayBtn.classList.remove('btn-play--active')
-                        video.play()
-                        bullet.classList.remove('brand-in-action__pagination__btn--paused')
-                    }
-
-                }
-
                 const swiper = new Swiper(slide, {
                     slidesPerView: 1,
                     spaceBetween: 0,
@@ -322,65 +370,47 @@
                     navigation: {
                         nextEl: '.brand-in-action__controller__btn--next',
                         prevEl: '.brand-in-action__controller__btn--prev'
-                    },
-                    on: {
-                        activeIndexChange: (swiper) => {
-                            swiper.realIndex === 0 ? videoPlaySet(false) : videoPlaySet(true)
-                            swiper.realIndex === 0 ? '' : video.currentTime = 0
-                            
-                            setClass(bullets[swiper.realIndex], 'brand-in-action__pagination__btn--active')
-                        },
-                    },
-                    breakpoints: {
-                        768: {
-                            loop: true,
-                        }
                     }
                 })
 
-
-                video.addEventListener('click', ()=> {
-                    videoPlaySet(true)
+                swiper.on('activeIndexChange', ()=> {
+                    let index = swiper.activeIndex
+                    let correntBullet = bullets[index]
+                    setClass(correntBullet, 'brand-in-action__pagination__btn--active')
                 })
 
-                videoPlayBtn.addEventListener('click', ()=> {
-                    videoPlaySet(false)
+                const videoPlayBtn = document.querySelector('.btn-play')
+
+                videoPlayBtn.addEventListener('click', () => {
+                    //팝업 열림
+                    popupShow(true)
                 })
+
+                function popupInit() {
+                    const btnClose = document.querySelector('.btn-circle--close')
+                    btnClose.addEventListener('click', () => popupShow(false))
+                }
+
+                function popupShow(onOff) {
+                    const popup = document.querySelector('.popup-in-action')
+
+                    if (onOff === true) {
+                        swiper.autoplay.stop(); // 슬라이드 멈춤
+                        bullets[0].classList.add('brand-in-action__pagination__btn--paused') //progressbar 멈춤
+                        popup.style.display = "block"
+                    } else {
+                        popup.style.display = 'none' 
+                        swiper.autoplay.start(); // 슬라이드 재생
+                        bullets[0].classList.remove('brand-in-action__pagination__btn--paused') //progressbar 멈춤
+                    }
+                }
+
+                popupInit()
             }
-            //실행되어야하는 기능
-            //1. 시작 시 
-            //1-1. 불렛 span 안에 animate-duration 초 세팅
-            //1-2. 스와이퍼 오토플레이 세컨드 넣기
 
-            //2. video pause(), replay() 기능
-            //2-1. 비디오 클릭하면
-            //2-1-1. 비디오 멈춤
-            //2-1-2. 스와이퍼 오토플레이 멈춤
-            //2-1-3. 해당 인디게이터 애니메이션 멈춤
-
-            //2-2. 멈춘 비디오를 클릭하면
-            //2-2-1. 비디오 재실행
-            //2-2-2. 스와이퍼 오토플레이 재시작
-            //2-1-3. 해당 인디게이터 애니메이션 재실행
-
-            //3. 슬라이드가 체인지되었을 때 (비디오 섹션이 아니면)
-            //3-1. 비디오 pause()
-
-            //3. 슬라이드가 체인지되었을 때 (비디오 섹션이라면)
-            //4-1. 비디오 인디게이터 멈춤 클래스가 있으면 지우기
-            //4-2. 비디오 play()
 
             window.addEventListener('DOMContentLoaded', () => {
-                const video = document.querySelector('video.brand-film__video')
-                const videoSet = document.querySelector('[data-swiper-autoplay]')
-                if (video.readyState <= 1) {
-                    video.addEventListener('loadedmetadata', function() {
-                        const ms = video.duration * 1000
-                        videoSet.dataset.swiperAutoplay = ms
-
-                        slider(ms)
-                    });
-                }
+                slider()
             })
         </script>
 
