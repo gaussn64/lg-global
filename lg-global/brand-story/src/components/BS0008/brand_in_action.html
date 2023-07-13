@@ -150,7 +150,7 @@
             .brand-in-action__pagination__btn--active span {
                 opacity: 1;
                 animation-name: zeroTo;
-                animation-duration: 3.5s;
+                animation-duration: 4.5s;
             }
 
             .brand-in-action__pagination__btn--paused span {
@@ -192,6 +192,12 @@
             }
 
             /*팝업*/
+            .isPopupOpen {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
             .popup-in-action {
                 position: fixed;
                 top: 0;
@@ -211,7 +217,7 @@
             #video-item {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
+                object-fit: contain;
             }
 
             .video-controller {
@@ -222,6 +228,8 @@
                 align-items: center;
                 gap: 2px;
                 padding: 54px;
+
+                display: none;
             }
 
             .btn-circle {
@@ -284,7 +292,7 @@
             <div class="brand-in-action__wrap">
                 <div class="brand-in-action__slider">
                     <div class="brand-in-action__slider-inner swiper-wrapper">
-                        <div class="brand-in-action__slide-item brand-in-action__slide-item--video swiper-slide" data-swiper-autoplay="2000">
+                        <div class="brand-in-action__slide-item brand-in-action__slide-item--video swiper-slide">
                             <button class="btn-play"></button>
                         </div>
                         <div class="brand-in-action__slide-item swiper-slide"><img src="../../mocks/BS0008/brand-in-action-01-d.png" alt=""></div>
@@ -311,7 +319,7 @@
             <div class="popup-in-action">
                 <button class="btn-circle btn-circle--close"></button>
                 <div class="pop-inner">
-                    <video id="video-item">
+                    <video id="video-item" controls>
                         <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
                     </video>
                     <div class="video-controller">
@@ -360,7 +368,7 @@
                     speed: 500,
                     easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
                     autoplay: {
-                        delay: 3000,
+                        delay: 4000,
                         disableOnInteraction: false
                     },
                     watchOverflow: true,
@@ -379,11 +387,11 @@
                     setClass(correntBullet, 'brand-in-action__pagination__btn--active')
                 })
 
+                const video = document.querySelector('video')
                 const videoPlayBtn = document.querySelector('.btn-play')
 
                 videoPlayBtn.addEventListener('click', () => {
-                    //팝업 열림
-                    popupShow(true)
+                    popupShow(true) //팝업 열림
                 })
 
                 function popupInit() {
@@ -392,16 +400,25 @@
                 }
 
                 function popupShow(onOff) {
+                    const body = document.querySelector('body')
                     const popup = document.querySelector('.popup-in-action')
 
                     if (onOff === true) {
                         swiper.autoplay.stop(); // 슬라이드 멈춤
                         bullets[0].classList.add('brand-in-action__pagination__btn--paused') //progressbar 멈춤
                         popup.style.display = "block"
+                        body.classList.add('isPopupOpen')
+                        video.play()
+                        
                     } else {
                         popup.style.display = 'none' 
                         swiper.autoplay.start(); // 슬라이드 재생
                         bullets[0].classList.remove('brand-in-action__pagination__btn--paused') //progressbar 멈춤
+                        body.classList.remove('isPopupOpen')
+
+                        video.currentTime = 0;
+                        video.pause()
+
                     }
                 }
 
