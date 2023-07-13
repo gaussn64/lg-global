@@ -142,10 +142,10 @@ function initGnbDeps2(tAnchor) {
                 if(gdItem[y].className.indexOf("deps2") > -1) continue;
                 gdItem[y].style.display = "none"
             }
-            tItem.style.display = "block"
-            tItem.style.marginTop = "0px"
             tAnchor.style.display = "none"
             setTimeout(function() {
+                tItem.style.display = "block"
+                tItem.style.marginTop = "0px"
                 tDeps2MenuBtnBack.style.opacity = 1
             },100)
         }
