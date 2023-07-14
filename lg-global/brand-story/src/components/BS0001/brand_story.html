@@ -327,11 +327,14 @@
                 position: sticky;
                 top: 0;
                 z-index: 3;
+                transition: opacity .5s ease;
+                opacity: 0;
             }
             .parallex__bgs {
                 width: 100%;
-                height: 600vh;
+                height: 650vh;
                 overflow: hidden;
+                margin-top: -130vh;
             }
 
             .parallex__bgs__wrap {
@@ -741,6 +744,7 @@
 
                 /*Emotionally Intelligent Design*/
                 .parallex__bgs {
+                    margin-top: -100vh;
                     height: 400vh;
                 }
                 .parallex__pin > li {
@@ -1123,14 +1127,12 @@
                 const targetItems = targetWrap.querySelectorAll('li')
                 const targetParent = targetWrap.parentElement
                 const targetGrand = targetParent.parentElement
+                const targetTitle = document.querySelector('.parallex__pin-text')
 
                 
                 let totalScroll = targetWrap.getBoundingClientRect().height
                 let endPoint = totalScroll - window.innerHeight
                 let endPercent = Math.floor((endPoint / totalScroll) * 100)
-
-
-                console.log(endPercent)
 
                 gsap.to(targetItems, {
                     y: (i, target) => -totalScroll * target.dataset.speed,
@@ -1142,7 +1144,8 @@
                         pin: true,
                         scrub: 0.2,
                         onUpdate: self => {
-                            self.progress > 0.1 && self.progress <= 0.8 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
+                            self.progress > 0.1 && self.progress <= 0.9 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
+                            self.progress > 0.2 && self.progress <= 0.75 ? targetTitle.style.opacity = 1 : targetTitle.style.opacity = 0
                         }
                     },
                 })
