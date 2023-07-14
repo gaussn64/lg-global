@@ -55,6 +55,7 @@
     <main id="contents" class="c-contents">
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
         <style>
             /* 임시 */
             #container-cd622da11f {
@@ -198,6 +199,14 @@
                 overflow: hidden;
             }
 
+            .btn-circle--close {
+                width: 48px;
+                height: 48px;
+                top: 69px;
+                right: 20px;
+                background-size: 24px auto;
+            }
+
             .popup-in-action {
                 position: fixed;
                 top: 0;
@@ -214,25 +223,36 @@
                 height: 100%;
                 background-color: #222;
             }
-            #video-item {
+
+            .video-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+            .video-wrapper > div {
+                width: inherit;
+                height: inherit;
+            }
+            .video-wrapper video {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
 
-            .video-controller {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                display: flex;
+            /*video controller style*/
+            /*controll bar*/
+            .vjs-has-started .vjs-control-bar, 
+            .vjs-audio-only-mode .vjs-control-bar {
+                background-color: transparent;
+                margin: 54px;
+                width: auto;
+                height: auto;
                 align-items: center;
                 gap: 2px;
-                padding: 54px;
-
-                display: none;
             }
 
-            .btn-circle {
+            /*controll btn*/
+            .video-wrapper .video-js button,
+            .btn-circle--close {
                 width: 64px;
                 height: 64px;
                 border-radius: 50%;
@@ -247,26 +267,86 @@
             }
             .btn-circle--close {
                 position: absolute;
-                right: 40px;
                 top: 40px;
+                right: 40px;
                 background-image: url(../../mocks/BS0008/ico-btn-close.svg);
             }
-            .btn-circle--play-pause {background-image: url(../../mocks/BS0008/ico-btn-pause.svg);}
-            .btn-circle--sound-on-off {background-image: url(../../mocks/BS0008/ico-btn-sound-on.svg);}
+            .video-wrapper .video-js .vjs-button > .vjs-icon-placeholder:before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: no-repeat center;
+                background-size: 30px auto;
+            }
+            .video-wrapper .video-js .vjs-button.vjs-mute-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-sound-on.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-play-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-play.svg);
+            }
 
-            .progress-wrap {
+            /*progress bar*/
+            .video-wrapper .vjs-progress-control {
+                width: auto;
                 flex: 1;
                 height: 6px;
-                background-color: #F6F3EB4D;
-                margin-left: 30px;
+                margin-left: 35px;
+                min-width: unset;
             }
-
-            span.progress {
-                width: 30%;
-                height: inherit;
-                display: block;
+            .video-wrapper .video-js .vjs-play-progress {
                 background-color: #FD312E;
             }
+            .video-wrapper .video-js .vjs-play-progress:before {
+                display: none;
+            }
+            .video-wrapper .video-js .vjs-progress-control .vjs-progress-holder {
+                margin: 0;
+                background-color: #F6F3EB4D;
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-slider .vjs-icon-placeholder {
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-load-progress,
+            .video-wrapper .video-js .vjs-load-progress div {
+                background-color: #F6F3EB4D;
+            }
+
+            /*volume panel*/
+            .video-wrapper .video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+                height: auto;
+                width: unset;
+            }
+            .video-wrapper .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+                position: absolute !important;
+                left: 50% !important;
+                top: -74px;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level {
+                width: 100%;
+                background-color: #FD312E;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level:before {
+                display: none;
+            }
+            .video-wrapper .video-wrapper .vjs-volume-bar.vjs-slider-vertical {
+                margin: 0;
+                width: 6px;
+                height: 60px;
+                background-color: #F6F3EB4D;
+            }
+
+            /*tooltip*/
+            .video-wrapper .video-js .vjs-time-tooltip ,
+            .video-wrapper .video-js .vjs-progress-control .vjs-mouse-display {
+                display: none !important;
+            }
+
 
 
             @media (max-width: 1720px) {}
@@ -300,11 +380,28 @@
                     background-size: 24px auto;
                 }
 
-                #video-item {
+                .video-wrapper video {
                     object-fit: contain;
                 }
+
+                /*video controller style*/
+                /*controll bar*/
+                .vjs-has-started .vjs-control-bar, 
+                .vjs-audio-only-mode .vjs-control-bar {
+                    margin: 0;
+                }
+                .video-wrapper .video-js button {
+                    display: none;
+                }
+                /*progress bar*/
+                .video-wrapper .vjs-progress-control {
+                    margin-left: 0;
+                }
+
+
+
                 @media (orientation: landscape) {
-                    #video-item {
+                    .video-wrapper video {
                         object-fit: cover;
                     }
                 }
@@ -343,20 +440,16 @@
             <div class="popup-in-action">
                 <button class="btn-circle btn-circle--close"></button>
                 <div class="pop-inner">
-                    <video id="video-item" controls>
-                        <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
-                    </video>
-                    <div class="video-controller">
-                        <button class="btn-circle btn-circle--play-pause"></button>
-                        <button class="btn-circle btn-circle--sound-on-off"></button>
-                        <div class="progress-wrap">
-                            <span class="progress"></span>
-                        </div>
+                    <div class="video-wrapper">
+                        <video id="video-item" controls class="vjs-matrix video-js" preload="auto">
+                            <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
+                        </video>
                     </div>
                 </div>
             </div>
         </div>
         <!-- //html code -->
+        <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
 
@@ -450,7 +543,35 @@
             }
 
 
+            function video () {
+                var player = videojs('video-item', {
+                    sources: [
+                        {src : '../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4', type: 'video/mp4'}
+                    ],
+                    controls : true,
+                    playsinline : true,
+                    muted : true,
+                    preload : "metadata",
+                    controlBar : {
+                        remainingTimeDisplay : false,
+                        pictureInPictureToggle: false,
+                        fullscreenToggle: false,
+                        volumePanel: {
+                            inline: false,
+                            volumeControl: {
+                                vertical: true
+                            }
+                        }
+                    },
+                    userActions: {
+                        timeTooltip: false
+                    }
+                    
+                });
+            }
+
             window.addEventListener('DOMContentLoaded', () => {
+                video()
                 slider()
             })
         </script>
