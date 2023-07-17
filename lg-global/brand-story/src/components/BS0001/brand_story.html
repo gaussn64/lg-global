@@ -24,8 +24,8 @@
                     <div class="c-header__gnb__list__item__deps2">
                         <ul class="c-header__gnb__list__item__deps2__menu">
                             <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Logo</a></li>
-                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0003/brand_colors.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Colour &amp; Gradients</a></li>
-                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0004/brand_tagline.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Tagline</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0003/brand_colors.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Color &amp; Gradients</a></li>
+                            <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0004/brand_tagline.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Slogan</a></li>
                             <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Photography</a></li>
                             <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0006/brand_design_system.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Design System</a></li>
                             <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0007/brand_typography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Typography</a></li>
@@ -210,7 +210,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 8.4375vw 120px 12.9167vw;
+                margin: 347px 120px 71px;
                 gap: 95px;
             }
             .value__list__item {
@@ -235,7 +235,7 @@
                 backdrop-filter: blur(50px);
                 z-index: 1;
                 opacity: 0;
-                transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: opacity .7s cubic-bezier(0.075, 0.82, 0.165, 1);
                 pointer-events: none;
             }
 
@@ -245,9 +245,14 @@
             
             .our-value__list--active .value__list__item:nth-child(1) {
                 transform: translateY(-200px);
+                transition-delay: 0;
+            }
+            .our-value__list--active .value__list__item:nth-child(2) {
+                transition-delay: 0.3s;
             }
             .our-value__list--active .value__list__item:nth-child(3) {
                 transform: translateY(185px);
+                transition-delay: 0.6s;
             }
 
             .our-value__info-wrap {
@@ -1048,7 +1053,7 @@
                                     <a class="our-identity__move-btn" href="../BS0002/brand_logo.html"></a>
                                 </li>
                                 <li class="our-identity__slide our-identity__slide--color swiper-slide">
-                                    <h3 class="our-identity__item-title">Colour & Gradients</h3>
+                                    <h3 class="our-identity__item-title">Color & Gradients</h3>
                                     <a class="our-identity__move-btn" href="../BS0003/brand_colors.html"></a>
                                 </li>
                                 <li class="our-identity__slide our-identity__slide--photography swiper-slide">
