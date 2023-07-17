@@ -1,0 +1,1845 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<header id="header" class="c-header">
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+    <nav class="c-header__gnb">
+        <ul class="c-header__gnb__list">
+            <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
+        </ul>
+    </nav>
+    <p class="c-header__location">Circular Economy</p>
+    <button type="button" class="c-header__btn-gnb">
+        <span class="c-header__btn-gnb__bar"></span>
+        <span class="c-header__btn-gnb__bar"></span>
+    </button>
+</header>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* Circular Economy Visual */
+            .circular-economy-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .circular-economy-visual:after {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            }
+            .circular-economy-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                line-height: 76px;
+                font-size: 80px;
+                transform: translate(0,-50%);
+            }
+            .circular-economy-visual__tit__txt {
+                font-family: 'LG_EI_Headline';
+                font-weight: 400;
+                color: white;
+            }
+            .circular-economy-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            .circular-economy-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .circular-economy-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0004/circular-economy-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0px);
+            }
+            .circular-economy-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-6px);
+                }
+                to {
+                    transform: translateY(16px);
+                }
+            }
+
+            /* Circular Economy About */
+            .circular-economy-about {
+                text-align: center;
+            }
+            .circular-economy-about__cont {
+                width: 1440px;
+                margin: 0px auto;
+                padding: 106px 0px;
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 56px;
+                color: #4A4946;
+            }
+            
+            /* Sustainability Cycle */
+            .st-cycle {
+                padding-top: 60px;
+                height: 1184px;
+                box-sizing: border-box;
+                text-align: center;
+                background: #4A4946 url(../../mocks/ST0004/bg-st-cycle.png) no-repeat center top;
+                background-size: cover;
+            }
+            .st-cycle * {
+                color: white;
+            }
+            .st-cycle__tit {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .st-cycle__intro__txt {
+                margin-top: 16px;
+            }
+            .st-cycle__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .st-cycle__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .st-cycle__inner {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 173px auto 0px;
+                width: 1076px;
+                height: 513px;
+                text-align: center;
+                background: url(../../mocks/ST0004/line-st-cycle.svg) no-repeat center center;
+                background-size: cover;
+            }
+            .st-cycle__inner__cont {
+                width: 580px;
+                height: 220px;
+                transform: translateY(90px);
+                transition: 0.3s ease transform;
+            }
+            .st-cycle__inner__cont--active {
+                transform: translateY(0px);
+            }
+            .st-cycle__inner__cont__tit {
+                font-family: 'LG_EI_Headline';
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 58px;
+                letter-spacing: -0.005em;
+            }
+            .st-cycle__inner__cont__list {
+                position: relative;
+                margin-top: 0px;
+                visibility: hidden;
+                overflow: hidden;
+                height: 0px;
+                transition: 0.3s ease height,0.3s ease margin-top;
+            }
+            .st-cycle__inner__cont__list--active {
+                visibility: visible;
+                height: 130px;
+                margin-top: 20px;
+            }
+            .st-cycle__inner__cont__list__item {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+            }
+            .st-cycle__inner__cont__list__item__tit,
+            .st-cycle__inner__cont__list__item__txt {
+                letter-spacing: -0.005em;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s ease all;
+            }
+            .st-cycle__inner__cont__list__item__tit {
+                font-weight: 550;
+                font-size: 36px;
+                font-family: 'LG_EI_Headline';
+                line-height: 40px;
+                transition-delay: 0s;
+            }
+            .st-cycle__inner__cont__list__item__txt {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                transition-delay: 0.1s;
+            }
+            .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__tit,
+            .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__txt {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            .st-cycle__inner__menu__item {
+                position: absolute;
+                width: 112px;
+                height: 146px;
+                opacity: 1;
+                transition: 0.3s ease opacity;
+                cursor: pointer;
+            }
+            .st-cycle__inner__menu__item--off {
+                opacity: 0.3;
+            }
+            .st-cycle__inner__menu__item__ico {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .st-cycle__inner__menu__item:nth-child(1) {
+                top: -73px;
+                left: 207px;
+            }
+            .st-cycle__inner__menu__item:nth-child(2) {
+                top: -73px;
+                right: 481px;
+            }
+            .st-cycle__inner__menu__item:nth-child(3) {
+                top: -73px;
+                right: 206px;
+            }
+            .st-cycle__inner__menu__item:nth-child(4) {
+                bottom: -73px;
+                right: 206px;
+            }
+            .st-cycle__inner__menu__item:nth-child(5) {
+                bottom: -73px;
+                right: 481px;
+            }
+            .st-cycle__inner__menu__item:nth-child(6) {
+                bottom: -73px;
+                left: 207px;
+            }
+            .st-cycle__inner__standard {
+                visibility: hidden;
+            }
+            .st-cycle__inner__standard--active {
+                visibility: visible;
+            }
+            .st-cycle__inner__standard__item {
+                position: absolute;
+                top: 683px;
+                left: 0px;
+                width: 100%;
+                font-size: 12px;
+                color: #F6F3EB;
+                line-height: 16px;
+                text-align: center;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease all;
+            }
+            .st-cycle__inner__standard__item--active {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            /* Recreation of product */
+            .recreation-of-product__wrap {
+                padding: 60px 0px;
+            }
+            .recreation-of-product {
+                width: 1440px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .recreation-of-product__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .recreation-of-product__intro__txt {
+                margin-top: 16px;
+            }
+            .recreation-of-product__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .recreation-of-product__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .recreation-of-product__photos {
+                display: flex;
+                justify-content: center;
+                margin-top: 60px;
+            }
+            .recreation-of-product__photos__img {
+                width: auto;
+                height: 606px;
+            }
+            .recreation-of-product__discover-more {
+                text-align: right;
+                margin-top: 20px;
+            }
+            .recreation-of-product__discover-more__btn {
+                display: inline-block;
+                color: #4A4946;
+                font-size: 20px;
+                border-color: transparent;
+                background-color: transparent;
+            }
+            .recreation-of-product__discover-more__btn:after {
+                content: '';
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                margin-left: 20px;
+                background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
+                background-size: 100% 100%;
+                vertical-align: middle;
+            }
+            .recreation-of-product__type {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 20px;
+                margin-top: 20px;
+            }
+            .recreation-of-product__type__item {
+                position: relative;
+                height: 590px;
+                padding: 60px 50px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                background-color: white;
+            }
+            .recreation-of-product__type__item__tit,
+            .recreation-of-product__type__item__intro {
+                text-align: left;
+            }
+            .recreation-of-product__type__item__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+            }
+            .recreation-of-product__type__item__intro {
+                margin-top: 16px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 44px;
+                line-height: 48px;
+                letter-spacing: -0.44px;
+            }
+            .recreation-of-product__type__item__photo {
+                position: absolute;
+                bottom: 81px;
+                left: 50px;
+                right: 50px;
+                height: 290px;
+                text-align: center;
+            }
+            .recreation-of-product__type__item__photo__img {
+                width: auto;
+                height: 100%;
+            }
+            .recreation-of-product__type__item__more {
+                position: absolute;
+                bottom: 40px;
+                right: 40px;
+                width: 64px;
+                height: 64px;
+                border-width: 0px;
+                background-color: transparent;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .recreation-of-product__type__item__more:hover {
+                transform: rotate(180deg);
+            }
+            .recreation-of-product__type__item__more__img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Sustainable Recycling Solutions */
+            .st-recycling-solutions__wrap {
+                background: url(../../mocks/ST0004/bg-st-recycling-solutions-pc.png) repeat-x left top;
+                background-size: auto 100%;
+            }
+            .st-recycling-solutions {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 1440px;
+                height: 750px;
+                margin: 0px auto;
+                background: url(../../mocks/ST0004/photo-st-recycling-solutions-pc.png) no-repeat right top;
+                background-size: auto 100%;
+            }
+            .st-recycling-solutions__cont {
+                padding-bottom: 32px;
+            }
+            .st-recycling-solutions__cont__tit {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .st-recycling-solutions__cont__intro__txt {
+                margin-top: 16px;
+            }
+            .st-recycling-solutions__cont__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .st-recycling-solutions__cont__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .st-recycling-solutions__discover-more {
+                position: absolute;
+                bottom: 36px;
+                right: 0px;
+                display: inline-block;
+                color: #4A4946;
+                font-size: 20px;
+                border-color: transparent;
+                background-color: transparent;
+            }
+            .st-recycling-solutions__discover-more:after {
+                content: '';
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                margin-left: 20px;
+                background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
+                background-size: 100% 100%;
+                vertical-align: middle;
+            }
+
+            /* Summary */
+            .summary {
+                padding: 60px 0px 105px;
+            }
+            .summary__cont {
+                width: 1440px;
+                height: 720px;
+                border-radius: 30px;
+                padding: 34px 0px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(238.16deg, rgba(0, 0, 0, 0.4) 5.45%, rgba(0, 0, 0, 0) 69.88%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat right center;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 34px 68px 34px calc(50% + 283px);
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 106px 68px 106px calc(50% + 283px);
+                font-size: 44px;
+                font-family: 'LG_EI_Headline';
+                line-height: 48px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+
+            /* Popup Discover More */
+            .popup-discover-more {
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                display: none;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background-color: white;
+            }
+            .popup-discover-more--container {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                transition: 0.3s ease margin-left;
+            }
+            .popup-discover-more--header {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+                padding: 80px 100px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .popup-discover-more--header__none-visual {
+                width: auto;
+            }
+            .popup-discover-more--header--tit,
+            .popup-discover-more--header--cont {
+                position: relative;
+                z-index: 2;
+                color: white;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
+                color: #262626;
+            }
+            .popup-discover-more--header--tit {
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--header--cont {
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+                margin-top: 20px;
+            }
+            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                font-size: 20px;
+                line-height: 28px;
+                color: #F6F3EB;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                color: #4A4946;
+            }
+            .popup-discover-more--header--edit {
+                display: flex;
+                align-items: center;
+                gap: 0px 17px;
+                position: fixed;
+                z-index: 2;
+                bottom: 50px;
+                left: 100px;   
+            }
+            .popup-discover-more--header--edit--btn-close {
+                width: 48px;
+                height: 48px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                border-radius: 50%;
+                background: #D9D9D9 url(../../mocks/ST0002/btn-pdm-close.svg) no-repeat center center;
+                backdrop-filter: blur(9.23077px);
+                opacity: 0.4;
+                transition: 0.3s ease transform;
+            }
+            .popup-discover-more--header--edit--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discover-more--header--edit--progress {
+                width: 300px;
+                height: 2px;
+                background-color: rgba(246, 243, 235, 0.2)
+            }
+            .popup-discover-more--header--edit--progress--bar {
+                height: 2px;
+                background-color: #7E7C77;
+                transition: 0.3s ease width;
+            }
+            .popup-discover-more--header--visual {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+            .popup-discover-more--header--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--visual {
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+            }
+            .popup-discover-more--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--section {
+                display: flex;
+                align-items: flex-start;
+                height: 100vh;
+                padding: 80px 90px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .popup-discover-more--section__vertical-middle {
+                align-items: center;
+            }
+            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
+                padding-left: 60px;
+            }
+            .popup-discover-more--section--cont-wrap {
+                display: inline-block;
+                text-align: left;
+            }
+            .popup-discover-more--section--cont-wrap__inline {
+                display: inline-flex;
+                gap: 0px 70px;
+            }
+            .popup-discover-more--section--tit,
+            .popup-discover-more--section--cont1,
+            .popup-discover-more--section--cont2 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .popup-discover-more--section--tit {
+                font-size: 36px;
+                line-height: 42px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .popup-discover-more--section--cont1 {
+                margin-top: 20px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--section--cont2 {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .popup-discover-more--section--cont1:first-child,
+            .popup-discover-more--section--cont2:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
+                padding-left: 35px;
+            }
+            .popup-discover-more--section--photo {
+                margin: 60px auto;
+            }
+            .popup-discover-more--section--photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--photo:last-child {
+                margin-bottom: 0px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-tennessee2--photo {
+                width: 808px;
+                height: 400px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-changwon2--photo {
+                width: 567px;
+                height: 400px;
+            }
+            .popup-discover-more--section--recreation-of-product2--photo {
+                width: 776px;
+                height: 430px;
+            }
+            .popup-discover-more--section--recreation-of-product3--photo {
+                width: 727px;
+                height: 526px;
+            }
+            .popup-discover-more--section--recreation-of-product4--photo {
+                width: 722px;
+                height: 490px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center2--photo {
+                width: 680px;
+                height: 495px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center3--photo {
+                width: 490px;
+                height: 350px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center4--photo {
+                width: 610px;
+                height: 404px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center5--photo {
+                width: 350px;
+                height: 476px;
+            }
+            .popup-discover-more--section--photo--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription--wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription--tit {
+                text-align: center;
+                color: black;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .popup-discription--photo {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--photo--figure {
+                margin: 0px;
+            }
+            .popup-discription--photo--figure--img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription--photo--figure--figcaption {
+                text-align: center;
+                color: #7E7C77;
+                margin-top: 20px;
+                font-weight: 300;
+            }
+            .popup-discription--photo--figure--figcaption--strong {
+                font-weight: 600;
+                color: #7E7C77;
+            }
+            .popup-discription--cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription--cont--grid2 {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 40px;
+            }
+            .popup-discription--btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription--btn-close:before,
+            .popup-discription--btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription--btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription--btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                }
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="circular-economy-visual">
+                <h2 class="circular-economy-visual__tit">
+                    <span class="circular-economy-visual__tit__txt">Greener with every step</span>
+                </h2>
+                <video src="../../mocks/ST0004/video-circular-economy-visual.mp4" class="circular-economy-visual__video" autoplay loop muted></video>
+                <div class="circular-economy-visual__scrolldown">
+                    <button type="button" class="circular-economy-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="circular-economy-about">
+                <p class="circular-economy-about__cont">
+                    <span class="circular-economy-about__cont__txt">Imagine a world with no waste. </span><br />
+                    <span class="circular-economy-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
+                    <span class="circular-economy-about__cont__txt">By recycling all we can to turn old materials and </span><br />
+                    <span class="circular-economy-about__cont__txt">ppliances into new products,</span><br />
+                    <span class="circular-economy-about__cont__txt">we're doing our part to reduce waste and </span><br />
+                    <span class="circular-economy-about__cont__txt">create a more sustainable future.</span>
+                </p>
+            </div>
+            <div class="st-cycle">
+                <h3 class="st-cycle__tit">Sustainable cycle</h3>
+                <div class="st-cycle__intro">
+                    <p class="st-cycle__intro__txt">Green goes full circle</p>
+                    <p class="st-cycle__intro__txt">
+                        Our Sustainable Cycle focuses on environmental factors throughout the entire product <br />
+                        lifecycle, ensuring sustainable and responsible practices.
+                    </p>
+                </div>
+                <div class="st-cycle__inner">
+                    <div class="st-cycle__inner__cont">
+                        <h4 class="st-cycle__inner__cont__tit">Sustainable Cycle</h4>
+                        <ul class="st-cycle__inner__cont__list">
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Collection</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Expand collection amount <br />
+                                    of E-waste*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item"> 
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Recycling</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Increase the use of recycled plastics from <br />
+                                    e-waste*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">R&amp;D</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Consider sustainability into product <br />
+                                    development from the initial phases
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Packaging</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Use eco-conscious materials such as recycled <br />
+                                    paper and resused Polystyrene (EPS) Expanded
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Service</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Convert all service vehicles to electric or <br />
+                                    hydrogen powered by 2030*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Use</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Reduce carbon emissions* during use of 7 major <br />
+                                    product categories**
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="st-cycle__inner__menu">
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-recycling.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-rnd.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-packaging.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-service.svg" alt="Service" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-use.svg" alt="Use" class="st-cycle__inner__menu__item__ico">
+                        </li>
+                    </ul>
+                    <ul class="st-cycle__inner__standard">
+                        <li class="st-cycle__inner__standard__item">
+                            *8 Million tons by 2030, on a cumulative basis from 2006 to <br />
+                            2030 (3.5 million tons from 2006 to 2021)
+                        </li>
+                        <li class="st-cycle__inner__standard__item">
+                            *600,000 tons by 2030, on a cumulative basis from 2021 <br /> to 2030(27,000 tons in 2021)
+                        </li>
+                        <li class="st-cycle__inner__standard__item">*in Korea</li>
+                        <li class="st-cycle__inner__standard__item">
+                            *20% by 2030 (compared to 2020) **TV, Refrigerators, Washing <br />
+                            Machines, Dryers, Residential Air Conditioner(RAC), System Air <br />
+                            Conditioner(SAC), Monitors
+                        </li>
+                        <li class="st-cycle__inner__standard__item"></li>
+                        <li class="st-cycle__inner__standard__item"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="recreation-of-product__wrap">
+                <div class="recreation-of-product">
+                    <h3 class="recreation-of-product__tit">Recreation of product</h3>
+                    <div class="recreation-of-product__intro">
+                        <p class="recreation-of-product__intro__txt">New life from old materials​</p>
+                        <p class="recreation-of-product__intro__txt">
+                            Discover our latest product, manufactured through an eco-conscious <br />
+                            recycling process to promote sustainability and reduce waste.
+                        </p>
+                    </div>
+                    <div class="recreation-of-product__photos">
+                        <img src="../../mocks/ST0004/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
+                    </div>
+                    <div class="recreation-of-product__discover-more">
+                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
+                    </div>
+                    <div class="popup-discover-more" id="recreation-of-product">
+                        <div class="popup-discover-more--container">
+                            <section class="popup-discover-more--header">
+                                <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
+                                <p class="popup-discover-more--header--cont">
+                                    New cycle-crafted products
+                                </p>
+                                <div class="popup-discover-more--header--edit">
+                                    <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                    <div class="popup-discover-more--header--edit--progress">
+                                        <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--header--visual">
+                                    <img src="../../mocks/ST0004/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont2">
+                                            We've made our products more eco-conscious than <br />
+                                            ever, by using recycled plastic, recycled PET bottles <br />
+                                            for fabric covering, and molded pulp made with <br />
+                                            recycled paper and cardboard for packaging. Our <br />
+                                            effort helps us reduce plastic waste, and lower our <br />
+                                            carbon footprint and CO2 emissions.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                Our 2022 LG sound bar lineup is both SGS <br />
+                                                Eco-Product and ENERGY STAR-certified, with <br />
+                                                parts made from recycled plastic resin and <br />
+                                                polyester jersey fabric, meeting the Global <br />
+                                                Recycled Standard.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                tiiun mini is made from UP (Upcycled Plastic), <br />
+                                                replacing the conventional plastic used in the <br />
+                                                previous model (L011W1) with PCR (Post-Consumer <br />
+                                                Recycled) plastic.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont2">
+                                                LG Aero Furniture is made by blending PCR (Post <br />
+                                                Consumer Recycled) plastics, recycled from consumer-<br />
+                                                used plastic waste, with mineral particles to form a <br />
+                                                distinctive 'TerraZo texture.'
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont2">
+                                            Our commitment to sustainability was recognized with <br />
+                                            the Product Champion Award by the US Environmental <br />
+                                            Protection Agency, acknowledging our dedication to <br />
+                                            delivering sustainable innovations.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <ul class="recreation-of-product__type">
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Repurpose plastic. <br />
+                                Repeat.
+                            </p>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            </div>
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
+                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Wrap it right
+                            </p>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            </div>
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
+                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="popup-discription" id="available-resources">
+                        <div class="popup-discription--wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
+                                <dd class="popup-discription--photo">
+                                    <figure class="popup-discription--photo--figure">
+                                        <img src="../../mocks/ST0004/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                    <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
+                                    <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription--btn-close">Close</button>
+                        </div>
+                    </div>
+                    <div class="popup-discription" id="packaging-materials">
+                        <div class="popup-discription--wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
+                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
+                                    <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
+                                    <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
+                                </dd>
+                                <dd class="popup-discription--photo">
+                                    <figure class="popup-discription--photo--figure">
+                                        <img src="../../mocks/ST0004/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
+                                        <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
+                                    </figure>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription--btn-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="st-recycling-solutions__wrap">
+                <div class="st-recycling-solutions">
+                    <div class="st-recycling-solutions__cont">
+                        <h3 class="st-recycling-solutions__cont__tit">Sustainable Recycling Solutions</h3>
+                        <div class="st-recycling-solutions__cont__intro">
+                            <p class="st-recycling-solutions__cont__intro__txt">Redefining recyclable</p>
+                            <p class="st-recycling-solutions__cont__intro__txt">
+                                Chilseo Recycling Center collects old appliances, separates <br />
+                                their materials, and recycles them into new LG products, <br />
+                                creating a virtuous cycle of resource use and disposal.
+                            </p>
+                        </div>
+                    </div>
+                    <button type="button" class="st-recycling-solutions__discover-more" onclick="popupDiscoverMore('#chilseo-recycling-center')">Discover more</button>
+                    <div class="popup-discover-more" id="chilseo-recycling-center">
+                        <div class="popup-discover-more--container">
+                            <section class="popup-discover-more--header">
+                                <h4 class="popup-discover-more--header--tit">Sustainable Recycling Solutions</h4>
+                                <p class="popup-discover-more--header--cont">
+                                    Sustainable <br />
+                                    Recycling Solutions <br />
+                                    Chilseo Recycling Center
+                                </p>
+                                <div class="popup-discover-more--header--edit">
+                                    <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                    <div class="popup-discover-more--header--edit--progress">
+                                        <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                    </div>
+                                </div>
+                                <div class="popup-discover-more--header--visual">
+                                    <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center.png" alt="" class="popup-discover-more--header--visual--img">
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont2">
+                                            The Chilseo recycling center processes a large <br />
+                                            number of waste appliances from the western part of <br />
+                                            South Gyeongsang Province. It can handle 75 <br />
+                                            refrigerators, 50 washing machines, and 50 small <br />
+                                            appliances and air conditioners per hour. The LGE <br />
+                                            Environment Team supervises the center, and all the <br />
+                                            resources recycled belong to LGE. In 2021, 85% <br />
+                                            of the waste was recycled, and 15% was either burned <br />
+                                            or buried in landfills. The legal minimum standard for <br />
+                                            refrigerator recycling is 70%, but the center has <br />
+                                            achieved a recycling rate of almost 80%.
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center2--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center2.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
+                                        <h5 class="popup-discover-more--section--tit">Process of Recycling</h5>
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont1">
+                                                Step One<br />
+                                                : Disassemble, Crush, Sort
+                                            </p>
+                                            <p class="popup-discover-more--section--cont2">
+                                                The Chilseo Recycling Center removes <br />
+                                                mechanical and plastic parts from appliances. <br />
+                                                Materials are then sorted for recycling. A <br />
+                                                patented system automates the process, <br />
+                                                increasing efficiency and safety.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <p class="popup-discover-more--section--cont1">
+                                            Step Two<br />
+                                            : Broken Plastic to Neat Pellets
+                                        </p>
+                                        <p class="popup-discover-more--section--cont2">
+                                            Plastic components are crushed, sorted, and <br />
+                                            turned into pellets for use in manufacturing. <br />
+                                            This reduces waste and energy required to <br />
+                                            create new products.
+                                        </p>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center3--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center3.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center4--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center4.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont1">
+                                                Step Three<br />
+                                                : Transformation Into New Components
+                                            </p>
+                                            <p class="popup-discover-more--section--cont2">
+                                                The pellets are transferred to another site where <br />
+                                                they are melted, poured into molds, and transformed <br />
+                                                into plastic components for new LG refrigerator <br />
+                                                models.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                                <div class="popup-discover-more--section--inner">
+                                    <div class="popup-discover-more--section--cont-wrap">
+                                        <div class="popup-discover-more--section--cont-inner">
+                                            <p class="popup-discover-more--section--cont1">
+                                                Step Four<br />
+                                                : Rebirth
+                                            </p>
+                                            <p class="popup-discover-more--section--cont2">
+                                                LG repurposes plastic components from <br />
+                                                disassembled products at its Changwon plant, <br />
+                                                30 kilometers away, for use in LG refrigerators, <br />
+                                                meeting the company's strict quality standards.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discover-more--section--photo popup-discover-more--section--chilseo-recycling-center5--photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center5.png" alt="" class="popup-discover-more--section--photo--img">
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary__visual"></div>
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        We're dedicated to being <br />
+                        environmentally responsible and creating <br />
+                        better technologies for the planet. <br />
+                        We hope you support our mission.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Better for Earth. <br />
+                        Better for us.
+                    </p>
+                </div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var circularity = circularity || {};
+                
+            circularity = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".circular-economy-visual");
+                    let vScrolldownWrap = visual.querySelector(".circular-economy-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".circular-economy-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
+                stCycle: function() {
+                    var stCycleInner = document.querySelector(".st-cycle__inner");
+                    var sciCont = stCycleInner.querySelector(".st-cycle__inner__cont");
+                    var scicList = stCycleInner.querySelector(".st-cycle__inner__cont__list");
+                    var scicListItem = scicList.querySelectorAll(".st-cycle__inner__cont__list__item");
+                    var sciMenu = stCycleInner.querySelector(".st-cycle__inner__menu");
+                    var sciMenuItem = sciMenu.querySelectorAll(".st-cycle__inner__menu__item");
+                    var sciStandard = stCycleInner.querySelector(".st-cycle__inner__standard");
+                    var sciStandardItem = sciStandard.querySelectorAll(".st-cycle__inner__standard__item");
+
+                    sciMenuItem.forEach(function(smi,i) {
+                        smi.onmouseenter = function() {
+                            if(sciCont.className.indexOf("--active") == -1) {
+                                sciCont.classList.add("st-cycle__inner__cont--active")
+                            }
+                            if(scicList.className.indexOf("--active") == -1) {
+                                scicList.classList.add("st-cycle__inner__cont__list--active")
+                            }
+                            if(sciStandard.className.indexOf("--active") == -1) {
+                                sciStandard.classList.add("st-cycle__inner__standard--active")
+                            }
+
+                            sciMenuItem.forEach(function(rest,k) {
+                                rest.classList.add("st-cycle__inner__menu__item--off")
+                                scicListItem[k].classList.remove("st-cycle__inner__cont__list__item--active")
+                                sciStandardItem[k].classList.remove("st-cycle__inner__standard__item--active")
+                            })
+                            smi.classList.remove("st-cycle__inner__menu__item--off")
+                            scicListItem[i].classList.add("st-cycle__inner__cont__list__item--active")
+                            sciStandardItem[i].classList.add("st-cycle__inner__standard__item--active")
+
+                            return false;
+                        }
+                    })
+
+                   stCycleInner.onmouseleave = function() {
+                        if(sciCont.className.indexOf("--active") > -1) {
+                                sciCont.classList.remove("st-cycle__inner__cont--active")
+                        }
+                        if(scicList.className.indexOf("--active") > -1) {
+                            scicList.classList.remove("st-cycle__inner__cont__list--active")
+                        }
+                        if(sciStandard.className.indexOf("--active") > -1) {
+                            sciStandard.classList.remove("st-cycle__inner__standard--active")
+                        }
+
+                        sciMenuItem.forEach(function(rest,j) {
+                            rest.classList.remove("st-cycle__inner__menu__item--off")
+                            scicListItem[j].classList.remove("st-cycle__inner__cont__list__item--active")
+                            sciStandardItem[j].classList.remove("st-cycle__inner__standard__item--active")
+                        })
+                    }
+                },
+                summary: function() {
+                    let summary = document.querySelector(".summary");
+                    let msOfsTop = summary.offsetTop;
+                    let summaryVisual = summary.querySelector(".summary__visual");
+                    let msvOfsTop = summaryVisual.offsetTop;
+                    let summaryCont = summary.querySelector(".summary__cont");
+                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+    
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+    
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".summary",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryVisual.classList.add("summary__visual--bottom-end")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+    
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("summary__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("summary__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+    
+                    }
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: 3,
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            circularity.visualScrollDown()
+            circularity.stCycle();
+            circularity.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscoverMore(popupID) {
+                var pdmPopup = document.getElementById(popupID.split("#")[1]);
+                var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
+                var pdmSection = pdmContainer.getElementsByTagName("section");
+                var pdmSectionWidth = 0;
+                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
+                var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
+                var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
+                var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
+                var condition = 0;
+                var dist = window.innerWidth;
+                var wheelIng = true;
+                var startPercentGauge;
+
+                document.querySelector("body").style.overflow = "hidden"
+                pdmPopup.style.display = "block"
+
+                setTimeout(function(){
+                    for(var a=0; a < pdmSection.length; a++) {
+                        //console.log(pdmSection[a].offsetWidth)
+                        pdmSectionWidth+=pdmSection[a].offsetWidth;
+                    }
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                } ,500)
+
+                window.onresize = window.onorientationchange = function() {
+                    condition = 0;
+                    pdmSectionWidth = 0
+                    for(var b=0; b < pdmSection.length; b++) {
+                        pdmSectionWidth+=pdmSection[b].offsetWidth;
+                    }
+                    dist = window.innerWidth
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                }
+
+                document.addEventListener("wheel", function (e) {
+                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
+                        wheelIng = true
+                        dist+=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Down: "+ parseInt(dist))
+                        condition++;
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
+                        wheelIng = true
+                        condition--;
+                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Up: "+ parseInt(dist))
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    }
+
+                    if(dist/pdmSectionWidth < 1) {
+                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
+                        startPercentGauge = (dist/pdmSectionWidth)*100
+                        pdmProgressBar.style.width = (startPercentGauge) + "%"
+                    } else if(dist/pdmSectionWidth >= 1) {
+                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
+                        pdmProgressBar.style.width = "100%"
+                    }
+                })
+
+                btnClose.onclick = function() {
+                    pdmProgressBar.style.width = ""
+                    pdmContainer.style.marginLeft = ""
+                    pdmPopup.style.display = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>

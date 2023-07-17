@@ -21,11 +21,11 @@
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
-            <li class="c-header__gnb__list__item"><a href="../ST0004/circular_economy.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Circular Economy</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Circularity</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
         </ul>
     </nav>
-    <p class="c-header__location">Circular Economy</p>
+    <p class="c-header__location">Circularity</p>
     <button type="button" class="c-header__btn-gnb">
         <span class="c-header__btn-gnb__bar"></span>
         <span class="c-header__btn-gnb__bar"></span>
@@ -57,14 +57,14 @@
             }
 
             /* Circular Economy Visual */
-            .circular-economy-visual {
+            .circularity-visual {
                 position: relative;
                 top: 0px;
                 left: 0px;
                 width: 100%;
                 height: 100vh;
             }
-            .circular-economy-visual:after {
+            .circularity-visual:after {
                 position: absolute;
                 z-index: 2;
                 top: 0px;
@@ -75,7 +75,7 @@
                 height: 100%;
                 background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
             }
-            .circular-economy-visual__tit {
+            .circularity-visual__tit {
                 position: absolute;
                 z-index: 3;
                 top: 50%;
@@ -86,19 +86,19 @@
                 font-size: 80px;
                 transform: translate(0,-50%);
             }
-            .circular-economy-visual__tit__txt {
+            .circularity-visual__tit__txt {
                 font-family: 'LG_EI_Headline';
                 font-weight: 400;
                 color: white;
             }
-            .circular-economy-visual__video {
+            .circularity-visual__video {
                 position: relative;
                 z-index: 1;
                 width: 100%;
                 height: 100vh;
                 object-fit: cover;
             }
-            .circular-economy-visual__scrolldown {
+            .circularity-visual__scrolldown {
                 position: absolute;
                 z-index: 4;
                 bottom: 40px;
@@ -106,18 +106,18 @@
                 width: 100%;
                 text-align: center;
             }
-            .circular-economy-visual__scrolldown__btn {
+            .circularity-visual__scrolldown__btn {
                 width: 68px;
                 height: 96px;
                 text-indent: -9999px;
                 overflow: hidden;
                 border-width: 0px;
                 cursor: pointer;
-                background: url(../../mocks/ST0004/circular-economy-visual-scrolldown.svg) no-repeat center center;
+                background: url(../../mocks/ST0004/circularity-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
                 transform: translateY(0px);
             }
-            .circular-economy-visual__scrolldown__btn:hover {
+            .circularity-visual__scrolldown__btn:hover {
                 animation-duration: 1s;
                 animation-name: sd-dounce;
                 animation-iteration-count: infinite;
@@ -133,10 +133,10 @@
             }
 
             /* Circular Economy About */
-            .circular-economy-about {
+            .circularity-about {
                 text-align: center;
             }
-            .circular-economy-about__cont {
+            .circularity-about__cont {
                 width: 1440px;
                 margin: 0px auto;
                 padding: 106px 0px;
@@ -312,126 +312,79 @@
                 opacity: 1;
             }
 
-            /* Recreation of product */
-            .recreation-of-product__wrap {
+            /* E-waste program */
+            .e-waste-program__cont {
+                width: 87.5vw;
+                max-width: 1680px;
                 padding: 60px 0px;
-            }
-            .recreation-of-product {
-                width: 1440px;
                 margin: 0px auto;
                 text-align: center;
             }
-            .recreation-of-product__tit {
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 28px;
+            .e-waste-program__tit {
+                font-size: 28px;
+                line-height: 34px;
             }
-            .recreation-of-product__intro__txt {
-                margin-top: 16px;
-            }
-            .recreation-of-product__intro__txt:first-child {
+            .e-waste-program__intro1 {
+                font-size: 72px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 600;
-                font-size: 56px;
-                line-height: 60px;
-            }
-            .recreation-of-product__intro__txt:last-child {
-                font-size: 20px;
-                line-height: 28px;
-            }
-            .recreation-of-product__photos {
-                display: flex;
-                justify-content: center;
-                margin-top: 60px;
-            }
-            .recreation-of-product__photos__img {
-                width: auto;
-                height: 606px;
-            }
-            .recreation-of-product__discover-more {
-                text-align: right;
+                font-weight: 100;
+                line-height: 80px;
                 margin-top: 20px;
             }
-            .recreation-of-product__discover-more__btn {
-                display: inline-block;
-                color: #4A4946;
+            .e-waste-program__intro2 {
                 font-size: 20px;
-                border-color: transparent;
-                background-color: transparent;
+                line-height: 28px;
+                margin-top: 20px;
             }
-            .recreation-of-product__discover-more__btn:after {
+            .e-waste-program__visual__wrap {
+                position: relative;
+                height: 200vh;
+            }
+            .e-waste-program__visual {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .e-waste-program__visual__inner {
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                border-radius: 0px;
+                background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+                transform: translate(-50%,-50%);
+            }
+            .e-waste-program__more {
+                position: absolute;
+                z-index: 1;
+                top: calc(50% + 298px);
+                left: 50%;
+                width: 1440px;
+                margin-left: -720px;
+                text-align: right;
+            }
+            .e-waste-program__more__btn {
+                display: inline-block;
+                font-size: 20px;
+            }
+            .e-waste-program__more__btn:after {
                 content: '';
                 display: inline-block;
                 width: 64px;
                 height: 64px;
                 margin-left: 20px;
-                background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
+                background: url(../../mocks/ST0004/bullet-discover-more.svg) no-repeat center center;
                 background-size: 100% 100%;
                 vertical-align: middle;
             }
-            .recreation-of-product__type {
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap: 0px 20px;
-                margin-top: 20px;
-            }
-            .recreation-of-product__type__item {
-                position: relative;
-                height: 590px;
-                padding: 60px 50px;
-                box-sizing: border-box;
-                border-radius: 30px;
-                background-color: white;
-            }
-            .recreation-of-product__type__item__tit,
-            .recreation-of-product__type__item__intro {
-                text-align: left;
-            }
-            .recreation-of-product__type__item__tit {
-                font-size: 24px;
-                font-weight: 600;
-                line-height: 28px;
-                letter-spacing: -0.12px;
-            }
-            .recreation-of-product__type__item__intro {
-                margin-top: 16px;
-                font-family: 'LG_EI_Headline';
-                font-weight: 550;
-                font-size: 44px;
-                line-height: 48px;
-                letter-spacing: -0.44px;
-            }
-            .recreation-of-product__type__item__photo {
-                position: absolute;
-                bottom: 81px;
-                left: 50px;
-                right: 50px;
-                height: 290px;
-                text-align: center;
-            }
-            .recreation-of-product__type__item__photo__img {
-                width: auto;
-                height: 100%;
-            }
-            .recreation-of-product__type__item__more {
-                position: absolute;
-                bottom: 40px;
-                right: 40px;
-                width: 64px;
-                height: 64px;
-                border-width: 0px;
-                background-color: transparent;
-                transform: rotate(0deg);
-                transition: 0.3s ease transform;
-            }
-            .recreation-of-product__type__item__more:hover {
-                transform: rotate(180deg);
-            }
-            .recreation-of-product__type__item__more__img {
-                width: 100%;
-                height: 100%;
-            }
 
+            
             /* Sustainable Recycling Solutions */
             .st-recycling-solutions__wrap {
                 background: url(../../mocks/ST0004/bg-st-recycling-solutions-pc.png) repeat-x left top;
@@ -485,7 +438,7 @@
                 width: 64px;
                 height: 64px;
                 margin-left: 20px;
-                background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
+                background: url(../../mocks/ST0004/bullet-discover-more.svg) no-repeat center center;
                 background-size: 100% 100%;
                 vertical-align: middle;
             }
@@ -563,12 +516,6 @@
                 border-radius: 20px;
                 overflow: hidden;
             }
-            .whats-next__menu__slide3__anchor {
-                transition: 0.3s ease background-color;
-            }
-            .whats-next__menu__slide3__anchor:hover {
-                background: #262626;
-            }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
                 overflow: hidden;
@@ -589,34 +536,68 @@
                 border-radius: 20px;
             }
             .whats-next__menu__slide2__anchor__photo {
-                top: 87px;
-                left: 107px;
-                right: 108px;
-                bottom: 128px;
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
-                top: 62px;
-                left: 82px;
-                right: 83px;
-                bottom: 103px;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide3__anchor__photo {
-                top: 135px;
-                left: -57px;
-                bottom: 158px;
-                width: 1233px;
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
-                left: -677px;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
                 top: 120px;
                 left: 49px;
                 right: 49px;
                 bottom: 147px;
                 border-radius: 200px;
             }
-            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
                 top: 0px;
                 left: 0px;
                 right: 0px;
@@ -634,9 +615,9 @@
                 left: 0px;
                 width: 100%;
                 box-sizing: border-box;
-                padding: 26px 32px 28px;
-                line-height: 34px;
-                font-size: 28px;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
                 background: rgba(38, 38, 38, 0);
                 backdrop-filter: blur(17px);
                 transition: 0.3s ease all;
@@ -1020,23 +1001,23 @@
         </style>
         <!-- html code -->
         <div class="sustainably-container">
-            <div class="circular-economy-visual">
-                <h2 class="circular-economy-visual__tit">
-                    <span class="circular-economy-visual__tit__txt">Greener with every step</span>
+            <div class="circularity-visual">
+                <h2 class="circularity-visual__tit">
+                    <span class="circularity-visual__tit__txt">Greener with every step</span>
                 </h2>
-                <video src="../../mocks/ST0004/video-circular-economy-visual.mp4" class="circular-economy-visual__video" autoplay loop muted></video>
-                <div class="circular-economy-visual__scrolldown">
-                    <button type="button" class="circular-economy-visual__scrolldown__btn">Scroll Down</button>
+                <video src="../../mocks/ST0004/video-circularity-visual.mp4" class="circularity-visual__video" autoplay loop muted></video>
+                <div class="circularity-visual__scrolldown">
+                    <button type="button" class="circularity-visual__scrolldown__btn">Scroll Down</button>
                 </div>
             </div>
-            <div class="circular-economy-about">
-                <p class="circular-economy-about__cont">
-                    <span class="circular-economy-about__cont__txt">Imagine a world with no waste. </span><br />
-                    <span class="circular-economy-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
-                    <span class="circular-economy-about__cont__txt">By recycling all we can to turn old materials and </span><br />
-                    <span class="circular-economy-about__cont__txt">ppliances into new products,</span><br />
-                    <span class="circular-economy-about__cont__txt">we're doing our part to reduce waste and </span><br />
-                    <span class="circular-economy-about__cont__txt">create a more sustainable future.</span>
+            <div class="circularity-about">
+                <p class="circularity-about__cont">
+                    <span class="circularity-about__cont__txt">Imagine a world with no waste. </span><br />
+                    <span class="circularity-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
+                    <span class="circularity-about__cont__txt">By recycling all we can to turn old materials and </span><br />
+                    <span class="circularity-about__cont__txt">ppliances into new products,</span><br />
+                    <span class="circularity-about__cont__txt">we're doing our part to reduce waste and </span><br />
+                    <span class="circularity-about__cont__txt">create a more sustainable future.</span>
                 </p>
             </div>
             <div class="st-cycle">
@@ -1135,183 +1116,110 @@
                     </ul>
                 </div>
             </div>
-            <div class="recreation-of-product__wrap">
-                <div class="recreation-of-product">
-                    <h3 class="recreation-of-product__tit">Recreation of product</h3>
-                    <div class="recreation-of-product__intro">
-                        <p class="recreation-of-product__intro__txt">New life from old materials​</p>
-                        <p class="recreation-of-product__intro__txt">
-                            Discover our latest product, manufactured through an eco-conscious <br />
-                            recycling process to promote sustainability and reduce waste.
-                        </p>
-                    </div>
-                    <div class="recreation-of-product__photos">
-                        <img src="../../mocks/ST0004/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
-                    </div>
-                    <div class="recreation-of-product__discover-more">
-                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
-                    </div>
-                    <div class="popup-discover-more" id="recreation-of-product">
-                        <div class="popup-discover-more--container">
-                            <section class="popup-discover-more--header">
-                                <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
-                                <p class="popup-discover-more--header--cont">
-                                    New cycle-crafted products
-                                </p>
-                                <div class="popup-discover-more--header--edit">
-                                    <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                    <div class="popup-discover-more--header--edit--progress">
-                                        <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                    </div>
-                                </div>
-                                <div class="popup-discover-more--header--visual">
-                                    <img src="../../mocks/ST0004/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap">
-                                        <p class="popup-discover-more--section--cont2">
-                                            We've made our products more eco-conscious than <br />
-                                            ever, by using recycled plastic, recycled PET bottles <br />
-                                            for fabric covering, and molded pulp made with <br />
-                                            recycled paper and cardboard for packaging. Our <br />
-                                            effort helps us reduce plastic waste, and lower our <br />
-                                            carbon footprint and CO2 emissions.
-                                        </p>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                Our 2022 LG sound bar lineup is both SGS <br />
-                                                Eco-Product and ENERGY STAR-certified, with <br />
-                                                parts made from recycled plastic resin and <br />
-                                                polyester jersey fabric, meeting the Global <br />
-                                                Recycled Standard.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                tiiun mini is made from UP (Upcycled Plastic), <br />
-                                                replacing the conventional plastic used in the <br />
-                                                previous model (L011W1) with PCR (Post-Consumer <br />
-                                                Recycled) plastic.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                LG Aero Furniture is made by blending PCR (Post <br />
-                                                Consumer Recycled) plastics, recycled from consumer-<br />
-                                                used plastic waste, with mineral particles to form a <br />
-                                                distinctive 'TerraZo texture.'
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap">
-                                        <p class="popup-discover-more--section--cont2">
-                                            Our commitment to sustainability was recognized with <br />
-                                            the Product Champion Award by the US Environmental <br />
-                                            Protection Agency, acknowledging our dedication to <br />
-                                            delivering sustainable innovations.
-                                        </p>
-                                    </div>
-                                </div>
-                            </section>
+            <div class="e-waste-program">
+                <div class="e-waste-program__cont">
+                    <h2 class="e-waste-program__tit">E-waste program</h2>
+                    <p class="e-waste-program__intro1">
+                        Sustainable waste management: <br />
+                        e-waste program
+                    </p>
+                    <p class="e-waste-program__intro2">
+                        Help reduce the amount of e-waste that ends up in landfills and minimize <br />
+                        your impact on the environment, by recycling your old electronics <br />
+                        responsibly through our e-waste program.
+                    </p>
+                </div>
+                <div class="e-waste-program__visual__wrap">
+                    <div class="e-waste-program__visual">
+                        <div class="e-waste-program__visual__inner"></div>        
+                        <div class="e-waste-program__more">
+                            <a href="#discover-more-e-waste-program" onclick="popupDiscoverMore(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
                         </div>
                     </div>
-                    <ul class="recreation-of-product__type">
-                        <li class="recreation-of-product__type__item">
-                            <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
-                            <p class="recreation-of-product__type__item__intro">
-                                Repurpose plastic. <br />
-                                Repeat.
+                </div>
+                <div class="popup-discover-more" id="discover-more-e-waste-program">
+                    <div class="popup-discover-more--container">
+                        <section class="popup-discover-more--header popup-discover-more--header__none-visual">
+                            <h4 class="popup-discover-more--header--tit">E-waste program</h4>
+                            <p class="popup-discover-more--header--cont">
+                                E-waste program for <br />
+                                a sustainable future
                             </p>
-                            <div class="recreation-of-product__type__item__photo">
-                                <img src="../../mocks/ST0004/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
-                            </div>
-                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
-                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                            </button>
-                        </li>
-                        <li class="recreation-of-product__type__item">
-                            <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
-                            <p class="recreation-of-product__type__item__intro">
-                                Wrap it right
+                            <p class="popup-discover-more--header--cont">
+                                LG is committed to collecting e-waste and <br />
+                                batteries to promote circularity. Through our easy, <br />
+                                convenient e-waste program, you can help us make <br />
+                                a positive impact on the environment, inspire <br />
+                                others, and create a better future for all.
                             </p>
-                            <div class="recreation-of-product__type__item__photo">
-                                <img src="../../mocks/ST0004/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            <div class="popup-discover-more--header--edit">
+                                <button class="popup-discover-more--header--edit--btn-close">Close</button>
+                                <div class="popup-discover-more--header--edit--progress">
+                                    <div class="popup-discover-more--header--edit--progress--bar"></div>
+                                </div>
                             </div>
-                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
-                                <img src="../../mocks/ST0004/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
-                            </button>
-                        </li>
-                    </ul>
-                    <div class="popup-discription" id="available-resources">
-                        <div class="popup-discription--wrap">
-                            <dl class="popup-discription--inner">
-                                <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
-                                <dd class="popup-discription--photo">
-                                    <figure class="popup-discription--photo--figure">
-                                        <img src="../../mocks/ST0004/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
-                                    </figure>
-                                </dd>
-                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                    <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
-                                    <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
-                                </dd>
-                            </dl>
-                            <button type="button" class="popup-discription--btn-close">Close</button>
-                        </div>
-                    </div>
-                    <div class="popup-discription" id="packaging-materials">
-                        <div class="popup-discription--wrap">
-                            <dl class="popup-discription--inner">
-                                <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
-                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                    <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
-                                    <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
-                                </dd>
-                                <dd class="popup-discription--photo">
-                                    <figure class="popup-discription--photo--figure">
-                                        <img src="../../mocks/ST0004/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
-                                        <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
-                                    </figure>
-                                </dd>
-                            </dl>
-                            <button type="button" class="popup-discription--btn-close">Close</button>
-                        </div>
+                        </section>
+                        <section class="popup-discover-more--visual">
+                            <img src="../../mocks/ST0004/visual-pdm-e-waste-program.png" alt="" class="popup-discover-more--visual--img">
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">E-waste program- Grobal</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        LG provides collection and processing services for WEEE <br />
+                                        (Waste Electrical and Electronic Equipment) according to <br />
+                                        regulations and requirements in each country. <br />
+                                        We also offer free collections for large WEEE in Korea, <br />
+                                        and we've expanded our service to 78 regions in 47 countries. <br />
+                                        We make sure all the WEEE we collect is managed in an <br />
+                                        environmentally friendly way.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program2--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section2.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle popup-discover-more--section--e-waste-program3">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Small e-waste program- Korea</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We're making it easier than ever to recycle small-sized <br />
+                                        electronic waste, which has a relatively low recovery rate <br />
+                                        compared to large appliances. We're striving to reduce <br />
+                                        greenhouse gas and carbon emissions by collecting small <br />
+                                        e-waste through nearby LG Best Shops and Resource <br />
+                                        Circulation Centers.
+                                    </p>
+                                </div>
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program3--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section3.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="popup-discover-more--section popup-discover-more--section__vertical-middle popup-discover-more--section--e-waste-program4">
+                            <div class="popup-discover-more--section--inner">
+                                <div class="popup-discover-more--section--photo popup-discover-more--section--e-waste-program4--photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section4.png" alt="" class="popup-discover-more--section--photo--img">
+                                </div>
+                                <div class="popup-discover-more--section--cont-wrap">
+                                    <h5 class="popup-discover-more--section--tit">Battery recycling program - Korea</h5>
+                                    <p class="popup-discover-more--section--cont2">
+                                        We launched a "Battery Return" campaign, encouraging <br />
+                                        customers to participate in resource recycling by returning <br />
+                                        discarded batteries used in premium LG wireless vacuum <br />
+                                        cleaners. We also offer a discount of KRW 10,000 ($8.57) <br />
+                                        on new batteries. We've even set up collection boxes for <br />
+                                        discarded batteries at Best Shops and other appliance <br />
+                                        stores.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -1483,7 +1391,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1491,7 +1399,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1499,15 +1407,31 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
                                 </a>
                             </div>
                         </div>
@@ -1526,13 +1450,13 @@
         <script src="../../../ScrollTrigger.min.js"></script>
         <script src="../../../ScrollToPlugin.min.js"></script>
         <script>
-            var circularEconomy = circularEconomy || {};
+            var circularity = circularity || {};
                 
-            circularEconomy = {
+            circularity = {
                 visualScrollDown: function() {
-                    let visual = document.querySelector(".circular-economy-visual");
-                    let vScrolldownWrap = visual.querySelector(".circular-economy-visual__scrolldown");
-                    let btnScrolldown = vScrolldownWrap.querySelector(".circular-economy-visual__scrolldown__btn");
+                    let visual = document.querySelector(".circularity-visual");
+                    let vScrolldownWrap = visual.querySelector(".circularity-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".circularity-visual__scrolldown__btn");
 
                     btnScrolldown.onclick = function() {
                         TweenMax.to(window, 0.3, {
@@ -1658,9 +1582,46 @@
     
                     }
                 },
+                eWasteProgram: function() {
+                    let eWasteProgramVisualWrap = document.querySelector(".e-waste-program__visual__wrap");
+                    let eWasteProgramVisual = eWasteProgramVisualWrap.querySelector(".e-waste-program__visual");
+                    let eWasteProgramVisualInner = eWasteProgramVisual.querySelector(".e-waste-program__visual__inner");
+
+                    const anim = gsap.to(".e-waste-program__visual__inner", { 
+                        width: "1440px",
+                        height: "566px",
+                        borderRadius: "330px",
+                        paused: true
+                    }); // can be left out
+
+
+                    const ST = ScrollTrigger.create({
+                        trigger: ".e-waste-program__visual__wrap",
+                        start: "top top",
+                        end: "bottom bottom",
+                        animation: anim,
+                        onEnter: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                        },
+                        onLeaveBack: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                        },
+                        onLeave: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                            eWasteProgramVisual.style.top = "auto"
+                            eWasteProgramVisual.style.bottom = "0px"
+                        },
+                        onEnterBack: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                            eWasteProgramVisual.style.top = ""
+                            eWasteProgramVisual.style.bottom = ""
+                        },
+                        scrub: true
+                    })
+                },
                 whatsNext: function() {
-                    var swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: "3",
+                    let swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: 3,
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",
@@ -1670,11 +1631,25 @@
                             prevEl: ".whats-next__menu__btn-set__btn__prev",
                         },
                     });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
                 }
             }
-            circularEconomy.visualScrollDown()
-            circularEconomy.stCycle();
-            circularEconomy.whatsNext();
+            circularity.visualScrollDown()
+            circularity.stCycle();
+            circularity.eWasteProgram();
+            circularity.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
         </script>
