@@ -210,7 +210,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin: 347px 120px 71px;
+                margin: 18.1vw 120px 3.6979vw;
                 gap: 95px;
             }
             .value__list__item {
@@ -222,7 +222,7 @@
                 background: no-repeat center;
                 background-size: cover;
                 position: relative;
-                transition: transform .5s ease;
+                transition: transform .85s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .value__list__item::before {
                 content: '';
@@ -235,7 +235,7 @@
                 backdrop-filter: blur(50px);
                 z-index: 1;
                 opacity: 0;
-                transition: opacity .7s cubic-bezier(0.075, 0.82, 0.165, 1);
+                transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
                 pointer-events: none;
             }
 
@@ -243,17 +243,12 @@
             .value__list__item--innovation {background-image: url(../../mocks/BS0001/our_value_customer.png);}
             .value__list__item--power-smile {background-image: url(../../mocks/BS0001/our_value_power_a_smile.png);}
             
-            .our-value__list--active .value__list__item:nth-child(1) {
-                transform: translateY(-200px);
-                transition-delay: 0;
-            }
-            .our-value__list--active .value__list__item:nth-child(2) {
-                transition-delay: 0.3s;
-            }
-            .our-value__list--active .value__list__item:nth-child(3) {
-                transform: translateY(185px);
-                transition-delay: 0.6s;
-            }
+            .value__list__item:nth-child(1) {transform: translateY(470px); transition-delay: 0.1s;}
+            .value__list__item:nth-child(2) {transform: translateY(470px); transition-delay: 0.2s;}
+            .value__list__item:nth-child(3) {transform: translateY(470px); transition-delay: 0.3s;}
+            .our-value__list--active .value__list__item:nth-child(1) {transform: translateY(-360px);}
+            .our-value__list--active .value__list__item:nth-child(2) {transform: translateY(-185px);}
+            .our-value__list--active .value__list__item:nth-child(3) {transform: translateY(-70px);}
 
             .our-value__info-wrap {
                 position: relative;
@@ -323,6 +318,7 @@
 
 
             /*Emotionally Intelligent Design*/
+
             .parallex__pin-text {
                 height: 100vh;
                 display: flex;
@@ -599,19 +595,19 @@
                 
                 /*our value*/
                 .our-value__list {
-                    margin: 180px 120px 200px;
+                    margin: 327px 120px 54px;
                     gap: 20px;
                 }
                 .value__list__item {
                     /* height: 41.6667vw; */
                     height: 600px;
                 }
-                .our-value__list--active .value__list__item:nth-child(1) {
-                    transform: translateY(-150px);
-                }
-                .our-value__list--active .value__list__item:nth-child(3) {
-                    transform: translateY(150px);
-                }
+                .value__list__item:nth-child(1) {transform: translateY(382px);}
+                .value__list__item:nth-child(2) {transform: translateY(382px);}
+                .value__list__item:nth-child(3) {transform: translateY(382px);}
+                .our-value__list--active .value__list__item:nth-child(1) {transform: translateY(-300px);}
+                .our-value__list--active .value__list__item:nth-child(2) {transform: translateY(-146px);}
+                .our-value__list--active .value__list__item:nth-child(3) {transform: translateY(-54px);}
 
                 .our-value__info-wrap {
                     padding: 0 25px 125px;
@@ -722,13 +718,13 @@
                     border-radius: 78.93vw;
                     flex: unset;
                 }
-                .our-value__list--active .value__list__item:nth-child(1) {
-                    transform: unset;
-                }
-                .our-value__list--active .value__list__item:nth-child(3) {
-                    transform: unset;
-                }
-
+                .value__list__item:nth-child(1),
+                .value__list__item:nth-child(2),
+                .value__list__item:nth-child(3),
+                .our-value__list--active .value__list__item:nth-child(1),
+                .our-value__list--active .value__list__item:nth-child(2),
+                .our-value__list--active .value__list__item:nth-child(3) {transform: unset}
+                
                 .our-value__info-wrap {
                     padding: 0 20px 100px;
                 }
@@ -748,6 +744,7 @@
                 }
 
                 /*Emotionally Intelligent Design*/
+
                 .parallex__bgs {
                     margin-top: -100vh;
                     height: 400vh;
@@ -900,7 +897,7 @@
 
                 /*our value*/
                 .our-value__list {
-                    margin: 160px auto 256px;
+                    margin: 347px auto 71px;
                 }
                 .our-value__title {
                     font-size: 44px;
