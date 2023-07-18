@@ -113,7 +113,7 @@
                 overflow: hidden;
                 border-width: 0px;
                 cursor: pointer;
-                background: url(../../mocks/ST0004/circular-economy-visual-scrolldown.svg) no-repeat center center;
+                background: url(../../mocks/ST0005/clean-technology-visual-scrolldown.svg) no-repeat center center;
                 background-size: cover;
                 transform: translateY(0px);
             }
@@ -146,8 +146,132 @@
                 color: #4A4946;
             }
             
-            /* ECO-Conscious */
-
+            /* ECO-Conscious Technology */
+            .eco-conscious-technology {
+                width: 1440px;
+                padding: 60px 0px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .eco-conscious-technology__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .eco-conscious-technology__intro__txt {
+                margin-top: 16px;
+            }
+            .eco-conscious-technology__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .eco-conscious-technology__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .eco-conscious-technology__kind {
+                position: relative;
+                padding: 72px 0px 48px;
+                margin-top: 32px;
+                overflow: visible;
+            }
+            .eco-conscious-technology__kind__slide {
+                position: relative;
+                width: 708px;
+                margin-right: 24px;
+            }
+            .eco-conscious-technology__kind__slide__anchor {
+                display: block;
+                width: 708px;
+                height: 550px;
+                padding: 32px;
+                box-sizing: border-box;
+                border-radius: 28px;
+                text-align: left;
+                text-decoration: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .eco-conscious-technology__kind__slide__anchor:hover {
+                text-decoration: none;
+            }
+            .eco-conscious-technology__kind__slide__anchor:after {
+                position: absolute;
+                bottom: 32px;
+                right: 32px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .eco-conscious-technology__kind__slide__anchor:hover:after {
+                transform: rotate(180deg);
+            }
+            .eco-conscious-technology__kind__slide__anchor1 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind1.png);
+            }
+            .eco-conscious-technology__kind__slide__anchor2 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind2.jpg);
+            }
+            .eco-conscious-technology__kind__slide__anchor3 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind3.png);
+            }
+            .eco-conscious-technology__kind__slide__anchor__preface {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: white;
+            }
+            .eco-conscious-technology__kind__slide__anchor__subject {
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                margin-top: 8px;
+                color: white;
+            }
+            .eco-conscious-technology__kind__pagination {
+                opacity: 0.5;
+                line-height: 1;
+            }
+            .eco-conscious-technology__kind__pagination .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                border: 1px solid #CBCBCB;
+                background-color: black;
+                opacity: 0.5;
+                vertical-align: bottom;
+            }
+            .eco-conscious-technology__kind__pagination .swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+            .eco-conscious-technology__kind__btn-set {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+            }
+            .eco-conscious-technology__kind__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                cursor: pointer;
+            }
+            .eco-conscious-technology__kind__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0005/btn-ectk-prev.svg);
+            }
+            .eco-conscious-technology__kind__btn-set__btn__next {
+                background-image: url(../../mocks/ST0005/btn-ectk-next.svg);
+            }
 
             /* Recreation of product */
             .recreation-of-product__wrap {
@@ -726,7 +850,7 @@
                 background: rgba(0, 0, 0, 0.5);
                 backdrop-filter: blur(27px);
             }
-            .popup-discription--wrap {
+            .popup-discription__wrap {
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
@@ -736,50 +860,63 @@
                 text-align: left;
                 background-color: white;
             }
-            .popup-discription--tit {
+            .popup-discription__tit {
                 text-align: center;
                 color: black;
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
+                font-weight: 250;
                 font-size: 52px;
                 line-height: 60px;
             }
-            .popup-discription--photo {
+            .popup-discription__tit__preface {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                font-weight: 400;
+            }
+            .popup-discription__tit__subject {
+                margin-top: 20px;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+            }
+            .popup-discription__photo {
                 margin: 60px 0px 0px;
             }
-            .popup-discription--photo--figure {
+            .popup-discription__photo__figure {
                 margin: 0px;
+                text-align: center;
             }
-            .popup-discription--photo--figure--img {
+            .popup-discription__photo__figure__img {
                 max-width: 100%;
                 height: auto;
             }
-            .popup-discription--photo--figure--figcaption {
+            .popup-discription__photo__figure__figcaption {
                 text-align: center;
                 color: #7E7C77;
                 margin-top: 20px;
                 font-weight: 300;
             }
-            .popup-discription--photo--figure--figcaption--strong {
+            .popup-discription__photo__figure__figcaption__strong {
                 font-weight: 600;
                 color: #7E7C77;
             }
-            .popup-discription--cont1 {
+            .popup-discription__cont1 {
                 font-size: 20px;
                 line-height: 28px;
                 margin: 60px 0px 0px;
             }
-            .popup-discription--cont2 {
+            .popup-discription__cont2 {
                 font-size: 16px;
                 line-height: 24px;
                 margin: 60px 0px 0px;
             }
-            .popup-discription--cont--grid2 {
+            .popup-discription__cont__grid2 {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 gap: 0px 40px;
             }
-            .popup-discription--btn-close {
+            .popup-discription__btn-close {
                 position: absolute;
                 top: 40px;
                 right: 40px;
@@ -794,11 +931,11 @@
                 background-color: white;
                 transition: 0.3s ease transform;
             }
-            .popup-discription--btn-close:hover {
+            .popup-discription__btn-close:hover {
                 transform: rotate(180deg);
             }
-            .popup-discription--btn-close:before,
-            .popup-discription--btn-close:after {
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
                 position: absolute;
                 top: 22px;
                 left: 15px;
@@ -808,10 +945,10 @@
                 height: 2px;
                 background-color: #262626;
             }
-            .popup-discription--btn-close:before {
+            .popup-discription__btn-close:before {
                 transform: rotate(45deg);
             }
-            .popup-discription--btn-close:after {
+            .popup-discription__btn-close:after {
                 transform: rotate(-45deg);
             }
 
@@ -863,24 +1000,88 @@
                 <div class="swiper eco-conscious-technology__kind">
                     <div class="swiper-wrapper eco-conscious-technology__kind__slide-wrap">
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#" class="eco-conscious-technology__kind__slide__anchor">
+                            <a href="#up-home-appliances" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor1">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Upgrade your experience</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">UP home appliances</p>
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#" class="eco-conscious-technology__kind__slide__anchor">
+                            <a href="#heat-pump-technology" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor2">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Towards  zero ozone layer depletion</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">Heat pump technology</p>
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#" class="eco-conscious-technology__kind__slide__anchor">
+                            <a href="#glass-powder" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor3">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Empowering the future for environmental protection</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">Glass powder</p>
                             </a>
                         </div>
-
+                    </div>
+                    <div class="swiper-pagination eco-conscious-technology__kind__pagination"></div>
+                    <div class="eco-conscious-technology__kind__btn-set">
+                        <div class="eco-conscious-technology__kind__btn-set__btn eco-conscious-technology__kind__btn-set__btn__prev"></div>
+                        <div class="eco-conscious-technology__kind__btn-set__btn eco-conscious-technology__kind__btn-set__btn__next"></div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="up-home-appliances">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Upgrade your experience</div>
+                                <div class="popup-discription__tit__subject">UP home appliances</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-up-home-appliances.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">UP home appliances surpass the conventional use and management of products by incorporating new functionalities. These enhancements are continuously upgraded in consideration of valuable input from consumers. LG Electronics has introduced UP home appliances, featuring 24 different products such as "Laundry Care after End" and "Pet Care," along with over 150 upgrade features. </p>
+                                <p class="popup-discription__cont1--grid2--item">Among these, eco-conscious UP appliances offer an energy-saving cycle for dishwashers and a microplastic care program for washing machines. The energy-saving cycle maintains the same cleaning power as the standard cycle but consumes 20% less electricity. Additionally, the washing machine's microplastic care program reduces cloth friction, resulting in a 70% reduction in the release of microplastics caused by synthetic fiber damage.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="heat-pump-technology">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Towards  zero ozone layer depletion</div>
+                                <div class="popup-discription__tit__subject">Heat pump technology</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-heat-pump-technology.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">Heat pump technology utilizes the eco-friendly refrigerant "R290" to achieve a remarkable milestone in ozone depletion potential (ODP) with a rating of 0. </p>
+                                <p class="popup-discription__cont1--grid2--item">This innovative air conditioning system replaces traditional heaters and enables cooling and heating using air, land, and water as heat sources. By doing so, it saves up to 80% energy compared to conventional air conditioning systems.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="glass-powder">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Empowering the future for environmental protection</div>
+                                <div class="popup-discription__tit__subject">Glass powder</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-glass-powder.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">LG Electronics continuously develops functional materials as key drivers of future growth. This includes the production of antibacterial glass powder and water-soluble glass powder that completely dissolves in water. Glass powder is composed of fine particles obtained by crushing glass and possesses excellent material stability and durability. In 2013, LG Electronics introduced an oven in North America featuring the "Easy Clean" function, which utilizes a coating of functional glass powder on the metal surface, making it effortless to clean the inside. </p>
+                                <p class="popup-discription__cont1--grid2--item">The versatile antibacterial glass powder is applicable to many appliances, especially those with handles that contact with the body, such as refrigerators, washing machines, and air conditioners. Also, water-soluble glass powder transforms into inorganic ions when dissolved in water, facilitating the growth of microalgae and seaweed in the ocean. It can also serve as an alternative to ocher spray used during red tide occurrences.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
                     </div>
                 </div>
             </div>
@@ -1028,38 +1229,38 @@
                         </li>
                     </ul>
                     <div class="popup-discription" id="available-resources">
-                        <div class="popup-discription--wrap">
+                        <div class="popup-discription__wrap">
                             <dl class="popup-discription--inner">
-                                <dt class="popup-discription--tit">Making better use of available <br />resources</dt>
-                                <dd class="popup-discription--photo">
-                                    <figure class="popup-discription--photo--figure">
-                                        <img src="../../mocks/ST0005/photo-available-resources.png" alt="" class="popup-discription--photo--figure--img">
+                                <dt class="popup-discription__tit">Making better use of available <br />resources</dt>
+                                <dd class="popup-discription__photo">
+                                    <figure class="popup-discription__photo__figure">
+                                        <img src="../../mocks/ST0005/photo-available-resources.png" alt="" class="popup-discription__photo__figure__img">
                                     </figure>
                                 </dd>
-                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                    <p class="popup-discription--cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
-                                    <p class="popup-discription--cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
+                                <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                    <p class="popup-discription__cont1--grid2--item">LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models(model: K410MC19E) by 2% in 2020 through a change in materials and increased the use of recycled materials by 6% for ten types of plastic.</p>
+                                    <p class="popup-discription__cont1--grid2--item">We're expanding the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020. We're promoting the development of alternative parts and technologies for all products, and carefully measuring the performance of recycled plastics we use.</p>
                                 </dd>
                             </dl>
-                            <button type="button" class="popup-discription--btn-close">Close</button>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
                         </div>
                     </div>
                     <div class="popup-discription" id="packaging-materials">
-                        <div class="popup-discription--wrap">
+                        <div class="popup-discription__wrap">
                             <dl class="popup-discription--inner">
-                                <dt class="popup-discription--tit">New Uses of Packaging <br />Materials</dt>
-                                <dd class="popup-discription--cont1 popup-discription--cont--grid2">
-                                    <p class="popup-discription--cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
-                                    <p class="popup-discription--cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
+                                <dt class="popup-discription__tit">New Uses of Packaging <br />Materials</dt>
+                                <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                    <p class="popup-discription__cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
+                                    <p class="popup-discription__cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
                                 </dd>
-                                <dd class="popup-discription--photo">
-                                    <figure class="popup-discription--photo--figure">
-                                        <img src="../../mocks/ST0005/photo-packaging-materials.png" alt="" class="popup-discription--photo--figure--img">
-                                        <figcaption class="popup-discription--photo--figure--figcaption"><strong class="popup-discription--photo--figure--figcaption--strong">Left</strong> Exsiting packing material, <strong class="popup-discription--photo--figure--figcaption--strong">Right</strong> Updated packaging material</figcaption>
+                                <dd class="popup-discription__photo">
+                                    <figure class="popup-discription__photo__figure">
+                                        <img src="../../mocks/ST0005/photo-packaging-materials.png" alt="" class="popup-discription__photo__figure__img">
+                                        <figcaption class="popup-discription__photo__figure__figcaption"><strong class="popup-discription__photo__figure__figcaption__strong">Left</strong> Exsiting packing material, <strong class="popup-discription__photo__figure__figcaption__strong">Right</strong> Updated packaging material</figcaption>
                                     </figure>
                                 </dd>
                             </dl>
-                            <button type="button" class="popup-discription--btn-close">Close</button>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
                         </div>
                     </div>
                 </div>
@@ -1173,66 +1374,18 @@
                         })
                     }
                 },
-                summary: function() {
-                    let summary = document.querySelector(".summary");
-                    let msOfsTop = summary.offsetTop;
-                    let summaryVisual = summary.querySelector(".summary__visual");
-                    let msvOfsTop = summaryVisual.offsetTop;
-                    let summaryCont = summary.querySelector(".summary__cont");
-                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
-                    let mctOfs = new Array();
-                    let mctViewIs = new Array();
-    
-                    measContTxt.forEach(function(mct,a) {
-                        mctOfs[a] = mct.offsetTop;
-                        mctViewIs[a] = false;
-                    })
-    
-                    gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".summary",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                //console.log("enter")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onLeaveBack: function() {
-                                //console.log("leaveBack")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onLeave: function() {
-                                //console.log("leave")
-                                summaryVisual.classList.remove("summary__visual--fixed")
-                                summaryVisual.classList.add("summary__visual--bottom-end")
-                                summaryCont.classList.remove("summary__cont--fixed")
-                            },
-                            onEnterBack: function() {
-                                //console.log("enterBack")
-                                summaryVisual.classList.add("summary__visual--fixed")
-                                summaryVisual.classList.remove("summary__visual--bottom-end")
-                                summaryCont.classList.add("summary__cont--fixed")
-                            },
-                            onUpdate: initMeanContTxt
-                        }
-                    })
-    
-                    function initMeanContTxt() {
-                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
-                        measContTxt.forEach(function(mct,b) {
-                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
-                                mct.classList.add("summary__cont__txt--active")
-                                mctViewIs[b] = true
-                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
-                                mct.classList.remove("summary__cont__txt--active")
-                                mctViewIs[b] = false
-                            }
-                        })
-    
-                    }
+                ecoConsciousTechnology: function() {
+                    let swiper = new Swiper(".eco-conscious-technology__kind", {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                        pagination: {
+                            el: ".eco-conscious-technology__kind__pagination"
+                        },
+                        navigation: {
+                            nextEl: ".eco-conscious-technology__kind__btn-set__btn__next",
+                            prevEl: ".eco-conscious-technology__kind__btn-set__btn__prev",
+                        },
+                    });
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
@@ -1262,6 +1415,7 @@
                 }
             }
             circularity.visualScrollDown();
+            circularity.ecoConsciousTechnology();
             circularity.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
@@ -1348,8 +1502,8 @@
         <script>
             function popupDiscription(popupID) {
                 var descPopup = document.getElementById(popupID.split("#")[1]);
-                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
-                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"

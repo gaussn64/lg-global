@@ -901,7 +901,7 @@
                 background: rgba(0, 0, 0, 0.5);
                 backdrop-filter: blur(27px);
             }
-            .popup-discription--wrap {
+            .popup-discription__wrap {
                 position: relative;
                 width: 980px;
                 margin: 90px auto;
@@ -911,7 +911,7 @@
                 text-align: left;
                 background-color: white;
             }
-            .popup-discription--tit {
+            .popup-discription__tit {
                 text-align: center;
                 color: black;
                 font-family: 'LG_EI_Headline';
@@ -919,42 +919,42 @@
                 font-size: 52px;
                 line-height: 60px;
             }
-            .popup-discription--photo {
+            .popup-discription__photo {
                 margin: 60px 0px 0px;
             }
-            .popup-discription--photo--figure {
+            .popup-discription__photo__figure {
                 margin: 0px;
             }
-            .popup-discription--photo--figure--img {
+            .popup-discription__photo__figure__img {
                 max-width: 100%;
                 height: auto;
             }
-            .popup-discription--photo--figure--figcaption {
+            .popup-discription__photo__figure__figcaption {
                 text-align: center;
                 color: #7E7C77;
                 margin-top: 20px;
                 font-weight: 300;
             }
-            .popup-discription--photo--figure--figcaption--strong {
+            .popup-discription__photo__figure__figcaption__strong {
                 font-weight: 600;
                 color: #7E7C77;
             }
-            .popup-discription--cont1 {
+            .popup-discription__cont1 {
                 font-size: 20px;
                 line-height: 28px;
                 margin: 60px 0px 0px;
             }
-            .popup-discription--cont2 {
+            .popup-discription__cont2 {
                 font-size: 16px;
                 line-height: 24px;
                 margin: 60px 0px 0px;
             }
-            .popup-discription--cont--grid2 {
+            .popup-discription__cont__grid2 {
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 gap: 0px 40px;
             }
-            .popup-discription--btn-close {
+            .popup-discription__btn-close {
                 position: absolute;
                 top: 40px;
                 right: 40px;
@@ -969,11 +969,11 @@
                 background-color: white;
                 transition: 0.3s ease transform;
             }
-            .popup-discription--btn-close:hover {
+            .popup-discription__btn-close:hover {
                 transform: rotate(180deg);
             }
-            .popup-discription--btn-close:before,
-            .popup-discription--btn-close:after {
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
                 position: absolute;
                 top: 22px;
                 left: 15px;
@@ -983,10 +983,10 @@
                 height: 2px;
                 background-color: #262626;
             }
-            .popup-discription--btn-close:before {
+            .popup-discription__btn-close:before {
                 transform: rotate(45deg);
             }
-            .popup-discription--btn-close:after {
+            .popup-discription__btn-close:after {
                 transform: rotate(-45deg);
             }
 
@@ -1735,8 +1735,8 @@
         <script>
             function popupDiscription(popupID) {
                 var descPopup = document.getElementById(popupID.split("#")[1]);
-                var descPopupWrap = descPopup.querySelector(".popup-discription--wrap");
-                var btnClose = descPopupWrap.querySelector(".popup-discription--btn-close");
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"

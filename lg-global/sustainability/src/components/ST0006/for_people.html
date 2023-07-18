@@ -1,0 +1,1533 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<header id="header" class="c-header">
+    <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+    <nav class="c-header__gnb">
+        <ul class="c-header__gnb__list">
+            <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0006/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
+        </ul>
+    </nav>
+    <p class="c-header__location">For people</p>
+    <button type="button" class="c-header__btn-gnb">
+        <span class="c-header__btn-gnb__bar"></span>
+        <span class="c-header__btn-gnb__bar"></span>
+    </button>
+</header>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* For People Visual */
+            .for-people-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .for-people-visual:after {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            }
+            .for-people-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                line-height: 76px;
+                font-size: 80px;
+                transform: translate(0,-50%);
+            }
+            .for-people-visual__tit__txt {
+                font-family: 'LG_EI_Headline';
+                font-weight: 400;
+                color: white;
+            }
+            .for-people-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            .for-people-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .for-people-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0006/for-people-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0px);
+            }
+            .for-people-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-6px);
+                }
+                to {
+                    transform: translateY(16px);
+                }
+            }
+
+            /* For People About */
+            .for-people-about {
+                text-align: center;
+            }
+            .for-people-about__cont {
+                width: 1440px;
+                margin: 0px auto;
+                padding: 106px 0px;
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 56px;
+                color: #4A4946;
+            }
+            
+            /* Accessibility */
+            .accessibility {
+                width: 1440px;
+                padding: 60px 0px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .accessibility__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .accessibility__intro__txt {
+                margin-top: 16px;
+            }
+            .accessibility__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .accessibility__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .accessibility__photo {
+                overflow: hidden;
+                border-radius: 30px;
+                margin: 60px 0px;
+            }
+            .accessibility__solutions {
+                position: relative;
+                padding: 72px 0px 48px;
+                overflow: visible;
+            }
+            .accessibility__solutions__slide {
+                position: relative;
+                width: 708px;
+                margin-right: 24px;
+            }
+            .accessibility__solutions__slide__anchor {
+                display: block;
+                width: 708px;
+                height: 550px;
+                padding: 32px;
+                box-sizing: border-box;
+                border-radius: 28px;
+                text-align: left;
+                text-decoration: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .accessibility__solutions__slide__anchor:hover {
+                text-decoration: none;
+            }
+            .accessibility__solutions__slide__anchor:after {
+                position: absolute;
+                bottom: 32px;
+                right: 32px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0006/btn-ectk-more.svg) no-repeat center center;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .accessibility__solutions__slide__anchor:hover:after {
+                transform: rotate(180deg);
+            }
+            .accessibility__solutions__slide__anchor1 {
+                background-image: url(../../mocks/ST0006/photo-accessibility-solutions1.png);
+            }
+            .accessibility__solutions__slide__anchor2 {
+                background-image: url(../../mocks/ST0006/photo-accessibility-solutions2.png);
+            }
+            .accessibility__solutions__slide__anchor3 {
+                background-image: url(../../mocks/ST0006/photo-accessibility-solutions3.png);
+            }
+            .accessibility__solutions__slide__anchor4 {
+                background-image: url(../../mocks/ST0006/photo-accessibility-solutions4.png);
+            }
+            .accessibility__solutions__slide__anchor__preface {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: white;
+            }
+            .accessibility__solutions__slide__anchor__subject {
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                margin-top: 8px;
+                color: white;
+            }
+            .accessibility__solutions__pagination {
+                opacity: 0.5;
+                line-height: 1;
+            }
+            .accessibility__solutions__pagination .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                border: 1px solid #CBCBCB;
+                background-color: black;
+                opacity: 0.5;
+                vertical-align: bottom;
+            }
+            .accessibility__solutions__pagination .swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+            .accessibility__solutions__btn-set {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+            }
+            .accessibility__solutions__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                cursor: pointer;
+            }
+            .accessibility__solutions__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0006/btn-as-prev.svg);
+            }
+            .accessibility__solutions__btn-set__btn__next {
+                background-image: url(../../mocks/ST0006/btn-as-next.svg);
+            }
+
+            /* Sustainability Card */
+
+            /* Summary */
+            .summary {
+                padding: 80px 0px 140px;
+            }
+            .summary__cont {
+                width: 1440px;
+                height: 720px;
+                border-radius: 40px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0006/photo-summary-visual.jpg) no-repeat center center;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 80px;
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 57px 80px;
+                font-size: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 250;
+                line-height: 60px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+
+            /* Popup Discover More */
+            .popup-discover-more {
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                display: none;
+                width: 100%;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                background-color: white;
+            }
+            .popup-discover-more--container {
+                display: flex;
+                position: relative;
+                z-index: 1;
+                transition: 0.3s ease margin-left;
+            }
+            .popup-discover-more--header {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+                padding: 80px 100px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: left;
+            }
+            .popup-discover-more--header__none-visual {
+                width: auto;
+            }
+            .popup-discover-more--header--tit,
+            .popup-discover-more--header--cont {
+                position: relative;
+                z-index: 2;
+                color: white;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
+                color: #262626;
+            }
+            .popup-discover-more--header--tit {
+                font-weight: 300;
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--header--cont {
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+                margin-top: 20px;
+            }
+            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                font-size: 20px;
+                line-height: 28px;
+                color: #F6F3EB;
+            }
+            .popup-discover-more--header__none-visual .popup-discover-more--header--cont + .popup-discover-more--header--cont {
+                color: #4A4946;
+            }
+            .popup-discover-more--header--edit {
+                display: flex;
+                align-items: center;
+                gap: 0px 17px;
+                position: fixed;
+                z-index: 2;
+                bottom: 50px;
+                left: 100px;   
+            }
+            .popup-discover-more--header--edit--btn-close {
+                width: 48px;
+                height: 48px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                border-radius: 50%;
+                background: #D9D9D9 url(../../mocks/ST0002/btn-pdm-close.svg) no-repeat center center;
+                backdrop-filter: blur(9.23077px);
+                opacity: 0.4;
+                transition: 0.3s ease transform;
+            }
+            .popup-discover-more--header--edit--btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discover-more--header--edit--progress {
+                width: 300px;
+                height: 2px;
+                background-color: rgba(246, 243, 235, 0.2)
+            }
+            .popup-discover-more--header--edit--progress--bar {
+                height: 2px;
+                background-color: #7E7C77;
+                transition: 0.3s ease width;
+            }
+            .popup-discover-more--header--visual {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+            }
+            .popup-discover-more--header--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--visual {
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 800px;
+                height: 100vh;
+            }
+            .popup-discover-more--visual--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discover-more--section {
+                display: flex;
+                align-items: flex-start;
+                height: 100vh;
+                padding: 80px 90px;
+                box-sizing: border-box;
+                white-space: nowrap;
+                text-align: center;
+            }
+            .popup-discover-more--section__vertical-middle {
+                align-items: center;
+            }
+            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
+                padding-left: 60px;
+            }
+            .popup-discover-more--section--cont-wrap {
+                display: inline-block;
+                text-align: left;
+            }
+            .popup-discover-more--section--cont-wrap__inline {
+                display: inline-flex;
+                gap: 0px 70px;
+            }
+            .popup-discover-more--section--tit,
+            .popup-discover-more--section--cont1,
+            .popup-discover-more--section--cont2 {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .popup-discover-more--section--tit {
+                font-size: 36px;
+                line-height: 42px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .popup-discover-more--section--cont1 {
+                margin-top: 20px;
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .popup-discover-more--section--cont2 {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .popup-discover-more--section--cont1:first-child,
+            .popup-discover-more--section--cont2:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
+            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
+                padding-left: 35px;
+            }
+            .popup-discover-more--section--photo {
+                margin: 60px auto;
+            }
+            .popup-discover-more--section--photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discover-more--section--photo:last-child {
+                margin-bottom: 0px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-tennessee2--photo {
+                width: 808px;
+                height: 400px;
+            }
+            .popup-discover-more--section--carbon-emission-reduction-changwon2--photo {
+                width: 567px;
+                height: 400px;
+            }
+            .popup-discover-more--section--recreation-of-product2--photo {
+                width: 776px;
+                height: 430px;
+            }
+            .popup-discover-more--section--recreation-of-product3--photo {
+                width: 727px;
+                height: 526px;
+            }
+            .popup-discover-more--section--recreation-of-product4--photo {
+                width: 722px;
+                height: 490px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center2--photo {
+                width: 680px;
+                height: 495px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center3--photo {
+                width: 490px;
+                height: 350px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center4--photo {
+                width: 610px;
+                height: 404px;
+            }
+            .popup-discover-more--section--chilseo-recycling-center5--photo {
+                width: 350px;
+                height: 476px;
+            }
+            .popup-discover-more--section--photo--img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription__wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription__tit {
+                text-align: center;
+                color: black;
+                font-family: 'LG_EI_Headline';
+                font-weight: 250;
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .popup-discription__tit--left {
+                text-align: left;
+            }
+            .popup-discription__tit__preface {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                font-weight: 400;
+            }
+            .popup-discription__tit__subject {
+                margin-top: 20px;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+            }
+            .popup-discription--intro-summary {
+                padding-left: 140px;
+                margin-top: 60px;
+            }
+            .popup-discription__photo {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__photo__figure {
+                margin: 0px;
+                text-align: center;
+            }
+            .popup-discription__photo__figure__img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription__photo__figure__figcaption {
+                text-align: center;
+                color: #7E7C77;
+                margin-top: 20px;
+                font-weight: 300;
+            }
+            .popup-discription__photo__figure__figcaption__strong {
+                font-weight: 600;
+                color: #7E7C77;
+            }
+            .popup-discription--stit {
+                margin-top: 60px;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+            }
+            .popup-discription--intro-detail {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 40px;
+                margin-top: 60px;
+            }
+            .popup-discription--intro-detail__item__tit {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+            }
+            .popup-discription--intro-detail__item__tit__category {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription--intro-detail__item__tit__subject {
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                margin-top: 10px;
+            }
+            .popup-discription--intro-detail__guestbook {
+                margin-top: 24px;
+            }
+            .popup-discription--intro-detail__guestbook__blockquote {
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 38px;
+                letter-spacing: -0.14px;
+                margin-bottom: 24px;
+            }
+            .popup-discription--intro-detail__guestbook__figcaption {
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+            }
+            .popup-discription--intro-detail__item__major-desc {
+                margin-top: 24px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription--intro-detail__item__add-explan {
+                margin-top: 24px;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+                color: #7E7C77;
+            }
+            .popup-discription__cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__cont__grid2 {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 40px;
+            }
+            .popup-discription__btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription__btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription__btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription__btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                }
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="for-people-visual">
+                <h2 class="for-people-visual__tit">
+                    <span class="for-people-visual__tit__txt">
+                        From people, for people
+                    </span>
+                </h2>
+                <video src="../../mocks/ST0006/video-for-people-visual.mp4" class="for-people-visual__video" autoplay loop muted></video>
+                <div class="for-people-visual__scrolldown">
+                    <button type="button" class="for-people-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="for-people-about">
+                <p class="for-people-about__cont">
+                    <span class="for-people-about__cont__txt">We are committed to upholding human rights, </span><br />
+                    <span class="for-people-about__cont__txt">fostering diversity, and creating a supportive work </span><br />
+                    <span class="for-people-about__cont__txt">environment. We aim to create a sense of </span><br />
+                    <span class="for-people-about__cont__txt">belonging, enabling individuals to reach their full </span><br />
+                    <span class="for-people-about__cont__txt">potential. With exceptional digital experiences, we </span><br />
+                    <span class="for-people-about__cont__txt">bring smiles to people's faces based on human- </span><br />
+                    <span class="for-people-about__cont__txt">centered innovation.</span>
+                </p>
+            </div>
+            <div class="accessibility">
+                <h3 class="accessibility__tit">Accessibility</h3>
+                <div class="accessibility__intro">
+                    <p class="accessibility__intro__txt">
+                        Living smart without barriers
+                    </p>
+                    <p class="accessibility__intro__txt">
+                        Technology can improve lives, but complexity can hinder usability. Our <br />
+                        innovation focuses on people, understanding that people may have <br />
+                        challenges. We aim to eliminate barriers based on disability or age, <br />
+                        offering smart solutions for a superior lifestyle.
+                    </p>
+                </div>
+                <div class="accessibility__photo">
+                    <img src="../../mocks/ST0006/photo-accessibility.png" alt="" class="accessibility__photo__img" />
+                </div>
+                <div class="swiper accessibility__solutions">
+                    <div class="swiper-wrapper accessibility__solutions__slide-wrap">
+                        <div class="swiper-slide accessibility__solutions__slide">
+                            <a href="#voice-activated" onclick="popupDiscription(this.href); return false" class="accessibility__solutions__slide__anchor accessibility__solutions__slide__anchor1">
+                                <p class="accessibility__solutions__slide__anchor__subject">Voice, that life made easy</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide accessibility__solutions__slide">
+                            <a href="#refrigerator-convenience" onclick="popupDiscription(this.href); return false" class="accessibility__solutions__slide__anchor accessibility__solutions__slide__anchor2">
+                                <p class="accessibility__solutions__slide__anchor__subject">
+                                    Convenience, that overcomes <br />
+                                    challenging situations
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide accessibility__solutions__slide">
+                            <a href="#lg-oled-tv" onclick="popupDiscription(this.href); return false" class="accessibility__solutions__slide__anchor accessibility__solutions__slide__anchor3">
+                                <p class="accessibility__solutions__slide__anchor__subject">TV, that everyone loves</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide accessibility__solutions__slide">
+                            <a href="#service-cares" onclick="popupDiscription(this.href); return false" class="accessibility__solutions__slide__anchor accessibility__solutions__slide__anchor4">
+                                <p class="accessibility__solutions__slide__anchor__subject">Service, that cares everyone</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination accessibility__solutions__pagination"></div>
+                    <div class="accessibility__solutions__btn-set">
+                        <div class="accessibility__solutions__btn-set__btn accessibility__solutions__btn-set__btn__prev"></div>
+                        <div class="accessibility__solutions__btn-set__btn accessibility__solutions__btn-set__btn__next"></div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="voice-activated">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit popup-discription__tit--left">
+                                <div class="popup-discription__tit__preface">Unable to press a button? Simply say “Hi, LG.”</div>
+                                <div class="popup-discription__tit__subject">Voice-activated water purifier</div>
+                            </dt>
+                            <dd class="popup-discription--intro-summary">
+                                The LG PuriCare Objet Collection redefines water purifiers by introducing voice recognition. With this technology, users only have to say “Hi LG, pour 250ml of hot water”. For example, let’s say you cannot use your hands because you are cooking. Simply tell the water purifier how much water you want and how warm or cold you want it, and it will start working all by itself. <br />
+                                The user-friendly design includes voice guidance, benefiting individuals with visual impairments, the elderly, and children who may find buttons challenging. For example, when visually impaired individuals use a water purifier to drink tea, the voice guidance will tell them, "Be careful, hot water is coming out," to use the product more safely. This innovative solution ensures convenient use for everyone.
+                            </dd>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0006/photo-voice-activated.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--stit">Introducing functions of voice</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Voice recognition</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">The product knows each user's voice and starts operating when the user says a command without touching the product.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">
+                                        *Applicable to some products, will be expanded to other product lines <br />
+                                        Ex) Robot Vacuum Cleaner
+                                    </p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Voice Guidance</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">Voice guidance audibly lets the user know which button or option they have tapped. It also explains functions and current situations. User can utilize the product through voice guidance without having to see.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">
+                                        *Applicable to some products, will be expanded to other product lines <br />
+                                        Ex) Water Purifier
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="refrigerator-convenience">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit popup-discription__tit--left">
+                                <div class="popup-discription__tit__preface">Opening doors is no longer a manual task</div>
+                                <div class="popup-discription__tit__subject">Adding convenience to refrigerator</div>
+                            </dt>
+                            <dd class="popup-discription--intro-summary">
+                                Discover the convenience and intelligent design of the LG Signature Refrigerator, thoughtfully created to cater to the unique needs of different individuals. For instance, imagine you are holding lots of ingredients or your hands are messy from cooking. The refrigerator's door opens like magic, so you can effortlessly reach for whatever you need inside. This feature is especially helpful for people who use wheelchairs or have trouble with their hands.
+                            </dd>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0006/photo-refrigerator-convenience.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--stit">Introducing functions of refrigerator</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Auto lift</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">With a simple press of a button, the bottom drawer automatically opens, while the containers inside elevate to a comfortable knee height. This thoughtful design ensures easy access and usability for individuals using wheelchairs or those with limited dexterity in their hands.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Easy handle</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">The product door can be effortlessly opened with minimal force, and the handle, as well as the direction of door opening, can be adjusted to the left or right, enhancing convenience.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Auto open door</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">When you stand in the front of refrigerator, the sensor located at the bottom of the right refrigerator door detects your foot and opens the door automatically.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">
+                                        * Please note that this feature is applicable only to the right door of the refrigerator compartment.
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="lg-oled-tv">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit popup-discription__tit--left">
+                                <div class="popup-discription__tit__preface">Universal usability for all</div>
+                                <div class="popup-discription__tit__subject">LG OLED TV</div>
+                            </dt>
+                            <dd class="popup-discription--intro-summary">
+                                We understand that using a TV can be challenging for seniors, people with disabilities, and those who have trouble with devices. For instance, when living with seniors or people with disabilities, it can be difficult to find the right TV volume, subtitle location, or sign language size that suits everyone's needs. To help with this, LG Electronics actively involves a diverse range of customers in the planning of our products and services. Our aim is to create a TV that is accessible and user-friendly for everyone.
+                            </dd>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0006/photo-lg-oled-tv.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--stit">Introducing functions of TV</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Read the menu aloud</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">The TV provides voice guidance for menu names and operations, making it more convenient for visually impaired users. After enabling the function, you can adjust the voice speed, volume, and pitch level according to your preferences.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Voice commentary on the screen</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">For visually impaired users, the TV offers voice explanations of the content displayed on the screen.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* This feature is only available when the TV program supports it.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Listen to the TV together</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">We have incorporated a feature that allows simultaneous sound output to both the TV speaker and a Bluetooth device. This enables customers with hearing loss caused by disabilities or aging to enjoy watching TV with their family or friends. However, for Bluetooth devices, we recommend using earphones or headphones. </p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* This feature is only available when the TV program supports it.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Subtitles</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">Having multiple subtitles can be overwhelming. Our devices allow you to adjust the position of the subtitles to your preferred location on the screen using the direction buttons on the remote control. By doing so, you can ensure that the subtitles do not overlap, making them easier to read and understand.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Note that this feature is only available when the broadcasting program supports subtitles.</p>
+                                </div>
+                                <div class="popup-discription--intro-detail__item">
+                                    <h5 class="popup-discription--intro-detail__item__tit">Enlarging sign language</h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">The feature makes the sign language screen bigger on TV. It helps people who have trouble hearing and use sign language to understand better. People who have difficulties hearing said that when the sign language screen is bigger, they can see the mouth and hand shapes more clearly. It is like turning up the volume on the TV for someone who can hear.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Note that this feature is only available when the broadcasting program supports sign language.</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="service-cares">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit popup-discription__tit--left">
+                                <div class="popup-discription__tit__preface">Smart life solutions</div>
+                                <div class="popup-discription__tit__subject">Services designed for everyone</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0006/photo-service-cares.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dt class="popup-discription--stit">Visual support</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item__photo">
+                                    <img src="../../mocks/ST0006/photo-visual-support.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                </div>
+                                <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
+                                    <h5 class="popup-discription--intro-detail__item__tit">
+                                        <div class="popup-discription--intro-detail__item__tit__category">Braille stickers</div>
+                                        <div class="popup-discription--intro-detail__item__tit__subject">Easy "Touch" feature for those with difficulties</div>
+                                    </h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">We understand the challenges faced by visually impaired individuals when using touch-operated home appliances. To address this problem, we have developed Braille stickers with raised dots. These stickers enable people with visual impairments to easily identify and access functions of their appliances. They can also be used on other devices. We are proud to provide these stickers free of charge, ensuring accessibility for all.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Please note that Braille stickers are only provided in Korea</p>
+                                </div>
+                            </dd>
+                            <dt class="popup-discription--stit">Elderly support</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item__photo">
+                                    <img src="../../mocks/ST0006/photo-elderly-support.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                </div>
+                                <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
+                                    <h5 class="popup-discription--intro-detail__item__tit">
+                                        <div class="popup-discription--intro-detail__item__tit__category">Senior care program</div>
+                                        <div class="popup-discription--intro-detail__item__tit__subject">To make it easy for seniors to use</div>
+                                    </h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">We recognize the importance of usability for seniors and understands that even the best products can be challenging for them. Seniors often struggle with small font sizes and find it difficult to comprehend manuals. To better support our senior users, we offer various services beyond traditional approaches. This includes a dedicated counseling service specifically tailored for seniors and the "visible ARS" and "slow talk ARS" options. These options display information in large letters, catering to customers aged 60 and above who are registered at the customer center. For customers aged 70 and above, a specialized team is directly accessible. Additionally, we introduced the "Senior Customer Family Feedback Program.“ This program ensures that families or caretakers of senior customers receive reassuring texts and detailed updates on complaint resolutions, keeping them informed throughout the process.</p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Please note that this program is only provided in Korea</p>
+                                </div>
+                            </dd>
+                            <dt class="popup-discription--stit">Hearing support</dt>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item__photo">
+                                    <img src="../../mocks/ST0006/photo-hearing-support1.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                </div>
+                                <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
+                                    <h5 class="popup-discription--intro-detail__item__tit">
+                                        <div class="popup-discription--intro-detail__item__tit__category">Sign language counseling service</div>
+                                        <div class="popup-discription--intro-detail__item__tit__subject">Can be done by hand</div>
+                                    </h5>
+                                    <p class="popup-discription--intro-detail__item__major-desc">
+                                        Sign language is a unique language. Hearing impaired individuals who are more comfortable with sign language may find it challenging to understand written Korean (Hangul), even if they know the language. This is why we provide a service where individuals can seek help in sign language for complex processes. <br />
+                                        At LG Electronics, professional sign language interpreters offer sign language interpretation services for conversations between service engineers and customers. This service, which launched in 2021, is part of our commitment to ensuring that all consumers using our products can easily access and utilize them without any inconvenience or difficulty. The sign language counseling center is gradually expanding its coverage of consultation, services, and rentals.
+                                    </p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Please note that this service is only provided in Korea</p>
+                                </div>
+                            </dd>
+                            <dd class="popup-discription--intro-detail">
+                                <div class="popup-discription--intro-detail__item__photo">
+                                    <img src="../../mocks/ST0006/photo-hearing-support2.png" alt="" class="popup-discription--intro-detail__item__photo__img" />
+                                </div>
+                                <div class="popup-discription--intro-detail__item popup-discription--intro-detail__item__cont">
+                                    <h5 class="popup-discription--intro-detail__item__tit">
+                                        <div class="popup-discription--intro-detail__item__tit__category">Digital human sign language guide service</div>
+                                        <div class="popup-discription--intro-detail__item__tit__subject">Start to end of service of digital guidance</div>
+                                    </h5>
+                                    <figure class="popup-discription--intro-detail__guestbook">
+                                        <blockquote class="popup-discription--intro-detail__guestbook__blockquote">
+                                            “As soon as I entered, I saw the sign language interpreter for the Digital Human, which reassured me, and I was satisfied with the detailed guidance. It was possible to meet a professional sign language counselor at the counseling desk, so I am happy to receive the same service as non-disabled people without any inconvenience.“
+                                        </blockquote>
+                                        <figcaption class="popup-discription--intro-detail__guestbook__figcaption">
+                                            Customer <br />
+                                            who visited LG Electronics Songpa Service Center
+                                        </figcaption>
+                                    </figure>
+                                    <p class="popup-discription--intro-detail__item__major-desc">
+                                        Sign language is a unique language. Hearing impaired individuals who are more comfortable with sign language may find it challenging to understand written Korean (Hangul), even if they know the language. This is why we provide a service where individuals can seek help in sign language for complex processes. <br />
+                                        At LG Electronics, professional sign language interpreters offer sign language interpretation services for conversations between service engineers and customers. This service, which launched in 2021, is part of our commitment to ensuring that all consumers using our products can easily access and utilize them without any inconvenience or difficulty. The sign language counseling center is gradually expanding its coverage of consultation, services, and rentals.
+                                    </p>
+                                    <p class="popup-discription--intro-detail__item__add-explan">* Please note that this service is only provided in Korea</p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sustainability-efforts">
+                <ul class="sustainability-efforts__bg-txt">
+                    <li>Delightful workplace</li>
+                    <li>Diversity &amp; Inclusion</li>
+                    <li>Design for all</li>
+                </ul>
+                <ul class="sustainability-efforts__card">
+                    <li>
+                        <h3 class="sustainability-efforts__card__tit">Delightful workplace</h3>
+                        <div class="sustainability-efforts__card__inner">
+                            <div class="sustainability-efforts__card__cont">
+                                <p class="sustainability-efforts__card__cont__summary">
+                                    Enhancing <br />
+                                    workplace safety
+                                </p>
+                                <p class="sustainability-efforts__card__cont__detail">We are constantly working to eliminate supply chain risks on a global scale. Our goal is to create a safe working environment for our partners, and create a collaborative atmosphere for all.</p>
+                                <div class="sustainability-efforts__card__cont__discover-more">
+                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                                </div>
+                            </div>
+                            <div class="sustainability-efforts__card__photo">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="sustainability-efforts__card__tit">Diversity &amp; Inclusion</h3>
+                        <div class="sustainability-efforts__card__inner">
+                            <div class="sustainability-efforts__card__cont">
+                                <p class="sustainability-efforts__card__cont__summary">
+                                    Valuing diversity <br />
+                                    and inclusion
+                                </p>
+                                <p class="sustainability-efforts__card__cont__detail">We respect everyone's diverse perspectives, to create an environment where people feel comfortable to be themselves. We encourage creativity and innovation while ensuring equal opportunities for success.</p>
+                                <div class="sustainability-efforts__card__cont__discover-more">
+                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                                </div>
+                            </div>
+                            <div class="sustainability-efforts__card__photo">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="sustainability-efforts__card__tit">Design for all</h3>
+                        <div class="sustainability-efforts__card__inner">
+                            <div class="sustainability-efforts__card__cont">
+                                <p class="sustainability-efforts__card__cont__summary">
+                                    Sustainable effort to <br />
+                                    tackle discomfort
+                                </p>
+                                <p class="sustainability-efforts__card__cont__detail">We are open to diverse perspectives when creating our products and designs. This enables us to develop innovative technologies with user-friendly features, bringing products with great benefits to a wider audience.</p>
+                                <div class="sustainability-efforts__card__cont__discover-more">
+                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                                </div>
+                            </div>
+                            <div class="sustainability-efforts__card__photo">
+                                <img src="" alt="">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="summary">
+                <div class="summary__visual"></div>
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        Through active promotion of fairness and <br />
+                        equality, we can tackle inequality and build a <br />
+                        society where everyone can thrive.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Together, <br />
+                        we create value <br />
+                        in the society.
+                    </p>
+                </div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var circularity = circularity || {};
+                
+            forPeople = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".for-people-visual");
+                    let vScrolldownWrap = visual.querySelector(".for-people-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".for-people-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
+                accessibilitySolutions: function() {
+                    let swiper = new Swiper(".accessibility__solutions", {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                        pagination: {
+                            el: ".accessibility__solutions__pagination"
+                        },
+                        navigation: {
+                            nextEl: ".accessibility__solutions__btn-set__btn__next",
+                            prevEl: ".accessibility__solutions__btn-set__btn__prev",
+                        },
+                    });
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: 3,
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            forPeople.visualScrollDown();
+            forPeople.accessibilitySolutions();
+            forPeople.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscoverMore(popupID) {
+                var pdmPopup = document.getElementById(popupID.split("#")[1]);
+                var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
+                var pdmSection = pdmContainer.getElementsByTagName("section");
+                var pdmSectionWidth = 0;
+                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
+                var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
+                var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
+                var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
+                var condition = 0;
+                var dist = window.innerWidth;
+                var wheelIng = true;
+                var startPercentGauge;
+
+                document.querySelector("body").style.overflow = "hidden"
+                pdmPopup.style.display = "block"
+
+                setTimeout(function(){
+                    for(var a=0; a < pdmSection.length; a++) {
+                        //console.log(pdmSection[a].offsetWidth)
+                        pdmSectionWidth+=pdmSection[a].offsetWidth;
+                    }
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                } ,500)
+
+                window.onresize = window.onorientationchange = function() {
+                    condition = 0;
+                    pdmSectionWidth = 0
+                    for(var b=0; b < pdmSection.length; b++) {
+                        pdmSectionWidth+=pdmSection[b].offsetWidth;
+                    }
+                    dist = window.innerWidth
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                }
+
+                document.addEventListener("wheel", function (e) {
+                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
+                        wheelIng = true
+                        dist+=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Down: "+ parseInt(dist))
+                        condition++;
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
+                        wheelIng = true
+                        condition--;
+                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Up: "+ parseInt(dist))
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    }
+
+                    if(dist/pdmSectionWidth < 1) {
+                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
+                        startPercentGauge = (dist/pdmSectionWidth)*100
+                        pdmProgressBar.style.width = (startPercentGauge) + "%"
+                    } else if(dist/pdmSectionWidth >= 1) {
+                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
+                        pdmProgressBar.style.width = "100%"
+                    }
+                })
+
+                btnClose.onclick = function() {
+                    pdmProgressBar.style.width = ""
+                    pdmContainer.style.marginLeft = ""
+                    pdmPopup.style.display = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>
