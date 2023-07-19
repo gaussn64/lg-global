@@ -21,7 +21,7 @@
         <ul class="c-header__gnb__list">
             <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
-            <li class="c-header__gnb__list__item"><a href="../ST0004/circular_economy.html" class="c-header__gnb__list__item__anchor">Circular Economy</a></li>
+            <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
             <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
         </ul>
     </nav>
@@ -76,11 +76,14 @@
             }
             .landing-visual__txt {
                 position: absolute;
-                bottom: 156px;
+                bottom: 146px;
                 left: 0px;
                 width: 100%;
                 color: white;
-                line-height: 28px;
+                font-size: 28px;
+                font-weight: 550;
+                line-height: 38px;
+                letter-spacing: -0.14px;
             }
             .landing-visual__scrolldown {
                 position: absolute;
@@ -137,9 +140,11 @@
                 opacity: 1;
             }
             .landing-introduce__desc {
-                font-size: 46px;
+                font-size: 44px;
+                font-style: normal;
                 font-weight: 300;
-                line-height: 60px;
+                line-height: 56px;
+                letter-spacing: -0.44px;
                 text-align: center;
             }
             .landing-introduce__desc__txt {
@@ -160,9 +165,10 @@
                 transform: translateY(0px);
             }
             .landing-introduce__goals__txt {
-                font-size: 120px;
+                font-size: 90px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
+                font-weight: 400;
+                letter-spacing: -0.9px;
             }
 
             /* Core Value */
@@ -191,11 +197,11 @@
             .core-value__start {
                 position: absolute;
                 z-index: 3;
-                top: 16.7593vh;
+                top: calc(50% - 308px);
                 left: 50%;
-                width: 57.2222vh;
-                height: 57.2222vh;
-                border-radius: 28.6111vh;
+                width: 530px;
+                height: 530px;
+                border-radius: 265px;
                 transform: translateX(-50%);
                 overflow: hidden;
                 opacity: 1;
@@ -214,11 +220,11 @@
             .core-value__media {
                 position: absolute;
                 z-index: 2;
-                top: 16.7593vh;
+                top: calc(50% - 308px);
                 left: 50%;
-                width: 57.2222vh;
-                height: 57.2222vh;
-                border-radius: 28.6111vh;
+                width: 530px;
+                height: 530px;
+                border-radius: 265px;
                 transform: translateX(-50%);
                 overflow: hidden;
                 transition: 0.5s ease 0s width;
@@ -226,7 +232,7 @@
             .core-value__cont-inner--fixed .core-value__media,
             .core-value__cont-inner--end .core-value__media {
                 transition-delay: 0.5s;
-                width: 87.5vw;
+                width: 1440px;
             }
             .core-value__media__item {
                 position: absolute;
@@ -247,8 +253,8 @@
                 position: absolute;
                 left: 0px;
                 right: 0px;
-                top: calc(73.9815vh + 40px);
-                height: 60px;
+                top: calc(50% + 260px);
+                height: 48px;
             }
             .core-value__txt__item {
                 position: absolute;
@@ -267,18 +273,18 @@
             }
             .core-value__txt__item__strong {
                 font-family: 'LG_EI_Headline';
-                font-size: 56px;
-                line-height: 60px;
-                font-weight: 300;
+                font-size: 44px;
+                line-height: 48px;
+                font-weight: 550;
             }
             .core-value__txt__item__small {
-                font-size: 28px;
-                line-height: 34px;
+                font-size: 24px;
+                line-height: 28px;
             }
             .core-value__progress {
                 position: absolute;
                 z-index: 10;
-                top: calc(73.9815vh + 160px);
+                top: calc(50% + 368px);
                 left: calc(50% - 112px);
                 width: 224px;
                 height: 2px;
@@ -308,42 +314,50 @@
             }
             .menu-introduce {
                 display: flex;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
+                gap: 0px 32px;
                 width: 100%;
                 box-sizing: border-box;
                 padding: 0px 6.25vw;
                 height: 100vh;
             }
             .menu-introduce__cont {
-                width: 29.5313vw;
+                width: 530px;
             }
             .menu-introduce__cont__tit {
-                font-size: 28px;
+                font-size: 24px;
                 line-height: 1;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: -0.12px;
             }
             .menu-introduce__cont__summary {
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
-                font-size: 72px;
-                line-height: 80px;
-                margin-top: 20px;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 60px;
+                letter-spacing: -0.28px;
+                margin-top: 16px;
             }
             .menu-introduce__cont__detail {
-                margin-top: 20px;
+                margin-top: 16px;
                 font-size: 20px;
-                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+                line-height: 28px; /* 140% */
+                letter-spacing: -0.1px;
             }
             .menu-introduce__cont__go-to {
-                margin-top: 30px;
+                margin-top: 24px;
             }
             .menu-introduce__cont__go-to__link {
                 display: inline-block;
-                padding: 20px 27px 21px;
-                border-radius: 100px;
+                padding: 13px 19px;
+                border-radius: 99px;
                 font-size: 16px;
                 font-weight: 600;
-                line-height: 1;
+                line-height: 16px;
+                letter-spacing: -0.24px;
                 border: 1px solid #4A4946;
                 background-color: white;
                 transition: 0.3s ease all
@@ -357,6 +371,7 @@
             }
             .menu-introduce__photos {
                 display: flex;
+                width: 878px;
                 justify-content: flex-end;
                 align-items: center;
             }
@@ -512,39 +527,39 @@
 
             /* Reports */
             .reports {
-                padding: 7.4074vh 6.25vw;
+                padding: 7.4074vh 12.5vw;
                 box-sizing: border-box;
-                height: 800px;
+                height: 700px;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
                 background-size: cover;
                 background-attachment: fixed;
             }
             .reports__tit {
                 color: white;
-                font-size: 28px;
-                line-height: 1;
+                font-size: 24px;
+                line-height: 28px;
             }
             .reports__summary {
                 color: white;
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
-                font-size: 72px;
-                line-height: 80px;
-                margin-top: 20px;
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
+                margin-top: 16px;
             }
             .reports__go-to {
-                margin-top: 2.7778vh;
+                margin-top: 32px;
             }
             .reports__go-to__link {
                 display: inline-block;
-                padding: 20px 27px 21px;
+                padding: 13px 19px;
                 border-radius: 100px;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 1;
                 border: 1px solid #4A4946;
                 background-color: white;
-                transition: 0.3s ease all
+                transition: 0.3s ease all;
             }
             .reports__go-to__link:hover,
             .reports__go-to__link:focus {
@@ -560,27 +575,34 @@
                 text-align: center;
             }
             .newsroom__tit {
-                font-size: 28px;
+                font-size: 24px;
+                font-weight: 600;
                 line-height: 34px;
+                letter-spacing: -0.12px;
             }
             .newsroom__summary {
+                margin-top: 16px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 100;
-                font-size: 72px;
-                line-height: 80px;
-                margin-top: 20px;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 60px;
+                letter-spacing: -0.28px;
             }
             .newsroom__detail {
-                margin-top: 20px;
+                margin-top: 16px;
                 font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
                 line-height: 28px;
+                letter-spacing: -0.1px;
             }
             .newsroom__photo-list__wrap {
                 position: relative;
                 height: 260px;
             }
             .newsroom__photo-list1__wrap {
-                margin-top: 99px;
+                margin-top: 100px;
             }
             .newsroom__photo-list2__wrap {
                 margin-top: 20px;
@@ -618,14 +640,14 @@
             }
             .newsroom__go-to__link {
                 display: inline-block;
-                padding: 20px 27px 22px;
+                padding: 13px 19px;
                 border-radius: 100px;
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 1;
                 border: 1px solid #4A4946;
                 background-color: white;
-                transition: 0.3s ease all
+                transition: 0.3s ease all;
             }
             .newsroom__go-to__link:hover,
             .newsroom__go-to__link:focus {
@@ -666,9 +688,8 @@
                 padding: 80px 0px 140px;
             }
             .summary__cont {
-                max-width: 1680px;
-                width: 87.5vw;
-                height: 820px;
+                width: 1440px;
+                height: 720px;
                 border-radius: 40px;
                 margin: 0px auto;
                 box-sizing: border-box;
@@ -687,7 +708,7 @@
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 104px 80px;
+                padding: 57px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
                 font-weight: 250;
@@ -698,13 +719,12 @@
             /* What's Next */
             .whats-next__wrap {
                 overflow: hidden;
-                padding: 90px 0px 73px;
+                padding: 80px 0px;
                 background-color: #E6E1D6;
             }
             .whats-next {
                 position: relative;
-                max-width: 1680px;
-                width: 87.5vw;
+                width: 1440px;
                 margin: 0px auto;
             }
             .whats-next__tit {
@@ -715,7 +735,7 @@
             }
             .whats-next__tit__strong {
                 font-family: 'LG_EI_Headline';
-                font-weight: 400;
+                font-weight: 550;
             }
             .whats-next__menu {
                 margin-top: 64px;
@@ -735,12 +755,6 @@
                 background: #F0ECE4;
                 border-radius: 20px;
                 overflow: hidden;
-            }
-            .whats-next__menu__slide3__anchor {
-                transition: 0.3s ease background-color;
-            }
-            .whats-next__menu__slide3__anchor:hover {
-                background: #262626;
             }
             .whats-next__menu__slide__anchor__photo {
                 position: absolute;
@@ -762,34 +776,68 @@
                 border-radius: 20px;
             }
             .whats-next__menu__slide2__anchor__photo {
-                top: 87px;
-                left: 107px;
-                right: 108px;
-                bottom: 128px;
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
-                top: 62px;
-                left: 82px;
-                right: 83px;
-                bottom: 103px;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide3__anchor__photo {
-                top: 135px;
-                left: -57px;
-                bottom: 158px;
-                width: 1233px;
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
             }
             .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
-                left: -677px;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
             }
             .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
                 top: 120px;
                 left: 49px;
                 right: 49px;
                 bottom: 147px;
                 border-radius: 200px;
             }
-            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
                 top: 0px;
                 left: 0px;
                 right: 0px;
@@ -807,9 +855,9 @@
                 left: 0px;
                 width: 100%;
                 box-sizing: border-box;
-                padding: 26px 32px 28px;
-                line-height: 34px;
-                font-size: 28px;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
                 background: rgba(38, 38, 38, 0);
                 backdrop-filter: blur(17px);
                 transition: 0.3s ease all;
@@ -849,100 +897,6 @@
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
                 background-color: rgba(0,0,0,1);
-            }
-
-            /* 4K */
-            @media (min-width: 2560px) {
-                /* Core Value */
-                .core-value__start,
-                .core-value__media {
-                    top: calc(50% - 462px);
-                    width: 824px;
-                    height: 824px;
-                    border-radius: 412px;
-                }
-                .core-value__cont-inner--fixed .core-value__media,
-                .core-value__cont-inner--end .core-value__media {
-                    width: 2240px;
-                }
-                .core-value__txt {
-                    top: calc(50% + 402px);
-                }
-                .core-value__progress {
-                    top: calc(50% + 522px);
-                }
-
-                /* Menu Introduce */
-                .menu-introduce {
-                    justify-content: center;
-                    gap: 0px 155px;
-                }
-                .menu-introduce__cont {
-                    width: 754px;
-                }
-                .menu-introduce__photos {
-                    position: relative;
-                    width: 1331px;
-                    height: 843px;
-                }
-                .menu-introduce__photos__item1-1 {
-                    top: 236px;
-                    right: 960px;
-                    width: 371px;
-                    height: 371px;
-                }
-                .menu-introduce__photos__item1-2 {
-                    top: 0px;
-                    right: 0px;
-                    width: 960px;
-                    height: 843px;
-                }
-                .menu-introduce__photos__item2-1 {
-                    top: 236px;
-                    right: 787px;
-                    width: 371px;
-                    height: 371px;
-                }
-                .menu-introduce__photos__item2-2 {
-                    top: 0px;
-                    right: 0px;
-                    width: 787px;
-                    height: 843px;
-                }
-                .menu-introduce__photos__item3-1 {
-                    top: 236px;
-                    right: 960px;
-                    width: 371px;
-                    height: 371px;
-                }
-                .menu-introduce__photos__item3-2 {
-                    top: 0px;
-                    right: 0px;
-                    width: 960px;
-                    height: 843px;
-                }
-                .menu-introduce__photos__item4-1 {
-                    top: 0px;
-                    right: 456px;
-                    width: 673px;
-                    height: 744px;
-                }
-                .menu-introduce__photos__item4-2 {
-                    top: 143px;
-                    right: 0px;
-                    width: 456px;
-                    height: 456px;
-                }
-
-                /* Reports */
-                .reports {
-                    max-width: 2560px;
-                    padding: 108px 160px;
-                    margin: 0px auto;
-                }
-                .reports__go-to {
-                    margin-top: 40px;
-                }
             }
         </style>
         <!-- html code -->
@@ -1195,7 +1149,7 @@
                     achievements
                 </p>
                 <div class="reports__go-to">
-                    <a href="#" class="reports__go-to__link">Go to Reports</a>
+                    <a href="#" class="reports__go-to__link">Go to dowloads</a>
                 </div>
             </div>
             <div class="newsroom">
@@ -1259,7 +1213,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Living Sustainably</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1267,7 +1221,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Climate Action</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1275,15 +1229,31 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Circular Economy</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
                                 <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
-                                        <img src="../../mocks/ST0001/photo-whats-next4.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Human Rights</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
                                 </a>
                             </div>
                         </div>
@@ -1541,8 +1511,8 @@
                         });
                     },5000)
                 },whatsNext: function() {
-                    var swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: "auto",
+                    let swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: 3,
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",
@@ -1552,6 +1522,19 @@
                             prevEl: ".whats-next__menu__btn-set__btn__prev",
                         },
                     });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
                 }
             }
             
