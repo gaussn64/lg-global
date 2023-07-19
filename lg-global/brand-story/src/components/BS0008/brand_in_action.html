@@ -454,7 +454,30 @@
         <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script>
-
+            let player = videojs('video-item', {
+                sources: [
+                    {src : '../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4', type: 'video/mp4'}
+                ],
+                controls : true,
+                playsinline : true,
+                muted : true,
+                preload : "metadata",
+                controlBar : {
+                    remainingTimeDisplay : false,
+                    pictureInPictureToggle: false,
+                    fullscreenToggle: false,
+                    volumePanel: {
+                        inline: false,
+                        volumeControl: {
+                            vertical: true
+                        }
+                    }
+                },
+                userActions: {
+                    timeTooltip: false
+                }
+                
+            });
             function getSiblingsByClass(element, className) {
                 const siblings = Array.from(element.parentElement.getElementsByClassName(className));
                 const index = siblings.indexOf(element);
@@ -506,7 +529,7 @@
                     setClass(correntBullet, 'brand-in-action__pagination__btn--active')
                 })
 
-                const video = document.querySelector('video')
+                const video = document.querySelector('#video-item')
                 const videoPlayBtn = document.querySelector('.btn-play')
 
                 videoPlayBtn.addEventListener('click', () => {
@@ -527,7 +550,7 @@
                         bullets[0].classList.add('brand-in-action__pagination__btn--paused') //progressbar 멈춤
                         popup.style.display = "block"
                         body.classList.add('isPopupOpen')
-                        video.play()
+                        player.play(); // 일시 정지된 경우 재생
                         
                     } else {
                         popup.style.display = 'none' 
@@ -536,7 +559,7 @@
                         body.classList.remove('isPopupOpen')
 
                         video.currentTime = 0;
-                        video.pause()
+                        player.pause(); // 재생 중인 경우 일시 정지
 
                     }
                 }
@@ -546,29 +569,12 @@
 
 
             function video () {
-                var player = videojs('video-item', {
-                    sources: [
-                        {src : '../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4', type: 'video/mp4'}
-                    ],
-                    controls : true,
-                    playsinline : true,
-                    muted : true,
-                    preload : "metadata",
-                    controlBar : {
-                        remainingTimeDisplay : false,
-                        pictureInPictureToggle: false,
-                        fullscreenToggle: false,
-                        volumePanel: {
-                            inline: false,
-                            volumeControl: {
-                                vertical: true
-                            }
-                        }
-                    },
-                    userActions: {
-                        timeTooltip: false
+                player.on('touchstart', function() {
+                    if (player.paused()) {
+                        player.play(); // 일시 정지된 경우 재생
+                    } else {
+                        player.pause(); // 재생 중인 경우 일시 정지
                     }
-                    
                 });
             }
 
