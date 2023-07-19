@@ -154,84 +154,15 @@
             }
 
             /*tagline slide*/
-            .taglien__content {position: relative;}
-
-            .tagline__slider {
-                overflow: hidden;
-            }
-            .tagline__slide {
-                padding: 0;
-            }
-            .tagline__slide__items {
-                border-radius: 1.5625vw;
-                display: flex;
-                overflow: hidden;
-            }
-            .tagline__slide__visual,
-            .tagline__slide__product {
-                height: 43.23vw;
+            .taglien__content {
+                border-radius: 1.5625vw; 
                 max-height: 830px;
-                flex: 1;
+                height: 43.23vw;
+                overflow: hidden;
                 background: no-repeat center;
                 background-size: cover;
-                position: relative;
-                background-color: #262626;
+                background-image: url(../../mocks/BS0004/brand-our-slogan-product.png);
             }
-            .tagline__slide__items-01 .tagline__slide__visual {
-                background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-01-d-01.svg);
-                background-size: 82.85% auto;
-            }
-            .tagline__slide__items-01 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-01-d-02.png);}
-
-            .tagline__slide__items-02 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-02-d-01.png);}
-            .tagline__slide__items-02 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-02-d-02.png);}
-
-            .tagline__slide__items-03 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-03-d-01.png);}
-            .tagline__slide__items-03 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-03-d-02.png);}
-
-            .tagline__slide__items-04 .tagline__slide__visual {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-04-d-01.png);}
-            .tagline__slide__items-04 .tagline__slide__product {background-image: url(../../mocks/BS0004/brand-elements-tagline-inspired-by-the-forms-of-our-products-04-d-02.png);}
-            
-            .tagline__controller {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                bottom: 47px;
-                right: 43px;
-                z-index: 1;
-            }
-            .taglien__controller__desc {
-                font-size: 0.8333vw;
-                color: #fff;
-                margin-right: 8.69vw;
-            }
-            .tagline__controller__btn {
-                position: unset;
-                margin: 0;
-                box-sizing: border-box;
-                background: no-repeat center;
-                background-image: url(../../mocks/BS0004/swiper-button-arrow-wt.png);
-                background-size: 8px auto;
-                background-color: #ffffff42;
-                border: 1px solid #ffffff4d;
-                backdrop-filter: blur(10px);
-                -webkit-backdrop-filter: blur(10px);
-                display: block;
-                width: 48px;
-                height: 48px;
-                border-radius: 50%;
-                opacity: 1;
-                background-position-x: calc(50% + 2px);
-            }
-            .tagline__controller__btn::after {
-                display: none;
-            }
-            .tagline__controller__btn.tagline__controller__btn--prev {
-                transform: rotate(-180deg);
-                margin-right: 0.3646vw;
-            }
-
 
             /*btmdot-slide*/
             .btmdot-slide__container {
@@ -419,26 +350,20 @@
                 padding: 3.6458vw 6.25vw 4.5833vw;
                 overflow: hidden;
             }
-
             .brand-element__inner {
                 position: relative;
                 width: 87.5vw;
                 margin: 0px auto;
+                max-width: 1680px;
             }
             .brand-elements__header-title {
                 margin: 0 auto;
                 font-size: 2.2917vw;
                 line-height: 2.7083vw;
-                
             }
             .brand-elements__header-title__sub {
                 display: block;
                 font-weight: 300;
-            }
-            .brand-elements__slider {
-                position: relative;
-                margin: 3.9583vw 0 0;
-                padding: 0;
             }
             .brand-elements__controller {
                 position: absolute;
@@ -478,110 +403,97 @@
             .brand-elements__controller__btn.swiper-button-prev::after {
                 transform: translate(-50%, -50%) rotate(180deg);
             }
-            .brand-elements__slides {
-                padding: 0;
+            .our-identity__slider { margin-top: 48px;}
+            .our-identity__slide {
+                position: relative;
+                width: 830px;
+                height: 503px;
+                border-radius: 30px;
+                overflow: hidden;
+                box-sizing: border-box;
+                padding: 40px;
+                z-index: 1;
+                background-color: #F6F3EB;
             }
+            .our-identity__slide::before,
+            .our-identity__slide::after {
+                content: '';
+                background: no-repeat center;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+                top: 50%; left: 50%;
+                transform: translate(-50%, -50%);
+                position: absolute;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .our-identity__slide::before {z-index: -1;}
+            .our-identity__slide::after {z-index: -2; opacity: 0;}
+            .our-identity__slide:hover::before {opacity: 0;}
+            .our-identity__slide:hover::after {opacity: 1;}
 
-            .brand-elements__progressbar {
-                margin-top: 3.75vw;
+            .our-identity__slide--photography::before {
+                width: 52%;
+                height: 62%;
+                border-radius: 30px;
+            }
+            .our-identity__slide--photography:hover:before {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1.1);
+            }
+            .our-identity__slide--photography::after {display: none;}
+            .our-identity__slide--logo::before {background-image: url(../../mocks/BS0001/brand_slide_logo.png);}
+            .our-identity__slide--logo::after {background-image: url(../../mocks/BS0001/brand_slide_logo-hover.png);}
+            .our-identity__slide--color::before {background-image: url(../../mocks/BS0001/brand_slide_color.png);}
+            .our-identity__slide--color::after {background-image: url(../../mocks/BS0001/brand_slide_color-hover.png);}
+            .our-identity__slide--photography::before {background-image: url(../../mocks/BS0001/brand_slide_photo.png);}
+            .our-identity__slide--design::before {background-image: url(../../mocks/BS0001/brand_slide_design.png);}
+            .our-identity__slide--design::after {background-image: url(../../mocks/BS0001/brand_slide_design-hover.png);}
+            .our-identity__slide--tagline::before {background-image: url(../../mocks/BS0001/brand_slide_slogan.png);}
+            .our-identity__slide--tagline::after {background-image: url(../../mocks/BS0001/brand_slide_slogan-hover.png);}
+            .our-identity__slide--typo::before {background-image: url(../../mocks/BS0001/brand_slide_typo.png);}
+            .our-identity__slide--typo::after {background-image: url(../../mocks/BS0001/brand_slide_typo-hover.png);}
+
+            .our-identity__item-title {
+                font-size: 1.875vw;
+                line-height: 2.1875vw;
+                color: #222;
+                transition: color .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .our-identity__slide--tagline .our-identity__item-title {color: #fff;}
+            .our-identity__slide:hover .our-identity__item-title {color: #fff;}
+            .our-identity__progressbar {
+                margin-top: 64px;
                 width: 100%;
                 height: 2px;
                 background-color: #00000033;
             }
-            .brand-elements__slide {
-                position: relative;
-                width: 475px;
-                height: 475px;
-                border-radius: 20px;
-                background: no-repeat center;
-                background-size: cover;
-                background-color: #F0ECE4;
-                overflow: hidden;
-                box-sizing: border-box;
-                overflow: hidden;
+            .our-identity__progressbar .swiper-scrollbar-drag {
+                background: #000;
             }
-            .brand-elements__slide a {
-                width: 100%;
-                height: 100%;
+            .our-identity__move-btn {
+                position: absolute;
+                left: 40px;
+                bottom: 40px;
                 display: block;
-            }
-            .brand-elements__slide.brand-elements__slide--logo {
-                background-image: url(../../mocks/BS0002/whats-next-logo-d.png);
-            } 
-            .brand-elements__slide.brand-elements__slide--color {
-                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-d.png);
-            } 
-            .brand-elements__slide.brand-elements__slide--tagline {
-                background-image: url(../../mocks/BS0002/whats-next-tagline-d.png);
-            } 
-
-            .brand-elements__slide.brand-elements__slide--design {
-                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-d.png);
-            } 
-
-            .brand-elements__item-title {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                font-size: 28px;
-                padding: 26px 32px 28px;
-                display: flex;
-                align-items: center;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-                color: #262626;
-                
-            }
-            
-            .brand-elements__slide::before {
-                content: '';
-                position: absolute;
-                top: 50%; left: 50%;
-                width: calc(100% + 2px);
-                height: calc(100% + 2px);
-                transform: translate(-50%, -50%);
+                width: 64px;
+                height: 64px;
+                backdrop-filter: blur(33px);
                 background: no-repeat center;
-                background-size: contain;
-                opacity: 0;
-                border-radius: 14px;
-                transition: opacity .5s cubic-bezier(0.56, 0, 0.28, 1);
-                pointer-events: none;
+                border: 1px solid #FFFFFFB2;
+                border-radius: 50%;
+                background-image: url(../../mocks/BS0001/btn_move_to_arrow_wt.svg);
+                background-size: 30px auto;
+                background-color: #fff;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .brand-elements__slide.brand-elements__slide--photography::before {
-                top: 47%;
-                left: 50%;
-                transform: translate(-50%, -50%) scale(0.67);
-                background-image: url(../../mocks/BS0002/whats-next-colour-photography-hover-state-d.png);
-                transition: all .5s cubic-bezier(0.56, 0, 0.28, 1);
-                opacity: 1;
-            } 
-
-            .brand-elements__slide:hover:before {
-                opacity: 1;
+            .our-identity__slide:hover .our-identity__move-btn {
+                background-color: #00000099;
+                border-color: #CBC8C24D;
+                background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
-            
-            .brand-elements__slide.brand-elements__slide--logo::before {
-                background-image: url(../../mocks/BS0002/whats-next-logo-hover-state-d.png);
-            } 
-            .brand-elements__slide.brand-elements__slide--color::before {
-                background-image: url(../../mocks/BS0002/whats-next-colour-grandients-hover-state-d.png);
-            } 
-            .brand-elements__slide.brand-elements__slide--tagline::before {
-                background-image: url(../../mocks/BS0002/whats-next-tagline-hover-state-d.png);
-            } 
-            .brand-elements__slide:hover.brand-elements__slide--photography::before {
-                top: 50%;
-                transform: translate(-50%, -50%) scale(1);
-            } 
-            .brand-elements__slide.brand-elements__slide--design::before {
-                background-image: url(../../mocks/BS0002/whats-next-colour-design-system-hover-state-d.png);
-            } 
-            .brand-elements__slide:hover .brand-elements__item-title {
-                background: rgba(38, 38, 38, 0.26);
-                backdrop-filter: blur(17px);
-                -webkit-backdrop-filter: blur(17px);
-                color: #fff;
-            }
-
             @media (max-width: 1440px) {
                 /*공통*/
                 .brand__header {
@@ -602,6 +514,7 @@
                     padding: 0 120px 80px;
                 }
 
+
                 /*brand elements 슬라이드*/
                 .brand-elements {
                     padding: 60px 120px 64px;
@@ -616,10 +529,6 @@
                 .brand-elements__controller {
                     display: none;
                 }
-                .brand-elements__slide {
-                    width: 387px;
-                    height: 387px;
-                }
                 .brand-elements__item-title {
                     padding: 18px 28px;
                     font-size: 24px;
@@ -627,6 +536,10 @@
                 }
                 .brand-elements__progressbar {
                     margin-top: 64px;
+                }
+                .our-identity__slide {
+                    width: 590px;
+                    height: 360px;
                 }
 
             }
@@ -648,19 +561,9 @@
                 }
 
                 /*tagline slide*/
-
-                .tagline__slide__visual,
-                .tagline__slide__product {
+                .taglien__content {
                     height: 53.23vw;
                     min-height: 336px;
-                }
-                .tagline__controller {
-                    flex-wrap: wrap;
-                }
-                .taglien__controller__desc {
-                    width: 100%;
-                    text-align: right;
-                    margin: 0 0 16px;
                 }
 
                 /*brand elements 슬라이드*/
@@ -673,6 +576,7 @@
                 .brand-elements__controller {
                     right: 20px;
                 }
+
 
             }
 
@@ -726,52 +630,12 @@
                 }
                 .tab-container {margin-top: 32px;}
 
-
                 /*tagline slide*/
-                .tagline__slide__items {
-                    border-radius: 10px;
-                    flex-direction: column;
+                .taglien__content {
+                    height: 191.46vw;
+                    background-image: url(../../mocks/BS0004/brand-our-slogan-product-m.png);
                 }
-                .tagline__slide__visual,
-                .tagline__slide__product {
-                    flex: unset;
-                }
-
-                .tagline__slide__visual {
-                    /* max-height: 331.01px; */
-                    height: 88.27vw;
-                }
-                .tagline__slide__product {
-                    /* max-height: 389px; */
-                    height: 103.73vw;
-                }
-
-                .tagline__controller {
-                    bottom: 24px;
-                    right: unset;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    justify-content: center;
-                    width: 100%;
-                }
-                .taglien__controller__desc {
-                    text-align: center;
-                    font-size: 12px;
-                }
-                .tagline__controller__btn {
-                    background-size: 5px auto;
-                    width: 32px;
-                    height: 32px;
-                    background-position-x: calc(50% + 1px);
-                }
-                .tagline__controller__btn::after {
-                    display: none;
-                }
-                .tagline__controller__btn.tagline__controller__btn--prev {
-                    transform: rotate(-180deg);
-                    margin-right: 7px;
-                }
-
+               
                 /*tagline grid*/
                 .tagline-grid {
                     flex-direction: column;
@@ -841,21 +705,27 @@
                 .brand-elements__controller {
                     display: none;
                 }
-                .brand-elements__progressbar {
+                .our-identity__slide {
+                    width: 247px;
+                    height: 247px;
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .our-identity__item-title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .our-identity__progressbar {
                     margin-top: 24px;
+                    height: 1px;
                 }
-                .brand-elements__slide {
-                    width: 77.6vw;
-                    height: 77.6vw;
-                }
-                .brand-elements__item-title {
-                    position: absolute;
-                    bottom: 0;
-                    width: 100%;
-                    font-size: 17px;
-                    padding: 16px 19px;
-                    display: flex;
-                    align-items: center;
+
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
                 }
             }
 
@@ -883,13 +753,6 @@
                     
                 }
 
-                /*tagline slide*/
-                .taglien__controller__desc {
-                    font-size: 16px;
-                }
-                .tagline__controller__btn.tagline__controller__btn--prev {
-                    margin-right: 7px;
-                }
 
                 /*tab*/
                 .tab-menu__list {
@@ -948,6 +811,18 @@
                     width: 22px;
                     height: 22px;
                 }
+
+                .our-identity__slide {
+                    width: 590px;
+                    height: 437px;
+                }
+                .our-identity__item-title {
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 48px;
+                }
             }
 
         </style>
@@ -972,33 +847,7 @@
                         that’s whilst life’s not always perfect, Life’s Good. <br>
                     </p>
                 </div>
-                <div class="taglien__content">
-                    <div class="tagline__slider">
-                        <ul class="tagline__slide swiper-wrapper">
-                            <li class="tagline__slide__items tagline__slide__items-01 swiper-slide">
-                                <div class="tagline__slide__visual"></div>
-                                <div class="tagline__slide__product"></div>
-                            </li>
-                            <li class="tagline__slide__items tagline__slide__items-02 swiper-slide">
-                                <div class="tagline__slide__visual"></div>
-                                <div class="tagline__slide__product"></div>
-                            </li>
-                            <li class="tagline__slide__items tagline__slide__items-03 swiper-slide">
-                                <div class="tagline__slide__visual"></div>
-                                <div class="tagline__slide__product"></div>
-                            </li>
-                            <li class="tagline__slide__items tagline__slide__items-04 swiper-slide">
-                                <div class="tagline__slide__visual"></div>
-                                <div class="tagline__slide__product"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="tagline__controller">
-                        <p class="taglien__controller__desc">Inspired by the forms of our products</p>
-                        <button class="tagline__controller__btn tagline__controller__btn--prev swiper-button-prev"></button>
-                        <button class="tagline__controller__btn tagline__controller__btn--next swiper-button-next"></button>
-                    </div>
-                </div>
+                <div class="taglien__content"></div>
                 <div class="brand__header">
                     <h2 class="brand__header-title">Slogan Colourways</h2>
                     <p class="brand__header-description">
@@ -1068,7 +917,7 @@
 
             </div>
             <div class="brand-elements">
-                <div class="brand-element__inner" style="max-width: 1680px; margin: 0 auto;">
+                <div class="brand-element__inner" >
                     <h2 class="brand-elements__header-title">
                         What’s next?
                         <span class="brand-elements__header-title__sub">Explore brand elements</span>
@@ -1077,27 +926,36 @@
                         <button class="brand-elements__controller__btn swiper-button-prev"></button>
                         <button class="brand-elements__controller__btn swiper-button-next"></button>
                     </div>
-                    <div class="brand-elements__slider">
-                        <ul class="brand-elements__slides swiper-wrapper">
-                            <li class="brand-elements__slide brand-elements__slide--logo swiper-slide">
-                                <a href="../BS0002/brand_logo.html"><h3 class="brand-elements__item-title">Logo</h3></a>
+                    <div class="our-identity__slider">
+                        <ul class="our-identity__slides swiper-wrapper">
+                            <li class="our-identity__slide our-identity__slide--logo swiper-slide">
+                                <h3 class="our-identity__item-title">Logo</h3>
+                                <a class="our-identity__move-btn" href="../BS0002/brand_logo.html"></a>
                             </li>
-                            <li class="brand-elements__slide brand-elements__slide--color swiper-slide">
-                                <a href="../BS0003/brand_colors.html"><h3 class="brand-elements__item-title">Color & Gradients</h3></a>
+                            <li class="our-identity__slide our-identity__slide--color swiper-slide">
+                                <h3 class="our-identity__item-title">Color & Gradients</h3>
+                                <a class="our-identity__move-btn" href="../BS0003/brand_colors.html"></a>
                             </li>
-                            <li class="brand-elements__slide brand-elements__slide--tagline swiper-slide">
-                                <a href="../BS0004/brand_tagline.html"><h3 class="brand-elements__item-title">slogan</h3></a>
+                            <li class="our-identity__slide our-identity__slide--photography swiper-slide">
+                                <h3 class="our-identity__item-title">Photography</h3>
+                                <a class="our-identity__move-btn" href="../BS0005/brand_photography.html"></a>
                             </li>
-                            <li class="brand-elements__slide brand-elements__slide--photography swiper-slide">
-                                <a href="../BS0005/brand_photography.html"><h3 class="brand-elements__item-title">Photography</h3></a>
+                            <li class="our-identity__slide our-identity__slide--design swiper-slide">
+                                <h3 class="our-identity__item-title">Design System</h3>
+                                <a class="our-identity__move-btn" href="../BS0006/brand_design_system.html"></a>
                             </li>
-                            <li class="brand-elements__slide brand-elements__slide--design swiper-slide">
-                                <a href="../BS0006/brand_design_system.html"><h3 class="brand-elements__item-title">Design System</h3></a>
+                            <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+                                <h3 class="our-identity__item-title">Slogan</h3>
+                                <a class="our-identity__move-btn" href="../BS0004/brand_tagline.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--typo swiper-slide">
+                                <h3 class="our-identity__item-title">Typography</h3>
+                                <a class="our-identity__move-btn" href="../BS0007/brand_typography.html"></a>
                             </li>
                         </ul>
                     </div>
-                    <div class="brand-elements__progress-container">
-                        <div class="brand-elements__progressbar"></div>
+                    <div class="our-identity__progress-container">
+                        <div class="our-identity__progressbar"></div>
                     </div>
                 </div>
             </div>
@@ -1251,20 +1109,18 @@
             }
 
             function brandElememtsSlider() {
-                const brandElements = document.querySelector('.brand-elements__slider')
+                const brandElements = document.querySelector('.our-identity__slider')
 
                 const swiper = new Swiper(brandElements, {
                     slidesPerView: 'auto',
                     spaceBetween: 20,
-                    slidesOffsetBefore: 20,
-                    slidesOffsetAfter: 20,
                     easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
                     navigation: {
                         nextEl: '.brand-elements__controller .swiper-button-next',
                         prevEl: '.brand-elements__controller .swiper-button-prev',
                     },
                     scrollbar: {
-                        el: '.brand-elements__progressbar',
+                        el: '.our-identity__progressbar',
                         draggable: true
                     },
                     breakpoints: {
@@ -1280,7 +1136,7 @@
 
 
             window.addEventListener('DOMContentLoaded', () => {
-                taglineSlider()
+                // taglineSlider()
                 btmdotSlider()
                 tabFunc() //tab content 
                 brandElememtsSlider() //what's next slide
