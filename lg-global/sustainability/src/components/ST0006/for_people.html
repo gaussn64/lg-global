@@ -280,7 +280,173 @@
                 background-image: url(../../mocks/ST0006/btn-as-next.svg);
             }
 
-            /* Sustainability Card */
+            /* Sustainability Efforts */
+            .sustainability-efforts {
+                position: relative;
+                height: 400vh;
+                background-color: #262626;
+            }
+            .sustainability-efforts:after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+                background: linear-gradient(180deg, #262626 5.73%, rgba(38, 38, 38, 0.65) 48.96%, #F6F3EB 100%), #FFFFFF;
+            }
+            .sustainability-efforts__bg {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+            }
+            .sustainability-efforts__bg--fixed {
+                position: fixed;
+            }
+            .sustainability-efforts__bg--end {
+                top: auto;
+                bottom: 0px;
+            }
+            .sustainability-efforts__bg__txt {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .sustainability-efforts__bg__txt__item {
+                font-size: 80px;
+                font-weight: 550;
+                line-height: 76px;
+                letter-spacing: 9.6px;
+                color: white;
+                text-align: center;
+            }
+            .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                margin-top: 160px;
+            }
+            .sustainability-efforts__card__wrap {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .sustainability-efforts__card__wrap--fixed {
+                position: fixed;
+            }
+            .sustainability-efforts__card__wrap--end {
+                top: auto;
+                bottom: 0px;
+            }
+            .sustainability-efforts__card {
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .sustainability-efforts__card__item {
+                position: relative;
+                top: 100vh;
+                height: 74.0741vh;
+                border-radius: 30px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                overflow: hidden;
+            }
+            .sustainability-efforts__card__item + .sustainability-efforts__card__item {
+                margin-top: -64.8148vh;
+            }
+            .sustainability-efforts__card__item:nth-child(1) {
+                background-image: url(../../mocks/ST0006/photo-se-card1.jpg);
+            }
+            .sustainability-efforts__card__item:nth-child(2) {
+                background-image: url(../../mocks/ST0006/photo-se-card2.jpg);
+            }
+            .sustainability-efforts__card__item:nth-child(3) {
+                background-image: url(../../mocks/ST0006/photo-se-card3.png);
+            }
+            .sustainability-efforts__card__inner {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0px 120px;
+                backdrop-filter: blur(100px);
+            }
+            .sustainability-efforts__card__tit {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                padding: 30px 0px;
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                color: white;
+                text-align: center;
+            }
+            .sustainability-efforts__card__summary {
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 60px; /* 107.143% */
+                letter-spacing: -0.28px;
+                color: white;
+            }
+            .sustainability-efforts__card__detail {
+                margin-top: 36px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+                color: white;
+            }
+            .sustainability-efforts__card__discover-more {
+                margin-top: 36px;
+            }
+            .sustainability-efforts__card__discover-more__btn {
+                color: white;
+                line-height: 1;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 14px 20px !important;
+                border-radius: 100px;
+                border: 1px solid rgba(126, 124, 119, 0.50);
+                background: rgba(0, 0, 0, 0.20);
+            }
+            .sustainability-efforts__card__discover-more__btn:before {
+                position: relative;
+                top: -1px;
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 8px;
+                background: url(../../mocks/ST0006/bullet_secd-more.svg) no-repeat center center;
+                vertical-align: middle;
+            }
+            .sustainability-efforts__card__photo {
+                flex-shrink: 0;
+                width: 620px;
+                height: 500px;
+                overflow: hidden;
+                border-radius: 600px 40px 40px 600px;
+            }
+            .sustainability-efforts__card__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
             /* Summary */
             .summary {
@@ -1209,68 +1375,87 @@
                 </div>
             </div>
             <div class="sustainability-efforts">
-                <ul class="sustainability-efforts__bg-txt">
-                    <li>Delightful workplace</li>
-                    <li>Diversity &amp; Inclusion</li>
-                    <li>Design for all</li>
-                </ul>
-                <ul class="sustainability-efforts__card">
-                    <li>
-                        <h3 class="sustainability-efforts__card__tit">Delightful workplace</h3>
-                        <div class="sustainability-efforts__card__inner">
-                            <div class="sustainability-efforts__card__cont">
-                                <p class="sustainability-efforts__card__cont__summary">
-                                    Enhancing <br />
-                                    workplace safety
-                                </p>
-                                <p class="sustainability-efforts__card__cont__detail">We are constantly working to eliminate supply chain risks on a global scale. Our goal is to create a safe working environment for our partners, and create a collaborative atmosphere for all.</p>
-                                <div class="sustainability-efforts__card__cont__discover-more">
-                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                <div class="sustainability-efforts__bg">
+                    <ul class="sustainability-efforts__bg__txt">
+                        <li class="sustainability-efforts__bg__txt__item">Delightful workplace</li>
+                        <li class="sustainability-efforts__bg__txt__item">Diversity &amp; Inclusion</li>
+                        <li class="sustainability-efforts__bg__txt__item">Design for all</li>
+                    </ul>
+                </div>
+                <div class="sustainability-efforts__card__wrap">
+                    <ul class="sustainability-efforts__card">
+                        <li class="sustainability-efforts__card__item">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Delightful workplace</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Enhancing <br />
+                                        workplace safety
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        We are constantly working to eliminate supply chain <br />
+                                        risks on a global scale. Our goal is to create a safe <br />
+                                        working environment for our partners, and create a <br />
+                                        collaborative atmosphere for all.</p>
+                                    <div class="sustainability-efforts__card__discover-more">
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                    </div>
+                                </div>
+                                <div class="sustainability-efforts__card__photo">
+                                    <img src="../../mocks/ST0006/photo-se-card1.jpg" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
-                            <div class="sustainability-efforts__card__photo">
-                                <img src="" alt="">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3 class="sustainability-efforts__card__tit">Diversity &amp; Inclusion</h3>
-                        <div class="sustainability-efforts__card__inner">
-                            <div class="sustainability-efforts__card__cont">
-                                <p class="sustainability-efforts__card__cont__summary">
-                                    Valuing diversity <br />
-                                    and inclusion
-                                </p>
-                                <p class="sustainability-efforts__card__cont__detail">We respect everyone's diverse perspectives, to create an environment where people feel comfortable to be themselves. We encourage creativity and innovation while ensuring equal opportunities for success.</p>
-                                <div class="sustainability-efforts__card__cont__discover-more">
-                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                        </li>
+                        <li class="sustainability-efforts__card__item">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Diversity &amp; Inclusion</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Valuing diversity <br />
+                                        and inclusion
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        We respect everyone's diverse perspectives, to <br />
+                                        create an environment where people feel <br />
+                                        comfortable to be themselves. We encourage <br />
+                                        creativity and innovation while ensuring equal <br />
+                                        opportunities for success.
+                                    </p>
+                                    <div class="sustainability-efforts__card__discover-more">
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                    </div>
+                                </div>
+                                <div class="sustainability-efforts__card__photo">
+                                    <img src="../../mocks/ST0006/photo-se-card2.jpg" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
-                            <div class="sustainability-efforts__card__photo">
-                                <img src="" alt="">
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <h3 class="sustainability-efforts__card__tit">Design for all</h3>
-                        <div class="sustainability-efforts__card__inner">
-                            <div class="sustainability-efforts__card__cont">
-                                <p class="sustainability-efforts__card__cont__summary">
-                                    Sustainable effort to <br />
-                                    tackle discomfort
-                                </p>
-                                <p class="sustainability-efforts__card__cont__detail">We are open to diverse perspectives when creating our products and designs. This enables us to develop innovative technologies with user-friendly features, bringing products with great benefits to a wider audience.</p>
-                                <div class="sustainability-efforts__card__cont__discover-more">
-                                    <button type="button" class="sustainability-efforts__card__cont__discover-more__btn">Discover more</button>
+                        </li>
+                        <li class="sustainability-efforts__card__item">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Design for all</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Sustainable effort to <br />
+                                        tackle discomfort
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        We are open to diverse perspectives when creating <br />
+                                        our products and designs. This enables us to <br />
+                                        develop innovative technologies with user-friendly <br />
+                                        features, bringing products with great benefits to a <br />
+                                        wider audience.
+                                    </p>
+                                    <div class="sustainability-efforts__card__discover-more">
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                    </div>
+                                </div>
+                                <div class="sustainability-efforts__card__photo">
+                                    <img src="../../mocks/ST0006/photo-se-card3.png" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
-                            <div class="sustainability-efforts__card__photo">
-                                <img src="" alt="">
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="summary">
                 <div class="summary__visual"></div>
@@ -1390,6 +1575,66 @@
                         },
                     });
                 },
+                sustainabilityEfforts:function() {
+                    let sustainabilityEfforts = document.querySelector(".sustainability-efforts");
+                    let seBg = sustainabilityEfforts.querySelector(".sustainability-efforts__bg");
+                    let seCardWrap = sustainabilityEfforts.querySelector(".sustainability-efforts__card__wrap");
+                    let seCard = seCardWrap.querySelector(".sustainability-efforts__card");
+                    let seCardItem = seCard.querySelectorAll(".sustainability-efforts__card__item");
+                    let sciHeight =  seCardItem[0].offsetHeight;
+
+                    let seBgFix = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".sustainability-efforts",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                seBg.classList.add("sustainability-efforts__bg--fixed")
+
+                                seCardWrap.classList.add("sustainability-efforts__card__wrap--fixed")
+                            },
+                            onLeaveBack: function() {
+                                seBg.classList.remove("sustainability-efforts__bg--fixed")
+                                seBg.classList.remove("sustainability-efforts__bg--end")
+
+                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--fixed")
+                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--end")
+                            },
+                            onLeave: function() {
+                                seBg.classList.remove("sustainability-efforts__bg--fixed")
+                                seBg.classList.add("sustainability-efforts__bg--end")
+
+                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--fixed")
+                                seCardWrap.classList.add("sustainability-efforts__card__wrap--end")
+                            },
+                            onEnterBack: function() {
+                                seBg.classList.add("sustainability-efforts__bg--fixed")
+                                seBg.classList.remove("sustainability-efforts__bg--end")
+
+                                seCardWrap.classList.add("sustainability-efforts__card__wrap--fixed")
+                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--end")
+                            },
+                            onUpdate: function(self) {
+                                //coreValueProgressBar.style.width = (self.progress)*100 + "%"
+                            }
+                        }
+                    });
+
+
+                    const panels = gsap.utils.toArray('.sustainability-efforts__card__item');
+                    panels.forEach(function(valueBox,i) {
+                        let tl = gsap.timeline({
+                            scrollTrigger: {
+                                trigger: ".sustainability-efforts",
+                                start: () => "+=" + (window.innerHeight)*(i),
+                                end: () => "+=" + window.innerHeight,
+                                scrub: true,
+                                anticipatePin: 1
+                            }
+                        })
+                        tl.to(valueBox, {top: 10})
+                    })
+                },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: 3,
@@ -1419,6 +1664,7 @@
             }
             forPeople.visualScrollDown();
             forPeople.accessibilitySolutions();
+            forPeople.sustainabilityEfforts();
             forPeople.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
