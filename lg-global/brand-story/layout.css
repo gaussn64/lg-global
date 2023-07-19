@@ -254,12 +254,12 @@ ul,ol {
         display: block;
     }
     .c-header__gnb__list__item + .c-header__gnb__list__item {
-        margin-top: 16px;
+        margin-top: 13px;
     }
     .c-header__gnb__list__item__anchor {
-        padding: 0px 40px 7px 0px;
-        font-size: 20px;
-        line-height: 24px;
+        padding: 0px 40px 0px 0px;
+        font-size: 22px;
+        line-height: 27px;
         padding-right: 40px;
     }
     .c-header__gnb__list__item__anchor:after {
@@ -267,7 +267,7 @@ ul,ol {
         left: auto;
         bottom: auto;
         right: 0px;
-        top: 5px;
+        top: 7px;
         width: 7px;
         height: 14px;
         background: transparent url(src/mocks/layout/bullet_gnb_m.svg) no-repeat right center;
@@ -288,16 +288,18 @@ ul,ol {
         display: block;
     }
     .c-header__gnb__list__item__deps2__menu {
-        margin: 0px;
+        padding-top: 16px;
+        margin: 51px 0px 0px 0px;
+        border-top: 1px solid #4A4946;
     }
     .c-header__gnb__list__item__deps2__menu__item + .c-header__gnb__list__item__deps2__menu__item {
-        margin-top: 16px;
+        margin-top: 13px;
     }
     .c-header__gnb__list__item__deps2__menu__item__anchor {
         position: relative;
-        padding: 0px 40px 7px 0px;
-        font-size: 20px;
-        line-height: 24px;
+        padding: 0px 40px 0px 0px;
+        font-size: 22px;
+        line-height: 27px;
         color: #E6E1D6;
     }
     .c-header__gnb__list__item__deps2__menu__item__anchor:hover,
@@ -314,7 +316,7 @@ ul,ol {
         left: auto;
         bottom: auto;
         right: 0px;
-        top: 5px;
+        top: 7px;
         width: 7px;
         height: 14px;
         background: transparent url(src/mocks/layout/bullet_gnb_m.svg) no-repeat right center;
@@ -349,17 +351,30 @@ ul,ol {
     .c-header__gnb__list__item__deps2__btn-back {
         display: block;
         position: absolute;
-        top: -90px;
-        left: 0px;
-        width: 66px;
-        height: 66px;
-        text-indent: -9999px;
-        overflow: hidden;
-        border-radius: 50%;
+        top: 24px;
+        left: 20px;
         border-width: 0px;
-        background: rgba(0, 0, 0, 0.7) url(src/mocks/layout/btn-gnb-deps2-back.svg) no-repeat center center;
+        padding: 0px 0px 0px 21px;
         opacity: 0;
+        color: white;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        letter-spacing: 0.088px;
         transition: 0.1s ease opacity;
+        background-color: transparent;
+    }
+    .c-header__gnb__list__item__deps2__btn-back:after {
+        position: absolute;
+        top: 7px;
+        left: 0px;
+        content: '';
+        display: block;
+        width: 7px;
+        height: 14px;
+        background: url(src/mocks/layout/bullet_gnb_m.svg) no-repeat right center;
+        transform: rotate(-180deg);
     }
     .c-header__btn-gnb {
         display: block;
