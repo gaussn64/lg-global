@@ -105,6 +105,41 @@
             #visual-photography.visual__top {
                 background-image: url(../../mocks/BS0005/brand-elements-photography-d.png);
             }
+
+
+            /*랜딩비주얼 스크롤다운 버튼*/
+            .landing-visual__scrolldown {
+                position: absolute;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                z-index: 2;
+                text-align: center;
+            }
+            .landing-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/BS0001/main_visual_scroll_down.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+            }
             
             /*photography index list*/
             .photography__list {
@@ -440,6 +475,12 @@
                     height: 117.33vw;
                 }
 
+                /*랜딩비주얼 스크롤다운 버튼*/
+                .landing-visual__scrolldown {
+                    display: none;
+                }
+
+
                 /*photography index list*/
                 .photography__list {
                     grid-template-columns: repeat(1, 1fr);
@@ -516,6 +557,11 @@
             }
             /* 4K */
             @media (min-width: 2560px) {
+                /*랜딩비주얼 스크롤다운 버튼*/
+                .landing-visual__scrolldown {
+                    bottom: 60px;
+                }
+
                 /*공통*/
                 .brand__header {
                     margin-bottom: 68px;
@@ -591,7 +637,9 @@
         <!-- html code -->
         <div id="brand-container">
             <div id="visual-photography" class="visual__top">
-                
+                <div class="landing-visual__scrolldown">
+                    <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+                </div>
             </div>
             <div class="brand__content-inner">
                 <div class="brand__header">
