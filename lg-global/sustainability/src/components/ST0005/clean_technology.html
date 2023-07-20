@@ -868,6 +868,9 @@
                 font-size: 52px;
                 line-height: 60px;
             }
+            .popup-discription__tit--left {
+                text-align: left;
+            }
             .popup-discription__tit__preface {
                 font-size: 24px;
                 font-weight: 400;
@@ -879,6 +882,13 @@
                 margin-top: 20px;
                 line-height: 58px;
                 letter-spacing: -0.26px;
+            }
+            .popup-discription__visual {
+                margin: 60px -90px 0px;
+            }
+            .popup-discription__visual__img {
+                width: 100%;
+                height: auto;
             }
             .popup-discription__photo {
                 margin: 60px 0px 0px;
@@ -915,6 +925,66 @@
                 display: grid;
                 grid-template-columns: repeat(2,1fr);
                 gap: 0px 40px;
+            }
+            .popup-discription__cont {
+                font-size: 20px;
+                line-height: 28px;
+                padding: 60px 0px;
+            }
+            .popup-discription__cont:last-child {
+                padding-bottom: 0px;
+            }
+            .popup-discription__cont__photo {
+                text-align: center;
+                margin: 60px -90px 0px;
+            }
+            .popup-discription__cont__photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__photo__img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription__cont__vertical {
+                display: flex;
+                gap: 0px 60px;
+                margin-top: 60px;
+            }
+            .popup-discription__cont__vertical:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__tit {
+                margin-top: 60px;
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                white-space: nowrap;
+            }
+            .popup-discription__cont__tit:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__txt {
+                margin-top: 32px;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__cont__stit + .popup-discription__cont__txt {
+                margin-top: 20px;
+            }
+            .popup-discription__cont__txt:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__stit {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                color: #4A4946;
+            }
+            .popup-discription__cont__stit__strong {
+                font-weight: 600;
+                color: #4A4946;
             }
             .popup-discription__btn-close {
                 position: absolute;
@@ -1000,19 +1070,19 @@
                 <div class="swiper eco-conscious-technology__kind">
                     <div class="swiper-wrapper eco-conscious-technology__kind__slide-wrap">
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#up-home-appliances" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor1">
+                            <a href="#up-home-appliances" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor1">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Upgrade your experience</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">UP home appliances</p>
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#heat-pump-technology" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor2">
+                            <a href="#heat-pump-technology" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor2">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Towards  zero ozone layer depletion</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">Heat pump technology</p>
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
-                            <a href="#glass-powder" onclick="popupDiscription(this.href)" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor3">
+                            <a href="#glass-powder" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor3">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Empowering the future for environmental protection</p>
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">Glass powder</p>
                             </a>
@@ -1099,106 +1169,80 @@
                         <img src="../../mocks/ST0005/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
                     </div>
                     <div class="recreation-of-product__discover-more">
-                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscoverMore('#recreation-of-product')">Discover more</button>
+                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscription('#recreation-of-product')">Discover more</button>
                     </div>
-                    <div class="popup-discover-more" id="recreation-of-product">
-                        <div class="popup-discover-more--container">
-                            <section class="popup-discover-more--header">
-                                <h4 class="popup-discover-more--header--tit">Recreation of product</h4>
-                                <p class="popup-discover-more--header--cont">
-                                    New cycle-crafted products
-                                </p>
-                                <div class="popup-discover-more--header--edit">
-                                    <button class="popup-discover-more--header--edit--btn-close">Close</button>
-                                    <div class="popup-discover-more--header--edit--progress">
-                                        <div class="popup-discover-more--header--edit--progress--bar"></div>
-                                    </div>
-                                </div>
-                                <div class="popup-discover-more--header--visual">
-                                    <img src="../../mocks/ST0005/visual-pdm-recreation-of-product.png" alt="" class="popup-discover-more--header--visual--img">
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap">
-                                        <p class="popup-discover-more--section--cont2">
-                                            We've made our products more eco-conscious than <br />
-                                            ever, by using recycled plastic, recycled PET bottles <br />
-                                            for fabric covering, and molded pulp made with <br />
-                                            recycled paper and cardboard for packaging. Our <br />
-                                            effort helps us reduce plastic waste, and lower our <br />
-                                            carbon footprint and CO2 emissions.
-                                        </p>
-                                    </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG Sound Bar</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                Our 2022 LG sound bar lineup is both SGS <br />
-                                                Eco-Product and ENERGY STAR-certified, with <br />
-                                                parts made from recycled plastic resin and <br />
-                                                polyester jersey fabric, meeting the Global <br />
-                                                Recycled Standard.
+                    <div class="popup-discription" id="recreation-of-product">
+                        <div class="popup-discription__wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription__tit popup-discription__tit--left">
+                                    <div class="popup-discription__tit__preface">Recreation of product</div>
+                                    <div class="popup-discription__tit__subject">New cycle-crafted products</div>
+                                </dt>
+                                <dd class="popup-discription__visual">
+                                    <img src="../../mocks/ST0005/visual-pdm-recreation-of-product.png" alt=""  class="popup-discription__visual__img" />
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <p class="popup-discription__cont__txt">
+                                        We've made our products more eco-conscious than ever, by using recycled plastic, recycled PET bottles for fabric covering, and molded pulp made with recycled paper and cardboard for packaging. Our effort helps us reduce plastic waste, and lower our carbon footprint and CO2 emissions.
+                                    </p>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <div class="popup-discription__cont__vertical">
+                                        <h3 class="popup-discription__cont__tit">LG OLED <br />EVO</h3>
+                                        <div class="popup-discription__cont__inner">
+                                            <p class="popup-discription__cont__txt">
+                                                LG OLED Evo utilizes composite fiber materials and metal instead of plastic, resulting in reduced weight and increased durability. It decreases plastic usage by 40% compared to LCD TVs, leading to a reduction of 20,000 tons annually. The product has been recognized by certifications such as the Carbon Footprint Certification from the UK's Carbon Trust, eco-friendly certification from Switzerland's SGS, and ECV Environmental Claim Validation by UL in the US. The manufacturing process also emits less carbon dioxide and minimizes damage risks.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product2--photo">
-                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product2.png" alt="" class="popup-discover-more--section--photo--img">
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product1.png" alt=""  class="popup-discription__cont__photo__img" />
                                     </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG tiiun mini</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                tiiun mini is made from UP (Upcycled Plastic), <br />
-                                                replacing the conventional plastic used in the <br />
-                                                previous model (L011W1) with PCR (Post-Consumer <br />
-                                                Recycled) plastic.
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <div class="popup-discription__cont__vertical">
+                                        <h3 class="popup-discription__cont__tit">LG Sound Bar</h3>
+                                        <div class="popup-discription__cont__inner">
+                                            <p class="popup-discription__cont__txt">
+                                                Our 2022 LG sound bar lineup is both SGS Eco-Product and ENERGY STAR-certified, with parts made from recycled plastic resin and polyester jersey fabric, meeting the Global Recycled Standard.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product3--photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product3.png" alt="" class="popup-discover-more--section--photo--img">
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product2.png" alt=""  class="popup-discription__cont__photo__img" />
                                     </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap popup-discover-more--section--cont-wrap__inline">
-                                        <h5 class="popup-discover-more--section--tit">LG Aero <br />Furniture</h5>
-                                        <div class="popup-discover-more--section--cont-inner">
-                                            <p class="popup-discover-more--section--cont2">
-                                                LG Aero Furniture is made by blending PCR (Post <br />
-                                                Consumer Recycled) plastics, recycled from consumer-<br />
-                                                used plastic waste, with mineral particles to form a <br />
-                                                distinctive 'TerraZo texture.'
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <div class="popup-discription__cont__vertical">
+                                        <h3 class="popup-discription__cont__tit">LG tiiun <br />mini</h3>
+                                        <div class="popup-discription__cont__inner">
+                                            <p class="popup-discription__cont__txt">
+                                                tiiun mini is made from UP (Upcycled Plastic), replacing the conventional plastic used in the previous model (L011W1) with PCR (Post-Consumer Recycled) plastic.
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="popup-discover-more--section--photo popup-discover-more--section--recreation-of-product4--photo">
-                                        <img src="../../mocks/ST0004/photo-pdm-recreation-of-product4.png" alt="" class="popup-discover-more--section--photo--img">
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product3.png" alt=""  class="popup-discription__cont__photo__img" />
                                     </div>
-                                </div>
-                            </section>
-                            <section class="popup-discover-more--section popup-discover-more--section__vertical-middle">
-                                <div class="popup-discover-more--section--inner">
-                                    <div class="popup-discover-more--section--cont-wrap">
-                                        <p class="popup-discover-more--section--cont2">
-                                            Our commitment to sustainability was recognized with <br />
-                                            the Product Champion Award by the US Environmental <br />
-                                            Protection Agency, acknowledging our dedication to <br />
-                                            delivering sustainable innovations.
-                                        </p>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <div class="popup-discription__cont__vertical">
+                                        <h3 class="popup-discription__cont__tit">LG Aero <br />Furniture</h3>
+                                        <div class="popup-discription__cont__inner">
+                                            <p class="popup-discription__cont__txt">
+                                                LG Aero Furniture is made by blending PCR (Post Consumer Recycled) plastics, recycled from consumer-used plastic waste, with mineral particles to form a distinctive 'TerraZo texture.'
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                            </section>
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product4.png" alt=""  class="popup-discription__cont__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <p class="popup-discription__cont__txt">Our commitment to sustainability was recognized with the Product Champion Award by the US Environmental Protection Agency, acknowledging our dedication to delivering sustainable innovations.</p>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
                         </div>
                     </div>
                     <ul class="recreation-of-product__type">
