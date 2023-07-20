@@ -153,6 +153,40 @@
                 background-size: 17px auto;
             }
 
+            /*랜딩비주얼 스크롤다운 버튼*/
+            .landing-visual__scrolldown {
+                position: absolute;
+                bottom: 3.7037vh;
+                left: 0px;
+                width: 100%;
+                z-index: 2;
+                text-align: center;
+            }
+            .landing-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/BS0001/main_visual_scroll_down.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0vh);
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-0.5vh);
+                }
+                to {
+                    transform: translateY(1.5vh);
+                }
+            }
+
+
             /*tagline slide*/
             .taglien__content {
                 border-radius: 1.5625vw; 
@@ -612,6 +646,11 @@
                     display: none;
                 }
 
+                /*랜딩비주얼 스크롤다운 버튼*/
+                .landing-visual__scrolldown {
+                    display: none;
+                }
+
                 /*tab*/
                 .tab-menu__container {
                     margin-top: 56px;
@@ -731,6 +770,11 @@
 
             /* 4K */
             @media (min-width: 2560px) {
+                /*랜딩비주얼 스크롤다운 버튼*/
+                .landing-visual__scrolldown {
+                    bottom: 60px;
+                }
+
                 /*공통*/
                 .brand__header {
                     margin-bottom: 68px;
@@ -829,6 +873,9 @@
         <!-- html code -->
         <div id="brand-container">
             <div id="visual-tagline" class="visual__top">
+                <div class="landing-visual__scrolldown">
+                    <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+                </div>
                 <div class="download_assets">
                     <img src="../../mocks/BS0004/download_assets_slogan.png" alt class="download_assets__thumb"></img>
                     <p class="download_assets__title">
