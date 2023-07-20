@@ -134,7 +134,7 @@
                 line-height: 1.9271vw;
                 margin-bottom: 1.3021vw;
                 color: var(--parallex-text-secondery);
-                transition: .5s ease;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .brand__content__intro__title {
                 text-align: center;
@@ -143,7 +143,7 @@
                 font-size: 3.6458vw;
                 line-height: 4.0625vw;
                 color: var(--parallex-text-primary);
-                transition: .5s ease;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .brand__content__intro__description {
                 text-align: center;
@@ -151,7 +151,7 @@
                 line-height: 1.9271vw;
                 margin-top: 1.6667vw;
                 color: var(--parallex-text-primary);
-                transition: .5s ease;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .brand-content__desc-only-mo {
                 text-align: center;
@@ -161,11 +161,21 @@
                 max-width: 340px;
                 font-size: 20px;
                 line-height: 27px;
-                transition: .5s ease;
-
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             br.mo {display: none;}
 
+            .parallex__pin-text > * {
+                opacity: 0;
+                transform: translateY(150px);
+            }
+            .parallex__pin-text.active > * {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .parallex__pin-text.active > *:nth-child(1) {transition-delay: 0s;}
+            .parallex__pin-text.active > *:nth-child(2) {transition-delay: 0.05s;}
+            .parallex__pin-text.active > *:nth-child(3) {transition-delay: 0.1s;}
 
             /*marquee-content*/
             .marquee-content {
@@ -333,7 +343,7 @@
             }
             .parallex__bgs {
                 width: 100%;
-                height: 650vh;
+                height: 530vh;
                 overflow: hidden;
                 margin-top: -130vh;
             }
@@ -365,14 +375,14 @@
                 object-fit: cover;
             }
             .parallex__pin > li:nth-child(1) {
-                top: 4%;
+                top: 8%;
                 left: 9.11%;
                 width: 26.30vw;
                 height: 14.79vw;
                 background-image: url(../../mocks/BS0001/01_LG_BrandFilm_EI_Bow.png);
             }
             .parallex__pin > li:nth-child(2) {
-                top: 7.1%;
+                top: 11.7%;
                 left: 40.83%;
                 width: 19.64vw;
                 height: 11.04vw;
@@ -380,35 +390,35 @@
                 z-index: 1;
             }
             .parallex__pin > li:nth-child(3) {
-                top: 6.1%;
+                top: 11.7%;
                 left: 72.71%;
                 width: 29.17vw;
                 height: 16.88vw;
                 background-image: url(../../mocks/BS0001/03_LG_BrandFilm_EI_Product.png);
             }
             .parallex__pin > li:nth-child(4) {
-                top: 16.5%;
+                top: 22.6%;
                 left: 3.28%;
                 width: 23.54vw;
                 height: 13.23vw;
                 background-image: url(../../mocks/BS0001/04_LG_BrandFilm_EI_Photo.png);
             }
             .parallex__pin > li:nth-child(5) {
-                top: 20.1%;
+                top: 26.1%;
                 left: 33.65%;
                 width: 14.32vw;
                 height: 14.32vw;
                 background-image: url(../../mocks/BS0001/05_LG_BrandFilm_EI_Controller.png);
             }
             .parallex__pin > li:nth-child(6) {
-                top: 16.3%;
+                top: 26.3%;
                 left: 57.97%;
                 width: 37.93vw;
                 height: 26.41vw;
                 background-image: url(../../mocks/BS0001/06_LG_BrandFilm_EI_Fill.png);
             }
             .parallex__pin > li:nth-child(7) {
-                top: 26.5%;
+                top: 34.5%;
                 left: 11.20vw;
                 width: 29.79vw;
                 height: 18.23vw;
@@ -417,16 +427,17 @@
             }
 
             .parallex__pin > li:nth-child(8) {
-                top: 27.6%;
+                top: 33.6%;
                 left: 48.33vw;
                 width: 14.38vw;
                 height: 19.31vw;
                 background-image: url(../../mocks/BS0001/08_LG_BrandFilm_EI_heart.png);
                 border-radius: 10.42vw;
+                z-index: 5;
             }
 
             .parallex__pin > li:nth-child(9) {
-                top: 30.9%;
+                top: 36.9%;
                 left: -15.47vw;
                 width: 41.15vw;
                 height: 26.72vw;
@@ -435,7 +446,7 @@
             }
 
             .parallex__pin > li:nth-child(10) {
-                top: 32.3%;
+                top: 38.3%;
                 left: 70.73vw;
                 width: 36.09vw;
                 height: 22.49vw;
@@ -748,60 +759,60 @@
                     border-radius: 16px;
                 }
                 .parallex__pin > li:nth-child(1) {
-                    top: 2.3%;
+                    top: 4.3%;
                     left: 5.6vw;
                     width: 48vw;
                     height: 26.93vw;
                 }
                 .parallex__pin > li:nth-child(2) {
-                    top: 8.77%;
+                    top: 10.77%;
                     left: 29.33vw;
                     width: 44.8vw;
                     height: 25.33vw;
                 }
                 .parallex__pin > li:nth-child(3) {
-                    top: 6.31%;
+                    top: 8.31%;
                     left: 60.8vw;
                     width: 48vw;
                     height: 26.93vw;
                 }
                 .parallex__pin > li:nth-child(4) {
-                    top: 26.67%;
+                    top: 36.67%;
                     left: 5.33vw;
                     width: 48.27vw;
                     height: 26.93vw;
                     border-radius: 2.67vw;
                 }
                 .parallex__pin > li:nth-child(5) {
-                    top: 24.68%;
+                    top: 26.68%;
                     left: 13.87vw;
                     width: 24.53vw;
                     height: 24.53vw;
                     border-radius: 1.6vw;
                 }
                 .parallex__pin > li:nth-child(6) {
-                    top: 34.53%;
+                    top: 25.53%;
                     left: 48.53vw;
                     width: 46.67vw;
                     height: 32.53vw;
                     border-radius: 1.6vw;
                 }
                 .parallex__pin > li:nth-child(7) {
-                    top: 44.29%;
+                    top: 54.29%;
                     left: 38.13vw;
                     width: 44.8vw;
                     height: 27.47vw;
                     border-radius: 4.53vw;
                 }
                 .parallex__pin > li:nth-child(8) {
-                    top: 57.92%;
-                    left: 46.4vw;
+                    top: 54.28%;
+                    left: 66.4vw;
                     width: 25.6vw;
                     height: 34.67vw;
                     border-radius: 70px;
                 }
                 .parallex__pin > li:nth-child(9) {
-                    top: 42.22%;
+                    top: 46.22%;
                     left: -11.2vw;
                     width: 41.33vw;
                     height: 27.73vw;
@@ -1003,7 +1014,7 @@
                 </div>
             </div>
 
-            <div class="content__color-section" data-color-trigger="dark">
+            <div class="content__color-section">
                 <div class="parallex__visual">
                     <div class="parallex__pin-text">
                         <h3 class="brand__content__title">Guided by our design philosophy</h3>
@@ -1015,19 +1026,19 @@
                             make people feel Life’s Good.
                         </p>
                     </div>
-                    <div class="parallex__bgs">
+                    <div class="parallex__bgs" data-color-trigger="dark">
                         <div class="parallex__bgs__wrap">                            
                             <ul class="parallex__pin">
                                 <li data-speed="0.26"></li>
-                                <li data-speed="0.21"></li>
+                                <li data-speed="0.23"></li>
                                 <li data-speed="0.38"></li>
                                 <li data-speed="0.32"></li>
                                 <li data-speed="0.17"></li>
-                                <li data-speed="0.34"></li>
+                                <li data-speed="0.29"></li>
                                 <li data-speed="0.37"></li>
-                                <li data-speed="0.48"></li>
+                                <li data-speed="0.45"></li>
                                 <li data-speed="0.27"></li>
-                                <li data-speed="0.32"></li>
+                                <li data-speed="0.28"></li>
                             </ul>
                         </div>
                     </div>
@@ -1101,7 +1112,7 @@
                     changeTriggerAll.forEach(trigger => {
                         let rect = trigger.getBoundingClientRect()
 
-                        let offsetY = rect.top + window.pageYOffset
+                        let offsetY = rect.top + window.pageYOffset - (window.innerHeight * 0.4)
                         let heightY = roundOffsetY(offsetY) + rect.height
 
                         if (roundOffsetY(offsetY) < winPosY && heightY > winPosY) {
@@ -1139,10 +1150,13 @@
                         start: `top top`,
                         end: `${endPercent}% top`,
                         pin: true,
+                        // markers: true,
                         scrub: 0.2,
                         onUpdate: self => {
-                            self.progress > 0.1 && self.progress <= 0.9 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
-                            self.progress > 0.2 && self.progress <= 0.75 ? targetTitle.style.opacity = 1 : targetTitle.style.opacity = 0
+                            self.progress > 0.01 && self.progress <= 0.99 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
+                            self.progress > 0.2 && self.progress <= 0.9 ? targetTitle.style.opacity = 1 : targetTitle.style.opacity = 0
+                            self.progress > 0.22 && self.progress <= 0.88 ? targetTitle.classList.add('active') : targetTitle.classList.remove('active')
+
                         }
                     },
                 })
