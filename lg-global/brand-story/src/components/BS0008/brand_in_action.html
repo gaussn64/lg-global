@@ -547,15 +547,15 @@
 
                     if (onOff === true) {
                         swiper.autoplay.stop(); // 슬라이드 멈춤
-                        bullets[0].classList.add('brand-in-action__pagination__btn--paused') //progressbar 멈춤
+                        bullets[0].classList.remove('brand-in-action__pagination__btn--active') //progressbar 멈춤
                         popup.style.display = "block"
                         body.classList.add('isPopupOpen')
                         player.play(); // 일시 정지된 경우 재생
                         
                     } else {
+                        bullets[0].classList.add('brand-in-action__pagination__btn--active') //progressbar 멈춤
                         popup.style.display = 'none' 
                         swiper.autoplay.start(); // 슬라이드 재생
-                        bullets[0].classList.remove('brand-in-action__pagination__btn--paused') //progressbar 멈춤
                         body.classList.remove('isPopupOpen')
 
                         video.currentTime = 0;
