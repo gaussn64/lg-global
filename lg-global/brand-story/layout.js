@@ -85,7 +85,7 @@ function initGnbDeps2(tAnchor) {
     function resizeDeps2Menu() {
         if(deviceMode() == "pc") {
             tList.style.display = "flex"
-            tDeps2.style.width = document.querySelector("body").offsetWidth - 60 + "px"
+            //tDeps2.style.width = document.querySelector("body").offsetWidth - 60 + "px"
 
             if(tAnchor.className.indexOf("--on") > -1) {
                 for (var w = 0; w < gdItem.length; w++) {
