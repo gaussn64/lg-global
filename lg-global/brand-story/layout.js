@@ -12,7 +12,16 @@ function initCommonHeader() {
     var btnGnb = cHeader.querySelector(".c-header__btn-gnb");
     var btnGnbBar = btnGnb.querySelectorAll(".c-header__btn-gnb__bar");
     var deviceWidth;
-    const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
+    var visualTop = document.querySelector(".visual__top");
+    var vtHeight = function() {
+        if(!visualTop) {
+            return 0
+        } else {
+            return visualTop.offsetHeight
+        }
+    }
+    var oldScrTop = 0;
+    var newScrTop = 0;
     
     window.onresize = window.onorientationchange = function() {
         cfwOffsetTop = cFooterWrap.offsetTop;
@@ -32,11 +41,18 @@ function initCommonHeader() {
 
     window.onscroll = function() {
         var winScrollTop = document.documentElement.scrollTop || window.scrollY
-        if(winScrollTop >= cfwOffsetTop - window.innerHeight) {
-            cHeader.style.position = "absolute"
-            cHeader.style.top = cfwOffsetTop - window.innerHeight + chPosTop + "px"
-        } else if(winScrollTop < cfwOffsetTop - window.innerHeight) {
-            cHeader.removeAttribute("style")
+
+        oldScrTop = winScrollTop
+
+        if(winScrollTop >= vtHeight()) {
+            //console.log("test")
+            if(newScrTop < oldScrTop) {
+                cHeader.style.top = "-"+cHeader.offsetHeight*2+"px"
+                newScrTop = oldScrTop
+            } else if(newScrTop >= oldScrTop) {
+                cHeader.style.top = "0px"
+                newScrTop = oldScrTop
+            }
         }
     }
 
@@ -100,7 +116,7 @@ function initGnbDeps2(tAnchor) {
             }
         } else if(deviceMode() == "mo") {
             tList.style.display = "block"
-            tDeps2.style.width = "auto"
+            //tDeps2.style.width = "auto"
 
             if(tAnchor.className.indexOf("--on") > -1) {
                 for (var x = 0; x < gdItem.length; x++) {

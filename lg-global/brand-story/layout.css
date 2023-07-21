@@ -18,6 +18,7 @@ ul,ol {
 .c-header {
     position: relative;
     display: flex;
+    transition: 0.3s ease top;
 }
 .c-header__tit {
     position: absolute;
@@ -210,11 +211,15 @@ ul,ol {
 /* Mobile */
 @media (max-width: 768px) {
     /* Common Header */
-    .c-header {
-        display: block;
+    .c-header__wrap {
         top: 24px;
-        left: 20px;
-        right: 20px;
+        width: calc(100% - 40px);
+    }
+    .c-header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
         padding: 0px;
         min-height: 66px;
         box-sizing: border-box;
@@ -246,6 +251,7 @@ ul,ol {
     .c-header__gnb {
         display: none;
         margin-top: 90px;
+        width: 100%;
         height: calc(100vh - 142px);
         padding: 24px 20px;
         box-sizing: border-box;
