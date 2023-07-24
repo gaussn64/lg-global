@@ -283,35 +283,11 @@
             }
 
             /* Sustainability Efforts */
-            .sustainability-efforts {
-                position: relative;
-                height: 400vh;
-                background-color: #262626;
-            }
-            .sustainability-efforts:after {
-                content: '';
-                display: block;
-                position: absolute;
-                bottom: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100vh;
-                background: linear-gradient(180deg, #262626 5.73%, rgba(38, 38, 38, 0.65) 48.96%, #F6F3EB 100%), #FFFFFF;
-            }
             .sustainability-efforts__bg {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                z-index: 1;
+                position: relative;
                 width: 100%;
                 height: 100vh;
-            }
-            .sustainability-efforts__bg--fixed {
-                position: fixed;
-            }
-            .sustainability-efforts__bg--end {
-                top: auto;
-                bottom: 0px;
+                background-color: #262626;
             }
             .sustainability-efforts__bg__txt {
                 position: absolute;
@@ -338,29 +314,15 @@
                 width: 100%;
                 height: 100vh;
             }
-            .sustainability-efforts__card__wrap--fixed {
-                position: fixed;
-            }
-            .sustainability-efforts__card__wrap--end {
-                top: auto;
-                bottom: 0px;
-            }
-            .sustainability-efforts__card {
-                width: 1440px;
-                margin: 0px auto;
-            }
             .sustainability-efforts__card__item {
                 position: relative;
-                top: 100vh;
-                height: 74.0741vh;
-                border-radius: 30px;
+                width: 100%;
+                height: 100vh;
+                padding-top: 12.2222vh;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
                 overflow: hidden;
-            }
-            .sustainability-efforts__card__item + .sustainability-efforts__card__item {
-                margin-top: -64.8148vh;
             }
             .sustainability-efforts__card__item:nth-child(1) {
                 background-image: url(../../mocks/ST0006/photo-se-card1.jpg);
@@ -372,23 +334,11 @@
                 background-image: url(../../mocks/ST0006/photo-se-card3.png);
             }
             .sustainability-efforts__card__inner {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0px 120px;
-                backdrop-filter: blur(100px);
+                width: 1440px;
+                height: 75.5556vh;
+                margin: 0px auto;
             }
             .sustainability-efforts__card__tit {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                padding: 30px 0px;
                 font-size: 36px;
                 font-weight: 550;
                 line-height: 40px;
@@ -436,18 +386,6 @@
                 margin-right: 8px;
                 background: url(../../mocks/ST0006/bullet_secd-more.svg) no-repeat center center;
                 vertical-align: middle;
-            }
-            .sustainability-efforts__card__photo {
-                flex-shrink: 0;
-                width: 620px;
-                height: 500px;
-                overflow: hidden;
-                border-radius: 600px 40px 40px 600px;
-            }
-            .sustainability-efforts__card__photo__img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
             }
 
             /* Summary */
@@ -666,234 +604,6 @@
                 background-color: rgba(0,0,0,1);
             }
 
-            /* Popup Discover More */
-            .popup-discover-more {
-                position: fixed;
-                z-index: 99;
-                top: 0px;
-                left: 0px;
-                display: none;
-                width: 100%;
-                height: 100%;
-                overflow-y: auto;
-                overflow-x: hidden;
-                background-color: white;
-            }
-            .popup-discover-more--container {
-                display: flex;
-                position: relative;
-                z-index: 1;
-                transition: 0.3s ease margin-left;
-            }
-            .popup-discover-more--header {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                flex-shrink: 0;
-                width: 800px;
-                height: 100vh;
-                padding: 80px 100px;
-                box-sizing: border-box;
-                white-space: nowrap;
-                text-align: left;
-            }
-            .popup-discover-more--header__none-visual {
-                width: auto;
-            }
-            .popup-discover-more--header--tit,
-            .popup-discover-more--header--cont {
-                position: relative;
-                z-index: 2;
-                color: white;
-            }
-            .popup-discover-more--header__none-visual .popup-discover-more--header--tit,
-            .popup-discover-more--header__none-visual .popup-discover-more--header--cont {
-                color: #262626;
-            }
-            .popup-discover-more--header--tit {
-                font-weight: 300;
-                font-size: 28px;
-                line-height: 34px;
-            }
-            .popup-discover-more--header--cont {
-                font-weight: 250;
-                font-size: 52px;
-                line-height: 60px;
-                margin-top: 20px;
-            }
-            .popup-discover-more--header--cont + .popup-discover-more--header--cont {
-                font-size: 20px;
-                line-height: 28px;
-                color: #F6F3EB;
-            }
-            .popup-discover-more--header__none-visual .popup-discover-more--header--cont + .popup-discover-more--header--cont {
-                color: #4A4946;
-            }
-            .popup-discover-more--header--edit {
-                display: flex;
-                align-items: center;
-                gap: 0px 17px;
-                position: fixed;
-                z-index: 2;
-                bottom: 50px;
-                left: 100px;   
-            }
-            .popup-discover-more--header--edit--btn-close {
-                width: 48px;
-                height: 48px;
-                text-indent: -9999px;
-                overflow: hidden;
-                border-width: 0px;
-                border-radius: 50%;
-                background: #D9D9D9 url(../../mocks/ST0002/btn-pdm-close.svg) no-repeat center center;
-                backdrop-filter: blur(9.23077px);
-                opacity: 0.4;
-                transition: 0.3s ease transform;
-            }
-            .popup-discover-more--header--edit--btn-close:hover {
-                transform: rotate(180deg);
-            }
-            .popup-discover-more--header--edit--progress {
-                width: 300px;
-                height: 2px;
-                background-color: rgba(246, 243, 235, 0.2)
-            }
-            .popup-discover-more--header--edit--progress--bar {
-                height: 2px;
-                background-color: #7E7C77;
-                transition: 0.3s ease width;
-            }
-            .popup-discover-more--header--visual {
-                position: absolute;
-                z-index: 1;
-                top: 0px;
-                left: 0px;
-                width: 100%;
-                height: 100%;
-                background-color: white;
-            }
-            .popup-discover-more--header--visual--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .popup-discover-more--visual {
-                display: flex;
-                flex-direction: column;
-                flex-shrink: 0;
-                width: 800px;
-                height: 100vh;
-            }
-            .popup-discover-more--visual--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .popup-discover-more--section {
-                display: flex;
-                align-items: flex-start;
-                height: 100vh;
-                padding: 80px 90px;
-                box-sizing: border-box;
-                white-space: nowrap;
-                text-align: center;
-            }
-            .popup-discover-more--section__vertical-middle {
-                align-items: center;
-            }
-            .popup-discover-more--section--inner + .popup-discover-more--section--inner {
-                padding-left: 60px;
-            }
-            .popup-discover-more--section--cont-wrap {
-                display: inline-block;
-                text-align: left;
-            }
-            .popup-discover-more--section--cont-wrap__inline {
-                display: inline-flex;
-                gap: 0px 70px;
-            }
-            .popup-discover-more--section--tit,
-            .popup-discover-more--section--cont1,
-            .popup-discover-more--section--cont2 {
-                width: 100%;
-                box-sizing: border-box;
-            }
-            .popup-discover-more--section--tit {
-                font-size: 36px;
-                line-height: 42px;
-                font-family: 'LG_EI_Headline';
-                font-weight: 100;
-            }
-            .popup-discover-more--section--cont1 {
-                margin-top: 20px;
-                font-size: 28px;
-                line-height: 34px;
-            }
-            .popup-discover-more--section--cont2 {
-                margin-top: 20px;
-                font-size: 20px;
-                line-height: 28px;
-            }
-            .popup-discover-more--section--cont1:first-child,
-            .popup-discover-more--section--cont2:first-child {
-                margin-top: 0px;
-            }
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--tit,
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont1,
-            .popup-discover-more--section--e-waste-program3 .popup-discover-more--section--cont2 {
-                padding-left: 35px;
-            }
-            .popup-discover-more--section--photo {
-                margin: 60px auto;
-            }
-            .popup-discover-more--section--photo:first-child {
-                margin-top: 0px;
-            }
-            .popup-discover-more--section--photo:last-child {
-                margin-bottom: 0px;
-            }
-            .popup-discover-more--section--carbon-emission-reduction-tennessee2--photo {
-                width: 808px;
-                height: 400px;
-            }
-            .popup-discover-more--section--carbon-emission-reduction-changwon2--photo {
-                width: 567px;
-                height: 400px;
-            }
-            .popup-discover-more--section--recreation-of-product2--photo {
-                width: 776px;
-                height: 430px;
-            }
-            .popup-discover-more--section--recreation-of-product3--photo {
-                width: 727px;
-                height: 526px;
-            }
-            .popup-discover-more--section--recreation-of-product4--photo {
-                width: 722px;
-                height: 490px;
-            }
-            .popup-discover-more--section--chilseo-recycling-center2--photo {
-                width: 680px;
-                height: 495px;
-            }
-            .popup-discover-more--section--chilseo-recycling-center3--photo {
-                width: 490px;
-                height: 350px;
-            }
-            .popup-discover-more--section--chilseo-recycling-center4--photo {
-                width: 610px;
-                height: 404px;
-            }
-            .popup-discover-more--section--chilseo-recycling-center5--photo {
-                width: 350px;
-                height: 476px;
-            }
-            .popup-discover-more--section--photo--img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
             /* Popup Discription */
             .popup-discription {
                 display: none;
@@ -919,12 +629,16 @@
                 background-color: white;
             }
             .popup-discription__tit {
+                margin-top: 120px;
                 text-align: center;
                 color: black;
                 font-family: 'LG_EI_Headline';
                 font-weight: 250;
                 font-size: 52px;
                 line-height: 60px;
+            }
+            .popup-discription__tit:first-child {
+                margin-top: 0px;
             }
             .popup-discription__tit--left {
                 text-align: left;
@@ -965,6 +679,13 @@
             .popup-discription__photo__figure__figcaption__strong {
                 font-weight: 600;
                 color: #7E7C77;
+            }
+            .popup-discription__video {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__video__player {
+                width: 100%;
+                height: 454px;
             }
             .popup-discription--stit {
                 margin-top: 60px;
@@ -1050,6 +771,14 @@
                 grid-template-columns: repeat(2,1fr);
                 gap: 0px 40px;
             }
+            .popup-discription__cont__grid2__tit {
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 34px;
+                letter-spacing: -0.14px;
+                margin-top: 60px;
+            }
             .popup-discription__btn-close {
                 position: absolute;
                 top: 40px;
@@ -1086,6 +815,73 @@
                 transform: rotate(-45deg);
             }
 
+            /* Popup Discription - CTO */
+            .popup-discription__cto__intro {
+                position: relative;
+                height: 600px;
+                margin: -120px -90px 0px;
+                padding: 90px;
+                background: url(../../mocks/ST0006/photo-cto.png) no-repeat center center;
+                background-size: cover;
+            }
+            .popup-discription__cto__intro * {
+                color: white;
+            }
+            .popup-discription__cto__intro__summary {
+                font-size: 52px;
+                font-weight: 550;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+            }
+            .popup-discription__cto__intro__detail {
+                margin-top: 10px;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__cto__intro__sign {
+                position: absolute;
+                bottom: 30px;
+                left: 90px;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 250;
+                line-height: 24px
+            }
+            .popup-discription__cto__intro__sign__strong {
+                font-weight: 700;
+            }
+            .popup-discription__cto__goals {
+                padding: 100px 0px;
+                text-align: center;
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+            }
+            .popup-discription__cto__qna {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__cto__qna + .popup-discription__cto__qna {
+                margin-top: 40px;
+            }
+            .popup-discription__cto__qna__q {
+                font-weight: 700;
+            }
+            .popup-discription__cto__qna__a {
+                color: #4A4946;
+            }
+            .popup-discription__cto__btn-close {
+                background-color: rgba(38, 38, 38, 0.3);
+            }
+            .popup-discription__cto__btn-close:before,
+            .popup-discription__cto__btn-close:after {
+                background-color: white;
+            }
+
             /* 4K */
             @media (min-width: 2560px) {
                 /* Sustainable Recycling Solutions */
@@ -1093,6 +889,21 @@
                     max-width: 2560px;
                     margin: 0px auto;
                 }
+            }
+
+            /* PC Normal */
+            @media (min-width: 1500px) {
+            
+            }
+
+            /* Tablet */
+            @media (min-width: 1024px) {
+            
+            }
+
+            /* Mobile */
+            @media (min-width: 768px) {
+            
             }
         </style>
         <!-- html code -->
@@ -1379,12 +1190,18 @@
             <div class="sustainability-efforts">
                 <div class="sustainability-efforts__bg">
                     <ul class="sustainability-efforts__bg__txt">
+                        <li class="sustainability-efforts__bg__txt__item">for people</li>
                         <li class="sustainability-efforts__bg__txt__item">Delightful workplace</li>
                         <li class="sustainability-efforts__bg__txt__item">Diversity &amp; Inclusion</li>
                         <li class="sustainability-efforts__bg__txt__item">Design for all</li>
                     </ul>
                 </div>
                 <div class="sustainability-efforts__card__wrap">
+                    <ul class="sustainability-efforts__card__navi">
+                        <li class="sustainability-efforts__card__navi__item"><a href="#" class="sustainability-efforts__card__navi__item__anchor">Go to delightful workplace</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#" class="sustainability-efforts__card__navi__item__anchor">Go to  diversity &amp; inclusion</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#" class="sustainability-efforts__card__navi__item__anchor">Go to design for all</a></li>
+                    </ul>
                     <ul class="sustainability-efforts__card">
                         <li class="sustainability-efforts__card__item">
                             <div class="sustainability-efforts__card__inner">
@@ -1400,11 +1217,8 @@
                                         working environment for our partners, and create a <br />
                                         collaborative atmosphere for all.</p>
                                     <div class="sustainability-efforts__card__discover-more">
-                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#production-site-future-value')">Discover more</button>
                                     </div>
-                                </div>
-                                <div class="sustainability-efforts__card__photo">
-                                    <img src="../../mocks/ST0006/photo-se-card1.jpg" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
                         </li>
@@ -1424,11 +1238,8 @@
                                         opportunities for success.
                                     </p>
                                     <div class="sustainability-efforts__card__discover-more">
-                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#cto-interview')">Discover more</button>
                                     </div>
-                                </div>
-                                <div class="sustainability-efforts__card__photo">
-                                    <img src="../../mocks/ST0006/photo-se-card2.jpg" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
                         </li>
@@ -1448,15 +1259,122 @@
                                         wider audience.
                                     </p>
                                     <div class="sustainability-efforts__card__discover-more">
-                                        <button type="button" class="sustainability-efforts__card__discover-more__btn">Discover more</button>
+                                        <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#disabled-advisory-board')">Discover more</button>
                                     </div>
-                                </div>
-                                <div class="sustainability-efforts__card__photo">
-                                    <img src="../../mocks/ST0006/photo-se-card3.png" alt="" class="sustainability-efforts__card__photo__img">
                                 </div>
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div class="popup-discription" id="production-site-future-value">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">
+                                Safety is the top priority in the <br />
+                                production site
+                            </dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0006/visual-production-site.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont1">Since 2017, LG has been running a contest to help local community issues in Bangladesh. Residents submit ideas to fix a local issue, and LG chooses one individual to become an LG ambassador and receive support to solve the problem they raised.</dd>
+                            <dt class="popup-discription__tit">
+                                The well-being and satisfaction of <br />
+                                employees are the foundation of <br />
+                                future value.
+                            </dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0006/visual-future-value.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p>Safety goes beyond physical infrastructure and site management. The working environment and conditions of employees are just as crucial. LG Electronics ensures favorable working conditions for all employees within the company and its suppliers, with well-defined standards for workers' rights.</p>
+                                <p>We have competitive salaries, offer personal development opportunities, and set clear expectations. We also provide comprehensive health benefits, including top-tier medical insurance, wellness programs, and access to medical facilities. In terms of employee welfare, we continue to support a flexible work system, enhance childcare facilities, and encourage self-development and growth among our employees.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="cto-interview">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner popup-discription__cto">
+                            <dt class="popup-discription__cto__intro">
+                                <p class="popup-discription__cto__intro__summary">
+                                    Youngest <br />
+                                    female <br />
+                                    executive
+                                </p>
+                                <p class="popup-discription__cto__intro__detail">
+                                    LG Electronics CTO Division B2B <br />
+                                    Prior Technology Center LDF Life Data  <br />
+                                    Fusion Lab
+                                </p>
+                                <p class="popup-discription__cto__intro__sign">
+                                    <strong class="popup-discription__cto__intro__sign__strong">Shin Jeong-eun ,</strong> Managing director
+                                </p>
+                            </dt>
+                            <dd class="popup-discription__cto__goals">
+                                <p class="popup-discription__cto__goals__txt">
+                                    “My goal is to become a female leader who <br />
+                                    cultivates an organizational culture of <br />
+                                    diversity and inclusivity, providing members <br />
+                                    with confidence to develop their skills and <br />
+                                    fostering a genuine sense of belonging.”
+                                </p>
+                            </dd>
+                            <dd class="popup-discription__cto__qna__wrap">
+                                <div class="popup-discription__cto__qna">
+                                    <p class="popup-discription__cto__qna__q">What are you currently in charge of?</p>
+                                    <p class="popup-discription__cto__qna__a">My team uses data to create smart home technology tailored to customers' lifestyles. By studying their daily lives and combining data across industries, we unlock the value of converged data with advanced AI analysis.</p>
+                                </div>
+                                <div class="popup-discription__cto__qna">
+                                    <p class="popup-discription__cto__qna__q">When did you join LG Electronics and what was your first position?</p>
+                                    <p class="popup-discription__cto__qna__a">In May 2010, I joined LG Electronics CTO Division, focusing on the multimedia lab. Initially, I worked on camera image processing for vehicle safety, developing innovative solutions using front and rear cameras to recognize and protect pedestrians and surroundings when the vehicle is parked. LG Electronics actively supports advanced technology development, especially for smart car parts, with the Vehicle Component Solution (VS) Division driving future growth.</p>
+                                </div>
+                                <div class="popup-discription__cto__qna">
+                                    <p class="popup-discription__cto__qna__q">As a female executive, what kind of organization do you feel LG Electronics is?</p>
+                                    <p class="popup-discription__cto__qna__a">
+                                        Although the proportion of female executives has increased recently, it is still a minority, and it is not easy to stand out even more in large companies such as LG Electronics. Here, I even feel the weight of the title of the youngest female executive born in the 80s. But rather, as a young executive, I think I can work freely and comfortably with MZ generation employees. The open environment and culture of LG Electronics, which provides more opportunities and support to young and competent juniors, is also very good. <br />
+                                        Especially this year, it was very meaningful to me that a female team leader born in the 1990s was appointed as a team leader through a lot of mentoring in our lab. People around me are giving a lot of support to the youngest female team leader. I am very happy that many talented female voices of expectations and challenges have been heard through this opportunity.
+                                    </p>
+                                </div>
+                                <div class="popup-discription__cto__qna">
+                                    <p class="popup-discription__cto__qna__q">How would you like to lead your department in terms of diversity?</p>
+                                    <p class="popup-discription__cto__qna__a">
+                                        Diversity and inclusion were considered the most important when creating the lab. <br />
+                                        Currently, the ratio of women is 52%, the appointment of a competent female team leader born in the 1990s, and the appointment of a young leader according to performance. They are now growing into more capable professionals than anyone else. I believe that true change is necessary to foster diversity and inclusion as an organizational culture within a company. For that reason, I want to become a female leader who creates an organizational culture that gives members confidence in developing their capabilities and feels a true sense of belonging through the establishment of an organizational culture with diversity and inclusion. We believe that they are our great resource and the future driving force of innovation.
+                                    </p>
+                                </div>
+                                <div class="popup-discription__cto__qna">
+                                    <p class="popup-discription__cto__qna__q">Please give suggestions on the direction of LG Electronics' diversity and inclusion (nurturing female talent, etc.).</p>
+                                    <p class="popup-discription__cto__qna__a">
+                                        There is a growing recognition of the importance of incorporating diversity and inclusion into corporate culture for a company's long-term business development. As a global company, LG Electronics respects various human differences such as race, ethnicity, age, social class, moral value system, and political beliefs, as well as gender. In particular, LG Electronics has many programs and systems that actively nurture young, core, and female talents. <br />
+                                        Through this, we hope to further establish an organizational culture that develops and spreads the synergy of diversity into organizational capabilities by guaranteeing their expertise and autonomy.
+                                    </p>
+                                </div>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close popup-discription__cto__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="disabled-advisory-board">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">
+                                Disabled Advisory Board
+                            </dt>
+                            <dd class="popup-discription__video">
+                                <iframe width="800" height="454" src="https://www.youtube.com/embed/9EB5kLWSZVA?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
+                            </dd>
+                            <dd class="popup-discription__cont__grid2">
+                                <h3 class="popup-discription__cont__grid2__tit">
+                                    “Accessibility is at the heart of our innovation, driving us to push boundaries and exceed expectations.”
+                                </h3>
+                                <p class="popup-discription__cont1">
+                                    LG collaborates with the Korea and US Disabled Consumers' Unions and Associations to ensure that our products are accessible to all. This partnership involves experts and individuals with diverse disabilities who test our products and provide feedback. We highly value their input as we strive to develop products with improved accessibility. By listening to their ideas, we create innovative solutions that benefit everyone.
+                                </p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
                 </div>
             </div>
             <div class="summary">
@@ -1579,63 +1497,7 @@
                 },
                 sustainabilityEfforts:function() {
                     let sustainabilityEfforts = document.querySelector(".sustainability-efforts");
-                    let seBg = sustainabilityEfforts.querySelector(".sustainability-efforts__bg");
-                    let seCardWrap = sustainabilityEfforts.querySelector(".sustainability-efforts__card__wrap");
-                    let seCard = seCardWrap.querySelector(".sustainability-efforts__card");
-                    let seCardItem = seCard.querySelectorAll(".sustainability-efforts__card__item");
-                    let sciHeight =  seCardItem[0].offsetHeight;
-
-                    let seBgFix = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".sustainability-efforts",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                seBg.classList.add("sustainability-efforts__bg--fixed")
-
-                                seCardWrap.classList.add("sustainability-efforts__card__wrap--fixed")
-                            },
-                            onLeaveBack: function() {
-                                seBg.classList.remove("sustainability-efforts__bg--fixed")
-                                seBg.classList.remove("sustainability-efforts__bg--end")
-
-                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--fixed")
-                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--end")
-                            },
-                            onLeave: function() {
-                                seBg.classList.remove("sustainability-efforts__bg--fixed")
-                                seBg.classList.add("sustainability-efforts__bg--end")
-
-                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--fixed")
-                                seCardWrap.classList.add("sustainability-efforts__card__wrap--end")
-                            },
-                            onEnterBack: function() {
-                                seBg.classList.add("sustainability-efforts__bg--fixed")
-                                seBg.classList.remove("sustainability-efforts__bg--end")
-
-                                seCardWrap.classList.add("sustainability-efforts__card__wrap--fixed")
-                                seCardWrap.classList.remove("sustainability-efforts__card__wrap--end")
-                            },
-                            onUpdate: function(self) {
-                                //coreValueProgressBar.style.width = (self.progress)*100 + "%"
-                            }
-                        }
-                    });
-
-
-                    const panels = gsap.utils.toArray('.sustainability-efforts__card__item');
-                    panels.forEach(function(valueBox,i) {
-                        let tl = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: ".sustainability-efforts",
-                                start: () => "+=" + (window.innerHeight)*(i),
-                                end: () => "+=" + window.innerHeight,
-                                scrub: true,
-                                anticipatePin: 1
-                            }
-                        })
-                        tl.to(valueBox, {top: 10})
-                    })
+                    
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
@@ -1760,10 +1622,26 @@
                 document.querySelector("body").style.overflow = "hidden"
                 descPopup.style.display = "block"
 
+                //Youtube Api Setting
+                var youtubePlayer = document.querySelector(".popup-discription__video__player")
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                window.onYouTubeIframeAPIReady = function() {
+                    ytPlayer = new YT.Player("youtube_player", {});
+                };
+
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    
+                    if(youtubePlayer) {
+                        ytPlayer.stopVideo()
+                    }
                 }
             }
         </script>
