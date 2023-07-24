@@ -6,11 +6,20 @@ ul,ol {
 }
 
 /* Common Header */
-.c-header {
+.c-header__wrap {
     position: fixed;
     z-index: 89;
     top: 40px;
-    left: 40px;
+    left: 50%;
+    width: calc(100% - 80px);
+    max-width: 1680px;
+    transform: translateX(-50%);
+}
+.c-header {
+    position: relative;
+    top: 0px;
+    display: flex;
+    transition: 0.3s ease top;
 }
 .c-header__tit {
     position: absolute;
@@ -79,10 +88,8 @@ ul,ol {
 
 /* Common Header - Location */
 .c-header__location {
-    position: absolute;
-    top: 0px;
-    left: calc(100% + 10px);
     padding: 19px 31px 20px 30px;
+    margin-left: 10px;
     border-radius: 400px;
     font-weight: 600;
     font-size: 15px;
@@ -111,11 +118,15 @@ ul,ol {
 /* Mobile */
 @media (max-width: 768px) {
     /* Common Header */
-    .c-header {
-        display: block;
+    .c-header__wrap {
         top: 24px;
-        left: 20px;
-        right: 20px;
+        width: calc(100% - 40px);
+    }
+    .c-header {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
         padding: 0px;
         min-height: 66px;
         box-sizing: border-box;

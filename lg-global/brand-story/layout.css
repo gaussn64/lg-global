@@ -17,6 +17,7 @@ ul,ol {
 }
 .c-header {
     position: relative;
+    top: 0px;
     display: flex;
     transition: 0.3s ease top;
 }
