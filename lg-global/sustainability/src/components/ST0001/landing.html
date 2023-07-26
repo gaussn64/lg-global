@@ -15,23 +15,26 @@
 </head>
 
 <body>
-<div id="header__wrap" class="c-header__wrap">
-    <header id="header" class="c-header">
-        <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
-        <nav class="c-header__gnb">
-            <ul class="c-header__gnb__list">
-                <li class="c-header__gnb__list__item"><a href="../ST0002/living_sustainably.html" class="c-header__gnb__list__item__anchor">Living Sustainably</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0003/climate_action.html" class="c-header__gnb__list__item__anchor">Climate Action</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0005/human_rights.html" class="c-header__gnb__list__item__anchor">Human Rights</a></li>
-            </ul>
-        </nav>
-        <button type="button" class="c-header__btn-gnb">
-            <span class="c-header__btn-gnb__bar"></span>
-            <span class="c-header__btn-gnb__bar"></span>
-        </button>
-    </header>
-</div>
+    <div id="header__wrap" class="c-header__wrap">
+        <header id="header" class="c-header">
+            <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+            <nav class="c-header__gnb">
+                <ul class="c-header__gnb__list">
+                    <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0006/for_people.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0000/downloads.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="c-header__btn-gnb">
+                <span class="c-header__btn-gnb__bar"></span>
+                <span class="c-header__btn-gnb__bar"></span>
+            </button>
+        </header>
+    </div>
 <div id="container" class="c-container">
     <main id="contents" class="c-contents">
         <!-- [code component area start] -->
@@ -227,8 +230,8 @@
                 width: 530px;
                 height: 530px;
                 border-radius: 265px;
-                transform: translateX(-50%);
                 overflow: hidden;
+                transform: translateX(-50%);
                 transition: 0.5s ease 0s width;
             }
             .core-value__cont-inner--fixed .core-value__media,
@@ -243,7 +246,12 @@
                 right: 0px;
                 width: 100%;
                 height: 100%;
+                border-radius: 265px;
                 overflow: hidden;
+            }
+            .core-value__cont-inner--fixed .core-value__media__item,
+            .core-value__cont-inner--end .core-value__media__item {
+                border-radius: 0px;
             }
             .core-value__media__item__video,
             .core-value__media__item__img {
@@ -947,7 +955,7 @@
                     </div>
                     <ul class="core-value__media">
                         <li class="core-value__media__item">
-                            <img src="../../mocks/ST0001/video-core-value1.png" class="core-value__media__item__img" alt="" />
+                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
                         </li>
                         <li class="core-value__media__item">
                             <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
