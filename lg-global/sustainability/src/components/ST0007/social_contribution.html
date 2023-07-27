@@ -502,6 +502,13 @@
                 width: 100%;
                 height: auto;
             }
+            .popup-discription__video {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__video__player {
+                width: 100%;
+                height: 454px;
+            }
             .popup-discription__discover-more {
                 text-align: center;
                 margin-top: 40px;
@@ -632,8 +639,8 @@
                             </dd>
                             <dd class="popup-discription__cont2">Since 2011, LG has initiated the Global IT Challenge for Youth with Disabilities (GITC) to bridge the information gap among disabled youth and create a foundation for social advancement, like entering school and work. We continue to make efforts to improve participating countries' knowledge of disabilities by holding forums on IT and disabilities.</dd>
                             <dd class="popup-discription__cont2">GITC is the world's only IT festival for disabled youth, overcoming barriers of disability, religion, culture, and nationality. Young people with disabilities (physical, hearing, vision, and development) from 20 different countries take part in four categories in the IT Paralympics.</dd>
-                            <dd class="popup-discription__photo">
-                                <img src="../../mocks/ST0007/photo-global-it-challenge.png" alt=""  class="popup-discription__photo__img" />
+                            <dd class="popup-discription__video">
+                                <iframe width="800" height="454" src="https://www.youtube.com/embed/4TCwL966FLM?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
                             </dd>
                             <dd class="popup-discription__discover-more">
                                 <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
@@ -912,10 +919,26 @@
                 document.querySelector("body").style.overflow = "hidden"
                 descPopup.style.display = "block"
 
+                //Youtube Api Setting
+                var youtubePlayer = document.querySelector(".popup-discription__video__player")
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                window.onYouTubeIframeAPIReady = function() {
+                    ytPlayer = new YT.Player("youtube_player", {});
+                };
+
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    
+                    if(youtubePlayer) {
+                        ytPlayer.stopVideo()
+                    }
                 }
             }
         </script>
