@@ -182,7 +182,7 @@
             .milestone__goals-navi {
                 display: flex;
                 justify-content: center;
-                margin: 40px 0px 60px;
+                margin-top: 40px;
             }
             .milestone__goals-navi__list {
                 display: flex;
@@ -216,12 +216,21 @@
             }
             .milestone__goals-cont__wrap {
                 position: relative;
+                margin-top: 60px;
                 box-sizing: border-box;
                 background-image: url(../../mocks/ST0003/bg-milestone-goals-cont.jpg);
                 background-repeat: no-repeat;
                 background-position: center 0%;
                 background-size: cover;
                 background-attachment: fixed;
+            }
+            .milestone__goals-cont__sample {
+                padding: 117px 0px 80px;
+                text-align: center;
+            }
+            .milestone__goals-cont__sample__img {
+                width: 1440px;
+                height: auto;
             }
             .milestone__goals-cont {
                 position: relative;
@@ -1756,12 +1765,11 @@
                         Our carbon neutrality imperative
                     </p>
                     <p class="milestone__intro__txt">
-                        Our ambitious 2030 carbon neutrality goal means taking immediate action. Through continuous process <br />
-                        improvement with energy-saving technologies, we're reducing more greenhouse gas emissions starting from the <br />
-                        biggest culprit, the production stage.
+                        We're firmly committed to a greener future, discovering and <br />
+                        creating ways to reduce carbon emissions and minimize our environmental impact through sustainable practices.
                     </p>
                 </div>
-                <nav class="milestone__goals-navi">
+                <!-- <nav class="milestone__goals-navi">
                     <ul class="milestone__goals-navi__list">
                         <li class="milestone__goals-navi__list__item">
                             <a href="javascript:void(0)" class="milestone__goals-navi__list__item__a milestone__goals-navi__list__item__a--active">Plan 2030</a>
@@ -1770,9 +1778,12 @@
                             <a href="javascript:void(0)" class="milestone__goals-navi__list__item__a">2023</a>
                         </li>
                     </ul>
-                </nav>
+                </nav> -->
                 <div class="milestone__goals-cont__wrap">
-                    <div class="milestone__goals-cont">
+                    <div class="milestone__goals-cont__sample">
+                        <img src="../../mocks/ST0003/txt-milestone-goals-cont.png" alt="" class="milestone__goals-cont__sample__img" />
+                    </div>
+                    <!--<div class="milestone__goals-cont">
                         <ul class="milestone__goals-cont__years">
                             <li class="milestone__goals-cont__years__item milestone__goals-cont__years__item--active">
                                 <b class="milestone__goals-cont__years__item__txt">2006</b>
@@ -1906,7 +1917,7 @@
                         <p class="milestone__goals-cont__home-appliances milestone__goals-cont__home-appliances__2023">
                             * TV, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner(RAC), System Air Conditioner(SAC), Monitors
                         </p>
-                    </div>
+                    </div>-->
                 </div>
             </div>
             <div class="carbon-emission-reduction">
@@ -2255,19 +2266,19 @@
                 milestone: function() {
                     let milestone = document.querySelector(".milestone");
                     let milestoneGoalsNavi = milestone.querySelector(".milestone__goals-navi")
-                    let mgnItem = milestoneGoalsNavi.querySelectorAll(".milestone__goals-navi__list__item");
+                    /* let mgnItem = milestoneGoalsNavi.querySelectorAll(".milestone__goals-navi__list__item");
                     let mgcSummary2023 = milestone.querySelector(".milestone__goals-cont__summary__2023")
                     let mgcSummary2030 = milestone.querySelector(".milestone__goals-cont__summary__2030")
                     let mgcDetail2023 = milestone.querySelector(".milestone__goals-cont__detail__2023")
                     let mgcDetail2030 = milestone.querySelector(".milestone__goals-cont__detail__2030")
-                        slideSwiper(mgcDetail2030)
+                        slideSwiper(mgcDetail2030) */
                     let milestoneGoalsContWrap = milestone.querySelector(".milestone__goals-cont__wrap")
                     let mgcwBgCurrent = 0.1
                     const mgcwBgTotal = 100
                     let mgcwBgGuide = "up"
-                    let milestoneGoalsCont = milestoneGoalsContWrap.querySelector(".milestone__goals-cont")
+                    /*let milestoneGoalsCont = milestoneGoalsContWrap.querySelector(".milestone__goals-cont")
                     let milestoneGoalsContYears = milestoneGoalsCont.querySelector(".milestone__goals-cont__years");
-                    let mgcyItem = milestoneGoalsContYears.querySelectorAll(".milestone__goals-cont__years__item");
+                    let mgcyItem = milestoneGoalsContYears.querySelectorAll(".milestone__goals-cont__years__item");*/
 
                     let mgcwBgMoition = function() {
                         setInterval(function (){
@@ -2289,7 +2300,7 @@
                     }
                     mgcwBgMoition();
                     
-                    mgnItem.forEach(function(mgi,a) {
+                    /* mgnItem.forEach(function(mgi,a) {
                         mgi.querySelector("a").onclick = function() {
                             mgnItem.forEach(function(rest,b) {
                                 rest.querySelector("a").classList.remove("milestone__goals-navi__list__item__a--active")
@@ -2338,7 +2349,7 @@
                                 )
                             }
                         }
-                    })
+                    }) */
 
                     function slideSwiper(slider) {
                         //console.log(slider.className)

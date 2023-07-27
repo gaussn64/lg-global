@@ -323,16 +323,24 @@
             .sustainability-efforts__card__wrap {
                 position: relative;
                 width: 100%;
-                height: 100vh;
+                height: 114vh;
+                background: linear-gradient(180deg, #262626 0%, #F6F3EB 100%);
             }
             .sustainability-efforts__card__navi {
+                visibility: hidden;
                 position: absolute;
                 z-index: 2;
-                bottom: 110px;
+                bottom: -110px;
                 left: calc(50% - 720px);
                 display: flex;
                 width: 1440px;
                 gap: 0px 22px;
+                transition: 0.5s ease all;
+            }
+            .sustainability-efforts__card__navi--on {
+                visibility: visible;
+                opacity: 1;
+                bottom: calc(7vh + 110px);
             }
             .sustainability-efforts__card__navi__item {
                 flex-grow: 1;
@@ -354,10 +362,21 @@
                 backdrop-filter: blur(50px);
             }
             .sustainability-efforts__card {
-                position: relative;
+                position: absolute;
+                top: 50%;
+                left: 50%;
                 z-index: 1;
+                width: 75%;
+                height: 80vh;
+                border-radius: 30px;
+                overflow: hidden;
+                transform: translate(-50%,-50%);
+                transition: 0.5s ease width,0.5s ease height,0.5s ease border-radius;
+            }
+            .sustainability-efforts__card--on {
                 width: 100%;
-                height: 100vh;
+                height: 114vh;
+                border-radius: 0px;
             }
             .sustainability-efforts__card__item {
                 position: absolute;
@@ -365,8 +384,8 @@
                 top: 0px;
                 left: 0px;
                 width: 100%;
-                height: 100vh;
-                padding-top: 12.2222vh;
+                height: 114vh;
+                padding-top: 19.2222vh;
                 background-repeat: no-repeat;
                 background-position: center center;
                 background-size: cover;
@@ -391,17 +410,10 @@
             }
             .sustainability-efforts__card__inner {
                 width: 1440px;
-                height: 75.5556vh;
                 margin: 0px auto;
             }
             .sustainability-efforts__card__tit {
                 display: none;
-                font-size: 36px;
-                font-weight: 550;
-                line-height: 40px;
-                letter-spacing: -0.54px;
-                color: white;
-                text-align: center;
             }
             .sustainability-efforts__card__summary {
                 font-size: 56px;
@@ -410,6 +422,9 @@
                 line-height: 60px; /* 107.143% */
                 letter-spacing: -0.28px;
                 color: white;
+                transform: translateY(56px);
+                opacity: 0;
+                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
             }
             .sustainability-efforts__card__detail {
                 margin-top: 16px;
@@ -419,9 +434,30 @@
                 line-height: 28px;
                 letter-spacing: -0.1px;
                 color: white;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
             }
             .sustainability-efforts__card__discover-more {
                 margin-top: 36px;
+                transform: translateY(47px);
+                opacity: 0;
+                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary,
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail,
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__discover-more {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary {
+                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__discover-more {
+                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
             }
             .sustainability-efforts__card__discover-more__btn {
                 color: white;
@@ -1558,9 +1594,31 @@
                     let sustainabilityEfforts = document.querySelector(".sustainability-efforts");
                     let scNavi = document.querySelector(".sustainability-efforts__card__navi");
                     let scNaviItem = scNavi.querySelectorAll(".sustainability-efforts__card__navi__item");
+                    let sCardWrap = document.querySelector(".sustainability-efforts__card__wrap");
                     let sCard = document.querySelector(".sustainability-efforts__card");
                     let scItem = sCard.querySelectorAll(".sustainability-efforts__card__item");
 
+                    gsap.to(sCardWrap, {
+                        scrollTrigger: {
+                            trigger: ".sustainability-efforts__card__wrap",
+                            start: "top 1%",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                scNavi.classList.add("sustainability-efforts__card__navi--on")
+                                sCard.classList.add("sustainability-efforts__card--on")
+                                scItem.forEach(function(sci,a) {
+                                    sci.querySelector(".sustainability-efforts__card__inner").classList.add("sustainability-efforts__card__inner--on")
+                                })
+                            },
+                            onLeaveBack: function() {
+                                scNavi.classList.remove("sustainability-efforts__card__navi--on")
+                                sCard.classList.remove("sustainability-efforts__card--on")
+                                scItem.forEach(function(sci,b) {
+                                    sci.querySelector(".sustainability-efforts__card__inner").classList.remove("sustainability-efforts__card__inner--on")
+                                })
+                            }
+                        }
+                    });
 
                     scNaviItem.forEach(function(scnItem,i) {
                         scnItem.querySelector("a").onclick = function() {
