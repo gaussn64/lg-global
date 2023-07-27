@@ -124,27 +124,14 @@
 
             /* Landing Introduce */
             .landing-introduce__wrap {
-                position: relative;
-                width: 100%;
-                height: 200vh;
-            }
-            .landing-introduce {
-                position: absolute;
-                z-index: 0;
-                top: 0px;
-                left: 0px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 width: 100%;
                 height: 100vh;
-                opacity: 0;
-            }
-            .landing-introduce--active {
-                z-index: 1;
-                opacity: 1;
             }
             .landing-introduce__desc {
+                width: 100%;
                 font-size: 44px;
                 font-style: normal;
                 font-weight: 300;
@@ -154,55 +141,64 @@
             }
             .landing-introduce__desc__txt {
                 display: inline-block;
-                opacity: 0;
                 transform: translateY(20px);
                 transition: 0.3s ease all;
             }
             .landing-introduce__goals {
+                width: 100%;
+                margin-top: 80px;
                 line-height: 1;
-                opacity: 0;
-                transform: translateY(40px);
+                text-align: center;
                 transition: 0.3s ease all;
             }
-            .landing-introduce--active .landing-introduce__desc__txt,
-            .landing-introduce--active .landing-introduce__goals {
-                opacity: 1;
-                transform: translateY(0px);
-            }
             .landing-introduce__goals__txt {
-                font-size: 90px;
+                font-size: 52px;
+                line-height: 58px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 400;
-                letter-spacing: -0.9px;
+                font-weight: 550;
+                letter-spacing: -0.26px;
             }
 
             /* Core Value */
             .core-value__wrap {
                 position: relative;
+                width: 100%;
+                height: 120vh;
             }
             .core-value {
-                width: 100%;
-                height: 175vh;
-                text-align: center;
-            }
-            .core-value__cont-inner {
-                position: absolute;
+                position: relative;
                 top: 0px;
                 left: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 width: 100%;
                 height: 100vh;
             }
-            .core-value__cont-inner--fixed {
+            .core-value--fixed {
                 position: fixed;
             }
-            .core-value__cont-inner--end {
+            .core-value--end {
+                position: absolute;
                 top: auto;
                 bottom: 0px;
+            }
+            .core-value__inner {
+                position: relative;
+                width: 1440px;
+                text-align: center;
+            }
+            .core-value__tit {
+                font-size: 52px;
+                font-weight: 550;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+                margin-bottom: 30px;
             }
             .core-value__start {
                 position: absolute;
                 z-index: 3;
-                top: calc(50% - 308px);
+                top: 88px;
                 left: 50%;
                 width: 530px;
                 height: 530px;
@@ -210,12 +206,12 @@
                 transform: translateX(-50%);
                 overflow: hidden;
                 opacity: 1;
-                transition: 0.5s ease 0.5s opacity;
+                transition: 0.5s ease opacity,0.5s ease width;
             }
-            .core-value__cont-inner--fixed .core-value__start,
-            .core-value__cont-inner--end .core-value__start {
-                transition-delay: 0s;
+            .core-value__start--hidden {
                 opacity: 0;
+                width: 1440px;
+                transition: 0.5s ease opacity,0.5s ease width;
             }
             .core-value__start__video {
                 width: 100%;
@@ -223,35 +219,22 @@
                 object-fit: cover;
             }
             .core-value__media {
-                position: absolute;
+                position: relative;
                 z-index: 2;
-                top: calc(50% - 308px);
-                left: 50%;
                 width: 530px;
                 height: 530px;
+                margin: 0px auto;
                 border-radius: 265px;
                 overflow: hidden;
-                transform: translateX(-50%);
                 transition: 0.5s ease 0s width;
             }
-            .core-value__cont-inner--fixed .core-value__media,
-            .core-value__cont-inner--end .core-value__media {
-                transition-delay: 0.5s;
+            .core-value__media--active {
                 width: 1440px;
             }
             .core-value__media__item {
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                right: 0px;
                 width: 100%;
                 height: 100%;
-                border-radius: 265px;
                 overflow: hidden;
-            }
-            .core-value__cont-inner--fixed .core-value__media__item,
-            .core-value__cont-inner--end .core-value__media__item {
-                border-radius: 0px;
             }
             .core-value__media__item__video,
             .core-value__media__item__img {
@@ -260,25 +243,29 @@
                 object-fit: cover;
             }
             .core-value__txt {
-                position: absolute;
-                left: 0px;
-                right: 0px;
-                top: calc(50% + 260px);
+                position: relative;
                 height: 48px;
+                margin-top: 30px;
+                opacity: 0;
+                transition: 0.3s ease opacity;
+            }
+            .core-value__txt--active {
+                opacity: 1;
             }
             .core-value__txt__item {
                 position: absolute;
                 top: 0px;
                 left: 0px;
                 right: 0px;
-                opacity: 0;
                 display: flex;
                 gap: 0px 40px;
                 align-items: center;
                 justify-content: center;
                 background-color: #f0ece4;
+                opacity: 0;
+                transition: 0.3s ease opacity;
             }
-            .core-value__txt__item--active {
+            .core-value__txt__item--on {
                 opacity: 1;
             }
             .core-value__txt__item__strong {
@@ -291,25 +278,42 @@
                 font-size: 24px;
                 line-height: 28px;
             }
-            .core-value__progress {
-                position: absolute;
-                z-index: 10;
-                top: calc(50% + 368px);
-                left: calc(50% - 112px);
-                width: 224px;
-                height: 2px;
-                background-color: rgba(0,0,0,0.2);
+            .core-value__pagination {
+                position: relative;
+                display: flex;
+                margin-top: 60px;
+                justify-content: center;
+                gap: 0px 8px;
+                transition: 0.3s ease opacity;
                 opacity: 0;
-                transition: 0.5s ease 0s opacity;
             }
-            .core-value__cont-inner--fixed .core-value__progress,
-            .core-value__cont-inner--end .core-value__progress {
+            .core-value__pagination--active {
                 opacity: 1;
             }
-            .core-value__progress__bar {
+            .core-value__pagination .swiper-pagination-bullet {
+                position: relative;
+                width: 60px;
+                height: 4px;
+                background-color: rgba(0, 0, 0, 0.20);
+                border-radius: 0px;
+                margin: 0px !important;
+                opacity: 1;
+            }
+            .core-value__pagination .swiper-pagination-bullet:before {
+                content: '';
+                display: block;
                 width: 0%;
-                height: 2px;
+                height: 4px;
                 background-color: black;
+                transition: 0s ease width;
+            }
+            .core-value__pagination .swiper-pagination-bullet-active {
+                background-color: rgba(0, 0, 0, 0.20);
+                opacity: 1;
+            }
+            .core-value__pagination--active .swiper-pagination-bullet-active:before {
+                width: 100%;
+                transition: 5s ease width;
             }
 
             /* Menu Introduce */
@@ -319,7 +323,6 @@
             .menu-introduce__inner {
                 display: flex;
                 flex-wrap: nowrap;
-                width: 600%;
                 height: 100vh;
             }
             .menu-introduce {
@@ -385,30 +388,6 @@
                 justify-content: flex-end;
                 align-items: center;
             }
-            /*.menu-introduce__photos1 {
-                width: 855px;
-                height: 542px;
-            }
-            .menu-introduce__photos2 {
-                width: 744px;
-                height: 542px;
-            }
-            .menu-introduce__photos3 {
-                width: 878px;
-                height: 556px;
-            }
-            .menu-introduce__photos4 {
-                width: 847px;
-                height: 556px;
-            }
-            .menu-introduce__photos5 {
-                width: 798px;
-                height: 600px;
-            }
-            .menu-introduce__photos6 {
-                width: 847px;
-                height: 556px;
-            }*/
             .menu-introduce__photos1__item1 {
                 width: 12.3958vw;
                 height: 12.3958vw;
@@ -515,24 +494,43 @@
                 -webkit-mask-image: url(../../mocks/ST0001/mask-menu-introduce6-2.svg);
                 mask-image: url(../../mocks/ST0001/mask-menu-introduce6-2.svg);
             }
-            .menu-introduce__progress {
+            .menu-introduce__pagination {
                 position: absolute;
-                z-index: 10;
-                top: 92.5926vh;
-                left: calc(50% - 112px);
-                width: 224px;
-                height: 2px;
-                background-color: rgba(0,0,0,0.2);
+                bottom: 7.4074vh !important;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                gap: 0px 8px;
+                transition: 0.3s ease opacity;
+                opacity: 0;
             }
-            .menu-introduce__progress--fixed {
-                position: fixed;
-                top: auto;
-                bottom: 7.4074vh;
+            .menu-introduce__pagination--active {
+                opacity: 1;
             }
-            .menu-introduce__progress__bar {
+            .menu-introduce__pagination .swiper-pagination-bullet {
+                position: relative;
+                width: 60px;
+                height: 4px;
+                background-color: rgba(0, 0, 0, 0.20);
+                border-radius: 0px;
+                margin: 0px !important;
+                opacity: 1;
+            }
+            .menu-introduce__pagination .swiper-pagination-bullet:before {
+                content: '';
+                display: block;
                 width: 0%;
-                height: 2px;
+                height: 4px;
                 background-color: black;
+                transition: 0s ease width;
+            }
+            .menu-introduce__pagination .swiper-pagination-bullet-active {
+                background-color: rgba(0, 0, 0, 0.20);
+                opacity: 1;
+            }
+            .menu-introduce__pagination--active .swiper-pagination-bullet-active:before {
+                width: 100%;
+                transition: 5s ease width;
             }
 
             /* Reports */
@@ -923,7 +921,7 @@
                 </div>
             </div>
             <div class="landing-introduce__wrap">
-                <div class="landing-introduce landing-introduce--active">
+                <div class="landing-introduce">
                     <p class="landing-introduce__desc">
                         <span class="landing-introduce__desc__txt">We believe everyone’s life can be better.</span><br />
                         <span class="landing-introduce__desc__txt">We strive to make a better future for ourselves, our neighbors,</span><br />
@@ -932,81 +930,73 @@
                         <span class="landing-introduce__desc__txt">So, we are committed to practicing sustainability at all times.</span><br />
                         <span class="landing-introduce__desc__txt">We create Life’s Good for all.</span>
                     </p>
-                </div>
-                <div class="landing-introduce">
                     <p class="landing-introduce__goals">
-                        <span class="landing-introduce__goals__txt">Better Life for All</span>
+                        <span class="landing-introduce__goals__txt">A better life for all</span>
                     </p>
                 </div>
             </div>
             <div class="core-value__wrap">
-                <div class="core-value__box-inner">
-                    <div class="core-value"></div>
-                    <div class="core-value"></div>
-                    <div class="core-value"></div>
-                    <div class="core-value"></div>
-                    <div class="core-value"></div>
-                    <div class="core-value"></div>
-                </div>
-                
-                <div class="core-value__cont-inner">
-                    <div class="core-value__start">
-                        <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
-                    </div>
-                    <ul class="core-value__media">
-                        <li class="core-value__media__item">
-                            <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                        </li>
-                        <li class="core-value__media__item">
-                            <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                        </li>
-                        <li class="core-value__media__item">
-                            <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay muted loop></video>
-                        </li>
-                        <li class="core-value__media__item">
-                            <img src="../../mocks/ST0001/video-core-value4.png" class="core-value__media__item__img" alt="" />
-                        </li>
-                        <li class="core-value__media__item">
-                            <img src="../../mocks/ST0001/video-core-value5.png" class="core-value__media__item__img" alt="" />
-                        </li>
-                        <li class="core-value__media__item last">
-                            <img src="../../mocks/ST0001/video-core-value6.png" class="core-value__media__item__img" alt="" />
-                        </li>
-                    </ul> 
-                    <ul class="core-value__txt">
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Carbon neutrality</strong>
-                            <small class="core-value__txt__item__small">For a long-lasting planet</small>
-                        </li>
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Circularity</strong>
-                            <small class="core-value__txt__item__small">For a sustainable product lifecycle</small>
-                        </li>
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Clean technology</strong>
-                            <small class="core-value__txt__item__small">For a pristine environment</small>
-                        </li>
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Delightful workplace</strong>
-                            <small class="core-value__txt__item__small">For a healthy and safe environment</small>
-                        </li>
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Diversity &amp; Inclusion</strong>
-                            <small class="core-value__txt__item__small">For a fair and equal society</small>
-                        </li>
-                        <li class="core-value__txt__item">
-                            <strong class="core-value__txt__item__strong">Design for all</strong>
-                            <small class="core-value__txt__item__small">For an accessible environment to everyone</small>
-                        </li>
-                    </ul>
-                    <div class="core-value__progress">
-                        <div class="core-value__progress__bar"></div>
+                <div class="core-value">
+                    <div class="core-value__inner">
+                        <h2 class="core-value__tit">We're committed to making a better impact.</h2>
+                        <div class="core-value__start">
+                            <video src="../../mocks/ST0001/video-core-value_load.mp4" class="core-value__start__video" autoplay muted loop></video>
+                        </div>
+                        <div class="swiper core-value__media">
+                            <ul class="swiper-wrapper core-value__media__wrapper">
+                                <li class="swiper-slide core-value__media__item">
+                                    <video src="../../mocks/ST0001/video-core-value1.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                                </li>
+                                <li class="swiper-slide core-value__media__item">
+                                    <video src="../../mocks/ST0001/video-core-value2.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                                </li>
+                                <li class="swiper-slide core-value__media__item">
+                                    <video src="../../mocks/ST0001/video-core-value3.mp4" class="core-value__media__item__video" autoplay muted loop></video>
+                                </li>
+                                <li class="swiper-slide core-value__media__item">
+                                    <img src="../../mocks/ST0001/video-core-value4.png" class="core-value__media__item__img" alt="" />
+                                </li>
+                                <li class="swiper-slide core-value__media__item">
+                                    <img src="../../mocks/ST0001/video-core-value5.png" class="core-value__media__item__img" alt="" />
+                                </li>
+                                <li class="swiper-slide core-value__media__item">
+                                    <img src="../../mocks/ST0001/video-core-value6.png" class="core-value__media__item__img" alt="" />
+                                </li>
+                            </ul>
+                        </div> 
+                        <ul class="core-value__txt">
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Carbon neutrality</strong>
+                                <small class="core-value__txt__item__small">For a long-lasting planet</small>
+                            </li>
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Circularity</strong>
+                                <small class="core-value__txt__item__small">For a sustainable product lifecycle</small>
+                            </li>
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Clean technology</strong>
+                                <small class="core-value__txt__item__small">For a better natural environment</small>
+                            </li>
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Delightful workplace</strong>
+                                <small class="core-value__txt__item__small">For a healthy and safe environment</small>
+                            </li>
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Diversity &amp; Inclusion</strong>
+                                <small class="core-value__txt__item__small">For a fair and equal society</small>
+                            </li>
+                            <li class="core-value__txt__item">
+                                <strong class="core-value__txt__item__strong">Design for all</strong>
+                                <small class="core-value__txt__item__small">For an accessible environment to everyone</small>
+                            </li>
+                        </ul>
+                        <div class="swiper-pagination core-value__pagination"></div>
                     </div>
                 </div>
             </div>
-            <div class="menu-introduce__wrap">
-                <div class="menu-introduce__inner">
-                    <div class="menu-introduce">
+            <div class="swiper menu-introduce__wrap">
+                <div class="swiper-wrapper menu-introduce__inner">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">For the planet</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1029,7 +1019,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-introduce">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">Carbon neutrality</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1053,7 +1043,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-introduce">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">Circularity</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1076,7 +1066,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-introduce">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">Clean technology</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1100,7 +1090,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-introduce">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">For people</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1124,7 +1114,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="menu-introduce">
+                    <div class="swiper-slide menu-introduce">
                         <div class="menu-introduce__cont">
                             <h3 class="menu-introduce__cont__tit">Social contributions</h3>
                             <p class="menu-introduce__cont__summary">
@@ -1148,7 +1138,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="menu-introduce__progress">
+                <div class="swiper-pagination menu-introduce__pagination">
                     <div class="menu-introduce__progress__bar"></div>
                 </div>
             </div>
@@ -1300,188 +1290,105 @@
                         })
                     }
                 },
-                introduce: function() {
-                    const landingIntroduceWrap = document.querySelector(".landing-introduce__wrap");
-                    const liwOfsTop = landingIntroduceWrap.offsetTop;
-                    const landingIntroduce = landingIntroduceWrap.querySelectorAll(".landing-introduce");
-                    var siblings = t => [...t.parentElement.children].filter(e => e != t);
-                    var liVIewIs = new Array();
-                    
-
-                    landingIntroduce.forEach(function(liCont,liIdx) {
-                        liVIewIs[liIdx] = false
-                    })
-                    
-                    gsap.to(landingIntroduceWrap, {
-                        scrollTrigger: {
-                            trigger: ".landing-introduce__wrap",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onUpdate: getCurrentSection,
-                            onEnter: function() {
-                                landingIntroduce.forEach(function(liCont, liIdx) {
-                                    liCont.style.position = "fixed"
-                                })
-                            },
-                            onLeaveBack: function() {
-                                landingIntroduce.forEach(function(liCont, liIdx) {
-                                    liCont.style.position = ""
-                                })
-                            },
-                            onLeave: function() {
-                                landingIntroduce.forEach(function(liCont, liIdx) {
-                                    liCont.style.position = ""
-                                    liCont.style.top = "auto",
-                                    liCont.style.bottom = "0px"
-                                })
-                            },
-                            onEnterBack: function() {
-                                landingIntroduce.forEach(function(liCont, liIdx) {
-                                    liCont.style.position = "fixed"
-                                    liCont.style.top = "",
-                                    liCont.style.bottom = ""
-                                })
-                            }
-                        }
-                    });
-
-                    function getCurrentSection() {
-                        landingIntroduce.forEach(function(liCont,liIdx) {
-                            if(scrollY >= liwOfsTop + ((window.innerHeight/2)*liIdx) && scrollY <= liwOfsTop + ((window.innerHeight/2)*(liIdx+1)) && liVIewIs[liIdx] == false) {
-                                if(liCont.className.indexOf("landing-introduce--active") < 0) {
-                                    for(var i=0; i < landingIntroduce.length; i++) {
-                                        landingIntroduce[i].classList.remove("landing-introduce--active")
-                                    }
-                                    liCont.classList.add("landing-introduce--active")
-                                }
-                                liVIewIs[liIdx] = true
-                            } else if(scrollY < liwOfsTop + ((window.innerHeight/2)*liIdx) && liVIewIs[liIdx] == true || scrollY > liwOfsTop + ((window.innerHeight/2)*(liIdx+1)) && liVIewIs[liIdx] == true) {
-                                if(liCont.className.indexOf("landing-introduce--active") < 0) {
-                                    for(var i=0; i < landingIntroduce.length; i++) {
-                                        landingIntroduce[i].classList.add("landing-introduce--active")
-                                    }
-                                    liCont.classList.remove("landing-introduce--active")
-                                }
-                                liVIewIs[liIdx] = false
-                            }
-                        })
-                    }
-                },
                 coreValue: function() {
-                    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-                    gsap.set(".core-value__media__item", { zIndex: (i, target, targets) => targets.length - i });
-
                     let coreValueWrap = document.querySelector(".core-value__wrap");
                     let cvwOfsTop = coreValueWrap.offsetTop;
                     let cvwViewIs = false;
-                    let coreValueBoxInner = coreValueWrap.querySelector(".core-value__box-inner");
-                    let coreValue = coreValueBoxInner.querySelectorAll(".core-value");
-                    let coreValueContInner = coreValueWrap.querySelector(".core-value__cont-inner");
-                    let coreValueStart = coreValueContInner.querySelector(".core-value__start");
-                    let coreValueMedia  = coreValueContInner.querySelector(".core-value__media");
+                    let coreValue = coreValueWrap.querySelector(".core-value");
+                    let coreValueStart = coreValue.querySelector(".core-value__start");
+                    let coreValueMedia  = coreValue.querySelector(".core-value__media");
+                    let coreValuePagination  = coreValue.querySelector(".core-value__pagination");
+                    let cvpBullet = coreValuePagination.getElementsByClassName("swiper-pagination-bullet")
                     let cvmHeight = coreValueMedia.offsetHeight;
                     let coreValueMediaItem = coreValueMedia.querySelectorAll(".core-value__media__item");
-                    let coreValueTxt = coreValueContInner.querySelector(".core-value__txt");
-                    let coreValueTxtItem = coreValueContInner.querySelectorAll(".core-value__txt__item");
-                    let coreValueProgress = coreValueContInner.querySelector(".core-value__progress");
-                    let coreValueProgressBar = coreValueProgress.querySelector(".core-value__progress__bar");
+                    let coreValueTxt = coreValue.querySelector(".core-value__txt");
+                    let coreValueTxtItem = coreValue.querySelectorAll(".core-value__txt__item");
 
-                    let tl = gsap.timeline({
-                        scrollTrigger: {
-                            trigger: ".core-value__box-inner",
-                            start: "top top",
-                            end: "bottom bottom",
-                            onEnter: function() {
-                                coreValueContInner.classList.add("core-value__cont-inner--fixed")
-                            },
-                            onLeaveBack: function() {
-                                coreValueContInner.classList.remove("core-value__cont-inner--fixed")
-                            },
-                            onLeave: function() {
-                                coreValueContInner.classList.remove("core-value__cont-inner--fixed")
-                                coreValueContInner.classList.add("core-value__cont-inner--end")
-                            },
-                            onEnterBack: function() {
-                                coreValueContInner.classList.add("core-value__cont-inner--fixed")
-                                coreValueContInner.classList.remove("core-value__cont-inner--end")
-                            },
-                            onUpdate: function(self) {
-                                coreValueProgressBar.style.width = (self.progress)*100 + "%"
+                    let cvSwiper = new Swiper(".core-value__media", {
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        direction: "vertical",
+                        pagination: {
+                            el: ".core-value__pagination",
+                            clickable: true,
+                        },
+                        on: {
+                            slideChange: function() {
+                                coreValueTxtItem.forEach(function(restTxtItem,r) {
+                                    restTxtItem.classList.remove("core-value__txt__item--on")
+                                })
+                                coreValueTxtItem[this.realIndex].classList.add("core-value__txt__item--on")
                             }
                         }
                     });
+                    cvSwiper.autoplay.stop()
 
-                    const panels = gsap.utils.toArray('.core-value__media__item:not(.last)');
-                    panels.forEach(function(valueBox,i) {
-                        let tl = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: coreValueBoxInner,
-                                start: () => "+=" + (window.innerHeight*1.5)*(i+1),
-                                end: () => "+=" + window.innerHeight*1.5,
-                                scrub: true,
-                                anticipatePin: 1
-                            }
-                        })
-                        tl.to(valueBox, {top: -cvmHeight})
-                    })
-
-                    const txtPanels = gsap.utils.toArray('.core-value__txt__item');
-                    txtPanels.forEach(function(txtBox,v) {
-                        let tb = gsap.timeline({
-                            scrollTrigger: {
-                                trigger: coreValue[v],
-                                start: () => cvwOfsTop + (window.innerHeight*1.5*v),
-                                end: () => "+=" + (window.innerHeight/1.5),
-                                scrub: true
-                            }
-                        })
-                        tb.to(coreValueTxtItem[v-1], {opacity:0})
-                        tb.to(txtBox, {opacity:1})
-                        tb.to(coreValueTxtItem[v+1], {opacity:0})
-                    })
-                },
-                menuIntroduce: function() {
-                    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
-                    let triggerWrap = document.querySelector(".menu-introduce__wrap");
-                    let triggerList = document.querySelector(".menu-introduce__inner");
-                    let triggetItem = document.querySelector(".menu-introduce");
-                    let tweenWrap;
-                    let tween;
-                    let menuIntroduceProgress = triggerWrap.querySelector(".menu-introduce__progress");
-                    let menuIntroduceProgressBar = triggerWrap.querySelector(".menu-introduce__progress__bar");
-
-                    const panels = gsap.utils.toArray(".menu-introduce__inner .menu-introduce");
-                    //console.log(panels.length)
-                    tween = gsap.to(panels, {
-                        xPercent: -100 * ( panels.length - 1 ),
-                        ease: "none",
+                    gsap.to(coreValueWrap, {
                         scrollTrigger: {
-                            trigger: ".menu-introduce__inner",
-                            pin: true,
+                            trigger: ".core-value__wrap",
                             start: "top top",
-                            scrub: 1,
-                            snap: {
-                                snapTo: 1 / (panels.length - 1),
-                                inertia: false,
-                                duration: {min: 0.3, max: 0.3}
-                            },
-                            end: () =>  "+=" + (triggerList.offsetWidth - innerWidth),
+                            end: "bottom bottom",
                             onEnter: function() {
-                                console.log("enter")
-                                menuIntroduceProgress.classList.add("menu-introduce__progress--fixed")
+                                coreValue.classList.add("core-value--fixed")
+                                coreValueMedia.classList.add("core-value__media--active")
+                                coreValueStart.classList.add("core-value__start--hidden")
+                                coreValueTxt.classList.add("core-value__txt--active")
+                                coreValuePagination.classList.add("core-value__pagination--active")
+                                cvSwiper.autoplay.start()
                             },
                             onLeaveBack: function() {
-                                menuIntroduceProgress.classList.remove("menu-introduce__progress--fixed")
+                                coreValue.classList.remove("core-value--fixed")
+                                coreValueMedia.classList.remove("core-value__media--active")
+                                coreValueStart.classList.remove("core-value__start--hidden")
+                                coreValueTxt.classList.remove("core-value__txt--active")
+                                coreValuePagination.classList.remove("core-value__pagination--active")
+                                cvSwiper.autoplay.stop()
                             },
                             onLeave: function() {
-                                menuIntroduceProgress.style.position = "absolute"
+                                coreValue.classList.remove("core-value--fixed")
+                                coreValue.classList.add("core-value--end")
                             },
                             onEnterBack: function() {
-                                menuIntroduceProgress.style.position = ""
+                                coreValue.classList.add("core-value--fixed")
+                                coreValue.classList.remove("core-value--end")
+                            }
+                        }
+                    });
+                },
+                menuIntroduce: function() {
+                    let menuIntroduceWrap = document.querySelector(".menu-introduce__wrap");
+                    let menuIntroduceInner = document.querySelector(".menu-introduce__inner");
+                    let menuIntroduce = document.querySelector(".menu-introduce");
+                    let menuIntroducePagination = menuIntroduceWrap.querySelector(".menu-introduce__pagination");
+
+                    let miSwiper = new Swiper(".menu-introduce__wrap", {
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        pagination: {
+                            el: ".menu-introduce__pagination",
+                            clickable: true,
+                        }
+                    });
+                    miSwiper.autoplay.stop()
+
+                    gsap.to(menuIntroduceWrap, {
+                        scrollTrigger: {
+                            trigger: ".menu-introduce__wrap",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
+                                miSwiper.autoplay.start()
                             },
-                            onUpdate: function(self) {
-                                menuIntroduceProgressBar.style.width = (self.progress)*100 + "%"
+                            onLeaveBack: function() {
+                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
+                                miSwiper.autoplay.stop()
                             }
                         }
                     });
@@ -1520,7 +1427,8 @@
                             "right":"-="+window.innerWidth
                         });
                     },5000)
-                },whatsNext: function() {
+                },
+                whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
                         slidesPerView: 3,
                         pagination: {
@@ -1549,7 +1457,6 @@
             }
             
             landing.visualScrollDown();
-            landing.introduce();
             landing.coreValue();
             landing.menuIntroduce();
             landing.newsroom();

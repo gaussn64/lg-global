@@ -29,7 +29,7 @@
                 <li class="c-header__gnb__list__item"><a href="../ST0000/downloads.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
             </ul>
         </nav>
-        <p class="c-header__location">For People</p>
+        <!-- <p class="c-header__location">For People</p> -->
         <button type="button" class="c-header__btn-gnb">
             <span class="c-header__btn-gnb__bar"></span>
             <span class="c-header__btn-gnb__bar"></span>
@@ -424,7 +424,7 @@
                 color: white;
                 transform: translateY(56px);
                 opacity: 0;
-                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
             }
             .sustainability-efforts__card__detail {
                 margin-top: 16px;
@@ -436,17 +436,17 @@
                 color: white;
                 transform: translateY(20px);
                 opacity: 0;
-                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
+                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
             }
             .sustainability-efforts__card__discover-more {
+                display: none;
                 margin-top: 36px;
                 transform: translateY(47px);
                 opacity: 0;
                 transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
             }
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary,
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail,
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__discover-more {
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
                 transform: translateY(0px);
                 opacity: 1;
             }
@@ -455,9 +455,6 @@
             }
             .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
                 transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
-            }
-            .sustainability-efforts__card__inner--on .sustainability-efforts__card__discover-more {
-                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
             }
             .sustainability-efforts__card__discover-more__btn {
                 color: white;
@@ -1300,9 +1297,9 @@
                 </div>
                 <div class="sustainability-efforts__card__wrap">
                     <ul class="sustainability-efforts__card__navi">
-                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Go to delightful workplace</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" class="sustainability-efforts__card__navi__item__anchor">Go to  diversity &amp; inclusion</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" class="sustainability-efforts__card__navi__item__anchor">Go to design for all</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" onclick="popupDiscription('#production-site-future-value'); return false" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Go to delightful workplace</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" onclick="popupDiscription('#cto-interview'); return false" class="sustainability-efforts__card__navi__item__anchor">Go to  diversity &amp; inclusion</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" onclick="popupDiscription('#disabled-advisory-board'); return false" class="sustainability-efforts__card__navi__item__anchor">Go to design for all</a></li>
                     </ul>
                     <ul class="sustainability-efforts__card">
                         <li class="sustainability-efforts__card__item sustainability-efforts__card__item--active" id="enhancing-workplace-safety">
@@ -1318,9 +1315,9 @@
                                         risks on a global scale. Our goal is to create a safe <br />
                                         working environment for our partners, and create a <br />
                                         collaborative atmosphere for all.</p>
-                                    <div class="sustainability-efforts__card__discover-more">
+                                    <!-- <div class="sustainability-efforts__card__discover-more">
                                         <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#production-site-future-value')">Discover more</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </li>
@@ -1339,9 +1336,9 @@
                                         creativity and innovation while ensuring equal <br />
                                         opportunities for success.
                                     </p>
-                                    <div class="sustainability-efforts__card__discover-more">
+                                    <!-- <div class="sustainability-efforts__card__discover-more">
                                         <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#cto-interview')">Discover more</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </li>
@@ -1360,9 +1357,9 @@
                                         features, bringing products with great benefits to a <br />
                                         wider audience.
                                     </p>
-                                    <div class="sustainability-efforts__card__discover-more">
+                                    <!-- <div class="sustainability-efforts__card__discover-more">
                                         <button type="button" class="sustainability-efforts__card__discover-more__btn" onclick="popupDiscription('#disabled-advisory-board')">Discover more</button>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </li>
@@ -1628,7 +1625,7 @@
                     });
 
                     scNaviItem.forEach(function(scnItem,i) {
-                        scnItem.querySelector("a").onclick = function() {
+                        scnItem.querySelector("a").onmouseenter = function() {
                             scNaviItem.forEach(function(rItem,r) {
                                 rItem.querySelector("a").classList.remove("sustainability-efforts__card__navi__item__anchor--active")
                             })

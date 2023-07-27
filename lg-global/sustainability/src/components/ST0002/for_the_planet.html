@@ -29,7 +29,7 @@
                 <li class="c-header__gnb__list__item"><a href="../ST0000/downloads.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
             </ul>
         </nav>
-        <p class="c-header__location">For the Planet</p>
+        <!-- <p class="c-header__location">For the Planet</p> -->
         <button type="button" class="c-header__btn-gnb">
             <span class="c-header__btn-gnb__bar"></span>
             <span class="c-header__btn-gnb__bar"></span>
@@ -1501,7 +1501,7 @@
                     });
 
                     scNaviItem.forEach(function(scnItem,i) {
-                        scnItem.querySelector("a").onclick = function() {
+                        scnItem.querySelector("a").onmouseenter = function() {
                             scNaviItem.forEach(function(rItem,r) {
                                 rItem.querySelector("a").classList.remove("sustainability-efforts__card__navi__item__anchor--active")
                             })
