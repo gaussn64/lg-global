@@ -463,9 +463,8 @@
                 background-color: white;
             }
             .popup-discription__tit {
-                color: black;
                 font-family: 'LG_EI_Headline';
-                font-weight: 250;
+                font-weight: 550;
                 font-size: 52px;
                 line-height: 58px;
                 text-align: center;
@@ -624,7 +623,7 @@
                                 <img src="../../mocks/ST0007/photo-lg-koica-tvet.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__discover-more">
-                                <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
+                                <a href="https://www.lgnewsroom.com/2022/07/better-life-story-how-yimenus-passion-for-technology-led-him-to-lg/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -643,7 +642,7 @@
                                 <iframe width="800" height="454" src="https://www.youtube.com/embed/4TCwL966FLM?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
                             </dd>
                             <dd class="popup-discription__discover-more">
-                                <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
+                                <a href="https://www.lgnewsroom.com/2022/11/lg-supports-young-technology-leaders-with-disabilities-through-2022-global-it-challenge/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -706,11 +705,12 @@
                             <dd class="popup-discription__cont1">We create inclusive societies that work in harmony with the local area.</dd>
                             <dd class="popup-discription__cont2">Since 2017, LG has been running a contest to help local community issues in Bangladesh. Residents submit ideas to fix a local issue, and LG chooses one individual to become an LG ambassador and receive support to solve the problem they raised.</dd>
                             <dd class="popup-discription__cont2">We will keep providing solutions to residents concerned about the issues in the local communities. We increased the number of the LG Ambassador program to 5 countries in 2020 to give more people around the world a chance to change their community for the better.</dd>
-                            <dd class="popup-discription__photo">
-                                <img src="../../mocks/ST0007/photo-lg-ambassador-program.png" alt=""  class="popup-discription__photo__img" />
+                            <dd class="popup-discription__video">
+                                <iframe width="800" height="454" src="https://www.youtube.com/embed/8stIOVyJ-q0?version=3&amp;enablejsapi=1" id="youtube_player2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
                             </dd>
                             <dd class="popup-discription__discover-more">
-                                <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
+                                <a href="https://www.lgnewsroom.com/2021/05/local-initiatives-global-benefits/ 
+                                " target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -729,7 +729,7 @@
                                 <img src="../../mocks/ST0007/photo-improve-housing.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__discover-more">
-                                <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
+                                <a href="https://www.lgnewsroom.com/2021/10/thanking-korean-war-veterans-in-africa/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -750,7 +750,7 @@
                                 <img src="../../mocks/ST0007/photo-lg-social-campus.png" alt=""  class="popup-discription__photo__img" />
                             </dd>
                             <dd class="popup-discription__discover-more">
-                                <a href="#" class="popup-discription__discover-more__btn">Discover more</a>
+                                <a href="https://www.lgnewsroom.com/2017/04/students-bring-fresh-perspective-on-innovation-in-lgs-hr-garage-program/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -929,6 +929,7 @@
 
                 window.onYouTubeIframeAPIReady = function() {
                     ytPlayer = new YT.Player("youtube_player", {});
+                    ytPlayer2 = new YT.Player("youtube_player2", {});
                 };
 
                 btnClose.onclick = function() {
@@ -938,6 +939,7 @@
                     
                     if(youtubePlayer) {
                         ytPlayer.stopVideo()
+                        ytPlayer2.stopVideo()
                     }
                 }
             }
