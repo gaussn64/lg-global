@@ -1681,6 +1681,13 @@
                 var descPopup = document.getElementById(popupID.split("#")[1]);
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
@@ -1705,6 +1712,14 @@
                     
                     if(youtubePlayer) {
                         ytPlayer.stopVideo()
+                    }
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
                     }
                 }
             }

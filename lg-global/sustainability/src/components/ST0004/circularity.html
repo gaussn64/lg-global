@@ -322,7 +322,7 @@
             .e-waste-program__cont {
                 width: 87.5vw;
                 max-width: 1680px;
-                padding: 60px 0px;
+                padding: 60px 0px 45px;
                 margin: 0px auto;
                 text-align: center;
             }
@@ -367,27 +367,26 @@
                 transform: translate(-50%,-50%);
             }
             .e-waste-program__more {
-                position: absolute;
-                z-index: 1;
-                top: calc(50% + 298px);
-                left: 50%;
-                width: 1440px;
-                margin-left: -720px;
-                text-align: right;
+                margin-top: 24px;
             }
             .e-waste-program__more__btn {
                 display: inline-block;
-                font-size: 20px;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
             }
-            .e-waste-program__more__btn:after {
-                content: '';
-                display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0004/bullet-discover-more.svg) no-repeat center center;
-                background-size: 100% 100%;
-                vertical-align: middle;
+            .e-waste-program__more__btn:hover,
+            .e-waste-program__more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
 
             
@@ -428,25 +427,27 @@
                 line-height: 28px;
                 letter-spacing: -0.1px;
             }
-            .st-recycling-solutions__discover-more {
-                position: absolute;
-                bottom: 36px;
-                right: 0px;
-                display: inline-block;
-                color: #4A4946;
-                font-size: 20px;
-                border-color: transparent;
-                background-color: transparent;
+            .st-recycling-solutions__cont__discover-more {
+                margin-top: 24px;
             }
-            .st-recycling-solutions__discover-more:after {
-                content: '';
+            .st-recycling-solutions__cont__discover-more__btn {
                 display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0004/bullet-discover-more.svg) no-repeat center center;
-                background-size: 100% 100%;
-                vertical-align: middle;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .st-recycling-solutions__cont__discover-more__btn:hover,
+            .st-recycling-solutions__cont__discover-more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
 
             /* Summary */
@@ -957,14 +958,14 @@
                         Help reduce the amount of e-waste that ends up in landfills and minimize <br />
                         your impact on the environment, by recycling your old electronics <br />
                         responsibly through our e-waste program.
-                    </p>
+                    </p>        
+                    <div class="e-waste-program__more">
+                        <a href="#discover-more-e-waste-program" onclick="popupDiscription(this.href); return false" class="e-waste-program__more__btn">Discover more</a>
+                    </div>
                 </div>
                 <div class="e-waste-program__visual__wrap">
                     <div class="e-waste-program__visual">
-                        <div class="e-waste-program__visual__inner"></div>        
-                        <div class="e-waste-program__more">
-                            <a href="#discover-more-e-waste-program" onclick="popupDiscription(this.href); return false" class="e-waste-program__more__btn">Discover E-waste program</a>
-                        </div>
+                        <div class="e-waste-program__visual__inner"></div>
                     </div>
                 </div>
                 <div class="popup-discription" id="discover-more-e-waste-program">
@@ -1024,9 +1025,12 @@
                                 their materials, and recycles them into new LG products, <br />
                                 creating a virtuous cycle of resource use and disposal.
                             </p>
+                            <div class="st-recycling-solutions__cont__discover-more">
+                                <a href="#chilseo-recycling-center" type="button" class="st-recycling-solutions__cont__discover-more__btn" onclick="popupDiscription(this.href); return false">Discover more</a>
+                            </div>
                         </div>
                     </div>
-                    <button type="button" class="st-recycling-solutions__discover-more" onclick="popupDiscription('#chilseo-recycling-center')">Discover more</button>
+                    
                     <div class="popup-discription" id="chilseo-recycling-center">
                         <div class="popup-discription__wrap">
                             <dl class="popup-discription--inner">
@@ -1398,6 +1402,13 @@
                 var descPopup = document.getElementById(popupID.split("#")[1]);
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
@@ -1407,6 +1418,14 @@
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
                 }
             }
         </script>

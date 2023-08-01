@@ -13,13 +13,12 @@ ul,ol {
     left: 50%;
     width: calc(100% - 80px);
     max-width: 1680px;
-    transform: translateX(-50%);
+    transform: translate(-50%,0px);
+    transition: 0.3s ease transform;
 }
 .c-header {
     position: relative;
-    top: 0px;
     display: flex;
-    transition: 0.3s ease top;
 }
 .c-header__tit {
     position: absolute;

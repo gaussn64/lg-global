@@ -171,25 +171,13 @@
                 display: inline-block;
                 vertical-align: middle;
                 width: 168px;
-                border-radius: 22px;
-                overflow: hidden;
-            }
-            .downloads__data__list__item__cont__download-type__label {
-                position: relative;
-                z-index: 2;
-                display: flex;
-                align-items: center;
-                height: 44px;
-                padding: 0px 23px;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: -0.24px;
-                box-sizing: border-box;
                 border: 1px solid rgba(0, 0, 0, 0.15);
+                box-sizing: border-box;
                 border-radius: 60px;
+                padding: 0px 40px 0px 23px;
                 background-color: white;
             }
-            .downloads__data__list__item__cont__download-type__label:after {
+            .downloads__data__list__item__cont__download-type:after {
                 position: absolute;
                 top: 19px;
                 right: 19px;
@@ -199,6 +187,19 @@
                 height: 5px;
                 background: url(../../mocks/ST0000/bullet-select.svg) no-repeat center center;
                 background-size: cover;
+            }
+            .downloads__data__list__item__cont__download-type__label {
+                position: relative;
+                z-index: 2;
+                display: block;
+                align-items: center;
+                height: 42px;
+                font-size: 16px;
+                line-height: 42px;
+                letter-spacing: -0.24px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .downloads__data__list__item__cont__download-type__select {
                 position: absolute;
@@ -415,10 +416,10 @@
                 </p>
                 <div class="downloads__visual"></div>
                 <div class="downloads__data">
-                    <h3 class="downloads__data__tit">Sustainability Reports</h3>
+                    <h3 class="downloads__data__tit">Sustainability reports</h3>
                     <p class="downloads__data__txt">
-                        In 2022, we published our 16th sustainability management report, containing our ESG Story Book <br />
-                        and Fact Book. We will keep sharing our activity and performance reports transparently.
+                        In 2023, we published our 17th sustainability management report, containing our ESG story book <br />
+                        and fact book. We will keep sharing our activity and performance reports transparently.
                     </p>
                     <div class="downloads__data__list__wrap">
                         <table class="downloads__data__list">
@@ -430,7 +431,7 @@
                                 <tr class="downloads__data__list__item">
                                     <th scope="row" class="downloads__data__list__item__subject">
                                         <dl class="downloads__data__list__item__subject__desc">
-                                            <dt class="downloads__data__subject__list__item__desc__tit">2021-2022 ESG Story Book</dt>
+                                            <dt class="downloads__data__subject__list__item__desc__tit">2022-2023 ESG story book</dt>
                                             <dd class="downloads__data__subject__list__item__desc__cont">We share our ESG goals and performance as a sincere story.</dd>
                                         </dl>
                                     </th>
@@ -448,8 +449,8 @@
                                 <tr class="downloads__data__list__item">
                                     <th scope="row" class="downloads__data__list__item__subject">
                                         <dl class="downloads__data__list__item__subject__desc">
-                                            <dt class="downloads__data__subject__list__item__desc__tit">2021-2022 ESaG Fact Book</dt>
-                                            <dd class="downloads__data__subject__list__item__desc__cont">We wrote about our performance and our activities.</dd>
+                                            <dt class="downloads__data__subject__list__item__desc__tit">2022-2023 ESG fact book</dt>
+                                            <dd class="downloads__data__subject__list__item__desc__cont">Read about our ESG performance and activities.</dd>
                                         </dl>
                                     </th>
                                     <td class="downloads__data__list__item__cont">
@@ -490,6 +491,8 @@
                                         <span class="downloads__data__list__item__cont__download-type">
                                             <label class="downloads__data__list__item__cont__download-type__label"></label>
                                             <select name="" id="" class="downloads__data__list__item__cont__download-type__select">
+                                                <option value="">2021-2022 Story Book</option>
+                                                <option value="">2021-2022 Fact Book</option>
                                                 <option value="">2020-2021</option>
                                                 <option value="">2019-2020 </option>
                                                 <option value="">2018-2019</option>

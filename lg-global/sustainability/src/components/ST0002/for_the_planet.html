@@ -205,23 +205,26 @@
                 margin-top: 16px;
             }
             .living-st-about__saving__item__more {
-                grid-column: auto / span 2;
-                text-align: right;
-                margin-top: 20px;
+                margin-top: 24px;
             }
             .living-st-about__saving__item__more__btn {
                 display: inline-block;
-                font-size: 20px;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all
             }
-            .living-st-about__saving__item__more__btn:after {
-                content: '';
-                display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0002/bullet-discover-more.svg) no-repeat center center;
-                background-size: 100% 100%;
-                vertical-align: middle;
+            .living-st-about__saving__item__more__btn:hover,
+            .living-st-about__saving__item__more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
 
             /* Eco-conscious material */
@@ -955,12 +958,12 @@
                                 Here are some innovative ways to help you save water and preserve this <br />
                                 precious resource.
                             </p>
+                            <div class="living-st-about__saving__item__more">
+                                <a href="#water-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more</a>
+                            </div>
                         </div>
                         <div class="living-st-about__saving__item__photo living-st-about__saving__item1__photo">
                             <img src="../../mocks/ST0002/photo-living-st-about__saving1.png" alt="" class="living-st-about__saving__item__photo__img  living-st-about__saving__item1__photo__img">
-                        </div>
-                        <div class="living-st-about__saving__item__more">
-                            <a href="#water-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more about water</a>
                         </div>
                     </li>
                     <li class="living-st-about__saving__item living-st-about__saving__item2">
@@ -979,9 +982,9 @@
                                 environmentally-certified, energy-efficient products that reduce energy <br />
                                 consumption and meet energy-saving standards.
                             </p>
-                        </div>
-                        <div class="living-st-about__saving__item__more">
-                            <a href="#energy-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more about water</a>
+                            <div class="living-st-about__saving__item__more">
+                                <a href="#energy-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more</a>
+                            </div>
                         </div>
                     </li>
                 </ul>
@@ -1556,6 +1559,13 @@
                 var descPopup = document.getElementById(popupID.split("#")[1]);
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
@@ -1580,6 +1590,14 @@
                     
                     if(youtubePlayer) {
                         ytPlayer.stopVideo()
+                    }
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
                     }
                 }
             }

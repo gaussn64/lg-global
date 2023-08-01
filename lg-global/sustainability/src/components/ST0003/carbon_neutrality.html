@@ -1123,7 +1123,7 @@
             }
             .popup-discription__b2b-activity__btn-close {
                 border-color: #B7BDC6;
-                background-color: rgba(255, 255, 255, 0.2);
+                background-color: rgba(0, 0, 0, 0.3);
             }
             .popup-discription__b2b-activity__btn-close:before,
             .popup-discription__b2b-activity__btn-close:after {
@@ -2431,6 +2431,13 @@
                 var descPopup = document.getElementById(popupID.split("#")[1]);
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
@@ -2440,6 +2447,14 @@
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
                 }
             }
         </script>

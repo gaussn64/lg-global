@@ -315,25 +315,26 @@
                 height: 606px;
             }
             .recreation-of-product__discover-more {
-                text-align: right;
-                margin-top: 20px;
+                margin-top: 24px;
             }
             .recreation-of-product__discover-more__btn {
                 display: inline-block;
-                color: #4A4946;
-                font-size: 20px;
-                border-color: transparent;
-                background-color: transparent;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
             }
-            .recreation-of-product__discover-more__btn:after {
-                content: '';
-                display: inline-block;
-                width: 64px;
-                height: 64px;
-                margin-left: 20px;
-                background: url(../../mocks/ST0005/bullet-discover-more.svg) no-repeat center center;
-                background-size: 100% 100%;
-                vertical-align: middle;
+            .recreation-of-product__discover-more__btn:hover,
+            .recreation-of-product__discover-more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
             }
             .recreation-of-product__type {
                 display: grid;
@@ -1170,11 +1171,11 @@
                             recycling process to promote sustainability and reduce waste.
                         </p>
                     </div>
+                    <div class="recreation-of-product__discover-more">
+                        <a href="#recreation-of-product" class="recreation-of-product__discover-more__btn" onclick="popupDiscription(this.href); return false">Discover more</a>
+                    </div>
                     <div class="recreation-of-product__photos">
                         <img src="../../mocks/ST0005/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img">
-                    </div>
-                    <div class="recreation-of-product__discover-more">
-                        <button type="button" class="recreation-of-product__discover-more__btn" onclick="popupDiscription('#recreation-of-product')">Discover more</button>
                     </div>
                     <div class="popup-discription" id="recreation-of-product">
                         <div class="popup-discription__wrap">
@@ -1559,6 +1560,13 @@
                 var descPopup = document.getElementById(popupID.split("#")[1]);
                 var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
                 var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
@@ -1568,6 +1576,14 @@
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
                 }
             }
         </script>

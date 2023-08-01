@@ -4,6 +4,7 @@ function getElementIndex(element) {
 
 
 function initCommonHeader() {
+    var cHeaderWrap = document.querySelector("#header__wrap.c-header__wrap");
     var cHeader = document.querySelector("#header.c-header");
     var chPosTop = cHeader.offsetTop - (document.documentElement.scrollTop || window.scrollY);
     var cFooterWrap = document.querySelector("#footer__wrap.c-footer__wrap");
@@ -47,10 +48,10 @@ function initCommonHeader() {
         if(winScrollTop >= vtHeight()) {
             //console.log("test")
             if(newScrTop < oldScrTop) {
-                cHeader.style.top = "-"+cHeader.offsetHeight*2+"px"
+                cHeaderWrap.style.transform = "translate(-50%,-"+cHeaderWrap.offsetHeight*2+"px)"
                 newScrTop = oldScrTop
             } else if(newScrTop >= oldScrTop) {
-                cHeader.style.top = "0px"
+                cHeaderWrap.style.transform = "translate(-50%,0px)"
                 newScrTop = oldScrTop
             }
         }
