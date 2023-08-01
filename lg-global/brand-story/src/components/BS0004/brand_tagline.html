@@ -109,8 +109,14 @@
                 background-image: url(../../mocks/BS0004/brand-elements-tagline-d.png);
             }
 
-            
+        
             /*download assets*/
+            .visual-innner {
+                height: 100%;
+                max-width: 1920px;
+                margin: 0 auto;
+                position: relative;
+            }
             .download_assets {
                 position: absolute;
                 bottom: 50px;
@@ -195,9 +201,19 @@
                 max-height: 830px;
                 height: 43.23vw;
                 overflow: hidden;
+                display: flex;
+            }
+            .taglien__item {
+                display: block;
+                flex-grow: 1;
                 background: no-repeat center;
                 background-size: cover;
-                background-image: url(../../mocks/BS0004/brand-our-slogan-product.png);
+            }
+            .taglien__item.taglien__item--text {
+                background-image: url(../../mocks/BS0004/brand-our-slogan-product-text-d.svg);
+            }
+            .taglien__item.taglien__item--product {
+                background-image: url(../../mocks/BS0004/brand-our-slogan-product-product-d.png);
             }
 
             /*btmdot-slide*/
@@ -530,70 +546,192 @@
                 border-color: #CBC8C24D;
                 background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
-            @media (max-width: 1440px) {
+
+            @media (max-width: 1500px) {
                 /*공통*/
                 .brand__header {
-                    margin-bottom: 64px;
+                    margin-bottom: 72px;
                 }
                 .brand__header-title {
                     font-size: 60px;
                     line-height: 64px;
                     letter-spacing: 0.6px;
-                    margin: 80px 0 38px;
+                    margin: 120px 0 24px;
                 }
 
                 .brand__header-title + .brand__header-description {
-                    font-size: 20px;
-                    line-height: 28px;
+                    font-size: 18px;
+                    line-height: 26px;
                 }
                 .brand__content-inner {
+                    margin-top: 0;
                     padding: 0 120px 80px;
                 }
 
 
+                /*btmdot-slide*/
+                .btmdot-slide__btm-container {
+                    bottom: 26px;
+                }
+                .btmdot-slide__pagination {
+                    gap: 7px;
+                }
+                .btmdot-slide__pagination__btn {
+                    width: 22px;
+                    height: 22px;
+                }
+                .btmdot-slide__pagination__btn--active::before {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                /*tab*/
+                .tab-menu__list {
+                    height: 49px;
+                }
+                .tab-menu__list::before {
+                    width: calc(100% + 16px);
+                    height: calc(100% + 16px);
+                    border-radius: 20.8333vw;
+                }
+                .tab-menu__btn {
+                    width: 200px;
+                    font-size: 15px;
+                }
+                .tab-menu__bg {
+                    width: 200px;
+                }
+
+                /*tagline slide*/
+                .taglien__content {
+                    border-radius: 20px; 
+                }
+
+                /*tagline grid*/
+                .tagline-grid {
+                    gap: 15px;
+                }
+                .tagline-grid__item {
+                    border-radius: 15px;
+                    padding: 30px;
+                }
+                .tagline-grid__text-info {
+                    font-size: 17px;
+                    margin-bottom: 23px;
+                }
+                .tagline-grid__text-info b {
+                    font-size: 27px;
+                }
+
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 60px 120px 64px;
+                    padding: 72px 120px 80px;
                 }
                 .brand-elements__header-title {
                     font-size: 42px;
                     line-height: 46px;
                 }
-                .brand-elements__slider {
-                    margin: 73px 0 0;
-                }
-                .brand-elements__controller {
-                    display: none;
+                .brand-element__inner {
+                    width: 100%;
                 }
                 .brand-elements__item-title {
                     padding: 18px 28px;
                     font-size: 24px;
                     line-height: 32px;
                 }
-                .brand-elements__progressbar {
-                    margin-top: 64px;
+                .our-identity__progressbar {
+                    margin-top: 48px;
                 }
                 .our-identity__slide {
                     width: 590px;
                     height: 360px;
+                    padding: 28px;
+                    border-radius: 20px;
+                }
+
+                .our-identity__item-title {
+                    font-size: 24px;
+                    line-height: 1.3;
+                }
+
+                .logo__bottom-cont {
+                    bottom: 30px;
+                }
+                .logo__bottom-cont__title {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 4px;
+                }
+                .logo__bottom-cont__desc {
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+                .our-identity__move-btn {
+                    left: 28px;
+                    bottom: 28px;
                 }
 
             }
-            @media (max-width: 1279px) {
 
-
+            /* Tablet */
+            @media (max-width: 1024px) {
                 /*공통*/
-                .brand__header-title + .brand__header-description br {
-                    display: none;
+                .brand__header {
+                    margin-bottom: 46px;
+                }
+                .brand__header-title {
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin: 64px 0 24px;
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 15px;
+                    line-height: 20px;
                 }
                 .brand__content-inner {
-                    padding: 0 20px 64px;
+                    margin-top: 0;
+                    padding: 0 24px 40px;
                 }
-                
+                .download_assets {
+                    display: none;
+                }
+
+                /*tagline grid*/
+                .tagline-grid {
+                    gap: 10px;
+                }
+                .tagline-grid__item {
+                    border-radius: 10px;
+                    padding: 14px 17px 18px;
+                }
+                .tagline-grid__text-info {
+                    margin-bottom: 13px;
+                    font-size: 13px;
+                }
+                .tagline-grid__text-info b {
+                    font-size: 18px;
+                }
+                .tagline-grid__item img {
+                    border-radius: 5px;
+                }
+
                 /*btmdot-slide*/
+                .btmdot-slide__btm-container {
+                    bottom: 20px;
+                }
+                .btmdot-slide__pagination__btn {
+                    width: 24px;
+                    height: 24px;
+                }
+                .btmdot-slide__pagination__btn--active::before {
+                    width: 32px;
+                    height: 32px;
+                }
+                .btmdot__tag {
+                    margin-top: 14px;
+                }
                 .btmdot-slide__slide__inner {
-                    height: 53.23vw;
-                    min-height: 336px;
+                    height: 46.23vw;
                 }
 
                 /*tagline slide*/
@@ -602,27 +740,71 @@
                     min-height: 336px;
                 }
 
+                /*tab*/
+                .tab-menu__list {
+                    height: 40px;
+                }
+                .tab-menu__btn {
+                    width: 162px;
+                    font-size: 14px;
+                }
+                .tab-menu__bg {
+                    width: 162px;
+                }
+
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 70px 20px 88px;
+                    padding: 32px 24px 40px;
+                }
+                .brand-elements__header-title {
+                    font-size: 28px;
+                    line-height: 36px;
                 }
                 .brand-elements__slider {
-                    margin: 70px -20px 0;
+                    margin: 24px -20px 0;
                 }
                 .brand-elements__controller {
-                    right: 20px;
+                    display: none;
+                }
+                .our-identity__slide {
+                    width: 291px;
+                    height: 291px;
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .our-identity__item-title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 24px;
+                    height: 1px;
+                }
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 32px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
                 }
 
 
             }
 
-
+            /* Mobile */
             @media (max-width: 768px) {
                 /*공통*/
                 .brand__header {
                     margin-bottom: 40px;
                 }
-
                 .brand__header-title {
                     font-size: 36px;
                     line-height: 44px;
@@ -631,8 +813,11 @@
                 }
                 .brand__header-title + .brand__header-description {
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 1.3;
                     text-align: center;
+                }
+                .brand__header-description br {
+                    display: none;
                 }
 
                 /*top visual*/
@@ -673,8 +858,17 @@
 
                 /*tagline slide*/
                 .taglien__content {
-                    height: 191.46vw;
-                    background-image: url(../../mocks/BS0004/brand-our-slogan-product-m.png);
+                    flex-direction: column;
+                    height: auto;
+                    max-height: unset;
+
+                }
+                .taglien__item.taglien__item.taglien__item--text {
+                    height: 89.33vw;
+                }
+                .taglien__item.taglien__item--product {
+                    height: 103.73vw;
+                    background-image: url(../../mocks/BS0004/brand-our-slogan-product-product-m.png);
                 }
                
                 /*tagline grid*/
@@ -732,42 +926,7 @@
                     font-size: 12px;
                 }
 
-                /*brand elements 슬라이드*/
-                .brand-elements {
-                    padding: 32px 20px 40px;
-                }
-                .brand-elements__header-title {
-                    font-size: 28px;
-                    line-height: 36px;
-                }
-                .brand-elements__slider {
-                    margin: 24px -20px 0;
-                }
-                .brand-elements__controller {
-                    display: none;
-                }
-                .our-identity__slide {
-                    width: 247px;
-                    height: 247px;
-                    border-radius: 10px;
-                    padding: 16px;
-                }
-                .our-identity__item-title {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-                .our-identity__progressbar {
-                    margin-top: 24px;
-                    height: 1px;
-                }
 
-                .our-identity__move-btn {
-                    width: 48px;
-                    height: 48px;
-                    background-size: 24px auto;
-                    left: 16px;
-                    bottom: 16px;
-                }
             }
 
             /* 4K */
@@ -878,13 +1037,15 @@
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                 </div>
-                <div class="download_assets">
-                    <img src="../../mocks/BS0004/download_assets_slogan.png" alt class="download_assets__thumb"></img>
-                    <p class="download_assets__title">
-                        <b>LG Solgan</b>
-                        Download Assets
-                    </p>
-                    <a class="download_assets__btn" href="#" download></a>
+                <div class="visual-innner">
+                    <div class="download_assets">
+                        <img src="../../mocks/BS0004/download_assets_slogan.png" alt class="download_assets__thumb"></img>
+                        <p class="download_assets__title">
+                            <b>LG Solgan</b>
+                            Download Assets
+                        </p>
+                        <a class="download_assets__btn" href="#" download></a>
+                    </div>
                 </div>
             </div>
             <div class="brand__content-inner">
@@ -896,7 +1057,10 @@
                         that’s whilst life’s not always perfect, Life’s Good. <br>
                     </p>
                 </div>
-                <div class="taglien__content"></div>
+                <div class="taglien__content">
+                    <span class="taglien__item taglien__item--text"></span>
+                    <span class="taglien__item taglien__item--product"></span>
+                </div>
                 <div class="brand__header">
                     <h2 class="brand__header-title">Slogan Colourways</h2>
                     <p class="brand__header-description">
