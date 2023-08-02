@@ -142,36 +142,19 @@
                 background-image: url(../../mocks/BS0006/brand-elements-design-system-d.png);
             }
 
-            .design-system__imagebox {
-                max-height: 830px;
-                height: 43.23vw;
-                border-radius: 1.5625vw;
-                background: no-repeat center;
-                background-size: cover;
+            /*contents ------*/
+            .percent-view {
+                border-radius: 1.56vw;
+                position: relative;
+                padding-bottom: 49.4%;
                 overflow: hidden;
             }
-            .design-system__imagebox video {
+            .percent-view .percent-view__img,
+            .percent-view img {
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-            }
-
-            .design-system__imagebox.design-system__imagebox--our-products {background-image: url(../../mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png);}
-
-            .design-system__imagebox.design-system__imagebox--core-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png);}
-            .design-system__imagebox.design-system__imagebox--connected-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png);}
-
-            .design-system__imagebox.design-system__imagebox--hero-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png);
-                background-position: center left 30%;
-            }
-            .design-system__imagebox.design-system__imagebox--connect-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png);
-                background-position: center right 15%;
-            }
-            .design-system__imagebox.design-system__imagebox--focus-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png);
-                background-position: bottom right;
             }
 
             /*tab*/
@@ -179,7 +162,6 @@
                 text-align: center;
                 margin-top: -3px;
             }
-
             .tab-menu__list {
                 position: relative;
                 display: inline-flex;
@@ -198,7 +180,6 @@
                 background-color: #F0ECE4;
                 border-radius: 20.8333vw;
             }
-
             .tab-menu__btn {
                 z-index: 2;
                 width: 10.4167vw;
@@ -212,7 +193,6 @@
                 text-decoration: none;
                 color: #262626;
             }
-
             .tab-menu__btn--active {
                 font-weight: 600;
             }
@@ -230,8 +210,6 @@
             .tab-container {margin-top: 4.2188vw;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
-
-
             .all-comes-together__img {width: 100%; height: 100%; object-fit: contain;}
 
             /*brand elements 슬라이드*/
@@ -253,7 +231,6 @@
             }
             .brand-elements__header-title__sub {
                 display: block;
-                font-weight: 300;
             }
             .brand-elements__controller {
                 position: absolute;
@@ -552,10 +529,6 @@
                     height: 52%;
                     border-radius: 14px;
                 }
-
-                .design-system__imagebox {
-                    height: 46.23vw;
-                }
             }
 
             /* Mobile */
@@ -612,14 +585,16 @@
                 }
                 .tab-container {margin-top: 32px;}
 
-
-                .design-system__imagebox {
+                /*contents ------*/
+                .percent-view {
                     border-radius: 10px;
-                    height: 90vw;
+                    padding-bottom: 100%;
                 }
-                .design-system__imagebox.design-system__imagebox--core-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.svg);}
-                .design-system__imagebox.design-system__imagebox--connected-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.svg);}
-                
+
+                .percent-view--mo-right img {
+                    object-position: right;
+                }
+ 
             }
 
             /* 4K */
@@ -706,10 +681,6 @@
                 .our-identity__progressbar {
                     margin-top: 48px;
                 }
-
-                .design-system__imagebox {
-                    border-radius: 30px;
-                }
             }
 
         </style>
@@ -727,8 +698,8 @@
                         Our Emotionally Intelligent forms are born from our products and create our flexible and expressive design system.
                     </p>
                 </div>
-                <div class="design-system__imagebox design-system__imagebox--our-products">
-
+                <div class="percent-view">
+                    <img class="all-comes-together__img" srcset="../../mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png">
                 </div>
 
                 <div class="brand__header">
@@ -748,10 +719,22 @@
                 </div>
                 <div class="tab-container" data-tab="state">
                     <div id="connected-state" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--connected-state"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.svg">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                     <div id="core-state" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--core-state"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.svg">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="brand__header">
@@ -772,13 +755,27 @@
                 </div>
                 <div class="tab-container" data-tab="mode">
                     <div id="hero-mode" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--hero-mode"></div>
+                        <div class="percent-view">
+                            <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png" alt="">
+                        </div>
                     </div>
                     <div id="connect-mode" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--connect-mode"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-m.png">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                     <div id="focus-mode" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--focus-mode"></div>
+                        <div class="percent-view percent-view--mo-right">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-m.png">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="brand__header">
@@ -797,16 +794,16 @@
                 </div>
                 <div class="tab-container" data-tab="lens">
                     <div id="intelligent" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--intelligent">
-                            <video muted playsinline loop>
+                        <div class="design-system__imagebox design-system__imagebox--intelligent percent-view">
+                            <video muted playsinline loop class="percent-view__img">
                                 <source src="../../mocks/BS0006/The_EI_lens_circle_intelligent_d.mp4" type="video/mp4" media="(min-width: 769px)"></source>
                                 <source src="../../mocks/BS0006/The_EI_lens_circle_intelligent_m.mp4" type="video/mp4"></source>
                             </video>
                         </div>
                     </div>
                     <div id="respectful" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--respectful">
-                            <video muted playsinline loop>
+                        <div class="design-system__imagebox design-system__imagebox--respectful percent-view">
+                            <video muted playsinline loop class="percent-view__img">
                                 <source src="../../mocks/BS0006/The_EI_lens_Square_respectful_d.mp4" type="video/mp4" media="(min-width: 769px)"></source>
                                 <source src="../../mocks/BS0006/The_EI_lens_Square_respectful_m.mp4" type="video/mp4"></source>
                             </video>
