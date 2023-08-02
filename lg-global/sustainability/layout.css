@@ -156,6 +156,7 @@ ul,ol {
     /* Common Header - Gnb */
     .c-header__gnb {
         display: none;
+        width: 100%;
         height: calc(100vh - 142px);
         margin-top: 90px;
         padding: 24px 20px;
