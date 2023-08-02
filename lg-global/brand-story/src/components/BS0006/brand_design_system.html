@@ -82,7 +82,6 @@
                 letter-spacing: 0.7px;
                 margin: 6.25vw 0 2.5vw;
             }
-
             .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4A4946;
@@ -143,41 +142,26 @@
                 background-image: url(../../mocks/BS0006/brand-elements-design-system-d.png);
             }
 
-            .design-system__imagebox {
-                max-height: 830px;
-                height: 43.23vw;
-                border-radius: 30px;
-                background: no-repeat center;
-                background-size: cover;
+            /*contents ------*/
+            .percent-view {
+                border-radius: 1.56vw;
+                position: relative;
+                padding-bottom: 49.4%;
+                overflow: hidden;
             }
-
-            .design-system__imagebox.design-system__imagebox--our-products {background-image: url(../../mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png);}
-
-            .design-system__imagebox.design-system__imagebox--core-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png);}
-            .design-system__imagebox.design-system__imagebox--connected-state {background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png);}
-
-            .design-system__imagebox.design-system__imagebox--hero-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png);
-                background-position: center left 30%;
+            .percent-view .percent-view__img,
+            .percent-view img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
-            .design-system__imagebox.design-system__imagebox--connect-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png);
-                background-position: center right 15%;
-            }
-            .design-system__imagebox.design-system__imagebox--focus-mode {
-                background-image: url(../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png);
-                background-position: bottom right;
-            }
-
-            .design-system__imagebox.design-system__imagebox--intelligent {background-image: url(../../mocks/BS0006/brand-elements-design-system-the-lens-intelligent-d.png);}
-            .design-system__imagebox.design-system__imagebox--respectful {background-image: url(../../mocks/BS0006/brand-elements-design-system-the-lens-respectful-d.png);}
 
             /*tab*/
             .tab-menu__container {
                 text-align: center;
                 margin-top: -3px;
             }
-
             .tab-menu__list {
                 position: relative;
                 display: inline-flex;
@@ -196,7 +180,6 @@
                 background-color: #F0ECE4;
                 border-radius: 20.8333vw;
             }
-
             .tab-menu__btn {
                 z-index: 2;
                 width: 10.4167vw;
@@ -210,7 +193,6 @@
                 text-decoration: none;
                 color: #262626;
             }
-
             .tab-menu__btn--active {
                 font-weight: 600;
             }
@@ -228,10 +210,7 @@
             .tab-container {margin-top: 4.2188vw;}
             .tab-container__content {display: none;}
             .tab-container__content--active {display: block;}
-
-
             .all-comes-together__img {width: 100%; height: 100%; object-fit: contain;}
-            .all-comes-together__img--mo {display: none;}
 
             /*brand elements 슬라이드*/
             .brand-elements {
@@ -252,7 +231,6 @@
             }
             .brand-elements__header-title__sub {
                 display: block;
-                font-weight: 300;
             }
             .brand-elements__controller {
                 position: absolute;
@@ -385,90 +363,179 @@
             }
 
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1500px) {
                 /*공통*/
                 .brand__header {
-                    margin-bottom: 64px;
+                    margin-bottom: 72px;
                 }
                 .brand__header-title {
                     font-size: 60px;
                     line-height: 64px;
                     letter-spacing: 0.6px;
-                    margin: 80px 0 38px;
+                    margin: 120px 0 24px;
                 }
 
                 .brand__header-title + .brand__header-description {
-                    font-size: 20px;
-                    line-height: 28px;
+                    font-size: 18px;
+                    line-height: 26px;
                 }
                 .brand__content-inner {
+                    margin-top: 0;
                     padding: 0 120px 80px;
+                }
+
+                /*tab*/
+                .tab-menu__list {
+                    height: 49px;
+                }
+                .tab-menu__list::before {
+                    width: calc(100% + 16px);
+                    height: calc(100% + 16px);
+                    border-radius: 20.8333vw;
+                }
+                .tab-menu__btn {
+                    width: 200px;
+                    font-size: 15px;
+                }
+                .tab-menu__bg {
+                    width: 200px;
                 }
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 60px 120px 64px;
+                    padding: 72px 120px 80px;
                 }
                 .brand-elements__header-title {
                     font-size: 42px;
                     line-height: 46px;
                 }
-                .brand-elements__slider {
-                    margin: 73px 0 0;
-                }
-                .brand-elements__controller {
-                    display: none;
+                .brand-element__inner {
+                    width: 100%;
                 }
                 .brand-elements__item-title {
                     padding: 18px 28px;
                     font-size: 24px;
                     line-height: 32px;
                 }
-                .brand-elements__progressbar {
-                    margin-top: 64px;
+                .our-identity__progressbar {
+                    margin-top: 48px;
                 }
                 .our-identity__slide {
                     width: 590px;
                     height: 360px;
+                    padding: 28px;
+                    border-radius: 20px;
+                }
+
+                .our-identity__item-title {
+                    font-size: 24px;
+                    line-height: 1.3;
+                }
+
+                .logo__bottom-cont {
+                    bottom: 30px;
+                }
+                .logo__bottom-cont__title {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 4px;
+                }
+                .logo__bottom-cont__desc {
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+                .our-identity__move-btn {
+                    left: 28px;
+                    bottom: 28px;
                 }
 
             }
 
-            @media (max-width: 1279px) {
-
-
+            /* Tablet */
+            @media (max-width: 1024px) {
                 /*공통*/
-                .brand__header-title + .brand__header-description br {
-                    display: none;
+                .brand__header {
+                    margin-bottom: 46px;
+                }
+                .brand__header-title {
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin: 64px 0 24px;
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 15px;
+                    line-height: 20px;
                 }
                 .brand__content-inner {
-                    padding: 0 20px 64px;
+                    margin-top: 0;
+                    padding: 0 24px 40px;
+                }
+                .download_assets {
+                    display: none;
+                }
+
+                /*tab*/
+                .tab-menu__list {
+                    height: 40px;
+                }
+                .tab-menu__btn {
+                    width: 162px;
+                    font-size: 14px;
+                }
+                .tab-menu__bg {
+                    width: 162px;
                 }
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 70px 20px 88px;
+                    padding: 32px 24px 40px;
+                }
+                .brand-elements__header-title {
+                    font-size: 28px;
+                    line-height: 36px;
                 }
                 .brand-elements__slider {
-                    margin: 70px -20px 0;
+                    margin: 24px -20px 0;
                 }
                 .brand-elements__controller {
-                    right: 20px;
+                    display: none;
                 }
-
+                .our-identity__slide {
+                    width: 291px;
+                    height: 291px;
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .our-identity__item-title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 24px;
+                    height: 1px;
+                }
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 32px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
+                }
             }
 
-
+            /* Mobile */
             @media (max-width: 768px) {
                 /*공통*/
-                #visual-design-system.visual__top {
-                    background-image: url(../../mocks/BS0006/brand-elements-design-system-m.png);
-                }
                 .brand__header {
                     margin-bottom: 40px;
-                }
-                .brand__header:nth-child(1) {
-                    margin-top: -20px;
                 }
                 .brand__header-title {
                     font-size: 36px;
@@ -478,13 +545,20 @@
                 }
                 .brand__header-title + .brand__header-description {
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 1.3;
                     text-align: center;
                 }
+                .brand__header-description br {
+                    display: none;
+                }
+
 
                 /*top visual*/
                 .visual__top {
                     height: 117.33vw;
+                }
+                #visual-design-system.visual__top {
+                    background-image: url(../../mocks/BS0006/brand-elements-design-system-m.png);
                 }
 
 
@@ -511,62 +585,18 @@
                 }
                 .tab-container {margin-top: 32px;}
 
-
-                .design-system__imagebox {
+                /*contents ------*/
+                .percent-view {
                     border-radius: 10px;
-                    height: 90vw;
-                }
-                .design-system__imagebox.design-system__imagebox--core-state {
-                    background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.png);
-                }
-                .design-system__imagebox.design-system__imagebox--connected-state {
-                    background-image: url(../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.png);
-                }
-                .all-comes-together__img--mo {display: block;}
-                .all-comes-together__img--pc {display: none;}
-
-
-
-                /*brand elements 슬라이드*/
-                .brand-elements {
-                    padding: 32px 20px 40px;
-                }
-                .brand-elements__header-title {
-                    font-size: 28px;
-                    line-height: 36px;
-                }
-                .brand-elements__slider {
-                    margin: 24px -20px 0;
-                }
-                .brand-elements__controller {
-                    display: none;
-                }
-                .our-identity__slide {
-                    width: 247px;
-                    height: 247px;
-                    border-radius: 10px;
-                    padding: 16px;
-                }
-                .our-identity__item-title {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-                .our-identity__progressbar {
-                    margin-top: 24px;
-                    height: 1px;
+                    padding-bottom: 100%;
                 }
 
-                .our-identity__move-btn {
-                    width: 48px;
-                    height: 48px;
-                    background-size: 24px auto;
-                    left: 16px;
-                    bottom: 16px;
+                .percent-view--mo-right img {
+                    object-position: right;
                 }
-
-
-                
+ 
             }
+
             /* 4K */
             @media (min-width: 2560px) {
                 /*랜딩비주얼 스크롤다운 버튼*/
@@ -668,8 +698,8 @@
                         Our Emotionally Intelligent forms are born from our products and create our flexible and expressive design system.
                     </p>
                 </div>
-                <div class="design-system__imagebox design-system__imagebox--our-products">
-
+                <div class="percent-view">
+                    <img class="all-comes-together__img" srcset="../../mocks/BS0006/brand-elements-design-system-inspired-by-the-form-of-our-products-d.png">
                 </div>
 
                 <div class="brand__header">
@@ -689,10 +719,22 @@
                 </div>
                 <div class="tab-container" data-tab="state">
                     <div id="connected-state" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--connected-state"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-m.svg">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-connected-state-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                     <div id="core-state" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--core-state"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-m.svg">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-a-unique-interative-and-responsive-system-core-state-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="brand__header">
@@ -713,13 +755,27 @@
                 </div>
                 <div class="tab-container" data-tab="mode">
                     <div id="hero-mode" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--hero-mode"></div>
+                        <div class="percent-view">
+                            <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-hero-mode-d.png" alt="">
+                        </div>
                     </div>
                     <div id="connect-mode" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--connect-mode"></div>
+                        <div class="percent-view">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-m.png">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-connect-mode-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                     <div id="focus-mode" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--focus-mode"></div>
+                        <div class="percent-view percent-view--mo-right">
+                            <picture>
+                                <source media="(min-width: 769px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png">
+                                <source media="(max-width: 768px)" srcset="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-m.png">
+                                <img src="../../mocks/BS0006/brand-elements-design-system-emotionally-intelligent-form-layouts-focus-mode-d.png" alt="">
+                            </picture>
+                        </div>
                     </div>
                 </div>
                 <div class="brand__header">
@@ -738,18 +794,31 @@
                 </div>
                 <div class="tab-container" data-tab="lens">
                     <div id="intelligent" class="tab-container__content tab-container__content--active">
-                        <div class="design-system__imagebox design-system__imagebox--intelligent"></div>
+                        <div class="design-system__imagebox design-system__imagebox--intelligent percent-view">
+                            <video muted playsinline loop class="percent-view__img">
+                                <source src="../../mocks/BS0006/The_EI_lens_circle_intelligent_d.mp4" type="video/mp4" media="(min-width: 769px)"></source>
+                                <source src="../../mocks/BS0006/The_EI_lens_circle_intelligent_m.mp4" type="video/mp4"></source>
+                            </video>
+                        </div>
                     </div>
                     <div id="respectful" class="tab-container__content">
-                        <div class="design-system__imagebox design-system__imagebox--respectful"></div>
+                        <div class="design-system__imagebox design-system__imagebox--respectful percent-view">
+                            <video muted playsinline loop class="percent-view__img">
+                                <source src="../../mocks/BS0006/The_EI_lens_Square_respectful_d.mp4" type="video/mp4" media="(min-width: 769px)"></source>
+                                <source src="../../mocks/BS0006/The_EI_lens_Square_respectful_m.mp4" type="video/mp4"></source>
+                            </video>
+                        </div>
                     </div>
                 </div>
                 <div class="brand__header">
                     <h2 class="brand__header-title">How it all comes together...</h2>
                 </div>
                 <div class="all-comes-together">
-                    <img class="all-comes-together__img all-comes-together__img--pc" src="../../mocks/BS0006/design_system_how_it_all-d.png" alt="">
-                    <img class="all-comes-together__img all-comes-together__img--mo" src="../../mocks/BS0006/design_system_how_it_all-m.png" alt="">
+                    <picture>
+                        <source media="(min-width: 769px)" class="all-comes-together__img" srcset="../../mocks/BS0006/design_system_how_it_all-d.png">
+                        <source media="(max-width: 768px)" class="all-comes-together__img" srcset="../../mocks/BS0006/design_system_how_it_all-m.png">
+                        <img class="all-comes-together__img" srcset="../../mocks/BS0006/design_system_how_it_all-d.png">
+                    </picture>
                 </div>
             </div>
             <div class="brand-elements">
@@ -828,6 +897,9 @@
             function tabFunc() {
                 const tabIndexAll = document.querySelectorAll('.tab-menu__list')
                 const bgAll = document.querySelectorAll('span.tab-menu__bg')
+                const tabCont = document.querySelectorAll('.tab-container')
+
+                let activeVideo = document.querySelectorAll('.tab-container__content--active video')
 
                 tabIndexAll.forEach((tab) => {
                     const buttons = tab.querySelectorAll('.tab-menu__btn')
@@ -847,10 +919,28 @@
                             setClass(tabTarget, 'tab-container__content--active') 
                             setClass(this, 'tab-menu__btn--active')
 
+                            if(tabTarget.querySelector('video') != null) {
+                                toggleVideo(tabTarget.querySelector('video'))
+                            }
+                            
+
                             setBgPosX(this, tabBg)
                         })
                     })
                 })
+
+                function toggleVideo(targetVideo) {
+                    targetVideo.currentTime = 0;
+                    
+                    const tabContainer = targetVideo.closest('.tab-container');
+                    const siblingVideos = tabContainer.querySelectorAll('video:not(.target)');
+
+                    siblingVideos.forEach((video) => {
+                        video.pause();
+                    });
+
+                    targetVideo.play();
+                }
 
                 function setBgPosX(btn, target) {
                     let btns = Array.from(btn.parentElement.querySelectorAll('.tab-menu__btn'));
@@ -875,6 +965,8 @@
                 }
 
                 setBgWidth()
+                activeVideo.forEach(el => toggleVideo(el))
+
 
                 window.addEventListener('resize', ()=> {
                     if(window.innerWidth < 769 || window.innerWidth > 2559) {setBgWidth()}

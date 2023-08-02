@@ -82,7 +82,6 @@
                 letter-spacing: 0.7px;
                 margin: 6.25vw 0 2.5vw;
             }
-
             .brand__header-title + .brand__header-description {
                 text-align: center;
                 color: #4A4946;
@@ -164,26 +163,43 @@
             .photography__item.photography__item--energy {background-image: url(../../mocks/BS0005/brand-elements-photography-energy-passion-and-interest-02-d.png);}
             .photography__item.photography__item--products {background-image: url(../../mocks/BS0005/brand-elements-photography-products-03-d.png);}
 
-            .photography__item p {
+            .photography__item dl {
                 position: absolute;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 box-sizing: border-box;
                 width: 100%;
                 bottom: 0;
-                height: 96px;
-                padding: 0 24px;
-                font-size: 1.0417vw;
+                left: 0;
+                padding: 32px;
                 background: #0000001a;
                 backdrop-filter: blur(67px);
                 -webkit-backdrop-filter: blur(67px);
                 color: #fff;
                 border-radius: 0 0 20px 20px;
+                margin: 0;
+                cursor: pointer;
             }
-            .photography__item p b {
+            .photography__item dl dt {
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 font-size: 1.4583vw;
-                
+                line-height: 1.3;
+            }
+            .photography__item dl dd {
+                margin: 0;
+                font-size: 1.1458vw;
+                line-height: 1.4;
+                /* height: 90px; */
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .photography__item:hover dd {
+                padding-top: 8px;
+                height: 90px;
+                opacity: 1;
             }
 
             /*photography grid*/
@@ -236,7 +252,6 @@
             }
             .brand-elements__header-title__sub {
                 display: block;
-                font-weight: 300;
             }
             .brand-elements__controller {
                 position: absolute;
@@ -368,30 +383,54 @@
                 background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
 
-            @media (max-width: 1440px) {
+            @media (max-width: 1500px) {
                 /*공통*/
                 .brand__header {
-                    margin-bottom: 64px;
+                    margin-bottom: 72px;
                 }
                 .brand__header-title {
                     font-size: 60px;
                     line-height: 64px;
                     letter-spacing: 0.6px;
-                    margin: 80px 0 38px;
+                    margin: 120px 0 24px;
                 }
-
                 .brand__header-title + .brand__header-description {
-                    font-size: 20px;
-                    line-height: 28px;
+                    font-size: 18px;
+                    line-height: 26px;
                 }
                 .brand__content-inner {
+                    margin-top: 0;
                     padding: 0 120px 80px;
                 }
+
+                /*photography index list*/
+                .photography__list {
+                    gap: 15px;
+                }
+                .photography__item {
+                    border-radius: 15px;
+                }
+
+                .photography__item dl {
+                    padding: 22px 24px;
+                    border-radius: 0 0 15px 15px;
+                }
+                .photography__item dl dt {
+                    font-size: 17px;
+                }
+                .photography__item dl dd {
+                    font-size: 15px;
+                }
+                .photography__item:hover dd {
+                    height: 70px;
+                    opacity: 1;
+                }
+
 
                 /*photography grid*/
                 .photography__grid {
                     gap: 10px;
-                    border-radius: 10px;
+                    border-radius: 22px;
                 }
                 .photography__grid__item:nth-child(1) {width: calc(20% - 8px);}
                 .photography__grid__item:nth-child(2) {width: calc(40% - 8px);}
@@ -404,62 +443,165 @@
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 60px 120px 64px;
+                    padding: 72px 120px 80px;
                 }
                 .brand-elements__header-title {
                     font-size: 42px;
                     line-height: 46px;
                 }
-                .brand-elements__slider {
-                    margin: 73px 0 0;
-                }
-                .brand-elements__controller {
-                    display: none;
+                .brand-element__inner {
+                    width: 100%;
                 }
                 .brand-elements__item-title {
                     padding: 18px 28px;
                     font-size: 24px;
                     line-height: 32px;
                 }
-                .brand-elements__progressbar {
-                    margin-top: 64px;
+                .our-identity__progressbar {
+                    margin-top: 48px;
                 }
                 .our-identity__slide {
                     width: 590px;
                     height: 360px;
+                    padding: 28px;
+                    border-radius: 20px;
+                }
+
+                .our-identity__item-title {
+                    font-size: 24px;
+                    line-height: 1.3;
+                }
+
+                .logo__bottom-cont {
+                    bottom: 30px;
+                }
+                .logo__bottom-cont__title {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 4px;
+                }
+                .logo__bottom-cont__desc {
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+                .our-identity__move-btn {
+                    left: 28px;
+                    bottom: 28px;
                 }
             }
 
-            @media (max-width: 1279px) {
-
-
+            /* Tablet */
+            @media (max-width: 1024px) {
                 /*공통*/
-                .brand__header-title + .brand__header-description br {
-                    display: none;
+                .brand__header {
+                    margin-bottom: 46px;
+                }
+                .brand__header-title {
+                    font-size: 32px;
+                    line-height: 36px;
+                    margin: 64px 0 24px;
+                }
+                .brand__header-title + .brand__header-description {
+                    font-size: 15px;
+                    line-height: 20px;
                 }
                 .brand__content-inner {
-                    padding: 0 20px 64px;
+                    margin-top: 0;
+                    padding: 0 24px 40px;
                 }
+                .download_assets {
+                    display: none;
+                }
+
+                /*photography index list*/
+                .photography__list {
+                    gap: 9px;
+                }
+                .photography__item {
+                    border-radius: 9px;
+                }
+
+                .photography__item dl {
+                    padding: 13px;
+                    border-radius: 0 0 9px 9px;
+                }
+                .photography__item dl dt {
+                    font-size: 14px;
+                }
+                .photography__item dl dd {
+                    font-size: 12px;
+                }
+                .photography__item:hover dd {
+                    height: 70px;
+                    opacity: 1;
+                }
+
+                .photography__grid {
+                    gap: 6px;
+                    border-radius: 13px;
+                }
+                .photography__grid__item:nth-child(1) {width: calc(20% - 4.5px);}
+                .photography__grid__item:nth-child(2) {width: calc(40% - 4.5px);}
+                .photography__grid__item:nth-child(3) {width: calc(20% - 4.5px);}
+                .photography__grid__item:nth-child(4) {width: calc(20% - 4.5px);}
+                .photography__grid__item:nth-child(5) {width: calc(12% - 4.5px);}
+                .photography__grid__item:nth-child(6) {width: calc(35% - 4.5px);}
+                .photography__grid__item:nth-child(7) {width: calc(27% - 4.5px);}
+                .photography__grid__item:nth-child(8) {width: calc(26% - 4.5px);}
+
+
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 70px 20px 88px;
+                    padding: 32px 24px 40px;
+                }
+                .brand-elements__header-title {
+                    font-size: 28px;
+                    line-height: 36px;
                 }
                 .brand-elements__slider {
-                    margin: 70px -20px 0;
+                    margin: 24px -20px 0;
                 }
                 .brand-elements__controller {
-                    right: 20px;
+                    display: none;
+                }
+                .our-identity__slide {
+                    width: 291px;
+                    height: 291px;
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .our-identity__item-title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 24px;
+                    height: 1px;
+                }
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 32px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
                 }
             }
 
-
+            /* Mobile */
             @media (max-width: 768px) {
                 /*공통*/
                 .brand__header {
                     margin-bottom: 40px;
                 }
-
                 .brand__header-title {
                     font-size: 36px;
                     line-height: 44px;
@@ -468,9 +610,13 @@
                 }
                 .brand__header-title + .brand__header-description {
                     font-size: 16px;
-                    line-height: 24px;
+                    line-height: 1.3;
                     text-align: center;
                 }
+                .brand__header-description br {
+                    display: none;
+                }
+
 
                 /*top visual*/
                 .visual__top {
@@ -492,15 +638,14 @@
                     border-radius: 10px;
                 }
 
-                .photography__item p {
-                    height: 60px;
-                    padding: 0 14px;
-                    font-size: 16px;
+                .photography__item dl {
+                    padding: 15px 18px;
                     border-radius: 0 0 10px 10px;
                 }
-                .photography__item p b {
-                    font-size: 17px;
+                .photography__item dl dt {
+                    font-size: 16px;
                 }
+
 
                 /*photography grid*/
                 .photography__grid {
@@ -519,44 +664,8 @@
                 .photography__grid__item:nth-child(5),
                 .photography__grid__item:nth-child(8) {display: none;}
 
-
-                /*brand elements 슬라이드*/
-                .brand-elements {
-                    padding: 32px 20px 40px;
-                }
-                .brand-elements__header-title {
-                    font-size: 28px;
-                    line-height: 36px;
-                }
-                .brand-elements__slider {
-                    margin: 24px -20px 0;
-                }
-                .brand-elements__controller {
-                    display: none;
-                }
-                .our-identity__slide {
-                    width: 247px;
-                    height: 247px;
-                    border-radius: 10px;
-                    padding: 16px;
-                }
-                .our-identity__item-title {
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-                .our-identity__progressbar {
-                    margin-top: 24px;
-                    height: 1px;
-                }
-
-                .our-identity__move-btn {
-                    width: 48px;
-                    height: 48px;
-                    background-size: 24px auto;
-                    left: 16px;
-                    bottom: 16px;
-                }
             }
+
             /* 4K */
             @media (min-width: 2560px) {
                 /*랜딩비주얼 스크롤다운 버튼*/
@@ -587,13 +696,16 @@
                 }
 
                 /*photography index list*/
-                .photography__item p {
-                    font-size: 20px;
+                .photography__item dl {
+                    padding: 0 32px 32px;
                 }
-                .photography__item p b {
+                .photography__item dl dt {
+                    padding: 32px 0 0;
                     font-size: 28px;
                 }
-
+                .photography__item dl dd {
+                    font-size: 22px;
+                }
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
@@ -654,13 +766,34 @@
                 </div>
                 <ul class="photography__list">
                     <li class="photography__item photography__item--everyday">
-                        <p><b>01</b>Everyday Life</p>
+                        <dl>
+                            <dt>Everyday Life <span>01</span></dt>
+                            <dd>
+                                Imagery should capture real, <br>
+                                spontaneous moments so it feels warm, <br>
+                                positive and relatable
+                            </dd>
+                        </dl>
                     </li>
                     <li class="photography__item photography__item--energy">
-                        <p><b>02</b>Energy, Passion and Interests</p>
+                        <dl>
+                            <dt>Energy, Passion and Interests<span>02</span></dt>
+                            <dd>
+                                We capture and celebrate the <br>
+                                energy and attitude of people <br>
+                                and their passions.
+                            </dd>
+                        </dl>
                     </li>
                     <li class="photography__item photography__item--products">
-                        <p><b>03</b>Products</p>
+                        <dl>
+                            <dt>Products<span>03</span></dt>
+                            <dd>
+                                We capture the craft, detail and the quality <br>
+                                of our products. Always balancing warmth and <br>
+                                innovation in a way that feels uniquely LG. 
+                            </dd>
+                        </dl>
                     </li>
                 </ul>
                 <div class="brand__header">
