@@ -187,6 +187,7 @@
             }
             .living-st-about__saving__item__cont__tit {
                 font-size: 24px;
+                line-height: 28px;
                 font-weight: 600;
                 letter-spacing: -0.12px;
             }
@@ -805,7 +806,7 @@
             .popup-discription__visual__photo__img {
                 width: 100%;
                 height: 100%;
-                background-size: cover;
+                object-fit: cover;
             }
             .popup-discription__summary {
                 padding: 60px 0px;
@@ -923,6 +924,560 @@
                     padding: 60px 160px;
                 }
             }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Living Sustainably Visual */
+                .living-st-visual__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .living-st-visual__scrolldown {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .living-st-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
+                /* Living Sustainably About */
+                .living-st-about {
+                    width: auto;
+                    margin: 0px 16px;
+                }
+                .living-st-about__tit {
+                    padding: 96px 0px;
+                    font-size: 28px;
+                    line-height: 38px;
+                }
+                .living-st-about__saving__item {
+                    display: flex;
+                    width: 100%;
+                    padding: 0px 0px 60px;
+                }
+                .living-st-about__saving__item1 {
+                    flex-direction: column-reverse;
+                }
+                .living-st-about__saving__item2 {
+                    flex-direction: column;
+                }
+                .living-st-about__saving__item__photo {
+                    width: auto;
+                }
+                .living-st-about__saving__item1__photo,
+                .living-st-about__saving__item2__photo {
+                    height: auto;
+                }
+                .living-st-about__saving__item1__photo__img {
+                    width: 322px;
+                    height: 273px;
+                    border-radius: 80px 385px 385px 80px;
+                }
+                .living-st-about__saving__item2__photo__img {
+                    width: 288px;
+                    height: 288px;
+                    border-radius: 385px;
+                }
+                .living-st-about__saving__item__cont {
+                    margin-top: 30px;
+                }
+                .living-st-about__saving__item__cont__desc1 {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px; /* 111.111% */
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .living-st-about__saving__item__cont__desc2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .living-st-about__saving__item__cont__desc2__br {
+                    display: none;
+                }
+                .living-st-about__saving__item__more {
+                    margin-top: 20px;
+                }
+
+                /* Eco-conscious material */
+                .eco-conscious-material {
+                    overflow: hidden;
+                    position: relative;
+                    padding: 60px 16px;
+                    max-height: none;
+                    height: 960px;
+                    background: url(../../mocks/ST0002/visual-eco-conscious-material.png) no-repeat 70% top;
+                }
+                .eco-conscious-material__tit {
+                    font-size: 24px;
+                    letter-spacing: -0.12px;
+                }
+                .eco-conscious-material__intro {
+                    margin-top: 10px;
+                }
+                .eco-conscious-material__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .eco-conscious-material__intro__txt:last-child {
+                    margin-top: 11px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .eco-conscious-material__intro__txt__br {
+                    display: none;
+                }
+                .eco-conscious-material__product {
+                    bottom: 40px;
+                    left: 30px;
+                    right: 30px;
+                }
+                .eco-conscious-material__product__btn-set {
+                    position: static;
+                    gap: 0px 16px;
+                    justify-content: center;
+                    margin-top: 14px;
+                }
+                .eco-conscious-material__product__btn-set__btn {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Sustainability Efforts */
+                .sustainability-efforts__bg__inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    width: 100%;
+                    transform: translateY(-50%);
+                }
+                .sustainability-efforts__bg__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: 3.6px;
+                }
+                .sustainability-efforts__bg__txt {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__bg__txt__item {
+                    font-size: 24px;
+                    line-height: 48px;
+                    letter-spacing: 4.8px;
+                }
+                .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__card__wrap {
+                    height: auto;
+                }
+                .sustainability-efforts__card__navi {
+                    display: none;
+                }
+                .sustainability-efforts__card {
+                    position: static;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0px;
+                    overflow: hidden;
+                    transform: translate(0%,0%);
+                }
+                .sustainability-efforts__card--on {
+                    width: 100%;
+                    height: auto;
+                }
+                .sustainability-efforts__card__item {
+                    position: relative;
+                    z-index: 2;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 480px;
+                    padding: 36px 16px;
+                    text-align: center;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__inner {
+                    width: auto;
+                    margin: 0px auto;
+                }
+                .sustainability-efforts__card__tit {
+                    display: none;
+                }
+                .sustainability-efforts__card__summary {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.28px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__detail {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 16px;
+                }
+                .summary__cont {
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 0px;
+                    box-sizing: border-box;
+                    color: #4A4946;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                .summary__cont__txt--active {
+                    padding: 40px 0px 90px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
+                    background-size: cover;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    margin: 0px;
+                    padding: 80px 24px 40px;
+                    border-radius: 0px;
+                    text-align: center;
+                }
+                .popup-discription__visual {
+                    display: block;
+                    position: relative;
+                    height: auto;
+                    padding: 0;
+                    margin: -80px -24px 0px;
+                    padding-top: 80px;
+                }
+                .popup-discription__visual__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__visual__tit__topic {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__visual__tit__topic__br {
+                    display: none;
+                }
+                .popup-discription__visual__photo {
+                    position: static;
+                    width: 100%;
+                    height: 400px;
+                    margin-top: 40px;
+                }
+                .popup-discription__summary {
+                    padding: 40px 0px;
+                }
+                .popup-discription__summary__txt {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .popup-discription__detail {
+                    padding: 40px 0px;
+                }
+                .popup-discription__detail__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__detail__tit__topic {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__tit__topic:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__txt {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__txt:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo {
+                    margin: 20px 0px;
+                }
+                .popup-discription__detail__photo:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo:last-child {
+                    margin-bottom: 0px;
+                }
+                .popup-discription__detail__photo__figure__img {
+                    object-fit: cover;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving2 {
+                    width: 190px;
+                    height: 183px;
+                    border-radius: 30px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving3 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 100px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving4 {
+                    width: 312px;
+                    height: 189px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving5 {
+                    width: 310px;
+                    height: 166px;
+                    border-radius: 162px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving6 {
+                    width: 312px;
+                    height: 196px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving2 {
+                    width: 312px;
+                    height: 204px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving3 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving4 {
+                    width: 312px;
+                    height: 189px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving5 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .popup-discription__energy-star {
+                    position: relative;
+                    margin: 0px -24px;
+                    padding: 40px 24px;
+                    text-align: center;
+                }
+                .popup-discription__energy-star__tit {
+                    position: static;
+                    width: auto;
+                }
+                .popup-discription__energy-star__txt {
+                    margin-top: 16px;
+                }
+                .popup-discription__energy-star__photo__figure__figcaption {
+                    color: #7E7C77;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:hover {
+                    transform: rotate(180deg);
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    position: absolute;
+                    top: 16px;
+                    left: 10px;
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 2px;
+                    background-color: #262626;
+                }
+                .popup-discription__btn-close:before {
+                    transform: rotate(45deg);
+                }
+                .popup-discription__btn-close:after {
+                    transform: rotate(-45deg);
+                }
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
@@ -954,8 +1509,8 @@
                                 the tide
                             </p>
                             <p class="living-st-about__saving__item__cont__desc2">
-                                Almost 10% of global freshwater consumption is residential water usage. <br />
-                                Here are some innovative ways to help you save water and preserve this <br />
+                                Almost 10% of global freshwater consumption is residential water usage. <br class="living-st-about__saving__item__cont__desc2__br" />
+                                Here are some innovative ways to help you save water and preserve this <br class="living-st-about__saving__item__cont__desc2__br" />
                                 precious resource.
                             </p>
                             <div class="living-st-about__saving__item__more">
@@ -977,9 +1532,9 @@
                                 Secure our future.
                             </p>
                             <p class="living-st-about__saving__item__cont__desc2">
-                                As home appliances become increasingly advanced, their energy <br />
-                                consumption also increases. To live more sustainably, choose <br />
-                                environmentally-certified, energy-efficient products that reduce energy <br />
+                                As home appliances become increasingly advanced, their energy <br class="living-st-about__saving__item__cont__desc2__br" />
+                                consumption also increases. To live more sustainably, choose <br class="living-st-about__saving__item__cont__desc2__br" />
+                                environmentally-certified, energy-efficient products that reduce energy <br class="living-st-about__saving__item__cont__desc2__br" />
                                 consumption and meet energy-saving standards.
                             </p>
                             <div class="living-st-about__saving__item__more">
@@ -995,7 +1550,7 @@
                                 <dt class="popup-discription__visual__tit">
                                     <div class="popup-discription__visual__tit__category">Water saving</div>
                                     <div class="popup-discription__visual__tit__topic">
-                                        Smart tech <br />
+                                        Smart tech <br class="popup-discription__visual__tit__topic__br" />
                                         for clean water <br />
                                         and less waste
                                     </div>
@@ -1022,7 +1577,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving1.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving1" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1032,7 +1587,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving2" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1049,7 +1604,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving3.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving3" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1059,7 +1614,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving4.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving4.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving4" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1074,7 +1629,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo popup-discription__energy-star__photo">
                                     <figure class="popup-discription__detail__photo__figure popup-discription__energy-star__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__energy-star__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving5" />
                                         <figcaption class="popup-discription__detail__photo__figure__figcaption popup-discription__energy-star__photo__figure__figcaption">
                                             Over 130 billion liters of water saving &gt; <br /> 
                                             Same as filling up 53,000 Olympic-sized swimming pools
@@ -1085,7 +1640,7 @@
                             <div class="popup-discription__detail">
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving6.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-water-saving6.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving6" />
                                     </figure>
                                 </dd>
                                 <dt class="popup-discription__detail__tit">
@@ -1109,9 +1664,9 @@
                                 <dt class="popup-discription__visual__tit">
                                     <div class="popup-discription__visual__tit__category">Energy saving</div>
                                     <div class="popup-discription__visual__tit__topic">
-                                        Higher energy <br />
+                                        Higher energy <br class="popup-discription__visual__tit__topic__br" />
                                         efficiency, <br />
-                                        lower carbon <br />
+                                        lower carbon <br class="popup-discription__visual__tit__topic__br" />
                                         impact
                                     </div>
                                 </dt>
@@ -1137,14 +1692,14 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving1" />
                                     </figure>
                                 </dd>
                             </div>
                             <div class="popup-discription__detail">
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving2.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving2" />
                                     </figure>
                                 </dd>
                                 <dd class="popup-discription__detail__txt">
@@ -1164,7 +1719,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1174,7 +1729,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving4.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving4.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving4" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1191,7 +1746,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving5.png" alt="" class="popup-discription__detail__photo__figure__img" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving5" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1208,15 +1763,15 @@
                         matters to us
                     </p>
                     <p class="eco-conscious-material__intro__txt">
-                        Earth's resources are limited, so choosing eco-conscious <br />
-                        materials is no longer optional. By choosing materials that <br />
+                        Earth's resources are limited, so choosing eco-conscious <br class="eco-conscious-material__intro__txt__br" />
+                        materials is no longer optional. By choosing materials that <br class="eco-conscious-material__intro__txt__br" />
                         can be reused, we can all live a more sustainable life.
                     </p>
                 </div>
                 <div class="swiper eco-conscious-material__product">
                     <div class="swiper-wrapper eco-conscious-material__product__slide-wrap">
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product1.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1229,7 +1784,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product2.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1242,7 +1797,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product3.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1255,7 +1810,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product4.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1268,7 +1823,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product5.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1281,7 +1836,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-material__product__slide">
-                            <a href="#" class="eco-conscious-material__product__slide__anchor">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
                                 <div class="eco-conscious-material__product__slide__anchor__photo">
                                     <img src="../../mocks/ST0002/photo-eco-conscious-material-product6.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
                                 </div>
@@ -1361,7 +1916,6 @@
                 </div>
             </div>
             <div class="summary">
-                <div class="summary__visual"></div>
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         Your sustainable living journey truly inspires us. <br />
@@ -1373,6 +1927,7 @@
                         Live sustainable.
                     </p>
                 </div>
+                <div class="summary__visual"></div>
             </div>
             <div class="whats-next__wrap">
                 <div class="whats-next">
@@ -1522,7 +2077,14 @@
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: 3,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",
@@ -1563,7 +2125,7 @@
                     if(window.innerWidth > 1024) {
                         return 40
                     } else {
-                        return 0
+                        return 20
                     }
                 }
 
