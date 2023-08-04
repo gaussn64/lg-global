@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        let cacheName = 'newCache';
+        let url2 = '/api/get/newCache';
+
+        caches.open(cacheName).then( cache => {
+            cache.delete(url2);
+        });
+        
+        console.log(caches)
+
+
+        let rand = Math.floor(Math.random() * 100) / 100  //랜덤 난수 생성
+        let url = `소스?v=${rand}` //난수 버전정보가 붙은 주소
+        let el = document.createElement("script");  //브라우저에 <script> 생성
+        el.src = url; //<script> 의 src 설정
+        document.head.appendChild(el); //html 의 head 안에 삽입
+    </script>
+    
+    
+</head>
+<body>
+    
+</body>
+</html>
