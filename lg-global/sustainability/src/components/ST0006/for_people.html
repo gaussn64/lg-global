@@ -441,9 +441,6 @@
                 opacity: 0;
                 transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
             }
-            .sustainability-efforts__card__detail__br {
-                display: none;
-            }
             .sustainability-efforts__card__discover-more {
                 display: none;
                 margin-top: 36px;
@@ -994,7 +991,6 @@
             
             }
 
-
             /* Mobile */
             @media (max-width: 768px) {
                 /* For People Visual */
@@ -1394,6 +1390,7 @@
                 }
                 .popup-discription__wrap {
                     width: 100%;
+                    min-height: 100vh;
                     margin: 0px;
                     padding: 80px 20px 40px;
                     border-radius: 0px;
@@ -1448,6 +1445,7 @@
                     text-align: center;
                 }
                 .popup-discription__photo__figure__figcaption {
+                    font-size: 12px;
                     margin-top: 16px;
                     font-weight: 400;
                 }
@@ -1568,6 +1566,79 @@
                 }
                 .popup-discription__btn-close:after {
                     transform: rotate(-45deg);
+                }
+    
+                /* Popup Discription - CTO */
+                .popup-discription__cto__intro {
+                    position: relative;
+                    height: auto;
+                    margin: 0px -20px;
+                    padding: 0px;
+                    background: white;
+                    text-align: center;
+                }
+                .popup-discription__cto__intro:after {
+                    content: "";
+                    display: block;
+                    width: 360px;
+                    height: 350px;
+                    margin-top: 40px;
+                    background: url(../../mocks/ST0006/photo-cto.png) no-repeat 82% center;
+                    background-size: cover;
+                }
+                .popup-discription__cto__intro * {
+                    color: #262626;
+                }
+                .popup-discription__cto__intro__summary {
+                    font-size: 28px;
+                    font-style: normal;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__cto__intro__summary__br {
+                    display: none;
+                }
+                .popup-discription__cto__intro__detail {
+                    margin-top: 16px;
+                    font-size: 18px;
+                    line-height: 21px;
+                    letter-spacing: -0.1px;
+                }
+                .popup-discription__cto__intro__sign {
+                    position: static;
+                    margin-top: 16px;
+                    font-size: 16px;
+                    font-weight: 250;
+                    line-height: 24px;
+                    color: #4A4946;
+                }
+                .popup-discription__cto__intro__sign__strong {
+                    font-weight: 700;
+                    color: #4A4946;
+                }
+                .popup-discription__cto__goals {
+                    padding: 80px 0px;
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: 550;
+                    line-height: 30px;
+                    letter-spacing: -0.12px;
+                }
+                .popup-discription__cto__goals__txt__br {
+                    display: none;
+                }
+                .popup-discription__cto__qna {
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.1px;
+                }
+                .popup-discription__cto__btn-close {
+                    background-color: white;
+                }
+                .popup-discription__cto__btn-close:before,
+                .popup-discription__cto__btn-close:after {
+                    background-color: #262626;
                 }
             }
         </style>
@@ -1899,7 +1970,7 @@
                                     </p>
                                     <p class="sustainability-efforts__card__detail">
                                         We respect everyone's diverse perspectives, to <br class="sustainability-efforts__card__detail__br" />
-                                        create an environment where people feel <br />
+                                        create an environment where people feel <br class="sustainability-efforts__card__detail__br" />
                                         comfortable to be themselves. We encourage <br class="sustainability-efforts__card__detail__br" />
                                         creativity and innovation while ensuring equal <br class="sustainability-efforts__card__detail__br" />
                                         opportunities for success.
@@ -1966,7 +2037,7 @@
                         <dl class="popup-discription__inner popup-discription__cto">
                             <dt class="popup-discription__cto__intro">
                                 <p class="popup-discription__cto__intro__summary">
-                                    Youngest <br />
+                                    Youngest <br class="popup-discription__cto__intro__summary__br" />
                                     female <br />
                                     executive
                                 </p>
@@ -1981,10 +2052,10 @@
                             </dt>
                             <dd class="popup-discription__cto__goals">
                                 <p class="popup-discription__cto__goals__txt">
-                                    “My goal is to become a female leader who <br />
-                                    cultivates an organizational culture of <br />
-                                    diversity and inclusivity, providing members <br />
-                                    with confidence to develop their skills and <br />
+                                    “My goal is to become a female leader who <br class="popup-discription__cto__goals__txt__br" />
+                                    cultivates an organizational culture of <br class="popup-discription__cto__goals__txt__br" />
+                                    diversity and inclusivity, providing members <br class="popup-discription__cto__goals__txt__br" />
+                                    with confidence to develop their skills and <br class="popup-discription__cto__goals__txt__br" />
                                     fostering a genuine sense of belonging.”
                                 </p>
                             </dd>
