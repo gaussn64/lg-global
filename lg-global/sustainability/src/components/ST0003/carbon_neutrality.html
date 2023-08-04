@@ -200,6 +200,9 @@
                 letter-spacing: -0.26px;
                 color: white;
             }
+            .milestone__goals__tit__br {
+                display: none;
+            }
             .milestone__goals__carbon-zero {
                 display: flex;
                 justify-content: space-around;
@@ -369,7 +372,7 @@
                 line-height: 34px;
                 letter-spacing: -0.14px;
             }
-            .milestone__goals__transition-reduce__summary {
+            .milestone__goals__reduce-appliances {
                 margin-top: 83px;
                 color: white;
                 font-size: 15px;
@@ -1157,9 +1160,6 @@
                     font-size: 44px;
                     letter-spacing: -0.44px;
                 }
-                .carbon-nautrality-visual__tit__txt {
-                    font-weight: 550;
-                }
                 .carbon-nautrality-visual__tit__txt__br {
                     display: inline-block;
                 }
@@ -1192,6 +1192,9 @@
                     font-size: 18px;
                     line-height: 21px;
                 }
+                .milestone__intro {
+                    padding: 0px 16px;
+                }
                 .milestone__intro__txt:first-child {
                     font-size: 36px;
                     line-height: 40px;
@@ -1203,133 +1206,140 @@
                     line-height: 24px;
                     letter-spacing: -0.08px;
                 }
-                .milestone__goals-navi {
-                    margin: 37px 0px 30px;
-                }
-                .milestone__goals-navi__list {
-                    width: 328px;
-                }
-                .milestone__goals-navi__list__item {
-                    width: calc(50% - 5px);
-                }
-                .milestone__goals-navi__list__item__a {
-                    padding: 8px 0px 9px;
-                    font-size: 15px;
-                    line-height: 21px;
-                    border-radius: 48px;
-                }
-                .milestone__goals-navi__list__item__a:hover,
-                .milestone__goals-navi__list__item__a:focus {
-                    text-decoration: none;
-                }
-                .milestone__goals-navi__list__item__a--active {
-                    font-weight: 600;
-                    text-align: center;
-                    color: #262626;
-                    background-color: white;
+                .milestone__intro__txt__br {
+                    display: none;
                 }
                 .milestone__goals__wrap {
-                    overflow: hidden;
-                    background-attachment: scroll;
+                    margin-top: 40px;
                 }
                 .milestone__goals {
-                    position: relative;
-                    width: 328px;
-                    height: 883px;
-                    padding: 40px 0px;
+                    overflow: hidden;
+                    width: auto;
                     margin: 0px auto;
+                    padding: 42px 16px;
                 }
-                .milestone__goals__years {
-                    padding: 0px;
+                .milestone__goals__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.146px;
                 }
-                .milestone__goals__years:after {
-                    bottom: 19px;
-                    background-color: #75C66B;
+                .milestone__goals__tit__br {
+                    display: inline-block;
                 }
-                .milestone__goals__years__item {
-                    display: none;
+                .milestone__goals__carbon-zero {
+                    position: relative;
+                    padding-top: 162px;
+                    margin-top: 30px;
                 }
-                .milestone__goals__years__item--active {
+                .milestone__goals__carbon-zero__item {
+                    width: 120px;
+                    height: 120px;
+                }
+                .milestone__goals__carbon-zero__item:nth-child(3) {
+                    position: absolute;
+                    top: 0px;
+                    left: calc(50% - 73px);
+                    width: 146px;
+                    height: 146px;
+                }
+                .milestone__goals__carbon-zero__txt__percentage {
+                    font-size: 29px;
+                    line-height: 25px;
+                    font-family: 'LG_EI_Headline';
+                    font-weight: 550;
+                    letter-spacing: -0.28px;
+                }
+                .milestone__goals__carbon-zero__txt__zero {
+                    font-size: 28px;
+                    line-height: 24px;
+                    letter-spacing: -0.26px;
+                    transition: 3s ease color;
+                }
+                .milestone__goals__carbon-zero__txt__year {
+                    margin-top: 13px;
+                    font-size: 16px;
+                    line-height: 15px;
+                }
+                .milestone__goals__transition-reduce {
+                    margin-top: 60px;
+                    padding-bottom: 40px;
+                    width: 100%;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                }
+                .milestone__goals__transition-reduce::-webkit-scrollbar {
+                    height: 2px;
+                }
+                .milestone__goals__transition-reduce::-webkit-scrollbar-thumb {
+                    height: 2px;
+                    border-radius: 0px;
+                    background-color: white;
+                }
+                .milestone__goals__transition-reduce::-webkit-scrollbar-track {
+                    height: 2px;
+                    background-color: rgba(255, 255, 255, 0.30);
+                }
+                .milestone__goals__transition-reduce__tab {
+                    gap: 0px 24px;
+                }
+                .milestone__goals__transition-reduce__tab__item__anchor {
+                    position: relative;
                     display: block;
-                }
-                .milestone__goals__years__item__txt {
-                    font-size: 16px;
-                    line-height: 24px;
-                    font-weight: 400;
-                    margin-bottom: 3px;
-                }
-                .milestone__goals__years__item__txt--on {
-                    font-weight: 400;
-                }
-                .milestone__goals__years__item__ico {
-                    width: 40px;
-                    height: 40px;
-                }
-                .milestone__goals__years__item__2006__ico:before,
-                .milestone__goals__years__item__2023__ico:before,
-                .milestone__goals__years__item__2030__ico:before {
-                    width: 40px;
-                    height: 40px;
-                }
-                .milestone__goals__years__item__ico--on:before,
-                .milestone__goals__years__item__ico--on:after {
-                    top: -20px;
-                    left: -20px;
-                    width: 80px;
-                    height: 80px;
-                }
-                .milestone__goals__summary {
-                    top: 143px;
-                    font-size: 16px;
-                    line-height: 24px;
-                }
-                .milestone__goals__summary__br {
-                    display: none;
-                }
-                .milestone__goals__detail {
-                    overflow: visible;
-                    left: 0px;
-                    bottom: 192px;
-                }
-                .milestone__goals__detail--active {
-                    visibility: visible;
-                }
-                .milestone__goals__detail__item {
-                    width: 300px;
-                    height: 374px;
-                    padding: 50px 28px;
-                    border-radius: 20px;
-                }
-                .milestone__goals__detail__item__tit {
-                    font-size: 44px;
-                    line-height: 56px;
-                }
-                .milestone__goals__detail__item__tit__txt {
-                    font-size: 33px;
-                }
-                .milestone__goals__detail__item__ico {
-                    margin-top: 20px;
-                    height: 46px;
-                }
-                .milestone__goals__detail__item__cont {
-                    color: #F0ECE4;
+                    white-space: nowrap;
+                    padding: 2px 0px;
                     font-size: 20px;
-                    line-height: 28px;
                     font-weight: 400;
+                    line-height: 28px; /* 140% */
                     letter-spacing: -0.1px;
-                    margin-top: 20px;
                 }
-                .milestone__goals__detail__item__cont__small {
-                    display: block;
-                    font-size: 16px;
+                .milestone__goals__transition-reduce__tab__item__anchor:hover,
+                .milestone__goals__transition-reduce__tab__item__anchor:focus {
+                    text-decoration: none;
+                }
+                .milestone__goals__transition-reduce__tab__item__anchor--active {
+                    color: rgba(255,255,255,1);
+                }
+                .milestone__goals__transition-reduce__graph__wrap {
+                    position: relative;
+                    margin-top: 40px;
+                    height: 252px;
+                }
+                .milestone__goals__transition-reduce__graph {
+                    width: 100%;
+                    height: 252px;
+                    visibility: hidden;
+                    opacity: 0;
+                }
+                .milestone__goals__transition-reduce__graph--active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .milestone__goals__transition-reduce__graph__item * {
+                    color: white;
+                }
+                .milestone__goals__transition-reduce__graph__percentage {
+                    width: 167px;
+                    height: 220px;
+                    padding: 0px 10px;
+                }
+                .milestone__goals__transition-reduce__graph__percentage__txt {
+                    font-size: 36px;
+                    line-height: 38px;
+                    letter-spacing: -0.18px;
+                }
+                .milestone__goals__transition-reduce__graph__percentage__bar {
+                    left: 6px;
+                    right: 6px;
+                    border-radius: 4px;
+                }
+                .milestone__goals__transition-reduce__graph__years {
+                    margin-top: 10px;
+                    font-size: 18px;
                     line-height: 22px;
-                    color: #F0ECE4;
-                    margin-top: 8px;
                 }
-                .milestone__goals__home-appliances {
-                    bottom: 37px;
-                    left: 0px;
-                    font-size: 11px;
+                .milestone__goals__reduce-appliances {
+                    margin-top: 40px;
+                    font-size: 12px;
                     line-height: 16px;
                 }
 
@@ -1352,6 +1362,9 @@
                     font-size: 16px;
                     line-height: 24px;
                     letter-spacing: -0.08px;
+                }
+                .carbon-emission-reduction__intro__txt__br {
+                    display: none;
                 }
                 .carbon-emission-reduction__plan {
                     display: block;
@@ -1508,10 +1521,8 @@
                 }
                 .b2b-activity__tit {
                     color: white;
-                    letter-spacing: -0.005em;
-                    font-size: 24px;
-                    font-weight: 600;
-                    line-height: 28px;
+                    font-size: 18px;
+                    line-height: 21px;
                 }
                 .b2b-activity__cont__txt {
                     color: white;
@@ -1519,8 +1530,7 @@
                 }
                 .b2b-activity__cont__txt:first-child {
                     font-size: 36px;
-                    font-family: 'LG_EI_Headline';
-                    font-weight: 550;
+                    font-weight: 400;
                     line-height: 40px;
                     letter-spacing: -0.54px;
                     margin-top: 10px;
@@ -1569,8 +1579,6 @@
                 .summary__cont__txt--active {
                     padding-top: 40px;
                     font-size: 36px;
-                    font-family: 'LG_EI_Headline';
-                    font-weight: 550;
                     line-height: 40px;
                     letter-spacing: -0.54px;
                 }
@@ -1583,85 +1591,131 @@
                     background-size: cover;
                 }
 
-                /* What's Next */
+                /* What's Next *//* What's Next */
                 .whats-next__wrap {
-                    padding: 30px 0px 35px;
+                    padding: 30px 16px;
                 }
                 .whats-next {
-                    width: 328px;
+                    width: 100%;
                 }
                 .whats-next__tit {
-                    font-size: 27px;
-                    line-height: 36px;
+                    font-size: 28px;
+                    line-height: 34px;
                 }
                 .whats-next__menu {
-                    margin-top: 22px;
-                    overflow: visible;
+                    margin-top: 30px;
                 }
                 .whats-next__menu__slide {
-                    width: 278px;
-                    margin-right: 12px;
+                    width: 290px;
+                    margin-right: 16px;
                 }
                 .whats-next__menu__slide__anchor {
-                    height: 278px;
-                    padding: 47px 0px 35px;
+                    height: 290px;
                     border-radius: 10px;
                 }
-                .whats-next__menu__slide1__anchor__photo {
-                    top: 47px;
-                    left: 59px;
-                    right: 59px;
-                    bottom: 71px;
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
                     border-radius: 20px;
                 }
                 .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
                     border-radius: 10px;
                 }
                 .whats-next__menu__slide2__anchor__photo {
-                    top: 55px;
-                    left: 63px;
-                    right: 63px;
-                    bottom: 70px;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
                 }
                 .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
-                    top: 35px;
-                    left: 43px;
-                    right: 43px;
-                    bottom: 50px;
-                }
-                .whats-next__menu__slide3__anchor__photo {
-                    top: 78px;
-                    left: -34px;
-                    bottom: 94px;
-                    width: 672px;
-                }
-                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
-                    left: -336px;
-                }
-                .whats-next__menu__slide4__anchor__photo {
-                    top: 58px;
-                    left: 29px;
-                    right: 29px;
-                    bottom: 98px;
-                    border-radius: 117px;
-                }
-                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
                     border-radius: 10px;
                 }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
                 .whats-next__menu__slide__anchor__txt {
-                    padding: 16px 19px;
-                    line-height: 20px;
+                    padding: 15px 20px;
                     font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
                 }
                 .whats-next__menu__btn-set {
                     display: none;
                 }
                 .whats-next__menu__pagination {
-                    height: 1px !important;
-                    margin-top: 23px;
-                }
-                .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
-                    background-color: rgba(0,0,0,1);
+                    margin-top: 16px;
                 }
             }
         </style>
@@ -1694,13 +1748,13 @@
                         Our carbon neutrality imperative
                     </p>
                     <p class="milestone__intro__txt">
-                        We're firmly committed to a greener future, discovering and <br />
+                        We're firmly committed to a greener future, discovering and <br class="milestone__intro__txt__br" />
                         creating ways to reduce carbon emissions and minimize our environmental impact through sustainable practices.
                     </p>
                 </div>
                 <div class="milestone__goals__wrap">
                     <div class="milestone__goals">
-                        <h4 class="milestone__goals__tit">Achieve Carbon Neutrality*</h4>
+                        <h4 class="milestone__goals__tit">Achieve <br class="milestone__goals__tit__br" />Carbon Neutrality*</h4>
                         <ol class="milestone__goals__carbon-zero">
                             <li class="milestone__goals__carbon-zero__item">
                                 <div class="milestone__goals__carbon-zero__txt">
@@ -1800,11 +1854,11 @@
                                     </li>
                                 </ul>
                             </div>
-                            <p class="milestone__goals__transition-reduce__summary">
-                                * 50% reduction in emissions in the production phase + 50% of external offset <br />
-                                ** TV, Monitors, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner (RAC), System Air Conditioner(SAC)
-                            </p>
                         </div>
+                        <p class="milestone__goals__reduce-appliances">
+                            * 50% reduction in emissions in the production phase + 50% of external offset <br />
+                            ** TV, Monitors, Refrigerators, Washing Machines, Dryers, Residential Air Conditioner (RAC), System Air Conditioner(SAC)
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1815,8 +1869,8 @@
                         Our innovation cuts carbon
                     </p>
                     <p class="carbon-emission-reduction__intro__txt">
-                        We're firmly committed to a greener future, discovering and creating <br />
-                        ways to reduce carbon emissions and minimize environmental impact <br />
+                        We're firmly committed to a greener future, discovering and creating <br class="carbon-emission-reduction__intro__txt__br" />
+                        ways to reduce carbon emissions and minimize environmental impact <br class="carbon-emission-reduction__intro__txt__br" />
                         through sustainable practices.
                     </p>
                 </div>
@@ -2393,7 +2447,14 @@
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: 3,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",
