@@ -96,6 +96,9 @@
                 font-weight: 400;
                 color: white;
             }
+            .circularity-visual__tit__txt__br {
+                display: none;
+            }
             .circularity-visual__video {
                 position: relative;
                 z-index: 1;
@@ -265,11 +268,6 @@
             .st-cycle__inner__menu__item--off {
                 opacity: 0.3;
             }
-            .st-cycle__inner__menu__item__ico {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
             .st-cycle__inner__menu__item:nth-child(1) {
                 top: -73px;
                 left: 207px;
@@ -316,6 +314,14 @@
             .st-cycle__inner__standard__item--active {
                 visibility: visible;
                 opacity: 1;
+            }
+            .st-cycle__inner__menu__item__ico {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .st-cycle__inner__menu__item__ico--mo {
+                display: none;
             }
 
             /* E-waste program */
@@ -659,7 +665,7 @@
                 position: relative;
                 width: 100%;
                 margin-top: 64px;
-                height: 2px;
+                height: 2px !important;
                 background-color: rgba(0,0,0,0.2);
             }
             .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
@@ -829,12 +835,444 @@
                     margin: 0px auto;
                 }
             }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Circularity Visual */
+                .circularity-visual__tit {
+                    line-height: 48px;
+                    font-size: 44px;
+                    letter-spacing: -0.44px;
+                }
+                .circularity-visual__tit__txt__br {
+                    display: inline-block;
+                }
+                .circularity-visual__scrolldown {
+                    bottom: 16px;
+                }
+                .circularity-visual__scrolldown__btn {
+                    width: 51px;
+                    height: 72px;
+                }
+
+                /* Circularity About */
+                .circularity-about {
+                    text-align: center;
+                }
+                .circularity-about__cont {
+                    width: 328px;
+                    padding: 96px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .circularity-about__cont__br {
+                    display: none;
+                }
+
+
+                /* Sustainability Cycle */
+                .st-cycle {
+                    height: 674px;
+                }
+                .st-cycle__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .st-cycle__intro__txt {
+                    margin-top: 10px;
+                }
+                .st-cycle__intro__txt:first-child {
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+                .st-cycle__intro__txt:last-child {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .st-cycle__inner {
+                    margin: 88px auto 0px;
+                    width: 348px;
+                    height: 236px;
+                    text-align: center;
+                    background: url(../../mocks/ST0004/line-st-cycle-m.svg) no-repeat center center;
+                    background-size: cover;
+                }
+                .st-cycle__inner__cont {
+                    width: 308px;
+                    transform: translateY(90px);
+                    transition: 0.3s ease transform;
+                }
+                .st-cycle__inner__cont--active {
+                    transform: translateY(0px);
+                }
+                .st-cycle__inner__cont__tit {
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.14px;
+                    transition: 0.1s ease opacity;
+                }
+                .st-cycle__inner__cont--active .st-cycle__inner__cont__tit {
+                    opacity: 0;
+                }
+                .st-cycle__inner__cont__list {
+                    position: relative;
+                    margin-top: 0px;
+                    visibility: hidden;
+                    overflow: hidden;
+                    height: 0px;
+                    transition: 0.3s ease height,0.3s ease margin-top;
+                }
+                .st-cycle__inner__cont__list--active {
+                    visibility: visible;
+                    height: 102px;
+                    margin-top: 20px;
+                }
+                .st-cycle__inner__cont__list__item {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .st-cycle__inner__cont__list__item__tit {
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.09px;
+                }
+                .st-cycle__inner__cont__list__item__txt {
+                    margin-top: 6px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .st-cycle__inner__menu__item {
+                    position: absolute;
+                    width: 66px;
+                    height: 68px;
+                    opacity: 1;
+                    transition: 0.3s ease opacity;
+                    cursor: pointer;
+                }
+                .st-cycle__inner__menu__item--off {
+                    opacity: 0.3;
+                }
+                .st-cycle__inner__menu__item:nth-child(1) {
+                    top: -28px;
+                    left: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(2) {
+                    top: -28px;
+                    right: 141px;
+                }
+                .st-cycle__inner__menu__item:nth-child(3) {
+                    top: -28px;
+                    right: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(4) {
+                    bottom: -38px;
+                    right: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(5) {
+                    bottom: -38px;
+                    right: 141px;
+                }
+                .st-cycle__inner__menu__item:nth-child(6) {
+                    bottom: -38px;
+                    left: 50px;
+                }
+                .st-cycle__inner__menu__item__ico--pc {
+                    display: none;
+                }
+                .st-cycle__inner__menu__item__ico--mo {
+                    display: inline-block;
+                }
+                .st-cycle__inner__standard {
+                    visibility: hidden;
+                }
+                .st-cycle__inner__standard--active {
+                    visibility: visible;
+                }
+                .st-cycle__inner__standard__item {
+                    position: absolute;
+                    top: 683px;
+                    left: 0px;
+                    width: 100%;
+                    font-size: 12px;
+                    color: #F6F3EB;
+                    line-height: 16px;
+                    text-align: center;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s ease all;
+                }
+                .st-cycle__inner__standard__item--active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                /* E-waste program */
+                .e-waste-program__cont {
+                    width: 100%;
+                    padding: 60px 16px 40px;
+                }
+                .e-waste-program__tit {
+                    font-size: 19px;
+                    line-height: 26px;
+                }
+                .e-waste-program__intro1 {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                }
+                .e-waste-program__intro2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 40px;
+                }
+                .e-waste-program__visual__wrap {
+                    position: relative;
+                    height: 200vh;
+                }
+                .e-waste-program__visual {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100vh;
+                }
+                .e-waste-program__visual__inner {
+                    position: absolute;
+                    z-index: 2;
+                    left: 50%;
+                    top: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    transform: translate(-50%,-50%);
+                }
+                .e-waste-program__more {
+                    margin-top: 20px;
+                }
+
+                
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions__wrap {
+                    background: linear-gradient(180deg, #DFE6E7 0%, #FFF 100%);
+                }
+                .st-recycling-solutions {
+                    display: block;
+                    width: 100%;
+                    height: 720px;
+                    padding: 60px 16px;
+                    box-sizing: border-box;
+                    background: url(../../mocks/ST0004/photo-st-recycling-solutions-mo.png) no-repeat center bottom;
+                    background-size: 360px 720px;
+                }
+                .st-recycling-solutions__cont {
+                    text-align: center;
+                }
+                .st-recycling-solutions__cont__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    line-height: normal;
+                    letter-spacing: -0.1px;
+                }
+                .st-recycling-solutions__cont__intro__txt {
+                    margin-top: 10px;
+                }
+                .st-recycling-solutions__cont__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                }
+                .st-recycling-solutions__cont__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .st-recycling-solutions__cont__intro__txt__br {
+                    display: none;
+                }
+
+
+                /* Summary */
+                .summary {
+                    padding: 60px 0px;
+                }
+                .summary__cont {
+                    width: 328px;
+                    height: auto;
+                    border-radius: 0px;
+                    padding: 0px;
+                    margin: 0px auto;
+                    box-sizing: border-box;
+                    background: none;
+                }
+                .summary__cont__txt {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    padding: 0px;
+                    color: #262626;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .summary__cont__txt--active {
+                    padding-top: 40px;
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .summary__visual {
+                    width: 328px;
+                    height: 384px;
+                    margin: 90px auto 0px;
+                    border-radius: 10px;
+                    background: linear-gradient(161deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                /* What's Next *//* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+            }
         </style>
         <!-- html code -->
         <div class="sustainably-container">
             <div class="circularity-visual visual__top">
                 <h2 class="circularity-visual__tit">
-                    <span class="circularity-visual__tit__txt">Greener with every step</span>
+                    <span class="circularity-visual__tit__txt">Greener with <br class="circularity-visual__tit__txt__br">every step</span>
                 </h2>
                 <video src="../../mocks/ST0004/video-circularity-visual.mp4" class="circularity-visual__video" autoplay loop muted></video>
                 <div class="circularity-visual__scrolldown">
@@ -843,11 +1281,11 @@
             </div>
             <div class="circularity-about">
                 <p class="circularity-about__cont">
-                    <span class="circularity-about__cont__txt">Imagine a world with no waste. </span><br />
-                    <span class="circularity-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br />
-                    <span class="circularity-about__cont__txt">By recycling all we can to turn old materials and </span><br />
-                    <span class="circularity-about__cont__txt">ppliances into new products,</span><br />
-                    <span class="circularity-about__cont__txt">we're doing our part to reduce waste and </span><br />
+                    <span class="circularity-about__cont__txt">Imagine a world with no waste. </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">By recycling all we can to turn old materials and </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">ppliances into new products,</span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">we're doing our part to reduce waste and </span><br class="circularity-about__cont__br" />
                     <span class="circularity-about__cont__txt">create a more sustainable future.</span>
                 </p>
             </div>
@@ -910,22 +1348,28 @@
                     </div>
                     <ul class="st-cycle__inner__menu">
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection-m.svg" alt="Collection" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-recycling.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-recycling.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-recycling-m.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-rnd.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-rnd.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-rnd-m.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-packaging.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-packaging.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-packaging-m.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-service.svg" alt="Service" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-service.svg" alt="Service" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-service-m.svg" alt="Service" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                         <li class="st-cycle__inner__menu__item">
-                            <img src="../../mocks/ST0004/ico-st-cycle-use.svg" alt="Use" class="st-cycle__inner__menu__item__ico">
+                            <img src="../../mocks/ST0004/ico-st-cycle-use.svg" alt="Use" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-use-m.svg" alt="Use" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
                         </li>
                     </ul>
                     <ul class="st-cycle__inner__standard">
@@ -1021,8 +1465,8 @@
                         <div class="st-recycling-solutions__cont__intro">
                             <p class="st-recycling-solutions__cont__intro__txt">Redefining recyclable</p>
                             <p class="st-recycling-solutions__cont__intro__txt">
-                                Chilseo Recycling Center collects old appliances, separates <br />
-                                their materials, and recycles them into new LG products, <br />
+                                Chilseo Recycling Center collects old appliances, separates <br class="st-recycling-solutions__cont__intro__txt__br" />
+                                their materials, and recycles them into new LG products, <br class="st-recycling-solutions__cont__intro__txt__br" />
                                 creating a virtuous cycle of resource use and disposal.
                             </p>
                             <div class="st-recycling-solutions__cont__discover-more">
@@ -1108,7 +1552,6 @@
                 </div>
             </div>
             <div class="summary">
-                <div class="summary__visual"></div>
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         We're dedicated to being <br />
@@ -1121,6 +1564,7 @@
                         Better for us.
                     </p>
                 </div>
+                <div class="summary__visual"></div>
             </div>
             <div class="whats-next__wrap">
                 <div class="whats-next">
@@ -1215,7 +1659,7 @@
                 stCycle: function() {
                     var stCycleInner = document.querySelector(".st-cycle__inner");
                     var sciCont = stCycleInner.querySelector(".st-cycle__inner__cont");
-                    var scicList = stCycleInner.querySelector(".st-cycle__inner__cont__list");
+                    var scicList = sciCont.querySelector(".st-cycle__inner__cont__list");
                     var scicListItem = scicList.querySelectorAll(".st-cycle__inner__cont__list__item");
                     var sciMenu = stCycleInner.querySelector(".st-cycle__inner__menu");
                     var sciMenuItem = sciMenu.querySelectorAll(".st-cycle__inner__menu__item");
@@ -1365,7 +1809,14 @@
                 },
                 whatsNext: function() {
                     let swiper = new Swiper(".whats-next__menu", {
-                        slidesPerView: 3,
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
                         pagination: {
                             el: ".whats-next__menu__pagination",
                             type: "progressbar",
