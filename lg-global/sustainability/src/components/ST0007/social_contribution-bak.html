@@ -1,0 +1,972 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<div id="header__wrap" class="c-header__wrap">
+    <header id="header" class="c-header">
+        <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+        <nav class="c-header__gnb">
+            <ul class="c-header__gnb__list">
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Social Contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+            </ul>
+        </nav>
+        <!-- <p class="c-header__location">Social Contribution</p> -->
+        <button type="button" class="c-header__btn-gnb">
+            <span class="c-header__btn-gnb__bar"></span>
+            <span class="c-header__btn-gnb__bar"></span>
+        </button>
+    </header>
+</div>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* Social Contribution About */
+            .social-contribution-about {
+                padding: 240px 0px 120px;
+                text-align: center;
+            }
+            .social-contribution-about__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 80px;
+                font-weight: 400;
+                line-height: 76px;
+                letter-spacing: -0.4px;
+            }
+            .social-contribution-about__intro {
+                margin-top: 40px;
+                font-size: 44px;
+                font-weight: 100;
+                line-height: 56px; /* 127.273% */
+                letter-spacing: -0.44px;
+            }
+            .social-contribution-about__visual {
+                margin-top: 60px;
+                height: 580px;
+                background: url(../../mocks/ST0007/bg-social-contribution-about-visual.png) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+            }
+            
+            /* Engagement */
+            .engagement {
+                width: 1440px;
+                padding: 60px 0px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .engagement__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .engagement__intro__txt {
+                margin-top: 16px;
+            }
+            .engagement__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .engagement__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .engagement__activities {
+                position: relative;
+                padding: 72px 0px 48px;
+                overflow: visible;
+            }
+            .engagement__activities__slide {
+                position: relative;
+                width: 708px;
+                margin-right: 24px;
+            }
+            .engagement__activities__slide__anchor {
+                display: block;
+                width: 708px;
+                height: 550px;
+                padding: 32px;
+                box-sizing: border-box;
+                border-radius: 28px;
+                text-align: left;
+                text-decoration: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .engagement__activities__slide__anchor:hover {
+                text-decoration: none;
+            }
+            .engagement__activities__slide__anchor:after {
+                position: absolute;
+                bottom: 32px;
+                right: 32px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0007/btn-engagement-more.svg) no-repeat center center;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .engagement__activities__slide__anchor:hover:after {
+                transform: rotate(180deg);
+            }
+            .engagement__activities__slide__anchor1-1 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities1-1.png);
+            }
+            .engagement__activities__slide__anchor1-2 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities1-2.png);
+            }
+            .engagement__activities__slide__anchor2-1 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities2-1.png);
+            }
+            .engagement__activities__slide__anchor2-2 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities2-2.png);
+            }
+            .engagement__activities__slide__anchor2-3 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities2-3.png);
+            }
+            .engagement__activities__slide__anchor2-4 {
+                background-image: url(../../mocks/ST0007/photo-engagement-activities2-4.png);
+            }
+            .engagement__activities__slide__anchor__preface {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: white;
+            }
+            .engagement__activities__slide__anchor__subject {
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                margin-top: 8px;
+                color: white;
+            }
+            .engagement__activities__pagination {
+                opacity: 0.5;
+                line-height: 1;
+            }
+            .engagement__activities__pagination .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                border: 1px solid #CBCBCB;
+                background-color: black;
+                opacity: 0.5;
+                vertical-align: bottom;
+            }
+            .engagement__activities__pagination .swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+            .engagement__activities__btn-set {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+            }
+            .engagement__activities__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                cursor: pointer;
+            }
+            .engagement__activities__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0006/btn-as-prev.svg);
+            }
+            .engagement__activities__btn-set__btn__next {
+                background-image: url(../../mocks/ST0006/btn-as-next.svg);
+            }
+
+            /* Summary */
+            .summary {
+                padding: 60px 0px 105px;
+            }
+            .summary__cont {
+                width: 1440px;
+                height: 720px;
+                border-radius: 30px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0007/photo-summary-visual.png) no-repeat right top;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 60px 70px 0px calc(50% + 283px);
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 116px 60px 0px calc(50% + 283px);
+                font-size: 44px;
+                font-family: 'LG_EI_Headline';
+                line-height: 48px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+            
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription__wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px 100px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription__tit {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 52px;
+                line-height: 58px;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .popup-discription__visual {
+                margin: 0px -90px 60px;
+                width: calc(100% + 180px);
+                height: 500px;
+            }
+            .popup-discription__visual__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discription__cont1 {
+                margin-top: 20px;
+                font-size: 28px;
+                font-weight: 550;
+                line-height: 38px;
+                letter-spacing: -0.14px;
+            }
+            .popup-discription__cont2 {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+                margin-top: 20px;
+            }
+            .popup-discription__photo {
+                margin-top: 60px;
+                width: 100%;
+            }
+            .popup-discription__photo__img {
+                width: 100%;
+                height: auto;
+            }
+            .popup-discription__video {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__video__player {
+                width: 100%;
+                height: 454px;
+            }
+            .popup-discription__discover-more {
+                text-align: center;
+                margin-top: 40px;
+            }
+            .popup-discription__discover-more__btn {
+                padding: 11px 20px;
+                border-radius: 30px;
+                border: 1px solid #898989;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 21px;
+            }
+            .popup-discription__discover-more__btn:after {
+                content: '';
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                margin-left: 5px;
+                background: url(../../mocks/ST0007/bullet-pd-discover-more.svg) no-repeat center center;
+            }
+            .popup-discription__btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription__btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription__btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription__btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="social-contribution-about">
+                <h2 class="social-contribution-about__tit">Adding warmth to our society</h2>
+                <p class="social-contribution-about__intro">
+                    We are committed to expanding opportunities <br />
+                    for local communities, youth, and individuals <br />
+                    with disabilities worldwide. We firmly believe <br />
+                    that creating meaningful change requires <br />
+                    everyone's collective efforts.
+                </p>
+                <div class="social-contribution-about__visual"></div>
+            </div>
+            <div class="engagement">
+                <h3 class="engagement__tit">Educational engagement</h3>
+                <div class="engagement__intro">
+                    <p class="engagement__intro__txt">
+                        Creating opportunities <br />
+                        through education
+                    </p>
+                    <p class="engagement__intro__txt">
+                        We have provided greater support for institutions and programs dedicated <br />
+                        to serving marginalized communities. Our efforts focus on fostering skill <br />
+                        development, providing technology training, and promoting career <br />
+                        advancement.
+                    </p>
+                </div>
+                <div class="swiper engagement__activities">
+                    <div class="swiper-wrapper engagement__activities__slide-wrap">
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#lg-koica-tvet" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor1-1">
+                                <p class="engagement__activities__slide__anchor__subject">LG-KOICA Hope TVET College</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#global-it-challenge" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor1-2">
+                                <p class="engagement__activities__slide__anchor__subject">
+                                    Global IT Challenge for Youth <br />
+                                    with Disabilities
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="lg-koica-tvet">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">LG-KOICA hope TVET college</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-lg-koica-tvet.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont2">The LG-KOICA Hope TVET College educates young people in Ethiopia to help them become independent. The school opened in 2014 by the Ethiopian government, the Korea International Cooperation Agency (KOICA), and NGOs. The LG Dubai Service Center provided its educational know-how to help LG build a platform where students can take online classes. In 2020, 228 out of 239 students completed the classes, and 80% of beginner course students and 95% of intermediate course students completed the theory class.</dd>
+                            <dd class="popup-discription__cont2">LG also set up Income Generation Activities (IGA) to help schools closed due to COVID-19. We will continue to expand and develop our businesses into vocational training schools that can provide the highest level of education. * Find more details in Sustainability Reports.</dd>
+                            <dd class="popup-discription__photo">
+                                <img src="../../mocks/ST0007/photo-lg-koica-tvet.png" alt=""  class="popup-discription__photo__img" />
+                            </dd>
+                            <dd class="popup-discription__discover-more">
+                                <a href="https://www.lgnewsroom.com/2022/07/better-life-story-how-yimenus-passion-for-technology-led-him-to-lg/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="global-it-challenge">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">Global IT Challenge for youth with <br />disabilities</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-global-it-challenge.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont2">Since 2011, LG has initiated the Global IT Challenge for Youth with Disabilities (GITC) to bridge the information gap among disabled youth and create a foundation for social advancement, like entering school and work. We continue to make efforts to improve participating countries' knowledge of disabilities by holding forums on IT and disabilities.</dd>
+                            <dd class="popup-discription__cont2">GITC is the world's only IT festival for disabled youth, overcoming barriers of disability, religion, culture, and nationality. Young people with disabilities (physical, hearing, vision, and development) from 20 different countries take part in four categories in the IT Paralympics.</dd>
+                            <dd class="popup-discription__video">
+                                <iframe width="800" height="454" src="https://www.youtube.com/embed/4TCwL966FLM?version=3&amp;enablejsapi=1" id="youtube_player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
+                            </dd>
+                            <dd class="popup-discription__discover-more">
+                                <a href="https://www.lgnewsroom.com/2022/11/lg-supports-young-technology-leaders-with-disabilities-through-2022-global-it-challenge/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="engagement">
+                <h3 class="engagement__tit">Local community engagement</h3>
+                <div class="engagement__intro">
+                    <p class="engagement__intro__txt">
+                        Advancing collaborative growth <br />
+                        within local communities
+                    </p>
+                    <p class="engagement__intro__txt">
+                        We take our social responsibility seriously, working collaboratively with <br />
+                        communities and individuals who share a dream of building a more <br />
+                        sustainable society.
+                    </p>
+                </div>
+                <div class="swiper engagement__activities">
+                    <div class="swiper-wrapper engagement__activities__slide-wrap">
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#lg-ambassador-program" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor2-1">
+                                <p class="engagement__activities__slide__anchor__subject">LG ambassador program</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#improve-housing" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor2-2">
+                                <p class="engagement__activities__slide__anchor__subject">
+                                    Ethiopian veterans housing <br />
+                                    improvement
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#lg-social-campus" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor2-3">
+                                <p class="engagement__activities__slide__anchor__subject">LG social campus</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide engagement__activities__slide">
+                            <a href="#esg-academy" onclick="popupDiscription(this.href); return false" class="engagement__activities__slide__anchor engagement__activities__slide__anchor2-4">
+                                <p class="engagement__activities__slide__anchor__subject">ESG academy</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination engagement__activities__pagination"></div>
+                    <div class="engagement__activities__btn-set">
+                        <div class="engagement__activities__btn-set__btn engagement__activities__btn-set__btn__prev"></div>
+                        <div class="engagement__activities__btn-set__btn engagement__activities__btn-set__btn__next"></div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="lg-ambassador-program">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">LG ambassador program</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-lg-ambassador-program.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont1">We create inclusive societies that work in harmony with the local area.</dd>
+                            <dd class="popup-discription__cont2">Since 2017, LG has been running a contest to help local community issues in Bangladesh. Residents submit ideas to fix a local issue, and LG chooses one individual to become an LG ambassador and receive support to solve the problem they raised.</dd>
+                            <dd class="popup-discription__cont2">We will keep providing solutions to residents concerned about the issues in the local communities. We increased the number of the LG Ambassador program to 5 countries in 2020 to give more people around the world a chance to change their community for the better.</dd>
+                            <dd class="popup-discription__video">
+                                <iframe width="800" height="454" src="https://www.youtube.com/embed/8stIOVyJ-q0?version=3&amp;enablejsapi=1" id="youtube_player2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  class="popup-discription__video__player"></iframe>
+                            </dd>
+                            <dd class="popup-discription__discover-more">
+                                <a href="https://www.lgnewsroom.com/2021/05/local-initiatives-global-benefits/ 
+                                " target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="improve-housing">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">Ethiopian veterans' housing <br />improvement</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-improve-housing.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont2">LG launched a project to improve housing in a veterans' village in Ethiopia, with help from the Community Chest of Korea and Habitat. Between 2021 to 2023, with a fund of KRW 700 million, we will renovate homes of veterans and low-income families, build communal kitchens and toilets, and install drains and communal showers.</dd>
+                            <dd class="popup-discription__cont2">We also plan to create toilets, drinking water facilities, and IT facilities in schools that veterans' families attend. Plus, we give youth and women practical ICT training, with the local LG-KOICA Hope TVET College. In particular, we provide detailed courses on CCTV repair and maintenance, which are in high demand locally. We hope these courses will contribute to higher household incomes.</dd>
+                            <dd class="popup-discription__photo">
+                                <img src="../../mocks/ST0007/photo-improve-housing.png" alt=""  class="popup-discription__photo__img" />
+                            </dd>
+                            <dd class="popup-discription__discover-more">
+                                <a href="https://www.lgnewsroom.com/2021/10/thanking-korean-war-veterans-in-africa/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="lg-social-campus">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">LG social campus</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-lg-social-campus.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont2">
+                                Since 2011, LG has been running LG Social Campus, a platform for financial, space, and growth support. <br />
+                                It also develops talent, so social economy companies in eco-friendly fields can achieve sustainable growth. We choose eco-friendly social economy companies, support company incentives, and provide programs to strengthen the companies' capabilities. We also support stable workplaces for social and economic ventures with potential growth. We help key talents and potential leaders to maintain a healthy social economy ecosystem in communities by creating a culture of social innovation, where local activists suggest ways to fix community issues.
+                            </dd>
+                            <dd class="popup-discription__photo">
+                                <img src="../../mocks/ST0007/photo-lg-social-campus.png" alt=""  class="popup-discription__photo__img" />
+                            </dd>
+                            <dd class="popup-discription__discover-more">
+                                <a href="https://www.lgnewsroom.com/2017/04/students-bring-fresh-perspective-on-innovation-in-lgs-hr-garage-program/" target="_blank" class="popup-discription__discover-more__btn">Discover more</a>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="esg-academy">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription__inner">
+                            <dt class="popup-discription__tit">ESG academy</dt>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0007/visual-esg-academy.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont2">The ESG Academy for College Students is an annual program creating talent suited to the ESG (Environment, Social, Governance) field. Since 2014, 230 people have completed the course. Students participate in lectures and mentoring and experience planning and practicing ESG activities.</dd>
+                            <dd class="popup-discription__cont2">They select works containing ESG messages or directly produce content and hold a photo exhibition to highlight or improve social issues. We contribute by researching ESG activities of other global companies and studying best practices. We also explore and analyze environmental and social problems, present solutions, and promote social economy companies. LG will keep running the ESG Academy for College Students and provide great support for future talents.</dd>
+                            <dd class="popup-discription__photo">
+                                <img src="../../mocks/ST0007/photo-esg-academy.png" alt=""  class="popup-discription__photo__img" />
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary__visual"></div>
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        With ongoing social contributions, we are <br />
+                        dedicated to enriching lives and making a <br />
+                        positive impact on individuals and <br />
+                        communities.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Ideal change starts <br />
+                        with what we <br />
+                        believe in
+                    </p>
+                </div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var socialContribution = socialContribution || {};
+                
+            socialContribution = {
+                engagement: function() {
+                    let swiper = new Swiper(".engagement__activities", {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                        pagination: {
+                            el: ".engagement__activities__pagination"
+                        },
+                        navigation: {
+                            nextEl: ".engagement__activities__btn-set__btn__next",
+                            prevEl: ".engagement__activities__btn-set__btn__prev",
+                        },
+                    });
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        slidesPerView: 3,
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            socialContribution.engagement();
+            socialContribution.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                //Youtube Api Setting
+                var youtubePlayer = document.querySelector(".popup-discription__video__player")
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                window.onYouTubeIframeAPIReady = function() {
+                    ytPlayer = new YT.Player("youtube_player", {});
+                    ytPlayer2 = new YT.Player("youtube_player2", {});
+                };
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                    
+                    if(youtubePlayer) {
+                        ytPlayer.stopVideo()
+                        ytPlayer2.stopVideo()
+                    }
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>
