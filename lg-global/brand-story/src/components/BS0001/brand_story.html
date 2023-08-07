@@ -58,26 +58,12 @@
         <!-- [code component area start] -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
         <style>
-            :root {
-                --parallex-bg-color: #F6F3EB;
-                --parallex-text-primary: #262626;
-                --parallex-text-secondery: #262626;
-                --slide-bar-color: #262626;
-                --bar-drag: #000
-            }
-            [data-color-mode='dark'] {
-                --parallex-bg-color: #262626;
-                --parallex-text-primary: #fff;
-                --parallex-text-secondery: #D0CBC1;
-                --slide-bar-color: #00000099;
-                --bar-drag: #F6F3EB;
-            }
 
             #brand-container a {text-decoration: none;}
 
             #brand-container {
                 transition: .5s ease;
-                background-color: var(--parallex-bg-color);
+                background-color: #262626;
             }
 
             /*visual video*/
@@ -86,9 +72,44 @@
                 width: 100%;
                 overflow: hidden;
                 position: relative;
-                background: no-repeat center url(../../mocks/BS0001/brand_visual_image.png);
-                background-size: cover;
             }
+            .brand-visual-film__video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+            }
+            .btn-play {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                background-color: #ffffff66;
+                backdrop-filter: blur(45px);
+                -webkit-backdrop-filter: blur(45px);
+                border: 1px solid #CBC8C280;
+                cursor: pointer;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .btn-play::before {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 25%;
+                height: 25%;
+                background: url(../../mocks/BS0001/btn-video-play.svg) no-repeat center;
+                background-size: contain;
+            }
+
 
             /*랜딩비주얼 스크롤다운 버튼*/
             .landing-visual__scrolldown {
@@ -114,7 +135,6 @@
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
             }
-
             @keyframes sd-dounce {
                 from {
                     transform: translateY(-0.5vh);
@@ -124,319 +144,216 @@
                 }
             }
 
-            /*공통*/
-            .brand__content__intro {
-                margin-top: 6.25vw;
-            }
-            .brand__content__title {
-                text-align: center;
-                font-size: 1.4583vw;
-                line-height: 1.9271vw;
-                margin-bottom: 1.3021vw;
-                color: var(--parallex-text-secondery);
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .brand__content__intro__title {
-                text-align: center;
-                font-family: 'LG_EI_Headline';
-                font-weight: 600;
-                font-size: 3.6458vw;
-                line-height: 4.0625vw;
-                color: var(--parallex-text-primary);
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .brand__content__intro__description {
-                text-align: center;
-                font-size: 1.4583vw;
-                line-height: 1.9271vw;
-                margin-top: 1.6667vw;
-                color: var(--parallex-text-primary);
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .brand-content__desc-only-mo {
-                text-align: center;
-                color: var(--parallex-text-primary);
-                margin-top: 24px;
-                display: none;
-                max-width: 340px;
-                font-size: 20px;
-                line-height: 27px;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            br.mo {display: none;}
 
-            /*pin*/
-            .parallex__pin-text > * {
-                /* opacity: 0; */
-                transform: translateY(150px);
-            }
-            .parallex__pin-text.active > * {
-                /* opacity: 1; */
-                transform: translateY(0);
-            }
-            .parallex__pin-text.active > *:nth-child(1) {transition-delay: 0s;}
-            .parallex__pin-text.active > *:nth-child(2) {transition-delay: 0.05s;}
-            .parallex__pin-text.active > *:nth-child(3) {transition-delay: 0.1s;}
-
-            /*marquee-content*/
-            .marquee-content {
-                margin-top: 6.25vw;
-                width: 100%;
-                overflow: hidden;
-            }
-            .marquee-content__inner {
-                display: flex;
-                gap: 30px;
-                height: 32.92vw;
-                max-height: 630px;
-            }
-            .marquee-content__inner li, 
-            .marquee-content__inner li img {
-                height: inherit;
-                max-height: inherit;
-            }
-
-            /*life-is-good*/
-            .life-is-good {
-                margin: 6.25vw 120px 0;
-            }
-            .life-is-good__visual {
-                width: 100%;
-                height: 49.2188vw;
-                background-color: rgba(157, 144, 69, 0.243);
-                border-radius: 40px;
-                overflow: hidden;
-            }
-            .life-is-good__visual > li {
-                height: 100%;
-            }
-            .life-is-good__visual > li > img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-
-            /*our value*/
-            .our-value__list {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin: 0 auto 470px;
-                max-width: 1920px;
+            .brand-story-content {
+                margin: 200px 0 220px;
                 padding: 0 120px;
             }
-            .value__list__item {
-                flex: 1;
-                height: 40.2604vw;
-                max-width: 29.5%;
-                max-height: 773px;
-                border-radius: 296px;
-                background: no-repeat center;
-                background-size: cover;
-                position: relative;
-                transition: transform .85s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .value__list__item::before {
-                content: '';
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: inherit;
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
-                backdrop-filter: blur(50px);
-                z-index: 1;
-                opacity: 0;
-                transition: opacity .5s cubic-bezier(0.075, 0.82, 0.165, 1);
-                pointer-events: none;
-            }
-
-            .value__list__item--experience {background-image: url(../../mocks/BS0001/our_value_innovation.png);}
-            .value__list__item--innovation {background-image: url(../../mocks/BS0001/our_value_customer.png);}
-            .value__list__item--power-smile {background-image: url(../../mocks/BS0001/our_value_power_a_smile.png);}
-            
-            .value__list__item:nth-child(1) {transform: translateY(470px); transition-delay: 0.1s;}
-            .value__list__item:nth-child(2) {transform: translateY(470px); transition-delay: 0.2s;}
-            .value__list__item:nth-child(3) {transform: translateY(470px); transition-delay: 0.3s;}
-            .our-value__list--active .value__list__item:nth-child(1) {transform: translateY(0px);}
-            .our-value__list--active .value__list__item:nth-child(2) {transform: translateY(200px);}
-            .our-value__list--active .value__list__item:nth-child(3) {transform: translateY(400px);}
-
-            .our-value__info-wrap {
-                position: relative;
-                z-index: 3;
+            /*info text*/
+            .intro-text {
+                margin: 120px 0 180px;
                 text-align: center;
-                height: 100%;
-                margin: 0 auto;
-                box-sizing: border-box;
-                padding: 0 25px 155px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-            }
-            .our-value__title {
                 color: #fff;
-                font-size:  2.29vw;
-                font-family: 'LG_EI_Headline';
-                font-weight: 600;
-                line-height: 1.2;
+                font-size: 40px;
+                line-height: 1.35;
+                letter-spacing: .4px;
             }
-            .our-value__desc {
-                color: #fff;
-                font-size: 1.15vw;
-                line-height: 1.2;
-                font-weight: 400;
+
+            /*imotionally-design*/
+            .imotionally-design {
                 overflow: hidden;
-                margin: 0;
-                opacity: 0;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+                position: relative;
+                margin: 0 -120px;
+                height: 1105px;
             }
-            .our-value__desc p {
-                margin-top: 32px;
-            }
-            .our-value__more-btn {
+            .imotionally-design__headline {
                 position: absolute;
-                bottom: 59px;
-                left: 50%;
-                transform: translateX(-50%);
-                display: block;
-                width: 64px;
-                height: 64px;
-                border-radius: 50%;
-                border: 1px solid #cbc8c24d;
-                background: no-repeat center url(../../mocks/BS0001/icons_more_view.svg);
-                background-size: 30px auto;
-                background-color: #00000099;
-                cursor: pointer;
-                z-index: 4;
-                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
-            }
-            .our-value__more-btn:hover {
-                transform: translateX(-50%) rotate(180deg);
-            }
-
-            .value__list__item--active .our-value__desc {
-                height: auto;
-                opacity: 1;
-            }
-            .value__list__item--active::before {
-                opacity: 1;
-            }
-            .value__list__item--active .our-value__more-btn {
-                transform:translateX(-50%) rotate(45deg);
-            }
-
-            /*Emotionally Intelligent Design*/
-            .parallex__visual {position: relative;}
-            .parallex__pin-text {
-                position: absolute;
-                z-index: 2;
+                z-index: 1;
                 top: 0;
                 left: 0;
-                width: 100%;
                 height: 100vh;
+                width: 100%;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                gap: 16px;
+            }
+            .imotionally-design__headline li {
+                position: relative;
+                font-size: 90px;
+                letter-spacing: .9px;
+                line-height: 1;
+                color: #7E7C77;
+                padding-bottom: 136px;
+                transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .imotionally-design__headline li p {
+                position: absolute;
+                bottom: 0;
+                font-size: 36px;
+                line-height: 1.2;
+                white-space: nowrap;
+            }
+            .imotionally-design__headline li p::before {
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 48px;
+                left: 50%;
+                top: -6px;
+                transform: translate(-50%, 0);
+                background-color: #F6F3EB;
+                opacity: 0;
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .imotionally-design__headline li span {
+                display: block;
+                transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            .imotionally-design__headline li:nth-child(1) p {right: 40px;}
+            .imotionally-design__headline li:nth-child(2) p {left: 20px;}
+            .imotionally-design__headline li:nth-child(3) p {left: 50%; transform: translateX(-50%);}
+            .imotionally-design__headline li.active {
+                color: #F6F3EB;
+            }
+            .imotionally-design__headline li.active span {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .imotionally-design__headline li.active p::before {
+                transform: translate(-50%, -100%);
+                opacity: 1;
             }
 
-            .emotional__bg {
-                width: 100%;
-                overflow: hidden;
-            }
-            .emotional__images {
+            .imotionally-design__imgwrap {
                 position: relative;
-                max-height: 2296px;
-                height: 213vh;
+                height: 100%;
             }
-            .emotional__images > li {
+            .imotionally-design__item {
+                border-radius: 20px;
                 position: absolute;
                 overflow: hidden;
-                border-radius: 20px;
             }
-            .emotional__images > li > img {
+
+            .imotionally-design__item:nth-child(1) {
+                width: 440px;
+                height: 248px;
+                top: 0;
+                left: 268px;
+            }
+            .imotionally-design__item:nth-child(2) {
+                width: 343px;
+                height: 204px;
+                top: 99px;
+                left: 1109px;
+            }
+            .imotionally-design__item:nth-child(3) {
+                width: 330px;
+                height: 222px;
+                top: 322px;
+                left: 1650px;
+            }
+            .imotionally-design__item:nth-child(4) {
+                width: 275px;
+                height: 275px;
+                top: 440px;
+                left: 28px;
+            }
+            .imotionally-design__item:nth-child(5) {
+                width: 484px;
+                height: 271px;
+                top: 781px;
+                left: 419px;
+            }
+            .imotionally-design__item:nth-child(6) {
+                width: 639px;
+                height: 410px;
+                top: 676px;
+                left: 1111px;
+            }
+
+            .imotionally-design__item img, 
+            .imotionally-design__item video {
+                position: absolute;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
-            .emotional__images > li:nth-child(1) {
-                top: 2.537%;
-                left: 9.11%;
-                width: 26.3vw;
-                height: 14.79vw;
-            }
-            .emotional__images > li:nth-child(2) {
-                top: 10.671%;
-                left: 40.83%;
-                width: 19.63vw;
-                height: 11.04vw;
-            }
-            .emotional__images > li:nth-child(3) {
-                top: 8.012%;
-                left: 72.71%;
-                width: 29.16vw;
-                height: 16.87vw;
-            }
-            .emotional__images > li:nth-child(4) {
-                top: 36.019%;
-                left: 3.28%;
-                width: 23.54vw;
-                height: 13.17vw;
-            }
-            .emotional__images > li:nth-child(5) {
-                top: 45.852%;
-                left: 33.65%;
-                width: 14.32vw;
-                height: 14.32vw;
-            }
-            .emotional__images > li:nth-child(6) {
-                top: 39.409%;
-                left: 57.97%;
-                width: 37.86vw;
-                height: 26.4vw;
-            }
-            .emotional__images > li:nth-child(7) {
-                top: 62.192%;
-                left: 11.20%;
-                width: 29.58vw;
-                height: 18.17vw;
-                border-radius: 50px;
-            }
-            .emotional__images > li:nth-child(8) {
-                top: 67.134%;
-                left: 48.33%;
-                width: 14.37vw;
-                height: 22.81vw;
-                border-radius: 10.42vw;
-            }
-            .emotional__images > li:nth-child(9) {
-                top: 81.617%;
-                left: -15.47%;
-                width: 35.72vw;
-                height: 19.16vw;
-                border-radius: 12px;
-            }
-            .emotional__images > li:nth-child(10) {
-                top: 72.699%;
-                left: 70.73%;
-                width: 35.93vw;
-                height: 22.44vw;
-                border-radius: 15.10vw;
-            }
 
 
-            /*Our Core Values----------*/
-            .our-identity {
-                padding: 9.0104vw 120px 10.6771vw;
+
+            .looping-video-content {
+                position: relative;
+                margin: 0 auto;
+                max-width: 1114px;
+                height: 621px;
+                border-radius: 20px;
                 overflow: hidden;
             }
-            .our-identity__inner {
+            .looping-video-content video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .looping-video-multi {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                max-width: 1680px;
+                margin: 0 auto;
+            }
+            .looping-video-multi li {
+                position: relative;
+                border-radius: 20px;
+                width: calc((100% / 40px) / 3);
+                padding-bottom: 100%;
+                overflow: hidden;
+            }
+            .looping-video-multi li video,
+            .looping-video-multi li img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            
+
+            .brand-element__title {
+                margin-top: 200px;
+                text-align: center;
+            }
+            .brand-element__title__desc {
+                display: block;
+                font-size: 28px;
+                color: #D0CBC1;
+                line-height: 1.3;
+                margin-bottom: 32px;
+            }
+            .brand-element__title__text {
+                color: #F6F3EB;
+                font-size: 70px;
+                letter-spacing: 0.7px;
+            }
+
+
+            /*brand elements 슬라이드*/
+            .brand-elements {
+                padding: 3.6458vw 6.25vw 4.5833vw;
+                overflow: hidden;
+            }
+            .brand-element__inner {
                 position: relative;
                 width: 87.5vw;
                 margin: 0px auto;
+                max-width: 1680px;
             }
 
+
+            .our-identity__slider { margin-top: 48px;}
             .our-identity__slide {
                 position: relative;
                 width: 830px;
@@ -446,7 +363,6 @@
                 box-sizing: border-box;
                 padding: 40px;
                 z-index: 1;
-                background-color: #F6F3EB;
             }
             .our-identity__slide::before,
             .our-identity__slide::after {
@@ -460,21 +376,12 @@
                 position: absolute;
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .our-identity__slide::before {
-                    z-index: -1;
-            }
-            .our-identity__slide::after {
-                z-index: -2;
-                opacity: 0;
-            }
+            .our-identity__slide::before {z-index: -1; opacity: 1;}
+            .our-identity__slide::after {z-index: -2; opacity: 0;}
+            .our-identity__slide:hover::before {opacity: 0;}
+            .our-identity__slide:hover::after {opacity: 1;}
 
-            .our-identity__slide:hover::before {
-                opacity: 0;
-            }
-            .our-identity__slide:hover::after {
-                opacity: 1;
-            }
-
+            .our-identity__slide--photography {background-color: #F6F3EB;}
             .our-identity__slide--photography::before {
                 width: 52%;
                 height: 62%;
@@ -487,7 +394,6 @@
                 transform: translate(-50%, -50%) scale(1.1);
             }
             .our-identity__slide--photography::after {display: none;}
-
             .our-identity__slide--logo::before {background-image: url(../../mocks/BS0001/brand_slide_logo.png);}
             .our-identity__slide--logo::after {background-image: url(../../mocks/BS0001/brand_slide_logo-hover.png);}
             .our-identity__slide--color::before {background-image: url(../../mocks/BS0001/brand_slide_color.png);}
@@ -506,9 +412,7 @@
                 color: #222;
                 transition: color .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .our-identity__slide--tagline .our-identity__item-title {
-                color: #fff;
-            }
+            .our-identity__slide--tagline .our-identity__item-title {color: #fff;}
             .our-identity__slide:hover .our-identity__item-title {color: #fff;}
             .our-identity__progressbar {
                 margin-top: 64px;
@@ -517,7 +421,7 @@
                 background-color: #7E7C77;
             }
             .our-identity__progressbar .swiper-scrollbar-drag {
-                background: var(--bar-drag);
+                background: #F6F3EB;
             }
             .our-identity__move-btn {
                 position: absolute;
@@ -536,10 +440,11 @@
                 transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
             }
             .our-identity__slide:hover .our-identity__move-btn {
-                background-color: var(--slide-bar-color);
+                background-color: #00000099;
                 border-color: #CBC8C24D;
                 background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
+
 
             @media (max-width: 1500px) {
                 
@@ -565,74 +470,50 @@
                     margin-top: 180px;
                 }
                 
-                /*marquee-content*/
-                .marquee-content {
-                    margin-top: 80px;
-                }
-                .marquee-content__inner {
-                    gap: 30px;
-                    height: 471px;
-                }
+                
 
-                /*our value*/
-                .our-value__list {
-                    margin-bottom: 380px;
-                    gap: 20px;
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 72px 120px 80px;
                 }
-                .value__list__item {
-                    max-width: unset;
-                    max-height: unset;
-                    width: 387px;
-                    height: 600px;
-                }
-
-                .value__list__item:nth-child(1) {transform: translateY(380px);}
-                .value__list__item:nth-child(2) {transform: translateY(380px);}
-                .value__list__item:nth-child(3) {transform: translateY(380px);}
-                .our-value__list--active .value__list__item:nth-child(1) {transform: translateY(33px);}
-                .our-value__list--active .value__list__item:nth-child(2) {transform: translateY(180px);}
-                .our-value__list--active .value__list__item:nth-child(3) {transform: translateY(297px);}
-
-                .our-value__info-wrap {
-                    padding: 0 25px 130px;
-                }
-                .our-value__title {
-                    font-size:  36px;
-                    font-weight: 600;
-                }
-                .our-value__desc {
-                    font-size: 18px;
-                }
-                .our-value__desc p {
-                    margin-top: 12px;
-                }
-                .our-value__more-btn {
-                    bottom: 52px;
-                    width: 48px;
-                    height: 48px;
-                    background-size: 24px auto;
-                }
-
-
-                /*Our Core Values----------*/
-                .our-identity {
-                    padding: 100px 120px 120px;
-                }
-                .our-identity__inner {
+                .brand-element__inner {
                     width: 100%;
                 }
-
+                .brand-elements__item-title {
+                    padding: 18px 28px;
+                    font-size: 24px;
+                    line-height: 32px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 48px;
+                }
                 .our-identity__slide {
                     width: 590px;
-                    height: 437px;
+                    height: 360px;
+                    padding: 28px;
+                    border-radius: 20px;
                 }
+
                 .our-identity__item-title {
                     font-size: 24px;
                     line-height: 1.3;
                 }
-                .our-identity__slide:hover .our-identity__item-title {color: #fff;}
-                .our-identity__progressbar {
-                    margin-top: 48px;
+
+                .logo__bottom-cont {
+                    bottom: 30px;
+                }
+                .logo__bottom-cont__title {
+                    font-size: 18px;
+                    line-height: 28px;
+                    margin-bottom: 4px;
+                }
+                .logo__bottom-cont__desc {
+                    font-size: 17px;
+                    line-height: 26px;
+                }
+                .our-identity__move-btn {
+                    left: 28px;
+                    bottom: 28px;
                 }
 
 
@@ -660,63 +541,21 @@
                     margin-top: 24px;
                 }
 
-                /*marquee-content*/
-                .marquee-content__inner {
-                    height: 254px;
+                
+
+                
+                
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 32px 24px 40px;
+                }
+                .brand-elements__slider {
+                    margin: 24px -20px 0;
                 }
 
-
-                /*our value*/
-                .our-value__list {
-                    padding: 0 32px;
-                    margin: 48px 0 80px;
-                    gap: 20px;
-                    display: grid;
-                    grid-template-columns: repeat(2, 2fr);
-                    gap: 32px;
-                }
-                .value__list__item {
-                    max-width: unset;
-                    max-height: unset;
-                    width: 100%;
-                    height: 58.4vw;
-                }
-                .value__list__item:nth-child(1) {
-                    grid-row: 1 / span 2;
-                }
-            
-                .value__list__item:nth-child(1) {transform: translateY(0px);}
-                .value__list__item:nth-child(2) {transform: translateY(0px);}
-                .value__list__item:nth-child(3) {transform: translateY(0px);}
-                .our-value__list--active .value__list__item:nth-child(1) {transform: translateY(0px);}
-                .our-value__list--active .value__list__item:nth-child(2) {transform: translateY(0px);}
-                .our-value__list--active .value__list__item:nth-child(3) {transform: translateY(0px);}
-
-                .our-value__info-wrap {
-                    padding: 0 20px 105px;
-                }
-                .our-value__title {
-                    font-size:  26px;
-                }
-                .our-value__desc {
-                    font-size: 15px;
-                    max-width: 300px;
-                    margin: 0 auto;
-                }
-                .our-value__desc p {
-                    margin-top: 16px;
-                }
-                .our-value__more-btn {
-                    bottom: 32px;
-                }
-
-                /*Our Core Values----------*/
-                .our-identity {
-                    padding: 72px 20px 110px;
-                }
                 .our-identity__slide {
-                    width: 247px;
-                    height: 247px;
+                    width: 291px;
+                    height: 291px;
                     border-radius: 10px;
                     padding: 16px;
                 }
@@ -728,13 +567,20 @@
                     margin-top: 24px;
                     height: 1px;
                 }
-
                 .our-identity__move-btn {
                     width: 48px;
                     height: 48px;
                     background-size: 24px auto;
                     left: 16px;
                     bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 32px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
                 }
             }
 
@@ -745,152 +591,31 @@
 
                 /*visual video*/
                 .brand-visual-film {
-                    background-image: url(../../mocks/BS0001/brand_visual_image-m.png);
+
                 }
 
-                /*공통*/
-                .brand-visual-film + .content__color-section {
-                    margin-top: 80px;
-                }
-                .brand__content__intro {
-                    margin-top: 80px;
-                    padding: 0 20px;
-                    box-sizing: border-box;
-                }
-                .brand__content__title {
-                    font-size: 20px;
-                    line-height: 27px;
-                    margin-bottom: 16px;
-                }
-                .brand__content__intro__title {
-                    font-size: 36px;
-                    line-height: 44px;
-                }
-                .brand__content__intro__description {
-                    font-size: 20px;
-                    line-height: 27px;
-                    margin-top: 24px;
-                }
-                .brand__content__intro__description br {
-                    display: none;
-                }
-                .brand-content__desc-only-mo {
-                    display: unset;
-                }
-                br.mo {display: unset;}
 
 
-                /*marquee-content*/
-                .marquee-content__inner {
-                    height: 254px;
-                }
-
-                /*our value*/
-                .our-value__list {
-                    margin: 48px auto 166px;
-                    grid-template-columns: 1fr;
-                    gap: 32px;
-                }
-                .value__list__item {
-                    height: 450px;
-                    max-height: unset;
-                    width: 100%;
-                    max-width: 335px;
-                    border-radius: 78.93vw;
-                    flex: unset;
-                    margin: 0 auto;
-                }
-                .value__list__item:nth-child(1) {grid-row: unset;}
-                .value__list__item:nth-child(1),
-                .value__list__item:nth-child(2),
-                .value__list__item:nth-child(3),
-                .our-value__list--active .value__list__item:nth-child(1),
-                .our-value__list--active .value__list__item:nth-child(2),
-                .our-value__list--active .value__list__item:nth-child(3) {transform: unset}
                 
-                .our-value__info-wrap {
-                    padding: 0 20px 100px;
+                /*brand elements 슬라이드*/
+                .brand-elements {
+                    padding: 70px 120px 88px;
+                }
+                .brand-elements__slider {
+                    margin: 76px 0 0;
                 }
 
-                .our-value__title {
-                    font-size: 26px;
+                .our-identity__slide {
+                    width: 590px;
+                    height: 437px;
                 }
-                .our-value__desc {
-                    font-size: 15px;
-                    line-height: 20px;
+                .our-identity__item-title {
+                    font-size: 24px;
+                    line-height: 32px;
                 }
-                .our-value__desc p {
-                    margin-top: 16px;
+                .our-identity__progressbar {
+                    margin-top: 48px;
                 }
-                .our-value__more-btn {
-                    bottom: 32px;
-                }
-
-                .emotional__images {
-                    height: 365vw;
-                }
-                .emotional__images > li {border-radius: 8px;}
-                .emotional__images > li:nth-child(1) {
-                    top: 3.83%;
-                    left: 5.33%;
-                    width: 48.00vw;
-                    height: 26.93vw;
-                }
-                .emotional__images > li:nth-child(2) {
-                    top: 18.31%;
-                    left: 29.33%;
-                    width: 44.80vw;
-                    height: 25.33vw;
-                }
-                .emotional__images > li:nth-child(3) {
-                    top: 11.49%;
-                    left: 60.80%;
-                    width: 48.27vw;
-                    height: 27.73vw;
-                }
-                .emotional__images > li:nth-child(4) {
-                    top: 53.15%;
-                    left: 5.33%;
-                    width: 48.27vw;
-                    height: 26.93vw;
-                }
-                .emotional__images > li:nth-child(5) {
-                    top: 68.31%;
-                    left: 13.87%;
-                    width: 24.53vw;
-                    height: 24.53vw;
-                }
-                .emotional__images > li:nth-child(6) {
-                    top: 63.64%;
-                    left: 48.53%;
-                    width: 46.67vw;
-                    height: 32.53vw;
-                }
-                .emotional__images > li:nth-child(7) {
-                    top: 78.23%;
-                    left: 38.13%;
-                    width: 44.80vw;
-                    height: 27.47vw;
-                    border-radius: 4.53vw;
-                }
-                .emotional__images > li:nth-child(8) {
-                    top: 88.41%;
-                    left: 46.40%;
-                    width: 25.60vw;
-                    height: 40.80vw;
-                }
-                .emotional__images > li:nth-child(9) {
-                    top: 86.78%;
-                    left: -12.00%;
-                    width: 41.33vw;
-                    height: 27.73vw;
-                }
-
-                .emotional__images > li:nth-child(10) {
-                    display: none;
-                }
-
-
 
             }
 
@@ -920,276 +645,129 @@
                     bottom: 60px;
                 }
 
-                /*공통*/
-                .brand__content__title {
-                    font-size: 28px;
-                    line-height: 37px;
-                    margin-bottom: 25px;
-                }
-                .brand__content__intro__title {
-                    font-size: 70px;
-                    line-height: 78px;
-                }
-                .brand__content__intro__description {
-                    font-size: 28px;
-                    line-height: 37px;
-                    margin-top: 32px;
-                }
 
-                /*marquee-content*/
-                .marquee-content {
-                    margin-top: 120px;
-                }
-
-                /*our value*/
-                .our-value__title {
-                    font-size: 44px;
-                }
-                .our-value__desc {
-                    font-size: 22px;
-                }
-
-                /*Our identity----------*/
-                .our-identity {
-                    padding: 173px 120px 205px;
-                }
-                .our-identity__inner {
-                    max-width: 1680px;
-                }
-                .our-identity__item-title {
-                    font-size: 36px;
-                    line-height: 42px;
-                }
-
-                /*Emotionally Intelligent Design*/
-                .parallex__pin-text {
-                    max-height: 1080px;
-                }
-                .emotional__images {
-                    height: 2296px;
-                    max-width: 1920px;
-                    margin: 0 auto;
-                }
-                .emotional__images > li:nth-child(1) {
-                    top: 63px;
-                    left: 175px;
-                    width: 505px;
-                    height: 284px;
-                }
-                .emotional__images > li:nth-child(2) {
-                    top: 265px;
-                    left: 784px;
-                    width: 377px;
-                    height: 212px;
-                }
-                .emotional__images > li:nth-child(3) {
-                    top: 199px;
-                    left: 1396px;
-                    width: 560px;
-                    height: 324px;
-                }
-                .emotional__images > li:nth-child(4) {
-                    top: 895px;
-                    left: 63px;
-                    width: 452px;
-                    height: 253px;
-                }
-                .emotional__images > li:nth-child(5) {
-                    top: 1139px;
-                    left: 646px;
-                    width: 275px;
-                    height: 275px;
-                }
-                .emotional__images > li:nth-child(6) {
-                    top: 979px;
-                    left: 1113px;
-                    width: 727px;
-                    height: 507px;
-                }
-                .emotional__images > li:nth-child(7) {
-                    top: 1519px;
-                    left: 215px;
-                    width: 568px;
-                    height: 349px;
-                    border-radius: 50px;
-                }
-                .emotional__images > li:nth-child(8) {
-                    top: 1594px;
-                    left: 911px;
-                    width: 276px;
-                    height: 438px;
-                    border-radius: 200px;
-                }
-                .emotional__images > li:nth-child(9) {
-                    top: 1928px;
-                    left: -198px;
-                    width: 686px;
-                    height: 368px;
-                    border-radius: 12px;
-                }
-                .emotional__images > li:nth-child(10) {
-                    top: 1807px;
-                    left: 1354px;
-                    width: 690px;
-                    height: 431px;
-                    border-radius: 289px;
-                }
+                
             }
 
 
         </style>
         <!-- html code -->
-        <div id="brand-container" data-color-mode="prevent">
+        <div id="brand-container">
             <div class="brand-visual-film visual__top">
-                <!-- <video class="brand-visual-film__bg" autoplay="autoplay" muted="muted" loop="loop">
-                    <source src="../../mocks/BS0001/brand_film_master_visual.mp4" type="video/mp4">
-                </video> -->
-                <!-- <div class="brand-visual-film__abs">
-                    <h2 class="brand-visual-film__title">We’re bringing a smile<br> back to tech</h2>
-                    <a class="brand-visual-film__play-btn" href="#">Play film</a>
-                </div> -->
+                <video muted playsinline loop class="brand-visual-film__video">
+                    <source src="../../mocks/BS0001/visual_main_video_d.mp4" type="video/mp4" media="(min-width: 769px)" data-poster-mo="../../mocks/BS0001/Expressive_symbol_wink_d.png"></source>
+                    <source src="../../mocks/BS0001/visual_main_video_m.mp4" type="video/mp4" data-poster-pc="../../mocks/BS0001/Expressive_symbol_wink_m.png"></source>
+                </video>
+                <button class="btn-play"></button>
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
                 </div>
             </div>
-            <div class="content__color-section" data-color-trigger="prevnet">
-                <div class="brand__content__intro">
-                    <h3 class="brand__content__title up-text">Our Mission</h3>
-                    <p class="brand__content__intro__title up-text">Innovation for a better life</p>
-                    <p class="brand__content__intro__description up-text">
-                        We create a better life for people and a better future <br>
-                        for our planet through smart life solutions*.
-                    </p>
-                </div>
-                <div class="marquee-content">
-                    <ul class="marquee-content__inner">
-                        <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
-                        <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
-                        <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
-                        <li><img src="../../mocks/BS0001/our_mission_marquee_image.png" alt=""></li>
+            <div class="brand-story-content">
+                <p class="intro-text">
+                    LG Electronics has been designing every side of life for <br>
+                    generations. Bringing a smile to technology. Balancing <br>
+                    warmth and innovations. Everything we design is <br>
+                    guided by our Design Philosophy.
+                </p>
+                <div class="imotionally-design">
+                    <ul class="imotionally-design__headline">
+                        <li class="active">
+                            Emotionally
+                            <p><span>We bring warmth</span></p>
+                        </li>
+                        <li>
+                            Intelligent
+                            <p><span>and innovation</span></p>
+                        </li>
+                        <li>
+                            Design
+                            <p><span>to all we design</span></p>
+                        </li>
                     </ul>
-                </div>
-                <div class="our-values__container">
-                    <div class="brand__content__intro">
-                        <h3 class="brand__content__title">Our Core Values</h3>
-                        <p class="brand__content__intro__title">Staying true to who we are</p>
-                        <p class="brand__content__intro__description">
-                            LGE’s core values go into all our work, including our <br>
-                            products, communication, and services, to maximize our <br>
-                            strength and pursue LGness.
-                        </p>
-                    </div>
-                    <ul class="our-value__list">
-                        <li class="value__list__item value__list__item--experience">
-                            <dl class="our-value__info-wrap">
-                                <dt class="our-value__title">
-                                    Uncompromising <br>
-                                    customer <br>
-                                    experience
-                                </dt>
-                                <dd class="our-value__desc">
-                                    <p>
-                                        We consistently pursue higher quality to ensure that our products, services, <br>
-                                        communication, and everything we provide meet our uncompromising standards.
-                                    </p>
-                                </dd>
-                            </dl>
-                            <button class="our-value__more-btn"></button>
+                    <ul class="imotionally-design__imgwrap">
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_01.mp4" type="video/mp4"/></video>
                         </li>
-                        <li class="value__list__item value__list__item--innovation">
-                            <dl class="our-value__info-wrap">
-                                <dt class="our-value__title">
-                                    Human-centered<br>
-                                    Innovation
-                                </dt>
-                                <dd class="our-value__desc">
-                                    <p>We sincerely look at diverse people and their lifestyles, creating remarkably innovative smart life solutions to lead the whole world in a better way.</p>
-                                </dd>
-                            </dl>
-                            <button class="our-value__more-btn"></button>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_02.mp4" type="video/mp4"/></video>
                         </li>
-                        <li class="value__list__item value__list__item--power-smile">
-                            <dl class="our-value__info-wrap">
-                                <dt class="our-value__title">
-                                    Warmth to <br>power a smile
-                                </dt>
-                                <dd class="our-value__desc">
-                                    <p>We put care and thoughtfulness into everything we do, to make people’s lives, communities, and the environment better, ensuring to leave people with a smile.</p>
-                                </dd>
-                            </dl>
-                            <button class="our-value__more-btn"></button>
+                        <li class="imotionally-design__item">
+                            <img src="../../mocks/BS0001/emotionally_intelligent_item_03.png" alt="">
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_04.mp4" type="video/mp4"/></video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_05.mp4" type="video/mp4"/></video>
+                        </li>
+                        <li class="imotionally-design__item">
+                            <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_06.mp4" type="video/mp4"/></video>
                         </li>
                     </ul>
                 </div>
+                <p class="intro-text">
+                    Moving forward, we want to ensure that our approach to design <br>
+                    blends logic and magic. That our identity is guided by a clear<br>
+                    philosophy. And ultimately, that our execution delivers on our <br>
+                    mission and core values.
+                </p>
+                <div class="looping-video-content">
+                    <video muted playsinline loop autoplay>
+                        <source src="../../mocks/BS0001/looping-video-content.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <p class="intro-text">
+                    So we’ve developed a design philosophy that guides all our <br>
+                    design decisions. It means every experience we create can <br>
+                    help people feel Life’s Good.
+                </p>
+                <ul class="looping-video-multi">
+                    <li><video muted playsinline loop autoplay><source src="../../mocks/BS0001/looping-video-multi-01.mp4" type="video/mp4"></source></video></li>
+                    <li><img src="../../mocks/BS0001/looping-video-multi-02.png" alt=""></li>
+                    <li><video muted playsinline loop autoplay><source src="../../mocks/BS0001/looping-video-multi-03.mp4" type="video/mp4"></source></video></li>
+                </ul>
             </div>
-
-            <div class="content__color-section">
-                <div class="parallex__visual">
-                    <div class="parallex__pin-text">
-                        <h3 class="brand__content__title">Guided by our design philosophy</h3>
-                        <p class="brand__content__intro__title">Emotionally<br class="mo"> Intelligent Design</p>
-                        <p class="brand-content__desc-only-mo">
-                            It means we’re constantly reading the 
-                            room, understanding what people 
-                            want and designing experiences that 
-                            make people feel Life’s Good.
-                        </p>
+            
+            <div class="brand-elements">
+                <div class="brand-element__inner" >
+                    <div class="brand-element__title">
+                        <span class="brand-element__title__desc">Our core elements</span>
+                        <h1 class="brand-element__title__text">Coming to life through our identity</h1>
                     </div>
-                    <div class="emotional__bg">
-                        <ul class="emotional__images" data-color-trigger="dark">
-                            <li><img src="../../mocks/BS0001/01_LG_BrandFilm_EI_Bow.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/02_LG_BrandFilm_EI_Gradient.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/03_LG_BrandFilm_EI_Product.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/04_LG_BrandFilm_EI_Photo.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/05_LG_BrandFilm_EI_Controller.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/06_LG_BrandFilm_EI_Fill.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/07_LG_BrandFilm_EI_building.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/08_LG_BrandFilm_EI_heart.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/09_LG_BrandFilm_EI_product.png" alt=""></li>
-                            <li><img src="../../mocks/BS0001/10_LG_BrandFilm_EI_package.png" alt=""></li>
+                    <div class="our-identity__slider">
+                        <ul class="our-identity__slides swiper-wrapper">
+                            <li class="our-identity__slide our-identity__slide--logo swiper-slide">
+                                <h3 class="our-identity__item-title">Logo</h3>
+                                <a class="our-identity__move-btn" href="../BS0002/brand_logo.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--color swiper-slide">
+                                <h3 class="our-identity__item-title">Color & Gradients</h3>
+                                <a class="our-identity__move-btn" href="../BS0003/brand_colors.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--photography swiper-slide">
+                                <h3 class="our-identity__item-title">Photography</h3>
+                                <a class="our-identity__move-btn" href="../BS0005/brand_photography.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--design swiper-slide">
+                                <h3 class="our-identity__item-title">Design System</h3>
+                                <a class="our-identity__move-btn" href="../BS0006/brand_design_system.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+                                <h3 class="our-identity__item-title">Slogan</h3>
+                                <a class="our-identity__move-btn" href="../BS0004/brand_tagline.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--typo swiper-slide">
+                                <h3 class="our-identity__item-title">Typography</h3>
+                                <a class="our-identity__move-btn" href="../BS0007/brand_typography.html"></a>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                <h3 class="brand__content__title">Our core elements</h3>
-                <p class="brand__content__intro__title">Coming to life <br>through our identity</p>
-                <div class="our-identity">
-                    <div class="our-identity__inner">
-                        <div class="our-identity__slider">
-                            <ul class="our-identity__slides swiper-wrapper">
-                                <li class="our-identity__slide our-identity__slide--logo swiper-slide">
-                                    <h3 class="our-identity__item-title">Logo</h3>
-                                    <a class="our-identity__move-btn" href="../BS0002/brand_logo.html"></a>
-                                </li>
-                                <li class="our-identity__slide our-identity__slide--color swiper-slide">
-                                    <h3 class="our-identity__item-title">Color & Gradients</h3>
-                                    <a class="our-identity__move-btn" href="../BS0003/brand_colors.html"></a>
-                                </li>
-                                <li class="our-identity__slide our-identity__slide--photography swiper-slide">
-                                    <h3 class="our-identity__item-title">Photography</h3>
-                                    <a class="our-identity__move-btn" href="../BS0005/brand_photography.html"></a>
-                                </li>
-                                <li class="our-identity__slide our-identity__slide--design swiper-slide">
-                                    <h3 class="our-identity__item-title">Design System</h3>
-                                    <a class="our-identity__move-btn" href="../BS0006/brand_design_system.html"></a>
-                                </li>
-                                <li class="our-identity__slide our-identity__slide--tagline swiper-slide">
-                                    <h3 class="our-identity__item-title">Slogan</h3>
-                                    <a class="our-identity__move-btn" href="../BS0004/brand_tagline.html"></a>
-                                </li>
-                                <li class="our-identity__slide our-identity__slide--typo swiper-slide">
-                                    <h3 class="our-identity__item-title">Typography</h3>
-                                    <a class="our-identity__move-btn" href="../BS0007/brand_typography.html"></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="our-identity__progress-container">
-                            <div class="our-identity__progressbar"></div>
-                        </div>
+                    <div class="our-identity__progress-container">
+                        <div class="our-identity__progressbar"></div>
                     </div>
                 </div>
             </div>
-
-
         </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -1200,145 +778,71 @@
         <script>
             const roundOffsetY = (num) => Number(num.toFixed(3))
             const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
-            
-            function colorModeChange() {
 
-                const changeMode = document.querySelector('[data-color-mode]')
-                const changeTriggerAll = document.querySelectorAll('[data-color-trigger]')
+            function setClass(el, currentClass) {
+                let element = el
+                
+                const getFirstClass = (element) => {return element.classList[0]}
+                const getSibs = siblings(el, getFirstClass(el))
 
-                let winPosY = window.pageYOffset
-                let colorValue = 'prevent'
-                let lastColorValue = ''
-                let ifChange = ''
-
-                window.addEventListener('scroll', function() {
-                    winPosY = window.pageYOffset
-
-                    changeTriggerAll.forEach(trigger => {
-                        let rect = trigger.getBoundingClientRect()
-
-                        let offsetY = rect.top + window.pageYOffset - (window.innerHeight * 0.4)
-                        let heightY = roundOffsetY(offsetY) + rect.height
-
-                        if (roundOffsetY(offsetY) < winPosY && heightY > winPosY) {
-                            colorValue = trigger.dataset.colorTrigger
-
-                            init(colorValue)
-                        }
-                    })                
-
+                el.classList.add(currentClass)
+                getSibs.forEach(sib => {
+                    sib.classList.remove(currentClass)
                 })
-                function init(val) {
-                    if (val != lastColorValue) {
-                        changeMode.dataset.colorMode = val
-                        lastColorValue = val
+            }
+
+            /*메인 화면 비디오*/
+            function visualVideo() {
+                const video = document.querySelector('.brand-visual-film__video')
+                let isMobile = ''
+                let lastSize = ''
+                let played = false
+
+                /*pc, mobile 포스터 반영*/
+                function posterInit(winW) {
+                    768 >= winW ? isMobile = 'pc' : isMobile = 'mo'
+                    if (isMobile != lastSize) {
+                        isMobile === 'mo' ? setPoster(isMobile) : setPoster(isMobile)
+                        lastSize = isMobile
                     }
                 }
-            }
-
-            // function parallaxImageMotion(targetWrap) {
-            //     const targetItems = targetWrap.querySelectorAll('li')
-            //     const targetParent = targetWrap.parentElement
-            //     const targetGrand = targetParent.parentElement
-            //     const targetTitle = document.querySelector('.parallex__pin-text')
-
-                
-            //     let totalScroll = targetWrap.getBoundingClientRect().height
-            //     let endPoint = totalScroll - window.innerHeight
-            //     let endPercent = Math.floor((endPoint / totalScroll) * 100)
-
-            //     gsap.to(targetItems, {
-            //         y: (i, target) => -totalScroll * target.dataset.speed,
-            //         ease: "none",
-            //         scrollTrigger: {
-            //             trigger: targetWrap,
-            //             start: `top top`,
-            //             end: `${endPercent}% top`,
-            //             pin: true,
-            //             // markers: true,
-            //             scrub: 0.2,
-            //             onUpdate: self => {
-            //                 self.progress > 0.01 && self.progress <= 0.99 ? targetParent.style.opacity = 1 : targetParent.style.opacity = 0
-            //                 self.progress > 0.2 && self.progress <= 0.9 ? targetTitle.style.opacity = 1 : targetTitle.style.opacity = 0
-            //                 self.progress > 0.22 && self.progress <= 0.88 ? targetTitle.classList.add('active') : targetTitle.classList.remove('active')
-
-            //             }
-            //         },
-            //     })
-            // }
-
-            function marquee() {
-
-                const marqueeEl = document.querySelectorAll('.marquee-content__inner > li')
-
-                marqueeEl.forEach((item, index) => {
-                    marqueeMotionSet(item, -100)
-                })
-                
-                function marqueeMotionSet(item, xPer) {
-                    let distance = item.clientWidth;
-
-                    const tl = new gsap.timeline({ });
-
-                    tl.to(item, 30, {
-                        ease: "none",
-                        xPercent: xPer,
-                        modifiers: {
-                            x: gsap.utils.unitize(x => parseFloat(x) % distance) //force x value to be between 0 and 500 using modulus
-                        },
-                        repeat: -1
-                    });
+                function setPoster (winValue) {
+                    let mobilePoster = video.querySelector(`source[data-poster-${winValue}]`)
+                    video.poster = mobilePoster.getAttribute(`data-poster-${winValue}`)
                 }
-            }
 
-            function listShowUp() {
-                let triggerWrap = document.querySelector(".our-values__container")
-                let showupList = document.querySelector(".our-value__list")
-
-                let targetPoint = triggerWrap.offsetTop - (window.innerHeight * 0.4)
-
-                gsap.timeline({
-                    scrollTrigger: {
-                        trigger: triggerWrap,
-                        start: targetPoint,
-                        end: targetPoint,
-                        onEnter: function() {
-                            showupList.classList.add("our-value__list--active")
-                        },
-                        onLeaveBack: function() {
-                            showupList.classList.remove("our-value__list--active")
-                        },
-                        onLeave: function() {
-                            showupList.classList.add("our-value__list--active")
-                        }
-                    }
-                })
-            }
-
-            function ourValueView() {
-                const btns = document.querySelectorAll('.our-value__more-btn')
-                const desc = document.querySelectorAll('.our-value__desc')
-                
-                let descHeight = []
-
-                desc.forEach(el => {
-                    descHeight.push(el.getBoundingClientRect().height)
-                    el.style.height = '0px'
+                window.addEventListener('resize', function() {
+                    let winW = window.innerWidth
+                    posterInit(winW)
                 })
 
-                btns.forEach((btn, idx) => {
-                    const parent = btn.parentElement
-                    const currentDesc = parent.querySelector('.our-value__desc')
+                /*비디오 재생*/
+                function videoPlay() {
+                    const btnPlay = document.querySelector('.brand-visual-film .btn-play')
+                    btnPlay.addEventListener('click', ()=> {
 
-                    btn.addEventListener('click', function() {
-
-                        if(parent.classList.contains('value__list__item--active')) {
-                            currentDesc.style.height = '0px'
-                            parent.classList.remove('value__list__item--active')
-                        }else {
-                            currentDesc.style.height = `${descHeight[idx]}px`
-                            parent.classList.add('value__list__item--active')
+                        !played ? played = true : played = false
+                        
+                        if (played) {
+                            video.play()
+                            btnPlay.style.display = 'none'
+                        } else {
+                            video.pause()
                         }
+                    })
+                }
+
+                posterInit(window.innerWidth) /*pc, mobile 포스터 반영*/
+                videoPlay() /*비디오 재생*/
+            }
+
+            function emotionallyDesign () {
+                const headlines = document.querySelectorAll('.imotionally-design__headline li')
+
+                headlines.forEach((item, idx) => {
+                    item.addEventListener('mouseenter', function(){
+                        setClass(item, 'active')
+                        item.classList.add('active')
                     })
                 })
             }
@@ -1359,12 +863,8 @@
             }
 
             window.addEventListener('DOMContentLoaded', () => {
-
-                colorModeChange()
-                marquee()
-                listShowUp()
-                ourValueView()
-                // parallaxImageMotion(parallexImages)
+                visualVideo()
+                emotionallyDesign ()
                 ourIdentitySlider()
             })
 
