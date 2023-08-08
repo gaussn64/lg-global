@@ -17,16 +17,16 @@
 <body>
 <div id="header__wrap" class="c-header__wrap">
     <header id="header" class="c-header">
-        <h1 class="c-header__tit"><a href="../ST0001/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+        <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
         <nav class="c-header__gnb">
             <ul class="c-header__gnb__list">
-                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">For the Planet</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people.html" class="c-header__gnb__list__item__anchor">For People</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
             </ul>
         </nav>
         <!-- <p class="c-header__location">For the Planet</p> -->
@@ -139,59 +139,66 @@
 
             /* Living Sustainably About */
             .living-st-about {
-                width: 87.5vw;
-                max-width: 1680px;
+                width: 1440px;
                 margin: 0px auto;
                 text-align: center;
             }
-            .living-st-about__tit {
-                padding: 140px 0px;
+            .living-st-about__cont {
+                padding: 105px 0px;
                 font-weight: 300;
                 font-size: 46px;
                 line-height: 60px;
                 color: #4A4946;
             }
-            .living-st-about__saving__item {
+
+            /* How to enjoy more sustainable living */
+            .enjoy-st-living {
+                width: 1440px;
+                padding: 45px 0px 100px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .enjoy-st-living__saving__item {
                 display: grid;
                 gap: 0px 50px;
                 padding: 60px 0px;
                 align-items: center;
             }
-            .living-st-about__saving__item1 {
-                grid-template-columns: auto 770px;
+            .enjoy-st-living__saving__item1 {
+                grid-template-columns: auto 620px;
             }
-            .living-st-about__saving__item2 {
-                grid-template-columns: 770px auto;
+            .enjoy-st-living__saving__item2 {
+                grid-template-columns: 620px auto;
             }
-            .living-st-about__saving__item__photo {
-                width: 770px;
+            .enjoy-st-living__saving__item__photo {
+                width: 620px;
             }
-            .living-st-about__saving__item1__photo {
-                height: 652px;
+            .enjoy-st-living__saving__item1__photo {
+                height: 526px;
             }
-            .living-st-about__saving__item2__photo {
-                height: 770px;
+            .enjoy-st-living__saving__item2__photo {
+                height: 620px;
             }
-            .living-st-about__saving__item__photo__img {
+            .enjoy-st-living__saving__item__photo__img {
                 width: 100%;
                 height: 100%;
                 border-radius: 80px;
                 object-fit: cover;
                 transition: 0.3s ease border-radius;
             }
-            .living-st-about__saving__item1:hover .living-st-about__saving__item1__photo__img {
+            .enjoy-st-living__saving__item1__photo__img {
                 border-radius: 80px 385px 385px 80px;
             }
-            .living-st-about__saving__item2:hover .living-st-about__saving__item2__photo__img {
+            .enjoy-st-living__saving__item2__photo__img {
                 border-radius: 385px;
             }
-            .living-st-about__saving__item__cont__tit {
+            .enjoy-st-living__saving__item__cont__tit {
                 font-size: 24px;
                 line-height: 28px;
                 font-weight: 600;
                 letter-spacing: -0.12px;
             }
-            .living-st-about__saving__item__cont__desc1 {
+            .enjoy-st-living__saving__item__cont__desc1 {
                 font-family: 'LG_EI_Headline';
                 font-size: 56px;
                 font-style: normal;
@@ -200,15 +207,15 @@
                 letter-spacing: -0.28px;
                 margin-top: 16px;
             }
-            .living-st-about__saving__item__cont__desc2 {
+            .enjoy-st-living__saving__item__cont__desc2 {
                 font-size: 20px;
                 line-height: 28px;
                 margin-top: 16px;
             }
-            .living-st-about__saving__item__more {
+            .enjoy-st-living__saving__item__more {
                 margin-top: 24px;
             }
-            .living-st-about__saving__item__more__btn {
+            .enjoy-st-living__saving__item__more__btn {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 99px;
@@ -220,8 +227,8 @@
                 background-color: white;
                 transition: 0.3s ease all
             }
-            .living-st-about__saving__item__more__btn:hover,
-            .living-st-about__saving__item__more__btn:focus {
+            .enjoy-st-living__saving__item__more__btn:hover,
+            .enjoy-st-living__saving__item__more__btn:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
@@ -813,6 +820,7 @@
             }
             .popup-discription__summary__txt {
                 font-size: 20px;
+                text-align: center;
                 line-height: 28px;
                 letter-spacing: -0.1px;
             }
@@ -846,6 +854,9 @@
             .popup-discription__detail__photo {
                 margin: 40px 0px;
             }
+            .popup-discription__detail__photo + .popup-discription__detail__txt {
+                margin-top: 90px;
+            }
             .popup-discription__detail__photo:first-child {
                 margin-top: 0px;
             }
@@ -857,10 +868,23 @@
                 font-size: 15px;
                 line-height: 21px;
             }
+            .popup-discription__detail__disclaimer {
+                margin-top: 40px;
+            }
+            .popup-discription__detail__disclaimer__list {
+                width: 640px;
+                margin: 0px auto;
+            }
+            .popup-discription__detail__disclaimer__list__item {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                color: #7E7C77;
+            }
             .popup-discription__energy-star {
                 position: relative;
                 margin: 0px -90px;
-                padding: 120px 90px 120px 362px;
+                padding: 60px 90px 60px 362px;
                 text-align: left;
                 background-color: #262626;
             }
@@ -869,7 +893,7 @@
             }
             .popup-discription__energy-star__tit {
                 position: absolute;
-                top: 120px;
+                top: 60px;
                 left: 90px;
                 width: 233px;
             }
@@ -943,66 +967,66 @@
                     height: 70px;
                 }
 
-                /* Living Sustainably About */
-                .living-st-about {
+                /* How to enjoy more sustainable living */
+                .enjoy-st-living {
                     width: auto;
                     margin: 0px 16px;
                 }
-                .living-st-about__tit {
+                .enjoy-st-living__tit {
                     padding: 96px 0px;
                     font-size: 28px;
                     line-height: 38px;
                 }
-                .living-st-about__tit__br {
+                .enjoy-st-living__tit__br {
                     display: none;
                 }
-                .living-st-about__saving__item {
+                .enjoy-st-living__saving__item {
                     display: flex;
                     width: 100%;
                     padding: 0px 0px 60px;
                 }
-                .living-st-about__saving__item1 {
+                .enjoy-st-living__saving__item1 {
                     flex-direction: column-reverse;
                 }
-                .living-st-about__saving__item2 {
+                .enjoy-st-living__saving__item2 {
                     flex-direction: column;
                 }
-                .living-st-about__saving__item__photo {
+                .enjoy-st-living__saving__item__photo {
                     width: auto;
                 }
-                .living-st-about__saving__item1__photo,
-                .living-st-about__saving__item2__photo {
+                .enjoy-st-living__saving__item1__photo,
+                .enjoy-st-living__saving__item2__photo {
                     height: auto;
                 }
-                .living-st-about__saving__item1__photo__img {
+                .enjoy-st-living__saving__item1__photo__img {
                     width: 322px;
                     height: 273px;
                     border-radius: 80px 385px 385px 80px;
                 }
-                .living-st-about__saving__item2__photo__img {
+                .enjoy-st-living__saving__item2__photo__img {
                     width: 288px;
                     height: 288px;
                     border-radius: 385px;
                 }
-                .living-st-about__saving__item__cont {
+                .enjoy-st-living__saving__item__cont {
                     margin-top: 30px;
                 }
-                .living-st-about__saving__item__cont__desc1 {
+                .enjoy-st-living__saving__item__cont__desc1 {
                     font-size: 36px;
                     font-weight: 400;
                     line-height: 40px; /* 111.111% */
                     letter-spacing: -0.54px;
                     margin-top: 10px;
                 }
-                .living-st-about__saving__item__cont__desc2 {
+                .enjoy-st-living__saving__item__cont__desc2 {
                     font-size: 16px;
                     line-height: 24px;
                     letter-spacing: -0.08px;
                 }
-                .living-st-about__saving__item__cont__desc2__br {
+                .enjoy-st-living__saving__item__cont__desc2__br {
                     display: none;
                 }
-                .living-st-about__saving__item__more {
+                .enjoy-st-living__saving__item__more {
                     margin-top: 20px;
                 }
 
@@ -1508,53 +1532,55 @@
                 </div>
             </div>
             <div class="living-st-about">
-                <h3 class="living-st-about__tit">
+                <p class="living-st-about__cont">
                     <span class="living-st-about__tit__txt">Sunday dinners. Movie nights. Fresh sheets.</span><br class="living-st-about__tit__br" />
                     <span class="living-st-about__tit__txt">A morning breeze. A home life that restores you.</span><br class="living-st-about__tit__br" />
                     <span class="living-st-about__tit__txt">Our sustainability journey means we can cherish</span><br class="living-st-about__tit__br" />
                     <span class="living-st-about__tit__txt">these precious moments for generations to come.</span><br class="living-st-about__tit__br" />
                     <span class="living-st-about__tit__txt">When we work together to create a more</span><br class="living-st-about__tit__br" />
                     <span class="living-st-about__tit__txt">sustainable way of life, we all reap the rewards.</span>
-                </h3>
-                <ul class="living-st-about__saving">
-                    <li class="living-st-about__saving__item living-st-about__saving__item1">
-                        <div class="living-st-about__saving__item__cont">
-                            <h4 class="living-st-about__saving__item__cont__tit">Water saving</h4>
-                            <p class="living-st-about__saving__item__cont__desc1">
+                </p>
+            </div>
+            <div class="enjoy-st-living">
+                <ul class="enjoy-st-living__saving">
+                    <li class="enjoy-st-living__saving__item enjoy-st-living__saving__item1">
+                        <div class="enjoy-st-living__saving__item__cont">
+                            <h4 class="enjoy-st-living__saving__item__cont__tit">Water saving</h4>
+                            <p class="enjoy-st-living__saving__item__cont__desc1">
                                 Save water to turn <br />
                                 the tide
                             </p>
-                            <p class="living-st-about__saving__item__cont__desc2">
-                                Almost 10% of global freshwater consumption is residential water usage. <br class="living-st-about__saving__item__cont__desc2__br" />
-                                Here are some innovative ways to help you save water and preserve this <br class="living-st-about__saving__item__cont__desc2__br" />
+                            <p class="enjoy-st-living__saving__item__cont__desc2">
+                                Almost 10% of global freshwater consumption is residential water usage. <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                Here are some innovative ways to help you save water and preserve this <br class="enjoy-st-living__saving__item__cont__desc2__br" />
                                 precious resource.
                             </p>
-                            <div class="living-st-about__saving__item__more">
-                                <a href="#water-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more</a>
+                            <div class="enjoy-st-living__saving__item__more">
+                                <a href="#water-saving" onclick="popupDiscription(this.href); return false" class="enjoy-st-living__saving__item__more__btn">Learn more</a>
                             </div>
                         </div>
-                        <div class="living-st-about__saving__item__photo living-st-about__saving__item1__photo">
-                            <img src="../../mocks/ST0002/photo-living-st-about__saving1.png" alt="" class="living-st-about__saving__item__photo__img  living-st-about__saving__item1__photo__img">
+                        <div class="enjoy-st-living__saving__item__photo enjoy-st-living__saving__item1__photo">
+                            <img src="../../mocks/ST0002/photo-enjoy-st-living__saving1.png" alt="" class="enjoy-st-living__saving__item__photo__img  enjoy-st-living__saving__item1__photo__img">
                         </div>
                     </li>
-                    <li class="living-st-about__saving__item living-st-about__saving__item2">
-                        <div class="living-st-about__saving__item__photo living-st-about__saving__item2__photo">
-                            <img src="../../mocks/ST0002/photo-living-st-about__saving2.jpg" alt="" class="living-st-about__saving__item__photo__img  living-st-about__saving__item2__photo__img">
+                    <li class="enjoy-st-living__saving__item enjoy-st-living__saving__item2">
+                        <div class="enjoy-st-living__saving__item__photo enjoy-st-living__saving__item2__photo">
+                            <img src="../../mocks/ST0002/photo-enjoy-st-living__saving2.jpg" alt="" class="enjoy-st-living__saving__item__photo__img  enjoy-st-living__saving__item2__photo__img">
                         </div>
-                        <div class="living-st-about__saving__item__cont">
-                            <h4 class="living-st-about__saving__item__cont__tit">Energy saving</h4>
-                            <p class="living-st-about__saving__item__cont__desc1">
+                        <div class="enjoy-st-living__saving__item__cont">
+                            <h4 class="enjoy-st-living__saving__item__cont__tit">Energy saving</h4>
+                            <p class="enjoy-st-living__saving__item__cont__desc1">
                                 Save energy. <br />
                                 Secure our future.
                             </p>
-                            <p class="living-st-about__saving__item__cont__desc2">
-                                As home appliances become increasingly advanced, their energy <br class="living-st-about__saving__item__cont__desc2__br" />
-                                consumption also increases. To live more sustainably, choose <br class="living-st-about__saving__item__cont__desc2__br" />
-                                environmentally-certified, energy-efficient products that reduce energy <br class="living-st-about__saving__item__cont__desc2__br" />
+                            <p class="enjoy-st-living__saving__item__cont__desc2">
+                                As home appliances become increasingly advanced, their energy <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                consumption also increases. To live more sustainably, choose <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                environmentally-certified, energy-efficient products that reduce energy <br class="enjoy-st-living__saving__item__cont__desc2__br" />
                                 consumption and meet energy-saving standards.
                             </p>
-                            <div class="living-st-about__saving__item__more">
-                                <a href="#energy-saving" onclick="popupDiscription(this.href); return false" class="living-st-about__saving__item__more__btn">Discover more</a>
+                            <div class="enjoy-st-living__saving__item__more">
+                                <a href="#energy-saving" onclick="popupDiscription(this.href); return false" class="enjoy-st-living__saving__item__more__btn">Learn more</a>
                             </div>
                         </div>
                     </li>
@@ -1567,8 +1593,8 @@
                                     <div class="popup-discription__visual__tit__category">Water saving</div>
                                     <div class="popup-discription__visual__tit__topic">
                                         Smart tech <br class="popup-discription__visual__tit__topic__br" />
-                                        for clean water <br />
-                                        and less waste
+                                        water <br class="popup-discription__visual__tit__topic__br" />
+                                        efficiency
                                     </div>
                                 </dt>
                                 <dd class="popup-discription__visual__photo">
@@ -1577,88 +1603,73 @@
                             </div>
                             <div class="popup-discription__summary">
                                 <dd class="popup-discription__summary__txt">
-                                    LG washing machines and dishwashers with water-saving technology reduce water usage without sacrificing performance.
+                                    LG washing machines and dishwashers with water-saving technology reduce <br class="popup-discription__summary__txt__br" />
+                                    water usage without sacrificing performance.
                                 </dd>
                             </div>
                             <div class="popup-discription__detail">
                                 <dt class="popup-discription__detail__tit">
-                                    <div class="popup-discription__detail__tit__category">Turbo wash</div>
                                     <div class="popup-discription__detail__tit__topic">
                                         Worried your washing machine uses <br />
                                         too much water?
                                     </div>
                                 </dt>
                                 <dd class="popup-discription__detail__txt">
-                                    LG washing machines with Artificial Intelligence Direct Drive (AI DD) and TurboWash 360 technology detect the weight and fabric softness of clothes. They suggest the optimal wash cycle for each load, using less water with shorter cycle times.
+                                    Despite getting clothes clean, some washing machines consume an excessive amount of water. This, however, can be solved by LG washers featuring the Artificial Intelligence Direct Drive™ (AI DD™), which suggest the optimal wash cycle for each load by detecting the weight and fabric softness of clothing.* They also employ LG’s own TurboWash™ 360 technology, which uses a 3D ‘multi-nozzle’ that sprays water in four different directions simultaneously. The result is clean clothes, shorter cycle lengths and less water usage without any sacrifice to washing performance whatsoever.**
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
                                         <img src="../../mocks/ST0002/photo-water-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving1" />
                                     </figure>
                                 </dd>
-                            </div>
-                            <div class="popup-discription__detail">
                                 <dd class="popup-discription__detail__txt">
-                                    Our ENERGY STAR-certified washing machines use 25% less energy and 33% less water than conventional models. ezDispense automatically dispenses the optimal amount of detergent to reduce the number of rinses per cycle.
+                                    Much like the company’s washing machines, the LG dishwasher uses less water without compromising cleaning performance. LG’s QuadWash™ technology has Multi-Motion spray arms that rotate back and forth to separate food and oil from dishware, while TrueSteam™ helps to reduce the occurrence of water spots, leaving dishware sparkling clean.***
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
                                         <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving2" />
                                     </figure>
                                 </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">*Average water consumption reduced by approximately by 10.6 percent with AI DD™ when tested by Intertek in April 2020 on Cotton cycle with load comprising 3kg of underwear in conventional LG washer model F21VDT and LG AI DD washer model W16SK. Results may differ depending on product models and actual usage environment.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">**Tested by Intertek in April 2020 on Normal cycle with TurboWash 360(TURBOSHOT) activated with load comprising 3kg of laundry. LG TurboWash 360 model W16SK uses approximately 36 percent less water and shortens cycle length by 46 percent compared to the same model with same load size set to Normal cycle without TurboWash 360(TURBOSHOT) selected. The product models and results may differ depending on regions and actual usage environment.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">***https://www.energystar.gov/products/clothes_washers</li>
+                                    </ul>
+                                </dd>
                             </div>
                             <div class="popup-discription__detail">
                                 <dt class="popup-discription__detail__tit">
-                                    <div class="popup-discription__detail__tit__category">Quad wash</div>
                                     <div class="popup-discription__detail__tit__topic">
                                         Worried your dishwasher uses more water <br />
                                         than washing by hand?
                                     </div>
                                 </dt>
                                 <dd class="popup-discription__detail__txt">
-                                    Our ultra-efficient dishwashers with ENERGY STAR certification save an average o  f 3,870 gallons of water over their lifecycle through precise control of water circulation and spray intensity, and only cost $35 a year to run.
+                                    As well as providing greater convenience in the kitchen, a dishwasher can also deliver efficient water usage.* Through precise control of water circulation and spray intensity, ENERGY STAR-certified dishwashers cost only USD 35 per-year to run and save on average 3,870 gallons of water over their lifetime.**
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
                                         <img src="../../mocks/ST0002/photo-water-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving3" />
                                     </figure>
                                 </dd>
-                            </div>
-                            <div class="popup-discription__detail">
                                 <dd class="popup-discription__detail__txt">
-                                    Our dishwashers use QuadWash™ technology with Multi-Motion spray arms that rotate to separate food and oil, while TrueSteam™ helps to reduce water spots, leaving dishware spotless.
+                                    Much like the company’s washing machines, the LG dishwasher uses less water without compromising cleaning performance. LG’s QuadWash™ technology has Multi-Motion spray arms that rotate back and forth to separate food and oil from dishware, while TrueSteam™ helps to reduce the occurrence of water spots, leaving dishware sparkling clean.***
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
                                         <img src="../../mocks/ST0002/photo-water-saving4.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving4" />
                                     </figure>
                                 </dd>
-                            </div>
-                            <div class="popup-discription__detail popup-discription__energy-star">
-                                <dt class="popup-discription__detail__tit popup-discription__energy-star__tit">
-                                    <div class="popup-discription__detail__tit__topic popup-discription__energy-star__tit__topic">
-                                        How much water can ENERGY-STAR certified products save?
-                                    </div>
-                                </dt>
-                                <dd class="popup-discription__detail__txt popup-discription__energy-star__txt">
-                                    We take pride in our outstanding achievements in water conservation and greenhouse gas reduction in North America. Our unwavering commitment to energy efficiency has been recognized with the prestigious "Energy Star Award" on ten occasions between June 2012 and June 2023. Through our Energy Star-certified washing machines and dishwashers, we have successfully reduced greenhouse gas emissions by 3.7 million tons and saved a remarkable 130 billion liters of water. To put this astounding volume in perspective, it is equivalent to filling approximately 53,000 Olympic-sized swimming pools.
-                                </dd>
-                                <dd class="popup-discription__detail__photo popup-discription__energy-star__photo">
-                                    <figure class="popup-discription__detail__photo__figure popup-discription__energy-star__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving5" />
-                                        <figcaption class="popup-discription__detail__photo__figure__figcaption popup-discription__energy-star__photo__figure__figcaption">
-                                            Over 130 billion liters of water saving &gt; <br /> 
-                                            Same as filling up 53,000 Olympic-sized swimming pools
-                                        </figcaption>
-                                    </figure>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">* “A European Comparison of Cleaning Dishes by Hand.” University of Bonn, 2007.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">**https://www.energystar.gov/products/dishwashers</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">***Tested by LG internal lab on Normal Cycle with clear cup of glass in LG non-Steam model DFB415 and LG Steam model (DFB325), according to LG internal test methods.</li>
+                                    </ul>
                                 </dd>
                             </div>
                             <div class="popup-discription__detail">
-                                <dd class="popup-discription__detail__photo">
-                                    <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-water-saving6.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving6" />
-                                    </figure>
-                                </dd>
                                 <dt class="popup-discription__detail__tit">
                                     <div class="popup-discription__detail__tit__category">Waterless washing</div>
                                     <div class="popup-discription__detail__tit__topic">
@@ -1666,7 +1677,17 @@
                                     </div>
                                 </dt>
                                 <dd class="popup-discription__detail__txt">
-                                    We recently introduced a revolutionary waterless washing machine that aims to reduce water consumption and transform the laundry industry. The new machine utilizes our exclusive Air Wash technology, using air instead of water to clean clothes.
+                                    We're developing breakthrough technology that will be able to wash clothes using pure CO2, without using a single drop of water. This washing machine compresses carbon dioxide and uses it as a laundry solvent to wash laundries. It vaporizes and re-collects carbon dioxide after washing and reuses it for the next wash. Our technology keeps moving forward to help you save water and conserve precious resources.
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving6" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">All scenarios are fictionalized and simulated. For illustrative purposes only, not for sale as of 2023.</li>
+                                    </ul>
                                 </dd>
                             </div>
                         </dl>
@@ -1692,60 +1713,49 @@
                             </div>
                             <div class="popup-discription__summary">
                                 <dd class="popup-discription__summary__txt">
-                                    Our individual efforts combine to make a huge, positive impact. By choosing energy-efficient products and reducing our overall energy usage, we can create a more sustainable future.
+                                    Our individual efforts combine to make a huge, positive impact. By choosing <br />
+                                    energy-efficient products and reducing our overall energy usage, we can <br />
+                                    create a more sustainable future.
                                 </dd>
                             </div>
                             <div class="popup-discription__detail">
                                 <dt class="popup-discription__detail__tit">
-                                    <div class="popup-discription__detail__tit__category">DD motor</div>
-                                    <div class="popup-discription__detail__tit__topic">
-                                        What makes the DD (Direct Drive) motor so <br />
-                                        energy efficient?
-                                    </div>
-                                </dt>
-                                <dd class="popup-discription__detail__txt">
-                                    We've perfected Inverter DD motor technology over four generations, securing global technology leadership with more than 240 patents on Inverter DD motors through continuous research and development. Our innovative motor technology is already in various appliances, including AC and refrigerator compressors, reducing power loss by about 20%.
-                                </dd>
-                                <dd class="popup-discription__detail__photo">
-                                    <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving1" />
-                                    </figure>
-                                </dd>
-                            </div>
-                            <div class="popup-discription__detail">
-                                <dd class="popup-discription__detail__photo">
-                                    <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving2" />
-                                    </figure>
-                                </dd>
-                                <dd class="popup-discription__detail__txt">
-                                    Our fourth-generation DD motor maximizes energy efficiency by applying an electric steel plate material. We've also had a complete production system since 2017, to produce everything from raw materials to finished products on one seamless production line. Plus, we've incorporated AI into our Inverter DD motors for ultimate efficiency.
-                                </dd>
-                            </div>
-                            <div class="popup-discription__detail">
-                                <dt class="popup-discription__detail__tit">
-                                    <div class="popup-discription__detail__tit__category">Knock-on</div>
+                                    <div class="popup-discription__detail__tit__category">LG InstaView™</div>
                                     <div class="popup-discription__detail__tit__topic">
                                         What's energy efficient about knocking <br />
                                         twice to see inside the refrigerator?
                                     </div>
                                 </dt>
                                 <dd class="popup-discription__detail__txt">
-                                    Check what's in your refrigerator without opening the door. Just knock to see inside with Door-in-Door, cutting cold air loss by 41%, and reducing energy consumption by 32%.
+                                    Ask yourself this: how many times do you open your refrigerator without taking anything out? We’re all guilty of opening the fridge door out of curiosity or to check what needs replenishing and this has a significant impact on how much energy you use. <br />
+                                    With the LG InstaView Door-in-Door refrigerator, there’s absolutely no need to open the door all the time – with its sleek mirrored glass panel, just two quick knocks provide easy access to view the contents of the fridge by illuminating the glass to see inside without opening the door, saving energy and time.
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
                                     </figure>
                                 </dd>
-                            </div>
-                            <div class="popup-discription__detail">
                                 <dd class="popup-discription__detail__txt">
-                                    Door-in-Door technology was developed after a survey showed that 50% of the time, we open the refrigerator just to check its contents.
+                                    This not only means that it will keep your food fresh for longer (up to 41% less cold air loss), but is also energy efficient (up to 32% less energy consumption).
                                 </dd>
-                                <dd class="popup-discription__detail__photo">
-                                    <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving4.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving4" />
+                            </div>
+                            <div class="popup-discription__detail popup-discription__energy-star">
+                                <dt class="popup-discription__detail__tit popup-discription__energy-star__tit">
+                                    <div class="popup-discription__detail__tit__category popup-discription__energy-star__tit__category">
+                                        ENERGY STAR <br />
+                                        certification
+                                    </div>
+                                    <div class="popup-discription__detail__tit__topic popup-discription__energy-star__tit__topic">
+                                        How much water can ENERGY-STAR certified products save?
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt popup-discription__energy-star__txt">
+                                    Our unwavering commitment to energy efficiency has been recognized with the prestigious ENERGY STAR Award. The ENERGY STAR Award given by the U.S. Environmental Protection Agency and the Department of Energy are presented to businesses and organizations to confirm their outstanding contributions to protecting the environment through superior energy efficiency achievements annually since 1993. <br />
+                                    LG Electronics has been selected for the Award 10 times from 2012 to June 2023. LG Electronics ENERGY STAR-certified products have reduced 3.7 million tons of GHG emissions during their lifetime. For reference, 3.7 million tonnes of GHG are equivalent to the total GHG emitted by 702,770 cars.
+                                </dd>
+                                <dd class="popup-discription__detail__photo popup-discription__energy-star__photo">
+                                    <figure class="popup-discription__detail__photo__figure popup-discription__energy-star__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving5" />
                                     </figure>
                                 </dd>
                             </div>
@@ -1762,7 +1772,7 @@
                                 </dd>
                                 <dd class="popup-discription__detail__photo">
                                     <figure class="popup-discription__detail__photo__figure">
-                                        <img src="../../mocks/ST0002/photo-energy-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving5" />
+                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving5" />
                                     </figure>
                                 </dd>
                             </div>
