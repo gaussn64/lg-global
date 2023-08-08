@@ -1,0 +1,2204 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<div id="header__wrap" class="c-header__wrap">
+    <header id="header" class="c-header">
+        <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+        <nav class="c-header__gnb">
+            <ul class="c-header__gnb__list">
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+            </ul>
+        </nav>
+        <!-- <p class="c-header__location">For the Planet</p> -->
+        <button type="button" class="c-header__btn-gnb">
+            <span class="c-header__btn-gnb__bar"></span>
+            <span class="c-header__btn-gnb__bar"></span>
+        </button>
+    </header>
+</div>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* Living Sustainably Visual */
+            .living-st-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .living-st-visual:after {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            }
+            .living-st-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                font-size: 80px;
+                line-height: 76px;
+                transform: translate(0,-50%);
+            }
+            .living-st-visual__tit__txt {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                color: white;
+            }
+            .living-st-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            .living-st-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .living-st-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0002/living-st-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0px);
+            }
+            .living-st-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-6px);
+                }
+                to {
+                    transform: translateY(16px);
+                }
+            }
+
+            /* Living Sustainably About */
+            .living-st-about {
+                width: 1440px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .living-st-about__cont {
+                padding: 105px 0px;
+                font-weight: 300;
+                font-size: 46px;
+                line-height: 60px;
+                color: #4A4946;
+            }
+
+            /* How to enjoy more sustainable living */
+            .enjoy-st-living {
+                width: 1440px;
+                padding: 45px 0px 100px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .enjoy-st-living__saving__item {
+                display: grid;
+                gap: 0px 50px;
+                padding: 60px 0px;
+                align-items: center;
+            }
+            .enjoy-st-living__saving__item1 {
+                grid-template-columns: auto 620px;
+            }
+            .enjoy-st-living__saving__item2 {
+                grid-template-columns: 620px auto;
+            }
+            .enjoy-st-living__saving__item__photo {
+                width: 620px;
+            }
+            .enjoy-st-living__saving__item1__photo {
+                height: 526px;
+            }
+            .enjoy-st-living__saving__item2__photo {
+                height: 620px;
+            }
+            .enjoy-st-living__saving__item__photo__img {
+                width: 100%;
+                height: 100%;
+                border-radius: 80px;
+                object-fit: cover;
+                transition: 0.3s ease border-radius;
+            }
+            .enjoy-st-living__saving__item1__photo__img {
+                border-radius: 80px 385px 385px 80px;
+            }
+            .enjoy-st-living__saving__item2__photo__img {
+                border-radius: 385px;
+            }
+            .enjoy-st-living__saving__item__cont__tit {
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 600;
+                letter-spacing: -0.12px;
+            }
+            .enjoy-st-living__saving__item__cont__desc1 {
+                font-family: 'LG_EI_Headline';
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 60px;
+                letter-spacing: -0.28px;
+                margin-top: 16px;
+            }
+            .enjoy-st-living__saving__item__cont__desc2 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 16px;
+            }
+            .enjoy-st-living__saving__item__more {
+                margin-top: 24px;
+            }
+            .enjoy-st-living__saving__item__more__btn {
+                display: inline-block;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all
+            }
+            .enjoy-st-living__saving__item__more__btn:hover,
+            .enjoy-st-living__saving__item__more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+            }
+
+            /* Eco-conscious material */
+            .eco-conscious-material {
+                position: relative;
+                padding: 60px 6.25vw;
+                height: 100vh;
+                max-height: 1080px;
+                box-sizing: border-box;
+                background: url(../../mocks/ST0002/visual-eco-conscious-material.png) no-repeat right center;
+                background-size: cover;
+            }
+            .eco-conscious-material__tit {
+                font-size: 28px;
+                color: white;
+            }
+            .eco-conscious-material__intro {
+                margin-top: 20px;
+            }
+            .eco-conscious-material__intro__txt {
+                color: white;
+            }
+            .eco-conscious-material__intro__txt:first-child {
+                font-size: 72px;
+                line-height: 80px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .eco-conscious-material__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+            .eco-conscious-material__product {
+                position: absolute;
+                bottom: 60px;
+                left: 6.25vw;
+                right: 6.25vw;
+                overflow: visible;
+            }
+            .eco-conscious-material__product__slide-wrap {
+                overflow: visible;
+            }
+            .eco-conscious-material__product__slide {
+                width: 300px;
+                height: 300px;
+                margin-right: 20px;
+            }
+            .eco-conscious-material__product__slide__anchor {
+                position: relative;
+                display: block;
+                width: 300px;
+                height: 300px;
+                box-sizing: border-box;
+                padding: 23px 40px;
+                border-radius: 40px;
+                color: white;
+                background-color: rgba(0,0,0,0.2);
+                backdrop-filter: blur(30px);
+            }
+            .eco-conscious-material__product__slide__anchor:hover {
+                text-decoration: none;
+            }
+            .eco-conscious-material__product__slide__anchor__photo {
+                visibility: visible;
+                position: absolute;
+                top: 23px;
+                left: 40px;
+                right: 40px;
+                display: flex;
+                height: 198px;
+                justify-content: center;
+                align-items: flex-end;
+                text-align: center;
+                opacity: 1;
+            }
+            .eco-conscious-material__product__slide__anchor:hover .eco-conscious-material__product__slide__anchor__photo {
+                visibility: hidden;
+                opacity: 0;
+            }
+            .eco-conscious-material__product__slide__anchor__photo__img {
+                width: 100%;
+                height: auto;
+            }
+            .eco-conscious-material__product__slide__anchor__photo-alt {
+                visibility: hidden;
+                position: absolute;
+                top: 108px;
+                left: 20px;
+                right: 20px;
+                font-size: 15px;
+                line-height: 21px;
+                text-align: center;
+                color: white;
+                opacity: 0;
+                transition: 0.5s ease opacity;
+            }
+            .eco-conscious-material__product__slide__anchor:hover .eco-conscious-material__product__slide__anchor__photo-alt,
+            .eco-conscious-material__product__slide__anchor__photo-alt:first-child {
+                visibility: visible;
+                opacity: 1;
+            }
+            .eco-conscious-material__product__slide__anchor__txt {
+                margin-top: 225px;
+                line-height: 0;
+            }
+            .eco-conscious-material__product__slide__anchor__txt__b {
+                display: flex;
+                height: 29px;
+                padding: 0px 30px;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 15px;
+                font-weight: 400;
+                background-color: rgba(0, 0, 0, 0.15);
+                border-radius: 50px;
+            }
+            .eco-conscious-material__product__btn-set {
+                display: flex;
+                gap: 0px 8px;
+                position: absolute;
+                top: -88px;
+                right: 0px;
+            }
+            .eco-conscious-material__product__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .eco-conscious-material__product__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0002/btn-eco-conscious-material-product-prev.svg);
+            }
+            .eco-conscious-material__product__btn-set__btn__next {
+                background-image: url(../../mocks/ST0002/btn-eco-conscious-material-product-next.svg);
+            }
+
+            /* Sustainability Efforts */
+            .sustainability-efforts__bg {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+                background-color: #262626;
+            }
+            .sustainability-efforts__bg__inner {
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                transform: translateY(-50%);
+            }
+            .sustainability-efforts__bg__tit {
+                font-size: 4.0741vh;
+                color: #F6F3EB;
+                font-weight: 550;
+                line-height: 4.4444vh;
+                letter-spacing: -0.44px;
+            }
+            .sustainability-efforts__bg__txt {
+                margin-top: 11.1111vh;
+            }
+            .sustainability-efforts__bg__txt__item {
+                font-size: 7.4074vh;
+                font-weight: 550;
+                line-height: 7.0370vh;
+                letter-spacing: 0.8889vh;
+                color: white;
+            }
+            .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                margin-top: 14.8148vh;
+            }
+            .sustainability-efforts__card__wrap {
+                position: relative;
+                width: 100%;
+                height: 114vh;
+                background: linear-gradient(180deg, #262626 0%, #F6F3EB 100%);
+            }
+            .sustainability-efforts__card__navi {
+                visibility: hidden;
+                position: absolute;
+                z-index: 2;
+                bottom: -110px;
+                left: calc(50% - 720px);
+                display: flex;
+                width: 1440px;
+                gap: 0px 22px;
+                transition: 0.5s ease all;
+            }
+            .sustainability-efforts__card__navi--on {
+                visibility: visible;
+                opacity: 1;
+                bottom: calc(7vh + 110px);
+            }
+            .sustainability-efforts__card__navi__item {
+                flex-grow: 1;
+                line-height: 0;
+            }
+            .sustainability-efforts__card__navi__item__anchor {
+                display: block;
+                padding: 40px 76px;
+                text-align: center;
+                line-height: 1;
+                font-size: 28px;
+                font-weight: 550;
+                color: white;
+                line-height: 34px;
+                letter-spacing: -0.14px;
+                border: 1px solid rgba(255, 255, 255, 0.60);
+                border-radius: 30px;;
+                background-color: rgba(16, 16, 16, 0.20);
+                backdrop-filter: blur(50px);
+            }
+            .sustainability-efforts__card {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 1;
+                width: 75%;
+                height: 80vh;
+                border-radius: 30px;
+                overflow: hidden;
+                transform: translate(-50%,-50%);
+                transition: 0.5s ease width,0.5s ease height,0.5s ease border-radius;
+            }
+            .sustainability-efforts__card--on {
+                width: 100%;
+                height: 114vh;
+                border-radius: 0px;
+            }
+            .sustainability-efforts__card__item {
+                position: absolute;
+                z-index: 1;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 114vh;
+                padding-top: 19.2222vh;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                overflow: hidden;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease opacity;
+            }
+            .sustainability-efforts__card__item--active {
+                z-index: 2;
+                visibility: visible;
+                opacity: 1;
+            }
+            .sustainability-efforts__card__item:nth-child(1) {
+                background-image: url(../../mocks/ST0002/photo-se-card1.png);
+            }
+            .sustainability-efforts__card__item:nth-child(2) {
+                background-image: url(../../mocks/ST0002/photo-se-card2.png);
+            }
+            .sustainability-efforts__card__item:nth-child(3) {
+                background-image: url(../../mocks/ST0002/photo-se-card3.png);
+            }
+            .sustainability-efforts__card__inner {
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .sustainability-efforts__card__tit {
+                display: none;
+            }
+            .sustainability-efforts__card__summary {
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 550;
+                line-height: 60px; /* 107.143% */
+                letter-spacing: -0.28px;
+                color: white;
+                transform: translateY(56px);
+                opacity: 0;
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
+            }
+            .sustainability-efforts__card__detail {
+                margin-top: 16px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+                color: white;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s ease 0s transform,0.3s ease 0s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary,
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__summary {
+                transition: 0.3s ease 0.15s transform,0.3s ease 0.15s opacity;
+            }
+            .sustainability-efforts__card__inner--on .sustainability-efforts__card__detail {
+                transition: 0.3s ease 0.3s transform,0.3s ease 0.3s opacity;
+            }
+
+            /* Summary */
+            .summary {
+                padding: 80px 0px 140px;
+            }
+            .summary__cont {
+                max-width: 1680px;
+                width: 87.5vw;
+                height: 820px;
+                border-radius: 40px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 80px;
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 104px 80px;
+                font-size: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 250;
+                line-height: 60px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px !important;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription__wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+                overflow: hidden;
+            }
+            .popup-discription__visual {
+                display: grid;
+                align-items: center;
+                position: relative;
+                height: 600px;
+                padding-left: calc(50% + 150px);
+                margin: -120px -90px 0px;
+                background-color: #F0ECE4;
+            }
+            .popup-discription__visual__tit__category {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+            }
+            .popup-discription__visual__tit__topic {
+                font-family: 'LG_EI_Headline';
+                font-size: 52px;
+                font-weight: 550;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+                margin-top: 20px;
+            }
+            .popup-discription__visual__photo {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 50%;
+                height: 100%;
+            }
+            .popup-discription__visual__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .popup-discription__summary {
+                padding: 60px 0px;
+            }
+            .popup-discription__summary__txt {
+                font-size: 20px;
+                text-align: center;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__detail {
+                padding: 60px 0px;
+                text-align: center;
+            }
+            .popup-discription__detail__tit__category {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+            }
+            .popup-discription__detail__tit__topic {
+                font-size: 36px;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                margin-top: 20px;
+            }
+            .popup-discription__detail__tit__topic:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__detail__txt {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+                margin-top: 20px;
+            }
+            .popup-discription__detail__txt:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__detail__photo {
+                margin: 40px 0px;
+            }
+            .popup-discription__detail__photo + .popup-discription__detail__txt {
+                margin-top: 90px;
+            }
+            .popup-discription__detail__photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__detail__photo:last-child {
+                margin-bottom: 0px;
+            }
+            .popup-discription__detail__photo__figure__figcaption {
+                margin-top: 20px;
+                font-size: 15px;
+                line-height: 21px;
+            }
+            .popup-discription__detail__disclaimer {
+                margin-top: 40px;
+            }
+            .popup-discription__detail__disclaimer__list {
+                width: 640px;
+                margin: 0px auto;
+            }
+            .popup-discription__detail__disclaimer__list__item {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                color: #7E7C77;
+            }
+            .popup-discription__energy-star {
+                position: relative;
+                margin: 0px -90px;
+                padding: 60px 90px 60px 362px;
+                text-align: left;
+                background-color: #262626;
+            }
+            .popup-discription__energy-star * {
+                color: white;
+            }
+            .popup-discription__energy-star__tit {
+                position: absolute;
+                top: 60px;
+                left: 90px;
+                width: 233px;
+            }
+            .popup-discription__energy-star__txt {
+                margin-top: 0px;
+            }
+            .popup-discription__energy-star__photo__figure__figcaption {
+                color: #7E7C77;
+            }
+            .popup-discription__btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription__btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription__btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription__btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Eco-conscious material */
+                .eco-conscious-material {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                    padding: 60px 160px;
+                }
+            }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Living Sustainably Visual */
+                .living-st-visual__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                }
+                .living-st-visual__scrolldown {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .living-st-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
+                /* How to enjoy more sustainable living */
+                .enjoy-st-living {
+                    width: auto;
+                    margin: 0px 16px;
+                }
+                .enjoy-st-living__tit {
+                    padding: 96px 0px;
+                    font-size: 28px;
+                    line-height: 38px;
+                }
+                .enjoy-st-living__tit__br {
+                    display: none;
+                }
+                .enjoy-st-living__saving__item {
+                    display: flex;
+                    width: 100%;
+                    padding: 0px 0px 60px;
+                }
+                .enjoy-st-living__saving__item1 {
+                    flex-direction: column-reverse;
+                }
+                .enjoy-st-living__saving__item2 {
+                    flex-direction: column;
+                }
+                .enjoy-st-living__saving__item__photo {
+                    width: auto;
+                }
+                .enjoy-st-living__saving__item1__photo,
+                .enjoy-st-living__saving__item2__photo {
+                    height: auto;
+                }
+                .enjoy-st-living__saving__item1__photo__img {
+                    width: 322px;
+                    height: 273px;
+                    border-radius: 80px 385px 385px 80px;
+                }
+                .enjoy-st-living__saving__item2__photo__img {
+                    width: 288px;
+                    height: 288px;
+                    border-radius: 385px;
+                }
+                .enjoy-st-living__saving__item__cont {
+                    margin-top: 30px;
+                }
+                .enjoy-st-living__saving__item__cont__desc1 {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px; /* 111.111% */
+                    letter-spacing: -0.54px;
+                    margin-top: 10px;
+                }
+                .enjoy-st-living__saving__item__cont__desc2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .enjoy-st-living__saving__item__cont__desc2__br {
+                    display: none;
+                }
+                .enjoy-st-living__saving__item__more {
+                    margin-top: 20px;
+                }
+
+                /* Eco-conscious material */
+                .eco-conscious-material {
+                    overflow: hidden;
+                    position: relative;
+                    padding: 60px 16px;
+                    max-height: none;
+                    height: 960px;
+                    background: url(../../mocks/ST0002/visual-eco-conscious-material.png) no-repeat 70% top;
+                }
+                .eco-conscious-material__tit {
+                    font-size: 24px;
+                    letter-spacing: -0.12px;
+                }
+                .eco-conscious-material__intro {
+                    margin-top: 10px;
+                }
+                .eco-conscious-material__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .eco-conscious-material__intro__txt:last-child {
+                    margin-top: 11px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .eco-conscious-material__intro__txt__br {
+                    display: none;
+                }
+                .eco-conscious-material__product {
+                    bottom: 40px;
+                    left: 30px;
+                    right: 30px;
+                }
+                .eco-conscious-material__product__btn-set {
+                    position: static;
+                    gap: 0px 16px;
+                    justify-content: center;
+                    margin-top: 14px;
+                }
+                .eco-conscious-material__product__btn-set__btn {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Sustainability Efforts */
+                .sustainability-efforts__bg__inner {
+                    position: absolute;
+                    top: 50%;
+                    left: 0px;
+                    width: 100%;
+                    transform: translateY(-50%);
+                }
+                .sustainability-efforts__bg__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: 3.6px;
+                }
+                .sustainability-efforts__bg__txt {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__bg__txt__item {
+                    font-size: 24px;
+                    line-height: 48px;
+                    letter-spacing: 4.8px;
+                }
+                .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
+                    margin-top: 28px;
+                }
+                .sustainability-efforts__card__wrap {
+                    height: auto;
+                }
+                .sustainability-efforts__card__navi {
+                    display: none;
+                }
+                .sustainability-efforts__card {
+                    position: relative;
+                    top: 0%;
+                    left: 0%;
+                    z-index: 1;
+                    width: 100%;
+                    height: auto;
+                    border-radius: 0px;
+                    overflow: hidden;
+                    transform: translate(0%,0%);
+                }
+                .sustainability-efforts__card--on {
+                    width: 100%;
+                    height: auto;
+                }
+                .sustainability-efforts__card__item {
+                    position: relative;
+                    z-index: 2;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 480px;
+                    padding: 36px 16px;
+                    text-align: center;
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__item:after {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 57.29%);
+                }
+                .sustainability-efforts__card__inner {
+                    position: relative;
+                    z-index: 2;
+                    width: auto;
+                    margin: 0px auto;
+                }
+                .sustainability-efforts__card__tit {
+                    display: none;
+                }
+                .sustainability-efforts__card__summary {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.28px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                .sustainability-efforts__card__detail {
+                    margin-top: 16px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 16px;
+                }
+                .summary__cont {
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 0px;
+                    box-sizing: border-box;
+                    color: #4A4946;
+                    font-size: 16px;
+                    line-height: 28px;
+                }
+                .summary__cont__txt--active {
+                    padding: 30px 0px 90px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0002/photo-summary-visual.png) no-repeat center center;
+                    background-size: cover;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 24px 40px;
+                    border-radius: 0px;
+                    text-align: center;
+                }
+                .popup-discription__visual {
+                    display: block;
+                    position: relative;
+                    height: auto;
+                    padding: 0;
+                    margin: -80px -24px 0px;
+                    padding-top: 80px;
+                }
+                .popup-discription__visual__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__visual__tit__topic {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__visual__tit__topic__br {
+                    display: none;
+                }
+                .popup-discription__visual__photo {
+                    position: static;
+                    width: 100%;
+                    height: 400px;
+                    margin-top: 40px;
+                }
+                .popup-discription__summary {
+                    padding: 40px 0px;
+                }
+                .popup-discription__summary__txt {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .popup-discription__detail {
+                    padding: 40px 0px;
+                }
+                .popup-discription__detail__tit__category {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .popup-discription__detail__tit__topic {
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__tit__topic:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__txt {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__detail__txt:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo {
+                    margin: 20px 0px;
+                }
+                .popup-discription__detail__photo:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__detail__photo:last-child {
+                    margin-bottom: 0px;
+                }
+                .popup-discription__detail__photo__figure__img {
+                    object-fit: cover;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving2 {
+                    width: 190px;
+                    height: 183px;
+                    border-radius: 30px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving3 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 100px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving4 {
+                    width: 312px;
+                    height: 189px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving5 {
+                    width: 310px;
+                    height: 166px;
+                    border-radius: 162px;
+                }
+                .popup-discription__detail__photo__figure__img__water-saving6 {
+                    width: 312px;
+                    height: 196px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving1 {
+                    width: 312px;
+                    height: 200px;
+                    border-radius: 195px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving2 {
+                    width: 312px;
+                    height: 204px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving3 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving4 {
+                    width: 312px;
+                    height: 189px;
+                    border-radius: 50px;
+                }
+                .popup-discription__detail__photo__figure__img__energy-saving5 {
+                    width: 312px;
+                    height: auto;
+                    object-fit: contain;
+                }
+                .popup-discription__detail__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                .popup-discription__energy-star {
+                    position: relative;
+                    margin: 0px -24px;
+                    padding: 40px 24px;
+                    text-align: center;
+                }
+                .popup-discription__energy-star__tit {
+                    position: static;
+                    width: auto;
+                }
+                .popup-discription__energy-star__txt {
+                    margin-top: 16px;
+                }
+                .popup-discription__energy-star__photo__figure__figcaption {
+                    color: #7E7C77;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:hover {
+                    transform: rotate(180deg);
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    position: absolute;
+                    top: 16px;
+                    left: 10px;
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 2px;
+                    background-color: #262626;
+                }
+                .popup-discription__btn-close:before {
+                    transform: rotate(45deg);
+                }
+                .popup-discription__btn-close:after {
+                    transform: rotate(-45deg);
+                }
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="living-st-visual visual__top">
+                <h2 class="living-st-visual__tit">
+                    <span class="living-st-visual__tit__txt">Sustainability</span><br />
+                    <span class="living-st-visual__tit__txt">in everyday living</span>
+                </h2>
+                <video src="../../mocks/ST0002/video-living-st-visual.mp4" class="living-st-visual__video" autoplay loop muted></video>
+                <div class="living-st-visual__scrolldown">
+                    <button type="button" class="living-st-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="living-st-about">
+                <p class="living-st-about__cont">
+                    <span class="living-st-about__tit__txt">Sunday dinners. Movie nights. Fresh sheets.</span><br class="living-st-about__tit__br" />
+                    <span class="living-st-about__tit__txt">A morning breeze. A home life that restores you.</span><br class="living-st-about__tit__br" />
+                    <span class="living-st-about__tit__txt">Our sustainability journey means we can cherish</span><br class="living-st-about__tit__br" />
+                    <span class="living-st-about__tit__txt">these precious moments for generations to come.</span><br class="living-st-about__tit__br" />
+                    <span class="living-st-about__tit__txt">When we work together to create a more</span><br class="living-st-about__tit__br" />
+                    <span class="living-st-about__tit__txt">sustainable way of life, we all reap the rewards.</span>
+                </p>
+            </div>
+            <div class="enjoy-st-living">
+                <ul class="enjoy-st-living__saving">
+                    <li class="enjoy-st-living__saving__item enjoy-st-living__saving__item1">
+                        <div class="enjoy-st-living__saving__item__cont">
+                            <h4 class="enjoy-st-living__saving__item__cont__tit">Water saving</h4>
+                            <p class="enjoy-st-living__saving__item__cont__desc1">
+                                Save water to turn <br />
+                                the tide
+                            </p>
+                            <p class="enjoy-st-living__saving__item__cont__desc2">
+                                Almost 10% of global freshwater consumption is residential water usage. <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                Here are some innovative ways to help you save water and preserve this <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                precious resource.
+                            </p>
+                            <div class="enjoy-st-living__saving__item__more">
+                                <a href="#water-saving" onclick="popupDiscription(this.href); return false" class="enjoy-st-living__saving__item__more__btn">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="enjoy-st-living__saving__item__photo enjoy-st-living__saving__item1__photo">
+                            <img src="../../mocks/ST0002/photo-enjoy-st-living__saving1.png" alt="" class="enjoy-st-living__saving__item__photo__img  enjoy-st-living__saving__item1__photo__img">
+                        </div>
+                    </li>
+                    <li class="enjoy-st-living__saving__item enjoy-st-living__saving__item2">
+                        <div class="enjoy-st-living__saving__item__photo enjoy-st-living__saving__item2__photo">
+                            <img src="../../mocks/ST0002/photo-enjoy-st-living__saving2.jpg" alt="" class="enjoy-st-living__saving__item__photo__img  enjoy-st-living__saving__item2__photo__img">
+                        </div>
+                        <div class="enjoy-st-living__saving__item__cont">
+                            <h4 class="enjoy-st-living__saving__item__cont__tit">Energy saving</h4>
+                            <p class="enjoy-st-living__saving__item__cont__desc1">
+                                Save energy. <br />
+                                Secure our future.
+                            </p>
+                            <p class="enjoy-st-living__saving__item__cont__desc2">
+                                As home appliances become increasingly advanced, their energy <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                consumption also increases. To live more sustainably, choose <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                environmentally-certified, energy-efficient products that reduce energy <br class="enjoy-st-living__saving__item__cont__desc2__br" />
+                                consumption and meet energy-saving standards.
+                            </p>
+                            <div class="enjoy-st-living__saving__item__more">
+                                <a href="#energy-saving" onclick="popupDiscription(this.href); return false" class="enjoy-st-living__saving__item__more__btn">Learn more</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="popup-discription" id="water-saving">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <div class="popup-discription__visual">
+                                <dt class="popup-discription__visual__tit">
+                                    <div class="popup-discription__visual__tit__category">Water saving</div>
+                                    <div class="popup-discription__visual__tit__topic">
+                                        Smart tech <br class="popup-discription__visual__tit__topic__br" />
+                                        water <br class="popup-discription__visual__tit__topic__br" />
+                                        efficiency
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__visual__photo">
+                                    <img src="../../mocks/ST0002/visual-water-saving.png" alt="" class="popup-discription__visual__photo__img" />
+                                </dd>
+                            </div>
+                            <div class="popup-discription__summary">
+                                <dd class="popup-discription__summary__txt">
+                                    LG washing machines and dishwashers with water-saving technology reduce <br class="popup-discription__summary__txt__br" />
+                                    water usage without sacrificing performance.
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail">
+                                <dt class="popup-discription__detail__tit">
+                                    <div class="popup-discription__detail__tit__topic">
+                                        Worried your washing machine uses <br />
+                                        too much water?
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt">
+                                    Despite getting clothes clean, some washing machines consume an excessive amount of water. This, however, can be solved by LG washers featuring the Artificial Intelligence Direct Drive™ (AI DD™), which suggest the optimal wash cycle for each load by detecting the weight and fabric softness of clothing.* They also employ LG’s own TurboWash™ 360 technology, which uses a 3D ‘multi-nozzle’ that sprays water in four different directions simultaneously. The result is clean clothes, shorter cycle lengths and less water usage without any sacrifice to washing performance whatsoever.**
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving1" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__txt">
+                                    Much like the company’s washing machines, the LG dishwasher uses less water without compromising cleaning performance. LG’s QuadWash™ technology has Multi-Motion spray arms that rotate back and forth to separate food and oil from dishware, while TrueSteam™ helps to reduce the occurrence of water spots, leaving dishware sparkling clean.***
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving2" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">*Average water consumption reduced by approximately by 10.6 percent with AI DD™ when tested by Intertek in April 2020 on Cotton cycle with load comprising 3kg of underwear in conventional LG washer model F21VDT and LG AI DD washer model W16SK. Results may differ depending on product models and actual usage environment.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">**Tested by Intertek in April 2020 on Normal cycle with TurboWash 360(TURBOSHOT) activated with load comprising 3kg of laundry. LG TurboWash 360 model W16SK uses approximately 36 percent less water and shortens cycle length by 46 percent compared to the same model with same load size set to Normal cycle without TurboWash 360(TURBOSHOT) selected. The product models and results may differ depending on regions and actual usage environment.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">***https://www.energystar.gov/products/clothes_washers</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail">
+                                <dt class="popup-discription__detail__tit">
+                                    <div class="popup-discription__detail__tit__topic">
+                                        Worried your dishwasher uses more water <br />
+                                        than washing by hand?
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt">
+                                    As well as providing greater convenience in the kitchen, a dishwasher can also deliver efficient water usage.* Through precise control of water circulation and spray intensity, ENERGY STAR-certified dishwashers cost only USD 35 per-year to run and save on average 3,870 gallons of water over their lifetime.**
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving3" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__txt">
+                                    Much like the company’s washing machines, the LG dishwasher uses less water without compromising cleaning performance. LG’s QuadWash™ technology has Multi-Motion spray arms that rotate back and forth to separate food and oil from dishware, while TrueSteam™ helps to reduce the occurrence of water spots, leaving dishware sparkling clean.***
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving4.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving4" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">* “A European Comparison of Cleaning Dishes by Hand.” University of Bonn, 2007.</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">**https://www.energystar.gov/products/dishwashers</li>
+                                        <li class="popup-discription__detail__disclaimer__list__item">***Tested by LG internal lab on Normal Cycle with clear cup of glass in LG non-Steam model DFB415 and LG Steam model (DFB325), according to LG internal test methods.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail">
+                                <dt class="popup-discription__detail__tit">
+                                    <div class="popup-discription__detail__tit__category">Waterless washing</div>
+                                    <div class="popup-discription__detail__tit__topic">
+                                        Waterless washing technology
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt">
+                                    We're developing breakthrough technology that will be able to wash clothes using pure CO2, without using a single drop of water. This washing machine compresses carbon dioxide and uses it as a laundry solvent to wash laundries. It vaporizes and re-collects carbon dioxide after washing and reuses it for the next wash. Our technology keeps moving forward to help you save water and conserve precious resources.
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving5.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving6" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__disclaimer">
+                                    <ul class="popup-discription__detail__disclaimer__list">
+                                        <li class="popup-discription__detail__disclaimer__list__item">All scenarios are fictionalized and simulated. For illustrative purposes only, not for sale as of 2023.</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="energy-saving">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <div class="popup-discription__visual">
+                                <dt class="popup-discription__visual__tit">
+                                    <div class="popup-discription__visual__tit__category">Energy saving</div>
+                                    <div class="popup-discription__visual__tit__topic">
+                                        Higher energy <br class="popup-discription__visual__tit__topic__br" />
+                                        efficiency, <br />
+                                        lower carbon <br class="popup-discription__visual__tit__topic__br" />
+                                        impact
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__visual__photo">
+                                    <img src="../../mocks/ST0002/visual-energy-saving.png" alt="" class="popup-discription__visual__photo__img" />
+                                </dd>
+                            </div>
+                            <div class="popup-discription__summary">
+                                <dd class="popup-discription__summary__txt">
+                                    Our individual efforts combine to make a huge, positive impact. By choosing <br />
+                                    energy-efficient products and reducing our overall energy usage, we can <br />
+                                    create a more sustainable future.
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail">
+                                <dt class="popup-discription__detail__tit">
+                                    <div class="popup-discription__detail__tit__category">LG InstaView™</div>
+                                    <div class="popup-discription__detail__tit__topic">
+                                        What's energy efficient about knocking <br />
+                                        twice to see inside the refrigerator?
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt">
+                                    Ask yourself this: how many times do you open your refrigerator without taking anything out? We’re all guilty of opening the fridge door out of curiosity or to check what needs replenishing and this has a significant impact on how much energy you use. <br />
+                                    With the LG InstaView Door-in-Door refrigerator, there’s absolutely no need to open the door all the time – with its sleek mirrored glass panel, just two quick knocks provide easy access to view the contents of the fridge by illuminating the glass to see inside without opening the door, saving energy and time.
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-energy-saving1.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving3" />
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__detail__txt">
+                                    This not only means that it will keep your food fresh for longer (up to 41% less cold air loss), but is also energy efficient (up to 32% less energy consumption).
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail popup-discription__energy-star">
+                                <dt class="popup-discription__detail__tit popup-discription__energy-star__tit">
+                                    <div class="popup-discription__detail__tit__category popup-discription__energy-star__tit__category">
+                                        ENERGY STAR <br />
+                                        certification
+                                    </div>
+                                    <div class="popup-discription__detail__tit__topic popup-discription__energy-star__tit__topic">
+                                        How much water can ENERGY-STAR certified products save?
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt popup-discription__energy-star__txt">
+                                    Our unwavering commitment to energy efficiency has been recognized with the prestigious ENERGY STAR Award. The ENERGY STAR Award given by the U.S. Environmental Protection Agency and the Department of Energy are presented to businesses and organizations to confirm their outstanding contributions to protecting the environment through superior energy efficiency achievements annually since 1993. <br />
+                                    LG Electronics has been selected for the Award 10 times from 2012 to June 2023. LG Electronics ENERGY STAR-certified products have reduced 3.7 million tons of GHG emissions during their lifetime. For reference, 3.7 million tonnes of GHG are equivalent to the total GHG emitted by 702,770 cars.
+                                </dd>
+                                <dd class="popup-discription__detail__photo popup-discription__energy-star__photo">
+                                    <figure class="popup-discription__detail__photo__figure popup-discription__energy-star__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-water-saving2.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__water-saving5" />
+                                    </figure>
+                                </dd>
+                            </div>
+                            <div class="popup-discription__detail">
+                                <dt class="popup-discription__detail__tit">
+                                    <div class="popup-discription__detail__tit__category">Energy-saving mode</div>
+                                    <div class="popup-discription__detail__tit__topic">
+                                        A quieter, more patient <br />
+                                        energy-saving mode.
+                                    </div>
+                                </dt>
+                                <dd class="popup-discription__detail__txt">
+                                    Our upgraded features, including silent energy-saving modes, provide an exceptional customer experience. ThinQ app data helped us identify common customer issues, leading us to develop advanced features, like energy-saving mode, to reduce power usage by 20%.
+                                </dd>
+                                <dd class="popup-discription__detail__photo">
+                                    <figure class="popup-discription__detail__photo__figure">
+                                        <img src="../../mocks/ST0002/photo-energy-saving3.png" alt="" class="popup-discription__detail__photo__figure__img popup-discription__detail__photo__figure__img__energy-saving5" />
+                                    </figure>
+                                </dd>
+                            </div>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="eco-conscious-material">
+                <h3 class="eco-conscious-material__tit">Eco-conscious material</h3>
+                <div class="eco-conscious-material__intro">
+                    <p class="eco-conscious-material__intro__txt">
+                        Recyclable material <br />
+                        matters to us
+                    </p>
+                    <p class="eco-conscious-material__intro__txt">
+                        Earth's resources are limited, so choosing eco-conscious <br class="eco-conscious-material__intro__txt__br" />
+                        materials is no longer optional. By choosing materials that <br class="eco-conscious-material__intro__txt__br" />
+                        can be reused, we can all live a more sustainable life.
+                    </p>
+                </div>
+                <div class="swiper eco-conscious-material__product">
+                    <div class="swiper-wrapper eco-conscious-material__product__slide-wrap">
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product1.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    We used recycled plastic for new LG Shoecase exteriors, except the transparent windows, to pursue a more sustainable product process.
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">Shoecase</b>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product2.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    LG OLED EVO is a self-luminous display without a backlight, using eco-friendly materials like EVO and recycled plastic in production.
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">OLED EVO</b>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product3.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    LG Sound Bars made from recycled plastic, including polyester fabric from PET bottles, won the 2021 EPA 'Product Champion' award for reducing greenhouse gases in product design.
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">Sound Bar</b>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product4.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    The Aero Furniture exterior is made using recycled plastic from old electronics.
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">Aero Furniture</b>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product5.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    The tiiun mini exterior is made with recycled plastic (except for the transparent LED lighting covers).
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">Tiiun Mini</b>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-material__product__slide">
+                            <a href="javascript:void(0)" class="eco-conscious-material__product__slide__anchor">
+                                <div class="eco-conscious-material__product__slide__anchor__photo">
+                                    <img src="../../mocks/ST0002/photo-eco-conscious-material-product6.png" alt="" class="eco-conscious-material__product__slide__anchor__photo__img">
+                                </div>
+                                <div class="eco-conscious-material__product__slide__anchor__photo-alt">
+                                    ToneFree is made with recyclable materials, certified by UL ECV and SGS Eco-Product.
+                                </div>
+                                <p class="eco-conscious-material__product__slide__anchor__txt">
+                                    <b class="eco-conscious-material__product__slide__anchor__txt__b">Tone Free</b>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="eco-conscious-material__product__btn-set">
+                        <div class="eco-conscious-material__product__btn-set__btn eco-conscious-material__product__btn-set__btn__prev"></div>
+                        <div class="eco-conscious-material__product__btn-set__btn eco-conscious-material__product__btn-set__btn__next"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sustainability-efforts">
+                <div class="sustainability-efforts__bg">
+                    <div class="sustainability-efforts__bg__inner">
+                        <h3 class="sustainability-efforts__bg__tit">For the planet</h3>
+                        <ul class="sustainability-efforts__bg__txt">
+                            <li class="sustainability-efforts__bg__txt__item">Carbon neutrality</li>
+                            <li class="sustainability-efforts__bg__txt__item">Circularity</li>
+                            <li class="sustainability-efforts__bg__txt__item">Clean technology</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sustainability-efforts__card__wrap">
+                    <ul class="sustainability-efforts__card__navi">
+                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Go to carbon neutrality</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" class="sustainability-efforts__card__navi__item__anchor">Go to  circularity</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" class="sustainability-efforts__card__navi__item__anchor">Go to clean  technology</a></li>
+                    </ul>
+                    <ul class="sustainability-efforts__card">
+                        <li class="sustainability-efforts__card__item sustainability-efforts__card__item--active" id="enhancing-workplace-safety">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Delightful workplace</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Carbon neutrality
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        Major actions. Minor carbons.
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sustainability-efforts__card__item" id="valuing-diversity-inclusion">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Circularity &amp; Inclusion</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Circularity
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        Greener with every step
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="sustainability-efforts__card__item" id="design-for-all">
+                            <div class="sustainability-efforts__card__inner">
+                                <h3 class="sustainability-efforts__card__tit">Clean technology</h3>
+                                <div class="sustainability-efforts__card__cont">
+                                    <p class="sustainability-efforts__card__summary">
+                                        Clean technology
+                                    </p>
+                                    <p class="sustainability-efforts__card__detail">
+                                        Leading the way towards a cleaner tomorrow
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        Your sustainable living journey truly inspires us. <br />
+                        We're committed to both promoting sustainable living <br />
+                        and empowering you along the way.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Use smart. <br />
+                        Live sustainable.
+                    </p>
+                </div>
+                <div class="summary__visual"></div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var livingSt = livingSt || {};
+                
+            livingSt = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".living-st-visual");
+                    let vScrolldownWrap = visual.querySelector(".living-st-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".living-st-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
+                ecoConsciousMaterial: function() {
+                    var swiper = new Swiper(".eco-conscious-material__product", {
+                        slidesPerView: "auto",
+                        navigation: {
+                            nextEl: ".eco-conscious-material__product__btn-set__btn__next",
+                            prevEl: ".eco-conscious-material__product__btn-set__btn__prev",
+                        },
+                    });
+                },
+                sustainabilityEfforts:function() {
+                    let sustainabilityEfforts = document.querySelector(".sustainability-efforts");
+                    let scNavi = document.querySelector(".sustainability-efforts__card__navi");
+                    let scNaviItem = scNavi.querySelectorAll(".sustainability-efforts__card__navi__item");
+                    let sCardWrap = document.querySelector(".sustainability-efforts__card__wrap");
+                    let sCard = document.querySelector(".sustainability-efforts__card");
+                    let scItem = sCard.querySelectorAll(".sustainability-efforts__card__item");
+
+                    gsap.to(sCardWrap, {
+                        scrollTrigger: {
+                            trigger: ".sustainability-efforts__card__wrap",
+                            start: "top 1%",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                scNavi.classList.add("sustainability-efforts__card__navi--on")
+                                sCard.classList.add("sustainability-efforts__card--on")
+                                scItem.forEach(function(sci,a) {
+                                    sci.querySelector(".sustainability-efforts__card__inner").classList.add("sustainability-efforts__card__inner--on")
+                                })
+                            },
+                            onLeaveBack: function() {
+                                scNavi.classList.remove("sustainability-efforts__card__navi--on")
+                                sCard.classList.remove("sustainability-efforts__card--on")
+                                scItem.forEach(function(sci,b) {
+                                    sci.querySelector(".sustainability-efforts__card__inner").classList.remove("sustainability-efforts__card__inner--on")
+                                })
+                            }
+                        }
+                    });
+
+                    scNaviItem.forEach(function(scnItem,i) {
+                        scnItem.querySelector("a").onmouseenter = function() {
+                            scNaviItem.forEach(function(rItem,r) {
+                                rItem.querySelector("a").classList.remove("sustainability-efforts__card__navi__item__anchor--active")
+                            })
+                            this.classList.add("sustainability-efforts__card__navi__item__anchor--active")
+
+                            scItem.forEach(function(rItem,a) {
+                                rItem.classList.remove("sustainability-efforts__card__item--active")
+                            })
+                            //console.log(this.href.split("#")[1])
+                            document.querySelector("#"+this.href.split("#")[1]).classList.add("sustainability-efforts__card__item--active")
+
+                            return false
+                        }
+                    })
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            livingSt.visualScrollDown()
+            livingSt.ecoConsciousMaterial()
+            livingSt.sustainabilityEfforts();
+            livingSt.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 20
+                    }
+                }
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                //Youtube Api Setting
+                var youtubePlayer = document.querySelector(".popup-discription__video__player")
+
+                var tag = document.createElement('script');
+                tag.src = "https://www.youtube.com/iframe_api";
+                firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                window.onYouTubeIframeAPIReady = function() {
+                    ytPlayer = new YT.Player("youtube_player", {});
+                };
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                    
+                    if(youtubePlayer) {
+                        ytPlayer.stopVideo()
+                    }
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>

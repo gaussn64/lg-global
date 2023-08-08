@@ -1,0 +1,1894 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<div id="header__wrap" class="c-header__wrap">
+    <header id="header" class="c-header">
+        <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+        <nav class="c-header__gnb">
+            <ul class="c-header__gnb__list">
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Circularity</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+            </ul>
+        </nav>
+        <!-- <p class="c-header__location">Circularity</p> -->
+        <button type="button" class="c-header__btn-gnb">
+            <span class="c-header__btn-gnb__bar"></span>
+            <span class="c-header__btn-gnb__bar"></span>
+        </button>
+    </header>
+</div>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* Circular Economy Visual */
+            .circularity-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .circularity-visual:after {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            }
+            .circularity-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                line-height: 76px;
+                font-size: 80px;
+                transform: translate(0,-50%);
+            }
+            .circularity-visual__tit__txt {
+                font-family: 'LG_EI_Headline';
+                font-weight: 400;
+                color: white;
+            }
+            .circularity-visual__tit__txt__br {
+                display: none;
+            }
+            .circularity-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            .circularity-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .circularity-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0004/circularity-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0px);
+            }
+            .circularity-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-6px);
+                }
+                to {
+                    transform: translateY(16px);
+                }
+            }
+
+            /* Circular Economy About */
+            .circularity-about {
+                text-align: center;
+            }
+            .circularity-about__cont {
+                width: 1440px;
+                margin: 0px auto;
+                padding: 106px 0px;
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 56px;
+                color: #4A4946;
+            }
+            
+            /* Sustainability Cycle */
+            .st-cycle {
+                padding-top: 60px;
+                height: 1184px;
+                box-sizing: border-box;
+                text-align: center;
+                background: #4A4946 url(../../mocks/ST0004/bg-st-cycle.png) no-repeat center top;
+                background-size: cover;
+            }
+            .st-cycle * {
+                color: white;
+            }
+            .st-cycle__tit {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .st-cycle__intro__txt {
+                margin-top: 16px;
+            }
+            .st-cycle__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .st-cycle__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .st-cycle__inner {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 173px auto 0px;
+                width: 1076px;
+                height: 513px;
+                text-align: center;
+                background: url(../../mocks/ST0004/line-st-cycle.svg) no-repeat center center;
+                background-size: cover;
+            }
+            .st-cycle__inner__cont {
+                width: 580px;
+                height: 220px;
+                transform: translateY(90px);
+                transition: 0.3s ease transform;
+            }
+            .st-cycle__inner__cont--active {
+                transform: translateY(0px);
+            }
+            .st-cycle__inner__cont__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 52px;
+                font-weight: 550;
+                line-height: 58px; /* 111.538% */
+                letter-spacing: -0.26px;
+            }
+            .st-cycle__inner__cont__list {
+                position: relative;
+                margin-top: 0px;
+                visibility: hidden;
+                overflow: hidden;
+                height: 0px;
+                transition: 0.3s ease height,0.3s ease margin-top;
+            }
+            .st-cycle__inner__cont__list--active {
+                visibility: visible;
+                height: 130px;
+                margin-top: 20px;
+            }
+            .st-cycle__inner__cont__list__item {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+            }
+            .st-cycle__inner__cont__list__item__tit,
+            .st-cycle__inner__cont__list__item__txt {
+                letter-spacing: -0.005em;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s ease all;
+            }
+            .st-cycle__inner__cont__list__item__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                transition-delay: 0s;
+            }
+            .st-cycle__inner__cont__list__item__txt {
+                margin-top: 20px;
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                transition-delay: 0.1s;
+            }
+            .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__tit,
+            .st-cycle__inner__cont__list__item--active .st-cycle__inner__cont__list__item__txt {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+            .st-cycle__inner__menu__item {
+                position: absolute;
+                width: 112px;
+                height: 146px;
+                opacity: 1;
+                transition: 0.3s ease opacity;
+                cursor: pointer;
+            }
+            .st-cycle__inner__menu__item--off {
+                opacity: 0.3;
+            }
+            .st-cycle__inner__menu__item:nth-child(1) {
+                top: -73px;
+                left: 207px;
+            }
+            .st-cycle__inner__menu__item:nth-child(2) {
+                top: -73px;
+                right: 481px;
+            }
+            .st-cycle__inner__menu__item:nth-child(3) {
+                top: -73px;
+                right: 206px;
+            }
+            .st-cycle__inner__menu__item:nth-child(4) {
+                bottom: -73px;
+                right: 206px;
+            }
+            .st-cycle__inner__menu__item:nth-child(5) {
+                bottom: -73px;
+                right: 481px;
+            }
+            .st-cycle__inner__menu__item:nth-child(6) {
+                bottom: -73px;
+                left: 207px;
+            }
+            .st-cycle__inner__standard {
+                visibility: hidden;
+            }
+            .st-cycle__inner__standard--active {
+                visibility: visible;
+            }
+            .st-cycle__inner__standard__item {
+                position: absolute;
+                top: 683px;
+                left: 0px;
+                width: 100%;
+                font-size: 12px;
+                color: #F6F3EB;
+                line-height: 16px;
+                text-align: center;
+                visibility: hidden;
+                opacity: 0;
+                transition: 0.3s ease all;
+            }
+            .st-cycle__inner__standard__item--active {
+                visibility: visible;
+                opacity: 1;
+            }
+            .st-cycle__inner__menu__item__ico {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .st-cycle__inner__menu__item__ico--mo {
+                display: none;
+            }
+
+            /* E-waste program */
+            .e-waste-program__cont {
+                width: 87.5vw;
+                max-width: 1680px;
+                padding: 60px 0px 45px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .e-waste-program__tit {
+                font-size: 28px;
+                line-height: 34px;
+            }
+            .e-waste-program__intro1 {
+                font-size: 72px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+                line-height: 80px;
+                margin-top: 20px;
+            }
+            .e-waste-program__intro2 {
+                font-size: 20px;
+                line-height: 28px;
+                margin-top: 20px;
+            }
+            .e-waste-program__visual__wrap {
+                position: relative;
+                height: 200vh;
+            }
+            .e-waste-program__visual {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .e-waste-program__visual__inner {
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                top: 50%;
+                width: 100%;
+                height: 100%;
+                border-radius: 0px;
+                background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                background-size: cover;
+                background-attachment: fixed;
+                transform: translate(-50%,-50%);
+            }
+            .e-waste-program__more {
+                margin-top: 24px;
+            }
+            .e-waste-program__more__btn {
+                display: inline-block;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .e-waste-program__more__btn:hover,
+            .e-waste-program__more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+            }
+
+            
+            /* Sustainable Recycling Solutions */
+            .st-recycling-solutions__wrap {
+                background: url(../../mocks/ST0004/bg-st-recycling-solutions-pc.png) repeat-x left top;
+                background-size: auto 100%;
+            }
+            .st-recycling-solutions {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                width: 1440px;
+                height: 750px;
+                margin: 0px auto;
+                background: url(../../mocks/ST0004/photo-st-recycling-solutions-pc.png) no-repeat right top;
+                background-size: auto 100%;
+            }
+            .st-recycling-solutions__cont {
+                padding-bottom: 32px;
+            }
+            .st-recycling-solutions__cont__tit {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            .st-recycling-solutions__cont__intro__txt {
+                margin-top: 16px;
+            }
+            .st-recycling-solutions__cont__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .st-recycling-solutions__cont__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .st-recycling-solutions__cont__discover-more {
+                margin-top: 24px;
+            }
+            .st-recycling-solutions__cont__discover-more__btn {
+                display: inline-block;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .st-recycling-solutions__cont__discover-more__btn:hover,
+            .st-recycling-solutions__cont__discover-more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+            }
+
+            /* Summary */
+            .summary {
+                padding: 60px 0px 105px;
+            }
+            .summary__cont {
+                width: 1440px;
+                height: 720px;
+                border-radius: 30px;
+                padding: 34px 0px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(238.16deg, rgba(0, 0, 0, 0.4) 5.45%, rgba(0, 0, 0, 0) 69.88%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat right center;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 34px 68px 34px calc(50% + 283px);
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 106px 68px 106px calc(50% + 283px);
+                font-size: 44px;
+                font-family: 'LG_EI_Headline';
+                line-height: 48px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px !important;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription__wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription__tit {
+                text-align: center;
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 52px;
+                line-height: 58px;
+            }
+            .popup-discription__tit--left {
+                text-align: left;
+            }
+            .popup-discription__tit__preface {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                font-weight: 400;
+            }
+            .popup-discription__tit__subject {
+                margin-top: 20px;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+            }
+            .popup-discription__intro {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 20px 0px 0px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__visual {
+                margin: 60px -90px 0px;
+            }
+            .popup-discription__visual__img {
+                width: 100%;
+                height: auto;
+            }
+            .popup-discription__cont {
+                font-size: 20px;
+                line-height: 28px;
+                padding: 60px 0px;
+            }
+            .popup-discription__cont:last-child {
+                padding-bottom: 0px;
+            }
+            .popup-discription__cont__photo {
+                text-align: center;
+                margin: 60px -90px 0px;
+            }
+            .popup-discription__cont__photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__photo__img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription__cont__vertical {
+                display: flex;
+                gap: 0px 60px;
+                margin-top: 60px;
+            }
+            .popup-discription__cont__vertical:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__tit {
+                margin-top: 60px;
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                white-space: nowrap;
+            }
+            .popup-discription__cont__tit:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__txt {
+                margin-top: 32px;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__cont__stit + .popup-discription__cont__txt {
+                margin-top: 20px;
+            }
+            .popup-discription__cont__txt:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__cont__stit {
+                font-size: 24px;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                color: #4A4946;
+            }
+            .popup-discription__cont__stit__strong {
+                font-weight: 600;
+                color: #4A4946;
+            }
+            .popup-discription__btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription__btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription__btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription__btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                }
+            }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Circularity Visual */
+                .circularity-visual__tit {
+                    line-height: 48px;
+                    font-size: 44px;
+                    letter-spacing: -0.44px;
+                }
+                .circularity-visual__tit__txt__br {
+                    display: inline-block;
+                }
+                .circularity-visual__scrolldown {
+                    bottom: 16px;
+                }
+                .circularity-visual__scrolldown__btn {
+                    width: 51px;
+                    height: 72px;
+                }
+
+                /* Circularity About */
+                .circularity-about {
+                    text-align: center;
+                }
+                .circularity-about__cont {
+                    width: 328px;
+                    padding: 96px 0px;
+                    font-weight: 300;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.42px;
+                }
+                .circularity-about__cont__br {
+                    display: none;
+                }
+
+
+                /* Sustainability Cycle */
+                .st-cycle {
+                    height: 674px;
+                }
+                .st-cycle__tit {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .st-cycle__intro__txt {
+                    margin-top: 10px;
+                }
+                .st-cycle__intro__txt:first-child {
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+                .st-cycle__intro__txt:last-child {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                }
+                .st-cycle__inner {
+                    margin: 88px auto 0px;
+                    width: 348px;
+                    height: 236px;
+                    text-align: center;
+                    background: url(../../mocks/ST0004/line-st-cycle-m.svg) no-repeat center center;
+                    background-size: cover;
+                }
+                .st-cycle__inner__cont {
+                    width: 308px;
+                    transform: translateY(90px);
+                    transition: 0.3s ease transform;
+                }
+                .st-cycle__inner__cont--active {
+                    transform: translateY(0px);
+                }
+                .st-cycle__inner__cont__tit {
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.14px;
+                    transition: 0.1s ease opacity;
+                }
+                .st-cycle__inner__cont--active .st-cycle__inner__cont__tit {
+                    opacity: 0;
+                }
+                .st-cycle__inner__cont__list {
+                    position: relative;
+                    margin-top: 0px;
+                    visibility: hidden;
+                    overflow: hidden;
+                    height: 0px;
+                    transition: 0.3s ease height,0.3s ease margin-top;
+                }
+                .st-cycle__inner__cont__list--active {
+                    visibility: visible;
+                    height: 102px;
+                    margin-top: 20px;
+                }
+                .st-cycle__inner__cont__list__item {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .st-cycle__inner__cont__list__item__tit {
+                    font-size: 18px;
+                    line-height: 24px;
+                    letter-spacing: -0.09px;
+                }
+                .st-cycle__inner__cont__list__item__txt {
+                    margin-top: 6px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .st-cycle__inner__menu__item {
+                    position: absolute;
+                    width: 66px;
+                    height: 68px;
+                    opacity: 1;
+                    transition: 0.3s ease opacity;
+                    cursor: pointer;
+                }
+                .st-cycle__inner__menu__item--off {
+                    opacity: 0.3;
+                }
+                .st-cycle__inner__menu__item:nth-child(1) {
+                    top: -28px;
+                    left: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(2) {
+                    top: -28px;
+                    right: 141px;
+                }
+                .st-cycle__inner__menu__item:nth-child(3) {
+                    top: -28px;
+                    right: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(4) {
+                    bottom: -38px;
+                    right: 50px;
+                }
+                .st-cycle__inner__menu__item:nth-child(5) {
+                    bottom: -38px;
+                    right: 141px;
+                }
+                .st-cycle__inner__menu__item:nth-child(6) {
+                    bottom: -38px;
+                    left: 50px;
+                }
+                .st-cycle__inner__menu__item__ico--pc {
+                    display: none;
+                }
+                .st-cycle__inner__menu__item__ico--mo {
+                    display: inline-block;
+                }
+                .st-cycle__inner__standard {
+                    visibility: hidden;
+                }
+                .st-cycle__inner__standard--active {
+                    visibility: visible;
+                }
+                .st-cycle__inner__standard__item {
+                    position: absolute;
+                    top: 683px;
+                    left: 0px;
+                    width: 100%;
+                    font-size: 12px;
+                    color: #F6F3EB;
+                    line-height: 16px;
+                    text-align: center;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: 0.3s ease all;
+                }
+                .st-cycle__inner__standard__item--active {
+                    visibility: visible;
+                    opacity: 1;
+                }
+
+                /* E-waste program */
+                .e-waste-program__cont {
+                    width: 100%;
+                    padding: 60px 16px 40px;
+                }
+                .e-waste-program__tit {
+                    font-size: 19px;
+                    line-height: 26px;
+                }
+                .e-waste-program__intro1 {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                }
+                .e-waste-program__intro2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 40px;
+                }
+                .e-waste-program__visual__wrap {
+                    position: relative;
+                    height: 200vh;
+                }
+                .e-waste-program__visual {
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100vh;
+                }
+                .e-waste-program__visual__inner {
+                    position: absolute;
+                    z-index: 2;
+                    left: 50%;
+                    top: 50%;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 0px;
+                    background: url(../../mocks/ST0002/photo-e-waste-program.png) no-repeat center center;
+                    background-size: cover;
+                    background-attachment: fixed;
+                    transform: translate(-50%,-50%);
+                }
+                .e-waste-program__more {
+                    margin-top: 20px;
+                }
+
+                
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions__wrap {
+                    background: linear-gradient(180deg, #DFE6E7 0%, #FFF 100%);
+                }
+                .st-recycling-solutions {
+                    display: block;
+                    width: 100%;
+                    height: 720px;
+                    padding: 60px 16px;
+                    box-sizing: border-box;
+                    background: url(../../mocks/ST0004/photo-st-recycling-solutions-mo.png) no-repeat center bottom;
+                    background-size: 360px 720px;
+                }
+                .st-recycling-solutions__cont {
+                    text-align: center;
+                }
+                .st-recycling-solutions__cont__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                    font-weight: 600;
+                    line-height: normal;
+                    letter-spacing: -0.1px;
+                }
+                .st-recycling-solutions__cont__intro__txt {
+                    margin-top: 10px;
+                }
+                .st-recycling-solutions__cont__intro__txt:first-child {
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                }
+                .st-recycling-solutions__cont__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .st-recycling-solutions__cont__intro__txt__br {
+                    display: none;
+                }
+
+
+                /* Summary */
+                .summary {
+                    padding: 60px 0px;
+                }
+                .summary__cont {
+                    width: 328px;
+                    height: auto;
+                    border-radius: 0px;
+                    padding: 0px;
+                    margin: 0px auto;
+                    box-sizing: border-box;
+                    background: none;
+                }
+                .summary__cont__txt {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: center;
+                    padding: 0px;
+                    color: #262626;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .summary__cont__txt--active {
+                    padding-top: 40px;
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .summary__visual {
+                    width: 328px;
+                    height: 384px;
+                    margin: 90px auto 0px;
+                    border-radius: 10px;
+                    background: linear-gradient(161deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0004/photo-summary-visual.png) no-repeat center center;
+                    background-size: cover;
+                }
+
+                /* What's Next *//* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="circularity-visual visual__top">
+                <h2 class="circularity-visual__tit">
+                    <span class="circularity-visual__tit__txt">Greener with <br class="circularity-visual__tit__txt__br">every step</span>
+                </h2>
+                <video src="../../mocks/ST0004/video-circularity-visual.mp4" class="circularity-visual__video" autoplay loop muted></video>
+                <div class="circularity-visual__scrolldown">
+                    <button type="button" class="circularity-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="circularity-about">
+                <p class="circularity-about__cont">
+                    <span class="circularity-about__cont__txt">Imagine a world with no waste. </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">That's what we strive for with our sustainable cycle. </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">By recycling all we can to turn old materials and </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">ppliances into new products,</span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">we're doing our part to reduce waste and </span><br class="circularity-about__cont__br" />
+                    <span class="circularity-about__cont__txt">create a more sustainable future.</span>
+                </p>
+            </div>
+            <div class="st-cycle">
+                <h3 class="st-cycle__tit">Sustainable cycle</h3>
+                <div class="st-cycle__intro">
+                    <p class="st-cycle__intro__txt">Green goes full circle</p>
+                    <p class="st-cycle__intro__txt">
+                        Our Sustainable cycle focuses on environmental factors throughout the entire product <br />
+                        lifecycle, ensuring sustainable and responsible practices.
+                    </p>
+                </div>
+                <div class="st-cycle__inner">
+                    <div class="st-cycle__inner__cont">
+                        <h4 class="st-cycle__inner__cont__tit">Sustainable cycle</h4>
+                        <ul class="st-cycle__inner__cont__list">
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Collection</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Expand collection amount <br />
+                                    of E-waste*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item"> 
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Recycling</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Increase the use of recycled plastics from <br />
+                                    e-waste*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">R&amp;D</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Consider sustainability into product <br />
+                                    development from the initial phases
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Packaging</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Use eco-conscious materials such as recycled <br />
+                                    paper and resused Polystyrene (EPS) Expanded
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Service</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Convert all service vehicles to electric or <br />
+                                    hydrogen powered by 2030*
+                                </p>
+                            </li>
+                            <li class="st-cycle__inner__cont__list__item">
+                                <h5 class="st-cycle__inner__cont__list__item__tit">Use</h5>
+                                <p class="st-cycle__inner__cont__list__item__txt">
+                                    Reduce carbon emissions* during use of 7 major <br />
+                                    product categories**
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul class="st-cycle__inner__menu">
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection.svg" alt="Collection" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-collection-m.svg" alt="Collection" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-recycling.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-recycling-m.svg" alt="Recycling" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-rnd.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-rnd-m.svg" alt="R&amp;D" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-packaging.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-packaging-m.svg" alt="Packaging" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-service.svg" alt="Service" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-service-m.svg" alt="Service" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                        <li class="st-cycle__inner__menu__item">
+                            <img src="../../mocks/ST0004/ico-st-cycle-use.svg" alt="Use" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--pc">
+                            <img src="../../mocks/ST0004/ico-st-cycle-use-m.svg" alt="Use" class="st-cycle__inner__menu__item__ico st-cycle__inner__menu__item__ico--mo">
+                        </li>
+                    </ul>
+                    <ul class="st-cycle__inner__standard">
+                        <li class="st-cycle__inner__standard__item">
+                            *8 Million tons by 2030, on a cumulative basis from 2006 to <br />
+                            2030 (3.5 million tons from 2006 to 2021)
+                        </li>
+                        <li class="st-cycle__inner__standard__item">
+                            *600,000 tons by 2030, on a cumulative basis from 2021 <br /> to 2030(27,000 tons in 2021)
+                        </li>
+                        <li class="st-cycle__inner__standard__item">*in Korea</li>
+                        <li class="st-cycle__inner__standard__item">
+                            *20% by 2030 (compared to 2020) **TV, Refrigerators, Washing <br />
+                            Machines, Dryers, Residential Air Conditioner(RAC), System Air <br />
+                            Conditioner(SAC), Monitors
+                        </li>
+                        <li class="st-cycle__inner__standard__item"></li>
+                        <li class="st-cycle__inner__standard__item"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="e-waste-program">
+                <div class="e-waste-program__cont">
+                    <h2 class="e-waste-program__tit">E-waste program</h2>
+                    <p class="e-waste-program__intro1">
+                        Sustainable waste management: <br />
+                        e-waste program
+                    </p>
+                    <p class="e-waste-program__intro2">
+                        Help reduce the amount of e-waste that ends up in landfills and minimize <br />
+                        your impact on the environment, by recycling your old electronics <br />
+                        responsibly through our e-waste program.
+                    </p>        
+                    <div class="e-waste-program__more">
+                        <a href="#discover-more-e-waste-program" onclick="popupDiscription(this.href); return false" class="e-waste-program__more__btn">Discover more</a>
+                    </div>
+                </div>
+                <div class="e-waste-program__visual__wrap">
+                    <div class="e-waste-program__visual">
+                        <div class="e-waste-program__visual__inner"></div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="discover-more-e-waste-program">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit popup-discription__tit--left">
+                                <div class="popup-discription__tit__preface">E-waste program</div>
+                                <div class="popup-discription__tit__subject">E-waste program for <br />a sustainable future</div>
+                            </dt>
+                            <dd class="popup-discription__intro">
+                                LG is committed to collecting e-waste and batteries to promote circularity. Through our easy, convenient e-waste program, you can help us make a positive impact on the environment, inspire others, and create a better future for all.
+                            </dd>
+                            <dd class="popup-discription__visual">
+                                <img src="../../mocks/ST0004/visual-pdm-e-waste-program.png" alt=""  class="popup-discription__visual__img" />
+                            </dd>
+                            <dd class="popup-discription__cont">
+                                <div class="popup-discription__cont__photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section1.png" alt=""  class="popup-discription__cont__photo__img" />
+                                </div>
+                                <h3 class="popup-discription__cont__tit">E-waste program- Global</h3>
+                                <p class="popup-discription__cont__txt">
+                                    LG provides collection and processing services for WEEE (Waste Electrical and Electronic Equipment) according to regulations and requirements in each country. <br />
+                                    We also offer free collections for large WEEE in Korea, and we've expanded our service to 78 regions in 47 countries. We make sure all the WEEE we collect is managed in an environmentally friendly way.
+                                </p>
+                            </dd>
+                            <dd class="popup-discription__cont">
+                                <div class="popup-discription__cont__photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section2.png" alt=""  class="popup-discription__cont__photo__img" />
+                                </div>
+                                <h3 class="popup-discription__cont__tit">Small e-waste program- Korea</h3>
+                                <p class="popup-discription__cont__txt">
+                                    We're making it easier than ever to recycle small-sized electronic waste, which has a relatively low recovery rate compared to large appliances. We're striving to reduce greenhouse gas and carbon emissions by collecting small e-waste through nearby LG Best Shops and Resource Circulation Centers.
+                                </p>
+                            </dd>
+                            <dd class="popup-discription__cont">
+                                <div class="popup-discription__cont__photo">
+                                    <img src="../../mocks/ST0004/photo-pdm-e-waste-program-section3.png" alt=""  class="popup-discription__cont__photo__img" />
+                                </div>
+                                <h3 class="popup-discription__cont__tit">Battery recycling program - Korea</h3>
+                                <p class="popup-discription__cont__txt">
+                                    We launched a "Battery Return" campaign, encouraging customers to participate in resource recycling by returning discarded batteries used in premium LG wireless vacuum cleaners. We also offer a discount of KRW 10,000 ($8.57) on new batteries. We've even set up collection boxes for discarded batteries at Best Shops and other appliance stores.
+                                </p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="st-recycling-solutions__wrap">
+                <div class="st-recycling-solutions">
+                    <div class="st-recycling-solutions__cont">
+                        <h3 class="st-recycling-solutions__cont__tit">Sustainable Recycling Solutions</h3>
+                        <div class="st-recycling-solutions__cont__intro">
+                            <p class="st-recycling-solutions__cont__intro__txt">Redefining recyclable</p>
+                            <p class="st-recycling-solutions__cont__intro__txt">
+                                Chilseo Recycling Center collects old appliances, separates <br class="st-recycling-solutions__cont__intro__txt__br" />
+                                their materials, and recycles them into new LG products, <br class="st-recycling-solutions__cont__intro__txt__br" />
+                                creating a virtuous cycle of resource use and disposal.
+                            </p>
+                            <div class="st-recycling-solutions__cont__discover-more">
+                                <a href="#chilseo-recycling-center" type="button" class="st-recycling-solutions__cont__discover-more__btn" onclick="popupDiscription(this.href); return false">Discover more</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="popup-discription" id="chilseo-recycling-center">
+                        <div class="popup-discription__wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription__tit popup-discription__tit--left">
+                                    <div class="popup-discription__tit__preface">Sustainable recycling solutions</div>
+                                    <div class="popup-discription__tit__subject">Sustainable <br />recycling solutions <br />Chilseo recycling center</div>
+                                </dt>
+                                <dd class="popup-discription__visual">
+                                    <img src="../../mocks/ST0004/visual-pdm-chilseo-recycling-center.png" alt=""  class="popup-discription__visual__img" />
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <p class="popup-discription__cont__txt">
+                                        The Chilseo recycling center processes a large number of waste appliances from the western part of South Gyeongsang Province. It can handle 75 refrigerators, 50 washing machines, and 50 small appliances and air conditioners per hour. The LGE Environment Team supervises the center, and all the resources recycled belong to LGE. In 2021, 85% of the waste was recycled, and 15% was either burned or buried in landfills. The legal minimum standard for refrigerator recycling is 70%, but the center has achieved a recycling rate of almost 80%.
+                                    </p>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center1.png" alt=""  class="popup-discription__cont__photo__img" />
+                                    </div>
+                                    <div class="popup-discription__cont__vertical">
+                                        <h3 class="popup-discription__cont__tit">Process <br />of recycling</h3>
+                                        <div class="popup-discription__cont__inner">
+                                            <h4 class="popup-discription__cont__stit">
+                                                <strong class="popup-discription__cont__stit__strong">Step 1</strong><br /> 
+                                                Disassemble, crush, sort
+                                            </h4>
+                                            <p class="popup-discription__cont__txt">
+                                                The Chilseo recycling center removes mechanical and plastic parts from appliances. Materials are then sorted for recycling. A patented system automates the process, increasing efficiency and safety.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <h4 class="popup-discription__cont__stit">
+                                        <strong class="popup-discription__cont__stit__strong">Step 2</strong><br /> 
+                                        Broken plastic to neat pellets
+                                    </h4>
+                                    <p class="popup-discription__cont__txt">
+                                        Plastic components are crushed, sorted, and turned into pellets for use in manufacturing. <br />
+                                        This reduces waste and energy required to create new products.
+                                    </p>
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center2.png" alt=""  class="popup-discription__cont__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <h4 class="popup-discription__cont__stit">
+                                        <strong class="popup-discription__cont__stit__strong">Step 3</strong><br /> 
+                                        Transformation into new components
+                                    </h4>
+                                    <p class="popup-discription__cont__txt">
+                                        The pellets are transferred to another site where they are melted, poured into <br />
+                                        molds, and transformed into plastic components for new LG refrigerator models.
+                                    </p>
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center3.png" alt=""  class="popup-discription__cont__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__cont">
+                                    <h4 class="popup-discription__cont__stit">
+                                        <strong class="popup-discription__cont__stit__strong">Step 4</strong><br /> 
+                                        Rebirth
+                                    </h4>
+                                    <p class="popup-discription__cont__txt">
+                                        LG repurposes plastic components from disassembled products at its Changwon plant, 30 kilometers away, for use in LG refrigerators, meeting the company's strict quality standards.
+                                    </p>
+                                    <div class="popup-discription__cont__photo">
+                                        <img src="../../mocks/ST0004/photo-pdm-chilseo-recycling-center4.png" alt=""  class="popup-discription__cont__photo__img" />
+                                    </div>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        We're dedicated to being <br />
+                        environmentally responsible and creating <br />
+                        better technologies for the planet. <br />
+                        We hope you support our mission.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Better for Earth. <br />
+                        Better for us.
+                    </p>
+                </div>
+                <div class="summary__visual"></div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var circularity = circularity || {};
+                
+            circularity = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".circularity-visual");
+                    let vScrolldownWrap = visual.querySelector(".circularity-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".circularity-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
+                stCycle: function() {
+                    var stCycleInner = document.querySelector(".st-cycle__inner");
+                    var sciCont = stCycleInner.querySelector(".st-cycle__inner__cont");
+                    var scicList = sciCont.querySelector(".st-cycle__inner__cont__list");
+                    var scicListItem = scicList.querySelectorAll(".st-cycle__inner__cont__list__item");
+                    var sciMenu = stCycleInner.querySelector(".st-cycle__inner__menu");
+                    var sciMenuItem = sciMenu.querySelectorAll(".st-cycle__inner__menu__item");
+                    var sciStandard = stCycleInner.querySelector(".st-cycle__inner__standard");
+                    var sciStandardItem = sciStandard.querySelectorAll(".st-cycle__inner__standard__item");
+
+                    sciMenuItem.forEach(function(smi,i) {
+                        smi.onmouseenter = function() {
+                            if(sciCont.className.indexOf("--active") == -1) {
+                                sciCont.classList.add("st-cycle__inner__cont--active")
+                            }
+                            if(scicList.className.indexOf("--active") == -1) {
+                                scicList.classList.add("st-cycle__inner__cont__list--active")
+                            }
+                            if(sciStandard.className.indexOf("--active") == -1) {
+                                sciStandard.classList.add("st-cycle__inner__standard--active")
+                            }
+
+                            sciMenuItem.forEach(function(rest,k) {
+                                rest.classList.add("st-cycle__inner__menu__item--off")
+                                scicListItem[k].classList.remove("st-cycle__inner__cont__list__item--active")
+                                sciStandardItem[k].classList.remove("st-cycle__inner__standard__item--active")
+                            })
+                            smi.classList.remove("st-cycle__inner__menu__item--off")
+                            scicListItem[i].classList.add("st-cycle__inner__cont__list__item--active")
+                            sciStandardItem[i].classList.add("st-cycle__inner__standard__item--active")
+
+                            return false;
+                        }
+                    })
+
+                   stCycleInner.onmouseleave = function() {
+                        if(sciCont.className.indexOf("--active") > -1) {
+                                sciCont.classList.remove("st-cycle__inner__cont--active")
+                        }
+                        if(scicList.className.indexOf("--active") > -1) {
+                            scicList.classList.remove("st-cycle__inner__cont__list--active")
+                        }
+                        if(sciStandard.className.indexOf("--active") > -1) {
+                            sciStandard.classList.remove("st-cycle__inner__standard--active")
+                        }
+
+                        sciMenuItem.forEach(function(rest,j) {
+                            rest.classList.remove("st-cycle__inner__menu__item--off")
+                            scicListItem[j].classList.remove("st-cycle__inner__cont__list__item--active")
+                            sciStandardItem[j].classList.remove("st-cycle__inner__standard__item--active")
+                        })
+                    }
+                },
+                summary: function() {
+                    let summary = document.querySelector(".summary");
+                    let msOfsTop = summary.offsetTop;
+                    let summaryVisual = summary.querySelector(".summary__visual");
+                    let msvOfsTop = summaryVisual.offsetTop;
+                    let summaryCont = summary.querySelector(".summary__cont");
+                    let measContTxt = summaryCont.querySelectorAll(".summary__cont__txt");
+                    let mctOfs = new Array();
+                    let mctViewIs = new Array();
+    
+                    measContTxt.forEach(function(mct,a) {
+                        mctOfs[a] = mct.offsetTop;
+                        mctViewIs[a] = false;
+                    })
+    
+                    gsap.timeline({
+                        scrollTrigger: {
+                            trigger: ".summary",
+                            start: "top top",
+                            end: "bottom bottom",
+                            onEnter: function() {
+                                //console.log("enter")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onLeaveBack: function() {
+                                //console.log("leaveBack")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onLeave: function() {
+                                //console.log("leave")
+                                summaryVisual.classList.remove("summary__visual--fixed")
+                                summaryVisual.classList.add("summary__visual--bottom-end")
+                                summaryCont.classList.remove("summary__cont--fixed")
+                            },
+                            onEnterBack: function() {
+                                //console.log("enterBack")
+                                summaryVisual.classList.add("summary__visual--fixed")
+                                summaryVisual.classList.remove("summary__visual--bottom-end")
+                                summaryCont.classList.add("summary__cont--fixed")
+                            },
+                            onUpdate: initMeanContTxt
+                        }
+                    })
+    
+                    function initMeanContTxt() {
+                        //console.log(scrollY+" / "+summary.offsetTop+" / "+mctOfs)
+                        measContTxt.forEach(function(mct,b) {
+                            if(scrollY >= msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && scrollY <= msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == false) {
+                                mct.classList.add("summary__cont__txt--active")
+                                mctViewIs[b] = true
+                            } else if(scrollY < msOfsTop + (msvOfsTop*2) + mctOfs[b] - (window.innerHeight/2) && mctViewIs[b] == true || scrollY > msOfsTop + (msvOfsTop*2) + mctOfs[b] && mctViewIs[b] == true) {
+                                mct.classList.remove("summary__cont__txt--active")
+                                mctViewIs[b] = false
+                            }
+                        })
+    
+                    }
+                },
+                eWasteProgram: function() {
+                    let eWasteProgramVisualWrap = document.querySelector(".e-waste-program__visual__wrap");
+                    let eWasteProgramVisual = eWasteProgramVisualWrap.querySelector(".e-waste-program__visual");
+                    let eWasteProgramVisualInner = eWasteProgramVisual.querySelector(".e-waste-program__visual__inner");
+
+                    const anim = gsap.to(".e-waste-program__visual__inner", { 
+                        width: "1440px",
+                        height: "566px",
+                        borderRadius: "330px",
+                        paused: true
+                    }); // can be left out
+
+
+                    const ST = ScrollTrigger.create({
+                        trigger: ".e-waste-program__visual__wrap",
+                        start: "top top",
+                        end: "bottom bottom",
+                        animation: anim,
+                        onEnter: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                        },
+                        onLeaveBack: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                        },
+                        onLeave: function() {
+                            eWasteProgramVisual.style.position = "absolute"
+                            eWasteProgramVisual.style.top = "auto"
+                            eWasteProgramVisual.style.bottom = "0px"
+                        },
+                        onEnterBack: function() {
+                            eWasteProgramVisual.style.position = "fixed"
+                            eWasteProgramVisual.style.top = ""
+                            eWasteProgramVisual.style.bottom = ""
+                        },
+                        scrub: true
+                    })
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            circularity.visualScrollDown()
+            circularity.stCycle();
+            circularity.eWasteProgram();
+            circularity.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 0
+                    }
+                }
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>

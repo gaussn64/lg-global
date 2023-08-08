@@ -1,0 +1,1956 @@
+<!DOCTYPE HTML>
+<html lang="en-GB" data-countrycode="GB" data-locale-code="UK" data-biz-type="B2C" data-review-type="BV2" data-obs="Y">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sustainably - Consumer &amp; Home Electronics from LG</title>
+    <meta name="description" content="Welcome to LG UK. We deliver consumer electronics that allow you to embrace life and prepare you for its greatest moments. Learn about our electronics."/>
+    <meta name="template" content="home-page"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="canonical" href="https://www.lg.com/uk/"/>
+    <link rel="stylesheet" href="../../../lc.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
+    <link rel="stylesheet" href="../../../layout.css">
+    <script src="../../../launch-development.min.js"></script>
+    <script src="../../../layout.js"></script>
+</head>
+
+<body>
+<div id="header__wrap" class="c-header__wrap">
+    <header id="header" class="c-header">
+        <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
+        <nav class="c-header__gnb">
+            <ul class="c-header__gnb__list">
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Clean technology</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+            </ul>
+        </nav>
+        <!-- <p class="c-header__location">Clean technology</p> -->
+        <button type="button" class="c-header__btn-gnb">
+            <span class="c-header__btn-gnb__bar"></span>
+            <span class="c-header__btn-gnb__bar"></span>
+        </button>
+    </header>
+</div>
+<div id="container" class="c-container">
+    <main id="contents" class="c-contents">
+        <!-- [code component area start] -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <style>
+            /* Common */
+            body {
+                overflow-x: hidden;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
+                margin: 0px;
+            }
+
+            /* Clean Technology Visual */
+            .clean-technology-visual {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .clean-technology-visual:after {
+                position: absolute;
+                z-index: 2;
+                top: 0px;
+                left: 0px;
+                content: '';
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+            }
+            .clean-technology-visual__tit {
+                position: absolute;
+                z-index: 3;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                line-height: 76px;
+                font-size: 80px;
+                transform: translate(0,-50%);
+            }
+            .clean-technology-visual__tit__txt {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                color: white;
+            }
+            .clean-technology-visual__video {
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+            .clean-technology-visual__scrolldown {
+                position: absolute;
+                z-index: 4;
+                bottom: 40px;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+            }
+            .clean-technology-visual__scrolldown__btn {
+                width: 68px;
+                height: 96px;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-width: 0px;
+                cursor: pointer;
+                background: url(../../mocks/ST0005/clean-technology-visual-scrolldown.svg) no-repeat center center;
+                background-size: cover;
+                transform: translateY(0px);
+            }
+            .clean-technology-visual__scrolldown__btn:hover {
+                animation-duration: 1s;
+                animation-name: sd-dounce;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            @keyframes sd-dounce {
+                from {
+                    transform: translateY(-6px);
+                }
+                to {
+                    transform: translateY(16px);
+                }
+            }
+
+            /* Circular Economy About */
+            .clean-technology-about {
+                text-align: center;
+            }
+            .clean-technology-about__cont {
+                width: 1440px;
+                margin: 0px auto;
+                padding: 106px 0px;
+                font-weight: 300;
+                font-size: 44px;
+                line-height: 56px;
+                color: #4A4946;
+            }
+            
+            /* ECO-Conscious Technology */
+            .eco-conscious-technology {
+                width: 1440px;
+                padding: 60px 0px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .eco-conscious-technology__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .eco-conscious-technology__intro__txt {
+                margin-top: 16px;
+            }
+            .eco-conscious-technology__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .eco-conscious-technology__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .eco-conscious-technology__kind {
+                position: relative;
+                padding: 72px 0px 48px;
+                margin-top: 32px;
+                overflow: visible;
+            }
+            .eco-conscious-technology__kind__slide {
+                position: relative;
+                width: 708px;
+                margin-right: 24px;
+            }
+            .eco-conscious-technology__kind__slide__anchor {
+                display: block;
+                width: 708px;
+                height: 550px;
+                padding: 32px;
+                box-sizing: border-box;
+                border-radius: 28px;
+                text-align: left;
+                text-decoration: none;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .eco-conscious-technology__kind__slide__anchor:hover {
+                text-decoration: none;
+            }
+            .eco-conscious-technology__kind__slide__anchor:after {
+                position: absolute;
+                bottom: 32px;
+                right: 32px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                background-size: cover;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .eco-conscious-technology__kind__slide__anchor:hover:after {
+                transform: rotate(180deg);
+            }
+            .eco-conscious-technology__kind__slide__anchor1 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind1.png);
+            }
+            .eco-conscious-technology__kind__slide__anchor2 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind2.jpg);
+            }
+            .eco-conscious-technology__kind__slide__anchor3 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind3.png);
+            }
+            .eco-conscious-technology__kind__slide__anchor__preface {
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 24px;
+                color: white;
+            }
+            .eco-conscious-technology__kind__slide__anchor__subject {
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                margin-top: 8px;
+                color: white;
+            }
+            .eco-conscious-technology__kind__pagination {
+                opacity: 0.5;
+                line-height: 1;
+            }
+            .eco-conscious-technology__kind__pagination .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                border: 1px solid #CBCBCB;
+                background-color: black;
+                opacity: 0.5;
+                vertical-align: bottom;
+            }
+            .eco-conscious-technology__kind__pagination .swiper-pagination-bullet-active {
+                opacity: 1;
+            }
+            .eco-conscious-technology__kind__btn-set {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+            }
+            .eco-conscious-technology__kind__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                cursor: pointer;
+            }
+            .eco-conscious-technology__kind__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0005/btn-ectk-prev.svg);
+            }
+            .eco-conscious-technology__kind__btn-set__btn__next {
+                background-image: url(../../mocks/ST0005/btn-ectk-next.svg);
+            }
+
+            /* Recreation of product */
+            .recreation-of-product__wrap {
+                padding: 60px 0px;
+            }
+            .recreation-of-product {
+                width: 1440px;
+                margin: 0px auto;
+                text-align: center;
+            }
+            .recreation-of-product__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+            }
+            .recreation-of-product__intro__txt {
+                margin-top: 16px;
+            }
+            .recreation-of-product__intro__txt:first-child {
+                font-family: 'LG_EI_Headline';
+                font-weight: 600;
+                font-size: 56px;
+                line-height: 60px;
+            }
+            .recreation-of-product__intro__txt:last-child {
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .recreation-of-product__discover-more {
+                margin-top: 24px;
+            }
+            .recreation-of-product__discover-more__btn {
+                display: inline-block;
+                padding: 13px 19px;
+                border-radius: 99px;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 16px;
+                letter-spacing: -0.24px;
+                border: 1px solid #4A4946;
+                background-color: white;
+                transition: 0.3s ease all;
+            }
+            .recreation-of-product__discover-more__btn:hover,
+            .recreation-of-product__discover-more__btn:focus {
+                text-decoration: none;
+                color: white;
+                border-color: #EA1917;
+                background-color: #EA1917;
+            }
+            .recreation-of-product__photos {
+                display: flex;
+                justify-content: center;
+                margin-top: 60px;
+            }
+            .recreation-of-product__photos__img {
+                width: auto;
+                height: 606px;
+            }
+            .recreation-of-product__photos__img--mo {
+                display: none;
+            }
+            .recreation-of-product__type {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 20px;
+                margin-top: 20px;
+            }
+            .recreation-of-product__type__item {
+                position: relative;
+                height: 590px;
+                padding: 60px 50px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                background-color: white;
+            }
+            .recreation-of-product__type__item__tit,
+            .recreation-of-product__type__item__intro {
+                text-align: left;
+            }
+            .recreation-of-product__type__item__tit {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+            }
+            .recreation-of-product__type__item__intro {
+                margin-top: 16px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 44px;
+                line-height: 48px;
+                letter-spacing: -0.44px;
+            }
+            .recreation-of-product__type__item__photo {
+                position: absolute;
+                bottom: 81px;
+                left: 50px;
+                right: 50px;
+                height: 290px;
+                text-align: center;
+            }
+            .recreation-of-product__type__item__photo__img {
+                width: auto;
+                height: 100%;
+            }
+            .recreation-of-product__type__item__more {
+                position: absolute;
+                bottom: 40px;
+                right: 40px;
+                width: 64px;
+                height: 64px;
+                border-width: 0px;
+                background-color: transparent;
+                transform: rotate(0deg);
+                transition: 0.3s ease transform;
+            }
+            .recreation-of-product__type__item__more:hover {
+                transform: rotate(180deg);
+            }
+            .recreation-of-product__type__item__more__img {
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Summary */
+            .summary {
+                padding: 60px 0px 105px;
+            }
+            .summary__cont {
+                width: 1440px;
+                height: 720px;
+                border-radius: 30px;
+                margin: 0px auto;
+                box-sizing: border-box;
+                background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0005/photo-summary-visual.png) no-repeat right center;
+                background-size: cover;
+            }
+            .summary__cont__txt {
+                position: relative;
+                z-index: 1;
+                display: flex;
+                align-items: center;
+                padding: 60px 70px 0px calc(50% + 283px);
+                box-sizing: border-box;
+                color: white;
+                font-size: 20px;
+                line-height: 28px;
+            }
+            .summary__cont__txt--active {
+                padding: 36px 60px 36px calc(50% + 283px);
+                font-size: 44px;
+                font-family: 'LG_EI_Headline';
+                line-height: 48px;
+                letter-spacing: -0.005em;
+            }
+
+            /* What's Next */
+            .whats-next__wrap {
+                overflow: hidden;
+                padding: 80px 0px;
+                background-color: #E6E1D6;
+            }
+            .whats-next {
+                position: relative;
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .whats-next__tit {
+                font-size: 44px;
+                line-height: 52px;
+                font-family: 'LG_EI_Headline';
+                font-weight: 100;
+            }
+            .whats-next__tit__strong {
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+            }
+            .whats-next__menu {
+                margin-top: 64px;
+                overflow: visible;
+            }
+            .whats-next__menu__slide {
+                width: 475px;
+                margin-right: 20px;
+            }
+            .whats-next__menu__slide__anchor {
+                position: relative;
+                display: block;
+                width: 100%;
+                height: 475px;
+                padding: 80px 0px 59px;
+                box-sizing: border-box;
+                background: #F0ECE4;
+                border-radius: 20px;
+                overflow: hidden;
+            }
+            .whats-next__menu__slide__anchor__photo {
+                position: absolute;
+                overflow: hidden;
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide1__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide2__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 30px 200px 200px 30px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide3__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 300px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide4__anchor__photo {
+                top: 135px;
+                left: -57px;
+                right: -41px;
+                bottom: 158px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide5__anchor__photo {
+                top: 80px;
+                left: 100px;
+                right: 100px;
+                bottom: 121px;
+                border-radius: 200px 30px 30px 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide6__anchor__photo {
+                top: 120px;
+                left: 49px;
+                right: 49px;
+                bottom: 147px;
+                border-radius: 200px;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 20px;
+            }
+            .whats-next__menu__slide__anchor__photo__img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .whats-next__menu__slide__anchor__txt {
+                position: absolute;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 26px 32px 34px;
+                font-size: 24px;
+                line-height: 28px;
+                background: rgba(38, 38, 38, 0);
+                backdrop-filter: blur(17px);
+                transition: 0.3s ease all;
+            }
+            .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                color: white;
+                background: rgba(38, 38, 38, 0.26);
+            }
+            .whats-next__menu__btn-set {
+                position: absolute;
+                top: -112px;
+                right: 0px;
+                display: flex;
+                gap: 0px 8px;
+                line-height: 1;
+            }
+            .whats-next__menu__btn-set__btn {
+                width: 48px;
+                height: 48px;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                cursor: pointer;
+            }
+            .whats-next__menu__btn-set__btn__prev {
+                background-image: url(../../mocks/ST0001/btn-wn-prev.svg);
+            }
+            .whats-next__menu__btn-set__btn__next {
+                background-image: url(../../mocks/ST0001/btn-wn-next.svg);
+            }
+            .whats-next__menu__pagination {
+                position: relative;
+                width: 100%;
+                margin-top: 64px;
+                height: 2px;
+                background-color: rgba(0,0,0,0.2);
+            }
+            .whats-next__menu__pagination .swiper-pagination-progressbar-fill {
+                background-color: rgba(0,0,0,1);
+            }
+
+            /* Popup Discription */
+            .popup-discription {
+                display: none;
+                position: fixed;
+                z-index: 99;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: auto;
+                background: rgba(0, 0, 0, 0.5);
+                backdrop-filter: blur(27px);
+            }
+            .popup-discription__wrap {
+                position: relative;
+                width: 980px;
+                margin: 90px auto;
+                padding: 120px 90px;
+                box-sizing: border-box;
+                border-radius: 30px;
+                text-align: left;
+                background-color: white;
+            }
+            .popup-discription__tit {
+                text-align: center;
+                color: black;
+                font-family: 'LG_EI_Headline';
+                font-weight: 550;
+                font-size: 52px;
+                line-height: 60px;
+            }
+            .popup-discription__tit--left {
+                text-align: left;
+            }
+            .popup-discription__tit__preface {
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                letter-spacing: -0.12px;
+                font-weight: 400;
+            }
+            .popup-discription__tit__subject {
+                margin-top: 20px;
+                line-height: 58px;
+                letter-spacing: -0.26px;
+            }
+            .popup-discription__visual {
+                margin: 60px -90px 0px;
+            }
+            .popup-discription__visual__img {
+                width: 100%;
+                height: auto;
+            }
+            .popup-discription__photo {
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__photo__figure {
+                margin: 0px;
+                text-align: center;
+            }
+            .popup-discription__photo__figure__img {
+                max-width: 100%;
+                height: auto;
+            }
+            .popup-discription__photo__figure__figcaption {
+                text-align: center;
+                color: #7E7C77;
+                margin-top: 20px;
+                font-weight: 300;
+            }
+            .popup-discription__photo__figure__figcaption__strong {
+                font-weight: 600;
+                color: #7E7C77;
+            }
+            .popup-discription__cont1 {
+                font-size: 20px;
+                line-height: 28px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__cont2 {
+                font-size: 16px;
+                line-height: 24px;
+                margin: 60px 0px 0px;
+            }
+            .popup-discription__btn-close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                width: 48px;
+                height: 48px;
+                box-sizing: border-box;
+                text-indent: -9999px;
+                overflow: hidden;
+                border-radius: 50%;
+                border: 1px solid #F0ECE4;
+                backdrop-filter: blur(9.23077px);
+                background-color: white;
+                transition: 0.3s ease transform;
+            }
+            .popup-discription__btn-close:hover {
+                transform: rotate(180deg);
+            }
+            .popup-discription__btn-close:before,
+            .popup-discription__btn-close:after {
+                position: absolute;
+                top: 22px;
+                left: 15px;
+                content: '';
+                display: block;
+                width: 16px;
+                height: 2px;
+                background-color: #262626;
+            }
+            .popup-discription__btn-close:before {
+                transform: rotate(45deg);
+            }
+            .popup-discription__btn-close:after {
+                transform: rotate(-45deg);
+            }
+
+            /* Popup Discription - Recreation of product */
+            .popup-discription__recreation__intro {
+                padding: 60px;
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__recreation-product {
+                padding: 60px 0px;
+            }
+            .popup-discription__recreation-product:last-child {
+                padding-bottom: 0px;
+            }
+            .popup-discription__recreation-product__cont {
+                display: flex;
+                gap: 0px 60px;
+                margin: 60px 90px;
+            }
+            .popup-discription__recreation-product__cont:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__recreation-product__cont__tit {
+                margin-top: 60px;
+                font-size: 36px;
+                font-weight: 550;
+                line-height: 40px;
+                letter-spacing: -0.54px;
+                white-space: nowrap;
+            }
+            .popup-discription__recreation-product__cont__tit:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__recreation-product__cont__tit__br {
+                display: none;
+            }
+            .popup-discription__recreation-product__cont__txt {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: -0.1px;
+            }
+            .popup-discription__recreation-product__photo {
+                text-align: center;
+                margin: 60px -35px 0px;
+            }
+            .popup-discription__recreation-product__photo:first-child {
+                margin-top: 0px;
+            }
+            .popup-discription__recreation-product__photo__img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                /* Sustainable Recycling Solutions */
+                .st-recycling-solutions {
+                    max-width: 2560px;
+                    margin: 0px auto;
+                }
+            }
+
+            /* PC Normal */
+            @media (min-width: 1500px) {
+            
+            }
+
+            /* Tablet */
+            @media (min-width: 1024px) {
+            
+            }
+
+            /* Mobile */
+            @media (max-width: 768px) {
+                /* Clean Technology Visual */
+                .clean-technology-visual__tit {
+                    font-size: 44px;
+                    line-height: 48px;
+                    letter-spacing: -0.44px;
+                }
+                .clean-technology-visual__tit__txt__br {
+                    display: none;
+                }
+                .clean-technology-visual__scrolldown {
+                    position: absolute;
+                    bottom: 40px;
+                    left: 0px;
+                    width: 100%;
+                }
+                .clean-technology-visual__scrolldown__btn {
+                    width: 50px;
+                    height: 70px;
+                }
+
+                /* Circular Economy About */
+                .clean-technology-about {
+                    width: auto;
+                    margin: 0px 16px;
+                }
+                .clean-technology-about__cont {
+                    width: auto;
+                    padding: 96px 0px;
+                    font-size: 28px;
+                    line-height: 38px;
+                    letter-spacing: -0.5px;
+                }
+                .clean-technology-about__cont__br {
+                    display: none;
+                }
+                
+                /* ECO-Conscious Technology */
+                .eco-conscious-technology {
+                    width: auto;
+                    padding: 60px 16px;
+                    overflow: hidden;
+                }
+                .eco-conscious-technology__tit {
+                    font-size: 18px;
+                    letter-spacing: -0.09px;
+                }
+                .eco-conscious-technology__intro__txt {
+                    margin-top: 10px;
+                }
+                .eco-conscious-technology__intro__txt:first-child {
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .eco-conscious-technology__intro__txt:last-child {
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                    margin-top: 16px;
+                }
+                .eco-conscious-technology__intro__txt__br {
+                    display: none;
+                }
+                .eco-conscious-technology__kind {
+                    padding: 56px 0px 36px;
+                    margin-top: 40px;
+                }
+                .eco-conscious-technology__kind__slide {
+                    width: auto;
+                    margin-right: 10px;
+                }
+                .eco-conscious-technology__kind__slide__anchor {
+                    width: 100%;
+                    height: 410px;
+                    padding: 16px;
+                    border-radius: 20px;
+                }
+                .eco-conscious-technology__kind__slide__anchor:after {
+                    bottom: 16px;
+                    right: 16px;
+                    content: '';
+                    width: 36px;
+                    height: 36px;
+                }
+                .eco-conscious-technology__kind__slide__anchor__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                }
+                .eco-conscious-technology__kind__slide__anchor__subject {
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .eco-conscious-technology__kind__btn-set {
+                    gap: 0px 4px;
+                }
+                .eco-conscious-technology__kind__btn-set__btn {
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Recreation of product */
+                .recreation-of-product__wrap {
+                    padding: 40px 16px 60px;
+                }
+                .recreation-of-product {
+                    width: auto;
+                }
+                .recreation-of-product__tit {
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+                .recreation-of-product__intro__txt {
+                    margin-top: 10px;
+                }
+                .recreation-of-product__intro__txt:first-child {
+                    font-weight: 400;
+                    font-size: 36px;
+                    line-height: 40px;
+                }
+                .recreation-of-product__intro__txt:last-child {
+                    margin-top: 16px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .recreation-of-product__intro__txt__br {
+                    display: none;
+                }
+                .recreation-of-product__discover-more {
+                    margin-top: 20px;
+                }
+                .recreation-of-product__photos {
+                    overflow: hidden;
+                    margin: 60px -16px 0px;
+                }
+                .recreation-of-product__photos__img {
+                    height: 233px;
+                }
+                .recreation-of-product__photos__img--pc {
+                    display: none;
+                }
+                .recreation-of-product__photos__img--mo {
+                    display: inline-block;
+                }
+                .recreation-of-product__type {
+                    display: block;
+                    margin-top: 40px;
+                }
+                .recreation-of-product__type__item {
+                    height: 320px;
+                    padding: 24px 20px 20px 24px;
+                    border-radius: 20px;
+                }
+                .recreation-of-product__type__item + .recreation-of-product__type__item {
+                    margin-top: 16px;
+                }
+                .recreation-of-product__type__item__tit {
+                    font-size: 18px;
+                    letter-spacing: -0.09px;
+                }
+                .recreation-of-product__type__item__intro {
+                    margin-top: 8px;
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .recreation-of-product__type__item__photo {
+                    position: absolute;
+                    bottom: 46px;
+                    left: 49px;
+                    right: 52px;
+                    height: 147px;
+                }
+                .recreation-of-product__type__item__photo__img {
+                    width: auto;
+                    height: 100%;
+                }
+                .recreation-of-product__type__item__more {
+                    bottom: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+
+                /* Summary */
+                .summary {
+                    padding: 60px 16px;
+                }
+                .summary__cont {
+                    width: auto;
+                    height: auto;
+                    border-radius: 0px;
+                    background-image: none;
+                }
+                .summary__cont__txt {
+                    padding: 0px;
+                    box-sizing: border-box;
+                    color: #4A4946;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .summary__cont__txt--active {
+                    padding: 30px 0px 90px;
+                    font-size: 36px;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: -0.54px;
+                }
+                .summary__visual {
+                    border-radius: 20px;
+                    height: 384px;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0005/photo-summary-visual.png) no-repeat 75% center;
+                    background-size: cover;
+                }
+                
+                /* What's Next */
+                .whats-next__wrap {
+                    padding: 30px 16px;
+                }
+                .whats-next {
+                    width: 100%;
+                }
+                .whats-next__tit {
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+                .whats-next__menu {
+                    margin-top: 30px;
+                }
+                .whats-next__menu__slide {
+                    width: 290px;
+                    margin-right: 16px;
+                }
+                .whats-next__menu__slide__anchor {
+                    height: 290px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo {
+                    position: absolute;
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide1__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide2__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 20px 130px 130px 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide2__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide3__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 50%;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide3__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide4__anchor__photo {
+                    top: 82px;
+                    left: -35px;
+                    right: -25px;
+                    bottom: 97px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide4__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide5__anchor__photo {
+                    top: 49px;
+                    left: 61px;
+                    right: 61px;
+                    bottom: 74px;
+                    border-radius: 122px 18px 18px 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide5__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide6__anchor__photo {
+                    top: 73px;
+                    left: 30px;
+                    right: 30px;
+                    bottom: 90px;
+                    border-radius: 122px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide6__anchor__photo {
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
+                    border-radius: 10px;
+                }
+                .whats-next__menu__slide__anchor__photo__img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                .whats-next__menu__slide__anchor__txt {
+                    padding: 15px 20px;
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+                .whats-next__menu__slide__anchor:hover .whats-next__menu__slide__anchor__txt {
+                    color: white;
+                    background: rgba(38, 38, 38, 0.26);
+                }
+                .whats-next__menu__btn-set {
+                    display: none;
+                }
+                .whats-next__menu__pagination {
+                    margin-top: 16px;
+                }
+
+                /* Popup Discription */
+                .popup-discription::-webkit-scrollbar {
+                    display: none;
+                }
+                .popup-discription__wrap {
+                    width: 100%;
+                    min-height: 100vh;
+                    margin: 0px;
+                    padding: 80px 20px 40px;
+                    border-radius: 0px;
+                }
+                .popup-discription__tit {
+                    margin-top: 80px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__tit__br {
+                    display: none;
+                }
+                .popup-discription__tit--left {
+                    text-align: center;
+                }
+                .popup-discription__tit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__tit__preface {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21px;
+                    letter-spacing: -0.09px;
+                }
+                .popup-discription__tit__subject {
+                    margin-top: 16px;
+                    font-size: 28px;
+                    font-weight: 550;
+                    line-height: 34px;
+                    letter-spacing: -0.14px;
+                }
+                .popup-discription__visual {
+                    margin: 32px -20px 0px;
+                }
+                .popup-discription__visual__img--pc {
+                    display: none;
+                }
+                .popup-discription__visual__img--mo {
+                    display: block;
+                }
+                .popup-discription--intro-summary {
+                    padding-left: 0px;
+                    margin-top: 40px;
+                }
+                .popup-discription__photo {
+                    margin-top: 40px;
+                }
+                .popup-discription__photo__figure {
+                    margin: 0px;
+                    text-align: center;
+                }
+                .popup-discription__photo__figure__figcaption {
+                    margin-top: 16px;
+                    font-weight: 400;
+                    font-size: 12px;
+                }
+                .popup-discription__photo__figure__figcaption__strong {
+                    font-weight: 600;
+                }
+                .popup-discription__video {
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__video__player {
+                    height: 187px;
+                }
+                .popup-discription--stit {
+                    margin-top: 40px;
+                    font-size: 24px;
+                    font-weight: 550;
+                    line-height: 30px;
+                    letter-spacing: -0.12px;
+                    text-align: center;
+                }
+                .popup-discription--intro-detail {
+                    display: block;
+                    margin-top: 20px;
+                }
+                .popup-discription--intro-detail__item + .popup-discription--intro-detail__item {
+                    margin-top: 20px;
+                }
+                .popup-discription--intro-detail__item__photo__img {
+                    width: 100%;
+                    height: auto;
+                }
+                .popup-discription--intro-detail__item__tit {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: -0.08px;
+                    margin-top: 16px;
+                }
+                .popup-discription--intro-detail__item__tit__category {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                }
+                .popup-discription--intro-detail__item__tit__subject {
+                    font-size: 18px;
+                    font-weight: 600;
+                    letter-spacing: -0.09px;
+                    margin-top: 10px;
+                }
+                .popup-discription--intro-detail__guestbook {
+                    margin-top: 56px;
+                    text-align: center;
+                }
+                .popup-discription--intro-detail__guestbook__blockquote {
+                    font-size: 24px;
+                    font-weight: 550;
+                    line-height: 30px; /* 125% */
+                    letter-spacing: -0.12px;
+                }
+                .popup-discription--intro-detail__guestbook__figcaption {
+                    padding: 0px 19px 40px;
+                }
+                .popup-discription--intro-detail__item__major-desc {
+                    margin-top: 0px;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .popup-discription--intro-detail__item__add-explan {
+                    margin-top: 16px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    font-weight: 400;
+                }
+                .popup-discription__cont1 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont2 {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin: 40px 0px 0px;
+                }
+                .popup-discription__cont__grid2 {
+                    display: block;
+                }
+                .popup-discription__cont1--grid2--item + .popup-discription__cont1--grid2--item {
+                    margin-top: 20px;
+                }
+                .popup-discription__btn-close {
+                    top: 20px;
+                    right: 20px;
+                    width: 36px;
+                    height: 36px;
+                }
+                .popup-discription__btn-close:hover {
+                    transform: rotate(180deg);
+                }
+                .popup-discription__btn-close:before,
+                .popup-discription__btn-close:after {
+                    position: absolute;
+                    top: 16px;
+                    left: 10px;
+                    content: '';
+                    display: block;
+                    width: 14px;
+                    height: 2px;
+                    background-color: #262626;
+                }
+                .popup-discription__btn-close:before {
+                    transform: rotate(45deg);
+                }
+                .popup-discription__btn-close:after {
+                    transform: rotate(-45deg);
+                }
+
+                /* Popup Discription - Recreation of product */
+                .popup-discription__recreation__intro {
+                    padding: 40px 20px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-align: center;
+                }
+                .popup-discription__recreation-product {
+                    padding: 40px 0px;
+                }
+                .popup-discription__recreation-product:last-child {
+                    padding-bottom: 0px;
+                }
+                .popup-discription__recreation-product__cont {
+                    display: block;
+                    margin: 20px 20px 0px;
+                }
+                .popup-discription__recreation-product__cont:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__recreation-product__cont__tit {
+                    margin-top: 60px;
+                    font-size: 28px;
+                    line-height: 34px;
+                    letter-spacing: -0.54px;
+                    white-space: nowrap;
+                }
+                .popup-discription__recreation-product__cont__tit:first-child {
+                    margin-top: 0px;
+                }
+                .popup-discription__recreation-product__cont__tit__br {
+                    display: none;
+                }
+                .popup-discription__recreation-product__cont__txt {
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-top: 16px;
+                }
+                .popup-discription__recreation-product__photo {
+                    text-align: center;
+                    margin: 20px 4px 0px;
+                }
+                .popup-discription__recreation-product__photo:first-child {
+                    margin-top: 0px;
+                }
+            }
+        </style>
+        <!-- html code -->
+        <div class="sustainably-container">
+            <div class="clean-technology-visual visual__top">
+                <h2 class="clean-technology-visual__tit">
+                    <span class="clean-technology-visual__tit__txt">
+                        Leading the way towards <br class="clean-technology-visual__tit__txt__br" />
+                        a cleaner tomorrow
+                    </span>
+                </h2>
+                <video src="../../mocks/ST0005/video-clean-technology-visual.mp4" class="clean-technology-visual__video" autoplay loop muted></video>
+                <div class="clean-technology-visual__scrolldown">
+                    <button type="button" class="clean-technology-visual__scrolldown__btn">Scroll Down</button>
+                </div>
+            </div>
+            <div class="clean-technology-about">
+                <p class="clean-technology-about__cont">
+                    <span class="clean-technology-about__cont__txt">With a steadfast focus on high-efficiency energy </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">products and carbon emission reduction targets, we </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">are driving innovation in eco-conscious </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">technologies. Our unwavering commitment propels </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">us towards a cleaner and greener future.</span>
+                </p>
+            </div>
+            <div class="eco-conscious-technology">
+                <h3 class="eco-conscious-technology__tit">Eco-conscious precedent technology</h3>
+                <div class="eco-conscious-technology__intro">
+                    <p class="eco-conscious-technology__intro__txt">
+                        Advanced initiatives on applying <br />
+                        eco-conscious technology
+                    </p>
+                    <p class="eco-conscious-technology__intro__txt">
+                        Recognized by the global initiative Science Based Targets initiative (SBTi), <br class="eco-conscious-technology__intro__txt__br" />
+                        we proactively decrease carbon emissions during the usage phase by <br class="eco-conscious-technology__intro__txt__br" />
+                        providing high-efficiency energy products.
+                    </p>
+                </div>
+                <div class="swiper eco-conscious-technology__kind">
+                    <div class="swiper-wrapper eco-conscious-technology__kind__slide-wrap">
+                        <div class="swiper-slide eco-conscious-technology__kind__slide">
+                            <a href="#up-home-appliances" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor1">
+                                <p class="eco-conscious-technology__kind__slide__anchor__preface">Upgrade your experience</p>
+                                <p class="eco-conscious-technology__kind__slide__anchor__subject">UP home appliances</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-technology__kind__slide">
+                            <a href="#heat-pump-technology" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor2">
+                                <p class="eco-conscious-technology__kind__slide__anchor__preface">Towards  zero ozone layer depletion</p>
+                                <p class="eco-conscious-technology__kind__slide__anchor__subject">Heat pump technology</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide eco-conscious-technology__kind__slide">
+                            <a href="#glass-powder" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor3">
+                                <p class="eco-conscious-technology__kind__slide__anchor__preface">Empowering the future for environmental protection</p>
+                                <p class="eco-conscious-technology__kind__slide__anchor__subject">Glass powder</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination eco-conscious-technology__kind__pagination"></div>
+                    <div class="eco-conscious-technology__kind__btn-set">
+                        <div class="eco-conscious-technology__kind__btn-set__btn eco-conscious-technology__kind__btn-set__btn__prev"></div>
+                        <div class="eco-conscious-technology__kind__btn-set__btn eco-conscious-technology__kind__btn-set__btn__next"></div>
+                    </div>
+                </div>
+                <div class="popup-discription" id="up-home-appliances">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Upgrade your experience</div>
+                                <div class="popup-discription__tit__subject">UP home appliances</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-up-home-appliances.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">UP home appliances surpass the conventional use and management of products by incorporating new functionalities. These enhancements are continuously upgraded in consideration of valuable input from consumers. LG Electronics has introduced UP home appliances, featuring 24 different products such as "Laundry Care after End" and "Pet Care," along with over 150 upgrade features. </p>
+                                <p class="popup-discription__cont1--grid2--item">Among these, eco-conscious UP appliances offer an energy-saving cycle for dishwashers and a microplastic care program for washing machines. The energy-saving cycle maintains the same cleaning power as the standard cycle but consumes 20% less electricity. Additionally, the washing machine's microplastic care program reduces cloth friction, resulting in a 70% reduction in the release of microplastics caused by synthetic fiber damage.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="heat-pump-technology">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Towards  zero ozone layer depletion</div>
+                                <div class="popup-discription__tit__subject">Heat pump technology</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-heat-pump-technology.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">Heat pump technology utilizes the eco-friendly refrigerant "R290" to achieve a remarkable milestone in ozone depletion potential (ODP) with a rating of 0. </p>
+                                <p class="popup-discription__cont1--grid2--item">This innovative air conditioning system replaces traditional heaters and enables cooling and heating using air, land, and water as heat sources. By doing so, it saves up to 80% energy compared to conventional air conditioning systems.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="glass-powder">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">Empowering the future for environmental protection</div>
+                                <div class="popup-discription__tit__subject">Glass powder</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-glass-powder.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">LG Electronics continuously develops functional materials as key drivers of future growth. This includes the production of antibacterial glass powder and water-soluble glass powder that completely dissolves in water. Glass powder is composed of fine particles obtained by crushing glass and possesses excellent material stability and durability. In 2013, LG Electronics introduced an oven in North America featuring the "Easy Clean" function, which utilizes a coating of functional glass powder on the metal surface, making it effortless to clean the inside. </p>
+                                <p class="popup-discription__cont1--grid2--item">The versatile antibacterial glass powder is applicable to many appliances, especially those with handles that contact with the body, such as refrigerators, washing machines, and air conditioners. Also, water-soluble glass powder transforms into inorganic ions when dissolved in water, facilitating the growth of microalgae and seaweed in the ocean. It can also serve as an alternative to ocher spray used during red tide occurrences.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="recreation-of-product__wrap">
+                <div class="recreation-of-product">
+                    <h3 class="recreation-of-product__tit">Recreation of product</h3>
+                    <div class="recreation-of-product__intro">
+                        <p class="recreation-of-product__intro__txt">New life from old materials​</p>
+                        <p class="recreation-of-product__intro__txt">
+                            Discover our latest product, manufactured through an eco-conscious <br class="recreation-of-product__intro__txt__br" />
+                            recycling process to promote sustainability and reduce waste.
+                        </p>
+                    </div>
+                    <div class="recreation-of-product__discover-more">
+                        <a href="#recreation-of-product" class="recreation-of-product__discover-more__btn" onclick="popupDiscription(this.href); return false">Discover more</a>
+                    </div>
+                    <div class="recreation-of-product__photos">
+                        <img src="../../mocks/ST0005/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img recreation-of-product__photos__img--pc">
+                        <img src="../../mocks/ST0005/photos-recreation-of-product-mo.png" alt="" class="recreation-of-product__photos__img recreation-of-product__photos__img--mo">
+                    </div>
+                    <div class="popup-discription" id="recreation-of-product">
+                        <div class="popup-discription__wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription__tit popup-discription__tit--left">
+                                    <div class="popup-discription__tit__preface">Recreation of product</div>
+                                    <div class="popup-discription__tit__subject">New cycle-crafted products</div>
+                                </dt>
+                                <dd class="popup-discription__visual">
+                                    <img src="../../mocks/ST0005/visual-pdm-recreation-of-product.png" alt=""  class="popup-discription__visual__img" />
+                                </dd>
+                                <dd class="popup-discription__recreation__intro">
+                                    We've made our products more eco-conscious than ever, by using recycled plastic, recycled PET bottles for fabric covering, and molded pulp made with recycled paper and cardboard for packaging. Our effort helps us reduce plastic waste, and lower our carbon footprint and CO2 emissions.
+                                </dd>
+                                <dd class="popup-discription__recreation-product">
+                                    <div class="popup-discription__recreation-product__cont">
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG OLED <br class="popup-discription__recreation-product__cont__tit__br" />EVO</h3>
+                                        <p class="popup-discription__recreation-product__cont__txt">
+                                            LG OLED Evo utilizes composite fiber materials and metal instead of plastic, resulting in reduced weight and increased durability. It decreases plastic usage by 40% compared to LCD TVs, leading to a reduction of 20,000 tons annually. The product has been recognized by certifications such as the Carbon Footprint Certification from the UK's Carbon Trust, eco-friendly certification from Switzerland's SGS, and ECV Environmental Claim Validation by UL in the US. The manufacturing process also emits less carbon dioxide and minimizes damage risks.
+                                        </p>
+                                    </div>
+                                    <div class="popup-discription__recreation-product__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product1.png" alt=""  class="popup-discription__recreation-product__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__recreation-product">
+                                    <div class="popup-discription__recreation-product__cont">
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Sound Bar</h3>
+                                        <p class="popup-discription__recreation-product__cont__txt">
+                                            Our 2022 LG sound bar lineup is both SGS Eco-Product and ENERGY STAR-certified, with parts made from recycled plastic resin and polyester jersey fabric, meeting the Global Recycled Standard.
+                                        </p>
+                                    </div>
+                                    <div class="popup-discription__recreation-product__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product2.png" alt=""  class="popup-discription__recreation-product__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__recreation-product">
+                                    <div class="popup-discription__recreation-product__cont">
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG tiiun <br class="popup-discription__recreation-product__cont__tit__br" />mini</h3>
+                                        <p class="popup-discription__recreation-product__cont__txt">
+                                            tiiun mini is made from UP (Upcycled Plastic), replacing the conventional plastic used in the previous model (L011W1) with PCR (Post-Consumer Recycled) plastic.
+                                        </p>
+                                    </div>
+                                    <div class="popup-discription__recreation-product__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product3.png" alt=""  class="popup-discription__recreation-product__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__recreation-product">
+                                    <div class="popup-discription__recreation-product__cont">
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Aero <br class="popup-discription__recreation-product__cont__tit__br" />Furniture</h3>
+                                        <div class="popup-discription__recreation-product__cont__inner">
+                                            <p class="popup-discription__recreation-product__cont__txt">
+                                                LG Aero Furniture is made by blending PCR (Post Consumer Recycled) plastics, recycled from consumer-used plastic waste, with mineral particles to form a distinctive 'TerraZo texture.'
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="popup-discription__recreation-product__photo">
+                                        <img src="../../mocks/ST0005/photo-pdm-recreation-of-product4.png" alt=""  class="popup-discription__recreation-product__photo__img" />
+                                    </div>
+                                </dd>
+                                <dd class="popup-discription__recreation__intro">
+                                    Our commitment to sustainability was recognized with the Product Champion Award by the US Environmental Protection Agency, acknowledging our dedication to delivering sustainable innovations.
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
+                        </div>
+                    </div>
+                    <ul class="recreation-of-product__type">
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Recycling material​</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Repurpose plastic. <br />
+                                Repeat.
+                            </p>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0005/photo-recreation-of-product-type1.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            </div>
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#available-resources')">
+                                <img src="../../mocks/ST0005/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                        <li class="recreation-of-product__type__item">
+                            <h4 class="recreation-of-product__type__item__tit">Green packaging</h4>
+                            <p class="recreation-of-product__type__item__intro">
+                                Wrap it right
+                            </p>
+                            <div class="recreation-of-product__type__item__photo">
+                                <img src="../../mocks/ST0005/photo-recreation-of-product-type2.png" alt="" class="recreation-of-product__type__item__photo__img">
+                            </div>
+                            <button type="button" class="recreation-of-product__type__item__more" onclick="popupDiscription('#packaging-materials')">
+                                <img src="../../mocks/ST0005/btn-recreation-of-product-more.svg" alt="" class="recreation-of-product__type__item__more__img">
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="popup-discription" id="available-resources">
+                        <div class="popup-discription__wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription__tit">Making better use of available <br class="popup-discription__tit__br" />resources</dt>
+                                <dd class="popup-discription__photo">
+                                    <figure class="popup-discription__photo__figure">
+                                        <img src="../../mocks/ST0005/photo-available-resources.png" alt="" class="popup-discription__photo__figure__img">
+                                    </figure>
+                                </dd>
+                                <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                    <p class="popup-discription__cont1--grid2--item">
+                                        LG is working to improve its products' performance and convenience while minimizing volume and weight through the development of materials and structures. We reduced the weight of one of our refrigerator models (model: K410MC19E) by 2% in 2020 by changing materials and increased the use of recycled materials by 6% for ten types of plastic. <br />
+                                        We have expanded the use of recycled materials in various products, including washing machines, refrigerators, air conditioners, smartphones, TVs, and monitors, with over 11,000 tons of recycled plastic used in 2020.
+                                    </p>
+                                    <p class="popup-discription__cont1--grid2--item">
+                                        LG tiiun exemplifies our dedication to exemplary ESG management. Each unit incorporates components crafted from recycled plastics, effectively reducing carbon emissions throughout the production process. <br />
+                                        We promote the development of alternative parts and technologies for all products, and carefully assess the performance of recycled plastics we use.
+                                    </p>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
+                        </div>
+                    </div>
+                    <div class="popup-discription" id="packaging-materials">
+                        <div class="popup-discription__wrap">
+                            <dl class="popup-discription--inner">
+                                <dt class="popup-discription__tit">New Uses of Packaging <br />Materials</dt>
+                                <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                    <p class="popup-discription__cont1--grid2--item">We're committed to minimizing our negative impact on the environment, from design to delivery. We use foam plastic instead of Styrofoam packaging for air conditioning systems and outdoor units, and we've reduced the amount of paper used to pack an outdoor unit from 2,950g to 300g.</p>
+                                    <p class="popup-discription__cont1--grid2--item">Outdoor unit packaging is also collected for washing and recycling, which we expect will reduce around 85 tons of paper and 19 tons of Styrofoam annually. Through this, we're actively promoting sustainability and reducing waste.</p>
+                                </dd>
+                                <dd class="popup-discription__photo">
+                                    <figure class="popup-discription__photo__figure">
+                                        <img src="../../mocks/ST0005/photo-packaging-materials.png" alt="" class="popup-discription__photo__figure__img">
+                                        <figcaption class="popup-discription__photo__figure__figcaption"><strong class="popup-discription__photo__figure__figcaption__strong">Left</strong> Exsiting packing material, <strong class="popup-discription__photo__figure__figcaption__strong">Right</strong> Updated packaging material</figcaption>
+                                    </figure>
+                                </dd>
+                            </dl>
+                            <button type="button" class="popup-discription__btn-close">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary__cont">
+                    <p class="summary__cont__txt">
+                        Clean technology is the cornerstone of a <br />
+                        sustainable future. By investing in <br />
+                        renewable energy, carbon reduction, and <br />
+                        enhanced recycling, we secure a world <br />
+                        that safeguards life for future <br />
+                        generations.
+                    </p>
+                    <p class="summary__cont__txt summary__cont__txt--active">
+                        Clean technology <br />
+                        shapes <br />
+                        a sustainable <br />
+                        future
+                    </p>
+                </div>
+                <div class="summary__visual"></div>
+            </div>
+            <div class="whats-next__wrap">
+                <div class="whats-next">
+                    <h3 class="whats-next__tit">
+                        <strong class="whats-next__tit__strong">What’s next?</strong><br />
+                        Explore Sustainability
+                    </h3>
+                    <div class="swiper whats-next__menu">
+                        <div class="swiper-wrapper whats-next__menu__slide-wrap">
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Carbon neutrality</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Circularity</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Clean technology</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide whats-next__menu__slide">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                    <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
+                                        <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
+                                    </div>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="whats-next__menu__btn-set">
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__prev"></div>
+                            <div class="whats-next__menu__btn-set__btn whats-next__menu__btn-set__btn__next"></div>
+                        </div>
+                        <div class="swiper-pagination whats-next__menu__pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //html code -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <script src="../../../gsap.min.js"></script>
+        <script src="../../../ScrollTrigger.min.js"></script>
+        <script src="../../../ScrollToPlugin.min.js"></script>
+        <script>
+            var circularity = circularity || {};
+                
+            circularity = {
+                visualScrollDown: function() {
+                    let visual = document.querySelector(".clean-technology-visual");
+                    let vScrolldownWrap = visual.querySelector(".clean-technology-visual__scrolldown");
+                    let btnScrolldown = vScrolldownWrap.querySelector(".clean-technology-visual__scrolldown__btn");
+
+                    btnScrolldown.onclick = function() {
+                        TweenMax.to(window, 0.3, {
+                            "scrollTo": window.innerHeight
+                        },{
+                            ease: Power1.easeOut,
+                            autoKill: true,
+                            overwrite: 5
+                        })
+                    }
+                },
+                ecoConsciousTechnology: function() {
+                    let swiper = new Swiper(".eco-conscious-technology__kind", {
+                        breakpoints: {
+                            0: {
+                                slidesPerView: 1,
+                                spaceBetween: 10
+                            },
+                            1024: {
+                                slidesPerView: 2,
+                                spaceBetween: 24
+                            }
+                        },
+                        pagination: {
+                            el: ".eco-conscious-technology__kind__pagination"
+                        },
+                        navigation: {
+                            nextEl: ".eco-conscious-technology__kind__btn-set__btn__next",
+                            prevEl: ".eco-conscious-technology__kind__btn-set__btn__prev",
+                        },
+                    });
+                },
+                whatsNext: function() {
+                    let swiper = new Swiper(".whats-next__menu", {
+                        breakpoints: {
+                            0: {
+                                slidesPerView: "auto"
+                            },
+                            1024: {
+                                slidesPerView: 3
+                            }
+                        },
+                        pagination: {
+                            el: ".whats-next__menu__pagination",
+                            type: "progressbar",
+                        },
+                        navigation: {
+                            nextEl: ".whats-next__menu__btn-set__btn__next",
+                            prevEl: ".whats-next__menu__btn-set__btn__prev",
+                        },
+                    });
+
+                    let next4Anchor = document.querySelector(".whats-next__menu__slide4__anchor")
+                    let next4PhotoImg = next4Anchor.querySelector(".whats-next__menu__slide4__anchor__photo__img")
+
+                    next4Anchor.onmouseenter = function() {
+                        chSrc = next4PhotoImg.src.replace("__off.png","__on.png")
+                        next4PhotoImg.src = chSrc
+                    }
+
+                    next4PhotoImg.onmouseleave = function() {
+                        chSrc = next4PhotoImg.src.replace("__on.png","__off.png")
+                        next4PhotoImg.src = chSrc
+                    }
+                }
+            }
+            circularity.visualScrollDown();
+            circularity.ecoConsciousTechnology();
+            circularity.whatsNext();
+
+            window.addEventListener("resize", ScrollTrigger.refresh);
+        </script>
+        <script>
+            function popupDiscoverMore(popupID) {
+                var pdmPopup = document.getElementById(popupID.split("#")[1]);
+                var pdmContainer = pdmPopup.querySelector(".popup-discover-more--container");
+                var pdmSection = pdmContainer.getElementsByTagName("section");
+                var pdmSectionWidth = 0;
+                var pdmHeader = pdmPopup.querySelector(".popup-discover-more--header");
+                var btnClose = pdmPopup.querySelector(".popup-discover-more--header--edit--btn-close");
+                var pdmProgress = pdmHeader.querySelector(".popup-discover-more--header--edit--progress");
+                var pdmProgressBar = pdmProgress.querySelector(".popup-discover-more--header--edit--progress--bar");
+                var condition = 0;
+                var dist = window.innerWidth;
+                var wheelIng = true;
+                var startPercentGauge;
+
+                document.querySelector("body").style.overflow = "hidden"
+                pdmPopup.style.display = "block"
+
+                setTimeout(function(){
+                    for(var a=0; a < pdmSection.length; a++) {
+                        //console.log(pdmSection[a].offsetWidth)
+                        pdmSectionWidth+=pdmSection[a].offsetWidth;
+                    }
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                } ,500)
+
+                window.onresize = window.onorientationchange = function() {
+                    condition = 0;
+                    pdmSectionWidth = 0
+                    for(var b=0; b < pdmSection.length; b++) {
+                        pdmSectionWidth+=pdmSection[b].offsetWidth;
+                    }
+                    dist = window.innerWidth
+                    pdmContainer.style.width = pdmSectionWidth + "px"
+                    startPercentGauge = (dist/pdmSectionWidth)*100
+                    pdmProgressBar.style.width = startPercentGauge + "%"
+                    wheelIng = false
+                }
+
+                document.addEventListener("wheel", function (e) {
+                    if(e.deltaY > 0 && dist < pdmSectionWidth  && wheelIng == false) {
+                        wheelIng = true
+                        dist+=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Down: "+ parseInt(dist))
+                        condition++;
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    } else if(e.deltaY < 0 && dist > window.innerWidth && wheelIng == false) {
+                        wheelIng = true
+                        condition--;
+                        dist-=parseInt(pdmSection[condition].offsetWidth);
+                        console.log("Up: "+ parseInt(dist))
+                        setTimeout(function() {
+                            wheelIng = false
+                        },500)
+                    }
+
+                    if(dist/pdmSectionWidth < 1) {
+                        pdmContainer.style.marginLeft = "-"+(dist - window.innerWidth)+"px"
+                        startPercentGauge = (dist/pdmSectionWidth)*100
+                        pdmProgressBar.style.width = (startPercentGauge) + "%"
+                    } else if(dist/pdmSectionWidth >= 1) {
+                        pdmContainer.style.marginLeft = "-"+(pdmSectionWidth - window.innerWidth)+"px"
+                        pdmProgressBar.style.width = "100%"
+                    }
+                })
+
+                btnClose.onclick = function() {
+                    pdmProgressBar.style.width = ""
+                    pdmContainer.style.marginLeft = ""
+                    pdmPopup.style.display = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+            }
+        </script>
+        <script>
+            function popupDiscription(popupID) {
+                var descPopup = document.getElementById(popupID.split("#")[1]);
+                var descPopupWrap = descPopup.querySelector(".popup-discription__wrap");
+                var btnClose = descPopupWrap.querySelector(".popup-discription__btn-close");
+                var bcSpaceTop = function() {
+                    if(window.innerWidth > 1024) {
+                        return 40
+                    } else {
+                        return 20
+                    }
+                }
+
+                document.querySelector("html").style.overflow = "hidden"
+                document.querySelector("body").style.overflow = "hidden"
+                descPopup.style.display = "block"
+
+                btnClose.onclick = function() {
+                    descPopup.style.display = "none"
+                    document.querySelector("html").style.overflow = ""
+                    document.querySelector("body").style.overflow = ""
+                }
+
+                descPopup.onscroll = function() {
+                    if(this.scrollTop >= descPopupWrap.offsetTop) {
+                        btnClose.style.top = this.scrollTop - descPopupWrap.offsetTop + bcSpaceTop()+"px"
+                    } else if(this.scrollTop < descPopupWrap.offsetTop) {
+                        btnClose.style.top = ""
+                    }
+                }
+            }
+        </script>
+        <!-- [//code component area end] -->
+    </main>
+</div>
+
+<div id="footer__wrap" class="c-footer__wrap">
+    <footer id="footer" class="c-footer">
+
+    </footer>
+</div>
+</body>
+
+</html>
