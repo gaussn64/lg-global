@@ -20,8 +20,8 @@
             <h1 class="c-header__tit"><a href="../BS0009/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
             <nav class="c-header__gnb">
                 <ul class="c-header__gnb__list">
-                    <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor">Brand Story</a></li>
-                    <li class="c-header__gnb__list__item"><a href="javascript:void(0)" onmouseenter="initGnbDeps2(this); return false" onclick="initGnbDeps2(this);  return false" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Elements</a>
+                    <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor">Philosophy</a></li>
+                    <li class="c-header__gnb__list__item"><a href="javascript:void(0)"  onmouseenter="initGnbDeps2(this); return false" onclick="initGnbDeps2(this);  return false" class="c-header__gnb__list__item__anchor  c-header__gnb__list__item__anchor--active">Elements</a>
                         <div class="c-header__gnb__list__item__deps2">
                             <ul class="c-header__gnb__list__item__deps2__menu">
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Logo</a></li>
@@ -30,6 +30,7 @@
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Photography</a></li>
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0006/brand_design_system.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Design System</a></li>
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0007/brand_typography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Typography</a></li>
+                                <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0010/brand_voice.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Voice</a></li>
                             </ul>
                             <ul class="c-header__gnb__list__item__deps2__visual">
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-logo.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
@@ -38,11 +39,11 @@
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-photography.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-design-system.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-typography.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                                <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-voice.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                             </ul>
                             <button class="c-header__gnb__list__item__deps2__btn-back">Back</button>
                         </div>
                     </li>
-                    <li class="c-header__gnb__list__item"><a href="../BS0008/brand_in_action.html" class="c-header__gnb__list__item__anchor">Brand in Action</a></li>
                 </ul>
             </nav>
             <p class="c-header__location">Photography</p>
@@ -183,12 +184,44 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                font-size: 1.4583vw;
+                font-size: 28px;
                 line-height: 1.3;
             }
+            .photography__item__mobtn {
+                position: relative;
+                background-color: transparent;
+                cursor: pointer;
+                border: none;
+                width: 16px;
+                height: 16px;
+                display: none;
+            }
+            .photography__item__mobtn::before,
+            .photography__item__mobtn::after {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 12px;
+                background-color: #fff;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .photography__item__mobtn::after {
+                transform: translate(-50%, -50%) rotate(90deg);
+                transition: .4s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .photography__item.photography__item--hover .photography__item__mobtn::before {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+            .photography__item.photography__item--hover .photography__item__mobtn::after {
+                transform: translate(-50%, -50%) rotate(270deg);
+            }
+
             .photography__item dl dd {
                 margin: 0;
-                font-size: 1.1458vw;
+                font-size: 22px;
                 line-height: 1.4;
                 /* height: 90px; */
                 height: 0;
@@ -196,8 +229,8 @@
                 opacity: 0;
                 transition: .3s cubic-bezier(0.56, 0, 0.28, 1);
             }
-            .photography__item:hover dd {
-                padding-top: 8px;
+            .photography__item.photography__item--hover dd {
+                margin-top: 48px;
                 height: 90px;
                 opacity: 1;
             }
@@ -416,16 +449,16 @@
                     border-radius: 0 0 15px 15px;
                 }
                 .photography__item dl dt {
-                    font-size: 17px;
+                    font-size: 16px;
                 }
+                .photography__item dl dt .index {display: none;}
                 .photography__item dl dd {
                     font-size: 15px;
                 }
-                .photography__item:hover dd {
+                .photography__item.photography__item--hover dd {
                     height: 70px;
                     opacity: 1;
                 }
-
 
                 /*photography grid*/
                 .photography__grid {
@@ -519,22 +552,49 @@
                 }
                 .photography__item {
                     border-radius: 9px;
+                    position: relative;
                 }
 
                 .photography__item dl {
-                    padding: 13px;
+                    position: absolute;
+                    width: 100%;
+                    height:40px;
+                    padding: 0;
                     border-radius: 0 0 9px 9px;
+                    bottom: 0;
+                    left: 0;
+                    transition: height .3s cubic-bezier(0.56, 0, 0.28, 1);
                 }
                 .photography__item dl dt {
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    padding: 13px;
                     font-size: 14px;
                 }
-                .photography__item dl dd {
-                    font-size: 12px;
+                .photography__item__mobtn {
+                    display: block;
                 }
-                .photography__item:hover dd {
-                    height: 70px;
+                .photography__item dl dd {
+                    margin: 0;
+                    height: 0;
+                    opacity: 0;
+                    visibility: hidden;
+                    font-size: 12px;
+                    padding: 16px;
+                    transition: opacity .3s cubic-bezier(0.56, 0, 0.28, 1);
+                }
+                .photography__item.photography__item--hover dl {
+                    height: 100%;
+                }
+                .photography__item.photography__item--hover dl dd {
+                    margin-top: 0;
+                    height: auto;
+                    visibility: visible;
                     opacity: 1;
                 }
+
 
                 .photography__grid {
                     gap: 6px;
@@ -639,11 +699,24 @@
                 }
 
                 .photography__item dl {
-                    padding: 15px 18px;
+                    height: 60px;
                     border-radius: 0 0 10px 10px;
                 }
                 .photography__item dl dt {
-                    font-size: 16px;
+                    font-size: 18px;
+                    height: 60px;
+                }
+                .photography__item dl dd {
+                    font-size: 18px;
+                }
+                .photography__item__mobtn {
+                    width: 24px;
+                    height: 24px;
+                }
+                .photography__item__mobtn::before,
+                .photography__item__mobtn::after {
+                    width: 1px;
+                    height: 18px;
                 }
 
 
@@ -767,7 +840,10 @@
                 <ul class="photography__list">
                     <li class="photography__item photography__item--everyday">
                         <dl>
-                            <dt>Everyday Life <span>01</span></dt>
+                            <dt>
+                                Everyday Life 
+                                <button class="photography__item__mobtn"></button>
+                            </dt>
                             <dd>
                                 Imagery should capture real, <br>
                                 spontaneous moments so it feels warm, <br>
@@ -777,7 +853,10 @@
                     </li>
                     <li class="photography__item photography__item--energy">
                         <dl>
-                            <dt>Energy, Passion and Interests<span>02</span></dt>
+                            <dt>
+                                Energy, Passion and Interests
+                                <button class="photography__item__mobtn"></button>
+                            </dt>
                             <dd>
                                 We capture and celebrate the <br>
                                 energy and attitude of people <br>
@@ -787,7 +866,10 @@
                     </li>
                     <li class="photography__item photography__item--products">
                         <dl>
-                            <dt>Products<span>03</span></dt>
+                            <dt>
+                                Products
+                                <button class="photography__item__mobtn"></button>
+                            </dt>
                             <dd>
                                 We capture the craft, detail and the quality <br>
                                 of our products. Always balancing warmth and <br>
@@ -797,11 +879,10 @@
                     </li>
                 </ul>
                 <div class="brand__header">
-                    <h2 class="brand__header-title">Uniquely LG.</h2>
+                    <h2 class="brand__header-title">Uniquely LG</h2>
                     <p class="brand__header-description">
-                        We capture and celebrate the energy and attitude of people and their passions <br>
-                        - whether that be gaming, fitness, fashion or food. Our imagery should feel bold, <br>
-                        positive, vibrant and in motion.
+                        Our imagery should feel warm, positive and relatable. <br>
+                        Always balancing warmth and innovation in a way that feels uniquely LG.
                     </p>
                 </div>
                 <ul class="photography__grid photography__grid--everyday">
@@ -887,6 +968,59 @@
                 })
             }
 
+            function photographyEvent() {
+                
+                const hoverTarget = document.querySelectorAll('.photography__item')
+
+                const onEnter = (event) => {
+                    event.target.classList.add('photography__item--hover')
+                }
+
+                const onLeave = (event) => {
+                    event.target.classList.remove('photography__item--hover')
+                }
+
+                const onClick = (event) => {
+                    const eventTarget = event.target.closest('.photography__item')
+
+                    if (eventTarget.classList.contains('photography__item--hover')) {
+                        eventTarget.classList.remove('photography__item--hover')
+                    } else {
+                        eventTarget.classList.add('photography__item--hover')
+                    }
+                }
+
+                const updateEventBindings = () => {
+                    if (window.innerWidth <= 1024) {
+                        hoverTarget.forEach(el => {
+                            let btn = el.querySelector('dl')
+
+                            el.classList.remove('photography__item--hover')
+
+                            el.removeEventListener('mouseenter', onEnter)
+                            el.removeEventListener('mouseleave', onLeave)
+                            btn.addEventListener('click', onClick)
+                        });
+                    } else {
+                        hoverTarget.forEach(el => {
+                            let btn = el.querySelector('dl')
+
+                            el.classList.remove('photography__item--hover')
+
+                            btn.removeEventListener('click', onClick)
+                            el.addEventListener('mouseenter', onEnter)
+                            el.addEventListener('mouseleave', onLeave)
+                        });
+                    }
+                }
+
+                // 초기 로딩 시 이벤트 바인딩 업데이트
+                updateEventBindings()
+
+                // 창 크기가 변경될 때마다 이벤트 바인딩 업데이트
+                window.addEventListener('resize', updateEventBindings)
+            }
+
             function tabFunc() {
                 const tabIndexAll = document.querySelectorAll('.tab-menu__list')
                 const bgAll = document.querySelectorAll('span.tab-menu__bg')
@@ -944,6 +1078,7 @@
                     else {bgAll.forEach(bgs => bgs.style = '')}
                 })
             }
+            
             function brandElememtsSlider() {
                 const brandElements = document.querySelector('.our-identity__slider')
 
@@ -973,6 +1108,7 @@
             window.addEventListener('DOMContentLoaded', () => {
                 tabFunc() //tab content 
                 brandElememtsSlider() //what's next slide
+                photographyEvent()
 
             })
 

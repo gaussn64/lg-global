@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
     <link rel="stylesheet" href="../../../layout.css">
     <!-- <script src="../../../launch-development.min.js"></script> -->
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <script src="../../../layout.js"></script>
 </head>
 
@@ -20,8 +21,8 @@
             <h1 class="c-header__tit"><a href="../BS0009/landing.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
             <nav class="c-header__gnb">
                 <ul class="c-header__gnb__list">
-                    <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Brand Story</a></li>
-                    <li class="c-header__gnb__list__item"><a href="javascript:void(0)"  onmouseenter="initGnbDeps2(this); return false" onclick="initGnbDeps2(this);  return false" class="c-header__gnb__list__item__anchor">Brand Elements</a>
+                    <li class="c-header__gnb__list__item"><a href="../BS0001/brand_story.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Philosophy</a></li>
+                    <li class="c-header__gnb__list__item"><a href="javascript:void(0)"  onmouseenter="initGnbDeps2(this); return false" onclick="initGnbDeps2(this);  return false" class="c-header__gnb__list__item__anchor">Elements</a>
                         <div class="c-header__gnb__list__item__deps2">
                             <ul class="c-header__gnb__list__item__deps2__menu">
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0002/brand_logo.html" class="c-header__gnb__list__item__deps2__menu__item__anchor c-header__gnb__list__item__deps2__menu__item__anchor--active">Logo</a></li>
@@ -30,6 +31,7 @@
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0005/brand_photography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Photography</a></li>
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0006/brand_design_system.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Design System</a></li>
                                 <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0007/brand_typography.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Typography</a></li>
+                                <li class="c-header__gnb__list__item__deps2__menu__item"><a href="../BS0010/brand_voice.html" class="c-header__gnb__list__item__deps2__menu__item__anchor">Voice</a></li>
                             </ul>
                             <ul class="c-header__gnb__list__item__deps2__visual">
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-logo.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
@@ -38,11 +40,11 @@
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-photography.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-design-system.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                                 <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-typography.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
+                                <li class="c-header__gnb__list__item__deps2__visual__item"><img src="../../mocks/layout/visual-gnb-deps2-voice.png" alt="" class="c-header__gnb__list__item__deps2__visual__item__img" /></li>
                             </ul>
                             <button class="c-header__gnb__list__item__deps2__btn-back">Back</button>
                         </div>
                     </li>
-                    <li class="c-header__gnb__list__item"><a href="../BS0008/brand_in_action.html" class="c-header__gnb__list__item__anchor">Brand in Action</a></li>
                 </ul>
             </nav>
             <!-- <p class="c-header__location">Logo</p> -->
@@ -61,6 +63,7 @@
 
             #brand-container a {text-decoration: none;}
 
+            br.mo {display: none;}
             #brand-container {
                 transition: .5s ease;
                 background-color: #262626;
@@ -73,7 +76,7 @@
                 overflow: hidden;
                 position: relative;
             }
-            .brand-visual-film__video {
+            .brand-visual-film__video img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -164,14 +167,15 @@
                 overflow: hidden;
                 position: relative;
                 margin: 0 -120px;
-                height: 1105px;
+                height: 57.55vw;
             }
             .imotionally-design__headline {
                 position: absolute;
                 z-index: 1;
                 top: 0;
                 left: 0;
-                height: 100vh;
+                height: 56.25vw;
+                max-height: 1080px;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -181,7 +185,7 @@
             .imotionally-design__headline li {
                 position: relative;
                 font-size: 90px;
-                letter-spacing: .9px;
+                letter-spacing: 0.1;
                 line-height: 1;
                 color: #7E7C77;
                 padding-bottom: 136px;
@@ -230,48 +234,54 @@
             .imotionally-design__imgwrap {
                 position: relative;
                 height: 100%;
+                max-width: 1920px;
+                margin: 0 auto;
             }
             .imotionally-design__item {
                 border-radius: 20px;
                 position: absolute;
                 overflow: hidden;
             }
-
             .imotionally-design__item:nth-child(1) {
-                width: 440px;
-                height: 248px;
+                width: 22.92vw;
+                height: 13.02vw;
                 top: 0;
-                left: 268px;
+                left: 13.96%;
             }
+
             .imotionally-design__item:nth-child(2) {
-                width: 343px;
-                height: 204px;
-                top: 99px;
-                left: 1109px;
+                width: 17.85vw;
+                height: 10.63vw;
+                top: 8.91%;
+                left: 57.76%;
             }
+
             .imotionally-design__item:nth-child(3) {
-                width: 330px;
-                height: 222px;
-                top: 322px;
-                left: 1650px;
+                width: 17.19vw;
+                height: 11.58vw;
+                top: 29.02%;
+                left: 85.94%;
             }
+
             .imotionally-design__item:nth-child(4) {
-                width: 275px;
-                height: 275px;
-                top: 440px;
-                left: 28px;
+                width: 14.32vw;
+                height: 14.32vw;
+                top: 39.68%;
+                left: 1.46%;
             }
+
             .imotionally-design__item:nth-child(5) {
-                width: 484px;
-                height: 271px;
-                top: 781px;
-                left: 419px;
+                width: 25.21vw;
+                height: 14.14vw;
+                top: 70.43%;
+                left: 21.82%;
             }
+
             .imotionally-design__item:nth-child(6) {
-                width: 639px;
-                height: 410px;
-                top: 676px;
-                left: 1111px;
+                width: 33.28vw;
+                height: 21.35vw;
+                top: 60.85%;
+                left: 57.82%;
             }
 
             .imotionally-design__item img, 
@@ -283,16 +293,18 @@
             }
 
 
-
+            /*looping video*/
             .looping-video-content {
                 position: relative;
                 margin: 0 auto;
-                max-width: 1114px;
-                height: 621px;
+                padding-bottom: 49.4%;
                 border-radius: 20px;
                 overflow: hidden;
             }
             .looping-video-content video {
+                position: absolute;
+                left: 50%; top: 50%;
+                transform: translate(-50%, -50%);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -323,7 +335,6 @@
             
 
             .brand-element__title {
-                margin-top: 200px;
                 text-align: center;
             }
             .brand-element__title__desc {
@@ -337,12 +348,13 @@
                 color: #F6F3EB;
                 font-size: 70px;
                 letter-spacing: 0.7px;
+                line-height: 1.1;
             }
 
 
             /*brand elements 슬라이드*/
             .brand-elements {
-                padding: 3.6458vw 6.25vw 4.5833vw;
+                padding: 200px 6.25vw 4.5833vw;
                 overflow: hidden;
             }
             .brand-element__inner {
@@ -445,39 +457,214 @@
                 background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
 
+            /*팝업*/
+            .isPopupOpen {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .btn-circle--close {
+                width: 48px;
+                height: 48px;
+                top: 69px;
+                right: 20px;
+                background-size: 24px auto;
+            }
+
+            .popup-in-action {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 98;
+                display: none;
+            }
+            .pop-inner {
+                width: 100%;
+                height: 100%;
+                background-color: #222;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+            .video-wrapper > div {
+                width: inherit;
+                height: inherit;
+            }
+            .video-wrapper video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /*video controller style*/
+            /*controll bar*/
+            .vjs-has-started .vjs-control-bar, 
+            .vjs-audio-only-mode .vjs-control-bar {
+                background-color: transparent;
+                margin: 54px;
+                width: auto;
+                height: auto;
+                align-items: center;
+                gap: 2px;
+            }
+
+            /*controll btn*/
+            .video-wrapper .video-js button,
+            .btn-circle--close {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                border: 1px solid #f0ece44d;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                background: no-repeat center;
+                background-size: 30px auto;
+                background-color: #000000b3;
+                cursor: pointer;
+                z-index: 3;
+            }
+            .btn-circle--close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                background-image: url(../../mocks/BS0008/ico-btn-close.svg);
+            }
+
+            .video-wrapper .video-js .vjs-button > .vjs-icon-placeholder:before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: no-repeat center;
+                background-size: 30px auto;
+            }
+            .video-wrapper .video-js .vjs-button.vjs-mute-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-sound-on.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-play-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-play.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-mute-control.vjs-vol-0 > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-sound-off.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-play-control.vjs-paused > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-pause.svg);
+            }
+
+
+            /*progress bar*/
+            .video-wrapper .vjs-progress-control {
+                order: 1;
+                width: auto;
+                flex: 1;
+                height: 6px;
+                margin-left: 35px;
+                min-width: unset;
+            }
+            .video-wrapper .video-js .vjs-play-progress {
+                background-color: #FD312E;
+            }
+            .video-wrapper .video-js .vjs-play-progress:before {
+                display: none;
+            }
+            .video-wrapper .video-js .vjs-progress-control .vjs-progress-holder {
+                margin: 0;
+                background-color: #F6F3EB4D;
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-slider .vjs-icon-placeholder {
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-load-progress,
+            .video-wrapper .video-js .vjs-load-progress div {
+                background-color: #F6F3EB4D;
+            }
+
+            /*volume panel*/
+            .video-wrapper .video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+                height: auto;
+                width: unset;
+            }
+            .video-wrapper .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+                position: absolute !important;
+                left: 50% !important;
+                top: -74px;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level {
+                width: 100%;
+                background-color: #FD312E;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level:before {
+                display: none;
+            }
+            .video-wrapper .video-wrapper .vjs-volume-bar.vjs-slider-vertical {
+                margin: 0;
+                width: 6px;
+                height: 60px;
+                background-color: #F6F3EB4D;
+            }
+
+            /*tooltip*/
+            .video-wrapper .video-js .vjs-time-tooltip ,
+            .video-wrapper .video-js .vjs-progress-control .vjs-mouse-display {
+                display: none !important;
+            }
+
 
             @media (max-width: 1500px) {
-                
-                .brand__content__title {
-                    font-size: 28px;
-                    line-height: 37px;
-                    margin-bottom: 24px;
-                    line-height: 1.3;
-                }
-                .brand__content__intro__title {
-                    font-size: 70px;
-                    line-height: 78px;
-                    line-height: 1.1;
-                }
-                .brand__content__intro__description {
-                    font-size: 28px;
-                    margin-top: 32px;
-                    line-height: 1.3;
+                .btn-play {
+                    position: absolute;
+                    width: 80px;
+                    height: 80px;
                 }
 
-                
-                .brand__content__intro {
-                    margin-top: 180px;
+
+                .brand-story-content {
+                    margin: 150px 0 0;
                 }
-                
-                
+                /*info text*/
+                .intro-text {
+                    margin: 130px 0 120px;
+                    font-size: 30px;
+                }
+
+
+                /*imotionally-design*/
+                .imotionally-design__headline {
+                    
+                }
+                .imotionally-design__headline li {
+                    font-size: 70px;
+                    padding-bottom: 100px;
+                }
+                .imotionally-design__headline li p {
+                    font-size: 27px;
+                }
 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 72px 120px 80px;
+                    padding: 200px 120px 80px;
                 }
                 .brand-element__inner {
                     width: 100%;
+                }
+                .brand-element__title__desc {
+                    font-size: 20px;   
+                    margin-bottom: 23px;                 
+                }
+                .brand-element__title__text {
+                    font-size: 52px;
                 }
                 .brand-elements__item-title {
                     padding: 18px 28px;
@@ -526,31 +713,25 @@
                 .landing-visual__scrolldown {
                     display: none;
                 }
-                .brand__content__intro {
-                    margin-top: 80px;
-                }
-                .brand__content__title {
-                    font-size: 20px;
-                    margin-bottom: 16px;
-                }
-                .brand__content__intro__title {
-                    font-size: 36px;
-                }
-                .brand__content__intro__description {
-                    font-size: 20px;
-                    margin-top: 24px;
+
+                .brand-story-content {
+                    margin: 120px 0 0;
+                    padding: 0 24px;
                 }
 
-                
-
-                
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 32px 24px 40px;
+                    padding: 160px 24px 40px;
                 }
                 .brand-elements__slider {
-                    margin: 24px -20px 0;
+                    margin: 24px 0 0;
+                }
+                .brand-element__title__desc {
+                    font-size: 20px;
+                }
+                .brand-element__title__text {
+                    font-size: 52px;
                 }
 
                 .our-identity__slide {
@@ -588,21 +769,265 @@
 
             /* Mobile */
             @media (max-width: 768px) {
+                br.mo {display: block;}
 
                 /*visual video*/
-                .brand-visual-film {
+                .btn-play {
+                    position: absolute;
+                    width: 64px;
+                    height: 64px;
+                }
+                .brand-story-content {
+                    margin: 120px 0 0;
+                    padding: 0 24px;
+                }
+                /*info text*/
+                .intro-text {
+                    margin: 60px 0;
+                    font-size: 24px;
+                }
+                .intro-text br {display: none;}
 
+                /*imotionally-design*/
+                .imotionally-design__headline {
+                    flex-wrap: wrap;
+                    height: unset;
+                    gap: 12px;
+                }
+                .imotionally-design__headline li {
+                    font-size: 40px;
+                    padding-bottom: 0;
+                    text-align: center;
+                    color: #fff;
+                }
+                .imotionally-design__headline li:nth-child(1) {width: 100%;}
+                .imotionally-design__headline li p {
+                    display: none;
                 }
 
+                /*looping video*/
+                .looping-video-content {
+                    width: 100%;
+                    padding-bottom: 100%;
+                }
 
+                .looping-video-multi {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+                .looping-video-multi li {
+                    width: 100%;
+                    padding-bottom: 74.63%;
+                }
+
+                .brand-element__title__desc {
+                    font-size: 18px;
+                    margin-bottom: 16px;
+                }
+                .brand-element__title__text {
+                    font-size: 36px;
+                    letter-spacing: 0.3px;
+                    line-height: 1.2;
+                }
 
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
+                    padding: 100px 24px 40px;
+                }
+                .brand-elements__slider {
+                    margin: 24px -20px 0;
+                }
+                .brand-elements__controller {
+                    display: none;
+                }
+                .our-identity__slide {
+                    border-radius: 10px;
+                    padding: 16px;
+                }
+                .our-identity__item-title {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                .our-identity__progressbar {
+                    margin-top: 24px;
+                    height: 1px;
+                }
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 72px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
+                }
+
+
+                /*팝업*/
+                .btn-circle--close {
+                    width: 48px;
+                    height: 48px;
+                    top: 24px;
+                    right: 20px;
+                    background-size: 24px auto;
+                }
+
+                .video-wrapper video {
+                    /* object-fit: contain; */
+                }
+
+                /*video controller style*/
+                /*controll bar*/
+                .vjs-has-started .vjs-control-bar, 
+                .vjs-audio-only-mode .vjs-control-bar {
+                    margin: 0;
+                }
+                .video-wrapper .video-js button {
+                    display: none;
+                }
+                /*progress bar*/
+                .video-wrapper .vjs-progress-control {
+                    margin-left: 0;
+                }
+
+
+
+                @media (orientation: landscape) {
+                    .video-wrapper video {
+                        /* object-fit: cover; */
+                    }
+                }
+            }
+
+            /* 4K */
+            @media (min-width: 2560px) {
+                
+                .brand-story-content {
+                    margin: 200px 0 220px;
+                    padding: 0 120px;
+                }
+                /*info text*/
+                .intro-text {
+                    margin: 120px 0 180px;
+                    font-size: 40px;
+                }
+
+                .brand-story-content {
+                    max-width: 1920px;
+                    margin: 0 auto;
+                }
+                
+
+                /*imotionally-design*/
+                .imotionally-design {
+                    margin: 0 -120px;
+                    height: 1105px;
+                }
+                .imotionally-design__headline {
+                    height: 1080px;
+                }
+                .imotionally-design__headline li {
+                    font-size: 90px;
+                    letter-spacing: .9px;
+                    line-height: 1;
+                    padding-bottom: 136px;
+                }
+                .imotionally-design__headline li p {
+                    font-size: 36px;
+                    line-height: 1.2;
+                }
+                .imotionally-design__headline li p::before {
+                    height: 48px;
+                    top: -6px;
+                }
+                .imotionally-design__headline li span {
+                    transform: translateY(50px);
+                }
+                .imotionally-design__headline li:nth-child(1) p {right: 40px;}
+                .imotionally-design__headline li:nth-child(2) p {left: 20px;}
+                
+
+                .imotionally-design__imgwrap {
+                    max-width: 1920px;
+                    margin: 0 auto;
+                }
+                .imotionally-design__item {
+                    border-radius: 20px;
+                }
+
+                .imotionally-design__item:nth-child(1) {
+                    width: 440px;
+                    height: 248px;
+                    top: 0;
+                    left: 268px;
+                }
+                .imotionally-design__item:nth-child(2) {
+                    width: 343px;
+                    height: 204px;
+                    top: 99px;
+                    left: 1109px;
+                }
+                .imotionally-design__item:nth-child(3) {
+                    width: 330px;
+                    height: 222px;
+                    top: 322px;
+                    left: 1650px;
+                }
+                .imotionally-design__item:nth-child(4) {
+                    width: 275px;
+                    height: 275px;
+                    top: 440px;
+                    left: 28px;
+                }
+                .imotionally-design__item:nth-child(5) {
+                    width: 484px;
+                    height: 271px;
+                    top: 781px;
+                    left: 419px;
+                }
+                .imotionally-design__item:nth-child(6) {
+                    width: 639px;
+                    height: 410px;
+                    top: 676px;
+                    left: 1111px;
+                }
+
+                .looping-video-content {
+                    width: 1114px;
+                    height: 621px;
+                    padding-bottom: unset;
+                }
+
+
+                /*brand elements 슬라이드*/
+                .brand-elements {
                     padding: 70px 120px 88px;
+                }
+                .brand-elements__header-title {
+                    font-size: 44px;
+                    line-height: 52px;
                 }
                 .brand-elements__slider {
                     margin: 76px 0 0;
+                }
+                .brand-elements__controller {
+                    top: 52px;
+                }
+                .brand-elements__controller__btn {
+                    width: 48px;
+                    height: 48px;
+                }
+
+                .brand-elements__controller__btn.swiper-button-prev::after,
+                .brand-elements__controller__btn.swiper-button-next::after {
+                    width: 22px;
+                    height: 22px;
                 }
 
                 .our-identity__slide {
@@ -616,37 +1041,6 @@
                 .our-identity__progressbar {
                     margin-top: 48px;
                 }
-
-            }
-
-            /* 4K */
-            @media (min-width: 2560px) {
-
-                /*visual video*/
-                .brand-visual-film__title {
-                    font-size: 70px;
-                    line-height: 78px;
-                }
-                .brand-visual-film__play-btn {
-                    height: 68px;
-                    margin-top: 48px;
-                    padding: 0 28px;
-                    border-radius: 100px;
-                    font-size: 24px;
-                    line-height: 28px;
-                }
-                .brand-visual-film__play-btn::before {
-                    margin-right: 9px;
-                    width: 11px;
-                    height: 15px;
-                }
-                /*랜딩비주얼 스크롤다운 버튼*/
-                .landing-visual__scrolldown {
-                    bottom: 60px;
-                }
-
-
-                
             }
 
 
@@ -654,10 +1048,12 @@
         <!-- html code -->
         <div id="brand-container">
             <div class="brand-visual-film visual__top">
-                <video muted playsinline loop class="brand-visual-film__video">
-                    <source src="../../mocks/BS0001/visual_main_video_d.mp4" type="video/mp4" media="(min-width: 769px)" data-poster-mo="../../mocks/BS0001/Expressive_symbol_wink_d.png"></source>
-                    <source src="../../mocks/BS0001/visual_main_video_m.mp4" type="video/mp4" data-poster-pc="../../mocks/BS0001/Expressive_symbol_wink_m.png"></source>
-                </video>
+                <picture class="brand-visual-film__video">
+                    <source media="(min-width: 769px)" srcset="../../mocks/BS0001/Expressive_symbol_wink_d.png">
+                    <source media="(max-width: 768px)" srcset="../../mocks/BS0001/Expressive_symbol_wink_m.png">
+                    <img src="../../mocks/BS0001/Expressive_symbol_wink_d.png" alt="">
+                </picture>
+
                 <button class="btn-play"></button>
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
@@ -733,7 +1129,7 @@
                 <div class="brand-element__inner" >
                     <div class="brand-element__title">
                         <span class="brand-element__title__desc">Our core elements</span>
-                        <h1 class="brand-element__title__text">Coming to life through our identity</h1>
+                        <h1 class="brand-element__title__text">Coming to life <br class="mo"> through our identity</h1>
                     </div>
                     <div class="our-identity__slider">
                         <ul class="our-identity__slides swiper-wrapper">
@@ -769,11 +1165,23 @@
                 </div>
             </div>
         </div>
+        <div class="popup-in-action">
+            <button class="btn-circle btn-circle--close"></button>
+            <div class="pop-inner">
+                <div class="video-wrapper">
+                    <video id="video-item" controls class="vjs-matrix video-js" preload="auto">
+                        <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="../../../gsap.min.js"></script>
         <script src="../../../ScrollTrigger.min.js"></script>
         <script src="../../../ScrollToPlugin.min.js"></script>
+        <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+
 
         <script>
             const roundOffsetY = (num) => Number(num.toFixed(3))
@@ -793,47 +1201,99 @@
 
             /*메인 화면 비디오*/
             function visualVideo() {
-                const video = document.querySelector('.brand-visual-film__video')
-                let isMobile = ''
-                let lastSize = ''
-                let played = false
+                let player = videojs('video-item', {
+                    sources: [
+                        {src : '../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4', type: 'video/mp4'}
+                    ],
+                    controls : true,
+                    playsinline : true,
+                    muted : false,
+                    preload : "metadata",
+                    controlBar : {
+                        remainingTimeDisplay : false,
+                        pictureInPictureToggle: false,
+                        fullscreenToggle: false,
+                        volumePanel: false,
+                        muteToggle: true
+                    },
+                    userActions: {
+                        timeTooltip: false
+                    }
+                })
+            
+                const video = document.querySelector('#video-item')
+                const videoPlayBtn = document.querySelector('.btn-play')
 
-                /*pc, mobile 포스터 반영*/
-                function posterInit(winW) {
-                    768 >= winW ? isMobile = 'pc' : isMobile = 'mo'
-                    if (isMobile != lastSize) {
-                        isMobile === 'mo' ? setPoster(isMobile) : setPoster(isMobile)
-                        lastSize = isMobile
+                // 볼륨 버튼을 클릭하여 볼륨 끄고 켜기 기능 추가
+                let volumeMuted = false
+                let volumeBeforeMuted
+
+                // player.on('volumechange', function() {
+                //     if (player.muted()) {
+                //         // 볼륨이 끄기 전의 볼륨을 기억하여 나중에 복원하기 위해 저장
+                //         volumeBeforeMuted = player.volume()
+                //     }
+                // })
+                
+                // player.on('controlsenabled', function() {
+                //     var volumeButton = player.controlBar.volumeMenuButton;
+
+                //     if (volumeButton) {
+                //         volumeButton.off('click') // 기본 클릭 이벤트 제거
+
+                //         volumeButton.on('click', function() {
+                //         if (volumeMuted) {
+                //             player.volume(volumeBeforeMuted) // 이전 볼륨 복원
+                //         } else {
+                //             volumeBeforeMuted = player.volume() // 현재 볼륨 저장
+                //             player.volume(0) // 볼륨 끄기
+                //         }
+                //         volumeMuted = !volumeMuted;
+                //         })
+                //     }
+                // })
+
+                function popupShow(toggle) {
+                    const body = document.querySelector('body')
+                    const popup = document.querySelector('.popup-in-action')
+
+
+                    if (toggle) {
+                        popup.style.display = "block"
+                        body.classList.add('isPopupOpen')
+                        player.play(); // 일시 정지된 경우 재생
+                    } else {
+                        popup.style.display = 'none'
+                        body.classList.remove('isPopupOpen')
+                        video.currentTime = 0;
+                        player.pause(); // 재생 중인 경우 일시 정지
                     }
                 }
-                function setPoster (winValue) {
-                    let mobilePoster = video.querySelector(`source[data-poster-${winValue}]`)
-                    video.poster = mobilePoster.getAttribute(`data-poster-${winValue}`)
-                }
 
-                window.addEventListener('resize', function() {
-                    let winW = window.innerWidth
-                    posterInit(winW)
-                })
-
-                /*비디오 재생*/
-                function videoPlay() {
-                    const btnPlay = document.querySelector('.brand-visual-film .btn-play')
-                    btnPlay.addEventListener('click', ()=> {
-
-                        !played ? played = true : played = false
-                        
-                        if (played) {
-                            video.play()
-                            btnPlay.style.display = 'none'
+                function videoMobileTouch () {
+                    player.on('touchstart', function() {
+                        if (player.paused()) {
+                            player.play(); // 일시 정지된 경우 재생
                         } else {
-                            video.pause()
+                            player.pause(); // 재생 중인 경우 일시 정지
                         }
-                    })
+                    });
                 }
 
-                posterInit(window.innerWidth) /*pc, mobile 포스터 반영*/
-                videoPlay() /*비디오 재생*/
+
+
+                videoPlayBtn.addEventListener('click', () => {
+                    popupShow(true) //팝업 열림
+                })
+                
+                function popupInit() {
+                    const btnClose = document.querySelector('.btn-circle--close')
+                    btnClose.addEventListener('click', () => popupShow(false))
+                }
+
+                popupInit()
+                videoMobileTouch ()
+
             }
 
             function emotionallyDesign () {
@@ -847,25 +1307,38 @@
                 })
             }
 
-            function ourIdentitySlider() {
-                const swiperTarget = document.querySelector('.our-identity__slider')
+            function brandElememtsSlider() {
+                const brandElements = document.querySelector('.our-identity__slider')
 
-                const swiper = new Swiper( swiperTarget, {
+                const swiper = new Swiper(brandElements, {
                     slidesPerView: 'auto',
-                    spaceBetween: 30,
-                    speed: 500,
-                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)', 
+                    spaceBetween: 16,
+                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+                    navigation: {
+                        nextEl: '.brand-elements__controller .swiper-button-next',
+                        prevEl: '.brand-elements__controller .swiper-button-prev',
+                    },
                     scrollbar: {
                         el: '.our-identity__progressbar',
                         draggable: true
                     },
-                })
+                    breakpoints: {
+                        1279: {
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
+                            spaceBetween: 16,
+                        },
+                        
+                    }
+                });
+
             }
+
 
             window.addEventListener('DOMContentLoaded', () => {
                 visualVideo()
                 emotionallyDesign ()
-                ourIdentitySlider()
+                brandElememtsSlider()
             })
 
         </script>
