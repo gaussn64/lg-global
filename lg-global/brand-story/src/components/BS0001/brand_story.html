@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../../fontface.css"> <!--임시 폰트 설정-->
     <link rel="stylesheet" href="../../../layout.css">
     <!-- <script src="../../../launch-development.min.js"></script> -->
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
     <script src="../../../layout.js"></script>
 </head>
 
@@ -75,7 +76,7 @@
                 overflow: hidden;
                 position: relative;
             }
-            .brand-visual-film__video {
+            .brand-visual-film__video img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -456,6 +457,170 @@
                 background-image: url(../../mocks/BS0001/btn_move_to_arrow.svg);
             }
 
+            /*팝업*/
+            .isPopupOpen {
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .btn-circle--close {
+                width: 48px;
+                height: 48px;
+                top: 69px;
+                right: 20px;
+                background-size: 24px auto;
+            }
+
+            .popup-in-action {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 98;
+                display: none;
+            }
+            .pop-inner {
+                width: 100%;
+                height: 100%;
+                background-color: #222;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                height: 100%;
+            }
+            .video-wrapper > div {
+                width: inherit;
+                height: inherit;
+            }
+            .video-wrapper video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            /*video controller style*/
+            /*controll bar*/
+            .vjs-has-started .vjs-control-bar, 
+            .vjs-audio-only-mode .vjs-control-bar {
+                background-color: transparent;
+                margin: 54px;
+                width: auto;
+                height: auto;
+                align-items: center;
+                gap: 2px;
+            }
+
+            /*controll btn*/
+            .video-wrapper .video-js button,
+            .btn-circle--close {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                border: 1px solid #f0ece44d;
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                background: no-repeat center;
+                background-size: 30px auto;
+                background-color: #000000b3;
+                cursor: pointer;
+                z-index: 3;
+            }
+            .btn-circle--close {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                background-image: url(../../mocks/BS0008/ico-btn-close.svg);
+            }
+
+            .video-wrapper .video-js .vjs-button > .vjs-icon-placeholder:before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                background: no-repeat center;
+                background-size: 30px auto;
+            }
+            .video-wrapper .video-js .vjs-button.vjs-mute-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-sound-on.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-play-control > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-play.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-mute-control.vjs-vol-0 > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-sound-off.svg);
+            }
+            .video-wrapper .video-js .vjs-button.vjs-play-control.vjs-paused > .vjs-icon-placeholder:before {
+                background-image: url(../../mocks/BS0008/ico-btn-pause.svg);
+            }
+
+
+            /*progress bar*/
+            .video-wrapper .vjs-progress-control {
+                order: 1;
+                width: auto;
+                flex: 1;
+                height: 6px;
+                margin-left: 35px;
+                min-width: unset;
+            }
+            .video-wrapper .video-js .vjs-play-progress {
+                background-color: #FD312E;
+            }
+            .video-wrapper .video-js .vjs-play-progress:before {
+                display: none;
+            }
+            .video-wrapper .video-js .vjs-progress-control .vjs-progress-holder {
+                margin: 0;
+                background-color: #F6F3EB4D;
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-slider .vjs-icon-placeholder {
+                height: inherit;
+            }
+            .video-wrapper .video-js .vjs-load-progress,
+            .video-wrapper .video-js .vjs-load-progress div {
+                background-color: #F6F3EB4D;
+            }
+
+            /*volume panel*/
+            .video-wrapper .video-js .vjs-volume-panel.vjs-volume-panel-vertical {
+                height: auto;
+                width: unset;
+            }
+            .video-wrapper .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-vertical {
+                position: absolute !important;
+                left: 50% !important;
+                top: -74px;
+                transform: translateX(-50%);
+                margin: 0;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level {
+                width: 100%;
+                background-color: #FD312E;
+            }
+            .video-wrapper .vjs-slider-vertical .vjs-volume-level:before {
+                display: none;
+            }
+            .video-wrapper .video-wrapper .vjs-volume-bar.vjs-slider-vertical {
+                margin: 0;
+                width: 6px;
+                height: 60px;
+                background-color: #F6F3EB4D;
+            }
+
+            /*tooltip*/
+            .video-wrapper .video-js .vjs-time-tooltip ,
+            .video-wrapper .video-js .vjs-progress-control .vjs-mouse-display {
+                display: none !important;
+            }
+
 
             @media (max-width: 1500px) {
                 .btn-play {
@@ -704,6 +869,42 @@
                     height: 52%;
                     border-radius: 14px;
                 }
+
+
+                /*팝업*/
+                .btn-circle--close {
+                    width: 48px;
+                    height: 48px;
+                    top: 69px;
+                    right: 20px;
+                    background-size: 24px auto;
+                }
+
+                .video-wrapper video {
+                    /* object-fit: contain; */
+                }
+
+                /*video controller style*/
+                /*controll bar*/
+                .vjs-has-started .vjs-control-bar, 
+                .vjs-audio-only-mode .vjs-control-bar {
+                    margin: 0;
+                }
+                .video-wrapper .video-js button {
+                    display: none;
+                }
+                /*progress bar*/
+                .video-wrapper .vjs-progress-control {
+                    margin-left: 0;
+                }
+
+
+
+                @media (orientation: landscape) {
+                    .video-wrapper video {
+                        /* object-fit: cover; */
+                    }
+                }
             }
 
             /* 4K */
@@ -849,10 +1050,12 @@
         <!-- html code -->
         <div id="brand-container">
             <div class="brand-visual-film visual__top">
-                <video muted playsinline loop class="brand-visual-film__video">
-                    <source src="../../mocks/BS0001/visual_main_video_d.mp4" type="video/mp4" media="(min-width: 769px)" data-poster-mo="../../mocks/BS0001/Expressive_symbol_wink_d.png"></source>
-                    <source src="../../mocks/BS0001/visual_main_video_m.mp4" type="video/mp4" data-poster-pc="../../mocks/BS0001/Expressive_symbol_wink_m.png"></source>
-                </video>
+                <picture class="brand-visual-film__video">
+                    <source media="(min-width: 769px)" srcset="../../mocks/BS0001/Expressive_symbol_wink_d.png">
+                    <source media="(max-width: 768px)" srcset="../../mocks/BS0001/Expressive_symbol_wink_m.png">
+                    <img src="../../mocks/BS0001/Expressive_symbol_wink_d.png" alt="">
+                </picture>
+
                 <button class="btn-play"></button>
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
@@ -964,11 +1167,23 @@
                 </div>
             </div>
         </div>
+        <div class="popup-in-action">
+            <button class="btn-circle btn-circle--close"></button>
+            <div class="pop-inner">
+                <div class="video-wrapper">
+                    <video id="video-item" controls class="vjs-matrix video-js" preload="auto">
+                        <source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
         <!-- //html code -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="../../../gsap.min.js"></script>
         <script src="../../../ScrollTrigger.min.js"></script>
         <script src="../../../ScrollToPlugin.min.js"></script>
+        <script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+
 
         <script>
             const roundOffsetY = (num) => Number(num.toFixed(3))
@@ -988,47 +1203,99 @@
 
             /*메인 화면 비디오*/
             function visualVideo() {
-                const video = document.querySelector('.brand-visual-film__video')
-                let isMobile = ''
-                let lastSize = ''
-                let played = false
+                let player = videojs('video-item', {
+                    sources: [
+                        {src : '../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4', type: 'video/mp4'}
+                    ],
+                    controls : true,
+                    playsinline : true,
+                    muted : false,
+                    preload : "metadata",
+                    controlBar : {
+                        remainingTimeDisplay : false,
+                        pictureInPictureToggle: false,
+                        fullscreenToggle: false,
+                        volumePanel: false,
+                        muteToggle: true
+                    },
+                    userActions: {
+                        timeTooltip: false
+                    }
+                })
+            
+                const video = document.querySelector('#video-item')
+                const videoPlayBtn = document.querySelector('.btn-play')
 
-                /*pc, mobile 포스터 반영*/
-                function posterInit(winW) {
-                    768 >= winW ? isMobile = 'pc' : isMobile = 'mo'
-                    if (isMobile != lastSize) {
-                        isMobile === 'mo' ? setPoster(isMobile) : setPoster(isMobile)
-                        lastSize = isMobile
+                // 볼륨 버튼을 클릭하여 볼륨 끄고 켜기 기능 추가
+                let volumeMuted = false
+                let volumeBeforeMuted
+
+                // player.on('volumechange', function() {
+                //     if (player.muted()) {
+                //         // 볼륨이 끄기 전의 볼륨을 기억하여 나중에 복원하기 위해 저장
+                //         volumeBeforeMuted = player.volume()
+                //     }
+                // })
+                
+                // player.on('controlsenabled', function() {
+                //     var volumeButton = player.controlBar.volumeMenuButton;
+
+                //     if (volumeButton) {
+                //         volumeButton.off('click') // 기본 클릭 이벤트 제거
+
+                //         volumeButton.on('click', function() {
+                //         if (volumeMuted) {
+                //             player.volume(volumeBeforeMuted) // 이전 볼륨 복원
+                //         } else {
+                //             volumeBeforeMuted = player.volume() // 현재 볼륨 저장
+                //             player.volume(0) // 볼륨 끄기
+                //         }
+                //         volumeMuted = !volumeMuted;
+                //         })
+                //     }
+                // })
+
+                function popupShow(toggle) {
+                    const body = document.querySelector('body')
+                    const popup = document.querySelector('.popup-in-action')
+
+
+                    if (toggle) {
+                        popup.style.display = "block"
+                        body.classList.add('isPopupOpen')
+                        player.play(); // 일시 정지된 경우 재생
+                    } else {
+                        popup.style.display = 'none'
+                        body.classList.remove('isPopupOpen')
+                        video.currentTime = 0;
+                        player.pause(); // 재생 중인 경우 일시 정지
                     }
                 }
-                function setPoster (winValue) {
-                    let mobilePoster = video.querySelector(`source[data-poster-${winValue}]`)
-                    video.poster = mobilePoster.getAttribute(`data-poster-${winValue}`)
-                }
 
-                window.addEventListener('resize', function() {
-                    let winW = window.innerWidth
-                    posterInit(winW)
-                })
-
-                /*비디오 재생*/
-                function videoPlay() {
-                    const btnPlay = document.querySelector('.brand-visual-film .btn-play')
-                    btnPlay.addEventListener('click', ()=> {
-
-                        !played ? played = true : played = false
-                        
-                        if (played) {
-                            video.play()
-                            btnPlay.style.display = 'none'
+                function videoMobileTouch () {
+                    player.on('touchstart', function() {
+                        if (player.paused()) {
+                            player.play(); // 일시 정지된 경우 재생
                         } else {
-                            video.pause()
+                            player.pause(); // 재생 중인 경우 일시 정지
                         }
-                    })
+                    });
                 }
 
-                posterInit(window.innerWidth) /*pc, mobile 포스터 반영*/
-                videoPlay() /*비디오 재생*/
+
+
+                videoPlayBtn.addEventListener('click', () => {
+                    popupShow(true) //팝업 열림
+                })
+                
+                function popupInit() {
+                    const btnClose = document.querySelector('.btn-circle--close')
+                    btnClose.addEventListener('click', () => popupShow(false))
+                }
+
+                popupInit()
+                videoMobileTouch ()
+
             }
 
             function emotionallyDesign () {
