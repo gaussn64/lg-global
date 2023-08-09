@@ -295,8 +295,7 @@
             .looping-video-content {
                 position: relative;
                 margin: 0 auto;
-                width: 100%;
-                padding-bottom: 55.73%;
+                padding-bottom: 49.4%;
                 border-radius: 20px;
                 overflow: hidden;
             }
@@ -560,7 +559,7 @@
                     padding: 160px 24px 40px;
                 }
                 .brand-elements__slider {
-                    margin: 24px -20px 0;
+                    margin: 24px 0 0;
                 }
                 .brand-element__title__desc {
                     font-size: 20px;
@@ -667,24 +666,43 @@
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 70px 120px 88px;
+                    padding: 100px 24px 40px;
                 }
                 .brand-elements__slider {
-                    margin: 76px 0 0;
+                    margin: 24px -20px 0;
                 }
-
+                .brand-elements__controller {
+                    display: none;
+                }
                 .our-identity__slide {
-                    width: 590px;
-                    height: 437px;
+                    width: 291px;
+                    height: 291px;
+                    border-radius: 10px;
+                    padding: 16px;
                 }
                 .our-identity__item-title {
-                    font-size: 24px;
-                    line-height: 32px;
+                    font-size: 16px;
+                    line-height: 24px;
                 }
                 .our-identity__progressbar {
-                    margin-top: 48px;
+                    margin-top: 24px;
+                    height: 1px;
                 }
-
+                .our-identity__move-btn {
+                    width: 48px;
+                    height: 48px;
+                    background-size: 24px auto;
+                    left: 16px;
+                    bottom: 16px;
+                }
+                .our-identity__slider {
+                    margin-top: 72px;
+                }
+                .our-identity__slide--photography::before {
+                    width: 72%;
+                    height: 52%;
+                    border-radius: 14px;
+                }
             }
 
             /* 4K */
@@ -781,8 +799,9 @@
                 }
 
                 .looping-video-content {
-                    height: 621px;
                     width: 1114px;
+                    height: 621px;
+                    padding-bottom: unset;
                 }
 
 
@@ -1022,25 +1041,38 @@
                 })
             }
 
-            function ourIdentitySlider() {
-                const swiperTarget = document.querySelector('.our-identity__slider')
+            function brandElememtsSlider() {
+                const brandElements = document.querySelector('.our-identity__slider')
 
-                const swiper = new Swiper( swiperTarget, {
+                const swiper = new Swiper(brandElements, {
                     slidesPerView: 'auto',
-                    spaceBetween: 30,
-                    speed: 500,
-                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)', 
+                    spaceBetween: 16,
+                    easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
+                    navigation: {
+                        nextEl: '.brand-elements__controller .swiper-button-next',
+                        prevEl: '.brand-elements__controller .swiper-button-prev',
+                    },
                     scrollbar: {
                         el: '.our-identity__progressbar',
                         draggable: true
                     },
-                })
+                    breakpoints: {
+                        1279: {
+                            slidesOffsetBefore: 0,
+                            slidesOffsetAfter: 0,
+                            spaceBetween: 16,
+                        },
+                        
+                    }
+                });
+
             }
+
 
             window.addEventListener('DOMContentLoaded', () => {
                 visualVideo()
                 emotionallyDesign ()
-                ourIdentitySlider()
+                brandElememtsSlider()
             })
 
         </script>
