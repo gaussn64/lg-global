@@ -45,13 +45,13 @@
             body {
                 overflow-x: hidden;
             }
-            .sustainably-container,
-            .sustainably-container * {
-                color: #262626;
+            ul,ol {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
             }
-            .sustainably-container button {
-                cursor: pointer;
-                padding: 0px
+            li {
+                padding: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -59,6 +59,14 @@
             figure,figcaption {
                 padding: 0px;
                 margin: 0px;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
             }
 
             /* Social Contribution About */
@@ -241,7 +249,7 @@
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 60px 70px 0px calc(50% + 283px);
+                padding: 60px 60px 0px calc(50% + 283px);
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
@@ -923,6 +931,10 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 //Youtube Api Setting
@@ -942,6 +954,10 @@
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                     
                     if(youtubePlayer) {
                         ytPlayer.stopVideo()

@@ -45,13 +45,13 @@
             body {
                 overflow-x: hidden;
             }
-            .sustainably-container,
-            .sustainably-container * {
-                color: #262626;
+            ul,ol {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
             }
-            .sustainably-container button {
-                cursor: pointer;
-                padding: 0px
+            li {
+                padding: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -59,6 +59,14 @@
             figure,figcaption {
                 padding: 0px;
                 margin: 0px;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
             }
 
             /* Climate Action Visual */
@@ -1139,25 +1147,6 @@
             .popup-discription__b2b-activity__btn-close:before,
             .popup-discription__b2b-activity__btn-close:after {
                 background-color: white;
-            }
-
-            /* 4K */
-            @media (min-width: 2560px) {
-                /* Key Progress */
-                .key-progress__goals__wrap {
-                    max-width: 2560px;
-                    margin: 0px auto;
-                }
-
-                /* B2B activity */
-                .b2b-activity {
-                    max-width: 2560px;
-                    padding: 80px 160px;
-                    margin: 0px auto;
-                }
-                .b2b-activity__discover-more {
-                    right: 160px;
-                }
             }
 
             /* Mobile */
@@ -2512,12 +2501,20 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                 }
 
                 descPopup.onscroll = function() {

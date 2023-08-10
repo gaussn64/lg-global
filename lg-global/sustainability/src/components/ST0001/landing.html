@@ -621,7 +621,7 @@
                                                                                             
                                                                                             <ul class="cmp-navigation__group c-gnb__group c-gnb__group--depth3">
                                                                                                 <li class="cmp-navigation__item cmp-navigation__item--level-2 c-gnb__item c-gnb__item--depth3">
-                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/downloads.html">Downloads</a>
+                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/digital-library.html">Digital library</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
@@ -1104,7 +1104,7 @@
                                                                         </li>
                                                                         <!-- /* without child page */ -->
                                                                         <li class="cmp-navigation__item cmp-navigation__item--level-1 c-gnb__item c-gnb__item--depth2">
-                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/downloads.html">Downloads</a>
+                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/digital-library.html">Digital library</a>
                                                                         </li>
                                                                     </li>
                                                                 </ul>
@@ -1386,6 +1386,12 @@
             }
             li {
                 padding: 0px;
+            }
+            dl,dt,dd {
+                margin: 0px;
+            }
+            figure,figcaption {
+                padding: 0px;
                 margin: 0px;
             }
             .sustainably-container,
@@ -1395,13 +1401,6 @@
             .sustainably-container button {
                 cursor: pointer;
                 padding: 0px
-            }
-            dl,dt,dd {
-                margin: 0px;
-            }
-            figure,figcaption {
-                padding: 0px;
-                margin: 0px;
             }
 
             /* Landing Visual */
@@ -1477,18 +1476,8 @@
                 width: 100%;
                 height: 100vh;
             }
-            .landing-introduce__desc {
-                width: 100%;
-                font-size: 44px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 56px;
-                letter-spacing: -0.44px;
-                text-align: center;
-            }
             .landing-introduce__goals {
                 width: 100%;
-                margin-top: 80px;
                 line-height: 1;
                 text-align: center;
                 transition: 0.3s ease all;
@@ -1500,12 +1489,22 @@
                 font-weight: 550;
                 letter-spacing: -0.26px;
             }
+            .landing-introduce__desc {
+                width: 100%;
+                margin-top: 70px;
+                font-size: 44px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 56px;
+                letter-spacing: -0.44px;
+                text-align: center;
+            }
 
             /* Core Value */
             .core-value__wrap {
                 position: relative;
                 width: 100%;
-                height: 120vh;
+                height: 200vh;
             }
             .core-value {
                 position: relative;
@@ -1662,10 +1661,41 @@
             }
 
             /* Menu Introduce */
+            .menu-introduce__wrap {
+                position: relative;
+                width: 100%;
+                height: 200vh;
+            }
+            .menu-introduce__slider {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .menu-introduce__slider--fixed {
+                position: fixed;
+            }
+            .menu-introduce__slider--end {
+                position: absolute;
+                top: auto;
+                bottom: 0px;
+            }
             .menu-introduce__inner {
                 display: flex;
                 flex-wrap: nowrap;
                 height: 100vh;
+            }
+            .menu-introduce__tit {
+                position: absolute;
+                top: 7.4074vh;
+                left: 0px;
+                width: 100%;
+                text-align: center;
+                font-size: 52px;
+                font-weight: 550;
+                line-height: 58px;
+                letter-spacing: -0.26px;
             }
             .menu-introduce {
                 display: flex;
@@ -1701,10 +1731,10 @@
                 line-height: 28px; /* 140% */
                 letter-spacing: -0.1px;
             }
-            .menu-introduce__cont__go-to {
+            .menu-introduce__cont__learn-more {
                 margin-top: 24px;
             }
-            .menu-introduce__cont__go-to__link {
+            .menu-introduce__cont__learn-more__link {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 99px;
@@ -1716,8 +1746,8 @@
                 background-color: white;
                 transition: 0.3s ease all;
             }
-            .menu-introduce__cont__go-to__link:hover,
-            .menu-introduce__cont__go-to__link:focus {
+            .menu-introduce__cont__learn-more__link:hover,
+            .menu-introduce__cont__learn-more__link:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
@@ -1874,20 +1904,20 @@
                 transition: 5s ease width;
             }
 
-            /* downloads */
-            .downloads {
+            /* Digital Library */
+            .digital-library {
                 padding: 7.4074vh 12.5vw;
                 box-sizing: border-box;
                 height: 700px;
                 background: url(../../mocks/ST0001/da905509aaa41eca897c6ad72a49caaa.jpg) no-repeat center center;
                 background-size: cover;
             }
-            .downloads__tit {
+            .digital-library__tit {
                 color: white;
                 font-size: 24px;
                 line-height: 28px;
             }
-            .downloads__summary {
+            .digital-library__summary {
                 color: white;
                 font-family: 'LG_EI_Headline';
                 font-weight: 550;
@@ -1895,10 +1925,10 @@
                 line-height: 60px;
                 margin-top: 16px;
             }
-            .downloads__go-to {
+            .digital-library__learn-more {
                 margin-top: 32px;
             }
-            .downloads__go-to__link {
+            .digital-library__learn-more__link {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 100px;
@@ -1909,27 +1939,27 @@
                 background-color: white;
                 transition: 0.3s ease all;
             }
-            .downloads__go-to__link:hover,
-            .downloads__go-to__link:focus {
+            .digital-library__learn-more__link:hover,
+            .digital-library__learn-more__link:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
                 background-color: #EA1917;
             }
 
-            /* Newsroom */
-            .newsroom {
+            /* latest-stories */
+            .latest-stories {
                 overflow: hidden;
                 padding: 80px 0px;
                 text-align: center;
             }
-            .newsroom__tit {
+            .latest-stories__tit {
                 font-size: 24px;
                 font-weight: 600;
                 line-height: 34px;
                 letter-spacing: -0.12px;
             }
-            .newsroom__summary {
+            .latest-stories__summary {
                 margin-top: 16px;
                 font-family: 'LG_EI_Headline';
                 font-size: 56px;
@@ -1937,7 +1967,7 @@
                 line-height: 60px;
                 letter-spacing: -0.28px;
             }
-            .newsroom__detail {
+            .latest-stories__detail {
                 margin-top: 16px;
                 font-size: 20px;
                 font-style: normal;
@@ -1945,48 +1975,48 @@
                 line-height: 28px;
                 letter-spacing: -0.1px;
             }
-            .newsroom__photo-list__wrap {
+            .latest-stories__photo-list__wrap {
                 position: relative;
                 height: 260px;
             }
-            .newsroom__photo-list1__wrap {
+            .latest-stories__photo-list1__wrap {
                 margin-top: 100px;
             }
-            .newsroom__photo-list2__wrap {
+            .latest-stories__photo-list2__wrap {
                 margin-top: 20px;
             }
-            .newsroom__photo-list__inner,
-            .newsroom__photo-list {
+            .latest-stories__photo-list__inner,
+            .latest-stories__photo-list {
                 display: flex;
                 flex-wrap: nowrap;
                 gap: 0px 20px;
                 justify-content: center;
             }
-            .newsroom__photo-list__inner {
+            .latest-stories__photo-list__inner {
                 position: absolute;
                 top: 0px;
             }
-            .newsroom__photo-list1__inner {
+            .latest-stories__photo-list1__inner {
                 left: 0px;
             }
-            .newsroom__photo-list2__inner {
+            .latest-stories__photo-list2__inner {
                 right: 0px;
             }
-            .newsroom__photo-list__item {
+            .latest-stories__photo-list__item {
                 width: 512px;
                 height: 260px;
                 flex-shrink: 0;
             }
-            .newsroom__photo-list__item__img {
+            .latest-stories__photo-list__item__img {
                 width: 100%;
                 height: 100%;
                 border-radius: 30px;
                 object-fit: cover;
             }
-            .newsroom__go-to {
+            .latest-stories__go-to {
                 margin-top: 100px;
             }
-            .newsroom__go-to__link {
+            .latest-stories__go-to__link {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 100px;
@@ -1997,31 +2027,26 @@
                 background-color: white;
                 transition: 0.3s ease all;
             }
-            .newsroom__go-to__link:hover,
-            .newsroom__go-to__link:focus {
+            .latest-stories__go-to__link:hover,
+            .latest-stories__go-to__link:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
                 background-color: #EA1917;
             }
-            .newsroom__go-to__link:after {
-                content: '';
-                display: inline-block;
-                width: 20px;
-                height: 20px;
-                vertical-align: middle;
-                margin-left: 10px;
-                background: url(../../mocks/ST0001/go-to-blank.svg) no-repeat left top;
-                background-size: cover;
-                vertical-align: text-bottom;
+            .latest-stories__go-to__link__bullet {
+                width: 12px;
+                height: 12px;
             }
-            .newsroom__go-to__link:hover:after,
-            .newsroom__go-to__link:focus:after {
-                background-image: url(../../mocks/ST0001/go-to-blank_on.svg);
-                animation-duration: 0.3s;
-                animation-name: fadeIn;
-                animation-direction: alternate;
+            .latest-stories__go-to__link__bullet__arrow {
+                stroke: #262626;
+                transition: 0.3s ease stroke;
             }
+            .latest-stories__go-to__link:hover .latest-stories__go-to__link__bullet__arrow,
+            .latest-stories__go-to__link:focus .latest-stories__go-to__link__bullet__arrow {
+                stroke: white
+            }
+
             @keyframes fadeIn {
                 from {
                     opacity: 0;
@@ -2059,7 +2084,7 @@
                 padding: 57px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 250;
+                font-weight: 550;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
@@ -2439,10 +2464,10 @@
                     font-size: 16px;
                     line-height: 24px;
                 }
-                .menu-introduce__cont__go-to {
+                .menu-introduce__cont__learn-more {
                     margin-top: 30px;
                 }
-                .menu-introduce__cont__go-to__link {
+                .menu-introduce__cont__learn-more__link {
                     padding: 9px 29px;
                     border-radius: 99px;
                     font-size: 16px;
@@ -2517,17 +2542,17 @@
                     height: 2px;
                 }
 
-                /* Downloads */
-                .downloads {
+                /* digital-library */
+                .digital-library {
                     padding: 60px 16px;
                     box-sizing: border-box;
                     height: 576px;
                 }
-                .downloads__tit {
+                .digital-library__tit {
                     font-size: 18px;
                     line-height: 21px;
                 }
-                .downloads__summary {
+                .digital-library__summary {
                     color: white;
                     font-family: 'LG_EI_Headline';
                     font-weight: 400;
@@ -2535,66 +2560,66 @@
                     line-height: 40px;
                     margin-top: 10px;
                 }
-                .downloads__go-to {
+                .digital-library__learn-more {
                     margin-top: 30px;
                 }
 
-                /* Newsroom */
-                .newsroom {
+                /* latest-stories */
+                .latest-stories {
                     padding: 60px 0px;
                 }
-                .newsroom__tit {
+                .latest-stories__tit {
                     font-size: 18px;
                     line-height: 21px;
                 }
-                .newsroom__summary {
+                .latest-stories__summary {
                     margin: 10px 20px 0px;
                     font-size: 36px;
                     font-weight: 400;
                     line-height: 40px;
                     letter-spacing: -0.54px;
                 }
-                .newsroom__detail {
+                .latest-stories__detail {
                     margin: 15px 20px 0px;
                     font-size: 16px;
                     line-height: 24px;
                 }
-                .newsroom__photo-list__wrap {
+                .latest-stories__photo-list__wrap {
                     height: 118px;
                 }
-                .newsroom__photo-list1__wrap {
+                .latest-stories__photo-list1__wrap {
                     margin-top: 60px;
                 }
-                .newsroom__photo-list2__wrap {
+                .latest-stories__photo-list2__wrap {
                     margin-top: 14px;
                 }
-                .newsroom__photo-list__inner,
-                .newsroom__photo-list {
+                .latest-stories__photo-list__inner,
+                .latest-stories__photo-list {
                     gap: 0px 10px;
                 }
-                .newsroom__photo-list__item {
+                .latest-stories__photo-list__item {
                     width: 232px;
                     height: 118px;
                 }
-                .newsroom__photo-list__item__img {
+                .latest-stories__photo-list__item__img {
                     border-radius: 10px;
                 }
-                .newsroom__go-to {
+                .latest-stories__go-to {
                     margin-top: 60px;
                 }
-                .newsroom__go-to__link {
+                .latest-stories__go-to__link {
                     display: inline-block;
                     padding: 13px 27px;
                     letter-spacing: -0.24px;
                 }
-                .newsroom__go-to__link:hover,
-                .newsroom__go-to__link:focus {
+                .latest-stories__go-to__link:hover,
+                .latest-stories__go-to__link:focus {
                     text-decoration: none;
                     color: white;
                     border-color: #EA1917;
                     background-color: #EA1917;
                 }
-                .newsroom__go-to__link:after {
+                .latest-stories__go-to__link:after {
                     width: 12px;
                     height: 12px;
                     margin-left: 6px;
@@ -2770,7 +2795,7 @@
                     <img src="../../mocks/ST0001/tagline-m.png" alt="Life's Good." class="landing-visual__tit__img landing-visual__tit__img--mo" />
                 </h2>
                 <p class="landing-visual__txt">
-                    When we design a Better Life for All.
+                    When we create a better life for all.
                 </p>
                 <div class="landing-visual__scrolldown">
                     <button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
@@ -2778,16 +2803,16 @@
             </div>
             <div class="landing-introduce__wrap">
                 <div class="landing-introduce">
-                    <p class="landing-introduce__desc">
-                        <span class="landing-introduce__desc__txt">We believe everyone’s life can be better.</span><br class="landing-introduce__desc__br" />
-                        <span class="landing-introduce__desc__txt">We strive to make a better future for ourselves, our neighbors,</span><br class="landing-introduce__desc__br" />
-                        <span class="landing-introduce__desc__txt">our communities, and our planet through</span><br class="landing-introduce__desc__br" />
-                        <span class="landing-introduce__desc__txt">Life’s Good moments with our products and services.</span><br class="landing-introduce__desc__br" />
-                        <span class="landing-introduce__desc__txt">So, we are committed to practicing sustainability at all times.</span><br class="landing-introduce__desc__br" />
-                        <span class="landing-introduce__desc__txt">We create Life’s Good for all.</span>
-                    </p>
                     <p class="landing-introduce__goals">
                         <span class="landing-introduce__goals__txt">A better life for all</span>
+                    </p>
+                    <p class="landing-introduce__desc">
+                        <span class="landing-introduce__desc__txt">We believe 'Life's Good', but to enjoy it, we must look after it.</span><br class="landing-introduce__desc__br" />
+                        <span class="landing-introduce__desc__txt">That's why we're calling on everyone to create a better life for all.</span><br class="landing-introduce__desc__br" />
+                        <span class="landing-introduce__desc__txt">We're redesigning processes to cut carbon, rethinking product lifecycles</span><br class="landing-introduce__desc__br" />
+                        <span class="landing-introduce__desc__txt">to reduce waste, introducing new tech and products to foster sustainability,</span><br class="landing-introduce__desc__br" />
+                        <span class="landing-introduce__desc__txt">and building safe, inclusive, and accessible environments for everyone to enjoy life.</span><br class="landing-introduce__desc__br" />
+                        <span class="landing-introduce__desc__txt">These are our commitments and our way of creating a better life for all.</span>
                     </p>
                 </div>
             </div>
@@ -2850,197 +2875,200 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper menu-introduce__wrap">
-                <div class="swiper-wrapper menu-introduce__inner">
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">For the planet</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Sustainability <br />
-                                in everyday living
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Sunday dinners. Movie nights. Fresh sheets. A morning breeze. A home life that restores you. Our shared sustainability journey means we can cherish these precious moments for generations to come. When we work together to create a more sustainable way of life, we all reap the rewards.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to For the Planet</a>
+            <div class="menu-introduce__wrap">
+                <div class="swiper menu-introduce__slider">
+                    <h2 class="menu-introduce__tit">How to make progress on our commitments</h2>
+                    <div class="swiper-wrapper menu-introduce__inner">
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">For the planet</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Sustainability <br />
+                                    in everyday living
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Sunday dinners. Movie nights. Fresh sheets. A morning breeze. A home life that restores you. Our shared sustainability journey means we can cherish these precious moments for generations to come. When we work together to create a more sustainable way of life, we all reap the rewards.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos1">
+                                <div class="menu-introduce__photos__item menu-introduce__photos1__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos1__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item2__img" />
+                                </div>
                             </div>
                         </div>
-                        <div class="menu-introduce__photos menu-introduce__photos1">
-                            <div class="menu-introduce__photos__item menu-introduce__photos1__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item1__img" />
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Carbon neutrality</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Major actions. <br />
+                                    Minor carbons.
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Nature always had our attention. But its message is urgent: <br />
+                                    to reduce carbon emissions. We are committed to an aggressive schedule toward carbon neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
                             </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos1__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item2__img" />
+                            <div class="menu-introduce__photos menu-introduce__photos2">
+                                <div class="menu-introduce__photos__item menu-introduce__photos2__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos2__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Circularity</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Greener with <br />
+                                    every step
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Imagine a world with no waste. That's what we strive for with our sustainable cycle. By recycling all we can to turn old materials and appliances into new products, we're doing our part to reduce waste and create a more sustainable future for our planet.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos3">
+                                <div class="menu-introduce__photos__item menu-introduce__photos3__item1">
+                                    <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos3__item1__video" autoplay muted loop></video>
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos3__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos3__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Clean technology</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Leading the way <br />
+                                    towards a cleaner <br />
+                                    tomorrow
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We're developing innovative technologies that reduce carbon emissions, conserve resources and make living more sustainable. Our unwavering commitment propels us towards a cleaner and greener future.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos4">
+                                <div class="menu-introduce__photos__item menu-introduce__photos4__item1">
+                                    <video src="../../mocks/ST0001/video-menu-introduce4-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos4__item1__video" autoplay muted loop></video>
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos4__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce4-2.png" class="menu-introduce__photos__item__video menu-introduce__photos4__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">For people</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    From people, <br />
+                                    for people
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br />
+                                    We aim to create a sense of belonging, enabling individuals to reach their full potential. With a focus on exceptional experiences, we bring smiles to people's faces through human-centered innovation.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos">
+                                <div class="menu-introduce__photos__item menu-introduce__photos5__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce5-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos5__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos5__item2">
+                                    <video src="../../mocks/ST0001/video-menu-introduce5-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos5__item2__video" autoplay muted loop></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Social contributions</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Adding warmth to <br />
+                                    our society
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We are committed to expanding opportunities for local communities, youth, and individuals with disabilities worldwide. We firmly believe that creating meaningful change requires the collective efforts of all.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos">
+                                <div class="menu-introduce__photos__item menu-introduce__photos6__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce6-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos6__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos6__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce6-2.png" class="menu-introduce__photos__item__video menu-introduce__photos6__item2__img" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Carbon neutrality</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Major actions. <br />
-                                Minor carbons.
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Nature always had our attention. But its message is urgent: <br />
-                                to reduce carbon emissions. We are committed to an aggressive schedule toward carbon-neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to carbon neutrality</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos2">
-                            <div class="menu-introduce__photos__item menu-introduce__photos2__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos2__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item2__img" />
-                            </div>
-                        </div>
+                    <div class="swiper-pagination menu-introduce__pagination">
+                        <div class="menu-introduce__progress__bar"></div>
                     </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Circularity</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Greener with <br />
-                                every step
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Imagine a world with no waste. That's what we strive for with our sustainable cycle. By recycling all we can to turn old materials and appliances into new products, we're doing our part to reduce waste and create a more sustainable future for our planet.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to circularity</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos3">
-                            <div class="menu-introduce__photos__item menu-introduce__photos3__item1">
-                                <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos3__item1__video" autoplay muted loop></video>
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos3__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos3__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Clean technology</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Leading the way <br />
-                                towards a cleaner <br />
-                                tomorrow
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                With a steadfast focus on high-efficiency energy products and the establishment of carbon emission reduction targets, we are driving innovation in eco-conscious technologies. Our unwavering commitment propels us towards a cleaner and greener future.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to clean technology</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos4">
-                            <div class="menu-introduce__photos__item menu-introduce__photos4__item1">
-                                <video src="../../mocks/ST0001/video-menu-introduce4-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos4__item1__video" autoplay muted loop></video>
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos4__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce4-2.png" class="menu-introduce__photos__item__video menu-introduce__photos4__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">For people</h3>
-                            <p class="menu-introduce__cont__summary">
-                                From people, <br />
-                                for people
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br />
-                                We aim to create a sense of belonging, enabling individuals to reach their full potential. With a focus on exceptional experiences, we bring smiles to people's faces through human-centered innovation.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to for people</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos">
-                            <div class="menu-introduce__photos__item menu-introduce__photos5__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce5-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos5__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos5__item2">
-                                <video src="../../mocks/ST0001/video-menu-introduce5-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos5__item2__video" autoplay muted loop></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Social contributions</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Adding warmth to <br />
-                                our society
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                We are committed to expanding opportunities for local communities, youth, and individuals with disabilities worldwide. We firmly believe that creating meaningful change requires the collective efforts of all.
-                            </p>
-                            <div class="menu-introduce__cont__go-to">
-                                <a href="#" class="menu-introduce__cont__go-to__link">Go to social contributions</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos">
-                            <div class="menu-introduce__photos__item menu-introduce__photos6__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce6-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos6__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos6__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce6-2.png" class="menu-introduce__photos__item__video menu-introduce__photos6__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination menu-introduce__pagination">
-                    <div class="menu-introduce__progress__bar"></div>
                 </div>
             </div>
-            <div class="downloads">
-                <h3 class="downloads__tit">downloads</h3>
-                <p class="downloads__summary">
+            <div class="digital-library">
+                <h3 class="digital-library__tit">Digital library</h3>
+                <p class="digital-library__summary">
                     Sharing our sustainability <br />
-                    achievements
+                    strategy and performance
                 </p>
-                <div class="downloads__go-to">
-                    <a href="#" class="downloads__go-to__link">Go to dowloads</a>
+                <div class="digital-library__learn-more">
+                    <a href="#" class="digital-library__learn-more__link">Learn more</a>
                 </div>
             </div>
-            <div class="newsroom">
-                <h3 class="newsroom__tit">Newsroom</h3>
-                <p class="newsroom__summary">
+            <div class="latest-stories">
+                <h3 class="latest-stories__tit">Our latest stories</h3>
+                <p class="latest-stories__summary">
                     We openly share our progress, <br />
                     to inspire others to join us in creating <br />
                     a sustainable tomorrow.
                 </p>
-                <p class="newsroom__detail">
-                    We prioritize creating social value in all areas(education, voluntary work, community <br />
-                    development, etc.) to ensure a brighter future for people.
-                </p>
-                <div class="newsroom__photo-list__wrap newsroom__photo-list1__wrap">
-                    <div class="newsroom__photo-list__inner newsroom__photo-list1__inner">
-                        <ul class="newsroom__photo-list newsroom__photo-list1">
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list1-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                <div class="latest-stories__photo-list__wrap latest-stories__photo-list1__wrap">
+                    <div class="latest-stories__photo-list__inner latest-stories__photo-list1__inner">
+                        <ul class="latest-stories__photo-list latest-stories__photo-list1">
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list1-item1.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list1-item2.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list1-item3.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list1-item4.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
                         </ul>
                     </div>
                 </div>
-                <div class="newsroom__photo-list__wrap newsroom__photo-list2__wrap">
-                    <div class="newsroom__photo-list__inner newsroom__photo-list2__inner">
-                        <ul class="newsroom__photo-list newsroom__photo-list2">
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item1.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item2.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item3.jpg" alt="" class="newsroom__photo-list__item__img"></li>
-                            <li class="newsroom__photo-list__item"><img src="../../mocks/ST0001/photo-newsroom-list2-item4.jpg" alt="" class="newsroom__photo-list__item__img"></li>
+                <div class="latest-stories__photo-list__wrap latest-stories__photo-list2__wrap">
+                    <div class="latest-stories__photo-list__inner latest-stories__photo-list2__inner">
+                        <ul class="latest-stories__photo-list latest-stories__photo-list2">
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list2-item1.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list2-item2.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list2-item3.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
+                            <li class="latest-stories__photo-list__item"><img src="../../mocks/ST0001/photo-latest-stories-list2-item4.jpg" alt="" class="latest-stories__photo-list__item__img"></li>
                         </ul>
                     </div>
                 </div>
-                <div class="newsroom__go-to">
-                    <a href="https://www.lgnewsroom.com/category/esg/esg-achievements/" class="newsroom__go-to__link" target="_blank">View more at LG Newsroom</a>
+                <div class="latest-stories__go-to">
+                    <a href="https://www.lglatest-stories.com/category/esg/esg-achievements/" class="latest-stories__go-to__link" target="_blank">
+                        Learn more <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" class="latest-stories__go-to__link__bullet">
+                            <path d="M1 13L13 1M13 1H2.71429M13 1V11.2857" stroke-width="1.5" height="14" viewBox="0 0 14 14" fill="none" class="latest-stories__go-to__link__bullet__arrow" />
+                        </svg>
+                </a>
                 </div>
             </div>
             <div class="summary">
@@ -3061,20 +3089,20 @@
                 <div class="whats-next">
                     <h3 class="whats-next__tit">
                         <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
+                        Explore sustainability
                     </h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                     </div>
@@ -3082,7 +3110,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                     </div>
@@ -3090,7 +3118,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                     </div>
@@ -3098,15 +3126,15 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For people</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
                                     </div>
@@ -3224,11 +3252,12 @@
                 },
                 menuIntroduce: function() {
                     let menuIntroduceWrap = document.querySelector(".menu-introduce__wrap");
+                    let menuIntroduceSlider = document.querySelector(".menu-introduce__slider");
                     let menuIntroduceInner = document.querySelector(".menu-introduce__inner");
                     let menuIntroduce = document.querySelector(".menu-introduce");
                     let menuIntroducePagination = menuIntroduceWrap.querySelector(".menu-introduce__pagination");
 
-                    let miSwiper = new Swiper(".menu-introduce__wrap", {
+                    let miSwiper = new Swiper(".menu-introduce__slider", {
                         loop: true,
                         breakpoints: {
                             0: {
@@ -3249,53 +3278,63 @@
                     });
                     miSwiper.autoplay.stop()
 
-                    gsap.to(menuIntroduceWrap, {
+                    gsap.to(menuIntroduceSlider, {
                         scrollTrigger: {
                             trigger: ".menu-introduce__wrap",
                             start: "top top",
                             end: "bottom bottom",
                             onEnter: function() {
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
                                 menuIntroducePagination.classList.add("menu-introduce__pagination--active")
-                                //miSwiper.autoplay.start()
+                                miSwiper.autoplay.start()
                             },
                             onLeaveBack: function() {
-                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
-                                //miSwiper.autoplay.stop()
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                menuIntroducePagination.classList.remove("menu-introduce__pagination--active")
+                                miSwiper.autoplay.stop()
+                            },
+                            onLeave: function() {
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--end")
+                            },
+                            onEnterBack: function() {
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--end")
                             }
                         }
                     });
                 },
-                newsroom: function() {
-                    let newsroom = document.querySelector(".newsroom")
-                    let newsPhotoListInner = newsroom.querySelectorAll(".newsroom__photo-list__inner")
-                    let nplList1Wrap = newsroom.querySelector(".newsroom__photo-list1__wrap")
-                    let nplList2Wrap = newsroom.querySelector(".newsroom__photo-list2__wrap")
-                    let nplList1Inner = nplList1Wrap.querySelector(".newsroom__photo-list1__inner")
-                    let nplList2Inner = nplList2Wrap.querySelector(".newsroom__photo-list2__inner")
+                latestStories: function() {
+                    let latestStories = document.querySelector(".latest-stories")
+                    let lsPhotoListInner = latestStories.querySelectorAll(".latest-stories__photo-list__inner")
+                    let lspList1Wrap = latestStories.querySelector(".latest-stories__photo-list1__wrap")
+                    let lspList2Wrap = latestStories.querySelector(".latest-stories__photo-list2__wrap")
+                    let lspList1Inner = lspList1Wrap.querySelector(".latest-stories__photo-list1__inner")
+                    let lspList2Inner = lspList2Wrap.querySelector(".latest-stories__photo-list2__inner")
                     
                     
-                    newsPhotoListInner.forEach(function(nplw) {
-                        nplwList = nplw.querySelector(".newsroom__photo-list")
-                        leftCloneNplList = nplwList.cloneNode(true)
-                        rightCloneNplList = nplwList.cloneNode(true)
-                        nplw.insertBefore(leftCloneNplList, nplw.firstChild)
-                        nplw.appendChild(rightCloneNplList)
+                    lsPhotoListInner.forEach(function(lspw) {
+                        lspwList = lspw.querySelector(".latest-stories__photo-list")
+                        leftClonelspList = lspwList.cloneNode(true)
+                        rightClonelspList = lspwList.cloneNode(true)
+                        lspw.insertBefore(leftClonelspList, lspw.firstChild)
+                        lspw.appendChild(rightClonelspList)
                     })
 
                     setInterval(function() {
-                        let nplList1First = nplList1Inner.querySelector(".newsroom__photo-list1").cloneNode(true)
+                        let lspList1First = lspList1Inner.querySelector(".latest-stories__photo-list1").cloneNode(true)
                         
-                        let nplList2Last = nplList2Inner.querySelector(".newsroom__photo-list2").cloneNode(true)
+                        let lspList2Last = lspList2Inner.querySelector(".latest-stories__photo-list2").cloneNode(true)
 
-                        nplList1Inner.appendChild(nplList1First)
-                        nplList2Inner.insertBefore(nplList2Last, nplList2Inner.firstChild)
+                        lspList1Inner.appendChild(lspList1First)
+                        lspList2Inner.insertBefore(lspList2Last, lspList2Inner.firstChild)
                     },20000)
 
                     setInterval(function() {
-                        gsap.to(nplList1Inner, 100, {
+                        gsap.to(lspList1Inner, 100, {
                             "left":"-="+window.innerWidth
                         });
-                        gsap.to(nplList2Inner, 100, {
+                        gsap.to(lspList2Inner, 100, {
                             "right":"-="+window.innerWidth
                         });
                     },5000)
@@ -3338,7 +3377,7 @@
             landing.visualScrollDown();
             landing.coreValue();
             landing.menuIntroduce();
-            landing.newsroom();
+            landing.latestStories();
             landing.whatsNext();
 
             window.addEventListener("resize", ScrollTrigger.refresh);
@@ -3522,7 +3561,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/downloads.html">Downloads</a>
+                                                        <a href="../ST0000/digital-library.html">Digital library</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -3720,7 +3759,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/downloads.html">Downloads</a>
+                                                        <a href="../ST0000/digital-library.html">Digital library</a>
                                                     </div>
                                                 </li>
                                             </ul>

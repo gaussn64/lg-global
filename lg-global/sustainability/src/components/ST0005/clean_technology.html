@@ -621,7 +621,7 @@
                                                                                             
                                                                                             <ul class="cmp-navigation__group c-gnb__group c-gnb__group--depth3">
                                                                                                 <li class="cmp-navigation__item cmp-navigation__item--level-2 c-gnb__item c-gnb__item--depth3">
-                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/downloads.html">Downloads</a>
+                                                                                                    <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth3" href="../ST0000/digital-library.html">Digital library</a>
                                                                                                 </li>
                                                                                             </ul>
                                                                                         </div>
@@ -1104,7 +1104,7 @@
                                                                         </li>
                                                                         <!-- /* without child page */ -->
                                                                         <li class="cmp-navigation__item cmp-navigation__item--level-1 c-gnb__item c-gnb__item--depth2">
-                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/downloads.html">Downloads</a>
+                                                                            <a class="cmp-navigation__item-link c-gnb__item-link c-gnb__item-link--depth2 " href="../ST0000/digital-library.html">Digital library</a>
                                                                         </li>
                                                                     </li>
                                                                 </ul>
@@ -1386,7 +1386,6 @@
             }
             li {
                 padding: 0px;
-                margin: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -3027,7 +3026,7 @@
                 <div class="whats-next">
                     <h3 class="whats-next__tit">
                         <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
+                        Explore sustainability
                     </h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
@@ -3036,7 +3035,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -3068,7 +3067,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For people</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -3268,12 +3267,20 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                 }
 
                 descPopup.onscroll = function() {
@@ -3464,7 +3471,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/downloads.html">Downloads</a>
+                                                        <a href="../ST0000/digital-library.html">Digital library</a>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -3662,7 +3669,7 @@
 
                                                 <li class="c-footer__item">
                                                     <div class="c-footer__name">
-                                                        <a href="../ST0000/downloads.html">Downloads</a>
+                                                        <a href="../ST0000/digital-library.html">Digital library</a>
                                                     </div>
                                                 </li>
                                             </ul>
