@@ -647,6 +647,17 @@
                     border-radius: 10px;
                     padding: 16px;
                 }
+                .our-identity__slide:not(.our-identity__slide--photography)::after {display: none;}
+                .our-identity__slide:hover::before {opacity: 1;}
+                .our-identity__slide:hover .our-identity__item-title {color: #262626;}
+                .our-identity__slide:hover::before {opacity: 1;}
+
+                .our-identity__slide--logo::before {background-image: url(../../mocks/BS0001/brand_slide_logo-m.png);}
+                .our-identity__slide--color::before {background-image: url(../../mocks/BS0001/brand_slide_color-m.png);}
+                .our-identity__slide--design::before {background-image: url(../../mocks/BS0001/brand_slide_design-m.png);}
+                .our-identity__slide--tagline::before {background-image: url(../../mocks/BS0001/brand_slide_slogan-m.png);}
+                .our-identity__slide--typo::before {background-image: url(../../mocks/BS0001/brand_slide_typo-m.png);}
+                .our-identity__slide--voice::before {background-image: url(../../mocks/BS0001/brand_slide_voice-m.png);}
                 .our-identity__item-title {
                     font-size: 16px;
                     line-height: 24px;
@@ -666,8 +677,8 @@
                     margin-top: 32px;
                 }
                 .our-identity__slide--photography::before {
-                    width: 72%;
-                    height: 52%;
+                    width: 68%;
+                    height: 48%;
                     border-radius: 14px;
                 }
 

@@ -844,6 +844,17 @@
                     border-radius: 10px;
                     padding: 16px;
                 }
+                .our-identity__slide:not(.our-identity__slide--photography)::after {display: none;}
+                .our-identity__slide:hover::before {opacity: 1;}
+                .our-identity__slide:hover .our-identity__item-title {color: #262626;}
+                .our-identity__slide:hover::before {opacity: 1;}
+
+                .our-identity__slide--logo::before {background-image: url(../../mocks/BS0001/brand_slide_logo-m.png);}
+                .our-identity__slide--color::before {background-image: url(../../mocks/BS0001/brand_slide_color-m.png);}
+                .our-identity__slide--design::before {background-image: url(../../mocks/BS0001/brand_slide_design-m.png);}
+                .our-identity__slide--tagline::before {background-image: url(../../mocks/BS0001/brand_slide_slogan-m.png);}
+                .our-identity__slide--typo::before {background-image: url(../../mocks/BS0001/brand_slide_typo-m.png);}
+                .our-identity__slide--voice::before {background-image: url(../../mocks/BS0001/brand_slide_voice-m.png);}
                 .our-identity__item-title {
                     font-size: 16px;
                     line-height: 24px;
@@ -863,8 +874,8 @@
                     margin-top: 32px;
                 }
                 .our-identity__slide--photography::before {
-                    width: 72%;
-                    height: 52%;
+                    width: 68%;
+                    height: 48%;
                     border-radius: 14px;
                 }
             }
@@ -1388,32 +1399,6 @@
                 // 볼륨 버튼을 클릭하여 볼륨 끄고 켜기 기능 추가
                 let volumeMuted = false
                 let volumeBeforeMuted
-
-                // player.on('volumechange', function() {
-                //     if (player.muted()) {
-                //         // 볼륨이 끄기 전의 볼륨을 기억하여 나중에 복원하기 위해 저장
-                //         volumeBeforeMuted = player.volume()
-                //     }
-                // })
-                
-                // player.on('controlsenabled', function() {
-                //     var volumeButton = player.controlBar.volumeMenuButton;
-
-                //     if (volumeButton) {
-                //         volumeButton.off('click') // 기본 클릭 이벤트 제거
-
-                //         volumeButton.on('click', function() {
-                //         if (volumeMuted) {
-                //             player.volume(volumeBeforeMuted) // 이전 볼륨 복원
-                //         } else {
-                //             volumeBeforeMuted = player.volume() // 현재 볼륨 저장
-                //             player.volume(0) // 볼륨 끄기
-                //         }
-                //         volumeMuted = !volumeMuted;
-                //         })
-                //     }
-                // })
-
                 function popupShow(toggle) {
                     const body = document.querySelector('body')
                     const popup = document.querySelector('.popup-in-action')
@@ -1495,6 +1480,9 @@
 
             }
 
+            function itemUp() {
+
+            }
 
             window.addEventListener('DOMContentLoaded', () => {
                 visualVideo()
