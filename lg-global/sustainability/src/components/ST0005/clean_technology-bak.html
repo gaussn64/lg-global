@@ -174,13 +174,13 @@
             .eco-conscious-technology__intro__txt {
                 margin-top: 16px;
             }
-            .eco-conscious-technology__intro__txt:first-child {
+            .eco-conscious-technology__intro__txt:nth-child(1) {
                 font-family: 'LG_EI_Headline';
                 font-weight: 600;
                 font-size: 56px;
                 line-height: 60px;
             }
-            .eco-conscious-technology__intro__txt:last-child {
+            .eco-conscious-technology__intro__txt:nth-child(2) {
                 font-size: 20px;
                 line-height: 28px;
             }
@@ -221,11 +221,6 @@
                 height: 48px;
                 background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
                 background-size: cover;
-                transform: rotate(0deg);
-                transition: 0.3s ease transform;
-            }
-            .eco-conscious-technology__kind__slide__anchor:hover:after {
-                transform: rotate(180deg);
             }
             .eco-conscious-technology__kind__slide__anchor1 {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind1.png);
@@ -236,6 +231,9 @@
             .eco-conscious-technology__kind__slide__anchor3 {
                 background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind3.png);
             }
+            .eco-conscious-technology__kind__slide__anchor4 {
+                background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.00) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(../../mocks/ST0005/photo-eco-conscious-technology-kind4.png);
+            }
             .eco-conscious-technology__kind__slide__anchor__preface {
                 font-size: 20px;
                 font-weight: 400;
@@ -244,7 +242,6 @@
             }
             .eco-conscious-technology__kind__slide__anchor__subject {
                 font-size: 36px;
-                font-weight: 550;
                 line-height: 40px;
                 letter-spacing: -0.54px;
                 margin-top: 8px;
@@ -314,10 +311,10 @@
                 font-size: 20px;
                 line-height: 28px;
             }
-            .recreation-of-product__discover-more {
+            .recreation-of-product__learn-more {
                 margin-top: 24px;
             }
-            .recreation-of-product__discover-more__btn {
+            .recreation-of-product__learn-more__btn {
                 display: inline-block;
                 padding: 13px 19px;
                 border-radius: 99px;
@@ -329,8 +326,8 @@
                 background-color: white;
                 transition: 0.3s ease all;
             }
-            .recreation-of-product__discover-more__btn:hover,
-            .recreation-of-product__discover-more__btn:focus {
+            .recreation-of-product__learn-more__btn:hover,
+            .recreation-of-product__learn-more__btn:focus {
                 text-decoration: none;
                 color: white;
                 border-color: #EA1917;
@@ -394,21 +391,82 @@
             }
             .recreation-of-product__type__item__more {
                 position: absolute;
-                bottom: 40px;
-                right: 40px;
-                width: 64px;
-                height: 64px;
+                bottom: 32px;
+                right: 32px;
+                width: 48px;
+                height: 48px;
                 border-width: 0px;
                 background-color: transparent;
-                transform: rotate(0deg);
-                transition: 0.3s ease transform;
-            }
-            .recreation-of-product__type__item__more:hover {
-                transform: rotate(180deg);
             }
             .recreation-of-product__type__item__more__img {
                 width: 100%;
                 height: 100%;
+            }
+
+            /* Explore more resources */
+            .explore-resources {
+                padding: 60px 0px;
+                background-color: #E6E1D6;
+            }
+            .explore-resources__inner {
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .explore-resources__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 44px;
+                font-weight: 550;
+                line-height: 48px;
+                letter-spacing: -0.44px;
+            }
+            .explore-resources__list {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 21px;
+                margin-top: 60px;
+            }
+            .explore-resources__list__item {
+                overflow: hidden;
+                border-radius: 20px;
+            }
+            .explore-resources__list__item__anchor {
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+                height: 240px;
+                padding: 30px;
+                color: white;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+            .explore-resources__list__item:nth-child(1) {
+                background-image: url(../../mocks/ST0005/bg-explore-resources-item1.png);
+            }
+            .explore-resources__list__item:nth-child(2) {
+                background-image: url(../../mocks/ST0005/bg-explore-resources-item2.png);
+            }
+            .explore-resources__list__item:nth-child(3) {
+                background-image: url(../../mocks/ST0005/bg-explore-resources-item3.png);
+            }
+            .explore-resources__list__item__anchor__txt {
+                display: block;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                color: white;
+                letter-spacing: -0.12px;
+            }
+            .explore-resources__list__item__anchor:after {
+                position: absolute;
+                bottom: 32px;
+                right: 32px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                background-size: cover;
             }
 
             /* Summary */
@@ -421,7 +479,7 @@
                 border-radius: 30px;
                 margin: 0px auto;
                 box-sizing: border-box;
-                background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0005/photo-summary-visual.png) no-repeat right center;
+                background: linear-gradient(201deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%), url(../../mocks/ST0005/photo-summary-visual.jpg) no-repeat right center;
                 background-size: cover;
             }
             .summary__cont__txt {
@@ -429,14 +487,14 @@
                 z-index: 1;
                 display: flex;
                 align-items: center;
-                padding: 60px 70px 0px calc(50% + 283px);
+                padding: 60px 70px 0px;
                 box-sizing: border-box;
                 color: white;
                 font-size: 20px;
                 line-height: 28px;
             }
             .summary__cont__txt--active {
-                padding: 36px 60px 36px calc(50% + 283px);
+                padding: 44px 60px;
                 font-size: 44px;
                 font-family: 'LG_EI_Headline';
                 line-height: 48px;
@@ -653,7 +711,6 @@
             .popup-discription__tit {
                 text-align: center;
                 color: black;
-                font-family: 'LG_EI_Headline';
                 font-weight: 550;
                 font-size: 52px;
                 line-height: 60px;
@@ -672,6 +729,7 @@
                 margin-top: 20px;
                 line-height: 58px;
                 letter-spacing: -0.26px;
+                font-family: 'LG_EI_Headline';
             }
             .popup-discription__visual {
                 margin: 60px -90px 0px;
@@ -710,6 +768,11 @@
                 font-size: 16px;
                 line-height: 24px;
                 margin: 60px 0px 0px;
+            }
+            .popup-discription__cont__grid2 {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 0px 40px;
             }
             .popup-discription__btn-close {
                 position: absolute;
@@ -762,8 +825,8 @@
             }
             .popup-discription__recreation-product__cont {
                 display: flex;
-                gap: 0px 60px;
-                margin: 60px 90px;
+                gap: 0px 30px;
+                margin: 60px;
             }
             .popup-discription__recreation-product__cont:first-child {
                 margin-top: 0px;
@@ -786,6 +849,14 @@
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: -0.1px;
+            }
+            .popup-discription__recreation-product__cont__disclaimer {
+                display: block;
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                color: #7E7C77;
+                margin-top: 20px;
             }
             .popup-discription__recreation-product__photo {
                 text-align: center;
@@ -950,7 +1021,7 @@
                 .recreation-of-product__intro__txt__br {
                     display: none;
                 }
-                .recreation-of-product__discover-more {
+                .recreation-of-product__learn-more {
                     margin-top: 20px;
                 }
                 .recreation-of-product__photos {
@@ -1033,7 +1104,7 @@
                 .summary__visual {
                     border-radius: 20px;
                     height: 384px;
-                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0005/photo-summary-visual.png) no-repeat 75% center;
+                    background: linear-gradient(124.53deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 62.09%), url(../../mocks/ST0005/photo-summary-visual.jpg) no-repeat 75% center;
                     background-size: cover;
                 }
                 
@@ -1408,24 +1479,18 @@
             </div>
             <div class="clean-technology-about">
                 <p class="clean-technology-about__cont">
-                    <span class="clean-technology-about__cont__txt">With a steadfast focus on high-efficiency energy </span><br class="clean-technology-about__cont__br" />
-                    <span class="clean-technology-about__cont__txt">products and carbon emission reduction targets, we </span><br class="clean-technology-about__cont__br" />
-                    <span class="clean-technology-about__cont__txt">are driving innovation in eco-conscious </span><br class="clean-technology-about__cont__br" />
-                    <span class="clean-technology-about__cont__txt">technologies. Our unwavering commitment propels </span><br class="clean-technology-about__cont__br" />
-                    <span class="clean-technology-about__cont__txt">us towards a cleaner and greener future.</span>
+                    <span class="clean-technology-about__cont__txt">We're developing innovative technologies that </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">reduce carbon emissions, conserve resources and </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">make living more sustainable. Our unwavering </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">commitment propels us towards a cleaner and </span><br class="clean-technology-about__cont__br" />
+                    <span class="clean-technology-about__cont__txt">greener future.</span>
                 </p>
             </div>
             <div class="eco-conscious-technology">
-                <h3 class="eco-conscious-technology__tit">Eco-conscious precedent technology</h3>
+                <h3 class="eco-conscious-technology__tit">Clean technology</h3>
                 <div class="eco-conscious-technology__intro">
                     <p class="eco-conscious-technology__intro__txt">
-                        Advanced initiatives on applying <br />
-                        eco-conscious technology
-                    </p>
-                    <p class="eco-conscious-technology__intro__txt">
-                        Recognized by the global initiative Science Based Targets initiative (SBTi), <br class="eco-conscious-technology__intro__txt__br" />
-                        we proactively decrease carbon emissions during the usage phase by <br class="eco-conscious-technology__intro__txt__br" />
-                        providing high-efficiency energy products.
+                        Going green with technology
                     </p>
                 </div>
                 <div class="swiper eco-conscious-technology__kind">
@@ -1433,7 +1498,7 @@
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
                             <a href="#up-home-appliances" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor1">
                                 <p class="eco-conscious-technology__kind__slide__anchor__preface">Upgrade your experience</p>
-                                <p class="eco-conscious-technology__kind__slide__anchor__subject">UP home appliances</p>
+                                <p class="eco-conscious-technology__kind__slide__anchor__subject">Upgradable</p>
                             </a>
                         </div>
                         <div class="swiper-slide eco-conscious-technology__kind__slide">
@@ -1448,6 +1513,12 @@
                                 <p class="eco-conscious-technology__kind__slide__anchor__subject">Glass powder</p>
                             </a>
                         </div>
+                        <div class="swiper-slide eco-conscious-technology__kind__slide">
+                            <a href="#innovative-motor-technology" onclick="popupDiscription(this.href); return false" class="eco-conscious-technology__kind__slide__anchor eco-conscious-technology__kind__slide__anchor4">
+                                <p class="eco-conscious-technology__kind__slide__anchor__preface">For performance, reliability, and energy efficiency</p>
+                                <p class="eco-conscious-technology__kind__slide__anchor__subject">Innovative motor technology</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="swiper-pagination eco-conscious-technology__kind__pagination"></div>
                     <div class="eco-conscious-technology__kind__btn-set">
@@ -1460,7 +1531,7 @@
                         <dl class="popup-discription--inner">
                             <dt class="popup-discription__tit">
                                 <div class="popup-discription__tit__preface">Upgrade your experience</div>
-                                <div class="popup-discription__tit__subject">UP home appliances</div>
+                                <div class="popup-discription__tit__subject">Upgradable appliances</div>
                             </dt>
                             <dd class="popup-discription__photo">
                                 <figure class="popup-discription__photo__figure">
@@ -1468,8 +1539,8 @@
                                 </figure>
                             </dd>
                             <dd class="popup-discription__cont1 popup-discription__cont__grid2">
-                                <p class="popup-discription__cont1--grid2--item">UP home appliances surpass the conventional use and management of products by incorporating new functionalities. These enhancements are continuously upgraded in consideration of valuable input from consumers. LG Electronics has introduced UP home appliances, featuring 24 different products such as "Laundry Care after End" and "Pet Care," along with over 150 upgrade features. </p>
-                                <p class="popup-discription__cont1--grid2--item">Among these, eco-conscious UP appliances offer an energy-saving cycle for dishwashers and a microplastic care program for washing machines. The energy-saving cycle maintains the same cleaning power as the standard cycle but consumes 20% less electricity. Additionally, the washing machine's microplastic care program reduces cloth friction, resulting in a 70% reduction in the release of microplastics caused by synthetic fiber damage.</p>
+                                <p class="popup-discription__cont1--grid2--item">LG Electronics’ upgradable appliances correspond to products that are continuously upgraded by adding new functions, rather than simply using and managing them. Eco-conscious upgradable home appliances include an energy-saving dishwasher course and a microplastic care course for washing machines.</p>
+                                <p class="popup-discription__cont1--grid2--item">The dishwasher’s energy-saving cycle has a washing power similar to a standard cycle, but uses about 20% less electricity. At the same time, the washing machine’s microplastic care course reduces microplastic discharge from damage to synthetic fibers by 70% due to minimizing the friction of cloth during washing.</p>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -1479,7 +1550,7 @@
                     <div class="popup-discription__wrap">
                         <dl class="popup-discription--inner">
                             <dt class="popup-discription__tit">
-                                <div class="popup-discription__tit__preface">Towards  zero ozone layer depletion</div>
+                                <div class="popup-discription__tit__preface">For zero ozone layer destruction</div>
                                 <div class="popup-discription__tit__subject">Heat pump technology</div>
                             </dt>
                             <dd class="popup-discription__photo">
@@ -1488,8 +1559,8 @@
                                 </figure>
                             </dd>
                             <dd class="popup-discription__cont1 popup-discription__cont__grid2">
-                                <p class="popup-discription__cont1--grid2--item">Heat pump technology utilizes the eco-friendly refrigerant "R290" to achieve a remarkable milestone in ozone depletion potential (ODP) with a rating of 0. </p>
-                                <p class="popup-discription__cont1--grid2--item">This innovative air conditioning system replaces traditional heaters and enables cooling and heating using air, land, and water as heat sources. By doing so, it saves up to 80% energy compared to conventional air conditioning systems.</p>
+                                <p class="popup-discription__cont1--grid2--item">A heat pump technology applies next-generation eco-conscious refrigerant, R290. The Ozone Depletion Potential (ODP) of the refrigerant is 0, and the HVAC system that replaces the boiler can be heated and cooled with wind, ground, or water-sourced energy.</p>
+                                <p class="popup-discription__cont1--grid2--item">The system can save 80% of energy compared to conventional heating and cooling systems.</p>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -1508,8 +1579,32 @@
                                 </figure>
                             </dd>
                             <dd class="popup-discription__cont1 popup-discription__cont__grid2">
-                                <p class="popup-discription__cont1--grid2--item">LG Electronics continuously develops functional materials as key drivers of future growth. This includes the production of antibacterial glass powder and water-soluble glass powder that completely dissolves in water. Glass powder is composed of fine particles obtained by crushing glass and possesses excellent material stability and durability. In 2013, LG Electronics introduced an oven in North America featuring the "Easy Clean" function, which utilizes a coating of functional glass powder on the metal surface, making it effortless to clean the inside. </p>
-                                <p class="popup-discription__cont1--grid2--item">The versatile antibacterial glass powder is applicable to many appliances, especially those with handles that contact with the body, such as refrigerators, washing machines, and air conditioners. Also, water-soluble glass powder transforms into inorganic ions when dissolved in water, facilitating the growth of microalgae and seaweed in the ocean. It can also serve as an alternative to ocher spray used during red tide occurrences.</p>
+                                <p class="popup-discription__cont1--grid2--item">As future growth engines, LG Electronics continues to develop functional materials, such as antibacterial and completely water-soluble glass powder. Its advanced materials offer hygiene benefits and can help restore marine ecosystems. Glass powder is made up of small particles generated by crushing glass and has high material stability and durability. The oven launched in North America in 2013 has an “easy clean” function that makes it easy to clean the inside by coating the metal surface with functional glass powder. Since 2022, antibacterial glass powder has been used on refrigerators, washing machines, and air conditioners. </p>
+                                <p class="popup-discription__cont1--grid2--item">This powder is extremely suitable to a variety of materials and is especially helpful for handles that come into touch with the body. Water-soluble glass powder changes into inorganic ions when dissolved in water, which accelerate the growth of microalgae
+                                    and sea algae, and can also be used as a substitute for red clay spread in the sea during red tide.</p>
+                            </dd>
+                        </dl>
+                        <button type="button" class="popup-discription__btn-close">Close</button>
+                    </div>
+                </div>
+                <div class="popup-discription" id="innovative-motor-technology">
+                    <div class="popup-discription__wrap">
+                        <dl class="popup-discription--inner">
+                            <dt class="popup-discription__tit">
+                                <div class="popup-discription__tit__preface">For performance, reliability, and energy efficiency</div>
+                                <div class="popup-discription__tit__subject">Innovative motor technology</div>
+                            </dt>
+                            <dd class="popup-discription__photo">
+                                <figure class="popup-discription__photo__figure">
+                                    <img src="../../mocks/ST0005/photo-innovative-motor-technology.png" alt="" class="popup-discription__photo__figure__img">
+                                </figure>
+                            </dd>
+                            <dd class="popup-discription__cont1 popup-discription__cont__grid2">
+                                <p class="popup-discription__cont1--grid2--item">
+                                    LG is also committed to helping consumers achieve a more eco-conscious lifestyle by limiting GHG emissions and improving energy efficiency during the actual usage of its home appliances. LG washing machines, refrigerators and air conditioners adopting the company’s renowned Inverter technology optimize electricity consumption by delivering highly-efficient operations. <br />
+                                    The inverter DD (Direct Drive) motor, a key component of LG Electronics’ washing machines, directly connects the motor and the washing tub to reduce noise and energy consumption dramatically. The simplified product structure has reduced manufacturing steps and increased durability, making it a key part of premium laundry appliances. The fourth-generation DD motor has further increased energy efficiency by changing the material of the coil wound around the motor to an electrical steel sheet material.
+                                </p>
+                                <p class="popup-discription__cont1--grid2--item">LG Electronics’ refrigerators and air conditioners use Inverter technology to reduce power loss. LG’s world-class inverter technology regulates the speed and revolution of motors and compressors depending on the situation to optimize operation. We will continue to create highly efficient core components that boost the performance and reliability of our products while also reducing carbon emissions during operation.</p>
                             </dd>
                         </dl>
                         <button type="button" class="popup-discription__btn-close">Close</button>
@@ -1526,8 +1621,8 @@
                             recycling process to promote sustainability and reduce waste.
                         </p>
                     </div>
-                    <div class="recreation-of-product__discover-more">
-                        <a href="#recreation-of-product" class="recreation-of-product__discover-more__btn" onclick="popupDiscription(this.href); return false">Discover more</a>
+                    <div class="recreation-of-product__learn-more">
+                        <a href="#recreation-of-product" class="recreation-of-product__learn-more__btn" onclick="popupDiscription(this.href); return false">Learn more</a>
                     </div>
                     <div class="recreation-of-product__photos">
                         <img src="../../mocks/ST0005/photos-recreation-of-product.png" alt="" class="recreation-of-product__photos__img recreation-of-product__photos__img--pc">
@@ -1548,9 +1643,9 @@
                                 </dd>
                                 <dd class="popup-discription__recreation-product">
                                     <div class="popup-discription__recreation-product__cont">
-                                        <h3 class="popup-discription__recreation-product__cont__tit">LG OLED <br class="popup-discription__recreation-product__cont__tit__br" />EVO</h3>
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG OLED <br />evo</h3>
                                         <p class="popup-discription__recreation-product__cont__txt">
-                                            LG OLED Evo utilizes composite fiber materials and metal instead of plastic, resulting in reduced weight and increased durability. It decreases plastic usage by 40% compared to LCD TVs, leading to a reduction of 20,000 tons annually. The product has been recognized by certifications such as the Carbon Footprint Certification from the UK's Carbon Trust, eco-friendly certification from Switzerland's SGS, and ECV Environmental Claim Validation by UL in the US. The manufacturing process also emits less carbon dioxide and minimizes damage risks.
+                                            Models in the LG OLED evo series boast lighter weight and stronger durability, applying composite fiber materials and metal. These materials contribute to less plastic use, with the LG OLED evo series TVs requiring only 40 percent of the plastic that is used in LCD TVs of the same screen size. Thanks to these efforts, LG has effectively curbed its plastic use by 20,000 tons this year.
                                         </p>
                                     </div>
                                     <div class="popup-discription__recreation-product__photo">
@@ -1559,9 +1654,10 @@
                                 </dd>
                                 <dd class="popup-discription__recreation-product">
                                     <div class="popup-discription__recreation-product__cont">
-                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Sound Bar</h3>
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Soundbar</h3>
                                         <p class="popup-discription__recreation-product__cont__txt">
-                                            Our 2022 LG sound bar lineup is both SGS Eco-Product and ENERGY STAR-certified, with parts made from recycled plastic resin and polyester jersey fabric, meeting the Global Recycled Standard.
+                                            The latest soundbars contain components fabricated from recycled plastic resin. These parts are UL's Environmental Claim Validation Procedure (ECVP) certified. Additionally, the soundbars feature polyester jersey fabric made from recycled materials, which complies with the Global Recycled Standard (GRS)*.
+                                            <span class="popup-discription__recreation-product__cont__disclaimer">*4 Materials certified by UL 2809 Environmental Claim Validation Procedure (ECVP) for recycled content applies to 2022 LG Soundbar models S95QR, S90QY, S80QR, S80QY, S75Q, S65Q, S60Q, S40Q, SH7Q, SPQ8-S. Amount of recycled fabric varies by model and LG Soundbar models, which come with polyester jersey fabric made from recyled material that meets Global Recycled Standard, are S95QR, S90QY, S80QR, S80QY, S65Q, S60Q, S40Q, SH7Q.</span>
                                         </p>
                                     </div>
                                     <div class="popup-discription__recreation-product__photo">
@@ -1581,7 +1677,7 @@
                                 </dd>
                                 <dd class="popup-discription__recreation-product">
                                     <div class="popup-discription__recreation-product__cont">
-                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Aero <br class="popup-discription__recreation-product__cont__tit__br" />Furniture</h3>
+                                        <h3 class="popup-discription__recreation-product__cont__tit">LG Aero <br />Furniture</h3>
                                         <div class="popup-discription__recreation-product__cont__inner">
                                             <p class="popup-discription__recreation-product__cont__txt">
                                                 LG Aero Furniture is made by blending PCR (Post Consumer Recycled) plastics, recycled from consumer-used plastic waste, with mineral particles to form a distinctive 'TerraZo texture.'
@@ -1591,9 +1687,6 @@
                                     <div class="popup-discription__recreation-product__photo">
                                         <img src="../../mocks/ST0005/photo-pdm-recreation-of-product4.png" alt=""  class="popup-discription__recreation-product__photo__img" />
                                     </div>
-                                </dd>
-                                <dd class="popup-discription__recreation__intro">
-                                    Our commitment to sustainability was recognized with the Product Champion Award by the US Environmental Protection Agency, acknowledging our dedication to delivering sustainable innovations.
                                 </dd>
                             </dl>
                             <button type="button" class="popup-discription__btn-close">Close</button>
@@ -1669,21 +1762,41 @@
                     </div>
                 </div>
             </div>
+            <div class="explore-resources">
+                <div class="explore-resources__inner">
+                    <h2 class="explore-resources__tit">Explore more resources</h2>
+                    <ul class="explore-resources__list">
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/green-product-strategy" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor1">
+                                <span class="explore-resources__list__item__anchor__txt">Green product strategy</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/greener-products-application" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor2">
+                                <span class="explore-resources__list__item__anchor__txt">Green products Application</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/sustainability/environment/greener-products/environmental-declarations" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor3">
+                                <span class="explore-resources__list__item__anchor__txt">Environmental Declarations</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="summary">
                 <div class="summary__cont">
                     <p class="summary__cont__txt">
                         Clean technology is the cornerstone of a <br />
-                        sustainable future. By investing in <br />
-                        renewable energy, carbon reduction, and <br />
-                        enhanced recycling, we secure a world <br />
-                        that safeguards life for future <br />
-                        generations.
+                        sustainable future. By investing in renewable <br />
+                        energy, carbon reduction, and enhanced <br />
+                        recycling, we secure a world that safeguards life <br />
+                        for future generations.
                     </p>
                     <p class="summary__cont__txt summary__cont__txt--active">
                         Clean technology <br />
                         shapes <br />
-                        a sustainable <br />
-                        future
+                        a sustainable future
                     </p>
                 </div>
                 <div class="summary__visual"></div>
