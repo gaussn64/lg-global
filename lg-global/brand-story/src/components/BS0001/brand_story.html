@@ -180,6 +180,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+            }
+            .imotionally-design__headline ul {
+                display: flex;
                 gap: 16px;
             }
             .imotionally-design__headline li {
@@ -229,6 +233,13 @@
             .imotionally-design__headline li.active p::before {
                 transform: translate(-50%, -100%);
                 opacity: 1;
+            }
+            .imotionally-design__headline p.for-mobile {
+                display: none;
+                color: #F6F3EB;
+                font-size: 20px;
+                line-height: 1.4;
+
             }
 
             .imotionally-design__imgwrap {
@@ -417,6 +428,8 @@
             .our-identity__slide--tagline::after {background-image: url(../../mocks/BS0001/brand_slide_slogan-hover.png);}
             .our-identity__slide--typo::before {background-image: url(../../mocks/BS0001/brand_slide_typo.png);}
             .our-identity__slide--typo::after {background-image: url(../../mocks/BS0001/brand_slide_typo-hover.png);}
+            .our-identity__slide--voice::before {background-image: url(../../mocks/BS0001/brand_slide_voice.png);}
+            .our-identity__slide--voice::after {background-image: url(../../mocks/BS0001/brand_slide_voice_hover.png);}
 
             .our-identity__item-title {
                 font-size: 1.875vw;
@@ -719,20 +732,111 @@
                     padding: 0 24px;
                 }
 
+                .intro-text {
+                    margin: 80px 0px;
+                    font-size: 24px;
+                }
+
+                /*imotionally-design*/
+                .imotionally-design {
+                    height: 108.7vw;
+                }
+                .imotionally-design__headline {
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+                    margin-top: 32.72vw;
+                    height: auto;
+                }
+                .imotionally-design__headline ul {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 6px;
+                }
+                .imotionally-design__headline p.for-mobile{display: block; margin-top: 20px;}
+
+                .imotionally-design__headline li {font-size: 48px;}
+                .imotionally-design__headline li,
+                .imotionally-design__headline li.active {
+                    padding-bottom: 0;
+                    text-align: center;
+                    color: #fff;
+                }
+                .imotionally-design__headline li:nth-child(1) {width: 100%;}
+                .imotionally-design__headline li p {
+                    display: none;
+                }
+                .imotionally-design{margin: 0 -24px;}
+                .imotionally-design__imgwrap {
+                    max-width: 100%;
+                }
+                .imotionally-design__item {
+                    border-radius: 10px;
+                }
+                .imotionally-design__item:nth-child(1) {
+                    width: 36.88vw;
+                    height: 20.77vw;
+                    top: 0;
+                    left: 7.94%; /* (61px / 770px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(2) {
+                    width: 30.52vw;
+                    height: 18.18vw;
+                    top: 8.61%;
+                    left: 65.97%; /* (508px / 770px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(3) {
+                    width: 30.78vw;
+                    height: 20.77vw;
+                    top: 46.72%;
+                    left: 75.32%; /* (582px / 770px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(4) {
+                    width: 37.40vw;
+                    height: 20.90vw;
+                    top: 57.07%;
+                    left: -3.64%; /* (-28px / 770px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(5) {
+                    width: 16.88vw;
+                    height: 16.88vw;
+                    top: 82.16%;
+                    left: 27.92%; /* (215px / 770px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(6) {
+                    width: 40.39vw;
+                    height: 25.97vw;
+                    top: 76.15%;
+                    left: 51.56%; /* (397px / 770px) * 100 */
+                }
+
+                .looping-video-multi {
+                    gap: 8px;
+                }
+
+
                 
                 /*brand elements 슬라이드*/
                 .brand-elements {
-                    padding: 160px 24px 40px;
+                    padding: 100px 24px 80px;
                 }
                 .brand-elements__slider {
                     margin: 24px 0 0;
                 }
                 .brand-element__title__desc {
                     font-size: 20px;
+                    margin-bottom: 16px;
                 }
                 .brand-element__title__text {
-                    font-size: 52px;
+                    font-size: 42px;
+                    margin-bottom: 60px;
                 }
+                .brand-element__title__text br {display: block;}
 
                 .our-identity__slide {
                     width: 291px;
@@ -789,21 +893,68 @@
                 .intro-text br {display: none;}
 
                 /*imotionally-design*/
-                .imotionally-design__headline {
-                    flex-wrap: wrap;
-                    height: unset;
-                    gap: 12px;
+                .imotionally-design {
+                    height: 242.13vw;
                 }
+                .imotionally-design__headline {
+                    margin-top: 68.27vw;
+                }
+
                 .imotionally-design__headline li {
                     font-size: 40px;
-                    padding-bottom: 0;
-                    text-align: center;
-                    color: #fff;
                 }
-                .imotionally-design__headline li:nth-child(1) {width: 100%;}
                 .imotionally-design__headline li p {
                     display: none;
                 }
+                .imotionally-design__headline p.for-mobile {
+                    font-size: 18px;
+                    margin-top: 24px;
+                }
+
+                .imotionally-design__item:nth-child(1) {
+                    width: 53.07vw;
+                    height: 29.87vw;
+                    top: 0;
+                    left: 49.87vw; /* (187px / 375px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(2) {
+                    width: 42.93vw;
+                    height: 30.40vw;
+                    top: 8.03%;
+                    left: -2.67vw; /* (-10px / 375px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(3) {
+                    width: 33.87vw;
+                    height: 27.73vw;
+                    top: 72.36%;
+                    left: 68.8vw; /* (258px / 375px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(4) {
+                    width: 24vw;
+                    height: 24vw;
+                    top: 53.97%;
+                    left: 70.67vw; /* (265px / 375px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(5) {
+                    width: 53.33vw;
+                    height: 29.87vw;
+                    top: 87.43%;
+                    left: 12.8vw; /* (48px / 375px) * 100 */
+                }
+
+                .imotionally-design__item:nth-child(6) {
+                    width: 65.33vw;
+                    height: 41.87vw;
+                    top: 58.03%;
+                    left: -5.33vw; /* (-20px / 375px) * 100 */
+                }
+
+
+
 
                 /*looping video*/
                 .looping-video-content {
@@ -1067,20 +1218,26 @@
                     guided by our Design Philosophy.
                 </p>
                 <div class="imotionally-design">
-                    <ul class="imotionally-design__headline">
-                        <li class="active">
-                            Emotionally
-                            <p><span>We bring warmth</span></p>
-                        </li>
-                        <li>
-                            Intelligent
-                            <p><span>and innovation</span></p>
-                        </li>
-                        <li>
-                            Design
-                            <p><span>to all we design</span></p>
-                        </li>
-                    </ul>
+                    <div class="imotionally-design__headline">
+                        <ul>
+                            <li class="active">
+                                Emotionally
+                                <p><span>We bring warmth</span></p>
+                            </li>
+                            <li>
+                                Intelligent
+                                <p><span>and innovation</span></p>
+                            </li>
+                            <li>
+                                Design
+                                <p><span>to all we design</span></p>
+                            </li>
+                        </ul>
+                        <p class="for-mobile">
+                            We bring warmth and innovation to<br> 
+                            everything we design.
+                        </p>
+                    </div>
                     <ul class="imotionally-design__imgwrap">
                         <li class="imotionally-design__item">
                             <video muted playsinline loop autoplay><source src="../../mocks/BS0001/emotionally_intelligent_item_01.mp4" type="video/mp4"/></video>
@@ -1156,6 +1313,10 @@
                             <li class="our-identity__slide our-identity__slide--typo swiper-slide">
                                 <h3 class="our-identity__item-title">Typography</h3>
                                 <a class="our-identity__move-btn" href="../BS0007/brand_typography.html"></a>
+                            </li>
+                            <li class="our-identity__slide our-identity__slide--voice swiper-slide">
+                                <h3 class="our-identity__item-title">Voice</h3>
+                                <a class="our-identity__move-btn" href="../BS0010/brand_voice.html"></a>
                             </li>
                         </ul>
                     </div>
