@@ -252,6 +252,13 @@
                 border-radius: 20px;
                 position: absolute;
                 overflow: hidden;
+                opacity: 0;
+                transform: translateY(100px);
+                transition: .5s cubic-bezier(0.56, 0, 0.28, 1);
+            }
+            .imotionally-design__item.animated {
+                transform: translateY(0);
+                opacity: 1;
             }
             .imotionally-design__item:nth-child(1) {
                 width: 22.92vw;
@@ -1480,7 +1487,27 @@
 
             }
 
-            function itemUp() {
+            const handleScroll = (element) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop <= windowHeight * 0.7) {
+                    element.classList.add('animated');
+                } else {
+                    element.classList.remove('animated');
+                }
+            };
+
+            function slideUpAni() {
+                const targets = document.querySelectorAll('.imotionally-design__imgwrap li')
+
+                window.addEventListener('scroll', function() {
+
+                    targets.forEach(el => {
+                        handleScroll(el)
+                    })
+
+                })
 
             }
 
@@ -1488,6 +1515,8 @@
                 visualVideo()
                 emotionallyDesign ()
                 brandElememtsSlider()
+
+                slideUpAni()
             })
 
         </script>
