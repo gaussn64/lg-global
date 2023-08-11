@@ -20,16 +20,16 @@
         <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
         <nav class="c-header__gnb">
             <ul class="c-header__gnb__list">
-                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the planet</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">For People</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">For people</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/digital-library-bak.html" class="c-header__gnb__list__item__anchor">Digital library</a></li>
             </ul>
         </nav>
-        <!-- <p class="c-header__location">For People</p> -->
+        <!-- <p class="c-header__location">For people</p> -->
         <button type="button" class="c-header__btn-gnb">
             <span class="c-header__btn-gnb__bar"></span>
             <span class="c-header__btn-gnb__bar"></span>
@@ -45,13 +45,13 @@
             body {
                 overflow-x: hidden;
             }
-            .sustainably-container,
-            .sustainably-container * {
-                color: #262626;
+            ul,ol {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
             }
-            .sustainably-container button {
-                cursor: pointer;
-                padding: 0px
+            li {
+                padding: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -60,8 +60,16 @@
                 padding: 0px;
                 margin: 0px;
             }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
+            }
 
-            /* For People Visual */
+            /* For people Visual */
             .for-people-visual {
                 position: relative;
                 top: 0px;
@@ -140,7 +148,7 @@
                 }
             }
 
-            /* For People About */
+            /* For people About */
             .for-people-about {
                 text-align: center;
             }
@@ -304,11 +312,11 @@
                 transform: translateY(-50%);
             }
             .sustainability-efforts__bg__tit {
-                font-size: 4.0741vh;
+                font-size: 3.3333vh;
                 color: #F6F3EB;
                 font-weight: 550;
-                line-height: 4.4444vh;
-                letter-spacing: -0.44px;
+                line-height: 4.4444vh; /* 133.333% */
+                letter-spacing: 0.6667vh;
             }
             .sustainability-efforts__bg__txt {
                 margin-top: 11.1111vh;
@@ -316,12 +324,12 @@
             .sustainability-efforts__bg__txt__item {
                 font-size: 7.4074vh;
                 font-weight: 550;
-                line-height: 7.0370vh;
-                letter-spacing: 0.8889vh;
+                line-height: 7.037vh;
+                letter-spacing: 1.4815vh;
                 color: white;
             }
             .sustainability-efforts__bg__txt__item + .sustainability-efforts__bg__txt__item {
-                margin-top: 14.8148vh;
+                margin-top: 11.1111vh;
             }
             .sustainability-efforts__card__wrap {
                 position: relative;
@@ -351,7 +359,7 @@
             }
             .sustainability-efforts__card__navi__item__anchor {
                 display: block;
-                padding: 40px 76px;
+                padding: 40px 56px;
                 text-align: center;
                 line-height: 1;
                 font-size: 28px;
@@ -491,7 +499,7 @@
                 padding: 57px 80px;
                 font-size: 52px;
                 font-family: 'LG_EI_Headline';
-                font-weight: 250;
+                font-weight: 550;
                 line-height: 60px;
                 letter-spacing: -0.005em;
             }
@@ -993,7 +1001,7 @@
 
             /* Mobile */
             @media (max-width: 768px) {
-                /* For People Visual */
+                /* For people Visual */
                 .for-people-visual__tit {
                     font-size: 44px;
                     line-height: 48px;
@@ -1012,7 +1020,7 @@
                     height: 70px;
                 }
 
-                /* For People About */
+                /* For people About */
                 .for-people-about {
                     width: auto;
                     margin: 0px 16px;
@@ -1647,7 +1655,7 @@
             <div class="for-people-visual visual__top">
                 <h2 class="for-people-visual__tit">
                     <span class="for-people-visual__tit__txt">
-                        From people, <br class="for-people-visual__tit__txt__br" />for people
+                        From people, <br class="for-people-visual__tit__txt__br" />For people
                     </span>
                 </h2>
                 <video src="../../mocks/ST0006/video-for-people-visual.mp4" class="for-people-visual__video" autoplay loop muted></video>
@@ -1761,7 +1769,7 @@
                                 <div class="popup-discription__tit__subject">Adding convenience to refrigerator</div>
                             </dt>
                             <dd class="popup-discription--intro-summary">
-                                Discover the convenience and intelligent design of the LG Signature Refrigerator, thoughtfully created to cater to the unique needs of different individuals. For instance, imagine you are holding lots of ingredients or your hands are messy from cooking. The refrigerator's door opens like magic, so you can effortlessly reach for whatever you need inside. This feature is especially helpful for people who use wheelchairs or have trouble with their hands.
+                                Discover the convenience and intelligent design of the LG Signature Refrigerator, thoughtfully created to cater to the unique needs of different individuals. For instance, imagine you are holding lots of ingredients or your hands are messy from cooking. The refrigerator's door opens like magic, so you can effortlessly reach for whatever you need inside. This feature is especially helpful For people who use wheelchairs or have trouble with their hands.
                             </dd>
                             <dd class="popup-discription__photo">
                                 <figure class="popup-discription__photo__figure">
@@ -1936,9 +1944,9 @@
                 </div>
                 <div class="sustainability-efforts__card__wrap">
                     <ul class="sustainability-efforts__card__navi">
-                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" onclick="popupDiscription('#production-site-future-value'); return false" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Go to delightful workplace</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" onclick="popupDiscription('#cto-interview'); return false" class="sustainability-efforts__card__navi__item__anchor">Go to  diversity &amp; inclusion</a></li>
-                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" onclick="popupDiscription('#disabled-advisory-board'); return false" class="sustainability-efforts__card__navi__item__anchor">Go to design for all</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#enhancing-workplace-safety" onclick="popupDiscription('#production-site-future-value'); return false" class="sustainability-efforts__card__navi__item__anchor sustainability-efforts__card__navi__item__anchor--active">Discover delightful workplace</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#valuing-diversity-inclusion" onclick="popupDiscription('#cto-interview'); return false" class="sustainability-efforts__card__navi__item__anchor">Discover diversity &amp; inclusion</a></li>
+                        <li class="sustainability-efforts__card__navi__item"><a href="#design-for-all" onclick="popupDiscription('#disabled-advisory-board'); return false" class="sustainability-efforts__card__navi__item__anchor">Discover design for all</a></li>
                     </ul>
                     <ul class="sustainability-efforts__card">
                         <li class="sustainability-efforts__card__item sustainability-efforts__card__item--active" id="enhancing-workplace-safety">
@@ -2135,7 +2143,7 @@
                 <div class="whats-next">
                     <h3 class="whats-next__tit">
                         <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
+                        Explore sustainability
                     </h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
@@ -2144,7 +2152,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -2176,7 +2184,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For people</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -2184,7 +2192,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social contributions</p>
                                 </a>
                             </div>
                         </div>
@@ -2346,6 +2354,10 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 //Youtube Api Setting
@@ -2364,6 +2376,10 @@
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                     
                     if(youtubePlayer) {
                         ytPlayer.stopVideo()

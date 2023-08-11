@@ -20,13 +20,13 @@
         <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
         <nav class="c-header__gnb">
             <ul class="c-header__gnb__list">
-                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the planet</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
                 <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor c-header__gnb__list__item__anchor--active">Clean technology</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
-                <li class="c-header__gnb__list__item"><a href="../ST0000/downloads-bak.html" class="c-header__gnb__list__item__anchor">Downloads</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For people</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social contribution</a></li>
+                <li class="c-header__gnb__list__item"><a href="../ST0000/digital-library-bak.html" class="c-header__gnb__list__item__anchor">Digital library</a></li>
             </ul>
         </nav>
         <!-- <p class="c-header__location">Clean technology</p> -->
@@ -45,13 +45,13 @@
             body {
                 overflow-x: hidden;
             }
-            .sustainably-container,
-            .sustainably-container * {
-                color: #262626;
+            ul,ol {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
             }
-            .sustainably-container button {
-                cursor: pointer;
-                padding: 0px
+            li {
+                padding: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -59,6 +59,14 @@
             figure,figcaption {
                 padding: 0px;
                 margin: 0px;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
             }
 
             /* Clean Technology Visual */
@@ -1684,7 +1692,7 @@
                 <div class="whats-next">
                     <h3 class="whats-next__tit">
                         <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
+                        Explore sustainability
                     </h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
@@ -1693,7 +1701,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1725,7 +1733,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For people</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
@@ -1733,7 +1741,7 @@
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social contributions</p>
                                 </a>
                             </div>
                         </div>
@@ -1925,12 +1933,20 @@
 
                 document.querySelector("html").style.overflow = "hidden"
                 document.querySelector("body").style.overflow = "hidden"
+                if(document.querySelector(".root.responsivegrid")) {
+                    document.querySelector(".root.responsivegrid").style.position = "relative"
+                    document.querySelector(".root.responsivegrid").style.zIndex = "101"
+                }
                 descPopup.style.display = "block"
 
                 btnClose.onclick = function() {
                     descPopup.style.display = "none"
                     document.querySelector("html").style.overflow = ""
                     document.querySelector("body").style.overflow = ""
+                    if(document.querySelector(".root.responsivegrid")) {
+                        document.querySelector(".root.responsivegrid").style.position = ""
+                        document.querySelector(".root.responsivegrid").style.zIndex = ""
+                    }
                 }
 
                 descPopup.onscroll = function() {

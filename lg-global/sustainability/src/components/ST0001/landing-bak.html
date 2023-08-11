@@ -20,13 +20,13 @@
             <h1 class="c-header__tit"><a href="../ST0001/landing-bak.html"><img src="../../mocks/layout/Logo.svg" alt="LG" loading="lazy" class="c-header__tit__logo" /></a></h1>
             <nav class="c-header__gnb">
                 <ul class="c-header__gnb__list">
-                    <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the Planet</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0002/for_the_planet-bak.html" class="c-header__gnb__list__item__anchor">For the planet</a></li>
                     <li class="c-header__gnb__list__item"><a href="../ST0003/carbon_neutrality-bak.html" class="c-header__gnb__list__item__anchor">Carbon neutrality</a></li>
                     <li class="c-header__gnb__list__item"><a href="../ST0004/circularity-bak.html" class="c-header__gnb__list__item__anchor">Circularity</a></li>
                     <li class="c-header__gnb__list__item"><a href="../ST0005/clean_technology-bak.html" class="c-header__gnb__list__item__anchor">Clean technology</a></li>
-                    <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For People</a></li>
-                    <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social Contribution</a></li>
-                    <li class="c-header__gnb__list__item"><a href="../ST0000/digital-library-bak.html" class="c-header__gnb__list__item__anchor">digital-library</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0006/for_people-bak.html" class="c-header__gnb__list__item__anchor">For people</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0007/social_contribution-bak.html" class="c-header__gnb__list__item__anchor">Social contribution</a></li>
+                    <li class="c-header__gnb__list__item"><a href="../ST0000/digital-library-bak.html" class="c-header__gnb__list__item__anchor">Digital library</a></li>
                 </ul>
             </nav>
             <button type="button" class="c-header__btn-gnb">
@@ -44,13 +44,13 @@
             body {
                 overflow-x: hidden;
             }
-            .sustainably-container,
-            .sustainably-container * {
-                color: #262626;
+            ul,ol {
+                list-style: none;
+                padding: 0px;
+                margin: 0px;
             }
-            .sustainably-container button {
-                cursor: pointer;
-                padding: 0px
+            li {
+                padding: 0px;
             }
             dl,dt,dd {
                 margin: 0px;
@@ -58,6 +58,14 @@
             figure,figcaption {
                 padding: 0px;
                 margin: 0px;
+            }
+            .sustainably-container,
+            .sustainably-container * {
+                color: #262626;
+            }
+            .sustainably-container button {
+                cursor: pointer;
+                padding: 0px
             }
 
             /* Landing Visual */
@@ -161,7 +169,7 @@
             .core-value__wrap {
                 position: relative;
                 width: 100%;
-                height: 120vh;
+                height: 200vh;
             }
             .core-value {
                 position: relative;
@@ -318,6 +326,26 @@
             }
 
             /* Menu Introduce */
+            .menu-introduce__wrap {
+                position: relative;
+                width: 100%;
+                height: 200vh;
+            }
+            .menu-introduce__slider {
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100vh;
+            }
+            .menu-introduce__slider--fixed {
+                position: fixed;
+            }
+            .menu-introduce__slider--end {
+                position: absolute;
+                top: auto;
+                bottom: 0px;
+            }
             .menu-introduce__inner {
                 display: flex;
                 flex-wrap: nowrap;
@@ -1512,153 +1540,155 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper menu-introduce__wrap">
-                <h2 class="menu-introduce__tit">How to make progress on our commitments</h2>
-                <div class="swiper-wrapper menu-introduce__inner">
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">For the planet</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Sustainability <br />
-                                in everyday living
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Sunday dinners. Movie nights. Fresh sheets. A morning breeze. A home life that restores you. Our shared sustainability journey means we can cherish these precious moments for generations to come. When we work together to create a more sustainable way of life, we all reap the rewards.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+            <div class="menu-introduce__wrap">
+                <div class="swiper menu-introduce__slider">
+                    <h2 class="menu-introduce__tit">How to make progress on our commitments</h2>
+                    <div class="swiper-wrapper menu-introduce__inner">
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">For the planet</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Sustainability <br />
+                                    in everyday living
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Sunday dinners. Movie nights. Fresh sheets. A morning breeze. A home life that restores you. Our shared sustainability journey means we can cherish these precious moments for generations to come. When we work together to create a more sustainable way of life, we all reap the rewards.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos1">
+                                <div class="menu-introduce__photos__item menu-introduce__photos1__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos1__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item2__img" />
+                                </div>
                             </div>
                         </div>
-                        <div class="menu-introduce__photos menu-introduce__photos1">
-                            <div class="menu-introduce__photos__item menu-introduce__photos1__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce1-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item1__img" />
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Carbon neutrality</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Major actions. <br />
+                                    Minor carbons.
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Nature always had our attention. But its message is urgent: <br />
+                                    to reduce carbon emissions. We are committed to an aggressive schedule toward carbon neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
                             </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos1__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce1-2.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos1__item2__img" />
+                            <div class="menu-introduce__photos menu-introduce__photos2">
+                                <div class="menu-introduce__photos__item menu-introduce__photos2__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos2__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Circularity</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Greener with <br />
+                                    every step
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    Imagine a world with no waste. That's what we strive for with our sustainable cycle. By recycling all we can to turn old materials and appliances into new products, we're doing our part to reduce waste and create a more sustainable future for our planet.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos3">
+                                <div class="menu-introduce__photos__item menu-introduce__photos3__item1">
+                                    <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos3__item1__video" autoplay muted loop></video>
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos3__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos3__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Clean technology</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Leading the way <br />
+                                    towards a cleaner <br />
+                                    tomorrow
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We're developing innovative technologies that reduce carbon emissions, conserve resources and make living more sustainable. Our unwavering commitment propels us towards a cleaner and greener future.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos menu-introduce__photos4">
+                                <div class="menu-introduce__photos__item menu-introduce__photos4__item1">
+                                    <video src="../../mocks/ST0001/video-menu-introduce4-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos4__item1__video" autoplay muted loop></video>
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos4__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce4-2.png" class="menu-introduce__photos__item__video menu-introduce__photos4__item2__img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">For people</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    From people, <br />
+                                    For people
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br />
+                                    We aim to create a sense of belonging, enabling individuals to reach their full potential. With a focus on exceptional experiences, we bring smiles to people's faces through human-centered innovation.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos">
+                                <div class="menu-introduce__photos__item menu-introduce__photos5__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce5-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos5__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos5__item2">
+                                    <video src="../../mocks/ST0001/video-menu-introduce5-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos5__item2__video" autoplay muted loop></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide menu-introduce">
+                            <div class="menu-introduce__cont">
+                                <h3 class="menu-introduce__cont__tit">Social contributions</h3>
+                                <p class="menu-introduce__cont__summary">
+                                    Adding warmth to <br />
+                                    our society
+                                </p>
+                                <p class="menu-introduce__cont__detail">
+                                    We are committed to expanding opportunities for local communities, youth, and individuals with disabilities worldwide. We firmly believe that creating meaningful change requires the collective efforts of all.
+                                </p>
+                                <div class="menu-introduce__cont__learn-more">
+                                    <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
+                                </div>
+                            </div>
+                            <div class="menu-introduce__photos">
+                                <div class="menu-introduce__photos__item menu-introduce__photos6__item1">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce6-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos6__item1__img" />
+                                </div>
+                                <div class="menu-introduce__photos__item menu-introduce__photos6__item2">
+                                    <img src="../../mocks/ST0001/photo-menu-introduce6-2.png" class="menu-introduce__photos__item__video menu-introduce__photos6__item2__img" />
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Carbon neutrality</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Major actions. <br />
-                                Minor carbons.
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Nature always had our attention. But its message is urgent: <br />
-                                to reduce carbon emissions. We are committed to an aggressive schedule toward carbon neutrality and using 100% renewable energy. The sooner we minimize our impact, there will be fewer "natural" hazards, and more nature to appreciate.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos2">
-                            <div class="menu-introduce__photos__item menu-introduce__photos2__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce2-1.png" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos2__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce2-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos2__item2__img" />
-                            </div>
-                        </div>
+                    <div class="swiper-pagination menu-introduce__pagination">
+                        <div class="menu-introduce__progress__bar"></div>
                     </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Circularity</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Greener with <br />
-                                every step
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                Imagine a world with no waste. That's what we strive for with our sustainable cycle. By recycling all we can to turn old materials and appliances into new products, we're doing our part to reduce waste and create a more sustainable future for our planet.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos3">
-                            <div class="menu-introduce__photos__item menu-introduce__photos3__item1">
-                                <video src="../../mocks/ST0001/video-menu-introduce3-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos3__item1__video" autoplay muted loop></video>
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos3__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce3-2.jpg" alt="" class="menu-introduce__photos__item__img menu-introduce__photos3__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Clean technology</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Leading the way <br />
-                                towards a cleaner <br />
-                                tomorrow
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                We're developing innovative technologies that reduce carbon emissions, conserve resources and make living more sustainable. Our unwavering commitment propels us towards a cleaner and greener future.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos menu-introduce__photos4">
-                            <div class="menu-introduce__photos__item menu-introduce__photos4__item1">
-                                <video src="../../mocks/ST0001/video-menu-introduce4-1.mp4" class="menu-introduce__photos__item__video menu-introduce__photos4__item1__video" autoplay muted loop></video>
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos4__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce4-2.png" class="menu-introduce__photos__item__video menu-introduce__photos4__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">For people</h3>
-                            <p class="menu-introduce__cont__summary">
-                                From people, <br />
-                                for people
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                We are committed to upholding human rights, fostering diversity, and creating a supportive work environment. <br />
-                                We aim to create a sense of belonging, enabling individuals to reach their full potential. With a focus on exceptional experiences, we bring smiles to people's faces through human-centered innovation.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos">
-                            <div class="menu-introduce__photos__item menu-introduce__photos5__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce5-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos5__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos5__item2">
-                                <video src="../../mocks/ST0001/video-menu-introduce5-2.mp4" class="menu-introduce__photos__item__video menu-introduce__photos5__item2__video" autoplay muted loop></video>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide menu-introduce">
-                        <div class="menu-introduce__cont">
-                            <h3 class="menu-introduce__cont__tit">Social contributions</h3>
-                            <p class="menu-introduce__cont__summary">
-                                Adding warmth to <br />
-                                our society
-                            </p>
-                            <p class="menu-introduce__cont__detail">
-                                We are committed to expanding opportunities for local communities, youth, and individuals with disabilities worldwide. We firmly believe that creating meaningful change requires the collective efforts of all.
-                            </p>
-                            <div class="menu-introduce__cont__learn-more">
-                                <a href="#" class="menu-introduce__cont__learn-more__link">Learn more</a>
-                            </div>
-                        </div>
-                        <div class="menu-introduce__photos">
-                            <div class="menu-introduce__photos__item menu-introduce__photos6__item1">
-                                <img src="../../mocks/ST0001/photo-menu-introduce6-1.jpg" class="menu-introduce__photos__item__video menu-introduce__photos6__item1__img" />
-                            </div>
-                            <div class="menu-introduce__photos__item menu-introduce__photos6__item2">
-                                <img src="../../mocks/ST0001/photo-menu-introduce6-2.png" class="menu-introduce__photos__item__video menu-introduce__photos6__item2__img" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-pagination menu-introduce__pagination">
-                    <div class="menu-introduce__progress__bar"></div>
                 </div>
             </div>
             <div class="digital-library">
@@ -1724,20 +1754,20 @@
                 <div class="whats-next">
                     <h3 class="whats-next__tit">
                         <strong class="whats-next__tit__strong">What’s next?</strong><br />
-                        Explore Sustainability
+                        Explore sustainability
                     </h3>
                     <div class="swiper whats-next__menu">
                         <div class="swiper-wrapper whats-next__menu__slide-wrap">
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
+                                <a href="../ST0002/for_the_planet.html" class="whats-next__menu__slide__anchor whats-next__menu__slide1__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide1__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next1.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide1__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For the Planet</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For the planet</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
+                                <a href="../ST0003/carbon_neutrality.html" class="whats-next__menu__slide__anchor whats-next__menu__slide2__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide2__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next2.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide2__anchor__photo__img">
                                     </div>
@@ -1745,7 +1775,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
+                                <a href="../ST0004/circularity.html" class="whats-next__menu__slide__anchor whats-next__menu__slide3__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide3__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next3.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide3__anchor__photo__img">
                                     </div>
@@ -1753,7 +1783,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
+                                <a href="../ST0005/clean_technology.html" class="whats-next__menu__slide__anchor whats-next__menu__slide4__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide4__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next4__off.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide4__anchor__photo__img">
                                     </div>
@@ -1761,19 +1791,19 @@
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
+                                <a href="../ST0006/for_people.html" class="whats-next__menu__slide__anchor whats-next__menu__slide5__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide5__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next5.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide5__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">For People</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">For people</p>
                                 </a>
                             </div>
                             <div class="swiper-slide whats-next__menu__slide">
-                                <a href="#" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
+                                <a href="../ST0007/social_contribution.html" class="whats-next__menu__slide__anchor whats-next__menu__slide6__anchor">
                                     <div class="whats-next__menu__slide__anchor__photo whats-next__menu__slide6__anchor__photo">
                                         <img src="../../mocks/ST0001/photo-whats-next6.png" alt="" class="whats-next__menu__slide__anchor__photo__img whats-next__menu__slide6__anchor__photo__img">
                                     </div>
-                                    <p class="whats-next__menu__slide__anchor__txt">Social Contributions</p>
+                                    <p class="whats-next__menu__slide__anchor__txt">Social contributions</p>
                                 </a>
                             </div>
                         </div>
@@ -1887,11 +1917,12 @@
                 },
                 menuIntroduce: function() {
                     let menuIntroduceWrap = document.querySelector(".menu-introduce__wrap");
+                    let menuIntroduceSlider = document.querySelector(".menu-introduce__slider");
                     let menuIntroduceInner = document.querySelector(".menu-introduce__inner");
                     let menuIntroduce = document.querySelector(".menu-introduce");
                     let menuIntroducePagination = menuIntroduceWrap.querySelector(".menu-introduce__pagination");
 
-                    let miSwiper = new Swiper(".menu-introduce__wrap", {
+                    let miSwiper = new Swiper(".menu-introduce__slider", {
                         loop: true,
                         breakpoints: {
                             0: {
@@ -1912,18 +1943,28 @@
                     });
                     miSwiper.autoplay.stop()
 
-                    gsap.to(menuIntroduceWrap, {
+                    gsap.to(menuIntroduceSlider, {
                         scrollTrigger: {
                             trigger: ".menu-introduce__wrap",
                             start: "top top",
                             end: "bottom bottom",
                             onEnter: function() {
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
                                 menuIntroducePagination.classList.add("menu-introduce__pagination--active")
-                                //miSwiper.autoplay.start()
+                                miSwiper.autoplay.start()
                             },
                             onLeaveBack: function() {
-                                menuIntroducePagination.classList.add("menu-introduce__pagination--active")
-                                //miSwiper.autoplay.stop()
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                menuIntroducePagination.classList.remove("menu-introduce__pagination--active")
+                                miSwiper.autoplay.stop()
+                            },
+                            onLeave: function() {
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--fixed")
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--end")
+                            },
+                            onEnterBack: function() {
+                                menuIntroduceSlider.classList.add("menu-introduce__slider--fixed")
+                                menuIntroduceSlider.classList.remove("menu-introduce__slider--end")
                             }
                         }
                     });
