@@ -27,10 +27,8 @@ function btmdotSlider() {
 
     const settings = new Map([
         ['light', 'Light Mode Usage Only'],
-        ['light-dark', 'Dark Background'],
-        ['dark-light', 'Dark Gradient'],
-        ['dark', 'Dark Mode Usage Only'],
-        ['dark', 'Dark Mode Usage Only'],
+        ['light-dark', 'Light & Dark Mode Usage'],
+        ['dark-light', 'Dark & Light Mode Usage'],
         ['dark', 'Dark Mode Usage Only'],
     ]);
 
@@ -46,6 +44,7 @@ function btmdotSlider() {
             bulletClass: 'btmdot-slide__pagination__btn',
             bulletActiveClass: 'btmdot-slide__pagination__btn--active',
             renderBullet: function (index, className) {
+                console.log(Array(...settings.keys())[index])
                 return `<button class="${className} ${className}--${Array(...settings.keys())[index]}"></button>`;
             },
         },

@@ -355,9 +355,7 @@
     color: #222;
     transition: color 0.5s cubic-bezier(0.56, 0, 0.28, 1);
 }
-.brand-contents .our-identity__slide--tagline .our-identity__item-title {
-    color: #fff;
-}
+
 .brand-contents .our-identity__slide:hover .our-identity__item-title {
     color: #fff;
 }
