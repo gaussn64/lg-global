@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 700;
+	font-display: swap;
+	src: url('../font/LG_EI_Headline-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 600;
+	font-display: swap;
+	src: url('../font/LG_EI_Headline-Semibold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../font/LG_EI_Headline-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 300;
+	font-display: swap;
+	src: url('../font/LG_EI_Headline-Light.otf') format('opentype');
+}
+@font-face {
+	font-family: 'LG_EI_Headline';
+	font-weight: 100;
+	font-display: swap;
+	src: url('../font/LG_EI_Headline-Thin.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'LG_EI_Text';
+	font-weight: 700;
+	font-display: swap;
+	src: url('../font/LG_EI_Text-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LG_EI_Text';
+	font-weight: 600;
+	font-display: swap;
+	src: url('../font/LG_EI_Text-SemiBold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LG_EI_Text';
+	font-weight: 400;
+	font-display: swap;
+	src: url('../font/LG_EI_Text-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'LG_EI_Text';
+	font-weight: 300;
+	font-display: swap;
+	src: url('../font/LG_EI_Text-Light.ttf') format('truetype');
+}
+
+body {
+    font-weight: 400;
+}
+.brand-contents * {
+	font-family: 'LG_EI_Text';
+}
+
+.brand-contents caption, dd, div, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, html, input, label, li, ol, p, select, span, table, tbody, td, textarea, tfoot, th, thead, tr, ul {
+	font-family: 'LG_EI_Text';
+}
