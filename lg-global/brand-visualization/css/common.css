@@ -131,6 +131,45 @@
 
 /*Common container*/
 .brand-contents #contents {background-color: #f6f3eb;}
+.brand-contents .percent-v-box {
+    position: relative;
+    width: 100%;
+    border-radius: 1.56vw;
+    padding-bottom: 49.4%;
+    overflow: hidden;
+}
+.brand-contents .percent-v-box img,
+.brand-contents .percent-v-box picture,
+.brand-contents .percent-v-box video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-contents .v-box-bottom {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    color: #262626;
+}
+.brand-contents .v-box-bottom.wt {
+    color: #fff;
+}
+.brand-contents .v-box-bottom p.tit {
+    color: inherit;
+    font-size: 1.4583vw;
+    line-height: 1.7708vw;
+    margin-bottom: 0.4688vw;
+}
+.brand-contents .v-box-bottom span.desc {
+    color: inherit;
+    font-size: 0.93vw;
+    line-height: 1.0938vw;
+}
 
 
 /*tab*/
@@ -517,6 +556,21 @@
     }
 
 
+    /*Common container*/
+    .brand-contents .v-box-bottom {
+        bottom: 20px;
+    }
+    .brand-contents .v-box-bottom p.tit {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 0;
+    }
+    .brand-contents .v-box-bottom span.desc {
+        font-size: 15px;
+        line-height: 21px;
+    }
+
+
     /*brand elements 슬라이드*/
     .brand-contents .brand-elements {
         padding: 32px 24px 40px;
@@ -628,10 +682,20 @@
         line-height: 1.3;
         text-align: center;
     }
-    .brand-contents .brand__header-description br {
+    .brand-contents .brand__header-description br:not(.mo) {
         display: none;
     }
 
+    /*contents ------*/
+    .brand-contents .percent-v-box {
+        border-radius: 10px;
+        padding-bottom: 100%;
+    }
+
+    /*Common container*/
+    .brand-contents .v-box-bottom {
+        bottom: 16px;
+    }
 
     /*tab*/
     .brand-contents .tab-menu__container {
@@ -737,4 +801,14 @@
         margin-top: 48px;
     }
 
+
+    .brand-contents .v-box-bottom p.tit {
+        font-size: 22px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+    .brand-contents .v-box-bottom span.desc {
+        font-size: 18px;
+        line-height: 1.4;
+    }
 }
