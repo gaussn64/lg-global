@@ -134,7 +134,7 @@ const handleScroll = (element) => {
 };
 
 function slideUpAni() {
-    const targets = document.querySelectorAll('.imotionally-design__imgwrap li')
+    const targets = document.querySelectorAll('.addMotion .imotionally-design__imgwrap li')
 
     window.addEventListener('scroll', function() {
 
