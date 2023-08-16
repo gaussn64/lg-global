@@ -1,23 +1,3 @@
-function getSiblingsByClass(element, className) {
-    const siblings = Array.from(element.parentElement.getElementsByClassName(className));
-    const index = siblings.indexOf(element);
-    if (index !== -1) {
-        siblings.splice(index, 1);
-    }
-    return siblings;
-}
-
-function setClass(el, currentClass) {
-    let element = el
-    
-    const getFirstClass = (element) => {return element.classList[0]}
-    const getSibs = getSiblingsByClass(el, getFirstClass(el))
-
-    el.classList.add(currentClass)
-    getSibs.forEach(sib => {
-        sib.classList.remove(currentClass)
-    })
-}
 
 function btmdotSlider() {
     const slideContainer = document.querySelector('.btmdot-slide__container')
@@ -113,38 +93,10 @@ function colorSystemSlide() {
     }
 }
 
-function brandElememtsSlider() {
-    const brandElements = document.querySelector('.our-identity__slider')
-
-    const swiper = new Swiper(brandElements, {
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
-        navigation: {
-            nextEl: '.brand-elements__controller .swiper-button-next',
-            prevEl: '.brand-elements__controller .swiper-button-prev',
-        },
-        scrollbar: {
-            el: '.our-identity__progressbar',
-            draggable: true
-        },
-        breakpoints: {
-            1279: {
-                slidesOffsetBefore: 0,
-                slidesOffsetAfter: 0,
-            },
-            
-        }
-    });
-
-}
-
 
 window.addEventListener('DOMContentLoaded', () => {
     btmdotSlider() 
     copyHexCode()
     colorSystemSlide()
-    brandElememtsSlider()
-
 })
 

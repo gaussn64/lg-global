@@ -1,17 +1,3 @@
-const roundOffsetY = (num) => Number(num.toFixed(3))
-const siblings = (el) => {return [...el.parentNode.children].filter((child) => child !== el)}
-
-function setClass(el, currentClass) {
-    let element = el
-    
-    const getFirstClass = (element) => {return element.classList[0]}
-    const getSibs = siblings(el, getFirstClass(el))
-
-    el.classList.add(currentClass)
-    getSibs.forEach(sib => {
-        sib.classList.remove(currentClass)
-    })
-}
 
 /*메인 화면 비디오*/
 function visualVideo() {
@@ -93,33 +79,6 @@ function emotionallyDesign () {
             item.classList.add('active')
         })
     })
-}
-
-function brandElememtsSlider() {
-    const brandElements = document.querySelector('.our-identity__slider')
-
-    const swiper = new Swiper(brandElements, {
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        easing: 'cubic-bezier(0.56, 0, 0.28, 1)',
-        navigation: {
-            nextEl: '.brand-elements__controller .swiper-button-next',
-            prevEl: '.brand-elements__controller .swiper-button-prev',
-        },
-        scrollbar: {
-            el: '.our-identity__progressbar',
-            draggable: true
-        },
-        breakpoints: {
-            1279: {
-                slidesOffsetBefore: 0,
-                slidesOffsetAfter: 0,
-                spaceBetween: 16,
-            },
-            
-        }
-    });
-
 }
 
 const handleScroll = (element) => {

@@ -431,9 +431,6 @@
     .bring-it-to-life__slide {
         border-radius: 10px;
     }
-    .bring-it-to-life__slide li:nth-child(2) {
-        display: none;
-    }
     .bring-it-to-life__slide__controller {
         right: 10px;
         bottom: 10px;
