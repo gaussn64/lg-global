@@ -670,12 +670,10 @@
 
     /*공통*/
     .brand-contents .brand__header {
-        margin-bottom: 40px;
+        margin-bottom: 48px;
     }
     .brand-contents .brand__header-title {
-        font-size: 36px;
-        line-height: 44px;
-        margin: 64px 0 16px;
+        margin: 80px 0 24px;
         text-align: center;
     }
     .brand-contents .brand__header-title + .brand__header-description {
