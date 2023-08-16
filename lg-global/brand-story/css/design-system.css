@@ -1,0 +1,339 @@
+.brand-contents #contents {background-color: #f6f3eb;}
+
+.brand__header {
+    margin-bottom: 3.5417vw;
+}
+.brand__header-title {
+    text-align: center;
+    color: #262626;
+    font-family: 'LG_EI_Headline';
+    font-weight: 600;
+    font-size: 3.65vw;
+    line-height: 4.06vw;
+    letter-spacing: 0.7px;
+    margin: 6.25vw 0 2.5vw;
+}
+.brand__header-title + .brand__header-description {
+    text-align: center;
+    color: #4A4946;
+    font-size: 1.15vw;
+    line-height: 1.56vw;
+    letter-spacing: 0.088px;  
+}
+.brand__content-inner {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 6.25vw 6.25vw;
+}
+
+/*top visual*/
+.visual__top {
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    background: no-repeat center;
+    background-size: cover;
+}
+
+/*랜딩비주얼 스크롤다운 버튼*/
+.landing-visual__scrolldown {
+    position: absolute;
+    bottom: 3.7037vh;
+    left: 0px;
+    width: 100%;
+    z-index: 2;
+    text-align: center;
+}
+.landing-visual__scrolldown__btn {
+    width: 68px;
+    height: 96px;
+    text-indent: -9999px;
+    overflow: hidden;
+    border-width: 0px;
+    cursor: pointer;
+    background: url(../../mocks/BS0001/main_visual_scroll_down.svg) no-repeat center center;
+    background-size: cover;
+    transform: translateY(0vh);
+    animation-duration: 1s;
+    animation-name: sd-dounce;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes sd-dounce {
+    from {
+        transform: translateY(-0.5vh);
+    }
+    to {
+        transform: translateY(1.5vh);
+    }
+}
+
+#visual-design-system.visual__top {
+    background-image: url(../img/elements/design-system/brand-elements-design-system-d.png);
+}
+
+/*contents ------*/
+.percent-view {
+    border-radius: 1.56vw;
+    position: relative;
+    padding-bottom: 49.4%;
+    overflow: hidden;
+}
+.percent-view picture,
+.percent-view .percent-view__img,
+.percent-view img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*tab*/
+.tab-menu__container {
+    text-align: center;
+    margin-top: -3px;
+}
+.tab-menu__list {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.6042vw;
+}
+.tab-menu__list::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 0.9375vw);
+    height: calc(100% + 0.9375vw);
+    background-color: #F0ECE4;
+    border-radius: 20.8333vw;
+}
+.tab-menu__btn {
+    z-index: 2;
+    width: 10.4167vw;
+    height: 100%;
+    background-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 0.7813vw;
+    text-decoration: none;
+    color: #262626;
+}
+.tab-menu__btn--active {
+    font-weight: 600;
+}
+.tab-menu__bg {
+    z-index: 1;
+    display: block;
+    position: absolute;
+    width: 10.4167vw;
+    height: 100%;
+    border-radius: 20.8333vw;
+    left: 0;
+    background-color: #fff;
+    transition: left .5s cubic-bezier(0.56, 0, 0.28, 1);
+}
+.tab-container {margin-top: 4.2188vw;}
+.tab-container__content {display: none;}
+.tab-container__content--active {display: block;}
+.all-comes-together__img {width: 100%; height: 100%; object-fit: contain;}
+
+
+@media (max-width: 1500px) {
+    /*공통*/
+    .brand__header {
+        margin-bottom: 72px;
+    }
+    .brand__header-title {
+        font-size: 60px;
+        line-height: 64px;
+        letter-spacing: 0.6px;
+        margin: 120px 0 24px;
+    }
+
+    .brand__header-title + .brand__header-description {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .brand__content-inner {
+        margin-top: 0;
+        padding: 0 120px 80px;
+    }
+
+    /*tab*/
+    .tab-menu__list {
+        height: 49px;
+    }
+    .tab-menu__list::before {
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+        border-radius: 20.8333vw;
+    }
+    .tab-menu__btn {
+        width: 200px;
+        font-size: 15px;
+    }
+    .tab-menu__bg {
+        width: 200px;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    /*공통*/
+    .brand__header {
+        margin-bottom: 46px;
+    }
+    .brand__header-title {
+        font-size: 32px;
+        line-height: 36px;
+        margin: 64px 0 24px;
+    }
+    .brand__header-title + .brand__header-description {
+        font-size: 15px;
+        line-height: 20px;
+    }
+    .brand__content-inner {
+        margin-top: 0;
+        padding: 0 24px 40px;
+    }
+    .download_assets {
+        display: none;
+    }
+
+    /*tab*/
+    .tab-menu__list {
+        height: 40px;
+    }
+    .tab-menu__btn {
+        width: 162px;
+        font-size: 14px;
+    }
+    .tab-menu__bg {
+        width: 162px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /*공통*/
+    .brand__header {
+        margin-bottom: 40px;
+    }
+    .brand__header-title {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 64px 0 16px;
+        text-align: center;
+    }
+    .brand__header-title + .brand__header-description {
+        font-size: 16px;
+        line-height: 1.3;
+        text-align: center;
+    }
+    .brand__header-description br {
+        display: none;
+    }
+
+
+    /*top visual*/
+    .visual__top {
+        height: 117.33vw;
+    }
+    #visual-design-system.visual__top {
+        background-image: url(../img/elements/design-system/brand-elements-design-system-m.png);
+    }
+
+
+    /*랜딩비주얼 스크롤다운 버튼*/
+    .landing-visual__scrolldown {
+        display: none;
+    }
+
+    /*tab*/
+    .tab-menu__container {
+        margin-top: 56px;
+    }
+    .tab-menu__list {
+        width: 100%;
+        height: 40px;
+    }
+    .tab-menu__list::before {
+        width: calc(100% + 16px);
+        height: calc(100% + 16px);
+    }
+    .tab-menu__btn {
+        flex: 1;
+        font-size: 14px;
+    }
+    .tab-container {margin-top: 32px;}
+
+    /*contents ------*/
+    .percent-view {
+        border-radius: 10px;
+        padding-bottom: 100%;
+    }
+
+    .percent-view--mo-right img {
+        object-position: right;
+    }
+
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+    /*랜딩비주얼 스크롤다운 버튼*/
+    .landing-visual__scrolldown {
+        bottom: 60px;
+    }
+
+    /*공통*/
+    .brand__header {
+        margin-bottom: 68px;
+    }
+    .brand__header-title {
+        font-size: 72px;
+        line-height: 76px;
+        margin: 120px 0 48px;
+
+    }
+    .brand__header-title + .brand__header-description {
+        font-size: 20px;
+        line-height: 28px;
+
+    }
+    .brand__content-inner {
+        max-width: 1680px;
+        margin: 0px auto;
+        padding: 0 0 120px;
+        
+    }
+
+    /*tab*/
+    .tab-menu__list {
+        height: 48px;
+
+    }
+    .tab-menu__list::before {
+        width: calc(100% + 9px);
+        height: calc(100% + 9px);
+        border-radius: 400px;
+    }
+    .tab-menu__btn {
+        width: 200px;
+        font-size: 15px;
+    }
+    .tab-container {
+        margin-top: 80px;
+    }
+
+
+}
