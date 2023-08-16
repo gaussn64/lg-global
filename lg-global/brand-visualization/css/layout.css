@@ -4,6 +4,7 @@ ul,ol {
     padding: 0px;
     list-style: none;
 }
+br.mo {display: none;}
 
 .brand-contents #container {padding: 0;}
 
@@ -265,12 +266,14 @@ ul,ol {
     display: flex;
     color: #fff;
 }
-.c-footer .footer-bottom ul.foot-location > li + li {
+.c-footer .footer-bottom ul.foot-location > li + li,
+.c-footer .footer-bottom ul.foot-location > li > a + a {
     position: relative;
     margin-left: 12px;
     padding-left: 12px;
 }
-.c-footer .footer-bottom ul.foot-location > li + li::before {
+.c-footer .footer-bottom ul.foot-location > li + li::before,
+.c-footer .footer-bottom ul.foot-location > li > a + a::before {
     content: '';
     position: absolute;
     left: 0;
@@ -292,10 +295,12 @@ ul,ol {
 }
 .c-footer .c-hotline {
     position: relative;
-    display: block;
+    display: inline-flex;
+    align-items: center;
     padding: 7px 16px 7px 75px;
     margin-left: auto;
     width: 271px;
+    height: 66px;
     background-color: #fff;
     border-radius: 6px;
     font-size: 16px;
@@ -338,10 +343,47 @@ ul,ol {
         font-size: 34px;
         line-height: 1.1;
     }
+
+
+
+    /* Common Footer */
+    .c-footer .footer-top > ul {
+        padding: 0 16px;
+        justify-content: flex-start;
+    }
+
+    .c-footer .footer-bottom {
+        padding: 24px 0 0;
+        flex-direction: column;
+    }
+    .c-footer .footer-bottom .footer-inner {
+        padding: 0 16px;
+    }
+    .c-footer .footer-bottom ul.foot-location > li + li,
+    .c-footer .footer-bottom ul.foot-location > li > a + a {
+        margin-left: 10px;
+        padding-left: 10px;
+    }
+    .c-footer .c-copyright {
+        margin-top: 20px;
+    }
+    .c-footer .c-hotline {
+        margin-top: 20px;
+        width: 100%;
+        /* border-radius: 6px 6px 0 0; */
+    }
+    .c-footer .c-hotline br:not(.mo) {display: none;}
+}
+
+@media (max-width: 1024px) {
+
+    
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+    br.mo {display: block;}
+    
     /* Common Header */
     .c-header__wrap {
         top: 24px;
@@ -560,4 +602,21 @@ ul,ol {
     .c-header__location {
         display: none;
     }
+
+
+    /* Common Footer */
+    .c-footer .footer-bottom ul.foot-location {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .c-footer .footer-bottom ul.foot-location > li + li {
+        margin: 0;
+        padding: 0;
+    }
+    .c-footer .footer-bottom ul.foot-location > li + li::before {
+        display: none;
+    }
+
+
 }
