@@ -1,0 +1,107 @@
+/*공통*/
+#visual-design-system.visual__top {
+    background-image: url(../img/elements/voice/brand-visual-voice-d.png);
+}
+
+/*contents ------*/
+.percent-view {
+    border-radius: 1.56vw;
+    position: relative;
+    padding-bottom: 49.4%;
+    overflow: hidden;
+}
+.percent-view.ms {
+    padding-bottom: 40%;
+}
+.percent-view .percent-view__img,
+.percent-view img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Bringing it to life*/
+.bring-it-to-life {
+    position: relative;
+}
+.index-text {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    left: 40px;
+    top: 40px;
+    z-index: 2;
+    height: 50px;
+    padding: 0 26px;
+    font-size: 18px;
+    color: #fff;
+}
+.index-text::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 70px;
+    border-radius: 70px;
+    backdrop-filter: blur(27px);
+    -webkit-backdrop-filter: blur(27px);
+    background-color: #00000080;
+    z-index: -1;
+}
+
+.bring-it-to-life__slide {
+    overflow: hidden;
+    border-radius: 1.56vw;
+}
+
+.bring-it-to-life__slide__controller {
+    position: absolute;
+    z-index: 2;
+    right: 40px;
+    bottom: 40px;
+    display: flex;
+    gap: 6px;
+}
+.bring-it-to-life__slide__controller > button {
+    display: block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #CBC8C24D;
+    -webkit-backdrop-filter: blur(27px);
+    background: no-repeat center url(../../mocks/BS0007/ico_arrow_wt.svg);
+    background-size: 24px auto;
+    background-color: #00000099;
+    backdrop-filter: blur(27px);
+}
+.bring-it-to-life__slide__controller .prev-btn {
+    transform: rotate(180deg);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+   
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    
+    #visual-design-system.visual__top {
+        background-image: url(../../mocks/BS0007/brand-elements-typography-m.png);
+    }
+
+
+    
+}
+
+/* 4K */
+@media (min-width: 2560px) {
+    
+
+}
