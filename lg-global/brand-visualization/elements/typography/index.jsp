@@ -106,7 +106,7 @@
 			</div>
 
 			<!-- header -->
-			<!-- <%@ include file="/global/sustainability/inc/header.jsp" %> -->
+			<%@ include file="/global/our-brand/brand-visualization/inc/header.jsp" %>
 			<!-- //header -->
 
             <!-- CONTENTS -->
@@ -115,8 +115,8 @@
 			</script>
 			<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-			<link rel="stylesheet" href="../../css/common.css" />
-			<link rel="stylesheet" href="../../css/typography.css" />
+			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/common.css" />
+			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/typography.css" />
 
 			<div id="contents">
 				<div id="visual-design-system" class="visual__top">
@@ -282,12 +282,12 @@
 				</div>
 			</div>
 			<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
-			<script src="../../js/layout.js"></script>
-			<script src="../../js/typography.js"></script>
+			<script src="/global/our-brand/brand-visualization/js/layout.js"></script>
+			<script src="/global/our-brand/brand-visualization/js/typography.js"></script>
 
             <!-- /CONTENTS -->
             <!-- footer -->
-            <!-- <%@ include file="/global/sustainability/inc/footer.jsp" %> -->
+            <!-- <%@ include file="/global/our-brand/brand-visualization/inc/footer.jsp" %> -->
             <!-- //footer -->
 	    </div>
 	</div>

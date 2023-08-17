@@ -142,7 +142,7 @@
             <script src="./js/layout.js"></script>
             <!-- /CONTENTS -->
             <!-- footer -->
-            <%@ include file="/global/sustainability/inc/footer.jsp" %>
+            <%@ include file="/global/our-brand/brand-visualization/inc/footer.jsp" %>
             <!-- //footer -->
 	    </div>
 	</div>

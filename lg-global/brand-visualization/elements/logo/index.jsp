@@ -106,88 +106,175 @@
 			</div>
 
 			<!-- header -->
-			<!-- <%@ include file="/global/sustainability/inc/header.jsp" %> -->
+			<%@ include file="/global/our-brand/brand-visualization/inc/header.jsp" %>
 			<!-- //header -->
 
             <!-- CONTENTS -->
 			<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-			<link rel="stylesheet" href="../../css/common.css" />
-			<link rel="stylesheet" href="../../css/photography.css" />
+			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/common.css" />
+			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/photography.css" />
 
 			<div id="contents">
-				<div id="visual-photography" class="visual__top">
+				<div id="visual-logo" class="visual__top">
 					<div class="landing-visual__scrolldown">
 						<button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
+					</div>
+					<div class="visual-innner">
+						<div class="download_assets">
+							<img src="../../img/elements/logo/download_assets_logo.png" alt class="download_assets__thumb"></img>
+							<p class="download_assets__title">
+								<b>LG Logo</b>
+								Download Assets
+							</p>
+							<a class="download_assets__btn" href="#" download></a>
+						</div>
 					</div>
 				</div>
 				<div class="brand__content-inner">
 					<div class="brand__header">
-						<h2 class="brand__header-title">Photography</h2>
+						<h2 class="brand__header-title">Introducing our Logo</h2>
 						<p class="brand__header-description">
-							We have three different types of photography, each with their own clear role to play. <br>
-							All of our photography is unified by clear principles:<br>
-							authenticity, positivity, warmth, breathing space, diversity and attention to detail.
+							Full of personality, our smiling logo signals humanity <br class="mo">
+							and intelligence. <br>We always use it with confidence. <br class="mo">
+							It's what makes us feel uniquely LG.
 						</p>
 					</div>
-					<ul class="photography__list">
-						<li class="photography__item photography__item--everyday">
-							<dl>
-								<dt>
-									Everyday Life 
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									Imagery should capture real, <br>
-									spontaneous moments so it feels warm, <br>
-									positive and relatable
-								</dd>
-							</dl>
-						</li>
-						<li class="photography__item photography__item--energy">
-							<dl>
-								<dt>
-									Energy, Passion and Interests
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									We capture and celebrate the <br>
-									energy and attitude of people <br>
-									and their passions.
-								</dd>
-							</dl>
-						</li>
-						<li class="photography__item photography__item--products">
-							<dl>
-								<dt>
-									Products
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									We capture the craft, detail and the quality <br>
-									of our products. Always balancing warmth and <br>
-									innovation in a way that feels uniquely LG. 
-								</dd>
-							</dl>
-						</li>
-					</ul>
+					<div class="percent-v-box">
+						<picture>
+							<source media="(min-width: 769px)" srcset="../../img/elements/logo/brand-elements-logo-primary-d.svg">
+							<source media="(max-width: 768px)" srcset="../../img/elements/logo/brand-elements-logo-primary-m.svg">
+							<img src="../../img/elements/logo/brand-elements-logo-primary-d.svg" alt="">
+						</picture>
+						<div class="v-box-bottom">
+							<p class="tit">Primary Logo</p>
+							<span class="desc">For instant recognition</span>
+						</div>
+					</div>
 					<div class="brand__header">
-						<h2 class="brand__header-title">Uniquely LG</h2>
+						<h2 class="brand__header-title">Logo color</h2>
 						<p class="brand__header-description">
-							Our imagery should feel warm, positive and relatable. <br>
-							Always balancing warmth and innovation in a way that feels uniquely LG.
+							We have a number of color variants of our logo<br class="mo"> lockup. <br>
+							These combinations ensure we can use them<br class="mo"> against our gradients, <br>
+							photographic backgrounds<br class="mo"> and flat colors without compromising legibility.
 						</p>
 					</div>
-					<ul class="photography__grid photography__grid--everyday">
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_01.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_02.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_03.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_04.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_05.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_06.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_07.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_08.png" alt=""></li>
-					</ul>
+					<div class="btmdot-slide__container" data-type-set="light">
+						<div class="btmdot-slide__slider">
+							<ul class="btmdot-slide__slide__inner swiper-wrapper">
+								<li class="btmdot-slide__slide btmdot-slide__slide--light swiper-slide"></li>
+								<li class="btmdot-slide__slide btmdot-slide__slide--dark swiper-slide"></li>
+								<li class="btmdot-slide__slide btmdot-slide__slide--light-gra swiper-slide"></li>
+								<li class="btmdot-slide__slide btmdot-slide__slide--dark-gra swiper-slide"></li>
+								<li class="btmdot-slide__slide btmdot-slide__slide--light-img swiper-slide"></li>
+								<li class="btmdot-slide__slide btmdot-slide__slide--dark-img swiper-slide"></li>
+							</ul>
+						</div>
+						<div class="btmdot-slide__btm-container">
+							<div class="btmdot-slide__pagination">
+								<!-- <button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--dark"></button>
+								<button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--light"></button>
+								<button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--light-gra"></button>
+								<button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--dark-gra"></button>
+								<button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--dark-img"></button>
+								<button class="btmdot-slide__pagination__btn btmdot-slide__pagination__btn--light-img"></button> -->
+							</div>
+							<span class="btmdot__tag">Light Background</span>
+						</div>
+					</div>
+					<div class="brand__header">
+						<h2 class="brand__header-title">Logo spacing <br>and partnerships</h2>
+						<p class="brand__header-description">
+							When using our logo, follow the guidance for clear space so that<br>
+							it always appears confident and legible. When using it alongside another logo,<br>
+							refer to our partnership template to ensure equal balance of both logo's.
+						</p>
+					</div>
+					<div class="tab-menu__container">
+						<div class="tab-menu__list" data-tab="partnership">
+							<span class="tab-menu__bg"></span>
+							<a href="#clearspace" class="tab-menu__btn tab-menu__btn--active">Clearspace</a>
+							<a href="#partnerships" class="tab-menu__btn">Brand partnerships</a>
+						</div>
+					</div>
+					<div class="tab-container" data-tab="partnership">
+						<div id="clearspace" class="tab-container__content tab-container__content--active">
+							<div class="logo__container logo__container--spacing">
+								<img class="logo__container__spacing-img logo__container__spacing-img--pc" src="../../img/elements/logo/brand-elements-logo-spacing-clearspace-d.png" alt="">
+								<img class="logo__container__spacing-img logo__container__spacing-img--mo" src="../../img/elements/logo/brand-elements-logo-spacing-clearspace-m.png" alt="">
+							</div>
+						</div>
+						<div id="partnerships" class="tab-container__content">
+							<div class="logo__container logo__container--spacing">
+								<img class="logo__container__spacing-img logo__container__spacing-img--pc" src="../../img/elements/logo/brand-elements-logo-spacing-brand-partnerships-d.png" alt="">
+								<img class="logo__container__spacing-img logo__container__spacing-img--mo" src="../../img/elements/logo/brand-elements-logo-spacing-brand-partnerships-m.png" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="brand__header">
+						<h2 class="brand__header-title">Digital Logo Play</h2>
+						<p class="brand__header-description">
+							This is our symbol brought to life with emotion and interaction. <br>
+							It moves with a warm and witty attitude, is designed for the future <br>
+							and adapts to consumers' moods and needs.
+						</p>
+					</div>
+					<div class="tab-menu__container">
+						<div class="tab-menu__list" data-tab="logoPlay">
+							<span class="tab-menu__bg"></span>
+							<a href="#logoplay" class="tab-menu__btn tab-menu__btn--active">Digital logo play</a>
+							<a href="#logosuite" class="tab-menu__btn">Digital logo play Suite</a>
+						</div>
+					</div>
+					<div class="tab-container" data-tab="logoPlay">
+						<div id="logoplay" class="tab-container__content tab-container__content--active">
+							<div class="logo__container logo__container--logoplay">
+								<img class="logo__container__logoplay-image" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol-d.gif" alt="">
+								<div class="v-box-bottom wt">
+									<p class="tit">Digital Logo Play</p>
+									<span class="desc">Allows us to engage and tell stories</span>
+								</div>
+							</div>
+						</div>
+						<div id="logosuite" class="tab-container__content">
+							<div class="logo__container logo__container--logosuite">
+								<ul class="logosuite">
+									<li class="logosuite__item">
+										<p class="logosuite__label">Appearing</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Appearing.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Bobbing to music</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_BobtoMusic.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Bowing</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Bowing.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Look around</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_LookingAround.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Amazed</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Amazed.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Spinning</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Scrolling.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Nodding</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Nodding.gif" alt="">
+									</li>
+									<li class="logosuite__item">
+										<p class="logosuite__label">Wink</p>
+										<img class="logosuite__img" src="../../img/elements/logo/LG_Electronics_Expressive_Symbol_Transparent_White_Wink.gif" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</div>
 				<div class="brand-elements">
 					<div class="brand-element__inner" >
@@ -203,31 +290,31 @@
 							<ul class="our-identity__slides swiper-wrapper">
 								<li class="our-identity__slide our-identity__slide--logo swiper-slide">
 									<h3 class="our-identity__item-title">Logo</h3>
-									<a class="our-identity__move-btn" href="../logo/logo.html"></a>
+									<a class="our-identity__move-btn" href="../logo/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--color swiper-slide">
 									<h3 class="our-identity__item-title">Color & Gradients</h3>
-									<a class="our-identity__move-btn" href="../color/colors.html"></a>
+									<a class="our-identity__move-btn" href="../color/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--photography swiper-slide">
 									<h3 class="our-identity__item-title">Photography</h3>
-									<a class="our-identity__move-btn" href="../photography/photography.html"></a>
+									<a class="our-identity__move-btn" href="../photography/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--design swiper-slide">
 									<h3 class="our-identity__item-title">Design System</h3>
-									<a class="our-identity__move-btn" href="../design-system/design-system.html"></a>
+									<a class="our-identity__move-btn" href="../design-system/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--tagline swiper-slide">
 									<h3 class="our-identity__item-title">Slogan</h3>
-									<a class="our-identity__move-btn" href="../slogan/slogan.html"></a>
+									<a class="our-identity__move-btn" href="../slogan/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--typo swiper-slide">
 									<h3 class="our-identity__item-title">Typography</h3>
-									<a class="our-identity__move-btn" href="../typography/typography.html"></a>
+									<a class="our-identity__move-btn" href="../typography/index.html"></a>
 								</li>
 								<li class="our-identity__slide our-identity__slide--voice swiper-slide">
 									<h3 class="our-identity__item-title">Voice</h3>
-									<a class="our-identity__move-btn" href="../voice/voice.html"></a>
+									<a class="our-identity__move-btn" href="../voice/index.html"></a>
 								</li>
 							</ul>
 						</div>
@@ -238,11 +325,11 @@
 				</div>
 			</div>
 			<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
-			<script src="../../js/layout.js"></script>
-			<script src="../../js/photography.js"></script>
+			<script src="/global/our-brand/brand-visualization/js/layout.js"></script>
+			<script src="/global/our-brand/brand-visualization/js/photography.js"></script>
             <!-- /CONTENTS -->
             <!-- footer -->
-            <!-- <%@ include file="/global/sustainability/inc/footer.jsp" %> -->
+            <%@ include file="/global/our-brand/brand-visualization/inc/footer.jsp" %>
             <!-- //footer -->
 	    </div>
 	</div>
