@@ -146,9 +146,9 @@
 					</div>
 					<div class="percent-v-box">
 						<picture>
-							<source media="(min-width: 769px)" srcset="../../img/Elements/logo/brand-elements-logo-primary-d.svg">
-							<source media="(max-width: 768px)" srcset="../../img/Elements/logo/brand-elements-logo-primary-m.svg">
-							<img src="../../img/Elements/logo/brand-elements-logo-primary-d.svg" alt="">
+							<source media="(min-width: 769px)" srcset="../../img/elements/logo/brand-elements-logo-primary-d.svg">
+							<source media="(max-width: 768px)" srcset="../../img/elements/logo/brand-elements-logo-primary-m.svg">
+							<img src="../../img/elements/logo/brand-elements-logo-primary-d.svg" alt="">
 						</picture>
 						<div class="v-box-bottom">
 							<p class="tit">Primary Logo</p>
