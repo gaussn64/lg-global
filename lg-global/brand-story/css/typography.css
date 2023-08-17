@@ -79,6 +79,17 @@
     transform: rotate(180deg);
 }
 
+.fix-text {
+    font-size: 95px;
+    line-height: 1.1;
+    letter-spacing: 0.9px;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 120px;
+}
+
 
 @media (max-width: 1500px) {
     
