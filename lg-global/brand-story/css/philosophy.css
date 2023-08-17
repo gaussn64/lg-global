@@ -845,7 +845,7 @@ br.mo {display: none;}
         margin: 60px 0;
         font-size: 24px;
     }
-    .intro-text br {display: none;}
+    .intro-text br:not(.mo) {display: none;}
 
     /*imotionally-design*/
     .imotionally-design {
