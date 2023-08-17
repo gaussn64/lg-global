@@ -345,8 +345,28 @@ function brandElememtsSlider() {
 }
 
 
+/*change video*/
+function resolutionVideo() {
+    const changeVideo = document.querySelector('.resolutionVideo')
+    const winSize = window.innerWidth
+
+    let currentUrl = winSize > 768 ? changeVideo.dataset.urlPC : changeVideo.dataset.urlMo
+
+    console.log(currentUrl)
+
+    function setVideo() {
+
+
+    }
+
+
+
+
+}
+
 window.addEventListener('DOMContentLoaded', function () {
     initCommonHeader();
     tabFunc() //tab content 
     brandElememtsSlider() //what's next slide
+    // resolutionVideo()
 })
