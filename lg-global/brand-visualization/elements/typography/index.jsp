@@ -33,7 +33,13 @@
 
 	
 	<link rel="stylesheet" href="/global/sustainability/css/default.min.css" />
-	<link rel="stylesheet" href="/global/sustainability/css/swiper-bundle.min.css" />				
+	<link rel="stylesheet" href="/global/sustainability/css/swiper-bundle.min.css" />			
+	
+	<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/common.css" />
+	<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/typography.css" />
+	
 	<!--[if lt IE 9]>
 	<script src="/global/sustainability/js/html5shiv.js"></script>
 	<![endif]-->
@@ -113,10 +119,6 @@
 			<script>
 				var gnbDep1 = 0; //GNB 1depth
 			</script>
-			<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/common.css" />
-			<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/typography.css" />
 
 			<div id="contents">
 				<div id="visual-design-system" class="visual__top">
@@ -281,9 +283,6 @@
 					</div>
 				</div>
 			</div>
-			<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
-			<script src="/global/our-brand/brand-visualization/js/layout.js"></script>
-			<script src="/global/our-brand/brand-visualization/js/typography.js"></script>
 
             <!-- /CONTENTS -->
             <!-- footer -->
@@ -307,6 +306,9 @@
 	<script src="/global/sustainability/js/design.min.js"></script>
 	<script src="/global/sustainability/js/main.min.js"></script>
 
+	<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
+	<script src="/global/our-brand/brand-visualization/js/layout.js"></script>
+	<script src="/global/our-brand/brand-visualization/js/typography.js"></script>
 
 	<script>
 		

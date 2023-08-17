@@ -33,12 +33,13 @@
 
 	
 	<link rel="stylesheet" href="/global/sustainability/css/default.min.css" />
-	<link rel="stylesheet" href="/global/sustainability/css/swiper-bundle.min.css" />	
-	
+	<link rel="stylesheet" href="/global/sustainability/css/swiper-bundle.min.css" />
+
 	<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/common.css" />
-	<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/photography.css" />
+	<link rel="stylesheet" href="/global/our-brand/brand-visualization/css/philosophy.css" />
+
 	<!--[if lt IE 9]>
 	<script src="/global/sustainability/js/html5shiv.js"></script>
 	<![endif]-->
@@ -115,129 +116,151 @@
 			<!-- //header -->
 
             <!-- CONTENTS -->
-			<script>
-				var gnbDep1 = 0; //GNB 1depth
-			</script>
-
 			<div id="contents">
-				<div id="visual-photography" class="visual__top">
-					<div class="landing-visual__scrolldown">
-						<button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
-					</div>
-				</div>
-				<div class="brand__content-inner">
-					<div class="brand__header">
-						<h2 class="brand__header-title">Photography</h2>
-						<p class="brand__header-description">
-							We have three different types of photography, each with their own clear role to play. <br>
-							All of our photography is unified by clear principles:<br>
-							authenticity, positivity, warmth, breathing space, diversity and attention to detail.
-						</p>
-					</div>
-					<ul class="photography__list">
-						<li class="photography__item photography__item--everyday">
-							<dl>
-								<dt>
-									Everyday Life 
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									Imagery should capture real, <br>
-									spontaneous moments so it feels warm, <br>
-									positive and relatable
-								</dd>
-							</dl>
-						</li>
-						<li class="photography__item photography__item--energy">
-							<dl>
-								<dt>
-									Energy, Passion and Interests
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									We capture and celebrate the <br>
-									energy and attitude of people <br>
-									and their passions.
-								</dd>
-							</dl>
-						</li>
-						<li class="photography__item photography__item--products">
-							<dl>
-								<dt>
-									Products
-									<button class="photography__item__mobtn"></button>
-								</dt>
-								<dd>
-									We capture the craft, detail and the quality <br>
-									of our products. Always balancing warmth and <br>
-									innovation in a way that feels uniquely LG. 
-								</dd>
-							</dl>
-						</li>
-					</ul>
-					<div class="brand__header">
-						<h2 class="brand__header-title">Uniquely LG</h2>
-						<p class="brand__header-description">
-							Our imagery should feel warm, positive and relatable. <br>
-							Always balancing warmth and innovation in a way that feels uniquely LG.
-						</p>
-					</div>
-					<ul class="photography__grid photography__grid--everyday">
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_01.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_02.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_03.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_04.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_05.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_06.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_07.png" alt=""></li>
-						<li class="photography__grid__item"><img src="../../img/elements/photography/photography__grid__item_08.png" alt=""></li>
-					</ul>
-				</div>
-				<div class="brand-elements">
-					<div class="brand-element__inner" >
-						<h2 class="brand-elements__header-title">
-							What’s next?
-							<span class="brand-elements__header-title__sub">Explore brand elements</span>
-						</h2>
-						<div class="brand-elements__controller">
-							<button class="brand-elements__controller__btn swiper-button-prev"></button>
-							<button class="brand-elements__controller__btn swiper-button-next"></button>
+				<div id="brand-container">
+					<div class="brand-visual-film visual__top">
+						<!-- <picture class="brand-visual-film__video">
+							<source media="(min-width: 769px)" srcset="../img/philosophy/Expressive_symbol_wink_d.png">
+							<source media="(max-width: 768px)" srcset="../img/philosophy/Expressive_symbol_wink_m.png">
+							<img src="../img/philosophy/Expressive_symbol_wink_d.png" alt="">
+						</picture> -->
+						<video muted playsinline autoplay class="resolutionVideo">
+							<source 
+								src="../img/philosophy/lifes-good-lg-video.mp4" 
+								type="video/mp4"
+								data-urlPC="../img/philosophy/lifes-good-lg-video.mp4"
+								data-urlMo="../img/philosophy/lifes-good-lg-video-m.mp4"
+							>
+							</source>
+						</video>
+		
+						<button class="btn-play"></button>
+						<div class="landing-visual__scrolldown">
+							<button type="button" class="landing-visual__scrolldown__btn">Scroll Down</button>
 						</div>
-						<div class="our-identity__slider">
-							<ul class="our-identity__slides swiper-wrapper">
-								<li class="our-identity__slide our-identity__slide--logo swiper-slide">
-									<h3 class="our-identity__item-title">Logo</h3>
-									<a class="our-identity__move-btn" href="../logo/logo.html"></a>
+					</div>
+					<div class="brand-story-content">
+						<p class="intro-text">
+							LG Electronics has been designing every side of life for generations.<br>
+							Bringing a smile to technology. Balancing warmth and innovations.<br>
+							Everything we design is guided by our Design Philosophy.
+						</p>
+
+						<div class="imotionally-design addMotion">
+							<div class="imotionally-design__headline">
+								<ul>
+									<li class="active">
+										Emotionally
+										<p><span>We bring warmth</span></p>
+									</li>
+									<li>
+										Intelligent
+										<p><span>and innovation</span></p>
+									</li>
+									<li>
+										Design
+										<p><span>to all we design</span></p>
+									</li>
+								</ul>
+								<p class="for-mobile">
+									We bring warmth and innovation to<br> 
+									everything we design.
+								</p>
+							</div>
+							<ul class="imotionally-design__imgwrap">
+								<li class="imotionally-design__item">
+									<video muted playsinline loop autoplay><source src="../img/philosophy/emotionally_intelligent_item_01.mp4" type="video/mp4"/></video>
 								</li>
-								<li class="our-identity__slide our-identity__slide--color swiper-slide">
-									<h3 class="our-identity__item-title">Color & Gradients</h3>
-									<a class="our-identity__move-btn" href="../color/colors.html"></a>
+								<li class="imotionally-design__item">
+									<video muted playsinline loop autoplay><source src="../img/philosophy/emotionally_intelligent_item_02.mp4" type="video/mp4"/></video>
 								</li>
-								<li class="our-identity__slide our-identity__slide--photography swiper-slide">
-									<h3 class="our-identity__item-title">Photography</h3>
-									<a class="our-identity__move-btn" href="../photography/photography.html"></a>
+								<li class="imotionally-design__item">
+									<img src="../img/philosophy/emotionally_intelligent_item_03.png" alt="">
 								</li>
-								<li class="our-identity__slide our-identity__slide--design swiper-slide">
-									<h3 class="our-identity__item-title">Design System</h3>
-									<a class="our-identity__move-btn" href="../design-system/design-system.html"></a>
+								<li class="imotionally-design__item">
+									<video muted playsinline loop autoplay><source src="../img/philosophy/emotionally_intelligent_item_04.mp4" type="video/mp4"/></video>
 								</li>
-								<li class="our-identity__slide our-identity__slide--tagline swiper-slide">
-									<h3 class="our-identity__item-title">Slogan</h3>
-									<a class="our-identity__move-btn" href="../slogan/slogan.html"></a>
+								<li class="imotionally-design__item">
+									<video muted playsinline loop autoplay><source src="../img/philosophy/emotionally_intelligent_item_05.mp4" type="video/mp4"/></video>
 								</li>
-								<li class="our-identity__slide our-identity__slide--typo swiper-slide">
-									<h3 class="our-identity__item-title">Typography</h3>
-									<a class="our-identity__move-btn" href="../typography/typography.html"></a>
-								</li>
-								<li class="our-identity__slide our-identity__slide--voice swiper-slide">
-									<h3 class="our-identity__item-title">Voice</h3>
-									<a class="our-identity__move-btn" href="../voice/voice.html"></a>
+								<li class="imotionally-design__item">
+									<video muted playsinline loop autoplay><source src="../img/philosophy/emotionally_intelligent_item_06.mp4" type="video/mp4"/></video>
 								</li>
 							</ul>
 						</div>
-						<div class="our-identity__progress-container">
-							<div class="our-identity__progressbar"></div>
+						<p class="intro-text">
+							Moving forward, we want to ensure that our approach to design blends logic and magic.<br>
+							That our identity is guided by a clear philosophy.<br>
+							And ultimately, that our execution delivers on our mission and core values.
+						</p>
+						<div class="looping-video-content">
+							<video muted playsinline loop autoplay>
+								<source src="../img/philosophy/looping-video-content.mp4" type="video/mp4">
+							</video>
 						</div>
+						<p class="intro-text">
+							So we’ve developed a<br class="mo"> design philosophy that<br class="mo"> guides all our
+							design<br class="mo"> decisions. <br>It means every<br class="mo"> experience we create can<br class="mo">
+							help people feel Life’s <br class="mo">Good.
+						</p>
+						<ul class="looping-video-multi">
+							<li><video muted playsinline loop autoplay><source src="../img/philosophy/looping-video-multi-01.mp4" type="video/mp4"></source></video></li>
+							<li><img src="../img/philosophy/looping-video-multi-02.png" alt=""></li>
+							<li><video muted playsinline loop autoplay><source src="../img/philosophy/looping-video-multi-03.mp4" type="video/mp4"></source></video></li>
+						</ul>
+					</div>
+					<div class="brand-elements">
+						<div class="brand-element__inner" >
+							<div class="brand-element__title">
+								<span class="brand-element__title__desc">Our core elements</span>
+								<h1 class="brand-element__title__text">Coming to life <br class="mo"> through our identity</h1>
+							</div>
+							<div class="our-identity__slider">
+								<ul class="our-identity__slides swiper-wrapper">
+									<li class="our-identity__slide our-identity__slide--logo swiper-slide">
+										<h3 class="our-identity__item-title">Logo</h3>
+										<a class="our-identity__move-btn" href="../elements/logo/logo.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--color swiper-slide">
+										<h3 class="our-identity__item-title">Color & Gradients</h3>
+										<a class="our-identity__move-btn" href="../elements/color/colors.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--photography swiper-slide">
+										<h3 class="our-identity__item-title">Photography</h3>
+										<a class="our-identity__move-btn" href="../elements/photography/photography.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--design swiper-slide">
+										<h3 class="our-identity__item-title">Design System</h3>
+										<a class="our-identity__move-btn" href="../elements/design-system/design-system.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--tagline swiper-slide">
+										<h3 class="our-identity__item-title">Slogan</h3>
+										<a class="our-identity__move-btn" href="../elements/slogan/slogan.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--typo swiper-slide">
+										<h3 class="our-identity__item-title">Typography</h3>
+										<a class="our-identity__move-btn" href="../elements/typography/typography.html"></a>
+									</li>
+									<li class="our-identity__slide our-identity__slide--voice swiper-slide">
+										<h3 class="our-identity__item-title">Voice</h3>
+										<a class="our-identity__move-btn" href="../elements/voice/voice.html"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="our-identity__progress-container">
+								<div class="our-identity__progressbar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="popup-in-action">
+				<button class="btn-circle btn-circle--close"></button>
+				<div class="pop-inner">
+					<div class="video-wrapper">
+						<video id="video-item" controls class="vjs-matrix video-js" preload="auto">
+							<source src="../../mocks/BS0008/20230406_LG_BrandfilmMaster_88.mp4" type="video/mp4">
+						</video>
 					</div>
 				</div>
 			</div>
@@ -265,8 +288,7 @@
 
 	<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 	<script src="/global/our-brand/brand-visualization/js/layout.js"></script>
-	<script src="/global/our-brand/brand-visualization/js/photography.js"></script>
-
+	<script src="/global/our-brand/brand-visualization/js/philosophy.js"></script>
 
 	<script>
 		
