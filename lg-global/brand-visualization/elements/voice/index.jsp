@@ -113,7 +113,6 @@
 			<script>
 				var gnbDep1 = 0; //GNB 1depth
 			</script>
-
 			<link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
 			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 			<link rel="stylesheet" href="../../css/common.css">
@@ -270,6 +269,7 @@
 			<script src="https://vjs.zencdn.net/8.3.0/video.min.js"></script>
 			<script src="../../js/layout.js"></script>
 			<script src="../../js/voice.js"></script>
+
             <!-- /CONTENTS -->
             <!-- footer -->
             <!-- <%@ include file="/global/sustainability/inc/footer.jsp" %> -->
