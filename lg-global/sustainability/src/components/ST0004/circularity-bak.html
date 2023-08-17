@@ -464,6 +464,64 @@
                 background-color: #EA1917;
             }
 
+            /* Explore more resources */
+            .explore-resources {
+                padding: 60px 0px;
+                background: url(../../mocks/ST0004/bg-explore-resources.png) no-repeat center center;
+                background-size: cover;
+            }
+            .explore-resources__inner {
+                width: 1440px;
+                margin: 0px auto;
+            }
+            .explore-resources__tit {
+                font-family: 'LG_EI_Headline';
+                font-size: 44px;
+                font-weight: 550;
+                line-height: 48px;
+                letter-spacing: -0.44px;
+                color: white;
+            }
+            .explore-resources__list {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 21px;
+                margin-top: 60px;
+            }
+            .explore-resources__list__item {
+                overflow: hidden;
+                border-radius: 20px;
+            }
+            .explore-resources__list__item__anchor {
+                position: relative;
+                display: block;
+                box-sizing: border-box;
+                height: 240px;
+                padding: 30px;
+                color: white;
+                background-color: rgba(38, 38, 38, 0.50);
+                backdrop-filter: blur(10px);
+            }
+            .explore-resources__list__item__anchor__txt {
+                display: block;
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 28px;
+                color: white;
+                letter-spacing: -0.12px;
+            }
+            .explore-resources__list__item__anchor:after {
+                position: absolute;
+                bottom: 20px;
+                right: 20px;
+                content: '';
+                display: block;
+                width: 48px;
+                height: 48px;
+                background: url(../../mocks/ST0005/btn-ectk-more.svg) no-repeat center center;
+                background-size: cover;
+            }
+
             /* Summary */
             .summary {
                 padding: 60px 0px 105px;
@@ -1562,6 +1620,43 @@
                             <button type="button" class="popup-discription__btn-close">Close</button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="explore-resources">
+                <div class="explore-resources__inner">
+                    <h2 class="explore-resources__tit">Explore more resources</h2>
+                    <ul class="explore-resources__list">
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/take-back-recycling-policy" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor1">
+                                <span class="explore-resources__list__item__anchor__txt">Global take back &amp; recycling policy</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/take-back-recycling-global-network-korea" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor2">
+                                <span class="explore-resources__list__item__anchor__txt">Take-back &amp; recycling global network</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/management-of-hazardous-substances" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor3">
+                                <span class="explore-resources__list__item__anchor__txt">Hazardous substances management</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/green-product-strategy" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor1">
+                                <span class="explore-resources__list__item__anchor__txt">Green product strategy</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/greener-products-application" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor2">
+                                <span class="explore-resources__list__item__anchor__txt">Products application</span>
+                            </a>
+                        </li>
+                        <li class="explore-resources__list__item">
+                            <a href="https://www.lg.com/global/sustainability/environment/greener-products/environmental-declarations" target="_blank" class="explore-resources__list__item__anchor explore-resources__list__item__anchor3">
+                                <span class="explore-resources__list__item__anchor__txt">Environmental declarations</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="summary">
