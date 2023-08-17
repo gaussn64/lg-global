@@ -11,7 +11,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-inner">
-                <ul class="foot-location">
+                <!-- <ul class="foot-location">
                     <li>
                         <a href="#">Site map</a>
                         <a href="#">Privacy policy</a>
@@ -22,7 +22,7 @@
                         <a href="#">SAR</a>
                         <a href="#">LG Affiliates</a>
                     </li>
-                </ul>
+                </ul> -->
                 <p class="c-copyright">
                     Copyright © 2009-2023 LG Electronics. <br class="mo">
                     All Rights Reserved

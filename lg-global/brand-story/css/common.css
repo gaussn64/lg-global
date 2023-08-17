@@ -10,7 +10,7 @@
     background: no-repeat center;
     background-size: cover;
 }
-.brand-contents #visual-logo.visual__top {background-image: url(../img/Elements/logo/LG_Electronics_Logo_visual_background.png);}
+.brand-contents #visual-logo.visual__top {background-image: url(../img/elements/logo/LG_Electronics_Logo_visual_background.png);}
 .brand-contents #visual-photography.visual__top {background-image: url(../img/elements/photography/brand-elements-photography-d.png);}
 .brand-contents #visual-colors.visual__top {background-image: url(../img/elements/color/brand-elements-colour-d.png);}
 
@@ -61,7 +61,7 @@
     right: 9px;
     top: 50%;
     transform: translateY(-50%);
-    background: no-repeat center url(../img/Elements/logo/icon_download_btn.svg);
+    background: no-repeat center url(../img/elements/logo/icon_download_btn.svg);
     background-size: 17px auto;
 }
 
@@ -654,7 +654,7 @@
     .brand-contents .visual__top {
         height: 117.33vw;
     }
-    .brand-contents #visual-logo.visual__top {background-image: url(../img/Elements/logo/LG_Electronics_Logo_visual_background-m.png);}
+    .brand-contents #visual-logo.visual__top {background-image: url(../img/elements/logo/LG_Electronics_Logo_visual_background-m.png);}
 
 
     /*download assets*/

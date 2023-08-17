@@ -1,5 +1,5 @@
 /*공통*/
-#visual-design-system.visual__top {
+#visual-voice.visual__top {
     background-image: url(../img/elements/voice/brand-visual-voice-d.png);
 }
 
@@ -92,8 +92,8 @@
 /* Mobile */
 @media (max-width: 768px) {
     
-    #visual-design-system.visual__top {
-        background-image: url(../../mocks/BS0007/brand-elements-typography-m.png);
+    #visual-voice.visual__top {
+        background-image: url(../../mocks/BS0007/brand-visual-voice-m.png);
     }
 
 
