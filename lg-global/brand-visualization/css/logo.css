@@ -7,7 +7,7 @@
 }
 
 .logo__container--primary {
-    background: no-repeat center url(../img/Elements/logo/brand-elements-logo-primary-d.svg);
+    background: no-repeat center url(../img/elements/logo/brand-elements-logo-primary-d.svg);
     background-size: cover;
 }
 
@@ -31,7 +31,7 @@
 .logo__container--logoplay,
 .logo__container--logosuite {
     background: no-repeat center
-        url(../img/Elements/logo/brand-elements-logo-digital-logo-play-bg-d.png);
+        url(../img/elements/logo/brand-elements-logo-digital-logo-play-bg-d.png);
     background-size: cover;
 }
 
@@ -74,22 +74,22 @@
     border-radius: 1.5625vw;
 }
 .btmdot-slide__slide--dark {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-background-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-background-d.png);
 }
 .btmdot-slide__slide--light {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-background-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-light-background-d.png);
 }
 .btmdot-slide__slide--dark-gra {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-gradient-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-gradient-d.png);
 }
 .btmdot-slide__slide--light-gra {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-gradient-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-light-gradient-d.png);
 }
 .btmdot-slide__slide--dark-img {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-image-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-image-d.png);
 }
 .btmdot-slide__slide--light-img {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-image-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-light-image-d.png);
 }
 
 .btmdot-slide__btm-container {
@@ -139,16 +139,16 @@
     border: 1px solid #000;
 }
 .btmdot-slide__pagination__btn--dark-gra {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-gradient-thumb-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-gradient-thumb-d.png);
 }
 .btmdot-slide__pagination__btn--light-gra {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-gradient-thumb-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-light-gradient-thumb-d.png);
 }
 .btmdot-slide__pagination__btn--dark-img {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-image-thumb-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-image-thumb-d.png);
 }
 .btmdot-slide__pagination__btn--light-img {
-    background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-image-thumb-d.png);
+    background-image: url(../img/elements/logo/brand-elements-logo-colour-light-image-thumb-d.png);
 }
 
 .btmdot-slide__pagination__btn--light::before,
@@ -302,28 +302,28 @@
         height: 90vw;
     }
     .logo__container--primary {
-        background-image: url(../img/Elements/logo/brand-elements-logo-primary-m.svg);
+        background-image: url(../img/elements/logo/brand-elements-logo-primary-m.svg);
     }
     .btmdot-slide__slide {
         border-radius: 10px;
     }
     .btmdot-slide__slide--dark {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-background-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-background-m.png);
     }
     .btmdot-slide__slide--light {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-background-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-light-background-m.png);
     }
     .btmdot-slide__slide--dark-gra {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-gradient-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-gradient-m.png);
     }
     .btmdot-slide__slide--light-gra {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-gradient-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-light-gradient-m.png);
     }
     .btmdot-slide__slide--dark-img {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-dark-image-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-dark-image-m.png);
     }
     .btmdot-slide__slide--light-img {
-        background-image: url(../img/Elements/logo/brand-elements-logo-colour-light-image-m.png);
+        background-image: url(../img/elements/logo/brand-elements-logo-colour-light-image-m.png);
     }
     .btmdot-slide__btm-container {
         bottom: 16px;
