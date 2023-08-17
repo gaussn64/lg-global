@@ -316,6 +316,10 @@ br.mo {display: none;}
     background: no-repeat center url(../img/lg-hotline.png);
     background-size: contain;
 }
+.c-footer .footer-bottom .footer-inner {
+    display: flex;
+    align-items: flex-end;
+}
 
 @media (max-width: 1500px) {
     .c-header__gnb {
