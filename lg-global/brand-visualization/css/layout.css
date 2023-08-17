@@ -305,6 +305,7 @@ br.mo {display: none;}
     border-radius: 6px;
     font-size: 16px;
     text-decoration: underline;
+    box-sizing: border-box;
 }
 .c-footer .c-hotline::before {
     content: '';
@@ -314,6 +315,10 @@ br.mo {display: none;}
     height: 49px;
     background: no-repeat center url(../img/lg-hotline.png);
     background-size: contain;
+}
+.c-footer .footer-bottom .footer-inner {
+    display: flex;
+    align-items: flex-end;
 }
 
 @media (max-width: 1500px) {
