@@ -1,18 +1,3 @@
-const siblings = (el) => { return [...el.parentNode.children].filter((child) => child !== el) }
-
-
-function setClass(el, currentClass) {
-    let element = el
-
-    const getFirstClass = (element) => {return element.classList[0]}
-    const getSibs = siblings(el, getFirstClass(el))
-
-    el.classList.add(currentClass)
-    getSibs.forEach(sib => {
-        sib.classList.remove(currentClass)
-    })
-}
-
 
 
 /*메인 화면 비디오*/
