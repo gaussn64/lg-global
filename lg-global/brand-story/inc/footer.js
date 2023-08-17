@@ -16,10 +16,6 @@ const footer = `
                     All Rights Reserved
                 </p>
             </div>
-            <a class="c-hotline" href="#">
-                LG Jeong-Do Management<br>
-                Ethics <br class="mo">Hotline
-            </a>
         </div>
     </footer>
 </div>
