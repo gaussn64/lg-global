@@ -1,7 +1,6 @@
 function getElementIndex(element) {
     return [].indexOf.call(element.parentNode.children, element);
 }
-
 function getSiblingsByClass(element, className) {
     const siblings = Array.from(element.parentElement.getElementsByClassName(className));
     const index = siblings.indexOf(element);
@@ -11,11 +10,13 @@ function getSiblingsByClass(element, className) {
     return siblings;
 }
 
+
+const siblings = (el) => { return [...el.parentNode.children].filter((child) => child !== el) }
 function setClass(el, currentClass) {
     let element = el
-    
+
     const getFirstClass = (element) => {return element.classList[0]}
-    const getSibs = getSiblingsByClass(el, getFirstClass(el))
+    const getSibs = siblings(el, getFirstClass(el))
 
     el.classList.add(currentClass)
     getSibs.forEach(sib => {
@@ -348,25 +349,31 @@ function brandElememtsSlider() {
 /*change video*/
 function resolutionVideo() {
     const changeVideo = document.querySelector('.resolutionVideo')
-    const winSize = window.innerWidth
-
-    let currentUrl = winSize > 768 ? changeVideo.dataset.urlPC : changeVideo.dataset.urlMo
-
-    console.log(currentUrl)
+    const source = changeVideo.querySelector('source')
+    let winSize = window.innerWidth
+    let isMobile = winSize > 768 ? false : true
+    let lastSize = ''
 
     function setVideo() {
-
-
+        if (isMobile !== lastSize) {
+            let currentUrl = winSize > 768 ? source.dataset.urlpc : source.dataset.urlmo
+            changeVideo.setAttribute('src', currentUrl)
+            lastSize = isMobile
+        }
     }
 
+    window.addEventListener('resize', function () {
+        winSize = window.innerWidth
+        winSize > 768 ? isMobile = false : isMobile = true
+        setVideo()
+    })
 
-
-
+    setVideo()
 }
 
 window.addEventListener('DOMContentLoaded', function () {
     initCommonHeader();
     tabFunc() //tab content 
     brandElememtsSlider() //what's next slide
-    // resolutionVideo()
+    resolutionVideo()
 })
