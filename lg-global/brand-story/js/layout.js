@@ -349,6 +349,7 @@ function brandElememtsSlider() {
 /*change video*/
 function resolutionVideo() {
     const changeVideo = document.querySelector('.resolutionVideo')
+    if (changeVideo == undefined || null) return
     const source = changeVideo.querySelector('source')
     let winSize = window.innerWidth
     let isMobile = winSize > 768 ? false : true

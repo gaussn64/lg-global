@@ -21,6 +21,29 @@
     object-fit: cover;
 }
 
+/*our voice*/
+.our-voice-slide {
+
+}
+.our-voice-slide .voice-slide {
+    overflow: hidden;
+    border-radius: 30px;
+}
+.our-voice-slide .voice-slide ul {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    padding: 180px 137px;
+    box-sizing: border-box;
+}
+.our-voice-slide .voice-slide ul li {
+    background-color: #FFF;
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /*Bringing it to life*/
 .bring-it-to-life {
     position: relative;
@@ -93,9 +116,18 @@
 @media (max-width: 768px) {
     
     #visual-voice.visual__top {
-        background-image: url(../../mocks/BS0007/brand-visual-voice-m.png);
+        background-image: url(../img/elements/voice/brand-visual-voice-m.png);
     }
 
+
+    /*our voice*/
+    .our-voice-slide {
+    }
+    .our-voice-slide .voice-slide ul {
+    }
+    .our-voice-slide .voice-slide ul li {
+
+    }
 
     
 }

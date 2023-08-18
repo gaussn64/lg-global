@@ -304,9 +304,14 @@
     border-radius: 30px;
     overflow: hidden;
     box-sizing: border-box;
-    padding: 40px;
     z-index: 1;
     background-color: #f6f3eb;
+}
+.brand-contents .our-identity__slide a {
+    padding: 40px;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 .brand-contents .our-identity__slide::before,
 .brand-contents .our-identity__slide::after {
@@ -493,8 +498,10 @@
     .brand-contents .our-identity__slide {
         width: 590px;
         height: 360px;
-        padding: 28px;
         border-radius: 20px;
+    }
+    .brand-contents .our-identity__slide a {
+        padding: 28px;
     }
 
     .brand-contents .our-identity__item-title {
@@ -590,6 +597,8 @@
         width: 291px;
         height: 291px;
         border-radius: 10px;
+    }
+    .brand-contents .our-identity__slide a {
         padding: 16px;
     }
     .brand-contents .our-identity__slide:not(.our-identity__slide--photography)::after {
