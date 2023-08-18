@@ -1,3 +1,28 @@
+function onlyMobileSlide() {
+    const slideTarget = document.querySelector('.slideOnlyMo')
+    let ww = window.innerWidth;
+    let slider = undefined;
+    
+    function initSwiper() {
+    
+      if (ww <= 768 && slider == undefined) {
+        slider = new Swiper(slideTarget, {
+            slidesPerView: 1,
+            simulateTouch: true,
+        });
+      } else if (ww > 768 && slider != undefined) {
+        slider.destroy();
+        slider = undefined;
+      }
+    }
+    
+    initSwiper();
+
+    window.addEventListener('resize', function () {
+        ww = window.innerWidth
+        initSwiper();
+    })
+}
 
 function outOfHomeSlider() {
     const slider = document.querySelector('.bring-it-to-life__slide')
@@ -23,5 +48,6 @@ function outOfHomeSlider() {
 } 
 
 window.addEventListener('DOMContentLoaded', () => {
+    onlyMobileSlide()
     outOfHomeSlider()
 })

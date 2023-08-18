@@ -227,21 +227,21 @@ br.mo {display: none;}
 .c-footer__wrap footer {
     background-color: transparent;
     height: unset;
-    padding: 0;
+    padding: 0 180px;
 }
 
 .c-footer .footer-top {
-    background-color: #000;
+    max-width: 1800px;
     padding: 24px 0;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .c-footer .footer-top > ul {
-    max-width: 1800px;
-    margin: 0 auto;
-    padding: 0 180px;
-    display: flex;
+    margin-left: auto;
+    display: inline-flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 10px;
 }
 .c-footer .footer-top > ul > li > a.icon-sns {
@@ -256,69 +256,10 @@ br.mo {display: none;}
 .c-footer .footer-top > ul > li > a.icon-sns.instagram {background-image: url(../img/sns-instagram-circle-fill.svg);}
 .c-footer .footer-top > ul > li > a.icon-sns.youtube {background-image: url(../img/sns-youtube-circle-fill.svg);}
 
-.c-footer .footer-bottom {
-    max-width: 1800px;
-    padding: 24px 180px;
-    margin: 0 auto;
-    display: flex;
-}
-.c-footer .footer-bottom ul.foot-location {
-    display: flex;
-    color: #fff;
-}
-.c-footer .footer-bottom ul.foot-location > li + li,
-.c-footer .footer-bottom ul.foot-location > li > a + a {
-    position: relative;
-    margin-left: 12px;
-    padding-left: 12px;
-}
-.c-footer .footer-bottom ul.foot-location > li + li::before,
-.c-footer .footer-bottom ul.foot-location > li > a + a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 12px;
-    width: 1px;
-    background-color: #4A4946;
-}
-.c-footer .footer-bottom ul.foot-location > li > a {
-    color: #fff;
+.c-footer .footer-top > .c-copyright {
     font-size: 16px;
     font-weight: 400;
-}
-.c-footer .c-copyright {
-    font-size: 16px;
     color: #CBC8C2;
-    margin-top: 10px;
-}
-.c-footer .c-hotline {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    padding: 7px 16px 7px 75px;
-    margin-left: auto;
-    width: 271px;
-    height: 66px;
-    background-color: #fff;
-    border-radius: 6px;
-    font-size: 16px;
-    text-decoration: underline;
-    box-sizing: border-box;
-}
-.c-footer .c-hotline::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    width: 57px;
-    height: 49px;
-    background: no-repeat center url(../img/lg-hotline.png);
-    background-size: contain;
-}
-.c-footer .footer-bottom .footer-inner {
-    display: flex;
-    align-items: flex-end;
 }
 
 @media (max-width: 1500px) {
@@ -352,36 +293,22 @@ br.mo {display: none;}
 
 
     /* Common Footer */
+    .c-footer__wrap footer {
+        padding: 0 90px;
+    }
     .c-footer .footer-top > ul {
-        padding: 0 16px;
         justify-content: flex-start;
     }
-
-    .c-footer .footer-bottom {
-        padding: 24px 0 0;
-        flex-direction: column;
-    }
-    .c-footer .footer-bottom .footer-inner {
-        padding: 0 16px;
-    }
-    .c-footer .footer-bottom ul.foot-location > li + li,
-    .c-footer .footer-bottom ul.foot-location > li > a + a {
-        margin-left: 10px;
-        padding-left: 10px;
-    }
-    .c-footer .c-copyright {
-        margin-top: 20px;
-    }
-    .c-footer .c-hotline {
-        margin-top: 20px;
-        width: 100%;
-        /* border-radius: 6px 6px 0 0; */
-    }
-    .c-footer .c-hotline br:not(.mo) {display: none;}
 }
 
 @media (max-width: 1024px) {
 
+
+
+    /* Common Footer */
+    .c-footer__wrap footer {
+        padding: 0 16px;
+    }
     
 }
 
@@ -609,19 +536,15 @@ br.mo {display: none;}
     }
 
 
+
     /* Common Footer */
-    .c-footer .footer-bottom ul.foot-location {
+    .c-footer .footer-top {
+        padding: 24px 0 20px;
         flex-direction: column;
-        gap: 12px;
+        align-items: unset;
+        gap: 44px;
     }
-
-    .c-footer .footer-bottom ul.foot-location > li + li {
-        margin: 0;
-        padding: 0;
-    }
-    .c-footer .footer-bottom ul.foot-location > li + li::before {
-        display: none;
-    }
-
+    .c-footer .footer-top > ul {margin-left: unset;}
+    .c-footer .footer-top .c-copyright {order: 1;}
 
 }

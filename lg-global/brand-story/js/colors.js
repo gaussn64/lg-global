@@ -46,15 +46,17 @@ function copyHexCode() {
 
 
     btnHexAll.forEach(btn => {
-        btn.addEventListener('click', function (e) {
+        btn.addEventListener('click', async function (e) {
             e.preventDefault()
             let href = this.getAttribute('href');
 
-            navigator.clipboard.writeText(href).then(function() {
-                // alert('Link copied to clipboard!');
-            }).catch(function(err) {
-                // alert('Failed to copy link: ', err);
-            });
+            
+            try {
+                await navigator.clipboard.writeText(href);
+                alert('Code copied to clipboard!');
+            } catch (err) {
+                alert('Failed to copy code: ' + err);
+            }
 
         })
     })
