@@ -43,23 +43,34 @@ function btmdotSlider() {
 
 function copyHexCode() {
     const btnHexAll = document.querySelectorAll('.btn-copy-hexcode')
-
-
+    
     btnHexAll.forEach(btn => {
-        btn.addEventListener('click', async function (e) {
+        btn.addEventListener('click', function (e) {
             e.preventDefault()
             let href = this.getAttribute('href');
 
-            
-            try {
-                await navigator.clipboard.writeText(href);
-                alert('Code copied to clipboard!');
-            } catch (err) {
-                alert('Failed to copy code: ' + err);
-            }
-
+            copyTextToClipboard(href);
         })
     })
+
+
+    function copyTextToClipboard(code) {
+        let textArea = document.createElement("textarea");
+        textArea.value = code;
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+            var successful = document.execCommand("copy");
+            var message = successful ? "Copied to clipboard!" : "Copy failed";
+            alert(message);
+        } catch (err) {
+            alert("Oops, unable to copy", err);
+        }
+    
+        document.body.removeChild(textArea);
+    }
+
 }
 
 function colorSystemSlide() {
